@@ -1,0 +1,1 @@
+<div class="error"><span>暂时无法取得天气数据或请求超时，请刷新。</span></div>

@@ -1,0 +1,99 @@
+html,body{
+    font:12px/1.5 \5FAE\8F6F\96C5\9ED1, "Microsoft YaHei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
+    padding: 0;
+    background: url(../bg/na.jpg) no-repeat;
+    background-size: 100%;
+    width: 100%;
+    height: 100%
+}
+h1{
+    padding: 0 0 0 20px;
+    font-size: 700%;
+    color: #fff;
+    display: none
+}
+a{color:#fc0;text-decoration:none}
+.loading{
+    text-align: center;
+    display: table;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.618)
+}
+#spinner{
+    display: table-cell;
+    vertical-align: middle
+}
+
+#weather{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.35);
+    overflow: hidden
+}
+#current,#hourly,#temperature,#forecast{
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    text-align:center;
+    color: #fff;
+    text-shadow: 0 0 15px rgba(0,0,0,1),0 -1px 1px rgba(0,0,0,1);
+}
+.chart-wrapper{padding: 100px 0 0}
+#temperature-charts{width: 85%;margin: 0 auto}
+.item{
+    padding: 150px 0 0;
+    height: 100%;
+    width: 100%
+}
+.title{font-size: 200%}
+.weather-current-temp{font-size: 1000%}
+.local{font-size: 240%; text-transform: uppercase}
+.w-icon-l{position: absolute;top:20%; left:60%}
+.day-item{
+    display: inline-block;
+    padding-top: 50px;
+    width: 160px
+}
+.hourly-item{
+    display: inline-block;
+    padding-top: 50px;
+    width: 90px
+}
+.hourly-item img{ width: 70px}
+li.min,.hourly-temp{font-size: 200%}
+li.max{font-size: 200%;font-weight: 700}
+.weather-data-source{
+    width: 100%;
+    position: absolute;
+    padding: 10px 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    color: #eee;
+    font-size: 10px;
+    z-index: 110
+}
+
+.error{
+    background: #454545;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    font-size: 200%;
+    position: absolute;
+    display: table;
+    left: 0;
+    top: 0;
+    z-index: 100000
+}
+.error span{
+    width: 100%;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle
+}

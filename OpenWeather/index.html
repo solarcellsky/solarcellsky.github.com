@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Open Weather</title>
+        <link rel="shortcut icon" href="images/icon16.png" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" media="all" href="http://openweather.u.qiniudn.com/css/reset.css">
+    	<link rel="stylesheet" type="text/css" media="all" href="http://openweather.u.qiniudn.com/css/app.css">
+        <script src="http://openweather.u.qiniudn.com/scripts/raphael-min.js"></script>
+    </head>
+    <body>
+    <h1>Open Weather</h1>
+    <div class="loading"><div id="spinner"></div></div>
+    <div id="weather">
+        <div id="slides">
+            <div class="slides-container">
+                <div id="current"></div>
+                <div id="hourly"><div id="hourly-items" class="item"><h2 class="title">HOURLY FORECAST</h2></div></div>
+                <div id="forecast"></div>
+                <div id="temperature">
+                    <div class="chart-wrapper">
+                        <h2 class="title">13 DAYS TEMPERATURE CHARTS</h2>
+                        <div id="temperature-charts"></div>
+                    </div>
+                </div>
+            </div>
+            <nav class="slides-navigation">
+                <a class="next"><span></span></a>
+                <a class="prev"><span></span></a>
+            </nav>
+        </div>
+    </div>
+    <div class="weather-data-source">Weather Data from <a href="http://openweathermap.org/" target="_blank">OpenWeatherMap.org</a><br>Design & Code BY Solar@Xi'an China - <a href="https://github.com/solarcellsky" target="_blank">Get Source Code From Github</a></div>
+    <script src="http://openweather.u.qiniudn.com/scripts/seajs/sea.js" data-config="http://openweather.u.qiniudn.com/scripts/config" data-main="http://openweather.u.qiniudn.com/scripts/app"></script>
+    </body>
+</html>

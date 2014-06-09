@@ -1,0 +1,162 @@
+html,body {
+    font:12px \5FAE\8F6F\96C5\9ED1,"Microsoft YaHei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
+    font-smooth:always;
+    -webkit-font-smoothing: antialiased;
+    color: #444;
+    margin:0 auto;
+    background: url(body_bg.png)
+}
+h1, h2, h3 {
+    color: #333
+}
+p {
+    font-size: 100%;
+    line-height: 20px
+}
+a {
+    color: #f60
+}
+a:hover {
+    text-decoration: none
+}
+.wrapper {
+    width:700px;
+    margin: 60px auto 30px;
+    padding: 60px;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .1)
+}
+#lang{position: absolute;left: 0;top: -20px}
+#pageheader {
+    height: 220px;
+    position: relative
+}
+#pageheader hgroup {
+    width:100%
+}
+#pageheader h1 {
+    font-size:500%
+}
+#pageheader h2 {
+    font-size: 100%;
+    padding: 0 0 10px;
+    border-bottom: 1px solid #eee
+}
+#pageheader h3 {
+	font-size: 100%;
+	padding: 10px 0 20px
+}
+#pageheader h3::first-letter {
+	font-size: 200%
+}
+#pageheader .contact-info {
+	position: absolute;
+	right: 0;
+	top: 0;
+    font-size: 200%;
+    box-shadow: 0 0 1rem rgba(0,0,0,.1);
+    padding: 10px 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 3px;
+    background: #f0f0f0
+}
+#pageheader .contact-info li {
+    line-height: 1.5
+}
+#pageheader .find-me{
+	text-align: right;
+	font-size: 200%
+}
+#pageheader .find-me a{
+	text-decoration: none;
+	color: #bbb;
+	transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    -webkit-transition: all .3s
+}
+#pageheader .find-me a:hover{color: #000}
+#pagefooter {
+    padding: 1em 0 0;
+    font-size: 90%;
+    text-align: right;
+    clear:both
+}
+#content {
+    clear:both;
+    padding: 30px 0 10px;
+    margin: 20px auto;
+    border: solid #ddd;
+    border-width: 8px 0 2px 0
+}
+.item {
+    margin-bottom: 2em;
+    border-bottom: 1px solid #e0e0e0;
+}
+.item::after {
+    content:".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden
+}
+.item h2.title {
+    width:100%;
+    font-size: 300%;
+    padding: 0 0 15px
+}
+.details {
+    width:100%;
+}
+.details h2 {
+    font-size:150%;
+    color:#0089de
+}
+p.enlarge {
+    font-size: 145%;
+    line-height: 24px
+}
+.job {
+    position: relative;
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid #eee
+}
+.job time {
+    position: absolute;
+    top: 0.35em;
+    right: 0;
+    background: #0089de;
+    color: #fff;
+    padding: 0 4px
+}
+.job h3 {
+    padding: 0.75em 0 0
+}
+.case {
+    position: relative;
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid #eee
+}
+.case em {
+    display: block;
+    padding: 10px 0
+}
+.techs {
+	color: #aaa
+}
+.techs span{
+	background: #f9da96;
+	color: #653e1f;
+	border-radius: 2px;
+	padding: 0 3px;
+	text-transform: uppercase
+}
+.del {
+    display: none
+}
+.last {
+    border:none
+}
