@@ -133,17 +133,4 @@ JB :
   # and include your custom code. Your custom file must be defined at:
   #   ./_includes/custom/[HELPER]
   # where [HELPER] is the name of the helper you are overriding.
-paginate: 10 #pagination based on number of posts
-paginate_path: "page:num"
-
-title: dbyll
-author:
-  name: dbyll
-  email: dbyll@ismaildemirbilek.com
-  github: asd123
-  twitter: asd123
-  pinterest: asd123
-  linkedin: asd123
-  resume: asd123
-  bio: Your stylish, minimalist theme!
-  email_md5: 726351295ec82e145928582f595aa3aa
+  
