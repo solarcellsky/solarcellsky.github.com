@@ -11,10 +11,10 @@ markdown: kramdown
 # Themes are encouraged to use these universal variables
 # so be sure to set them if your theme uses them.
 #
-title : Jekyll Bootstrap-3
-tagline: Site Tagline
+title : PLAYHTML
+tagline: Make a Beautiful Web.
 author :
-  name : Name Lastname
+  name : PLAYHTML
   email : solarcellsky@gmail.com
   github : solarcellsky
   twitter : solarcellsky
@@ -28,7 +28,7 @@ author :
 # Else if you are pushing to username.github.io, replace with your username.
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
 #
-production_url : http://solarcellsky.github.io
+production_url : http://www.playhtml.com
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
@@ -103,9 +103,9 @@ JB :
   analytics :
     provider : google
     google :
-        tracking_id : 'UA-***'
+        tracking_id : 'UA-5594046'
     googleUA :
-        tracking_id : 'UA-***'
+        tracking_id : 'UA-5594046'
         property_name : 'PROPERTY NAME'
     getclicky :
       site_id : 
