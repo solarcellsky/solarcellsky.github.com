@@ -106,7 +106,7 @@ JB :
     #    tracking_id : 'UA-5594046'
     googleUA :
         tracking_id : 'UA-5594046-2'
-        property_name : 'PROPERTY NAME'
+        property_name : 'auto'
     #getclicky :
     #  site_id : 
     #mixpanel :
