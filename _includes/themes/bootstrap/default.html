@@ -26,6 +26,53 @@
     <link href="{{ BASE_PATH }}{{ site.JB.atom_path }}" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
     <link href="{{ BASE_PATH }}{{ site.JB.rss_path }}" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
 
+    <link rel="stylesheet" rel="external nofollow" href="{{ ASSET_PATH }}/pace/themes/pace-theme-barber-shop.css" />
+    <script>
+        paceOptions = {
+            elements: true
+        };
+    </script>
+    <script src="{{ ASSET_PATH }}/pace/pace.min.js"></script>
+    <script>
+
+        var href = window.location.href;
+        function load(time) {
+            var x = new XMLHttpRequest()
+            x.open('GET', "" + href + "?" + time, true);
+            x.send();
+        };
+
+        load(20);
+        load(100);
+        load(500);
+        load(2000);
+        load(3000);
+
+        setTimeout(function () {
+            Pace.ignore(function () {
+                load(3100);
+            });
+        }, 4000);
+
+        Pace.on('hide', function () {
+            getObjsByClass('.pace').fadeOut();
+        });
+
+        function getObjsByClass(param) {
+            var tags = tags || document.getElementsByTagName("*");
+            var list = [];
+            for (var k in tags) {
+                var tag = tags[k];
+                if (tag.className == param) {
+                    document.write(tag.innerHTML);
+                    list.push(tag);
+                }
+            }
+            return list;
+        }
+
+    </script>
+
   </head>
 
   <body>
