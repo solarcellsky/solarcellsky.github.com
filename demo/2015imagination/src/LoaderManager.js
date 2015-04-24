@@ -1,1 +1,90 @@
-eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--){d[e(c)]=k[c]||e(c)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('8.t=8.t||{};(6(){6 a(d,e,c){8.U(d,e,c)}4 b=5.E(a,5.w);t.T=5.D(a,"w")})();(6(){6 V(3,C){4 f=6(1){C.W(3,[1])};X f}4 S=[];4 Y=[];6 v(){8.R()}4 p=5.E(v,5.G);p.P=6(3,x){4 9=[];g(I 3=="F"){9.r({q:3,j:5.m.o})}k{g(3 H Q){J(4 i=0;i<3.A;i++){g(I 3[i]=="F"){9.r({q:3[i],j:5.m.o})}k{9.r({q:3[i].q,j:5.m.o,s:3[i].s,z:3[i].z})}}}k{g(3 H 12){9.r(3)}}}4 7=19 5.w();J(4 i=0;i<9.A;i++){7.10(9[i])}4 n=K;4 p=0;8.M=13;4 l=8;7.y("14",6(1){g(1.h.j==5.m.o){g(1.h.s){p++;4 L=N(1.h.s);n=N(1.h.z);7.11(L.16.1a);l.M=18}k{n=K}}k{g(1.h.j==5.m.Z){n[1.h.15]=1.x}}});8.u=0;7.y("u",6(1){l.u=(p+1.u)/2;l.B(1)});7.y("O",6(1){7.17();x();l.B(1)})};t.v=5.D(v,"G")})();',62,73,'|event||value|var|createjs|function|loader|this|_list|||||||if|item||type|else|_self|AbstractLoader|_item|JAVASCRIPT||src|push|lib|gameCore|progress|LoaderManager|LoadQueue|result|on|image|length|dispatchEvent|funF|promote|extend|string|EventDispatcher|instanceof|typeof|for|null|obj|isMore|eval|complete|loadCore|Array|EventDispatcher_constructor|_coreList|LoadContentQueue|LoadQueue_constructor|getProxy|apply|return|_manifest|IMAGE|loadFile|loadManifest|Object|false|fileload|id|properties|removeAllEventListeners|true|new|manifest'.split('|'),0,{}))
+this.gameCore = this.gameCore || {}; (function() {
+    function a(d, e, c) {
+        this.LoadQueue_constructor(d, e, c)
+    }
+    var b = createjs.extend(a, createjs.LoadQueue);
+    gameCore.LoadContentQueue = createjs.promote(a, "LoadQueue")
+})(); (function() {
+    function getProxy(value, funF) {
+        var f = function(event) {
+            funF.apply(value, [event])
+        };
+        return f
+    }
+    var _coreList = [];
+    var _manifest = [];
+    function LoaderManager() {
+        this.EventDispatcher_constructor()
+    }
+    var p = createjs.extend(LoaderManager, createjs.EventDispatcher);
+    p.loadCore = function(value, result) {
+        var _list = [];
+        if (typeof value == "string") {
+            _list.push({
+                src: value,
+                type: createjs.AbstractLoader.JAVASCRIPT
+            })
+        } else {
+            if (value instanceof Array) {
+                for (var i = 0; i < value.length; i++) {
+                    if (typeof value[i] == "string") {
+                        _list.push({
+                            src: value[i],
+                            type: createjs.AbstractLoader.JAVASCRIPT
+                        })
+                    } else {
+                        _list.push({
+                            src: value[i].src,
+                            type: createjs.AbstractLoader.JAVASCRIPT,
+                            lib: value[i].lib,
+                            image: value[i].image
+                        })
+                    }
+                }
+            } else {
+                if (value instanceof Object) {
+                    _list.push(value)
+                }
+            }
+        }
+        var loader = new createjs.LoadQueue();
+        for (var i = 0; i < _list.length; i++) {
+            loader.loadFile(_list[i])
+        }
+        var _item = null;
+        var p = 0;
+        this.isMore = false;
+        var _self = this;
+        loader.on("fileload",
+        function(event) {
+            if (event.item.type == createjs.AbstractLoader.JAVASCRIPT) {
+                if (event.item.lib) {
+                    p++;
+                    var obj = eval(event.item.lib);
+                    _item = eval(event.item.image);
+                    loader.loadManifest(obj.properties.manifest);
+                    _self.isMore = true
+                } else {
+                    _item = null
+                }
+            } else {
+                if (event.item.type == createjs.AbstractLoader.IMAGE) {
+                    _item[event.item.id] = event.result
+                }
+            }
+        });
+        this.progress = 0;
+        loader.on("progress",
+        function(event) {
+            _self.progress = (p + event.progress) / 2;
+            _self.dispatchEvent(event)
+        });
+        loader.on("complete",
+        function(event) {
+            loader.removeAllEventListeners();
+            result();
+            _self.dispatchEvent(event)
+        })
+    };
+    gameCore.LoaderManager = createjs.promote(LoaderManager, "EventDispatcher")
+})();

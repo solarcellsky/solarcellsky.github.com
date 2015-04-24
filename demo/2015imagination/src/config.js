@@ -1,23 +1,63 @@
-eval(function(p, a, c, k, e, d) {
-    e = function(c) {
-        return (c < a ? '' : e(parseInt(c / a))) + ((c = c % a) > 35 ? String.fromCharCode(c + 29) : c.toString(36))
-    };
-    if (!''.replace(/^/, String)) {
-        while (c--) {
-            d[e(c)] = k[c] || e(c)
+this.gameCore = this.gameCore || {};
+this.gameCore.PATH = ""; (function() {
+    var b = function() {
+        var c = navigator.userAgent.toLowerCase();
+        return {
+            ipad: /ipad/.test(c),
+            iphone: /iphone/.test(c),
+            android: /android/.test(c),
+            qqnews: /qqnews/.test(c),
+            weixin: /micromessenger/.test(c)
         }
-        k = [function(e) {
-            return d[e]
-        }];
-        e = function() {
-            return '\\w+'
-        };
-        c = 1
     };
-    while (c--) {
-        if (k[c]) {
-            p = p.replace(new RegExp('\\b' + e(c) + '\\b', 'g'), k[c])
-        }
-    }
-    return p
-}('h.1=h.1||{};h.1.H="";(2(){3 b=2(){3 c=G.F.J();K{u:/u/.5(c),o:/o/.5(c),k:/k/.5(c),n:/n/.5(c),r:/O/.5(c)}};2 a(){}a.t=[];a.y=[];a.i={x:E,z:M};a.w="V";a.s=[];a.6=L;a.P=2(){4 1.9().j(a.t,2(){1.8.7().C().D(a.i.x,a.i.z).N(a.w).6=a.6;4 1.9().j(a.y,2(){3 c=4 1.T();c.12=Q;3 d=4 1.9();d.j(a.s,2(){m(b().r||b().k){1.8.7().11()}1.8.7().6.14.Z="#10";c.S();1.8.7().R.U(4 1.Y())});3 f=0;3 e=0;c.A("X",2(){e++;f++;m(f>v){f=v}});d.A("l",2(g){m(g.B.l*q<W){p(f/q)}13{p(g.B.l)}})})})};1.I=a})();', 62, 67, '|gameCore|function|var|new|test|canvas|getInstance|StageManager|LoaderManager||||||||this|stageSize|loadCore|android|progress|if|qqnews|iphone|onProgress|100|weixin|contentLib|core|ipad|49|stageType|width|loading|height|on|currentTarget|initialize|setRect|640|userAgent|navigator|PATH|Config|toLowerCase|return|null|960|setStageType|micromessenger|start|true|root|removeAllEventListeners|Loading|addChild||50|tick|MainView|backgroundColor|000000|setViewport|isMore|else|style'.split('|'), 0, {}))
+    function a() {}
+    a.core = [];
+    a.loading = [];
+    a.stageSize = {
+        width: 640,
+        height: 960
+    };
+    a.stageType = "V";
+    a.contentLib = [];
+    a.canvas = null;
+    a.start = function() {
+        new gameCore.LoaderManager().loadCore(a.core,
+        function() {
+            gameCore.StageManager.getInstance().initialize().setRect(a.stageSize.width, a.stageSize.height).setStageType(a.stageType).canvas = a.canvas;
+            new gameCore.LoaderManager().loadCore(a.loading,
+            function() {
+                var c = new gameCore.Loading();
+                c.isMore = true;
+                var d = new gameCore.LoaderManager();
+                d.loadCore(a.contentLib,
+                function() {
+                    if (b().weixin || b().android) {
+                        gameCore.StageManager.getInstance().setViewport()
+                    }
+                    gameCore.StageManager.getInstance().canvas.style.backgroundColor = "#000000";
+                    c.removeAllEventListeners();
+                    gameCore.StageManager.getInstance().root.addChild(new gameCore.MainView())
+                });
+                var f = 0;
+                var e = 0;
+                c.on("tick",
+                function() {
+                    e++;
+                    f++;
+                    if (f > 49) {
+                        f = 49
+                    }
+                });
+                d.on("progress",
+                function(g) {
+                    if (g.currentTarget.progress * 100 < 50) {
+                        onProgress(f / 100)
+                    } else {
+                        onProgress(g.currentTarget.progress)
+                    }
+                })
+            })
+        })
+    };
+    gameCore.Config = a
+})();

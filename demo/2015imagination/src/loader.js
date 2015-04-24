@@ -1,1 +1,44 @@
-eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--){d[e(c)]=k[c]||e(c)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('(0(d,a,c){4 b;d.s={r:q,o:p,t:u,n:"#x",w:[{v:2.z+"l/9.k",m:"9"}]}})(7=7||{},6=6||{},1=1||{});4 7,6,1;(0(){0 a(){}4 b=1.8(a,1.y);b.f=0(c,d){};2.i=a})();(0(){0 a(){3.I();3.h()}4 b=1.8(a,2.i);b.h=0(){4 d=5 1.L();4 c=5 1.A()};b.f=0(c,d){};b.M=0(){5 1.N(3);3.O("K",0(){2.J("D");3.C();2.e.g().j.B(3);2.e.g().j.E(5 2.F())})};b.H=0(c){};2.G=a})();',51,51,'function|createjs|gameCore|this|var|new|loaderImages|loaderLib|extend|scene|||||StageManager|resize|getInstance|initUI|Component|root|png|images|id|color|height|400|550|width|properties|fps|30|src|manifest|FFFFFF|Container|PATH|SpriteSheet|removeChild|removeAllEventListeners|song|addChild|MainView|Loading|setScale|initialize|playSound|click|Sprite|start|ButtonHelper|on'.split('|'),0,{}))
+(function(d, a, c) {
+    var b;
+    d.properties = {
+        width: 550,
+        height: 400,
+        fps: 30,
+        color: "#FFFFFF",
+        manifest: [{
+            src: gameCore.PATH + "images/scene.png",
+            id: "scene"
+        }]
+    }
+})(loaderLib = loaderLib || {},
+loaderImages = loaderImages || {},
+createjs = createjs || {});
+var loaderLib, loaderImages, createjs; (function() {
+    function a() {}
+    var b = createjs.extend(a, createjs.Container);
+    b.resize = function(c, d) {};
+    gameCore.Component = a
+})(); (function() {
+    function a() {
+        this.initialize();
+        this.initUI()
+    }
+    var b = createjs.extend(a, gameCore.Component);
+    b.initUI = function() {
+        var d = new createjs.Sprite();
+        var c = new createjs.SpriteSheet()
+    };
+    b.resize = function(c, d) {};
+    b.start = function() {
+        new createjs.ButtonHelper(this);
+        this.on("click",
+        function() {
+            gameCore.playSound("song");
+            this.removeAllEventListeners();
+            gameCore.StageManager.getInstance().root.removeChild(this);
+            gameCore.StageManager.getInstance().root.addChild(new gameCore.MainView())
+        })
+    };
+    b.setScale = function(c) {};
+    gameCore.Loading = a
+})();
