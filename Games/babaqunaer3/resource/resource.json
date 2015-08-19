@@ -1,0 +1,222 @@
+{
+	"resources": [
+		{
+			"name": "bgImage",
+			"type": "image",
+			"url": "assets/qiangbi.png"
+		},
+      {
+        "name": "topBar",
+        "type": "image",
+        "url": "assets/topBar.png"
+      },
+      {
+        "name": "bottomBar",
+        "type": "image",
+        "url": "assets/bottomBar.png"
+      },
+      {
+        "name": "sbg",
+        "type": "image",
+        "url": "assets/sbg.png"
+      },
+      {
+        "name": "time",
+        "type": "image",
+        "url": "assets/time.png"
+      },
+      {
+        "name": "star",
+        "type": "image",
+        "url": "assets/start.png"
+      },
+		{
+			"name": "cir01",
+			"type": "image",
+			"url": "assets/1.png"
+		},
+		{
+			"name": "cir02",
+			"type": "image",
+			"url": "assets/2.png"
+		},
+		{
+			"name": "cir03",
+			"type": "image",
+			"url": "assets/3.png"
+		},
+        {
+            "name": "scores",
+            "type": "image",
+            "url": "assets/scoes.png"
+        },
+        {
+            "name": "miss",
+            "type": "image",
+            "url": "assets/miss.png"
+        },
+        {
+            "name": "cirB",
+            "type": "image",
+            "url": "assets/5.png"
+        }, {
+        "name": "tim01",
+        "type": "image",
+        "url": "assets/tim01.png"
+      }, {
+        "name": "tim02",
+        "type": "image",
+        "url": "assets/tim02.png"
+      }, {
+        "name": "time01",
+        "type": "image",
+        "url": "assets/time01.png"
+      }, {
+        "name": "time02",
+        "type": "image",
+        "url": "assets/time02.png"
+      },
+      {
+        "name": "fever",
+        "type": "image",
+        "url": "assets/fever.png"
+      },
+        {"name": "zha","type": "image","url": "assets/zhayan.png"},  
+	    {"name":"zha_json","type":"json","url":"assets/zhayan.json"},
+
+		{"name":"loading","type":"image","url":"assets/loading.png?v=1"},
+		{"name":"loading_bar","type":"image","url":"assets/loading_bar.png?v=1"},
+		{"name":"loading_bg","type":"image","url":"assets/loading_bg.jpg?v=1"},
+		{"name":"loadingBar","type":"image","url":"assets/loadingBar.png?v=1"},
+		{"name":"start_btn","type":"image","url":"assets/start_btn.png?v=1"},
+		{"name":"ky","type":"image","url":"assets/ky.png?v=1"},
+		{"name":"help","type":"image","url":"assets/help.png?v=1"},
+		{"name":"time","type":"image","url":"assets/time.png?v=1"},
+		{"name":"time_bar","type":"image","url":"assets/time_bar.png?v=1"},
+		{"name":"time_progress","type":"image","url":"assets/time_progress.png?v=1"},
+		{"name":"score","type":"image","url":"assets/score.png?v=2"},
+		{"name":"end","type":"image","url":"assets/end.png?v=1"},
+		{"name":"again","type":"image","url":"assets/again.png?v=1"},
+		{"name":"s0_0","type":"image","url":"assets/s0_0.png?v=1"},
+		{"name":"s0_1","type":"image","url":"assets/s0_1.png?v=1"},
+		{"name":"s0_2","type":"image","url":"assets/s0_2.png?v=1"},
+		{"name":"s0_3","type":"image","url":"assets/s0_3.png?v=1"},
+		{"name":"s0_4","type":"image","url":"assets/s0_4.png?v=1"},
+		{"name":"s0_5","type":"image","url":"assets/s0_5.png?v=1"},
+		{"name":"s0_6","type":"image","url":"assets/s0_6.png?v=1"},
+		{"name":"s0_7","type":"image","url":"assets/s0_7.png?v=1"},
+		{"name":"s0_8","type":"image","url":"assets/s0_8.png?v=1"},
+		{"name":"s0_9","type":"image","url":"assets/s0_9.png?v=1"},
+		{"name":"s1_0","type":"image","url":"assets/s1_0.png?v=1"},
+		{"name":"s1_1","type":"image","url":"assets/s1_1.png?v=1"},
+		{"name":"s1_2","type":"image","url":"assets/s1_2.png?v=1"},
+		{"name":"s1_3","type":"image","url":"assets/s1_3.png?v=1"},
+		{"name":"s1_4","type":"image","url":"assets/s1_4.png?v=1"},
+		{"name":"s1_5","type":"image","url":"assets/s1_5.png?v=1"},
+		{"name":"s1_6","type":"image","url":"assets/s1_6.png?v=1"},
+		{"name":"s1_7","type":"image","url":"assets/s1_7.png?v=1"},
+		{"name":"s1_8","type":"image","url":"assets/s1_8.png?v=1"},
+		{"name":"s1_9","type":"image","url":"assets/s1_9.png?v=1"},
+		{"name":"s2_0","type":"image","url":"assets/s2_0.png?v=1"},
+		{"name":"s2_1","type":"image","url":"assets/s2_1.png?v=1"},
+		{"name":"s2_2","type":"image","url":"assets/s2_2.png?v=1"},
+		{"name":"s2_3","type":"image","url":"assets/s2_3.png?v=1"},
+		{"name":"s2_4","type":"image","url":"assets/s2_4.png?v=1"},
+		{"name":"s2_5","type":"image","url":"assets/s2_5.png?v=1"},
+		{"name":"s2_6","type":"image","url":"assets/s2_6.png?v=1"},
+		{"name":"s2_7","type":"image","url":"assets/s2_7.png?v=1"},
+		{"name":"s2_8","type":"image","url":"assets/s2_8.png?v=1"},
+		{"name":"s2_9","type":"image","url":"assets/s2_9.png?v=1"},
+		{"name":"x1","type":"image","url":"assets/x1.png?v=1"},
+		{"name":"x2","type":"image","url":"assets/x2.png?v=1"},
+		{"name":"x3","type":"image","url":"assets/x3.png?v=1"},
+		{"name":"x4","type":"image","url":"assets/x4.png?v=1"},
+		{"name":"x5","type":"image","url":"assets/x5.png?v=1"},
+		{"name":"x6","type":"image","url":"assets/x6.png?v=1"},
+		{"name":"x7","type":"image","url":"assets/x7.png?v=1"},
+		{"name":"x8","type":"image","url":"assets/x8.png?v=1"},
+		{"name":"x9","type":"image","url":"assets/x9.png?v=1"},
+		{"name":"fever","type":"image","url":"assets/fever.png?v=1"},
+		{"name":"miss","type":"image","url":"assets/miss.png?v=1"},
+		{"name":"combo","type":"image","url":"assets/combo.png?v=1"},
+		{"name":"combo_bar","type":"image","url":"assets/combo_bar.png?v=1"},
+		{"name":"c0","type":"image","url":"assets/c0.png?v=1"},
+		{"name":"c1","type":"image","url":"assets/c1.png?v=1"},
+		{"name":"c2","type":"image","url":"assets/c2.png?v=1"},
+		{"name":"c3","type":"image","url":"assets/c3.png?v=1"},
+		{"name":"c4","type":"image","url":"assets/c4.png?v=1"},
+		{"name":"c5","type":"image","url":"assets/c5.png?v=1"},
+		{"name":"c6","type":"image","url":"assets/c6.png?v=1"},
+		{"name":"c7","type":"image","url":"assets/c7.png?v=1"},
+		{"name":"c8","type":"image","url":"assets/c8.png?v=1"},
+		{"name":"c9","type":"image","url":"assets/c9.png?v=1"},
+		{"name":"time_over","type":"image","url":"assets/time_over.png?v=1"},
+		{"name":"share","type":"image","url":"assets/share.png?v=1"},
+		{"name":"bonus_didi","type":"image","url":"assets/bonus_didi.png?v=1"},
+		{"name":"code","type":"image","url":"assets/code.png?v=1"},
+		{"name":"didi","type":"image","url":"assets/didi.png?v=1"},
+		{"name":"follow","type":"image","url":"assets/follow.png?v=1"},
+		{"name":"x","type":"image","url":"assets/x.png?v=1"},
+		{"name":"time0","type":"image","url":"assets/time0.png?v=1"},
+		{"name":"time1","type":"image","url":"assets/time1.png?v=1"},
+		{"name":"time2","type":"image","url":"assets/time2.png?v=1"},
+		{"name":"time3","type":"image","url":"assets/time3.png?v=1"},
+		{"name":"time4","type":"image","url":"assets/time4.png?v=1"},
+		{"name":"time5","type":"image","url":"assets/time5.png?v=1"},
+		{"name":"time6","type":"image","url":"assets/time6.png?v=1"},
+		{"name":"time7","type":"image","url":"assets/time7.png?v=1"},
+		{"name":"time8","type":"image","url":"assets/time8.png?v=1"},
+		{"name":"time9","type":"image","url":"assets/time9.png?v=1"},
+
+		{"name":"sound_bg","type":"sound", "url":"sound/bg.mp3?v=1"},
+		{"name":"sound_shoot","type":"sound", "url":"sound/shoot.mp3?v=1"},
+		{"name":"sound_explore","type":"sound", "url":"sound/explore.mp3?v=1"},
+        {"name":"sound_Match_Bomb","type":"sound", "url":"sound/E_Match_Bomb_01.mp3?v=1"},
+        {"name":"sound_BGM_Rush","type":"sound", "url":"sound/BGM_Rush.mp3?v=1"},
+
+		{"name":"choujiang","type":"image","url":"hntv/choujiang.png?v=3"},
+		{"name":"fangqi","type":"image","url":"hntv/fangqi.png?v=1"},
+		{"name":"loading_wx","type":"image","url":"hntv/loading_wx.png?v=1"},
+		{"name":"wx_shibai","type":"image","url":"hntv/wx_shibai_s.png?v=1"},
+		{"name":"wx_jxyx","type":"image","url":"hntv/wx_jxyx.png?v=1"},
+		{"name":"wx_qd","type":"image","url":"hntv/wx_qd.png?v=1"},
+		{"name":"wx_zhongjiang","type":"image","url":"hntv/wx_zhongjiang.png?v=3"},
+		{"name":"sp","type":"image","url":"hntv/sp.png?v=1"},
+		{"name":"coujiangbg","type":"image","url":"hntv/coujiangbg.png?v=3"},
+		{"name":"send_input","type":"image",	"url":"hntv/send_input.png?v=3"},
+		{"name":"send_loading","type":"image",	"url":"hntv/send_loading.png?v=1"},
+		{"name":"send_okbtn","type":"image",	"url":"hntv/send_okbtn.png?v=1"},
+        {"name":"starCancel","type":"image",	"url":"assets/starCancel.png"},
+        {"name":"starCancel_json","type":"json",	"url":"assets/starCancel.json"},
+        {"name":"t01","type":"image",	"url":"assets/t01.png"},
+        {"name":"t01_json","type":"json",	"url":"assets/t01.json"},
+        {"name":"t02","type":"image",	"url":"assets/t02.png"},
+        {"name":"t02_json","type":"json",	"url":"assets/t02.json"},
+        {"name":"t03","type":"image",	"url":"assets/t03.png"},
+        {"name":"t03_json","type":"json",	"url":"assets/t03.json"},
+        {"name":"t04","type":"image",	"url":"assets/t04.png"},
+        {"name":"t04_json","type":"json",	"url":"assets/t04.json"},
+        {"name":"starBall","type":"image",	"url":"assets/6.png"},
+        {"name":"t04_json","type":"json",	"url":"assets/t04.json"},
+        {"name":"fater","type":"image",	"url":"assets/fater.png"},
+        {"name":"fater_json","type":"json",	"url":"assets/fater.json"},
+        {"name":"faterror","type":"image",	"url":"assets/faterror.png"},
+        {"name":"faterror_json","type":"json",	"url":"assets/faterror.json"},
+        {"name":"fatJump","type":"image",	"url":"assets/fatJump.png"},
+        {"name":"fatJump_json","type":"json",	"url":"assets/fatJump.json"},
+        {"name":"son","type":"image",	"url":"assets/son.png"},
+        {"name":"son_json","type":"json",	"url":"assets/son.json"},
+        {"name":"sonerror","type":"image",	"url":"assets/sonerror.png"},
+        {"name":"sonerror_json","type":"json",	"url":"assets/sonerror.json"},
+        {"name":"sonJump","type":"image",	"url":"assets/sonJump.png"},
+        {"name":"sonJump_json","type":"json",	"url":"assets/sonJump.json"},
+        {"name":"centerSbg","type":"image",	"url":"assets/sbg.png"},
+        {"name":"textNum","type":"image",	"url":"assets/texts.png"},
+        {"name":"textNum_json","type":"json",	"url":"assets/texts.json"},
+	    {"name":"share_icon","type":"image","url":"assets/share_icon.png?v=1"}
+    ],
+	"groups": [
+		{"name":"preload","keys":"loading, loading_bar, loading_bg, loadingBar, start_btn, ky"},
+		{"name":"initScene","keys":"choujiang, centerSbg, sound_Match_Bomb, sound_BGM_Rush, sonJump, sonJump_json,fangqi, textNum,textNum_json,fater,fater_json,faterror,faterror_json,fatJump,fatJump_json,son,son_json,sonerror,sonerror_json,t01,t01_json,t02,t02_json,starCancel,starCancel_json,t03,t03_json,t04,t04_json,starBall,loading_wx, fever,topBar,sbg,wx_shibai, bottomBar,wx_jxyx, scores,wx_qd, wx_zhongjiang, sp, coujiangbg, send_input, send_loading, send_okbtn, send_over, sound_bg, help, time, time_bar, time_progress, score, rush, rush_bar, rush0, end, again, s0_0, s0_1, s0_2, s0_3, s0_4, s0_5, s0_6, s0_7, s0_8, s0_9, s1_0, s1_1, s1_2, s1_3, s1_4, s1_5, s1_6, s1_7, s1_8, s1_9, s2_0, s2_1, s2_2, s2_3, s2_4, s2_5, s2_6, s2_7, s2_8, s2_9, x0, x1, x2, x3, x4, x5, x6, x7, x8, x9, fever, miss, combo, combo_bar, c0, c1, c2, c3, c4, c5, c6, c7, c8, c9, sound_shoot, sound_explore, share, bonus_didi, code, didi, follow, x, time0, time1, time2, time3, time4, time5, time6, time7, time8, time9, bgImage,egretIcon,cir01,cir02,cir03,score,zha,zha_json,tim01,tim02,time01,time02,time_over,miss,cirB,star,share_"}
+	]
+}

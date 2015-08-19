@@ -1,0 +1,294 @@
+<!doctype html>
+<html>
+
+<head>
+    <script>
+    var match = /custom=(.*?)(?:&|$)/i.exec(location.href),
+        custom = match && match[1];
+    if (custom && decodeURIComponent(custom) === decodeURIComponent('ZGF0ZT0yMDE15bm0NuaciDMw5pelIOaYn%2Bacn%2BS6jCZ0aW1lPTIwMTXlubQ25pyIMzDml6UgIDE4JTNBMzAmcmVzdGF1cmFudD3lupzmloflupnliY0mYWRkcmVzcz3lpKflkIzlupzmloflupnliY0mZ3Jvb2095piO5pyI5ama56S8JmJyaWRlPee8mOiuoumHkeWpmuWpmuWFuCZvcGVuaW5nPeS6kei3r%2BmjjuaDhX7lpKflnovkuK3lvI%2FlqZrnpLznp4AmZ3JlZXRpbmdzPeebuOS%2FoeaCqOeahOWFieS4tOWSjOelneemj%2BWwhuS9v%2BWpmuekvOabtOa3u%2BiJsuW9qSUwQeaIkeS7rOaBreWAmeaCqOeahOWFieS4tCZfZm9vdGNvbnRlbnQ95YWz5rOoICU3QiU3QuWNoeWPuOS7pCU3RCU3RCDmm7TlpJrphbfngqvlhoXlrrkmX2Zvb3R1cmw9aHR0cCUzQSUyRiUyRnQuY24lMkZSUDdrUE4xJl9tYXBzZWxlY3RfbGF0PXVuZGVmaW5lZCZfbWFwc2VsZWN0X2xuZz11bmRlZmluZWQmX3Y9Mg%3D%3D')) {
+        location.replace(location.href.replace(/custom=.*?(&|$)/i, ''));
+    }
+    if (location.hash == '#4' && location.href.indexOf('index.html') > -1) {
+        location.href = location.href.replace('index.html', 'list.html');
+    }
+    </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="styles/common.css?hash=77a261bb">
+    <link rel="apple-touch-icon" href="touch-icon-iphone.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="touch-icon-iphone-retina.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="touch-icon-ipad-retina.png">
+</head>
+
+<body>
+    <div id="layout" style="z-index: 9999999999999">
+        <div style="text-align: center;margin-top: 50px"><img src="images/ajax-loader.gif"> <span id="too-long" style="display: none">若长时间没有反应，请 <a href="#" id="refresh">刷新</a> 或访问 <a href="http://cdn-cn.mugeda.com/weixin/card/index.html">镜像1</a> <a href="http://ads.oss-cn-hangzhou.aliyuncs.com/weixin/card/index.html">镜像2</a></span>
+        </div>
+    </div>
+    <script>
+    ! function(a, b) {
+        a.GoogleAnalyticsObject = b, a[b] = a[b] || function() {
+            (a[b].q = a[b].q || []).push(arguments);
+        }, a[b].l = 1 * new Date();
+    }(window, "ga"), ga("create", "UA-38551434-1", "auto"), ga("create", "UA-57436710-1", "auto", {
+        name: "errorTracker"
+    }), ga("require", "displayfeatures"), window.pageLoadTime = new Date().getTime();
+
+    var marks = "";
+
+    window.MSMMark = function(a) {
+            marks += a;
+        }, window.getMark = function() {
+            return marks;
+        },
+        function() {
+            window.msm = {}, msm.m = function(a, b) {
+                var c = [],
+                    d = !1;
+                if (a.stack) {
+                    for (var e = a.stack.split("\n"), f = 0, g = e.length; g > f; f++) c.push(e[f]);
+                    c.shift(), d = !0;
+                }
+                if (!d)
+                    for (var h = b.callee.caller, i = 0; h && !(i++ > 10);) {
+                        var j = h.toString(),
+                            k = j.substring(j.indexOf("function") + 50, j.indexOf("")) || "anonymous";
+                        c.push(k), h = h.caller;
+                    }
+                ga("errorTracker.send", {
+                    hitType: "event",
+                    eventCategory: "异常catchAll",
+                    eventAction: a.message,
+                    eventLabel: navigator.userAgent + "|" + c.join("@@@")
+                });
+            }, window.onerror = function(a, b, c, d, e) {
+                if (b) {
+                    var f = {};
+                    f.ua = window.navigator.userAgent, f.message = "string" == typeof a ? a : a.message,
+                        f.url = b, f.line = c, f.page = window.location.href, f.col = d, f.stack = e ? e.stack : "",
+                        ga("errorTracker.send", {
+                            hitType: "event",
+                            eventCategory: "异常",
+                            eventAction: f.message,
+                            eventLabel: f.url + "(" + f.line + "," + f.col + ")@" + f.page + "|" + navigator.userAgent + "|" + f.stack
+                        });
+                }
+            };
+        }(), window.base = (location.protocol + "//" + location.host + location.pathname).replace("index.html", ""),
+        0 == location.host.indexOf("192.") ? base = "/" : -1 == location.href.indexOf("/") && (base = "http://" + location.host + "/"),
+        window.MugedaUrl = function(a) {
+            var b = {
+                    Username: 4,
+                    Password: 5,
+                    Port: 7,
+                    Protocol: 2,
+                    Host: 6,
+                    Pathname: 8,
+                    URL: 0,
+                    Querystring: 9,
+                    Fragment: 10
+                },
+                c = /^((\w+):\/\/)?((\w+):?(\w+)?@)?([^\/\?:]+):?(\d+)?(\/?[^\?#]+)?\??([^#]+)?#?(\w*)/,
+                d = {},
+                e = {},
+                f = function(a) {
+                    return function() {
+                        return e[a];
+                    };
+                },
+                g = function(a) {
+                    return function(b) {
+                        return e[a] = b;
+                    };
+                };
+            for (var h in b) e[h] = "", d["get" + h] = f(h), d["set" + h] = g(h);
+            var i = c.exec(a);
+            if (i)
+                for (var h in b) "undefined" != typeof i[b[h]] && (e[h] = i[b[h]]);
+            for (var j = e.Querystring.split("&"), k = {}, l = 0; l < j.length; l++) {
+                var m = j[l].split("=");
+                m.length >= 2 && (k[m[0]] = m.splice(1).join("="));
+            }
+            return d.getQueryObj = function() {
+                return k;
+            }, d.getQuerystring = function() {
+                var a = [];
+                for (var b in k) a.push(b + "=" + k[b]);
+                return a.join("&");
+            }, d.setFragment = function(a) {
+                e.Fragment = a;
+            }, d.getURL = function() {
+                var a = "";
+                return e.Protocol && (a += e.Protocol + "://"), (e.Username || e.Username) && (a += e.Username + ":" + e.Password + "@"),
+                    e.Host && (a += e.Host), e.Port && (a += ":" + e.Port), e.Pathname && (a += e.Pathname),
+                    d.getQuerystring() && (a += "?" + d.getQuerystring()), e.Fragment && (a += "#" + e.Fragment),
+                    a;
+            }, d;
+        }, window.MugedaUrl.current = new MugedaUrl(location.href),
+        function() {
+            var a = document.getElementById("refresh");
+            a && (a.addEventListener("click", function(a) {
+                a.preventDefault(), MugedaUrl.current.getQueryObj().uiq = Math.round(100 * Math.random()),
+                    location.href = MugedaUrl.current.getURL();
+            }), setTimeout(function() {
+                var a = document.querySelector("#too-long");
+                a && (a.style.display = "block");
+            }, 7e3));
+        }();
+
+    var loadMain = function() {
+        seajs.production = !0, seajs.config({
+            alias: {
+                wxjs: "http://res.wx.qq.com/open/js/jweixin-1.0.0"
+            }
+        }), seajs.use(["./scripts/utils"], function(a) {
+            null == a ? alert("框架加载失败，错误码：10009。") : a.init();
+        });
+    };
+
+    ! function() {
+        window.Audio || (window.Audio = function(a) {
+            this.play = function() {}, this.pause = function() {}, this.load = function() {},
+                this.loop = !0, this.src = a, this.paused = !1, this.addEventListener = function() {},
+                this.removeEventListener = function() {};
+        });
+        var a = MugedaUrl.current.getQueryObj().audio,
+            b = MugedaUrl.current.getQueryObj().music;
+        if (b && (b = decodeURIComponent(b)), a || (a = b), a || b) {
+            var c = MugedaUrl.current.getQueryObj().crid.replace("_", ""),
+                d = a.lastIndexOf(".mp3");
+            d > 0 && (a = a.substr(0, d + 4));
+            var e = decodeURI(a);
+            window.weixinAudioLoader = {};
+            var f = [],
+                g = a.indexOf("/") > -1;
+            try {
+                try {
+                    f = JSON.parse(e);
+                } catch (h) {
+                    f.push({
+                        u: g ? e : "cards/" + c + "/" + e,
+                        a: 0
+                    });
+                }
+                f.forEach(function(a) {
+                    var c = -1 == a.u.indexOf("http") ? base + a.u : a.u,
+                        d = weixinAudioLoader[c] = new Audio(b || c);
+                    a.a && (d.autoplay = !0), d.loop = !0, d._play = d.play, d._pause = d.pause;
+                    var e = navigator.userAgent.toLowerCase().indexOf("mugedacard") >= 0,
+                        f = function(a) {
+                            var b = -1;
+                            if ("play" == a.reference) b = "buffering" == a.status ? 2 : "playing" == a.status ? 0 : 1;
+                            else if ("pause" == a.reference) "paused" == a.status && (b = 1);
+                            else if ("progress" == a.reference) {
+                                {
+                                    a.progress;
+                                }
+                                b = 0;
+                            }
+                            b >= 0 && (cardFrame.setIco && cardFrame.setIco(0 == b ? "on" : 2 == b ? "loading" : "off"),
+                                cardFrame.setAudioState && cardFrame.setAudioState(0 == b ? "play" : 2 == b ? "loading" : "stop"));
+                        };
+                    d.play = function() {
+                        if (MSMMark("C0"), e) {
+                            var a = function(b, c) {
+                                window.mucard && window.cardFrame && (cardFrame.setIco || cardFrame.setAudioState || window.MugedaPage) ? mucard.setAppAudioCallback && mucard.playAudio ? (mucard.setAppAudioCallback(f),
+                                    cardFrame.setIco && cardFrame.setIco("loading"), cardFrame.setAudioState && cardFrame.setAudioState("loading"),
+                                    mucard.playAudio(b, c)) : d._play.call(d) : setTimeout(function() {
+                                    a(b, c);
+                                }, 300);
+                            };
+                            a(d.src, d.loop);
+                        } else d.weixinLoaded || -1 == navigator.userAgent.toLowerCase().indexOf("micromessenger") ? (MSMMark("C1"),
+                            d._play.call(d)) : (MSMMark("C2"), d.weixinPlayCalled = !0);
+                    }, d.pause = function() {
+                        if (e) {
+                            var a = function(b) {
+                                window.mucard && cardFrame && (cardFrame.setIco || cardFrame.setAudioState) ? mucard.pauseAudio ? mucard.pauseAudio(b) : d._pause.call(d) : setTimeout(function() {
+                                    a(b);
+                                }, 300);
+                            };
+                            a(d.src);
+                        } else d.weixinLoaded || -1 == navigator.userAgent.toLowerCase().indexOf("micromessenger") ? d._pause.call(d) : d.weixinPlayCalled = !1;
+                    };
+                });
+            } catch (i) {
+                console.error("cannot solve audio param.");
+            }
+        }
+    }(),
+    function() {
+        window.onMucardReady = function() {
+            window.weiParam && null != window.weiParam.img_url && null != window.weiParam.title && null != window.weiParam.desc && setTimeout(function() {
+                window.mucard && mucard.share(window.weiParam.title, window.weiParam.desc, window.weiParam.img_url);
+            }, 0);
+        }, window.getSocialMediaParams = function() {
+            return window.weiParam;
+        };
+        var a = function() {
+            WeixinJSBridge.call("showOptionMenu"), window.cardFrame = window.cardFrame || {},
+                cardFrame.weixin = cardFrame.weixin || {}, cardFrame.weixin.imagePreview = function(a, b) {
+                    WeixinJSBridge.invoke("imagePreview", {
+                        current: a,
+                        urls: b
+                    });
+                };
+        };
+        if (window.WeixinJSBridge && WeixinJSBridge.call && (null == WeixinJSBridge._hasInit || WeixinJSBridge._hasInit === !0)) {
+            MSMMark("A6"), a(), MSMMark("A7");
+            for (var b in weixinAudioLoader)
+                if (weixinAudioLoader.hasOwnProperty(b)) {
+                    MSMMark("A8");
+                    var c = weixinAudioLoader[b];
+                    c.weixinLoaded = !0;
+                }
+        } else document.addEventListener("WeixinJSBridgeReady", function() {
+            MSMMark("A9"), a(), MSMMark("A10");
+            for (var b in window.weixinAudioLoader)
+                if (weixinAudioLoader.hasOwnProperty(b)) {
+                    var c = weixinAudioLoader[b],
+                        d = function() {
+                            this.weixinPlayCalled ? (MSMMark("A11"), this.loop = !0, c._play.call(c), delete c.weixinPlayCalled) : MSMMark("A12"),
+                                this.weixinLoaded = !0, this.removeEventListener("canplaythrough", d);
+                        };
+                    MSMMark("A13");
+                    var e = function() {
+                        c.load(), c.addEventListener("canplaythrough", d);
+                    };
+                    try {
+                        e();
+                    } catch (f) {
+                        setTimeout(function() {
+                            throw "err load audio:" + b;
+                        }, 0);
+                    }
+                }
+        });
+    }();
+
+    var loadGa = function() {
+        if ("complete" != document.readyState) return setTimeout(loadGa, 1e3);
+        MSMMark("A3");
+        var a = function(a, b, c, d, e, f, g) {
+            f = b.createElement(c), g = b.getElementsByTagName(c)[0], f.src = d, f.defer = !0,
+                f.async = !0, g.parentNode.insertBefore(f, g);
+        };
+        MSMMark("A4"), a(window, document, "script", "//" + location.host + "/weixin/card/analytics.js", "ga"),
+            MSMMark("A5"), a(window, document, "script", "//" + location.host + "/weixin/card/ga.js");
+    };
+
+    - 1 == navigator.userAgent.toLowerCase().indexOf("micromessenger") ? (MSMMark("A0"),
+        setTimeout(function() {
+            loadGa();
+        }, 0)) : (MSMMark("A1"), document.addEventListener("WeixinJSBridgeReady", function() {
+        MSMMark("A2"), loadGa();
+    }));
+    </script>
+    <script src="sea2.js?hash=b1581b63" id="seajsnode" async="" onload="loadMain()"></script>
+</body>
+
+</html>

@@ -1,0 +1,6 @@
+{"file":"sp1.png","frames":{
+"bg":{"x":0,"y":0,"w":640,"h":1080,"offX":0,"offY":0,"sourceW":640,"sourceH":1080},
+"guard":{"x":640,"y":0,"w":640,"h":1080,"offX":0,"offY":0,"sourceW":640,"sourceH":1080},
+"share_tip":{"x":1280,"y":0,"w":640,"h":1080,"offX":0,"offY":0,"sourceW":640,"sourceH":1080},
+"sky1":{"x":1920,"y":0,"w":640,"h":1080,"offX":0,"offY":0,"sourceW":640,"sourceH":1080},
+"sky2":{"x":2560,"y":0,"w":640,"h":1080,"offX":0,"offY":0,"sourceW":640,"sourceH":1080}}}

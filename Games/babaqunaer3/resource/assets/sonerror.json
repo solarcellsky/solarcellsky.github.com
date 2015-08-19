@@ -1,0 +1,23 @@
+﻿{
+"mc": {
+	"sonerror": {
+		"frameRate":24,
+		"labels": [
+		],
+		"frames": [
+			{"res":"sonerror0000","x":0,"y":0},
+			{"res":"sonerror0001","x":0,"y":0},
+			{"res":"sonerror0002","x":0,"y":0},
+			{"res":"sonerror0003","x":0,"y":0},
+			{"res":"sonerror0004","x":0,"y":0}
+		]
+	}
+},
+"res": {
+	"sonerror0000":{"x":0,"y":0,"w":349,"h":429},
+	"sonerror0001":{"x":349,"y":0,"w":349,"h":429},
+	"sonerror0002":{"x":0,"y":429,"w":349,"h":429},
+	"sonerror0003":{"x":349,"y":429,"w":349,"h":429},
+	"sonerror0004":{"x":0,"y":858,"w":349,"h":429}
+}
+}

@@ -1,0 +1,14 @@
+{
+	"showFPS":false,
+    "debugMode"     : 1,
+    "frameRate"     : 60,
+    "id"            : "gameCanvas",
+    "renderMode"    : 1,
+    "jsList"        : [
+        "src/MyLoaderScene.js",
+        "src/PlayingScene.js",
+        "src/MyScene.js",
+        "src/resources.js",
+        "main.js"
+    ]
+}
