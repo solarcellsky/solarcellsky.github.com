@@ -1,0 +1,74 @@
+
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><!--告诉浏览器准备接受一个 HTML 文档-->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1"><!--按照最新浏览器标准渲染-->
+    <meta name="viewport" content="target-densitydpi=high-dpi,width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <!--设置浏览器视口宽度等于设备屏幕宽度，不进行初始缩放，且用户不可以设置缩放-->
+    <meta name="apple-mobile-web-app-capable" content="yes" /><!--iphone设备中的safari私有meta标签，它表示：允许全屏模式浏览-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" /><!--指定的iphone中safari顶端的状态条的样式-->
+    <meta name="format-detection" content="telephone=no" /><!--告诉设备将页面中的数字识别为电话号码-->
+	<title>苏宁跳跳跳</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="cocos2d-js-v3.7-lite.js" charset="utf-8"></script>
+    <script src="js/GameService.js"></script>
+    <script src="js/security.js"></script>
+	<script src="js/ui.js"></script>
+    <script src="src/LoaderImage.js" charset="utf-8"></script>
+    <script src="main.js" charset="utf-8"></script>
+
+</head>
+<body>
+<canvas id="gameCanvas" width="0" height="0" ></canvas>
+
+<!--排行榜-->
+<div id="phb">
+	<img id="bg_phb" src="images/bg_phb.jpg"/>
+    <img id="btn_close" src="images/btn_close.png" />
+	<div id="list">
+		<ul id="content" class="phb1">
+		<!--
+			<li class="li_first">
+				<ul>
+ 					<li class="li1">1.</li>
+					<li class="li2">
+                    	<img id="img_touxiang1" src="images/img_touxiang.png" />
+                        <p id="name1">（昵称）1212312</p>
+                    </li>
+					<li class="li3">120</li>
+				</ul>
+			</li>
+            <li class="li_first">
+				<ul>
+ 					<li class="li1">2.</li>
+					<li class="li2">
+                    	<img id="img_touxiang2" src="images/img_touxiang.png" />
+                        <p id="name2">（昵称）1212312</p>
+                    </li>
+					<li class="li3">120</li>
+				</ul>
+			</li>
+			-->
+		</ul>
+	</div>
+	<ul id="list2">
+		<li>
+			<ul>
+ 				<li class="li1" id="mc"></li>
+				<li class="li2">
+                   	<img id = "tx" class="img_touxiang" src="" />
+                	<p class="name" id="nc"></p>
+                </li>
+				<li class="li3" id="fs"></li>
+			</ul>
+		</li>
+	</ul>
+	
+</div> 
+
+
+<script src="js/fontSize.js"></script>
+</body>
+</html>

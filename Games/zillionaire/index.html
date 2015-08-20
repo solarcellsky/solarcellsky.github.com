@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;" />
+<meta name="viewport" content="target-densitydpi=high-dpi,width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+
+
+	<meta http-equiv="Content-Type" content="text/html;" />
+    <script> 
+    	var params = JSON.parse('');
+    	var GameInfo ={
+    			gameCount:""
+    	};
+	</script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="js/wxjs.js"></script>
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/utility.js"></script>
+	<script src="js/GameControler.js"></script>
+	<script src="js/GameService.js"></script>
+    <script src="js/js.js"></script>
+    
+	<script src="src/cocos2d-js-v3.2.js"></script>
+    <script src="src/main.js"></script>
+	<script>
+    var shareData = {
+        title: '分级大富翁',
+        desc: 'Apple Watch、万元红包大放送！小伙们快来抢吧！',
+        link:'http://game.91yixun.cn/GameMS/games/zillionaire/dfw.html',
+        imgUrl: 'http://game.91yixun.cn/GameMS/games/zillionaire/res/share.jpg',	
+        success: function (res) {
+        	$.post("ajaxPost!shareFriend.action");
+        }
+    };
+    var shareData1 = {
+            title: '【分级大富翁】Apple Watch、万元红包大放送！快来抢吧！',
+            link:'http://game.91yixun.cn/GameMS/games/zillionaire/dfw.html',
+            imgUrl: 'http://game.91yixun.cn/GameMS/games/zillionaire/res/share.jpg',	
+            success: function (res) {
+            	$.post("ajaxPost!shareFriend.action");
+            }
+        };
+    wx.onMenuShareAppMessage(shareData);
+    wx.onMenuShareTimeline(shareData1);
+</script>
+<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+<title>大富翁</title>
+</head>
+<body>
+	<canvas id="gameCanvas" width="320" height="480"></canvas>
+
+    <!--æäº¤ä¿¡æ¯-->
+<div id="tjxx">
+	<div id="jp">20åè¯è´¹</div>
+	<img id="bg_tjxx" src="images/bg_tjxx.jpg">
+    <input id="name" type="text">
+    <input id="phone" type="tel">
+    <p id="error"></p>
+    <img id="btn_tj" src="images/btn_submit.png" func="updatePhone">
+</div>
+
+<!--æäº¤æå-->
+<div id="tjcg">
+	<img id="bg_tjcg" src="images/bg_tjcg.jpg" />
+    <img id="btn_share" src="images/btn_share.png" />
+    <img class="share_popup" src="images/guide.png">
+</div>
+<script>
+	$('#btn_share').click(function(){
+		$('.share_popup').css('display','block');
+	});
+	$('.share_popup').click(function(){
+		$(this).css('display','none');
+	});
+
+</script> 
+
+	<script src="js/fontSize.js"></script>
+</body>
+</html>
+	

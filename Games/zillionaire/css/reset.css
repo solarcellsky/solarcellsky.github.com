@@ -1,0 +1,38 @@
+/*清空默认设置*/
+* { margin: 0px; padding: 0px; outline: 0px; font-size: 100%; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); list-style:none; border:none; list-style:none;}
+a { text-decoration: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0.35);}
+html {margin:0px; padding:0px;  height: 100%; font-size: 100%; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;}
+body { margin: 0px; padding: 0px; width: 100%; height: 100%; line-height: 1.231; font-family: Microsoft YaHei; font-size: 14px; position: relative; min-height: 100%; -webkit-touch-callout: none; -webkit-box-orient: vertical; -webkit-box-align: stretch;}
+.relative { position: relative;}
+.absolute { position: absolute;}
+.hidden { display: none;}
+.block { display: block;}
+.vhidden {/*隐藏还占据位置*/visibility: hidden;}
+.share_popup{ display: none; position:absolute; top:0; left:0; z-index:1000; width:100%; height:auto;}
+
+/*提交信息页面*/
+#tjxx{ width:100%; height:auto; overflow:auto; display:none;}
+#bg_tjxx{ width:100%; height:auto; position:absolute;}
+#jp{ width:25%; left:55%; position:absolute; text-align:center; font-size:16px; color:#453901; z-index:111;}
+#name{ width:47.5%; left:32.1%; position:absolute; background-color:transparent;}
+#phone{ width:47.5%; left:32.1%; position:absolute; background-color:transparent; }
+/*#address{ width:47.5%; left:32.1%; position:absolute; background-color:transparent;}*/
+#error{ width:100%; text-align:center; font-size:15px; position:absolute; color:red;}
+#btn_tj{ position:absolute; width:24.6%; margin-left:37.7%;}
+
+/*提交成功页面*/
+#tjcg{ width:100%; height:auto; overflow:auto; display:none;}
+#bg_tjcg{ width:100%; height:auto; position:absolute;}
+#btn_share{ position:absolute; width:24.6%; margin-left:37.7%;}
+
+/*我也参与页面*/
+#canyu{ width:100%; height:100%; overflow:auto; display:block;}
+#bg_cy{ width:100%; height:100%; position:absolute; top:0; left:0;}
+#btn_cy{ position:absolute; width:43.6%; left:28.2%; top:44%;}
+#btn_rule{ position:absolute; width:32.8%; left:33.6%; top:59.3%;}
+
+/*规则*/
+#rule{ width:100%; height:100%; overflow:auto; display:none;}
+#bg_rule{ width:100%; height:100%; position:absolute; top:0; left:0;}
+#btn_return{ position:absolute; width:30%; left:35%; top:88%;}
+
