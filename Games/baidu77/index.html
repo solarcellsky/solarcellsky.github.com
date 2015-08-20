@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html class="expanded">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="address=no" />
+
+    <meta name="description" content="8.22百度糯米约惠趴，商家让利全民整点火爆开抢！999元大奖先摇先得！猛戳开启摇大奖！" />
+    <title>百度糯米七夕摇一摇</title>
+    <script>
+    //全局对象
+    var APPCONF = {}
+    </script>
+
+    <script src="js/jquery-1.9.1.js"></script>
+    <script src="js/player.js"></script>
+    <script>
+    APPCONF.page = 'shake_other';
+    APPCONF.isLogin = '0';
+    APPCONF.needLogin = '1';
+    //APPCONF.needLogin= '0';
+    APPCONF.terminal = 'other';
+    APPCONF.dynamic = '176xxxx7700刚刚摇中5元,180xxxx9641刚刚摇中100元,174xxxx1780刚刚摇中520元,158xxxx6278刚刚摇中100元,175xxxx2389刚刚摇中50元,134xxxx2309刚刚摇中20元,158xxxx6243刚刚摇中999元,159xxxx3106刚刚摇中20元,133xxxx2329刚刚摇中20元,154xxxx5434刚刚摇中100元,177xxxx5718刚刚摇中5元,175xxxx3444刚刚摇中5元,186xxxx9841刚刚摇中20元,182xxxx5325刚刚摇中5元,133xxxx8053刚刚摇中20元,136xxxx4957刚刚摇中20元,151xxxx1551刚刚摇中520元,154xxxx3632刚刚摇中999元,171xxxx5659刚刚摇中100元,158xxxx7456刚刚摇中520元';
+    APPCONF.price = '';
+
+    window.onload = function() {
+        document.getElementById('loading').style.display = 'none';
+    }
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="css/base_af18408.css" />
+    <link rel="stylesheet" type="text/css" href="css/animate_0caa8b3.css" />
+    <link rel="stylesheet" type="text/css" href="css/smsLogin_820_4b37917.css" />
+    <link rel="stylesheet" type="text/css" href="css/shake_index_820_825859c.css" />
+</head>
+
+<body>
+
+    <article class="index">
+        <section id="loading">
+            <div class="loadico"></div>
+        </section>
+        <section id="music">
+            <a href="javascript:void(0);" mon="area=music"></a>
+        </section>
+        <section class="logo"><img src="images/logo_820_9984c7d.png" alt="" />
+        </section>
+        <section class="shake">
+            <div class="cartoon">
+                <div class="wanzisj">
+                    <div class="wanzi"><img src="images/panzi_820_fe2f9f8.png" alt="" />
+                    </div>
+                    <div class="shakeanimte throw"><img src="images/shouji_718_a13b09d.png" alt="" />
+                    </div>
+                    <div class="shakeanimte throw2"><img src="images/webico_718_50055b5.png" alt="" />
+                    </div>
+                </div>
+                <div class="titlea animated">
+                    <img src="images/slogan_820_e6374d7.png" alt="" />
+                </div>
+            </div>
+        </section>
+        <section class="qian"><img src="images/qian_820_384eb5d.png" alt="" />
+        </section>
+        <section class="result miss hide animated">
+            <div class="hd">
+                <p class="nohit">还差一点哦！赶快再摇一摇！</p>
+            </div>
+        </section>
+        <section class="loading hide animated">
+            <div class="hd padtb">
+                <span class="loadico"></span><span class="loadtxt">正在摇一摇...</span>
+            </div>
+        </section>
+        <section class="result winning animated hide">
+            <div class="hd">
+                <p class="title">离大奖只有一步之遥</p>
+            </div>
+            <div class="bd">
+                <div class="getvoucher">
+                    <div class="bd">
+                        <div class="price">
+                            <span class="pricenum"></span>
+                            <span class="unit">元</span>
+                        </div>
+                        <p class="mtitle">抵用劵</p>
+                    </div>
+                </div>
+            </div>
+            <div class="ft misLogin">
+                <p class="decr hide"></p>
+                <section id="smsLogin"></section>
+            </div>
+        </section>
+        <section class="result succ animated hide">
+            <div class="hd">
+                <p class="title">恭喜您获得</p>
+                <a class="close_2" href="javascript:void(0)"><img src="images/close_2_718_34bec9b.png" alt="close" />
+                </a>
+            </div>
+            <div class="bd">
+                <div class="getvoucher">
+                    <div class="bd">
+                        <div class="price">
+                            <span class="pricenum"></span>
+                            <span class="unit">元</span>
+                        </div>
+                        <p class="mtitle">抵用劵</p>
+                    </div>
+                </div>
+            </div>
+            <div class="ft">
+                <p class="decr hide"></p>
+                <p class="note">已放入<em class="phone"></em>糯米账户</p>
+                <p class="wnote">打开百度糯米-我的-抵用券查看</p>
+            </div>
+            <div class="shareft"><a class="firsta other" href="#" mon="area=check">去百度糯米使用</a>
+            </div>
+        </section>
+        <footer>
+            <div class="ft clearfix">
+                <div class="huodong">
+                    <a href="javascript:void(0);" mon="area=rule">活动说明</a>
+                </div>
+                <div class="note"></div>
+            </div>
+        </footer>
+    </article>
+    <section id="bg" class="animated hide">
+        <div class="bgcolor"></div>
+        <div class="innder">
+            <div class="jiantou"><img src="images/jiantou_1f86197.png" alt="让小伙伴一起领">
+            </div>
+            <div class="zhidao">
+                <a href="javascript:void(0);" mon="area=know"><img src="images/fanhui_820_ae8c9a8.png" alt="让小伙伴一起领">
+                </a>
+            </div>
+        </div>
+    </section>
+    <section id="explain">
+        <div class="hd clearfix">
+            <h3>活动说明</h3>
+            <div class="close"><img src="images/close_9c31c97.png" alt="关闭" />
+            </div>
+        </div>
+        <div class="bd">
+            <ul>
+                <li>活动时间：2015年8月20日-2015年8月24日；</li>
+                <li>用户参与活动有机会获得不等金额的抵用券，其中20元、50元、100元、520元、999元券同一用户活动期间只能使用1张（同一百度糯米账号、手机号、移动设备、银行卡、支付账号以及其他信息相同均为同一名用户）；</li>
+                <li>抵用券将直接放入手机号对应的百度糯米账号，抵用券与站内其他优惠不可同时享受，如遇退款，抵用券金额不可退；</li>
+                <li>活动中的“抵用券”在糯米客户端5.9版本以下称为“代金券”，请用户知悉；</li>
+                <li>本活动与苹果公司无关。</li>
+                <li>用户采用作弊方式参与活动，百度糯米有权取消其订单及优惠。</li>
+            </ul>
+        </div>
+    </section>
+    <section id="bg_color" class="hide"></section>
+    <audio id="clickSound">
+        <source src="images/yao.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="clickSound2">
+        <source src="images/zhong.mp3" type="audio/mpeg">
+    </audio>
+    <script>
+    ! function() {
+        //设置rem单位为屏幕宽度,适配神器
+        function rem() {
+            document.documentElement.style.fontSize = (document.documentElement.clientWidth || document.documentElement.clientWidth) + 'px';
+            //设置body字体大小，不影响body内字体大小
+            document.body.style.fontSize = '16px';
+        }
+        rem();
+        window.addEventListener('resize', rem, false);
+    }();
+    </script>
+</body>
+<script src="js/mod_96dd55b.js"></script>
+<script src="js/zepto_1692b21.js"></script>
+<script src="js/shake_93f3a0d.js"></script>
+<script src="js/share_6e21185.js"></script>
+<script src="js/shake_index_820_920e3c5.js"></script>
+<script src="js/smsLogin_5850ab2.js"></script>
+</html>
