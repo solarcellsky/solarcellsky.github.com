@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="target-densitydpi=device-dpi,width=640">
+    <!--<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />-->
+    <meta name="apple-touch-fullscreen" content="YES">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="pragram" content="no-cache">
+    <title>纸巾韧性大挑战</title>
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/crafty-min.js"></script>
+    <script src="js/Game.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/scene.js"></script>
+    <script src="js/iscroll.js"></script>
+    <script src="js/xingkec.js"></script>
+    <script src="js/fastclick.js"></script>
+    <script type="text/javascript">
+    window.addEventListener('load', function() {
+        window.scrollTo(0, 1);
+        Game.start();
+    });
+    </script>
+</head>
+<body id="body_all">
+
+    <div class="loading" style="position: fixed; width: 100%; height: 100%; z-index: 10000; display: none; background: rgba(0, 0, 0, 0.901961);">
+        <div class="load6">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+
+    <div class="body_wap hide">
+
+        <!--马上领奖-->
+        <div class="jiang_wap hide">
+            <!-- 十元京东优惠券 -->
+            <div class="jiang_tit"><img src="./img/jiang_tit.png">
+            </div>
+            <div class="guang"><img src="./img/guang.png">
+            </div>
+            <div class="jiang_text">
+                <p class="jiang_text01">获得京东优惠券</p>
+                <p class="jiang_text02">每周累计过关斤数前50名还有机会赢ipad</p>
+                <p class="jiang_text03">中奖名单会在 <a href="#">维达官方微信公告</a>
+                </p>
+            </div>
+            <div class="money"><img src="./img/money.png">
+            </div>
+            <div class="btnbox">
+                <div class="jiang_bg"><img src="./img/jiang_bg.png">
+                </div>
+                <div class="jiang_btn"><img src="./img/jiang_btn.png">
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+    <!--首页-->
+    <div class="shouye_wap">
+
+        <div class="shouye_img"><img class="sybg" src="./img/shouye.jpg">
+        </div>
+        <div class="top pulse and" id="topimg"><img src="./img/top.png">
+        </div>
+        <div class="shouye_img1 and"><img src="./img/shouye_img1.png">
+        </div>
+        <div class="shouye_btn1 wobble" id="shouye_btn1"><img src="./img/shouye_btn.png">
+        </div>
+        <div class="shouye_btn2 flash" id="shouye_btn2">
+            <a href="http://webtest.xingkec.com/vinda/Vindamusic/vindamsc.php"><img src="./img/partner_btn.png">
+            </a>
+        </div>
+        <div class="shouye_btn3 bounce" id="shouye_btn3">
+            <a href="http://webtest.xingkec.com/vinda/Vindashow1/vindardshow.php"><img src="./img/fun_btn.png">
+            </a>
+        </div>
+
+    </div>
+
+
+
+
+    <!--游戏动画-->
+    <div class="yx_wap hide">
+        <div class="last hide">
+            <div class="yx_img"><img src="./img/yx_img.jpg">
+            </div>
+            <div class="yx_over"></div>
+            <img src="./img/last.png" class="rule_txt">
+            <div class="start_btn" onclick="start();" id="start_btn"><img src="./img/start_btn.png">
+            </div>
+        </div>
+        <div class="first">
+
+            <div class="gif"><img src="./img/gif.gif">
+            </div>
+            <img src="./img/first_bot.png" class="first_bot">
+            <img src="./img/body.jpg" class="bg" alt="">
+
+        </div>
+    </div>
+
+    <img src="./img/body_i6.jpg" class="hide">
+    <img src="./img/shouye_i6.jpg" class="hide">
+
+
+
+    <!-- 游戏结束 -->
+    <div class="gameover hide">
+        <!--成功过关-->
+        <div class="fale_bg"></div>
+        <div class="in">
+            <div class="yx_guang"><img src="./img/guang.png">
+            </div>
+            <div class="succ_wap hide">
+                <div class="succ_img and"><img src="./img/succ_img_03.png">
+                </div>
+                <div class="fale_text">
+                    <p class="fale_text01">成功通过挑战</p>
+                    <p class="fale_text02">你当局成绩是<span></span>分</p>
+                    <p class="fale_text01">累积分数<span>3</span>分</p>
+                </div>
+                <div class="succ_btn" id="succ_btn"><img src="./img/succ_btn.png">
+                </div>
+            </div>
+            <!--过关失败-->
+            <div class="fale_wap hide">
+                <div class="fale_img and"><img src="./img/fale_img.png">
+                </div>
+                <div class="fale_text">
+                    <p class="fale_text01">捞到30斤金鱼才算过关</p>
+                    <p class="fale_text02">你当局成绩是<span></span>分</p>
+                    <p class="fale_text01">累积积分<span>3</span>分</p>
+                </div>
+                <div class="again_btn" onclick="play_again()"><img src="./img/again_btn.png">
+                </div>
+                <div class="pk_btn yqpk_btn" id="fale_btn"><img src="./img/pk_btn.png">
+                </div>
+            </div>
+        </div>
+
+        <div class="gz_text">积分可兑换iPhone6 Plus等各种大奖哦，敬请关注维达官方微信：<a href="#">维达Vinda</a>
+        </div>
+    </div>
+
+    <!-- 分享提示积分翻倍页面 -->
+    <div class="sharedb hide">
+        <img src="./img/share_db.png">
+    </div>
+
+
+    <!-- 积分翻倍页面-->
+    <div class="double hide">
+        <img src="./img/body.jpg" class="bg" alt="">
+        <div class="top">
+            <img class="top_bg" src="./img/top_bg.png">
+            <img class="top1 hide" src="./img/double_top1.png">
+            <img class="hide top2" src="./img/double_top2.png">
+        </div>
+        <div class="text1 hide">恭喜你，当前拥有<span class="score_all">3</span>积分
+            <br>
+            <font>想感受超韧纸巾的高品质，马上来京东抢购吧！
+                <br>马上点击&gt;&gt;&gt; <span class="huan_btn">积分换礼</span>获取维达丰富好礼！</font>
+        </div>
+
+        <div class="text2 hide">翻倍失败，当前拥有<span class="score_all">3</span>积分
+            <br>
+            <font>想感受超韧纸巾的高品质，马上来京东抢购吧！
+                <br>马上点击&gt;&gt;&gt; <span class="huan_btn">积分换礼</span>获取维达丰富好礼！</font>
+        </div>
+
+        <div class="pic"><img src="./img/double_pic.png">
+        </div>
+        <div class="btn">
+            <img src="./img/buynow_btn.png">
+            <div class="buynow_btn" id="buynow_btn">
+                <a href="http://wqs.jd.com/event/juhui/weida/index.shtml"></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 礼品兑换页面-->
+    <div class="huan hide">
+        <img src="./img/body.jpg" class="bg" alt="">
+        <div class="top">
+            <img class="xian" src="./img/huan_xian.png">
+            <img class="bg2" id="score_bg" src="./img/huan_top.png">
+            <div class="score_all">3</div>
+        </div>
+
+        <div class="photo">
+
+            <div class="lipin lipin1" onclick="change(1)"><img src="./img/lipin1.png">
+                <div class="number number1">0</div>
+                <div class="fenshu fenshu1">3000</div>
+            </div>
+            <div class="lipin lipin2" onclick="change(2)"> <img src="./img/lipin2.png">
+                <div class="number number2">0</div>
+                <div class="fenshu fenshu2">100</div>
+            </div>
+            <div class="lipin lipin3" onclick="change(3)"><img src="./img/lipin3.png">
+                <div class="number number3">0</div>
+                <div class="fenshu fenshu3">8000</div>
+            </div>
+
+        </div>
+
+        <div class="tips_txt">详情可留意活动规则页面的详细介绍</div>
+
+    </div>
+
+    <!--确认兑换页面-->
+    <div class="aysure hide">
+        <div class="text" id="aysure_txt">
+            <h1>温馨提示</h1>每次抽奖兑换将消耗600积分</div>
+        <div class="btn">
+            <div class="fqdh_btn"><img src="./img/fqdh_btn.png">
+            </div>
+            <div class="jxdh_btn"><img src="./img/jxdh_btn.png">
+            </div>
+        </div>
+    </div>
+
+    <!--兑换后抽奖结果页-->
+    <div class="result hide">
+        <img src="./img/body.jpg" class="bg" alt="">
+        <img src="./img/top_bg.png" class="top_bg">
+        <img src="./img/result_top1.png" class="result_top1 hide">
+        <img src="./img/result_top2.png" class="result_top2 hide">
+        <div class="result_txt">iPhone6 Plus 是你的啦~~</div>
+        <div class="result_pic1 hide">
+            <img src="./img/result_pic1bg.png" alt="" class="result_pic1bg">
+            <img src="" alt="" class="pic1">
+
+        </div>
+
+        <img src="./img/result_pic2.png" alt="" class="result_pic2 hide">
+        <div class="bot_btn">
+            <div class="result_btn1 hide">
+                <img src="./img/result_btn1.png">
+                <div class="lj_btn"></div>
+            </div>
+            <div class="result_btn2 hide"><img src="./img/result_btn2.png">
+                <div class="play_btn"></div>
+            </div>
+        </div>
+    </div>
+
+    <!--填写资料-->
+    <div class="gr_wap hide">
+        <img src="./img/body.jpg" class="bg" alt="">
+        <div class="in">
+            <div class="gr_tit"><img src="./img/input_top.png">
+            </div>
+            <div class="input_list">
+                <div class="li"><img src="./img/inputli_bg.png">
+                    <input type="text" name="username" id="username" placeholder="请输入您的姓名"> </div>
+                <div class="li"><img src="./img/inputli_bg.png">
+                    <input type="text" name="telphone" id="telphone" placeholder="请输入您的手机号码"> </div>
+                <div class="li"><img src="./img/inputli_bg.png">
+                    <input type="text" name="address" id="address" placeholder="请输入您的地址"> </div>
+            </div>
+            <div class="bc_btn"><img src="./img/save_btn.png">
+            </div>
+        </div>
+    </div>
+
+    <!--关注-->
+    <div class="gz_wap hide">
+        <img src="./img/body.jpg" class="bg" alt="">
+        <div class="in">
+            <div class="get_text"><img src="./img/guan_top.png">
+            </div>
+            <div class="guan_pic"><img src="./img/guan_pic1.png">
+            </div>
+            <div class="wd_link">
+                <a href="#"><img src="./img/wd_link.png">
+                </a>
+            </div>
+            <div class="gz_btn"><img src="./img/gz_btn.png">
+            </div>
+        </div>
+    </div>
+
+
+    <!--活动规则-->
+    <div class="hd_wap hide">
+        <img src="./img/body.jpg" class="bg" alt="">
+        <div class="in">
+            <div class="hd_text">
+                <img src="./img/rule.png">
+            </div>
+            <div class="play_btn"><img src="./img/start_btn.png">
+            </div>
+        </div>
+    </div>
+
+    <!--排行榜-->
+
+    <div class="paihang hide">
+        <img src="./img/body.jpg" class="bg" alt="">
+        <div class="top">
+            <img class="xian" src="./img/huan_xian.png">
+            <img class="bg2" src="./img/huan_top.png">
+            <div class="score_all">3</div>
+        </div>
+        <div class="bang">
+            <div class="top">
+                <div class="left">好友名称</div>
+                <div class="right">实时战况</div>
+            </div>
+            <div class="in" id="wrapper">
+                <div id="scroller">
+                    <ul>
+                        <li style="background-color: rgb(255, 255, 255);">
+                            <div class="left">老任</div>
+                            <div class="right">3</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="b_txt">备注：该排行榜仅作积分排名记录，不作为兑奖参考依据</div>
+        </div>
+        <div class="bot_btn">
+            <div class="yqpk_btn" id="yqpk_btn"><img src="./img/yaoqing_btn.png">
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 分享提示pk页面 -->
+    <div class="sharepk hide">
+        <img src="./img/share_pk.png">
+    </div>
+
+
+
+    <div class="page" id="shupin">
+        <div class="mask"></div>
+        <div class="content">
+            竖屏体验更佳哦!
+        </div>
+    </div>
+
+    <!--时间条-->
+    <div class="timebg hide">
+        <div class="timein"></div><img src="./img/time_bg.png">
+    </div>
+    <!-- 捕鱼盘 -->
+    <div class="pan">
+        <img src="./img/pan.png">
+    </div>
+    <!-- 捕鱼公斤数 -->
+    <div class="score">
+        <font>0</font>斤</div>
+    <!-- 左边鱼盘的分数 -->
+    <div class="panfen">+5</div>
+    <!-- 菜单按钮 -->
+    <div class="menu_btn" id="menu_btn">
+        <img src="./img/order_btn.png">
+    </div>
+    <div class="menu_listbg" id="menu_listbg">
+        <img src="./img/menu_listbg.png">
+        <ul>
+            <li class="pai_btn"></li>
+            <li class="huan_btn"></li>
+            <li class="rule_btn"></li>
+            <li class="home_btn"></li>
+            <li class="up_btn"></li>
+        </ul>
+    </div>
+
+    <audio id="bgsound" loop=""></audio>
+
+    <!--START NetEase Devilfish 2006 -->
+
+    <!-- 分享配置 -->
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script>
+    /*
+     * 注意：
+     * 1. 所有的JS接口只能在公众号绑定的域名下调用，公众号开发者需要先登录微信公众平台进入“公众号设置”的“功能设置”里填写“JS接口安全域名”。
+     * 2. 如果发现在 Android 不能分享自定义内容，请到官网下载最新的包覆盖安装，Android 自定义分享接口需升级至 6.0.2.58 版本及以上。
+     * 3. 常见问题及完整 JS-SDK 文档地址：http://mp.weixin.qq.com/wiki/7/aaa137b55fb2e0456bf8dd9148dd613f.html
+     *
+     * 开发中遇到问题详见文档“附录5-常见错误及解决办法”解决，如仍未能解决可通过以下渠道反馈：
+     * 邮箱地址：weixin-open@qq.com
+     * 邮件主题：【微信JS-SDK反馈】具体问题
+     * 邮件内容说明：用简明的语言描述问题所在，并交代清楚遇到该问题的场景，可附上截屏图片，微信团队会尽快处理你的反馈。
+     */
+
+    wx.config({
+        debug: false,
+        appId: 'wxa7187b789ab213ec',
+        timestamp: 1440408012,
+        nonceStr: 'zWnVJC9CdabJOLPS',
+        signature: '5f3c8e5cc654486ae71a08f3444afb4cd1920d26',
+        jsApiList: [
+            // 所有要调用的 API 都要加到这个列表中
+            'onMenuShareTimeline',
+            'onMenuShareAppMessage',
+            'startRecord',
+            'stopRecord',
+            'onRecordEnd',
+            'playVoice',
+            'pauseVoice',
+            'stopVoice',
+            'uploadVoice',
+            'downloadVoice'
+        ]
+    });
+    </script>
+
+    <script>
+    var timew = $('.timebg').width() * 0.3703;
+    //var cover;
+    var tweenMode = false;
+    var newurl = location.protocol + '//' + location.host + location.pathname;
+    var shareUrl = location.protocol + '//' + location.host + '/vinda/buyu/share.php';
+    //shareUrl=window.location.href;
+    var shareTitle = '这个游戏实在让我太抓狂了，你们赶紧来试试，是我太笨了吗？';
+    var shareIMG = 'http://fabu.dota.weibohe.com.cn/vinda/buyu/img/sharelogo.png'; //分享图标
+    var shareUserTitle = "纸巾韧性大挑战";
+
+    wx.ready(function() {
+
+        Games.ConfigShare(shareTitle, shareUserTitle, shareUrl, shareIMG, function() {
+            //分享成功后执行方式
+        });
+
+    });
+    </script>
+
+    <script type="text/javascript">
+    //锁定屏幕滑动
+    var jz = 0;
+    document.addEventListener("touchmove", function(e) {
+        if (jz == 0) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+    }, false);
+
+    getUserPlay();
+    var iheight = window.screen.height;
+    if (iheight == 667 || iheight == 736) {
+        //i6尺寸
+        $('.bg').attr('src', 'http://fabu.dota.weibohe.com.cn/vinda/buyu/img/body_i6.jpg');
+        $('.sybg').attr('src', 'http://fabu.dota.weibohe.com.cn/vinda/buyu/img/shouye_i6.jpg');
+        $('.huan .top .score_all').css('top', '65%');
+    } else if (iheight == 480) {
+        //i4尺寸		
+
+        $('.bg').attr('src', 'http://fabu.dota.weibohe.com.cn/vinda/buyu/img/body_i4.jpg');
+        $('.sybg').attr('src', 'http://fabu.dota.weibohe.com.cn/vinda/buyu/img/shouye_i4.jpg');
+        $('.shouye_wap .top').css('width', '70%');
+        $('.shouye_wap .top').css('left', '15%');
+        $('.shouye_wap .top').css('margin-top', '-3%');
+        $('.gameover .in').css('width', '90%');
+        $('.gameover .in').css('margin-left', '5%');
+        $('.gif').css('width', '80%');
+        $('.gif').css('margin-left', '10%');
+        $('.first_bot').css('margin-top', '-23%');
+        $('.start_btn').css('top', '70%');
+        $('.fale_img').css('width', '60%');
+        $('.fale_img').css('left', '20%');
+        $('.fale_text').css('top', '50%');
+        $('.succ_img').css('width', '60%');
+        $('.succ_img').css('left', '20%');
+        $('.result .result_pic2').css('width', '80%');
+        $('.result .result_pic2').css('left', '10%');
+        $('.result .result_pic1').css('width', '76%');
+        $('.result .result_pic1').css('left', '12%');
+        $('.result .result_pic1').css('top', '29%');
+        $('.result_txt').css('top', '27%');
+        $('.wd_link').css('top', '62%');
+        $('.gz_btn').css('top', '68%');
+        $('.double .btn').css('bottom', '-10%');
+        $('.double .text').css('top', '27%');
+        $('.double .text').css('font-size', '1.5em');
+        $('.double .pic').css('width', '80%');
+        $('.double .pic').css('left', '10%');
+        $('.xian').css('margin-top', '-5%');
+        $('.paihang .bang .top').css('line-height', '200%');
+
+    } else if (iheight == 1184 || iheight == 1800) {
+        $('.and').css('margin-top', '-5%');
+        $('.shouye_btn1').css('bottom', '13.5%');
+        $('.shouye_btn2').css('bottom', '12.5%');
+        $('.shouye_btn3').css('bottom', '12.8%');
+        $('body').css('font-size', '1.3em');
+        $('.hd_wap .in .hd_text').css('height', '72%');
+
+    }
+
+
+    document.onreadystatechange = loading;
+    var canPlay, fenshu1, fenshu2, fenshu3, scorenow, choice, timeout1, timeout2, allscore;
+    var guize = false;
+
+    function loading() {
+
+        if (document.readyState == "complete") {
+
+            setTimeout(function() {
+
+                if (getQueryString('type') == 1) {
+                    $('.shouye_wap').hide();
+                    $('.huan').show();
+                } else if (getQueryString('type') == 2) {
+                    startGame()
+                }
+
+
+                $(".loading").hide();
+
+
+            }, 500)
+
+        }
+
+    }
+
+    /**
+     * 获取用户每天是否可玩，超过次数后返回false
+     * @return {[type]}
+     */
+    function getUserPlay() {
+        $.ajax({
+            type: "POST", //用POST方式传输
+            dataType: "JSON", //数据格式:JSON
+            url: 'ajaxbase.php', //目标地址
+            data: {
+                openid: '1'
+            },
+            error: function(XMLHttpRequest, textStatus, errorThrown) {
+                return false;
+            },
+            success: function(data) {
+
+                allscore = data.total;
+                allscore = parseInt(allscore);
+                //alert(allscore);
+                $('.score_all').html(allscore);
+                $('.fale_text01 span').html(allscore);
+
+                // alert("排行榜数据:"+data.bang);
+                setBangList(data.bang);
+                //用户已竞换奖品数据  使用for读取 data.gifts[k].userhave
+                //alert("礼物数据:"+data.gifts);
+                setGiftList(data.gifts);
+
+                //	if(allscore>=fenshu2){
+                //	$('.text2').html('你的积分足够兑换优惠券了,赶快去兑换吧');
+                //	$('.text3').html('');
+                //	}else{
+                //		$('.text2').html('你目前积分距离<br/><font id="libao">155元优惠劵大礼包</font>');
+                //		$('.text3').html('还有'+(fenshu2-allscore)+'积分');
+                //	}
+
+                //alert(data.headimgurl);
+                $('.headimg').attr('src', data.headimgurl);
+
+                //更新分享朋友圈增加积分链接
+                userid = data.userinfo.id;
+                shareUrl = shareUrl + "?uid=" + userid;
+                //alert(userid);
+                //用户完全资料信息
+                //alert("用户领奖资料信息："+data.userinfo);
+                //获得提交信息
+                $('#tbid').val(data.userinfo.tianmaoid);
+                $('#username').val(data.userinfo.username);
+                $('#telphone').val(data.userinfo.telphone);
+                $('#address').val(data.userinfo.address);
+
+                if (data.status == 1) {
+
+                    canPlay = data.canPlay;
+
+
+
+                } else {
+                    //alert('今天的次数用完了，明天继续加油吧！');
+                    // $('.cishu').show();
+                }
+
+            }
+        });
+    }
+
+
+
+    function getQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]);
+        return null;
+    }
+
+
+    function setBangcolor(o, a, b) {
+        var t = document.getElementById(o).getElementsByTagName("li");
+        for (var i = 0; i < t.length; i++) {
+            //t[i].style.backgroundColor=(t[i].sectionRowIndex%2==0)?a:b; 
+            if (i % 2 == 0) {
+                t[i].style.backgroundColor = a;
+            } else {
+                t[i].style.backgroundColor = b;
+            }
+        }
+    }
+
+    function change(a) {
+        choice = a;
+        if (a == 1) {
+
+            if (allscore < fenshu1) {
+                alert('积分不足,请继续游戏赚积分!');
+                return;
+            }
+            postresult1();
+
+        } else if (a == 2) {
+            $('#aysure_txt').html('<h4>温馨提示</h4><br/>本次抽奖将消耗' + fenshu2 + '积分');
+            $('.aysure').show();
+            $('.result_top1').hide();
+            $('.result_top2').hide();
+            $('.jxyx_btn1').hide();
+            $('.jxyx_btn2').hide();
+        } else if (a == 3) {
+            $('#aysure_txt').html('<h4>温馨提示</h4><br/>本次抽奖将消耗' + fenshu3 + '积分');
+            $('.aysure').show();
+            $('.result_top1').hide();
+            $('.result_top2').hide();
+            $('.jxyx_btn1').hide();
+            $('.jxyx_btn2').hide();
+        }
+
+    }
+
+    /**
+     * 设置排行榜列表
+     * @param {[type]}
+     */
+    function setBangList(bang) {
+
+        var friendlistNum = bang.length;
+        //alert(friendlistNum);
+        var fhtml = "";
+        fhtml = fhtml + "<ul>";
+        for (var k = 0; k < friendlistNum; k++) {
+            num = k + 1;
+
+            //   if(bang[k]['gift_id']==1){
+            // 	bang[k]['gift_id']='维达百元礼包';
+            // }else if(bang[k]['gift_id']==2){
+            // 	bang[k]['gift_id']='iPhone6 Plus';
+            // }else if(bang[k]['gift_id']==3){
+            // 	bang[k]['gift_id']='维达十年纸巾礼包';
+            // }
+            fhtml = fhtml + "<li><div class='left'>" + bang[k]['wecha_name'] + "</div><div class='right'>" + bang[k]['total'] + "</div></li>";
+        }
+        fhtml = fhtml + "</ul>";
+        $('#scroller').html(""); //清空
+        $('#scroller').append(fhtml);
+
+        setBangcolor("wrapper", "#fff", "#e7f5ff");
+    }
+
+
+    //设置兑换礼品页数据
+    function setGiftList(liwu) {
+        var giftlist = 4;
+        // alert(giftlist);
+        for (var i = 1; i < giftlist; i++) {
+            //alert(liwu[i].userhave);
+            $('.number' + i).text(liwu[i].userhave);
+            $('.fenshu' + i).text(liwu[i].score);
+            //$('.fenshu1').text(liwu[1].score-600);
+            fenshu1 = liwu[1].score;
+            fenshu2 = liwu[2].score;
+            fenshu3 = liwu[3].score;
+            //alert(fenshu1);//正品
+            //alert(fenshu2);//优惠券
+            //alert(fenshu3);//试用装
+        }
+
+    }
+
+
+    function startGame() {
+        $("#bgsound").attr("src", "http://fabu.dota.weibohe.com.cn/vinda/buyu/img/bg.mp3");
+        $("#bgsound").get(0).play();
+
+        $(".shouye_wap").hide();
+        $(".yx_wap").show();
+        $(".first_bot").show();
+        $(".order").show();
+        $(".first").show();
+        $(".last").hide();
+        //gif从头开始播放
+        var imgs = document.getElementsByTagName('img');
+        for (var i = 0; i < imgs.length; i++) {
+            imgs[i].src = imgs[i].src;
+        }
+
+        timeout2 = setTimeout(function() {
+            $(".first").fadeOut();
+            $(".last").fadeIn();
+        }, 7000)
+
+        timeout1 = setTimeout(function() {
+            $(".first_bot").fadeOut(1000);
+        }, 4100)
+
+    }
+
+
+
+    //点击事件   
+    $(function() {
+
+        //放弃兑换
+        $('.fqdh_btn').click(function() {
+            $('.aysure').hide();
+        });
+        //首页开始按钮
+
+
+
+        var body_all = document.getElementById('body_all');
+
+
+        FastClick.attach(body_all);
+
+        $(".shouye_btn1").click(function() {
+
+            //alert('捕鱼游戏为你准备中,敬请期待!');
+            //return;
+
+            startGame();
+
+
+        });
+        //菜单下拉按钮
+        $('.menu_btn').click(function() {
+                $('.menu_btn').hide()
+                $('.menu_listbg').slideDown();
+            })
+            //菜单收起按钮
+        $('.up_btn').click(function() {
+                $('.menu_listbg').slideUp();
+                $('.menu_btn').show()
+            })
+            //积分翻倍按钮
+        $('.succ_btn').click(function() {
+            $('.double .top1').hide();
+            $('.double .top2').hide();
+            $(".double .text1").hide();
+            $(".double .text2").hide();
+            $('.sharedb').show();
+            //shareTitle="Yeah！我用维达纸巾做成的渔网成功捞到"+scorenow+"斤鱼，正向iPhone6 Plus靠近，表羡慕，你也可以哒！";
+            shareTitle = "Yeah!我用维达纸巾成功捞到" + scorenow + "斤鱼，正在向iPhone6 Plus靠近，表羡慕，你也可以哒！";
+            Games.ConfigShare(shareTitle, shareUserTitle, shareUrl, shareIMG, function() {
+                //分享成功后执行方式
+                $.ajax({
+                    type: "POST", //用POST方式传输
+                    dataType: "JSON", //数据格式:JSON
+                    url: 'ajaxshare.php', //目标地址
+                    data: {
+                        fen: '3'
+                    },
+                    error: function(XMLHttpRequest, textStatus, errorThrown) {
+                        //return false;
+                    },
+                    success: function(data) {
+                        //return true;
+
+                        if (data.status == 1) {
+                            //   return true;
+                            //alert("成功翻倍！");
+
+                            $('.sharedb').hide();
+                            $('.gameover').hide();
+                            $('.double').show();
+                            $('.double .top1').show();
+                            allscore = parseInt(allscore) + parseInt(scorenow);
+
+                            $('.score_all').html(allscore);
+                            $(".double .text1").show();
+                            $(".double .text1").addClass('bounceInDown');
+                        } else
+                        //return false;
+                        // allscore=parseInt(allscore)+scorenow;
+                        {
+                            $('.sharedb').hide();
+                            $('.gameover').hide();
+                            $('.double').show();
+                            $('.double .top2').show();
+                            $('.score_all').html(allscore);
+                            $(".double .text2").show();
+                            $(".double .text2").addClass('bounceInDown');
+                        }
+
+                    }
+                });
+                $('.sharepk').hide();
+                $('.menu_btn').show();
+
+                shareTitle = "这个游戏实在让我太抓狂了，你们赶紧来试试，是我太笨了吗？";
+                Games.ConfigShare(shareTitle, shareUserTitle, shareUrl, shareIMG, function() {});
+            });
+        })
+
+        //继续兑换按钮
+        $('.jxdh_btn').click(function() {
+            $('.result_top1').hide();
+            $('.result_pic1').hide();
+            $('.result_btn1').hide();
+            $('.result_top2').hide();
+            $('.result_pic2').hide();
+            $('.result_btn2').hide();
+            $('.pic1').attr('src', '');
+
+            if (choice == 1) {
+                if (allscore < fenshu1) {
+                    alert('积分不足,请继续游戏赚积分!');
+                    return;
+                }
+            } else if (choice == 2) {
+                if (allscore < fenshu2) {
+                    alert('积分不足,请继续游戏赚积分!');
+                    return;
+                }
+
+            } else if (choice == 3) {
+                if (allscore < fenshu3) {
+                    alert('积分不足,请继续游戏赚积分!');
+                    return;
+                } else {
+                    alert('很遗憾，兑奖失败。请继续努力，韧性捞鱼哦！');
+                    return;
+                }
+            }
+
+            //兑换奖品结果
+            postresult();
+
+        })
+
+        //马上领奖按钮	
+        $('.lj_btn').click(function() {
+                $('.result').hide();
+                $('.gr_wap').show();
+                $('.guan_pic img').attr('src', 'http://fabu.dota.weibohe.com.cn/vinda/buyu/img/guan_pic' + choice + '.png');
+
+            })
+            //保存资料	
+        $('.bc_btn').click(function() {
+                var username = $('#username').val();
+                var telphone = $('#telphone').val();
+                var address = $('#address').val();
+                //验证姓名不为空
+                if (username.length == 0) {
+                    alert("姓名不能为空！");
+                    $('#username').focus();
+                    return false;
+                }
+                //验证手机号码的 
+                var pattern = /^1[34578]\d{9}$/
+                if (telphone.length == 0) {
+                    alert("请输入你的手机号码！");
+                    $('#telphone').focus();
+                    return false;
+                }
+                if (!pattern.test(telphone)) {
+                    alert("你输入的手机号码无效，请重新输入！");
+                    telphone.value = "";
+                    $('#telphone').focus();
+                    return false;
+                }
+                //验证地址不为空
+                if (address.length == 0) {
+                    alert("地址不能为空！");
+                    $('#address').focus();
+                    return false;
+                }
+
+                $.ajax({
+                    type: "POST", //用POST方式传输
+                    dataType: "JSON", //数据格式:JSON
+                    url: 'ajaxuser.php', //目标地址
+                    data: {
+                        username: username,
+                        telphone: telphone,
+                        address: address
+                    },
+                    error: function(XMLHttpRequest, textStatus, errorThrown) {
+                        alert("网络有问题哦，请联系管理员！");
+                    },
+                    success: function(data) {
+
+                        //alert('保存成功');
+                        $('.input').hide();
+                        $('.gz_wap').show();
+
+
+                    }
+                });
+            })
+            //邀请pk
+        $('.yqpk_btn').click(function() {
+                $('.sharepk').show();
+                var shareTitle = '这个游戏实在让我太抓狂了，你们赶紧来试试，是我太笨了吗？';
+                Games.ConfigMesgShare(shareTitle, shareUserTitle, shareUrl, shareIMG, function() {
+                    //分享成功后执行方式
+                    $.ajax({
+                        type: "POST", //用POST方式传输
+                        dataType: "JSON", //数据格式:JSON
+                        url: 'ajaxshare.php', //目标地址
+                        async: false,
+                        data: {
+                            fen: '2'
+                        },
+                        error: function(XMLHttpRequest, textStatus, errorThrown) {
+                            return false;
+                        },
+                        success: function(data) {}
+                    });
+                    $('.sharepk').hide();
+                });
+
+                Games.ConfigTimeLineShare(shareTitle, shareUserTitle, shareUrl, shareIMG, function() {
+                    //分享成功后执行方式
+                    $.ajax({
+                        type: "POST", //用POST方式传输
+                        dataType: "JSON", //数据格式:JSON
+                        url: 'ajaxshare.php', //目标地址
+                        async: false,
+                        data: {
+                            fen: '1'
+                        },
+                        error: function(XMLHttpRequest, textStatus, errorThrown) {
+                            return false;
+                        },
+                        success: function(data) {}
+                    });
+                    $('.sharepk').hide();
+                });
+
+
+
+            })
+            //分享页面隐藏
+        $('.sharedb').click(function() {
+            $('.sharedb').hide();
+        })
+        $('.sharepk').click(function() {
+                $('.sharepk').hide();
+            })
+            //菜单下面四个按钮
+        $('.pai_btn').click(function() {
+            $.ajax({
+                type: "POST", //用POST方式传输
+                dataType: "JSON", //数据格式:JSON
+                url: 'ajaxbase.php', //目标地址
+                data: {
+                    openid: '1'
+                },
+                error: function(XMLHttpRequest, textStatus, errorThrown) {
+                    return false;
+                },
+                success: function(data) {
+
+                    setBangList(data.bang);
+                    //alert(data.bang);
+                }
+            });
+            //setBangList(data.bang);
+
+            $('.paihang').show();
+            $('.huan').hide();
+            $('.hd_wap').hide();
+            $('.shouye_wap').hide();
+            $('.yx_wap').hide();
+            $('.double').hide();
+            $('.gameover').hide();
+            $('.sharepk').hide();
+            $('.sharedb').hide();
+            jz = 1;
+            var myScroll;
+            myScroll = new IScroll('#wrapper', {
+                scrollX: false,
+                scrollbars: 'custom'
+            });
+        })
+        $('.huan_btn').click(function() {
+
+            $('.huan').show();
+            $('.paihang').hide();
+            $('.hd_wap').hide();
+            $('.shouye_wap').hide();
+            $('.yx_wap').hide();
+            $('.double').hide();
+            $('.result').hide();
+            $('.gz_wap').hide();
+            $('.gameover').hide();
+            $('.sharepk').hide();
+            $('.sharedb').hide();
+            $('.gr_wap').hide();
+            jz = 0;
+        })
+        $('.rule_btn').click(function() {
+            $('.hd_wap').show();
+            $('.paihang').hide();
+            $('.huan').hide();
+            $('.shouye_wap').hide();
+            $('.yx_wap').hide();
+            $('.double').hide();
+            $('.gz_wap').hide();
+            $('.gr_wap').hide();
+            $('.result').hide();
+            $('.gameover').hide();
+            $('.sharepk').hide();
+            $('.sharedb').hide();
+            jz = 1;
+        })
+        $('.home_btn').click(function() {
+            $('.shouye_wap').show();
+            $('.paihang').hide();
+            $('.huan').hide();
+            $('.hd_wap').hide();
+            $('.yx_wap').hide();
+            $('.double').hide();
+            $('.gz_wap').hide();
+            $('.gr_wap').hide();
+            $('.result').hide();
+            $('.gameover').hide();
+            $('.sharepk').hide();
+            $('.sharedb').hide();
+            clearTimeout(timeout1);
+            clearTimeout(timeout2);
+            jz = 0;
+        })
+
+        $('.menu_listbg ul').click(function() {
+            $('.menu_listbg').slideUp();
+            $('.menu_btn').show()
+        })
+
+        $('.gz_btn').click(function() {
+            $('.gz_wap').hide();
+            $('.gr_wap').hide();
+            $('.huan').hide();
+            $('.yx_wap').show()
+            $('.first').hide()
+            $('.last').show()
+        })
+
+        $('.play_btn').click(function() {
+            $('.hd_wap').hide();
+            $('.paihang').hide();
+            $('.huan').hide();
+            $('.yx_wap').hide();
+            $('.double').hide();
+            $('.result').hide();
+            $('.first').hide();
+            $('.last').show();
+            $('.yx_wap').show();
+            $('.gz_wap').hide();
+            $('.gr_wap').hide();
+            jz = 0;
+        })
+
+    })
+
+    function postresult() {
+        $.ajax({
+            type: "POST", //用POST方式传输
+            dataType: "JSON", //数据格式:JSON
+            url: 'ajaxgift.php', //目标地址
+            data: {
+                giftid: choice
+            },
+            error: function(XMLHttpRequest, textStatus, errorThrown) {
+                alert("网络有问题哦，请联系管理员！");
+            },
+            success: function(data) {
+                var num = 2;
+                if (data.status == '1') {
+
+                    num = 1;
+                    $('.number' + choice).html(parseInt($('.number' + choice).html()) + 1);
+
+                    $.ajax({
+                        type: "POST", //用POST方式传输
+                        dataType: "JSON", //数据格式:JSON
+                        url: 'ajaxbase.php', //目标地址
+                        data: {
+                            openid: '1'
+                        },
+                        error: function(XMLHttpRequest, textStatus, errorThrown) {
+                            return false;
+                        },
+                        success: function(data) {
+
+                            setBangList(data.bang);
+
+                        }
+                    });
+
+                } else {
+                    //alert(data.error_log);
+                }
+
+                if (choice == 1) {
+                    allscore = allscore - fenshu1;
+                    if (num == 1) {
+                        $('.result_txt').text('维达百元礼包是你的了');
+                        $('.pic1').attr('src', 'http://fabu.dota.weibohe.com.cn/vinda/buyu/img/result_pic1_1.png');
+                    }
+                } else if (choice == 2) {
+
+                    allscore = allscore - fenshu2;
+                    if (num == 1) {
+                        $('.result_txt').text('iPhone6 Plus是你的了~~');
+                        $('.pic1').attr('src', 'http://fabu.dota.weibohe.com.cn/vinda/buyu/img/result_pic1_2.png');
+                    }
+                } else if (choice == 3) {
+
+                    allscore = allscore - fenshu3;
+                    if (num == 1) {
+                        $('.result_txt').text('维达十年纸巾礼包是你的了');
+                        $('.pic1').attr('src', 'http://fabu.dota.weibohe.com.cn/vinda/buyu/img/result_pic1_3.png');
+                    }
+                }
+
+                //alert(num);
+                $('.aysure').hide();
+                $('.result_top' + num).show();
+                $('.result_pic' + num).show();
+                $('.result_btn' + num).show();
+                $('.result').show();
+
+                if (num == 2) {
+                    $('.result_txt').text('神马都没有，再挑战一次吧');
+                }
+
+
+                $('.score_all').html(allscore);
+
+            }
+        });
+    }
+
+
+    function postresult1() {
+        $.ajax({
+            type: "POST", //用POST方式传输
+            dataType: "JSON", //数据格式:JSON
+            url: 'ajaxgift.php', //目标地址
+            data: {
+                giftid: 1
+            },
+            error: function(XMLHttpRequest, textStatus, errorThrown) {
+                alert("网络有问题哦，请联系管理员！");
+            },
+            success: function(data) {
+                var num = 2;
+                if (data.status == '1') {
+
+                    num = 1;
+                    $('.number1').html(parseInt($('.number1').html()) + 1);
+
+                    $.ajax({
+                        type: "POST", //用POST方式传输
+                        dataType: "JSON", //数据格式:JSON
+                        url: 'ajaxbase.php', //目标地址
+                        data: {
+                            openid: '1'
+                        },
+                        error: function(XMLHttpRequest, textStatus, errorThrown) {
+                            return false;
+                        },
+                        success: function(data) {
+
+                            setBangList(data.bang);
+
+                        }
+                    });
+
+                } else {
+                    //alert(data.error_log);
+                }
+
+
+
+                if (num == 1) {
+                    $('.result_txt').text('维达百元礼包是你的了');
+                    $('.pic1').attr('src', 'http://fabu.dota.weibohe.com.cn/vinda/buyu/img/result_pic1_1.png');
+                    $('.aysure').hide();
+                    $('.result_top' + num).show();
+                    $('.result_pic' + num).show();
+                    $('.result_btn' + num).show();
+                    $('.result').show();
+                    allscore = allscore - fenshu1;
+                } else if (num == 2) {
+                    alert('很遗憾，兑奖失败。请继续努力，韧性捞鱼哦！');
+
+                }
+
+
+                //alert(num);
+
+
+
+                $('.score_all').html(allscore);
+
+            }
+        });
+    }
+    </script>
+    <!-- END NetEase Devilfish 2006 -->
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?8f29051e4e94b257e92559969621b00b";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+
+    <div class="gamebg hide">
+        <div id="cr-stage" style="width: 640px; height: 826px; overflow: hidden; position: relative; background: rgb(0, 0, 0);">
+            <div style="position: absolute; z-index: 10; transform-style: preserve-3d; -webkit-transform: scale(1, 1); transform: scale(1, 1); left: 0px; top: 0px;">
+                <div id="ent1" class="2D DOM Text obj" style="position: absolute; font-size: 10px; font-family: sans-serif; color: white; text-align: center; visibility: visible; width: 640px; height: 32px; z-index: 0; opacity: 1; transform: translate3d(0px, 389px, 0px); -webkit-transform: translate3d(0px, 389px, 0px); font-style: normal; font-variant: normal; font-weight: normal; font-stretch: normal; line-height: normal;">100% Loading...</div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+
+</html>

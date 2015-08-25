@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="apple-touch-fullscreen" content="YES">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" name="viewport">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="pragram" content="no-cache">
+    <meta charset="utf-8">
+    <title>蜜蜜送</title>
+
+    <style>
+    body {
+        padding: 0px;
+        margin: 0px;
+        font-size: 10px!important;
+    }
+    /* iPads (landscape) */
+    
+    @media screen and (min-device-width: 768px) and (max-device-width: 790px) and (orientation: landscape) {
+        body {
+            font-size: 25px!important;
+        }
+    }
+    /* iPads (portrait) */
+    
+    @media screen and (min-device-width: 768px) and (max-device-width: 790px) and (orientation: portrait) {
+        body {
+            font-size: 25px!important;
+        }
+    }
+    * {
+        -webkit-tap-highlight-color: rgba(255, 0, 0, 0);
+    }
+    .full img {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+    }
+    .game {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    .gamein {
+        position: absolute;
+        width: 100%;
+    }
+    .game img {
+        width: 100%;
+        position: absolute;
+    }
+    .gan2 {
+        display: none;
+    }
+    .jinbi {
+        display: none;
+        z-index: 1;
+    }
+    .number1 {
+        position: absolute;
+        height: 4%;
+        width: 100%;
+        top: 21%;
+        font-size: 2.0em;
+        color: #fef37a;
+        font-weight: bold;
+        line-height: 100%;
+    }
+    .number1 .num1 {
+        position: absolute;
+        height: 100%;
+        left: 30%;
+        width: 8%;
+    }
+    .number1 .num2 {
+        position: absolute;
+        height: 100%;
+        left: 75%;
+        width: 10%;
+    }
+    .number2 {
+        position: absolute;
+        height: 4%;
+        width: 100%;
+        top: 59.8%;
+        font-size: 2.5em;
+        color: #fef37a;
+        font-weight: bold;
+    }
+    .number2 .num3 {
+        position: absolute;
+        height: 100%;
+        left: 40%;
+        width: 16%;
+        line-height: 100%;
+    }
+    .button {
+        position: absolute;
+        width: 100%;
+        height: 12%;
+        top: 70%;
+        left: 0px;
+    }
+    .button .bt1 {
+        position: absolute;
+        width: 23%;
+        height: 100%;
+        left: 6%;
+    }
+    .button .bt2 {
+        position: absolute;
+        width: 23%;
+        height: 100%;
+        left: 30%;
+    }
+    .button .bt3 {
+        position: absolute;
+        width: 23%;
+        height: 100%;
+        left: 53%;
+    }
+    .button .bt4 {
+        position: absolute;
+        width: 20%;
+        height: 220%;
+        left: 78%;
+        top: -120%;
+    }
+    .game_cg {
+        display: none;
+    }
+    .game_no {
+        display: none;
+    }
+    .game_no .no_again {
+        position: fixed;
+        width: 42%;
+        height: 15%;
+        left: 7%;
+        top: 30%;
+    }
+    .game_no .no_new {
+        position: fixed;
+        width: 44%;
+        height: 15%;
+        left: 50%;
+        top: 30%;
+    }
+    .game_gold {
+        display: none;
+    }
+    .game_gold .again {
+        position: fixed;
+        width: 56%;
+        height: 12%;
+        left: 23%;
+        top: 33%;
+    }
+    .game_nogold {
+        display: none;
+    }
+    .game_nogold .noshare {
+        position: absolute;
+        width: 56%;
+        height: 12%;
+        left: 23%;
+        top: 33%;
+    }
+    .game_cg .zili {
+        position: fixed;
+        width: 56%;
+        height: 12%;
+        left: 23%;
+        top: 35%;
+    }
+    .hui {
+        display: none;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        opacity: 0.85
+    }
+    .num4 {
+        position: fixed;
+        width: 5%;
+        height: 8%;
+        right: 20%;
+        top: 35%;
+        font-size: 3.5em;
+        color: #d58416;
+        font-weight: bold;
+    }
+    .num4 span {
+        -webkit-text-stroke: 2px #fff;
+    }
+    .laohu {
+        position: absolute;
+        width: 66%;
+        height: 24%;
+        top: 34%;
+        left: 18%;
+        overflow: hidden;
+    }
+    .laohu #machine1 {
+        width: 29%;
+        float: left;
+        height: 99%;
+        margin-right: 6%;
+    }
+    .laohu #machine2 {
+        width: 29%;
+        float: left;
+        height: 99%;
+        margin-right: 7%;
+    }
+    .laohu #machine3 {
+        width: 29%;
+        float: left;
+        height: 99%;
+    }
+    .slotMachine {
+        overflow: hidden;
+        display: inline-block;
+        text-align: center;
+    }
+    .slotMachine .slot img {
+        position: relative;
+        width: 93%;
+        height: 93%;
+        left: 0.5%;
+        top: 0px;
+    }
+    svg {
+        height: 0px;
+        padding: 0px;
+        margin: 0px;
+        line-height: 0px;
+    }
+    .meng {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        opacity: 0.8;
+        display: none;
+    }
+    .share {
+        display: none;
+    }
+    .sq_tips {
+        position: fixed;
+        width: 100%;
+        bottom: 0px;
+        left: 0px;
+        display: none;
+    }
+    .sq_tips img {
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+    }
+    #player {
+        position: fixed;
+        right: 10px;
+        top: 10px;
+        width: 33px;
+        height: 33px;
+        background: url(./img/music.png) no-repeat right;
+        background-size: 80% auto;
+        z-index: 99;
+        background-position: 5px 10px;
+    }
+    #player.pause {
+        background: url(./img/music.png) no-repeat right;
+        background-size: 80% auto;
+        background-position: 5px -36px;
+    }
+    .text {
+        position: fixed;
+        top: 10px;
+        z-index: 10;
+        text-align: center;
+        color: red;
+        width: 100%;
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+    .game .mf {
+        position: absolute;
+        top: 5.5%;
+        left: 18.5%;
+        width: 30px;
+        height: 34px;
+        z-index: 1;
+    }
+    .game .mf img {
+        width: 100%;
+    }
+    </style>
+    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.slotmachine.js"></script>
+
+    <script>
+    $(document).ready(function() {
+
+
+        var gameww = $(window).width();
+        var hh = gameww * 1.575;
+
+        $('.gamein').get(0).style.height = hh + "px";
+
+        var ooo = document.getElementById("machine1");
+        var h = ooo.offsetHeight; //高度
+        var w = ooo.offsetWidth; //宽度
+
+        $('#machine1 .slot1').get(0).style.height = h + "px";
+        $('#machine1 .slot1').get(0).style.width = w + "px";
+        $('#machine1 .slot2').get(0).style.height = h + "px";
+        $('#machine1 .slot2').get(0).style.width = w + "px";
+        $('#machine1 .slot3').get(0).style.height = h + "px";
+        $('#machine1 .slot3').get(0).style.width = w + "px";
+
+        $('#machine2 .slot1').get(0).style.height = h + "px";
+        $('#machine2 .slot1').get(0).style.width = w + "px";
+        $('#machine2 .slot2').get(0).style.height = h + "px";
+        $('#machine2 .slot2').get(0).style.width = w + "px";
+        $('#machine2 .slot2').get(0).style.width = w + "px";
+        $('#machine2 .slot3').get(0).style.height = h + "px";
+        $('#machine2 .slot3').get(0).style.width = w + "px";
+
+        $('#machine3 .slot1').get(0).style.height = h + "px";
+        $('#machine3 .slot1').get(0).style.width = w + "px";
+        $('#machine3 .slot2').get(0).style.height = h + "px";
+        $('#machine3 .slot2').get(0).style.width = w + "px";
+        $('#machine3 .slot3').get(0).style.height = h + "px";
+        $('#machine3 .slot3').get(0).style.width = w + "px";
+
+
+
+        $('.bt3').click(function() {
+            $('.jinse').get(0).style.display = 'none';
+            ajaxisgold();
+        });
+
+        $('.bt4').click(function() {
+            document.getElementById('audio').play();
+            $(this).removeClass('pause');
+            $('.gan1').get(0).style.display = 'none';
+            $('.gan2').get(0).style.display = 'block';
+        });
+
+
+        $('.share').click(function() {
+            $('.share').get(0).style.display = 'none';
+            $('.sq_tips').get(0).style.display = 'none';
+            $('.game_nogold').get(0).style.display = 'none';
+            $('.meng').get(0).style.display = 'none';
+            $('.hui').get(0).style.display = 'none';
+            $('#player').get(0).style.display = 'block';
+        });
+
+        $('.game_gold .again').click(function() {
+            $('.game_gold').get(0).style.display = 'none';
+            $('.hui').get(0).style.display = 'none';
+            $('.sq_tips').get(0).style.display = 'none';
+            $('.bt4').get(0).style.display = 'block';
+            $('.mf').get(0).style.display = 'block';
+        });
+
+        $('.no_again').click(function() {
+            $('.game_no').get(0).style.display = 'none';
+            $('.hui').get(0).style.display = 'none';
+            $('.sq_tips').get(0).style.display = 'none';
+            $('.bt4').get(0).style.display = 'block';
+            $('.mf').get(0).style.display = 'block';
+        });
+        $('.noshare').click(function() {
+            $('.share').get(0).style.display = 'block';
+            $('.meng').get(0).style.display = 'block';
+            $('.sq_tips').get(0).style.display = 'block';
+            $('#player').get(0).style.display = 'none';
+        });
+
+    });
+
+    function ajaxisgold() {
+        $.ajax({
+            url: "./isgold.php",
+            type: "POST",
+            async: false,
+            dataType: "json",
+            success: function(data) {
+                if (data == 'Ok') {
+                    $('.jinbi').get(0).style.display = 'block';
+                    setTimeout(function() {
+                        $(".jinbi").animate({
+                            top: "-2008"
+                        }, 2000);
+                    }, 50);
+                    $('.num2').html(Number($('.num2').html()) + 3);
+                    document.getElementById('audio').play();
+                }
+            }
+        });
+    }
+    </script>
+</head>
+<body>
+    <div id="i4"></div>
+    <div class="text">本期活动已完满结束，奖品将在15天内送到您手中，12月15日一步之遥活动，敬请期待！</div>
+    <div class="game">
+        <div class="mf">
+            <img src="./img/mf.gif">
+        </div>
+        <div class="gamein">
+            <img src="./img/game.jpg"><img class="jinse" src="./img/jin.png">
+
+            <div class="number1">
+                <div class="num1">0</div>
+                <div class="num2">3</div>
+            </div>
+            <div class="number2">
+                <div class="num3">4000</div>
+            </div>
+
+            <div class="laohu" style="clear:both;">
+                <div id="machine1" class="slotMachine" style="overflow: hidden;">
+                    <div class="slotMachineContainer" style="margin-top: 0px;">
+                        <div class="slot slot1" style="height: 283px; width: 145px;"><img src="./img/slot1.png">
+                        </div>
+                        <div class="slot slot2" style="height: 283px; width: 145px;"><img src="./img/slot2.png">
+                        </div>
+                        <div class="slot slot3" style="height: 283px; width: 145px;"><img src="./img/slot3.png">
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div id="machine2" class="slotMachine" style="overflow: hidden;">
+                    <div class="slotMachineContainer" style="margin-top: 0px;">
+                        <div class="slot slot1" style="height: 283px; width: 145px;"><img src="./img/slot2.png">
+                        </div>
+                        <div class="slot slot2" style="height: 283px; width: 145px;"><img src="./img/slot3.png">
+                        </div>
+                        <div class="slot slot3" style="height: 283px; width: 145px;"><img src="./img/slot1.png">
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div id="machine3" class="slotMachine" style="overflow: hidden;">
+                    <div class="slotMachineContainer" style="margin-top: 0px;">
+                        <div class="slot slot1" style="height: 283px; width: 145px;"><img src="./img/slot3.png">
+                        </div>
+                        <div class="slot slot2" style="height: 283px; width: 145px;"><img src="./img/slot1.png">
+                        </div>
+                        <div class="slot slot3" style="height: 283px; width: 145px;"><img src="./img/slot2.png">
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <script>
+                var s;
+                s += " 屏幕分辨率的高：" + window.screen.height;
+                s += " 屏幕分辨率的宽：" + window.screen.width;
+                s += " 屏幕可用工作区高度：" + window.screen.availHeight;
+                s += " 屏幕可用工作区宽度：" + window.screen.availWidth;
+                s += " 你的屏幕设置是 " + window.screen.colorDepth + " 位彩色";
+                //alert(s);
+                //运行以上代码获取手机屏幕高度;
+                //iphone4 屏幕高度:480
+                //iphone5 屏幕高度:568
+                //iphone6 屏幕高度:667
+                //红米note2 屏幕高度:1280
+                //执行
+                var iheight = window.screen.height;
+                if (iheight == 480) { //iphone4屏幕高度;
+                    document.getElementById("i4").innerHTML = "<link rel='stylesheet' href='./img/i4.css'/>";
+                } else {}
+
+
+
+
+                $(document).ready(function() {
+                    /*var machine1;
+			var machine2;
+			var machine3;*/
+                    var machine1 = $("#machine1").slotMachine({
+                        active: 0,
+                        delay: 500,
+                    });
+                    var machine2 = $("#machine2").slotMachine({
+                        active: 0,
+                        delay: 500,
+                    });
+                    var machine3 = $("#machine3").slotMachine({
+                        active: 0,
+                        delay: 500,
+                    });
+
+                    function onComplete($el, active) {
+                        switch ($el[0].id) {
+                            case 'machine1':
+                                //$("#machine1Result").text("Index: "+active.index);
+                                break;
+                            case 'machine2':
+                                //$("#machine2Result").text("Index: "+active.index);
+                                break;
+                            case 'machine3':
+                                //$("#machine3Result").text("Index: "+active.index);
+                                $('.gan2').get(0).style.display = 'none';
+                                $('.gan1').get(0).style.display = 'block';
+                                break;
+                        }
+                    }
+
+                    function ajaxpost() {
+                        $.ajax({
+                            url: "./probability.php",
+                            type: "POST",
+                            async: false,
+                            dataType: "json",
+                            error: function() {
+                                $('.hui').get(0).style.display = 'block';
+                                $('.game_no').get(0).style.display = 'block';
+                                $('.sq_tips').get(0).style.display = 'block';
+                                $('.gan2').get(0).style.display = 'none';
+                                $('.gan1').get(0).style.display = 'block';
+
+                            },
+                            success: Backkucun
+                        });
+                    }
+
+                    function Backkucun(data) {
+                        if (data.angle == null) {
+                            alert(data);
+                            $('.hui').get(0).style.display = 'block';
+                            $('.game_nogold').get(0).style.display = 'block';
+                            $('.sq_tips').get(0).style.display = 'block';
+                            $('.gan2').get(0).style.display = 'none';
+                            $('.gan1').get(0).style.display = 'block';
+                            $('.bt4').get(0).style.display = 'block';
+                        } else {
+                            reSetMachine(data.angle, data.pic);
+                        }
+                    }
+
+                    function reSetMachine(cjjg, jbyg) {
+                        var lh1 = 0;
+                        var lh2 = 0;
+                        var lh3 = 0;
+                        var num1 = parseInt(Math.random() * 3);
+                        var num2 = parseInt(Math.random() * 3);
+                        var num3 = parseInt(Math.random() * 3);
+
+                        //alert(num1);lh1 0=舒淇  1=唇膏  2=蜂蜜
+                        //alert(num2); lh2 0=唇膏  1=蜂蜜  2=舒淇 
+                        //alert(num3);lh3 0=蜂蜜  1=舒淇   2=唇膏 
+                        //cjjg=抽奖结果，000为不中奖，111为钟唇膏，222为中金币
+                        //jbyg=重一个金币，，，1为三个舒淇，，2为3个蜂蜜；
+                        if (cjjg == 111) {
+                            lh1 = 1;
+                            lh2 = 0;
+                            lh3 = 2;
+                        } else if (cjjg == 000) {
+                            lh1 = num1;
+                            lh2 = num2;
+                            lh3 = num3
+                            if (lh1 == 0 && lh2 == 2) {
+                                if (lh3 == 1) lh3 = lh3 + 1
+                            } else if (lh1 == 1 && lh2 == 0) {
+                                if (lh3 == 2) lh3 = lh3 - 1
+                            } else if (lh1 == 2 && lh2 == 1) {
+                                if (lh3 == 0) lh3 = lh3 + 1
+                            } else {
+                                lh3 = num3;
+                            }
+                            $('.num2').html(Number($('.num2').html()) - 1);
+                        } else if (cjjg == 222) {
+                            if (jbyg == 1) {
+                                lh1 = 0;
+                                lh2 = 2;
+                                lh3 = 1;
+                            } else if (jbyg == 2) {
+                                lh1 = 2;
+                                lh2 = 1;
+                                lh3 = 0;
+                            }
+                        }
+                        machine1.choosenSet(lh1);
+                        machine2.choosenSet(lh2);
+                        machine3.choosenSet(lh3);
+
+                        setTimeout(function() {
+                            if (cjjg == 111) {
+                                $('.hui').get(0).style.display = 'block';
+                                $('.game_cg').get(0).style.display = 'block';
+                                $('.sq_tips').get(0).style.display = 'block';
+                            } else if (cjjg == 000) {
+                                $('.hui').get(0).style.display = 'block';
+                                $('.game_no').get(0).style.display = 'block';
+                                $('.sq_tips').get(0).style.display = 'block';
+                            } else if (cjjg == 222) {
+                                $('.hui').get(0).style.display = 'block';
+                                $('.game_gold').get(0).style.display = 'block';
+                                $('.sq_tips').get(0).style.display = 'block';
+                            }
+                            $('.mf').get(0).style.display = 'none';
+                        }, 7500);
+                        machine1.shuffle(6, onComplete);
+                        setTimeout(function() {
+                            machine2.shuffle(7, onComplete);
+                        }, 800);
+                        setTimeout(function() {
+                            machine3.shuffle(10, onComplete);
+                        }, 1700);
+                    }
+
+                    $(".bt4").click(function() {
+                        $('.bt4').get(0).style.display = 'none';
+                        ajaxpost();
+                    })
+                });
+
+                function shareok() {
+                    window.location.replace("./");
+                }
+                </script>
+            </div>
+
+            <img class="gan1" src="./img/lagan1.png"><img class="gan2" src="./img/lagan2.png"><img class="jinbi" src="./img/gold.png">
+            <div class="button">
+                <div class="bt1">
+                    <a style="display:block;width:100%;height:100%;" href="rule.php"></a>
+                </div>
+                <div class="bt2">
+                    <a style="display:block;width:100%;height:100%;" href="xxlzl.php"></a>
+                </div>
+                <div class="bt3"></div>
+                <div class="bt4"></div>
+            </div>
+
+        </div>
+    </div>
+    <div class="hui"></div>
+    <div class="game_cg full"><img class="i4" src="./img/game_cg.png">
+        <div class="zili">
+            <a style="display:block;width:100%;height:100%;" href="info.php"></a>
+        </div>
+    </div>
+    <div class="game_no full"><img class="i4" src="./img/game_no.png">
+        <div class="no_again"></div>
+        <div class="no_new">
+            <a style="display:block;width:100%;height:100%;" href="xxlzl.php"></a>
+        </div>
+    </div>
+    <div class="game_gold full"><img class="i4" src="./img/game_gold.png">
+        <div class="again"></div>
+    </div>
+    <div class="game_nogold full"><img class="close_noshare i4" src="./img/game_nogold.png">
+        <div class="noshare"></div>
+    </div>
+
+    <div class="meng"></div>
+    <div class="sq_tips"><img src="./img/sq_tips.png">
+    </div>
+    <div class="share full"><img src="./img/share.png">
+    </div>
+    <audio style="height:0px;padding:0px;margin:0px;" src="./img/click.mp3" id="audio"></audio>
+
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <filter id="slotMachineBlurFilterFast">
+            <feGaussianBlur stdDeviation="5"></feGaussianBlur>
+        </filter>
+    </svg>
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <filter id="slotMachineBlurFilterMedium">
+            <feGaussianBlur stdDeviation="3"></feGaussianBlur>
+        </filter>
+    </svg>
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <filter id="slotMachineBlurFilterSlow">
+            <feGaussianBlur stdDeviation="1"></feGaussianBlur>
+        </filter>
+    </svg>
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <mask id="slotMachineFadeMask" maskUnits="objectBoundingBox" maskContentUnits="objectBoundingBox">
+            <linearGradient id="slotMachineFadeGradient" gradientUnits="objectBoundingBox" x="0" y="0">
+                <stop stop-color="white" stop-opacity="0" offset="0"></stop>
+                <stop stop-color="white" stop-opacity="1" offset="0.25"></stop>
+                <stop stop-color="white" stop-opacity="1" offset="0.75"></stop>
+                <stop stop-color="white" stop-opacity="0" offset="1"></stop>
+            </linearGradient>
+            <rect x="0" y="-1" width="1" height="1" transform="rotate(90)" fill="url(#slotMachineFadeGradient)"></rect>
+        </mask>
+    </svg>
+    <style>
+    .slotMachineBlurFast {
+        -webkit-filter: blur(5px);
+        -moz-filter: blur(5px);
+        -o-filter: blur(5px);
+        -ms-filter: blur(5px);
+        filter: blur(5px);
+        filter: url(#slotMachineBlurFilterFast);
+        filter: progid: DXImageTransform.Microsoft.Blur(PixelRadius='5')
+    }
+    .slotMachineBlurMedium {
+        -webkit-filter: blur(3px);
+        -moz-filter: blur(3px);
+        -o-filter: blur(3px);
+        -ms-filter: blur(3px);
+        filter: blur(3px);
+        filter: url(#slotMachineBlurFilterMedium);
+        filter: progid: DXImageTransform.Microsoft.Blur(PixelRadius='3')
+    }
+    .slotMachineBlurSlow {
+        -webkit-filter: blur(1px);
+        -moz-filter: blur(1px);
+        -o-filter: blur(1px);
+        -ms-filter: blur(1px);
+        filter: blur(1px);
+        filter: url(#slotMachineBlurFilterSlow);
+        filter: progid: DXImageTransform.Microsoft.Blur(PixelRadius='1')
+    }
+    .slotMachineGradient {
+        -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(25%, rgba(0, 0, 0, 1)), color-stop(75%, rgba(0, 0, 0, 1)), color-stop(100%, rgba(0, 0, 0, 0)));
+        mask: url(#slotMachineFadeMask);
+    }
+    </style>
+</body>
+
+</html>
