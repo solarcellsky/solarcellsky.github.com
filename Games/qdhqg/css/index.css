@@ -1,0 +1,134 @@
+/*
+* author: wangjia;
+* date:2015-8-11;
+*/
+body{ background: #000;}
+.bg{ width: 640px; height: 1008px; background: #ccc; margin: 0 auto; position: relative;}
+#sharepic{ position: absolute;top: 0; left: 0;}
+
+.load{ width: 640px; height: 1008px; background: #c1e5fd;}
+.girl-header{ width: 230px; height: 230px; background: url(../images/girl-header.jpg) no-repeat; position: absolute; left: 50%; top: 300px; left: 50%; margin-left: -115px;}
+.loading{ width: 230px; height: 17px; position: absolute; left: 50%; margin-left: -115px;top: 540px; text-align: center;}
+@-webkit-keyframes span
+{
+0% { -webkit-transform:scale(1);}
+50%{ -webkit-transform:scale(0.7);}
+100%{ -webkit-transform:scale(1);}
+}
+
+
+
+.loading span{ width: 17px; height: 17px; display: inline-block; margin: 0 5px; background: #f64646;}
+.loading .s1{
+	-webkit-animation: span 2s infinite;
+
+}
+.loading .s2{
+	-webkit-animation: span 2s infinite;
+	-webkit-animation-delay:0.5s;
+}
+.loading .s3{
+	-webkit-animation: span 2s infinite;
+	-webkit-animation-delay:1s;
+}
+
+.loadtext{ width: 230px; height: 30px; position: absolute; top: 575px; left: 50%; margin-left: -115px; font: normal 30px/30px ""; color: #2fa3f1; text-align: center;}
+
+.begin{ width: 640px; height: 1008px; background: #97d5fe url(../images/bg1.jpg) top center no-repeat;}
+
+@-webkit-keyframes btnscale
+{
+0% { -webkit-transform:scale(1);}
+50%{ -webkit-transform:scale(0.9);}
+100%{ -webkit-transform:scale(1);}
+}
+
+#starBtn{ width: 205px; height: 205px; position: absolute; left: 50%; margin-left: -102px; top: 670px; background: url(../images/starbtn.png) no-repeat;
+-webkit-animation: btnscale 1s infinite;
+}
+.begin p{ width: 100%; position: absolute; top: 890px; font: normal 28px/1.5 ""; color: #000; text-align: center; }
+
+.stage{ width: 640px; height: 1008px; overflow: hidden; background: url(../images/stagebg.jpg) top center no-repeat; position: absolute; top: 0; left: 0;}
+.words{ width: 100%; height: 100px; position: absolute; top: 30px; font: normal 30px/50px ""; color: #000; text-align: center;}
+.diamond{ width: 44px;height: 44px; background: url(../images/diamond.png) no-repeat; position: absolute; top: -50px;}
+
+.status{ width: 600px; height: 80px; position: absolute; top: 150px; left: 20px;}
+#clock{ width: 100px; height: 50px; position: absolute; left: 0;top: 15px; font: bold 35px/50px ""; color: #000; text-align: center; }
+#girlHeader{ width: 70px; height: 71px; position: absolute; left: 100px; top: 5px; background: url(../images/girlhd.png) no-repeat; z-index: 2;}
+#bloodbg{ width: 350px; height: 30px; position: absolute; left: 168px; top: 25px; z-index: 1; background: url(../images/bloodbg.png) right center no-repeat;}
+#blood{ width: 350px; height: 24px; position: absolute; top: 3px; left: -4px; z-index: 1; background: url(../images/blood.png) right center no-repeat; }
+#bloodNum{ width: 40px; height: 30px; font: bold 30px/30px ""; color: #000; position: absolute; left: 460px; top: 25px; z-index: 3; text-shadow: 0px 0px 3px #fff;}
+#hits{ width: 80px; height: 70px; position: absolute; right: 0; top: 10px; font: bold 24px/24px ""; color: #000; text-align: center;}
+#hits p{ font: bold 40px/40px "";}
+
+.scorebox{ width: 100px; height: 100px; position: absolute; top: 260px; left: 50%; margin-left: -50px; z-index: 2; }
+.score{ width: 100%; height: 100px; font: normal 100px/100px ""; color: #f00;}
+
+.girlbox{ width: 300px; height: 520px; overflow: hidden; position: absolute; top: 330px; left: 50%; margin-left: -150px; background-image: url(../images/girl1.png);}
+
+
+.girlbox img{ position: absolute; top: 0; left: 0;}
+
+.pandabox{ width:300px; height: 200px; overflow: hidden; position: absolute; top: 660px; left: 50%; margin-left: -150px;background: url(../images/panda.png) 0 0 no-repeat; }
+
+@-webkit-keyframes light
+{
+0% { -webkit-transform:rotate(0deg);}
+100%{ -webkit-transform:rotate(360deg);}
+}
+
+.light{ width: 546px; height: 638px; position: absolute; background: url(../images/light.png) no-repeat; left: 50%; margin-left: -273px; top: 180px;
+-webkit-animation: light 10s infinite;
+}
+
+
+@-webkit-keyframes boom
+{
+0% { -webkit-transform:rotate(2deg);}
+50%{ -webkit-transform:rotate(0deg);}
+100%{ -webkit-transform:rotate(2deg);}
+}
+
+.boom{ width: 554px; height: 386px; margin: 0 auto; background: url(../images/boom.png) no-repeat; margin-top: 330px; 
+-webkit-animation: boom 0.1s infinite;
+}
+
+@-webkit-keyframes boomed
+{
+0%  { -webkit-transform:scale(1); opacity: 1;}
+100%{ -webkit-transform:scale(5); opacity: 0;}
+}
+
+.boomed{width: 554px; height: 386px; margin: 0 auto; background: url(../images/boom.png) no-repeat; margin-top: 330px; 
+	-webkit-animation: boomed 0.5s;
+	-webkit-transform-origin:center center;
+}
+
+@-webkit-keyframes bigpanda
+{
+0% { margin-top: 0px;}
+50%{ margin-top: -20px;}
+100% { margin-top: 0px;}
+}
+.bigpanda{ width: 560px;height: 700px; background: url(../images/bigpanda.png) top center no-repeat; position: absolute; top: 230px; left: 50%; margin-left: -280px;
+-webkit-animation: bigpanda 2s infinite;
+}
+
+.resultpage{ width: 640px; height: 1008px; background: url(../images/resultbg.jpg) top center no-repeat; position: absolute; top: 0; left: 0;}
+.r-hits{ width: 100%; height: 190px; position: absolute; top: 230px; text-align: center;}
+.r-hits h3{ font: bold 34px/60px ""; color: #0f537f;}
+.r-hits p{font: bold 34px/60px ""; color: #0f537f; text-indent: 100px; margin-top: 20px; }
+.r-hits p b{ font-size: 80px; font-weight: bold; color: #ffdc3a;text-shadow:3px 3px 0px #000; padding-right: 5px;}
+
+.r-btns{ width: 500px; height: 250px; position: absolute; left: 50%; margin-left: -250px; top: 440px; text-align: center;}
+.r-btns p{ font: bold 24px/1.5 ""; color: #fff; width: 100%;}
+.r-btns a{ width: 196px; height: 76px; display: inline-block; margin: 0 10px; margin-top: 20px;}
+.r-btns .a1{ background: url(../images/again.jpg) no-repeat;}
+.r-btns .a2{ background: url(../images/sharebtn.jpg) no-repeat;}
+.r-btns .a3{ background: url(../images/more.png) no-repeat;}
+.r-more{ width: 100%; height: 250px; position: absolute; top: 710px; text-align: center;font: bold 24px/1.5 ""; color: #fff;}
+.r-more a{ color: #ffdc3a;}
+
+.r-tips{ width: 100%; height: 250px; position: absolute; top: 880px; text-align: center;font: normal 20px/1.5 ""; color: #fff; }
+
+.wxshare{ width: 640px; height: 1136px; position: absolute; z-index: 100; top: 0; left: 0; background: url(../images/wxshare.png) no-repeat;}

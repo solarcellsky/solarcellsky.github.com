@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>千骨漂漂拳-火舞游戏</title>
+    <meta name="x-id" content="1528">
+    <meta name="x-share-desc" content="千骨淘气去打架惨遭毁容，施展还我漂漂拳帮她恢复容貌！" data-custom="我对小骨释放了{s}次还我漂漂拳，堪称手速的极致！">
+    <meta name="x-key" content="a7ef9f942d5c93f68e0fb631baa661cf">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="viewport" content="width=640, target-densitydpi=device-dpi, minimum-scale=0.3, maximum-scale=2, user-scalable=0" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta http-equiv="cleartype" content="on">
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css?v=1.0.6" />
+</head>
+
+<body>
+    <div class="bg">
+        <div class="load">
+            <div class="girl-header"></div>
+            <div class="loading">
+                <span class="s1"></span>
+                <span class="s2"></span>
+                <span class="s3"></span>
+            </div>
+            <div class="loadtext">
+                <span id="j-loadrate">0%</span>
+            </div>
+        </div>
+        <div class="begin none">
+            <div id="starBtn"></div>
+            <p>
+                点击开始游戏，20秒内点击屏幕越多
+                <br>小骨就恢复越多，加油吧！
+            </p>
+        </div>
+        <div class="stage none">
+            <div class="words">
+                嘤嘤嘤，子画我被人欺负了
+                <br>快使用还我漂漂拳恢复我的美貌~
+            </div>
+            <div class="status">
+                <div id="clock"><span id="second">20</span>s</div>
+                <div id="girlHeader"></div>
+                <div id="bloodNum">X4</div>
+                <div id="bloodbg">
+                    <div id="blood"></div>
+                </div>
+                <div id="hits">
+                    <p id="hitsNum">0</p>hits
+                </div>
+            </div>
+            <div class="scorebox"></div>
+            <div class="girlbox"></div>
+            <div class="pandabox"></div>
+            <div id="j-light"></div>
+            <div id="j-boom"></div>
+            <div class="bigpanda none"></div>
+        </div>
+        <div class="resultpage none">
+            <div class="r-hits">
+                <h3>你对小骨释放了还我漂漂拳</h3>
+                <p><b id="allHits">200</b>下</p>
+            </div>
+            <div class="r-btns">
+                <p id="resulutWord">
+                </p>
+                <a href="javascript:;" class="a1" id="playagain"></a>
+                <a href="javascript:;" class="a3" id="morebtn"></a>
+            </div>
+        </div>
+        <div class="wxshare none"></div>
+    </div>
+    <script type="text/javascript" src="js/zepto.min.js"></script>
+    <script type="text/javascript" src="js/soundjs-0.6.1.min.js"></script>
+    <script type="text/javascript" src="js/apitiny.js"></script>
+    <script type="text/javascript" src="js/index.js?v=1.2.1"></script>
+</body>
+
+</html>

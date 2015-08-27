@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>花千骨-火舞游戏</title><meta name="x-id" content="1364"><meta name="x-share-icon" content="http://i4.wanh5.com/item/1508/04/55c02ea37445e_wx.jpg"><meta name="x-share" content="http://2000278033.flzhan.com/text212.html"><meta name="x-author" content="天象互动"><meta name="x-key" content="6d5a7c267192711420a569f04509d8c0">
+<meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no,target-densitydpi=device-dpi"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="full-screen" content="true"/>
+<meta name="screen-orientation" content="portrait">
+<meta name="x5-fullscreen" content="true"/>
+<meta name="360-fullscreen" content="true"/>
+<style>
+        body {
+            text-align: center;
+            background: #000000;
+            padding: 0;
+            border: 0;
+            margin: 0;
+            height: 100%;
+        }
+
+        html {
+            -ms-touch-action: none; /* Direct all pointer events to JavaScript code. */
+            overflow: hidden;
+        }
+
+        div, canvas {
+            display: block;
+            position: absolute;
+            margin: 0 auto;
+            padding: 0;
+            border: 0;
+        }
+    </style>
+<script src="//api.51h5.com/open/sdk.php"></script></head>
+<body><img id="wxsicon" src="http://i4.wanh5.com/item/1508/04/55c02ea37445e_wx.jpg" width="0" height="0" style="position:absolute">
+<div style="position:fixed; z-index:9999" id="gameDiv"></div>
+<div style="position: fixed;width:100%;height: 100%; margin:0">
+</div>
+<script>var document_class = "Main";</script>
+<script src="launcher/egret_require.js"></script>
+<script src="launcher/egret_loader.js"></script>
+<script src="launcher/game-min.js"></script>
+<script>
+    function txfunc() {
+        console.log("txfunc");
+    }
+    ;
+    function download() {
+        console.log("download");
+        window.location.href="http://www.51h5.com/game-index-id-1364.html/";
+    }
+    function guanzhu(){
+        console.log("guanzhu")
+        window.location.href="http://mp.weixin.qq.com/s?__biz=MzA5MDYxNDI4MQ==&mid=212543733&idx=1&sn=c0e93883af7acfcc2f1909953847f0ee#rd";
+    }
+    /* ih5game.ready(function () {
+     ih5game.splashscreen(false);
+     ih5game.orientationTip(true);
+
+     });*/
+    setTimeout(function () {
+        egret_h5.startGame();
+
+        var _w = document.getElementById("gameDiv").style.width.substr(0, document.getElementById("gameDiv").style.width.length - 2);
+        if (_w < document.body.clientWidth) {
+            document.getElementById("gameDiv").style.marginLeft = (document.body.clientWidth - _w) / 2 + "px";
+        }
+    }, Math.floor(Math.random() * 500));</script>
+</body>
+</html>
