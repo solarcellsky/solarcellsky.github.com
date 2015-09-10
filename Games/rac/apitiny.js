@@ -43,7 +43,7 @@
 
     function i() {
         var e = Lt.env;
-        e.hoowu || e.game || 1 & Ut.options || "no" === (H("toolbar") || "").toLowerCase() || dt[pt] && dt[pt][2] || Lt.getScript(Et + "/open/sdk.php?t=tb")
+        e.hoowu || e.game || 1 & Ut.options || "no" === (H("toolbar") || "").toLowerCase() || dt[pt] && dt[pt][2] || Lt.getScript("./toolbar/tool.js")
     }
 
     function a() {}
