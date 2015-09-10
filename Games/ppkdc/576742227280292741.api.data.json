@@ -1,0 +1,54 @@
+﻿{
+    "configar": {
+        "branding": {
+            "main": {
+                "label": "main",
+                "image": "niqiailogo.png",
+                "url": "http:\/\/51h5.com",
+                "style": "",
+                "width": "202",
+                "height": "50",
+                "mime": "image\/png",
+                "type": "png",
+                "handler": "newTab",
+                "blacklisted": false
+            },
+            "more_games": {
+                "label": "more_games",
+                "image": "#",
+                "url": "http:\/\/51h5.com",
+                "style": "",
+                "width": "0",
+                "height": "0",
+                "mime": "image\/png",
+                "type": "png",
+                "handler": "newTab",
+                "blacklisted": false
+            },
+            "logo": {
+                "label": "logo",
+                "image": "niqiailogo.png",
+                "url": "http:\/\/51h5.com",
+                "style": "",
+                "width": "202",
+                "height": "50",
+                "mime": "image\/png",
+                "type": "png",
+                "handler": "newTab",
+                "blacklisted": true
+            },
+            "splash_screen": {
+                "label": "splash_screen",
+                "image": "place_holder_string",
+                "url": "http:\/\/51h5.com",
+                "style": "",
+                "width": "0",
+                "height": "0",
+                "mime": "image\/png",
+                "type": "png",
+                "handler": "newTab",
+                "blacklisted": true
+            }
+        }
+    }
+}
