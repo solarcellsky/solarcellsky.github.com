@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <title>飞天神喵-火舞游戏</title>
+    <meta name="screen-orientation" content="portrait">
+    <style>
+    body {
+        background: #000000;
+        color: #cccccc;
+        margin: 0px;
+        padding: 0px;
+        border: 0px;
+    }
+    canvas {
+        image-rendering: optimizeSpeed;
+        -webkit-interpolation-mode: nearest-neighbor;
+        -ms-touch-action: none;
+        margin: 0px;
+        padding: 0px;
+        border: 0px;
+    }
+    :-webkit-full-screen #canvas {
+        width: 100%;
+        height: 100%;
+    }
+    div.gm4html5_div_class {
+        margin: 0px;
+        padding: 0px;
+        border: 0px;
+    }
+    /* START - Login Dialog Box */
+    
+    div.gm4html5_login {
+        padding: 20px;
+        position: absolute;
+        border: solid 2px #000000;
+        background-color: #404040;
+        color: #00ff00;
+        border-radius: 15px;
+        box-shadow: #101010 20px 20px 40px;
+    }
+    div.gm4html5_cancel_button {
+        float: right;
+    }
+    div.gm4html5_login_button {
+        float: left;
+    }
+    div.gm4html5_login_header {
+        text-align: center;
+    }
+    /* END - Login Dialog Box */
+    
+    :-webkit-full-screen {
+        width: 100%;
+        height: 100%;
+    }
+    </style>
+    <script src="./js/apitiny.js"></script>
+</head>
+
+<body><img id="wxsicon" src="http://i4.wanh5.com/item/1509/09/55efb98690237_wx.jpg" width="0" height="0" style="position:absolute">
+    <script type="text/javascript" src="js/game.js"></script>
+    <script type="text/javascript" src="js/developer.js"></script>
+    <div class="gm4html5_div_class" id="gm4html5_div_id">
+        <canvas id="canvas" width="600" height="900">
+            <p>Your browser doesn't support HTML5 canvas.</p>
+        </canvas>
+        <img src="html5game/splash.png" id="GM4HTML5_loadingscreen" alt="GameMaker:HTML5 loading screen" style="position:absolute; left : 0; top : 0;" />
+        <img src="html5game/loadBar.png" id="GM4HTML5_loadingbar" alt="" style="position:absolute; left : 0; top : 0;" />
+    </div>
+    <script type="text/javascript">
+    window.addEventListener('scroll', function() {
+        // Do not scroll when keyboard is visible 
+        if (document.activeElement === document.body && window.scrollY > 3) {
+            document.body.scrollTop = 0;
+        }
+    }, true);
+
+    function getWidth() {
+        if (self.innerHeight) {
+            return self.innerWidth;
+        }
+
+        if (document.documentElement && document.documentElement.clientHeight) {
+            return document.documentElement.clientWidth;
+        }
+
+        if (document.body) {
+            return document.body.clientWidth;
+        }
+    }
+
+    function getHeight() {
+        if (self.innerHeight) {
+            return self.innerHeight;
+        }
+
+        if (document.documentElement && document.documentElement.clientHeight) {
+            return document.documentElement.clientHeight;
+        }
+
+        if (document.body) {
+            return document.body.clientHeight;
+        }
+    }
+
+    function resizeLoadingImg() {
+        var imgLoad = document.getElementById("GM4HTML5_loadingscreen");
+        var imgBar = document.getElementById("GM4HTML5_loadingbar");
+
+        if (imgLoad && imgBar) {
+            imgLoad.style.height = getHeight() + "px";
+            imgLoad.style.width = getHeight() / 720 * 480 + "px";
+            imgLoad.style.left = (getWidth() - getHeight() / 720 * 480) / 2 + "px";
+            imgLoad.style.top = 0 + "px";
+
+            imgBar.style.height = getHeight() / 720 * 64 + "px";
+            imgBar.style.width = window.loadingProgress * 480 * getHeight() / 720 + "px";
+            imgBar.style.left = (getWidth() - getHeight() / 720 * 480) / 2 + "px";
+            imgBar.style.top = getHeight() * 0.8 + "px";
+
+            setTimeout(resizeLoadingImg, 500);
+        }
+    }
+
+    window.loadingProgress = 0;
+    resizeLoadingImg();
+    </script>
+    <script type="text/javascript" src="html5game/BerryJump.js?WXNZB=1045556951"></script>
+    <style>
+    .spilgames-branding-image {
+        display: block;
+        left: 50px;
+        top: 100px;
+        position: absolute;
+    }
+    </style>
+    <style>
+    #spilgames-more-games-btn {
+        background-color: rgba(0, 0, 0, 0);
+        background-repeat: no-repeat;
+        border: none;
+        cursor: disabled;
+        overflow: hidden;
+        outline: none;
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        pointer-events: auto;
+        filter: alpha(opacity=0);
+        -mos-opacity: 0.0;
+        opacity: 0.0;
+    }
+    </style>
+</body>
+
+</html>
