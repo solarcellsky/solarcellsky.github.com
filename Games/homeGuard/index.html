@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="full-screen" content="yes"/>
+    <meta name="screen-orientation" content="portrait"/>
+    <meta name="viewport" content="target-densitydpi=high-dpi,width=device-width"/>            <!-- 防止点击缩放和开始有黑框-->
+    <meta name="x5-fullscreen" content="true"/>
+    <meta name="360-fullscreen" content="true"/>
+
+    <title>爱家保卫战</title>
+    
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script>
+    //分享授权内容设置
+        var params = JSON.parse('');
+        var modulus = '', exponent = '';
+        console.info("");
+    </script>
+
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="js/security.js"></script>
+    <script type="text/javascript" src="js/utility.js"></script>
+	<script type="text/javascript" src="js/GameControler.js"></script>
+	<script type="text/javascript" src="js/GameService.js"></script>
+    <script type="text/javascript" src="js/ui.js"></script>
+	
+    <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="js/ui.js"></script>
+    <script type="text/javascript" src="src/LoaderImage.js" charset="utf-8"></script>
+    <script type="text/javascript" src="cocos2d-js-v3.1.js" charset="utf-8"></script>
+    <script type="text/javascript" src="LoadingCocosJs.js" charset="utf-8"></script>
+    <script type="text/javascript" src="main.js" charset="utf-8"></script>
+
+    
+</head>
+<body>   
+    <canvas id="gameCanvas" width="0" height="0"></canvas>
+
+    <!--提交信息页面-->
+    <div id="tjxx">
+        <img id="bg_tjxx" src="images/bg_tjxx.jpg"/>
+        <p id="score">30</p>
+        <input type="tel" name="phone" id="phone"/>
+        <p id="phone_tip">内容不能为空</p>
+        <img id="btn_qd" src="images/btn_qd.png"/>
+    </div>
+
+    <!--排行榜-->
+    <div id="phb">
+        <img id="bg_phb" src="images/bg_phb.jpg"/>
+        <div id="list">
+            <ul id="content" class="phb1" func= "rankList">
+            	<!--  
+                <li class="li_first">
+                    <ul>
+                        <li class="li1 font">名次</li>
+                        <li class="li2 font">手机号</li>
+                        <li class="li3 font">成绩</li>
+                    </ul>
+                </li>
+                <li class="li_first">
+                    <ul>
+                        <li class="li1">1</li>
+                        <li class="li2">芭比娃娃</li>
+                        <li class="li3">120</li>
+                    </ul>
+                </li>
+                -->
+            </ul>
+        </div>
+        <ul id="list2">
+            <li>
+                <ul>
+                    <li class="li1" func="customerRank">XX</li>
+                    <li class="li2" func="customerPhone">XX</li>
+                    <li class="li3" func="customerScore">XX</li>
+                </ul>
+            </li>
+        </ul>
+        <img id="btn_return" src="images/btn_return.png" />
+    </div>
+
+    <script type="text/javascript" src="js/fontSize.js"></script>
+
+</body>
+</html>
