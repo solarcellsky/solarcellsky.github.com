@@ -276,12 +276,13 @@ define(function(require) {
 
     var weatherWidget = function() {
         var cnt = 6;
+        var _APPID = '607cd461b96f865d29044d4deb1bddf4';
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(function(position) {
-                var data_current = 'http://api.openweathermap.org/data/2.5/weather?lat=' + position.coords.latitude + '&lon=' + position.coords.longitude + '&units=metric&lang=zh_cn&APPID=607cd461b96f865d29044d4deb1bddf4&callback=?';
-                var data_hourly = 'http://api.openweathermap.org/data/2.5/forecast/hourly?lat=' + position.coords.latitude + '&lon=' + position.coords.longitude + '&cnt=1&units=metric&lang=zh_cn&APPID=607cd461b96f865d29044d4deb1bddf4&callback=?';
-                var data_forecast = 'http://api.openweathermap.org/data/2.5/forecast/daily?lat=' + position.coords.latitude + '&lon=' + position.coords.longitude + '&cnt=' + cnt + '&units=metric&lang=zh_cn&APPID=607cd461b96f865d29044d4deb1bddf4&callback=?';
-                var data_temperature = 'http://api.openweathermap.org/data/2.5/forecast/daily?lat=' + position.coords.latitude + '&lon=' + position.coords.longitude + '&cnt=15&units=metric&lang=zh_cn&APPID=607cd461b96f865d29044d4deb1bddf4&callback=?';
+                var data_current = 'http://api.openweathermap.org/data/2.5/weather?lat=' + position.coords.latitude + '&lon=' + position.coords.longitude + '&units=metric&lang=zh_cn&APPID=' + _APPID + '&callback=?';
+                var data_hourly = 'http://api.openweathermap.org/data/2.5/forecast/hourly?lat=' + position.coords.latitude + '&lon=' + position.coords.longitude + '&cnt=1&units=metric&lang=zh_cn&APPID=' + _APPID + '&callback=?';
+                var data_forecast = 'http://api.openweathermap.org/data/2.5/forecast/daily?lat=' + position.coords.latitude + '&lon=' + position.coords.longitude + '&cnt=' + cnt + '&units=metric&lang=zh_cn&APPID=' + _APPID + '&callback=?';
+                var data_temperature = 'http://api.openweathermap.org/data/2.5/forecast/daily?lat=' + position.coords.latitude + '&lon=' + position.coords.longitude + '&cnt=15&units=metric&lang=zh_cn&APPID=' + _APPID + '&callback=?';
                 juicer.register('getDates', getDates);
                 juicer.register('getTimes', getTimes);
                 juicer.register('degToCompass', degToCompass);
