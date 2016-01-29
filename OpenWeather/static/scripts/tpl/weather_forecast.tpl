@@ -3,7 +3,7 @@
 	{@each data.list as item}
 	<ul class="day-item">
             <li>${item.dt|getDates}</li>
-            <li style="height:100px;background:url(https://785hoc.com1.z0.glb.clouddn.com/weather_icons/s/${item.weather[0].icon}.png) no-repeat center center"></li>
+            <li style="height:100px;background:url(http://openweather.u.qiniudn.com/weather_icons/s/${item.weather[0].icon}.png) no-repeat center center"></li>
             <li>${item.weather[0].description}</li>
             <li class="max">${(item.temp.max).toFixed(1)}&deg;</li>
             <li class="min">${(item.temp.min).toFixed(1)}&deg;</li>
