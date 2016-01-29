@@ -25,5 +25,11 @@ Hi there!I'm Solar.I'm a web front-end developer from Xi'an ,China.I love css,ht
 {% assign tags_list = site.tags %}  
 {% include JB/tags_list %}
 </ul>
+<h3>Links</h3>
+<ul markdown="1" class="tag_box inline">
+<li><a href="tools/">Tools</a></li>
+<li><a href="ua.html">UA</a></li>
+<li><a href="http://browserbench.org/">Browser Benchmark</a></li>
+</ul>
 </div>
 </div>
