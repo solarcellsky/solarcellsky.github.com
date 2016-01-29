@@ -274,102 +274,103 @@ define(function(require) {
         });
     };
 
-    var weatherWidget = function() {
-        var cnt = 6;
-        var _APPID = '607cd461b96f865d29044d4deb1bddf4';
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(function(position) {
-                var data_current = 'https://api.openweathermap.org/data/2.5/weather?lat=' + position.coords.latitude + '&lon=' + position.coords.longitude + '&units=metric&lang=zh_cn&appid=' + _APPID + '&callback=?';
-                var data_hourly = 'https://api.openweathermap.org/data/2.5/forecast/hourly?lat=' + position.coords.latitude + '&lon=' + position.coords.longitude + '&cnt=1&units=metric&lang=zh_cn&appid=' + _APPID + '&callback=?';
-                var data_forecast = 'https://api.openweathermap.org/data/2.5/forecast/daily?lat=' + position.coords.latitude + '&lon=' + position.coords.longitude + '&cnt=' + cnt + '&units=metric&lang=zh_cn&appid=' + _APPID + '&callback=?';
-                var data_temperature = 'https://api.openweathermap.org/data/2.5/forecast/daily?lat=' + position.coords.latitude + '&lon=' + position.coords.longitude + '&cnt=15&units=metric&lang=zh_cn&appid=' + _APPID + '&callback=?';
-                juicer.register('getDates', getDates);
-                juicer.register('getTimes', getTimes);
-                juicer.register('degToCompass', degToCompass);
-                $.jsonp({
-                    url: data_current,
-                    pageCache: true,
-                    timeout: 10000,
-                    success: function(data) {
-                        $.fillmore({
-                            src: static_url + 'bg/' + data.weather[0].icon + '.jpg'
-                        });
-                        var tpl = require('tpl/weather_current.tpl');
-                        tpl = juicer(tpl, {
-                            data: data
-                        });
-                        seajs.use(['cufon', 'HelveticaNeue'], function() {
-                            Cufon.replace('.weather-current-temp', {
-                                fontFamily: 'Helvetica Neue',
-                                fontSize: '200'
-                            });
-                        });
-                        $('#current').append(tpl).fadeIn();
-                        $('.loading').fadeOut();
-                    },
-                    error: function() {
-                        $('.loading').remove();
-                        var error = require('tpl/error.tpl');
-                        $('#weather').empty();
-                        $('body').append(error);
-                    }
-                });
+    var weatherWidget = function(position) {
 
-                $.jsonp({
-                    url: data_hourly,
-                    pageCache: true,
-                    timeout: 10000,
-                    success: function(data) {
-                        showHourlyForecast(data.list);
-                    },
-                    error: function() {
-                        var error = require('tpl/error.tpl');
-                        $('#weather').empty();
-                        $('body').append(error);
-                    }
-                });
-
-                $.jsonp({
-                    url: data_forecast,
-                    pageCache: true,
-                    timeout: 10000,
-                    success: function(data) {
-                        var tpl = require('tpl/weather_forecast.tpl');
-                        tpl = juicer(tpl, {
-                            data: data
-                        });
-                        $('#forecast').append(tpl);
-                    },
-                    error: function() {
-                        var error = require('tpl/error.tpl');
-                        $('#weather').empty();
-                        $('body').append(error);
-                    }
-                });
-
-                $.jsonp({
-                    url: data_temperature,
-                    pageCache: true,
-                    timeout: 10000,
-                    success: function(data) {
-                        showTemperatureChart(data.list);
-                    },
-                    error: function() {
-                        var error = require('tpl/error.tpl');
-                        $('#weather').empty();
-                        $('body').append(error);
-                    }
-                });
-
-            });
+        if (!position) {
+            var latitude = 34.267;
+            var longitude = 108.9;
         } else {
-            alert("Geolocation is not supported by this browser.");
-        };
-    };
+            var latitude = position.coords.latitude;
+            var longitude = position.coords.longitude;
+        }
 
-    $(function() {
-        spinner('spinner', 120, 120, 16, 15, '#fff');
-        weatherWidget();
+        var _APPID = '607cd461b96f865d29044d4deb1bddf4';
+
+        var data_current = 'http://api.openweathermap.org/data/2.5/weather?lat=' + latitude + '&lon=' + longitude + '&units=metric&lang=zh_cn&appid=' + _APPID + '&callback=?';
+        var data_hourly = 'http://api.openweathermap.org/data/2.5/forecast/hourly?lat=' + latitude + '&lon=' + longitude + '&cnt=11&units=metric&lang=zh_cn&appid=' + _APPID + '&callback=?';
+        var data_forecast = 'http://api.openweathermap.org/data/2.5/forecast/daily?lat=' + latitude + '&lon=' + longitude + '&cnt=6&units=metric&lang=zh_cn&appid=' + _APPID + '&callback=?';
+        var data_temperature = 'http://api.openweathermap.org/data/2.5/forecast/daily?lat=' + latitude + '&lon=' + longitude + '&cnt=15&units=metric&lang=zh_cn&appid=' + _APPID + '&callback=?';
+
+        juicer.register('getDates', getDates);
+        juicer.register('getTimes', getTimes);
+        juicer.register('degToCompass', degToCompass);
+
+        $.jsonp({
+            url: data_current,
+            pageCache: true,
+            timeout: 10000,
+            success: function(data) {
+
+                $.fillmore({
+                    src: static_url + 'bg/' + data.weather[0].icon + '.jpg'
+                });
+                var tpl = require('tpl/weather_current.tpl');
+                tpl = juicer(tpl, {
+                    data: data
+                });
+                seajs.use(['cufon', 'HelveticaNeue'], function() {
+                    Cufon.replace('.weather-current-temp', {
+                        fontFamily: 'Helvetica Neue',
+                        fontSize: '200'
+                    });
+                });
+                $('#current').append(tpl).fadeIn();
+                $('.loading').fadeOut();
+            },
+            error: function() {
+                $('.loading').remove();
+                var error = require('tpl/error.tpl');
+                $('#weather').empty();
+                $('body').append(error);
+            }
+        });
+
+        $.jsonp({
+            url: data_hourly,
+            pageCache: true,
+            timeout: 10000,
+            success: function(data) {
+                showHourlyForecast(data.list);
+            },
+            error: function() {
+                var error = require('tpl/error.tpl');
+                $('#weather').empty();
+                $('body').append(error);
+            }
+        });
+
+        $.jsonp({
+            url: data_forecast,
+            pageCache: true,
+            timeout: 10000,
+            success: function(data) {
+                var tpl = require('tpl/weather_forecast.tpl');
+                tpl = juicer(tpl, {
+                    data: data
+                });
+                $('#forecast').append(tpl);
+            },
+            error: function() {
+                var error = require('tpl/error.tpl');
+                $('#weather').empty();
+                $('body').append(error);
+            }
+        });
+
+        $.jsonp({
+            url: data_temperature,
+            pageCache: true,
+            timeout: 10000,
+            success: function(data) {
+                showTemperatureChart(data.list);
+            },
+            error: function() {
+                var error = require('tpl/error.tpl');
+                $('#weather').empty();
+                $('body').append(error);
+            }
+        });
+
         seajs.use(['j.easing', 'j.animate', 'hammer', 'superslides', 'superslidesCSS'], function() {
             var $slides = $('#slides');
 
@@ -385,6 +386,45 @@ define(function(require) {
                 hashchange: true
             });
         });
+
+     };
+
+    var errorHandler = function(error) {
+        if (!error) return;
+        switch (error.code) {
+            case error.PERMISSION_DENIED:
+                alert("User denied the request for Geolocation.");
+                break;
+            case error.POSITION_UNAVAILABLE:
+                alert("Location information is unavailable.");
+                break;
+            case error.TIMEOUT:
+                alert("The request to get user location timed out.");
+                break;
+            case error.UNKNOWN_ERROR:
+                alert("An unknown error occurred.");
+                break;
+        }
+    };
+
+    var initWeatherWidget = function() {
+
+        if(navigator.geolocation){
+           // timeout at 60000 milliseconds (60 seconds)
+           var optn = {
+                timeout: 60000
+            };
+           navigator.geolocation.getCurrentPosition(weatherWidget, errorHandler, optn);
+        }
+        else{
+           alert("Sorry, browser does not support geolocation!");
+        }
+
+    };
+
+    $(function() {
+        spinner('spinner', 120, 120, 16, 15, '#fff');
+        initWeatherWidget();
     });
 
 });
