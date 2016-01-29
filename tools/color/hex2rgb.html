@@ -1,0 +1,98 @@
+<HTML>
+
+<HEAD>
+    <meta name="KEYWORDS" content="HTML color converter,javascript color converter,hexadecimal converter,hex to rgb,hex-to-rgb,hexadecimal to rgb,color converter">
+    <title>Hex-to-RGB Color Converter</title>
+
+    <script type="text/javascript" language="JavaScript">
+    <!--
+    //R = hexToR("#FFFFFF");
+    //G = hexToG("#FFFFFF");
+    //B = hexToB("#FFFFFF");
+
+    function hexToR(h) {
+        return parseInt((cutHex(h)).substring(0, 2), 16)
+    }
+
+    function hexToG(h) {
+        return parseInt((cutHex(h)).substring(2, 4), 16)
+    }
+
+    function hexToB(h) {
+        return parseInt((cutHex(h)).substring(4, 6), 16)
+    }
+
+    function cutHex(h) {
+        return (h.charAt(0) == "#") ? h.substring(1, 7) : h
+    }
+
+    function setBgColorById(id, sColor) {
+        var elem;
+        if (document.getElementById) {
+            if (elem = document.getElementById(id)) {
+                if (elem.style) elem.style.backgroundColor = sColor;
+            }
+        }
+    }
+
+    //-->
+    </script>
+
+</HEAD>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#660099">
+    <a name="top"></a>
+
+    <p>
+        <table border=0 cellpadding=0 cellspacing=0>
+            <tr>
+                <td width=568>
+
+                    <h3><font face="Verdana,Arial,Helvetica,sans-serif" color="#000099">
+Hex-to-RGB Conversion
+</font></h3>
+
+                    <p>
+
+                            <form name=rgb>
+                                <table border=0 cellpadding=1 cellspacing=1>
+                                    <tr>
+                                        <td valign=middle title="Color sample for this hex code">
+                                            <nobr><span id="colorSample" style="border: 1px solid gray;"><big><big><code style="cursor:default;">&nbsp;&nbsp;&nbsp;</code></big></big></span>&nbsp;</nobr>
+                                        </td>
+                                        <td valign=top>
+                                            <nobr>
+                                                <input type=text name=hex size=7 maxlength=7 value="FFFFFF">
+                                                <input type=button name=btn value="Convert to RGB" onclick="setBgColorById('colorSample',this.form.hex.value);
+this.form.r.value=hexToR(this.form.hex.value);
+this.form.g.value=hexToG(this.form.hex.value);
+this.form.b.value=hexToB(this.form.hex.value);
+"> R:
+                                                <input type=text name=r size=3 style="width:33px;"> G:
+                                                <input type=text name=g size=3 style="width:33px;"> B:
+                                                <input type=text name=b size=3 style="width:33px;">
+                                            </nobr>
+
+                                        </td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                </table>
+
+                            </form>
+
+
+                            <p>The JavaScript source code is simple:
+
+                                <pre>R = hexToR("#FFFFFF");
+G = hexToG("#FFFFFF");
+B = hexToB("#FFFFFF");
+
+function hexToR(h) {return parseInt((cutHex(h)).substring(0,2),16)}
+function hexToG(h) {return parseInt((cutHex(h)).substring(2,4),16)}
+function hexToB(h) {return parseInt((cutHex(h)).substring(4,6),16)}
+function cutHex(h) {return (h.charAt(0)=="#") ? h.substring(1,7):h}
+</pre>
+
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>把代码以Escape加密/UnEscape解密</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="common.css" />
+</head>
+
+<body>
+<div class="w950">
+    <h1>把代码以Escape加密/UnEscape解密</h1>
+    <textarea id="ipt" class="Etext" >请把你需要加密的内容粘贴在这里！</textarea>
+    <div id="detail" class="info1">
+        <input type="button" class="but2" onclick="getid('ipt').value=escape(getid('ipt').value);" value="Escape加密">
+        <input type="button" class=but onclick="getid('ipt').value=unescape(getid('ipt').value);" value="UnEscape解密">
+    </div>
+
+</div>
+<script src="escape.js"></script>
+</body>
+
+</html>

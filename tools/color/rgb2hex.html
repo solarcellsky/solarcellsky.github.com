@@ -1,0 +1,216 @@
+<HTML>
+
+<HEAD>
+    <meta name="KEYWORDS" content="HTML color converter,javascript color converter,hexadecimal converter,rgb to hex,rgb-to-hex,rgb to hexadecimal,color converter,rgbtohex,rgb2hex">
+    <title>RGB-to-Hex Color Converter</title>
+
+    <script language="JavaScript" type="text/javascript">
+    <!--
+    function rgbToHex(R, G, B) {
+        return toHex(R) + toHex(G) + toHex(B);
+    }
+
+    function toHex(n) {
+        n = parseInt(n, 10);
+        if (isNaN(n)) return "00";
+        n = Math.max(0, Math.min(n, 255));
+        return "0123456789ABCDEF".charAt((n - n % 16) / 16) + "0123456789ABCDEF".charAt(n % 16);
+    }
+
+    function cutHex(h) {
+        return (h.charAt(0) == "#") ? h.substring(1, 7) : h
+    }
+
+    function hexToR(h) {
+        return parseInt((cutHex(h)).substring(0, 2), 16)
+    }
+
+    function hexToG(h) {
+        return parseInt((cutHex(h)).substring(2, 4), 16)
+    }
+
+    function hexToB(h) {
+        return parseInt((cutHex(h)).substring(4, 6), 16)
+    }
+
+    function setBgColorById(id, sColor) {
+        var elem;
+        if (document.getElementById) {
+            if (elem = document.getElementById(id)) {
+                if (elem.style) elem.style.backgroundColor = sColor;
+            }
+        }
+    }
+
+    img1 = new Image();
+    img1.src = 'images/1.gif';
+    img2 = new Image();
+    img2.src = 'images/2.gif';
+
+    function toggleDiv(n) {
+            var curState, el = document.getElementById('explanation' + n);
+            if (el == null) return;
+            if (el.style) {
+                curState = el.style.visibility;
+                if (curState == 'hidden') {
+                    el.style.visibility = 'visible';
+                    el.style.display = 'inline';
+                } else {
+                    el.style.visibility = 'hidden';
+                    el.style.display = 'none';
+                }
+            }
+            el = document.getElementById('i' + n);
+            if (el == null) return;
+            if (el.src) {
+                if ((el.src).indexOf('1.gif') != -1)
+                    el.src = img2.src;
+                else el.src = img1.src;
+            }
+        }
+        //-->
+    </script>
+</HEAD>
+
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#660099">
+    <a name="top"></a>
+
+    <p>
+        <table border=0 cellpadding=0 cellspacing=0>
+            <tr>
+                <td valign=top width=566>
+
+                    <h3><font face="Verdana,Arial,Helvetica,sans-serif" color="#000099">
+RGB-to-Hex Conversion
+</font></h3>
+
+
+                    <p>
+
+                        <p style="width:566px;">
+
+
+                            <form name=rgb>
+                                <table border=0 cellpadding=1 cellspacing=1>
+                                    <tr>
+                                        <td valign=middle title="Color sample for input RGB values">
+                                            <nobr><span id="colorSample" style="border: 1px solid gray;"><big><big><code style="cursor:default;">&nbsp;&nbsp;&nbsp;</code></big></big></span>
+                                            </nobr>
+                                        </td>
+                                        <td valign=top>
+                                            <nobr>&nbsp; R:
+                                                <input type=text name=r size=3 maxlength=3 value=255 style="width:33px;" onfocus="this.form.hex.value=''" onblur="sNewColor=rgbToHex(this.form.r.value,this.form.g.value,this.form.b.value);setBgColorById('colorSample',sNewColor);"> G:
+                                                <input type=text name=g size=3 maxlength=3 value=255 style="width:33px;" onfocus="this.form.hex.value=''" onblur="sNewColor=rgbToHex(this.form.r.value,this.form.g.value,this.form.b.value);setBgColorById('colorSample',sNewColor);"> B:
+                                                <input type=text name=b size=3 maxlength=3 value=255 style="width:33px;" onfocus="this.form.hex.value=''" onblur="sNewColor=rgbToHex(this.form.r.value,this.form.g.value,this.form.b.value);setBgColorById('colorSample',sNewColor);">
+                                                <input type=button name=btn value="Convert to Hex" onclick="sNewColor=rgbToHex(this.form.r.value,this.form.g.value,this.form.b.value);this.form.hex.value=sNewColor;setBgColorById('colorSample',sNewColor);">
+                                                <input type=text name=hex size=8>
+                                            </nobr>
+
+                                        </td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                </table>
+
+                            </form>
+
+                            <p>
+                                <nobr>
+                                    <font face=Arial,Helvetica,sans-serif size=2><img id=i32 src=images/2.gif alt="Source code" title="Source code" onclick="toggleDiv(32)">
+                                        <a href=# onclick="toggleDiv(32);return false;">Source code</a>
+
+                                    </font>
+                                </nobr>
+
+                                <div id=explanation32 style="display:none;visibility:hidden;">
+                                    <pre>function rgbToHex(R,G,B) {return toHex(R)+toHex(G)+toHex(B)}
+function toHex(n) {
+ n = parseInt(n,10);
+ if (isNaN(n)) return "00";
+ n = Math.max(0,Math.min(n,255));
+ return "0123456789ABCDEF".charAt((n-n%16)/16)
+      + "0123456789ABCDEF".charAt(n%16);
+}
+</pre>
+
+                                    <b>Notes:</b> The script parses the input <code>R</code>, <code>G</code>, <code>B</code> values as integers using the standard function
+                                    <code><a href="convert2.htm#parseInt">parseInt(<i>string</i>,10)</a></code>; the second, optional argument <code>10</code> specifies that the value must be parsed as a decimal number. (If we omit the <code>10</code>, the script would still work, except for some input values starting with <code>0</code>, e.g. <code>009</code> or <code>011</code>, where it might incorrectly assume <a href="octalsan.htm">octal</a> input.)
+                                    <nobr>We use</nobr> the standard functions
+                                    <code><a href="mathfunc.htm">Math.min</a></code> and <code><a href="mathfunc.htm">Math.max</a></code> to make sure that the input values are within the range from 0 to 255. The interested reader might notice that a nicer way to convert <code>n</code> to a hexadecimal string is to use <a href="convert3.htm"><code>n.toString(16)</code></a>; however, the above code was written back in the ancient era when JavaScript 1.0 was still around, and the construct
+                                    <a href="convert3.htm"><code>n.toString(16)</code></a> won't work in JavaScript 1.0!
+                                    <br>
+                                </div>
+
+                                <p>
+                                    <script language="JavaScript">
+                                    <!--
+                                    function printTable(tableCells, tableWidth) {
+                                        var hCode, M, tableRows = Math.ceil(tableCells.length / tableWidth);
+                                        var tableBuf = '<table border=0 cellspacing=1 cellpadding=1>\n';
+                                        for (var K = 0; K < tableRows; K++) {
+                                            tableBuf += '<tr>';
+                                            for (var L = 0; L < tableWidth; L++) {
+                                                M = K + L * tableRows;
+                                                hCode = tableCells[M].substring(0, 7);
+                                                tableBuf += '<td style="cursor:default;" bgcolor="' + hCode + '" title="' + tableCells[M] + '"><nobr><code>&nbsp;&nbsp;&nbsp;</code></nobr></td>' + '<td><nobr><code>&nbsp;rgb(' + hexToR(hCode) + ',' + hexToG(hCode) + ',' + hexToB(hCode) + ')&nbsp;</code></nobr></td>' + '<td><nobr><code>' + ((M < tableCells.length) ? hCode : '') + '&nbsp;&nbsp;&nbsp;</code></nobr></td>'
+                                            }
+                                            tableBuf += '</tr>\n';
+                                        }
+                                        document.writeln(tableBuf + '</table>');
+                                    }
+
+
+                                    theColors = new Array(
+                                        '#FFFFFF white', '#F5FFFA mintcream', '#F0FFFF azure', '#F0FFF0 honeydew', '#E0FFFF lightcyan', '#F0F8FF aliceblue', '#F5F5F5 whitesmoke', '#F8F8FF ghostwhite', '#FFFFF0 ivory', '#FFFAFA snow', '#FFFAF0 floralwhite', '#FFF5EE seashell', '#FDF5E6 oldlace', '#FFF0F5 lavenderblush', '#FAF0E6 linen', '#FAEBD7 antiquewhite', '#FFE4E1 mistyrose'
+
+                                        , '#FFC0CB pink', '#FFB6C1 lightpink', '#FF69B4 hotpink', '#FF1493 deeppink', '#DB7093 palevioletred', '#BC8F8F rosybrown', '#C71585 mediumvioletred'
+
+                                        , '#CD5C5C indianred', '#F08080 lightcoral', '#FFA07A lightsalmon', '#FA8072 salmon', '#E9967A darksalmon', '#DC143C crimson'
+
+                                        , '#FFF8DC cornsilk', '#FFEBCD blanchedalmond', '#FFE4C4 bisque', '#FFDEAD navajowhite', '#F5DEB3 wheat', '#DEB887 burlywood', '#D2B48C tan', '#BDB76B darkkhaki', '#DAA520 goldenrod', '#B8860B darkgoldenrod', '#CD853F peru', '#D2691E chocolate', '#A0522D sienna', '#A52A2A brown', '#B22222 firebrick', '#8B4513 saddlebrown', '#8B0000 darkred', '#800000 maroon'
+
+                                        , '#FAA460 sandybrown', '#FF7F50 coral', '#FF6347 tomato', '#FF0000 red', '#FF4500 orangered', '#FF8C00 darkorange', '#FFA500 orange'
+
+                                        , '#FFD700 gold', '#FFFF00 yellow', '#FFFFE0 lightyellow', '#FFFACD lemonchiffon', '#FAFAD2 lightgoldenrodyellow', '#F5F5DC beige', '#FFEFD5 papayawhip', '#FFE4B5 moccasin', '#FFDAB9 peachpuff', '#EEE8AA palegoldenrod', '#F0E68C khaki'
+
+                                        , '#E6E6FA lavender', '#D8BFD8 thistle', '#DDA0DD plum'
+                                        // ,'#FF00FF fuchsia' // same as magenta
+                                        , '#FF00FF magenta', '#EE82EE violet', '#DA70D6 orchid', '#BA55D3 mediumorchid', '#9370DB mediumpurple', '#8A2BE2 blueviolet', '#9400D3 darkviolet', '#9932CC darkorchid', '#8B008B darkmagenta', '#800080 purple', '#4B0082 indigo', '#483D8B darkslateblue', '#6A5ACD slateblue', '#7B68EE mediumslateblue'
+
+                                        , '#98FB98 palegreen', '#ADFF2F greenyellow', '#7FFF00 chartreuse', '#7CFC00 lawngreen', '#00FF00 lime', '#00FF7F springgreen', '#00FA9A mediumspringgreen', '#90EE90 lightgreen', '#32CD32 limegreen', '#3CB371 mediumseagreen', '#2E8B57 seagreen', '#228B22 forestgreen', '#008000 green', '#006400 darkgreen', '#9ACD32 yellowgreen', '#6B8E23 olivedrab', '#808000 olive', '#556B2F darkolivegreen', '#8FBC8F darkseagreen', '#66CDAA mediumaquamarine', '#20B2AA lightseagreen', '#008B8B darkcyan', '#008080 teal'
+
+                                        //,'#00FFFF aqua'  // same as cyan
+                                        , '#00FFFF cyan', '#7FFFD4 aquamarine', '#AFEEEE paleturquoise', '#40E0D0 turquoise', '#48D1CC mediumturquoise', '#00CED1 darkturquoise', '#5F9EA0 cadetblue', '#4682B4 steelblue', '#B0C4DE lightsteelblue', '#B0E0E6 powderblue', '#ADD8E6 lightblue', '#87CEEB skyblue', '#87CEFA lightskyblue', '#00BFFF deepskyblue', '#1E90FF dodgerblue', '#6495ED cornflowerblue', '#4169E1 royalblue', '#0000FF blue', '#0000CD mediumblue', '#00008B darkblue', '#000080 navy', '#191970 midnightblue'
+
+                                        , '#DCDCDC gainsboro', '#D3D3D3 lightgrey', '#C0C0C0 silver', '#A9A9A9 darkgray', '#778899 lightslategray', '#708090 slategray', '#808080 gray', '#696969 dimgray', '#2F4F4F darkslategray', '#000000 black'
+                                    );
+
+                                    function sortOrder(s1, s2) {
+                                        if (s1.substring(8) > s2.substring(8)) return 1;
+                                        if (s1.substring(8) < s2.substring(8)) return -1;
+                                        return 0;
+                                    }
+
+                                    //-->
+                                    </script>
+
+                                    <p>
+                                        <b>RGB/hex codes</b> for named colors supported in most browsers are listed below:
+
+                                        <p>
+                                            <script language="JavaScript">
+                                            printTable(theColors, 2);
+                                            </script>
+
+
+               </td>
+
+                <td valign=top>
+
+                </td>
+            </tr>
+        </table>
+
+
+</body>
+
+</html>

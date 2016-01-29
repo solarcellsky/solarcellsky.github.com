@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>汉字转unicode</title>
+    <meta name="keywords" content="汉字转unicode">
+    <link href="skin.css" rel="stylesheet" media="screen" type="text/css" />
+    <script src="jquery.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body>
+<div class="w950">
+    <h1>汉字转化unicode编码</h1>
+    <strong>内容源文本框:</strong>
+    <input name="a4wei" type="checkbox" id="a4wei" value="1"> Ascii字符补齐4位
+    <textarea name="source" id="source" cols="45" rows="5" onfocus="if(this.value=='在这里粘贴或输入'){this.value='';}">在这里粘贴或输入</textarea>
+    <div class="btn_row">
+        <input type="submit" name="button" id="button" class="btn fl" value="转Unicode编码(\uXXXX)" onclick="action('CONVERT_FMT2')" /> &nbsp;
+        <input type="submit" name="button" id="button1" class="btn fl" value="转换为(&amp;#DDDDDD)" onclick="action('CONVERT_FMT3')" /> &nbsp;
+        <input type="submit" name="button2" id="button2" class="btn fl" value="转换为&amp;#XXXX" onclick="action('CONVERT_FMT1')" /> &nbsp;
+        <input type="submit" name="button3" id="button3" class="btn fl last" value="转换为汉字" onclick="action('RECONVERT')" />
+    </div>
+    <strong>转换结果：</strong>
+    <textarea name="show2" id="show2" cols="45" rows="5" onclick="this.select();"></textarea>
+</div>  
+</body>
+
+</html>
