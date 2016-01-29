@@ -30,6 +30,7 @@ Hi there!I'm Solar.I'm a web front-end developer from Xi'an ,China.I love css,ht
 <li><a href="tools/">Tools</a></li>
 <li><a href="ua.html">UA</a></li>
 <li><a href="http://browserbench.org/">Browser Benchmark</a></li>
+<li><a href="http://mahua.jser.me/">Markdown Editor</a></li>
 </ul>
 </div>
 </div>
