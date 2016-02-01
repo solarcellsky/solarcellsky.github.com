@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>小黄人跳跳跳-火舞游戏</title><meta name="x-id" content="1201"><meta name="x-share-desc" content="小黄人又来啦，小短腿也能跳跃天际！" data-custom="我在《小黄人跳跳跳》中上升了{s}米，快来挑战吧！"><meta name="x-share-icon" content="http://i3.wanh5.com/item/1507/07/559b9b707475a_wx.jpg"><meta name="x-orientation" content="1"><meta name="x-key" content="8a8c1ed493f4b48dd537b945b9c46024">
+<meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no,target-densitydpi=device-dpi"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="full-screen" content="true"/>
+<meta name="screen-orientation" content="portrait">
+<meta name="x5-fullscreen" content="true"/>
+<meta name="360-fullscreen" content="true"/>
+<style>
+        body {
+            text-align: center;
+            background: #056194;
+            padding: 0;
+            border: 0;
+            margin: 0;
+            height: 100%;
+        }
+
+        html {
+            -ms-touch-action: none; /* Direct all pointer events to JavaScript code. */
+            overflow: hidden;
+        }
+
+        div, canvas {
+            display: block;
+            position: absolute;
+            margin: 0 auto;
+            padding: 0;
+            border: 0;
+        }
+    </style>
+<script src="//api.51h5.com/open/sdk.php"></script></head>
+<body><img id="wxsicon" src="http://i3.wanh5.com/item/1507/07/559b9b707475a_wx.jpg" width="0" height="0" style="position:absolute">
+<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+<script src="mgf-yiv-2.0.2.js?v1.1"></script>
+<div style="position:relative;" id="gameDiv"></div>
+<script>var document_class = "Game";</script>
+<script src="launcher/egret_require.js"></script>
+<script src="launcher/egret_loader.js"></script>
+<script src="launcher/game-min.js?v1.1"></script>
+<script>
+    MGF.language = "en";
+    MGF.sharemsgs["facebook"] = "Scored {score} in the game and beat {percent}%25 of players worldwide!";
+    MGF.sharemsgs["twitter"] = "Scored {score} in the game [{gamename}] and beat {percent}%25 of players worldwide!";
+    MGF.showmsgs["en"] = "You beat {percent}% of players worldwide! Share to your friends. Happiness comes from sharing!";
+    MGF.instance.startup("Jumper Minion", "Jumper-Minion");
+</script>
+</body>
+</html>

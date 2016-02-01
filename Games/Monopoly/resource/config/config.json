@@ -1,0 +1,8 @@
+[
+    [
+        {"gameTime" : 90, "begin_gold":10000,"bgsound":1},
+        {"postUrl" : "http://localhost:3000/Monopoly/launcher/post111.html"},
+        {"getUrl" : "http://localhost:3000/Monopoly/launcher/integral.html"},
+        {"homeUrl" : "http://www.xingkec.com"}
+    ]
+]

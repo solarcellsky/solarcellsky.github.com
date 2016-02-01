@@ -1,0 +1,103 @@
+
+<!doctype html>
+<html>
+<head>
+	<title>抱大腿带你飞</title>
+    
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><!--告诉浏览器准备接受一个 HTML 文档-->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1"><!--按照最新浏览器标准渲染-->
+    <meta name="viewport" content="target-densitydpi=high-dpi,width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <!--设置浏览器视口宽度等于设备屏幕宽度，不进行初始缩放，且用户不可以设置缩放-->
+    <meta name="apple-mobile-web-app-capable" content="yes" /><!--iphone设备中的safari私有meta标签，它表示：允许全屏模式浏览-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" /><!--指定的iphone中safari顶端的状态条的样式-->
+    <meta name="format-detection" content="telephone=no" /><!--告诉设备将页面中的数字识别为电话号码-->
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <script type="text/javascript" src="js/html/jquery-1.10.2.min.js"></script>
+    <script src="js/html/ui.js"></script>
+    
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script>
+	//分享授权内容设置
+		var params = JSON.parse('');
+	    var title = "抱大腿带你飞，51人品话费大奖等你来！";
+	    var desc = '"抱大腿，带你飞" 邀你来挑战！';
+	    var link = "";
+	    var imgUrl = "http://vipgame.91yixun.cn/GameUP/games/baodatui/res/share1.png";
+	    var successFun = function (res) {
+	    	$.post("ajaxPost!shareFriend.action",function(data){
+			});
+	    };
+		
+	    var modulus = '', exponent = '';
+	   	console.info("");
+    </script>
+    <script> //客户信息
+    	var  CustomerInfo ={
+    			openID:"",
+    			phone:"",//是否提交过手机号【字符串0-未提交 字符串手机号- 提交过】
+    			score:"",
+    			nowScore:"",
+    			shareCount:"",
+    			lastLlayTime:"",
+    			rankTime:""
+    	};
+    	var GameInfo={
+    			state:"",////原始链接或自己链接进入时�?STATE"，否则为好友链接进入
+    				tim:""
+    	};
+	</script>
+	<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script type="text/javascript" src="js/background/GameService.js"></script>
+	<script type="text/javascript" src="js/background/security.js"></script>
+	<script type="text/javascript" src="js/background/wechatAPI.js"></script>
+	<script type="text/javascript" src="js/background/wxjs.js"></script>
+    
+
+    <script type="text/javascript" src="game.min.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="js/cocos/Interface.js" charset="UTF-8"></script>
+    <style>
+        #gameCanvas{
+            background: #ffffff;
+        }
+    </style>
+</head>
+<body  bgcolor="#ffffff">
+    <canvas id="gameCanvas" width="0" height="0"></canvas>
+    <script type="text/javascript" src="js/cocos/Main.js"></script>
+    
+
+    <!--提交手机号码页面-->
+<div id="tjxx">
+    <img id="bg_tjxx" src="images/bg_tjxx.jpg">
+    <img id="img_results_1_1" src="images/img_results_1_1.png">
+	<img id="img_results_1_2" src="images/img_results_1_2.png">
+    <p id="mile"></p>
+    <p id="moneynum"></p>
+    <p id="moneynum1"></p>
+    <img id="img_name" src="images/img_name.png">
+    <img id="img_phone" src="images/img_phone.png">
+    <input id="name" type="text">
+    <input id="phone" type="tel">
+    <p id="tip"></p>
+    <img id="btn_again" src="images/btn_again.png"  onclick="Replay()">
+    <img id="btn_submit" src="images/btn_submit.png" onclick="onSubmit()">
+</div>
+
+    <!--游戏结束&&mile>1000&提交过手机号-->
+<div id="tjcg">
+    <img id="bg_tjcg" src="images/bg_tjxx2.jpg">
+    <img id="img_results_2_2" src="images/img_results_2_2.png">
+    <img id="img_results_2_1" src="images/img_results_2_1.png">
+    <p id="mile2"></p>
+    <p id="moneynum2"></p>
+	<p id="moneynum2_2"></p>
+    <img id="btn_again2" src="images/btn_again.png" onclick="Replay()">
+    <img id="btn_share" src="images/btn_share.png">
+    <img class="share_popup" src="images/guide.png">
+</div>
+
+<script src="js/html/fontSize.js"></script>
+</body>
+</html>

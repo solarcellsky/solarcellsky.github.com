@@ -1,0 +1,40 @@
+/*清空默认设置*/
+* { margin: 0px; padding: 0px; outline: 0px; font-size: 100%; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); list-style:none; border:none; list-style:none;}
+a { text-decoration: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0.35);}
+html {margin:0px; padding:0px;  height: 100%; font-size: 100%; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;}
+body { background:#ffffff; margin: 0px; padding: 0px; width: 100%; height: 100%; line-height: 1.231; font-family: Microsoft YaHei; font-size: 14px; position: relative; min-height: 100%; -webkit-touch-callout: none; -webkit-box-orient: vertical; -webkit-box-align: stretch;}
+.relative { position: relative;}
+.absolute { position: absolute;}
+.hidden { display: none;}
+.block { display: block;}
+.vhidden {/*隐藏还占据位置*/visibility: hidden;}
+.share_popup{ display:none; position:absolute; top:0; left:0; z-index:1000; width:100%; height:100%;}
+.share_popup2{ display:none; position:absolute; top:0; left:0; z-index:1000; width:100%; height:auto;}
+
+
+/*提交信息*/
+#tjxx{ width:100%; height:auto; overflow:auto; display:none;}
+#bg_tjxx{ width:100%; height:auto; left:0; top:0; position:absolute; }
+#img_results_1_1{ width:61.1%; height:auto; left:19.37%;  position:absolute; display:none;}
+#img_results_1_2{ width:67.5%; height:auto;left:16.25%;  position:absolute; display:block;}
+#img_name{ width:100%; height:auto;  position:absolute; display:block;z-index:2;}
+#img_phone{ width:100%; height:auto;  position:absolute; display:block;z-index:2;}
+#mile{ width:15%;  position:absolute; font-size:20px; text-align:center; color:#895904;display:block; left:49.61%;}
+#moneynum{ width:12%; left:28.43%; position:absolute; font-size:20px; text-align:center; color:#895904;display:none;}
+#moneynum1{ width:12%; left:12.66%; position:absolute; font-size:20px; text-align:center; color:#895904;display:block;}
+#name{ width:39.8%; left:35.3%; position:absolute;font-size:12px; background-color:transparent;z-index:3; }
+#phone{width:39.8%; left:35.3%; position:absolute;  font-size:12px; background-color:transparent;z-index:3; }
+#tip{ width:100%;  position:absolute; font-size:16px; text-align:center;color:red;; display:block;}
+#btn_again{  width:34.5%; left:10.3%;position:absolute;}
+#btn_submit{  width:34.5%; left:57.8%;position:absolute;}
+
+/*提交成功*/
+#tjcg{ width:100%; display:none;}
+#bg_tjcg{ width:100%; height:100%; left:0; top:0; position:absolute; }
+#img_results_2_2{ width:67.5%; height:22.4%;top:23.85%; left:16.25%;  position:absolute; display:block;}
+#img_results_2_1 {width:61.1%; height:28.54%;top:20.42%; left:19.37%;  position:absolute; display:none;}
+#mile2{ width:15%;  position:absolute; font-size:20px; text-align:center; color:#895904;top:30.4%; left:52.81%;height:3.365%;display:block;}
+#moneynum2{ width:12%; left:16.25%; position:absolute; font-size:20px; text-align:center; color:#895904;top:36.55%; height:3.365%; display:block;}
+#moneynum2_2{ width:12%; left:28.43%; position:absolute; font-size:20px; text-align:center; color:#895904;top:40.99%; height:3.365%; display:none;}
+#btn_again2{  width:34.5%; left:10.3%;top:69.58%;position:absolute;}
+#btn_share{  width:34.5%; left:57.8%;top:69.58%;position:absolute;}

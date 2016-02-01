@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>图片转换成Base64</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="images/common.css" />
+</head>
+
+<body>
+<div class="w950">
+    <div class="head4">
+        <div class="Ico_aBox">
+            <h1>图片转换Base64</h1>
+        </div>
+    </div>
+    <div class="knr">
+        <div id="base64-container">
+            <div id="base64-textarea-container">
+                <textarea id="base64-textarea">
+                    # # 图片在线转换为Base64，移动开发、HTML5开发、必备的DataURI工具 # 支持 PNG、GIF、JPG、BMP、TIF、PSD、ICO 等格式 #
+                </textarea>
+            </div>
+            <div id="base64-buttons-container">
+                <span class="fl">&nbsp;&nbsp;<object id="base64-swf" width="104" height="30" type="application/x-shockwave-flash" data="images/base64.swf"><param name="movie" value="images/base64.swf" /><a href="http://www.adobe.com/go/getflash">需要安装Flash后才能使用</a></object></span>
+                <span class="checkbox fl selected" style="margin:3px 0 0 20px;">包含头</span>
+                <span class="checkbox fl" style="margin:3px 0 0 20px;">包含CSS</span>
+                <span class="fl" style="margin-left:15px"><object id="objectID-0" width="45" height="30" type="application/x-shockwave-flash" data="images/copy.swf"><param name="movie" value="images/copy.swf" /><a href="http://www.adobe.com/go/getflash">需要安装Flash后才能使用</a></object></span>
+                <a href="javascript:;" class="btn last fl" hideFocus="true">清空</a>
+                <a href="javascript:;" class="btn blue fl last" hideFocus="true" style="margin-left:10px;">编码文本</a>
+                <div class="clear"></div>
+            </div>
+            <div id="base64-imgview" style="display:none">
+                <p>你选择的图片：</p>
+                <img id="base64-img" />
+            </div>
+            <div id="base64-directions">
+                <div id="base64-alert">
+                    Base64目前主要用于HTML5、移动开发等不考虑IE6的场景中。
+                </div>
+                <div id="base64-demo">
+                    <h2>Base64格式</h2>
+                    <div class="code">
+                        data:[
+                        <MIME-type>][;charset=
+                            <encoding>][;base64],
+                                <data>
+                    </div>
+                    <h2>Base64 在CSS中的使用</h2>
+                    <div class="code">
+                        <span style="color:#F0F">.demoImg{</span> <span style="color:#009">background-image</span><span style="color:#F0F">:</span> <span style="color:#00F">url("data:image/jpg;base64,/9j/4QMZRXhpZgAASUkqAAgAAAAL....")</span><span style="color:#F0F">;</span> <span style="color:#F0F">}</span>
+                    </div>
+                    <h2>Base64 在HTML中的使用</h2>
+                    <div class="code">
+                        <span style="color:#009">&lt;img width="<span style="color:#00F">40</span>" height="<span style="color:#00F">30</span>" src="<span style="color:#00F">data:image/jpg;base64,/9j/4QMZRXhpZgAASUkqAAgAAAAL....</span>" /&gt;</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div style="display:none">
+            <textarea id="guestbook-content"></textarea>
+        </div>
+
+        <script type="text/javascript" src="images/jquery-1.10.2.min.js"></script>
+
+        <script>
+        $(function() {
+            if (window.navigator.userAgent.search(/rv\:11\.0/) > -1) {
+                $(document.body).append($('<style>div[id*=\'buttons-container\']{ margin-top:5px;}</style>'));
+            }
+        });
+        </script>
+        <script>
+        var __sid = 2;
+        $(function() {
+            var textarea = $("#base64-textarea"),
+                bluebtns = $("#base64-buttons-container a.blue:not(.kok)"),
+                btns = $("#base64-buttons-container a.btn:not(.blue)"),
+                checkboxs = $("#base64-buttons-container span.checkbox"),
+                imgview = $("#base64-imgview"),
+                img = $("#base64-img"),
+                base64swf = $("#base64-swf").get(0);
+
+            btns.eq(0).click(function() {
+                textarea.val("");
+            });
+
+            bluebtns.eq(0).click(function() {
+                textarea.val(base64swf.getBase64(textarea.val()));
+            });
+
+            window.__oncopy = function() {
+                alert("复制成功");
+                return textarea.val();
+            };
+
+            checkboxs.click(function() {
+                var index = checkboxs.index(this);
+                if (index == 0 && !checkboxs.eq(0).hasClass("selected")) {
+                    checkboxs.removeClass("selected");
+                } else if (index == 1 && checkboxs.eq(1).hasClass("selected")) {
+                    checkboxs.addClass("selected");
+                }
+                changeData();
+            });
+
+            function changeData() {
+                if (base64Data == "") {
+                    return;
+                }
+                var data = base64Data;
+                if (checkboxs.eq(0).hasClass("selected")) {
+                    data = "data:image/" + base64Type + ";base64," + data;
+                    if (checkboxs.eq(1).hasClass("selected")) {
+                        data = "background-image: url(\"" + data + "\");"
+                    }
+                }
+                textarea.val(data);
+            }
+
+            var base64Data = "",
+                base64Type = "";
+            window.__onbase64 = function(type, data) {
+                base64Type = type.slice(1);
+                base64Data = data;
+                changeData();
+                img.attr("src", "data:image/" + type + ";base64," + data);
+                imgview.show(1000);
+            };
+        });
+        </script>
+    </div>
+    <div class="head3"></div>
+</div>
+</body>
+
+</html>

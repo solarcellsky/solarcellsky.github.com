@@ -26,9 +26,56 @@
     <link href="{{ BASE_PATH }}{{ site.JB.atom_path }}" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
     <link href="{{ BASE_PATH }}{{ site.JB.rss_path }}" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
 
+    <link rel="stylesheet" rel="external nofollow" href="{{ ASSET_PATH }}/pace/themes/pace-theme-barber-shop.css" />
+    <script>
+        paceOptions = {
+            elements: true
+        };
+    </script>
+    <script src="{{ ASSET_PATH }}/pace/pace.min.js"></script>
+    <script>
+
+        var href = window.location.href;
+        function load(time) {
+            var x = new XMLHttpRequest()
+            x.open('GET', "" + href + "?" + time, true);
+            x.send();
+        };
+
+        load(20);
+        load(100);
+        load(500);
+        load(2000);
+        load(3000);
+
+        setTimeout(function () {
+            Pace.ignore(function () {
+                load(3100);
+            });
+        }, 4000);
+
+        Pace.on('hide', function () {
+            // 
+        });
+
+    </script>
+    <style>
+    <!--
+    .pace {
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 9999;
+    }
+    -->
+    </style>
   </head>
 
   <body>
+    <div id="particles-js"></div>
     <nav class="navbar navbar-default" role="navigation">
       <div class="container">
         <div class="navbar-header">
@@ -68,6 +115,8 @@
 
     <script src="{{ ASSET_PATH }}/resources/jquery/jquery.min.js"></script>
     <script src="{{ ASSET_PATH }}/resources/bootstrap/js/bootstrap.min.js"></script>
+    <script src="{{ ASSET_PATH }}/resources/particles/particles.min.js"></script>
+    <script src="{{ ASSET_PATH }}/resources/particles/app.js"></script>
     {% include JB/analytics %}
 
   </body>

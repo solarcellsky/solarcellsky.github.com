@@ -1,0 +1,31 @@
+/*清空默认设置*/
+* { margin: 0px; padding: 0px; outline: 0px; font-size: 100%; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); list-style:none; border:none; list-style:none;}
+a { text-decoration: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0.35);}
+html {margin:0px; padding:0px;  height: 100%; font-size: 100%; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;}
+body { background:#000; margin: 0px; padding: 0px; width: 100%; height: 100%; line-height: 1.231; font-family: Microsoft YaHei; font-size: 14px; position: relative; min-height: 100%; -webkit-touch-callout: none; -webkit-box-orient: vertical; -webkit-box-align: stretch;}
+.relative { position: relative;}
+.absolute { position: absolute;}
+.hidden { display: none;}
+.block { display: block;}
+.vhidden {/*隐藏还占据位置*/visibility: hidden;}
+.share_popup{ display:none; position:absolute; top:0; left:0; z-index:1000; width:100%; height:100%;}
+.share_popup2{ display:none; position:absolute; top:0; left:0; z-index:1000; width:100%; height:auto;}
+
+/*排行榜页面*/
+#phb{ width:100%;display:none;}
+#bg_phb{ width:100%; height:100%; position:absolute; top:0; left:0;}
+#btn_close{ position:absolute; width:17%; height:10.10%;left:80.78%; top:7.2%;}
+#list{ position:absolute; width:73.75%; margin-left:13.2%; overflow:auto; top:28.34%; height:44.8%;}
+#content li ul li{ display:inline-block; color:#81503d; text-align:center; text-overflow:ellipsis; font-weight:bold;}
+.li1{ width:25%; white-space:nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis; overflow: hidden; font-size:16px;}
+.li2{ width:46%; white-space:nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis; overflow: hidden; font-size:16px;}
+.img_touxiang{float:left;width:25%;border:0.5px solid #81503d ;border-radius:50px;margin-left:2%;}
+.name{float:left;width:70%;margin-left:2%;}
+.li3{ width:25%; white-space:nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis; overflow: hidden; font-size:16px;}
+.li_first{ line-height:220%; text-overflow:ellipsis; }
+.fontsize18{ font-size:18px;}
+#list2{ position:absolute; width:73.75%; margin-left:13.2%; top:81.88%; font-size:14px;}
+#list2 li ul li{ display:inline-block; color:#81503d; text-align:center; text-overflow:ellipsis; line-height:170%; font-weight:bold; } 
+#gameCanvas{
+    background: #ffffff;
+}

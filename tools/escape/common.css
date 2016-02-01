@@ -1,0 +1,26 @@
+html, body {
+    font: 12px/1.5 \5FAE\8F6F\96C5\9ED1, "Microsoft YaHei", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
+    min-width: 980px;
+    padding: 0;
+    margin: 0 auto;
+}
+.w950 {width: 960px;margin: 50px auto;border:1px solid #e0e0e0;padding: 25px;border-radius: 4px;}
+::-webkit-scrollbar{width:6px; overflow:hidden;}
+::-webkit-scrollbar-button{ display:none;}
+::-webkit-scrollbar-thumb{ background-color:#99a;}  
+::-webkit-scrollbar-thumb:hover{ background-color:#4792FF;}
+textarea {
+    border: 1px solid #bbd;
+    color: #777;
+    box-shadow: 0 0 5px #dde inset;
+    resize: vertical;
+    background-color: #F9F9F9;
+    line-height: 130%;
+    font-size: 12px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+#ipt {
+    width: 97%;
+    height: 300px;
+}

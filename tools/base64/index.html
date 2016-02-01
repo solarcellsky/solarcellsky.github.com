@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Base64加密、解密</title>
+    <link rel="stylesheet" href="skin.css" type="text/css"/>
+    <script src="jquery.js" type="text/javascript"></script>
+    <script src="core-min.js" type="text/javascript"></script>
+    <script src="base64.js" type="text/javascript"></script>
+    <script src="jq-tools.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div class="w950">
+        <h1>Base64加密、解密</h1>
+        <form>
+            <textarea id="content" placeholder="Base64加密内容粘贴在这里"></textarea>
+            <div class="btn_row">
+                <input type="button" id="conv" value="Base64加密" class="btn fl" />
+                <input type="button" id="res" value="Base64解密" class="btn fl" />
+                <input type="button" id="clear" value="清空结果" class="btn blue fl last" />
+            </div>
+            <textarea id="result" placeholder="Base64解密内容粘贴在这里"></textarea>
+        </form>
+    </div>
+    <script>
+    ted.base64();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+{
+"resources":
+	[
+		{"name":"bg_jpg","type":"image","url":"assets/bg.jpg"},
+
+        {"name":"HuojiMc_png","type":"image","url":"assets/HuojiMc.png"},
+        {"name":"HuojiMc_json","type":"json","url":"assets/HuojiMc.json"},
+
+        {"name":"lang_png","type":"image","url":"assets/lang.png"},
+        {"name":"lang_json","type":"json","url":"assets/lang.json"},
+
+        {"name":"hpMc_png","type":"image","url":"assets/hpMc.png"},
+        {"name":"hpMc_json","type":"json","url":"assets/hpMc.json"},
+
+        {"name":"wText_json","type":"json","url":"assets/wText.json"},
+        {"name":"wText_png","type":"image","url":"assets/wText.png"},
+
+        {"name":"start_btn_png","type":"image",	"url":"assets/start_btn.png"},
+        {"name":"more_btn_png","type":"image",	"url":"assets/more_btn.png"},
+        {"name":"replay_btn_png","type":"image",	"url":"assets/replay_btn.png"},
+
+        {"name":"panel_png","type":"image",	"url":"assets/panel.png"},
+        {"name":"logo_png","type":"image",	"url":"assets/logo.png"},
+        {"name":"title_png","type":"image",	"url":"assets/title.png"},
+        {"name":"yang_png","type":"image",	"url":"assets/yang.png"},
+        {"name":"star_png","type":"image",	"url":"assets/star.png"},
+
+        {"name":"homepage_jpg","type":"image",	"url":"assets/homepage.jpg"}
+	],
+
+"groups":
+	[
+        {"name":"preload","keys":"lang_json,lang_png,start_btn_png,star_png,bg_jpg,more_btn_png,replay_btn_png,wText_json,wText_png,yang_png,hpMc_json,hpMc_png,panel_png,HuojiMc_png,HuojiMc_json"},
+        {"name":"loading","keys":"logo_png,title_png,homepage_jpg"}
+    ]
+}

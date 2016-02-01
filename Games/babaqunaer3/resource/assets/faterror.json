@@ -1,0 +1,23 @@
+﻿{
+"mc": {
+	"faterror": {
+		"frameRate":24,
+		"labels": [
+		],
+		"frames": [
+			{"res":"faterror0000","x":0,"y":0},
+			{"res":"faterror0001","x":0,"y":0},
+			{"res":"faterror0002","x":0,"y":0},
+			{"res":"faterror0003","x":0,"y":0},
+			{"res":"faterror0004","x":0,"y":0}
+		]
+	}
+},
+"res": {
+	"faterror0000":{"x":0,"y":0,"w":501,"h":503},
+	"faterror0001":{"x":501,"y":0,"w":501,"h":503},
+	"faterror0002":{"x":0,"y":503,"w":501,"h":503},
+	"faterror0003":{"x":501,"y":503,"w":501,"h":503},
+	"faterror0004":{"x":0,"y":1006,"w":501,"h":503}
+}
+}

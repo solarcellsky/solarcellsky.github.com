@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=no">
+    <title>开始</title>
+    <link rel="stylesheet" href="css/dice.css">
+    <script src="js/jquery-2.1.0.min.js"></script>
+    <style type="text/css">
+    body:after {
+        content: '';
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        background: url('images/bg.jpg') no-repeat center center;
+        background-size: 100% auto;
+    }
+    </style>
+</head>
+
+<body>
+    <style type="text/css">
+    .plugin_demo {
+        height: 40px;
+        width: 100%;
+        padding: 5px 15px 9px;
+        box-sizing: border-box;
+        background: rgba(34, 41, 44, .5);
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999999;
+        text-align: center;
+    }
+    .plugin_demo span {
+        height: 26px;
+        font: 12px/26px '微软雅黑';
+        color: #fff;
+    }
+    .plugin_demo span strong {
+        height: 26px;
+        font: 16px/26px '微软雅黑';
+        color: #fff;
+        margin-right: 10px;
+    }
+    .plugin_demo .btn_try {
+        text-decoration: none;
+        float: right;
+        width: 100px;
+        height: 26px;
+        font: 14px/26px '微软雅黑';
+        border: 0;
+        border-radius: 3px;
+        background: #63c7bb;
+        color: #fff;
+        text-align: center;
+    }
+    </style>
+    <div class="roll">
+        <span>获奖情况：</span>
+        <ul style="margin-top:0;">
+            <li>181****5546&nbsp;获得了&nbsp;一秀&nbsp;(100积分)</li>
+            <li>153****7827&nbsp;获得了&nbsp;一秀&nbsp;(100积分)</li>
+            <li>150****3667&nbsp;获得了&nbsp;一秀&nbsp;(100积分)</li>
+            <li>183****4190&nbsp;获得了&nbsp;一秀&nbsp;(100积分)</li>
+            <li>183****0852&nbsp;获得了&nbsp;一秀&nbsp;(100积分)</li>
+            <li>155****8745&nbsp;获得了&nbsp;四进&nbsp;(300积分)</li>
+            <li>150****2801&nbsp;获得了&nbsp;四进&nbsp;(300积分)</li>
+            <li>150****2801&nbsp;获得了&nbsp;三红&nbsp;(空气净化器)</li>
+            <li>133****8722&nbsp;获得了&nbsp;四进&nbsp;(300积分)</li>
+            <li>157****1139&nbsp;获得了&nbsp;一秀&nbsp;(100积分)</li>
+        </ul>
+    </div>
+
+    <div class="nav">
+        <a onclick="showPrompt(5);"><img src="images/rule_ico.png">规则</a>
+        <a onclick="getPrizeRecord();"><img src="images/gift_ico.png">奖品</a>
+        <a onclick="showPrompt(10);"><img src="images/rank_ico.png">排行</a>
+    </div>
+    <!-- <div class="share_notice">
+        多分享，易中奖<img src="images/share.png" />
+    </div> -->
+    <div class="main">
+
+
+
+        <div class="count">第<span id="lefttimes">2</span>/3次</div>
+        <audio id="audio" src="images/yao.mp3"></audio>
+        <div class="bowl" onclick="shakeDice();" style="height: 804.3125px;">
+            <div class="bowl_list" style="height: 380.64px;">
+                <img class="dice dice1" style="top:47%;left:27%;" src="images/dice1.png">
+                <img class="dice dice2" style="top:41%;left:42%;" src="images/dice2.png">
+                <img class="dice dice3" style="top:50%;left:57%;" src="images/dice3.png">
+                <img class="dice dice4" style="top:58%;left:43%;" src="images/dice4.png">
+                <img class="dice dice5" style="top:70%;left:30%;" src="images/dice5.png">
+                <img class="dice dice6" style="top:72%;left:55%;" src="images/dice6.png">
+            </div>
+        </div>
+        <img src="images/bowl.png">
+        <!-- <img class="shake_img" src="images/shake.png" /> -->
+        <!-- <a class="shake_btn" onclick="shakeDice();">摇了没反应？点我</a> -->
+        <div class="clear space_20"></div>
+    </div>
+    <div style="width:100%;height:30px;text-align:center;font:16px/30px '黑体';color:#fff;">
+        <p style="display:inline-block;box-shadow:0 1px 2px rgba(0,0,0,1) inset;border-bottom:1px solid rgba(255,255,255,.3);background:rgba(0,0,0,.3);padding:0 10px;border-radius:3px;margin:0px;font:16px/30px '黑体';color:#fff;"><a style="color:#fff;margin:0 5px;" href="javascript:void(0);">版权信息</a>
+        </p>
+    </div>
+    <div class="space_70"></div>
+
+    <div class="ad">
+
+
+
+
+        <a href="http://mp.weixin.qq.com/s?__biz=MzA3OTU4MDY3OQ==&amp;mid=204142510&amp;idx=1&amp;sn=d6f2450ecf33baebf8f44f9d72ece296#rd"><img id="adImg" src="http://jjb.m.yoxi2.cn:80/cj/images/ad.png">
+        </a>
+
+
+
+    </div>
+
+
+    <input type="hidden" id="prize1" value="0">
+
+    <input type="hidden" id="prize2" value="0">
+
+    <input type="hidden" id="prize3" value="0">
+
+    <input type="hidden" id="prize4" value="0">
+
+    <input type="hidden" id="prize5" value="1">
+
+    <input type="hidden" id="prize6" value="1">
+
+    <input type="hidden" id="rule" value="• 活动时间：2015/07/22 00 至 2017/07/22 23:59:59。
+• 成功分享或发送给好友即可额外获得2次游戏机会。
+• 奖品数量有限，先到先得。
+• 中奖用户须马上完成领奖，逾期或领奖时信息填写错误或不完整均视为放弃获奖资格，仅限中奖者本人领奖。作弊用户直接取消获奖资格，我们保留追究其责任的权利。
+(模版演示，纯属体验，不予兑奖！)
+">
+    <input type="hidden" id="aid" value="1261">
+    <input type="hidden" id="wechatid" value="oQpsqt_DYYCsiGH58onhBQ0fRuag">
+    <script type="text/javascript" src="http://jjb.m.yoxi2.cn:80/cj/js/alert.js"></script>
+    <div id="myAlert" style="display: none;">
+        <div style="position:fixed;top:50%;left:0;z-index:100000;width:90%;max-height:180px;color:#666;margin:-90px 5% 0;border-radius:3px;font:14px/30px '黑体';padding:30px 0;text-align:center;background:#fff;">
+            <p style="margin:0px 10px 30px;max-height:60px;overflow:hidden;" id="alerttext"></p> <a onclick="document.getElementById('myAlert').style.display='none'" style="display:block;width:90px;height:30px;color:#fff;margin:0 auto;border-radius:3px;font:14px/30px '黑体';background:#e60012;">确定</a>
+        </div>
+        <div style="position:fixed;left:0;top:0;z-index:99999;width:100%;height:100%;background:rgba(0,0,0,.5);"></div>
+    </div>
+
+
+    <script type="text/javascript">
+    $(function() {
+        //初始化尺寸
+        $('.main .bowl').height($('.main .bowl').width() * 1.0625);
+        $('.main .bowl .bowl_list').height($('.main .bowl .bowl_list').width() * .78);
+
+        //滚动获奖记录
+        setInterval(function() {
+            $('.roll ul').animate({
+                marginTop: '-30px'
+            }, 500, function() {
+                $('.roll ul li').eq(0).appendTo($('.roll ul'));
+                $('.roll ul').attr("style", "margin-top:0;");
+            });
+        }, 2000);
+    });
+
+    //摇骰子
+    var shakeState = 1;
+    var isshake = false;
+    if (window.DeviceMotionEvent) {
+        var x = y = z = lastX = lastY = lastZ = 0,
+            i = 1;
+        window.addEventListener('devicemotion', function() {
+            var acceleration = event.accelerationIncludingGravity;
+            x = acceleration.x;
+            y = acceleration.y;
+            z = acceleration.z;
+            if (Math.abs(x - lastX) > 25 || Math.abs(y - lastY) > 25 || Math.abs(z - lastZ) > 25) {
+                shakeDice();
+            }
+            lastX = x;
+            lastY = y;
+            lastZ = z;
+        }, false);
+    }
+    var diceconf = {
+        isappinstalled: '',
+        url_type: '0',
+        follow_url: 'http://mp.weixin.qq.com/s?__biz=MzA3OTU4MDY3OQ==&mid=211933005&idx=1&sn=016f2c2faedb099c56c5187836e3c928#rd',
+
+        left_times: 2,
+        total_times: 3,
+        isshare: false,
+
+        totalscore: 100,
+
+        bPass: '1'
+    }
+    var is_ajax = false;
+
+    function shakeDice() {
+            if (isshake) return;
+            isshake = true;
+
+            if (diceconf.isappinstalled.length != 0 && diceconf.isappinstalled != 'null' && diceconf.url_type == '0') {
+                showPrompt(1);
+                return;
+            }
+
+            var times = diceconf.left_times + 1;
+            if (!diceconf.isshare && times == diceconf.total_times) {
+                showPrompt(11);
+                return;
+            } else if (diceconf.left_times == 0) {
+                showPrompt(3);
+                return;
+            }
+
+            if (is_ajax) return;
+            is_ajax = true;
+
+            $('.dice').addClass('active');
+            setTimeout(function() {
+                $('.dice').removeClass('active');
+            }, 1000);
+            document.getElementById('audio').play();
+            $.ajax({
+                type: "POST",
+                url: path + "/cj/dice/shake",
+                data: {
+                    activityId: $('#aid').val(),
+                    wechatid: $('#wechatid').val()
+                },
+                dataType: "json",
+                success: function(data) {
+                    if (data.status == "1") {
+                        alert("活动已结束");
+                    } else if (data.status == "2") {
+                        alert("系统错误，请重试");
+                    } else {
+                        showDice(data.data);
+                        var interval = setInterval(function() {
+                            diceconf.left_times--;
+                            var left = $('#lefttimes').text() * 1 + 1;
+                            if (left <= diceconf.total_times) {
+                                $('#lefttimes').text(left);
+                            }
+                            showResult(data.data);
+                            is_ajax = false;
+                            clearInterval(interval);
+                        }, 3000);
+                    }
+                },
+                timeout: 15000,
+                error: function(xhr, type) {
+                    alert("网络异常，请刷新重试。");
+                    isshake = false;
+                    is_ajax = false;
+                }
+            });
+        }
+        //加载更积分排行 开始----------------------------------->
+    var winHeight = $(window).height();
+    $(window).scroll(function() {
+        var wst = $(window).scrollTop();
+        var bodyHeight = $(document).height();
+        if (wst + winHeight > bodyHeight - 10) {
+            if ($('#ranklist').length == 0) return;
+            getRank();
+        }
+    });
+    //加载更积分排行 结束-----------------------------------<
+    function showDice(data) {
+        for (var i = 0; i < data.diceDot.length; i++) {
+            $('.dice' + [i + 1]).attr('src', imgPath + '/dice/dice' + data.diceDot[i] + '.png');
+        }
+    }
+
+    function showResult(data) {
+        if (data.isprize) {
+            if (data.input) {
+                showPrompt(12);
+            } else {
+                showPrompt(4);
+            }
+            if (data.prizeImg != null && data.prizeImg.length != 0) {
+                $('#giftimg').attr("src", "http://image.hudongtui.com:29099/" + data.prizeImg);
+            } else if (data.prizeType < 4) {
+                $('#giftimg').attr("src", "http://jjb.m.yoxi2.cn:80/cj/images/giftbox_img" + data.prizeType + ".png");
+            } else {
+                $('#giftimg').attr("src", "http://jjb.m.yoxi2.cn:80/cj/images/giftbox_ico.png");
+            }
+            $('#prizename').text(data.prizeName);
+            $('#prize').text(data.prize);
+            $('#totalscore').text(data.totalScore);
+        } else {
+            showPrompt(2);
+            $('#totalscore').text(data.totalScore);
+        }
+        diceconf.totalscore = data.totalScore;
+    }
+
+    function showPrompt(state) {
+        isshake = true;
+        switch (state) {
+            case 1: //先关注再参与
+                $('body').append('<div class="prompt">\
+                    <img class="prompt_h" src="images/prompt_img.png" />\
+                    <div class="cont">\
+                        <div class="space_10"></div>\
+                        <h3 class="tc f18">为了顺利获取游戏奖励</h3>\
+                        <div class="space_5"></div>\
+                        <h3 class="tc f18">请先关注我们的公众号</h3>\
+                        <div class="space_30"></div>\
+                        <div class="btns">\
+                            <a href="http://mp.weixin.qq.com/s?__biz=MzA3OTU4MDY3OQ==&mid=211933005&idx=1&sn=016f2c2faedb099c56c5187836e3c928#rd">点击关注</a>\
+                        </div>\
+                    </div>\
+                    <div class="space_20"></div>\
+                </div>');
+                break;
+            case 2: //未中奖
+                $('body').append('<div class="prompt">\
+                    <img class="prompt_h" src="images/prompt_img.png" />\
+                    <div class="cont">\
+                        <div class="space_10"></div>\
+                        <h3 class="tc f18">什么都没有哦！</h3>\
+                        <div class="space_10"></div>\
+                        <h3 class="tc f18">别灰心，大奖等着你！</h3>\
+                        <div class="space_30"></div>\
+                        <p class="tc f16">累计：<span id="totalscore">0</span>积分</p>\
+                        <div class="space_5"></div>\
+                        <div class="btns">\
+                            <a onclick="hidePrompt(1,this);">再接再厉</a>\
+                        </div>\
+                    </div>\
+                    <div class="space_20"></div>\
+                </div>');
+                break;
+            case 3: //机会用完
+                $('body').append('<div class="prompt">\
+                    <img class="prompt_h" src="images/prompt_img.png" />\
+                    <div class="cont">\
+                        <div class="space_10"></div>\
+                        <h3 class="tc f18">您今天博饼的次数已经用完</h3>\
+                        <div class="space_10"></div>\
+                        <h3 class="tc f18">请明天再来</h3>\
+                        <div class="space_30"></div>\
+                        <div class="btns">\
+                            <a href="http://mp.weixin.qq.com/s?__biz=MzA3OTU4MDY3OQ==&mid=204142510&idx=1&sn=d6f2450ecf33baebf8f44f9d72ece296#rd">我知道啦</a>\
+                        </div>\
+                    </div>\
+                    <div class="space_20"></div>\
+                </div>');
+                break;
+            case 4: //中奖
+                $('body').append('<div class="prompt" id="saveinfo">\
+                    <img class="prompt_h" src="images/prompt_img.png" />\
+                    <div class="cont">\
+                        <div class="space_5"></div>\
+                        <h3 class="tc f18">恭喜您已博得</h3>\
+                        <div class="space_10"></div>\
+                        <h2 class="tc f22" id="prize"></h2>\
+                        <div class="space_20"></div>\
+                        <div class="tc">\
+                            <div class="gift_img"><img id="giftimg" src="images/gift.png"></div>\
+                            <p>奖品名称：<span id="prizename"></span></p>\
+                        </div>\
+                        <p class="tc f16">累计：<span id="totalscore">0</span>积分</p>\
+                        <div class="space_20"></div>\
+                        <div class="input">\
+                            <p>请填写以下：(模版演示，纯属体验，不予兑奖！)</p>\
+                            <input type="text" name="user_tel" placeholder="手机号" maxlength="11">\
+                            <input type="text" name="user_name" placeholder="用户名">\
+                             \
+                        </div>\
+                        <div class="space_5"></div>\
+                        <div class="btns">\
+                            <a onclick="saveuserinfo()">确定</a>\
+                        </div>\
+                    </div>\
+                    <div class="space_20"></div>\
+                </div>');
+                break;
+            case 5: //活动规则
+                $('body').append('<div class="prompt">\
+                    <div class="space_30"></div>\
+                    <div class="space_30"></div>\
+                    <div class="space_20"></div>\
+                    <div class="cont">\
+                        <img class="close" onclick="hidePrompt(1,this);" src="images/close.png" />\
+                        <div class="space_5"></div>\
+                        <h2 class="tc f22">活动规则</h2>\
+                        <div class="space_20"></div>\
+                        <h3 class="f18">1、活动时间：</h3>\
+                        <p class="indent">2015/07/22 00:00:00 到 2017/07/22 23:59:59</p>\
+                        <div class="space_20"></div>\
+                        <h3 class="f18">2、奖品设置：</h3>\
+                        <p class="indent">状元(1000积分)：CK中性香水</p><p class="indent">对堂(700积分)：暖风机</p><p class="indent">三红(500积分)：空气净化器</p><p class="indent">四进(300积分)：300积分</p> <p class="indent">二举(200积分)：200积分</p> <p class="indent">一秀(100积分)：100积分</p> \
+                        <div class="space_20"></div>\
+                        <h3 class="f18">3、活动规则：</h3>\
+                        <pre> ' + $('#rule').val() + '</pre>\
+                        <div class="space_20"></div>\
+                        <div class="btns">\
+                            <a onclick="hidePrompt(1,this);">返回</a>\
+                        </div>\
+                    </div>\
+                    <div class="space_20"></div>\
+                </div>');
+                break;
+            case 6: //填写信息（之前未输入信息）
+                $('body').append('<div class="prompt" id="saveinfo">\
+                    <img class="prompt_h" src="images/prompt_img.png" />\
+                    <div class="cont">\
+                        <div class="space_5"></div>\
+                        <div class="input">\
+                            <p>请填写以下：(模版演示，纯属体验，不予兑奖！)</p>\
+                            <div class="space_5"></div>\
+                            <input type="text" name="user_tel" placeholder="手机号" maxlength="11">\
+                            <input type="text" name="user_name" placeholder="用户名">\
+                            \
+                        </div>\
+                        <div class="space_5"></div>\
+                        <div class="btns">\
+                            <a onclick="saveuserinfo()">确定</a>\
+                        </div>\
+                    </div>\
+                    <div class="space_20"></div>\
+                </div>');
+                break;
+            case 7: //我的奖品（单个）
+                $('body').append('<div class="prompt">\
+                    <img class="prompt_h" src="images/prompt_img.png" />\
+                    <div class="cont">\
+                        <img class="close" onclick="hidePrompt(1,this);" src="images/close.png" />\
+                        <div class="space_5"></div>\
+                        <h2 class="tc f22">我的奖品</h2>\
+                        <div class="space_20"></div>\
+                        <div class="tc">\
+                            <div class="gift_img"><img id="giftimg" src="images/gift.png"></div>\
+                            <p>奖品名称：<span id="prizename"></span></p>\
+                        </div>\
+                        <p class="tc f16">你已博得：<span id="prize"></span></p>\
+                        <p class="tc f16">累计：<span id="totalscore">0</span>积分</p>\
+                        <div class="space_20"></div>\
+                        <div class="change">\
+                            <p>凭此记录到店兑奖</p>\
+                            <a onclick="changeGift(this);" class="isExBtn" data-id="">未兑换</a>\
+                        </div>\
+                        <div class="space_10"></div>\
+                        <div class="btns">\
+                            <a onclick="hidePrompt(1,this);">返回</a>\
+                        </div>\
+                    </div>\
+                    <div class="space_20"></div>\
+                </div>');
+                break;
+            case 8: //我的奖品（列表）
+                $('body').append('<div class="prompt">\
+                    <div class="space_30"></div>\
+                    <div class="space_30"></div>\
+                    <div class="space_20"></div>\
+                    <div class="cont">\
+                        <img class="close" onclick="hidePrompt(1,this);" src="images/close.png" />\
+                        <div class="space_5"></div>\
+                        <h2 class="tc f22">我的奖品</h2>\
+                        <div class="space_5"></div>\
+                        <ul class="prize_list">\
+                        </ul>\
+                        <div class="space_10"></div>\
+                        <p class="tc f16">累计：<span id="totalscore">0</span>积分</p>\
+                        <div class="btns">\
+                            <a onclick="hidePrompt(1,this);">返回</a>\
+                        </div>\
+                    </div>\
+                    <div class="space_20"></div>\
+                </div>');
+                break;
+            case 9: //输入兑奖码
+                $('body').append('<div class="prompt">\
+                    <img class="prompt_h" src="images/prompt_img.png" />\
+                    <div class="cont">\
+                        <div class="space_5"></div>\
+                        <div class="input">\
+                            <h3 class="tc f16">请确认是否得到奖品</h3>\
+                            <h3 class="tc f16">状态更改后不可恢复</h3>\
+                            <div class="space_5"></div>\
+                            <input class="tc" style="width:150px;" type="text" placeholder="请输入兑奖密码" id="passInput" data-id="1"/>\
+                        </div>\
+                        <div class="space_5"></div>\
+                        <div class="btns">\
+                            <a onclick="goExchange(this);">兑换</a>\
+                            <a class="cancel" onclick="hidePrompt(1,this);">取消</a>\
+                        </div>\
+                    </div>\
+                    <div class="space_20"></div>\
+                </div>');
+                break;
+            case 91: //不用输入兑奖码
+                $('body').append('<div class="prompt">\
+                    <img class="prompt_h" src="images/prompt_img.png" />\
+                    <div class="cont">\
+                        <div class="space_5"></div>\
+                        <div class="input">\
+                            <h3 class="tc f16">请确认是否得到奖品</h3>\
+                            <h3 class="tc f16">状态更改后不可恢复</h3>\
+                            <div class="space_5"></div>\
+                        </div>\
+                        <div class="space_5"></div>\
+                        <div class="btns">\
+                            <a onclick="goExchange(this);">兑换</a>\
+                            <a class="cancel" onclick="hidePrompt(1,this);">取消</a>\
+                        </div>\
+                    </div>\
+                    <div class="space_20"></div>\
+                </div>');
+                break;
+            case 10: //积分排行
+                $('body').append('<div class="prompt" id="ranklist">\
+                    <div class="space_30"></div>\
+                    <div class="space_30"></div>\
+                    <div class="space_20"></div>\
+                    <div class="cont">\
+                        <img class="close" onclick="hidePrompt(1,this);" src="images/close.png" />\
+                        <div class="space_5"></div>\
+                        <h2 class="tc f22">积分排行榜</h2>\
+                        <div class="space_10"></div>\
+                        <p>积分排行前10的客户可于活动结束三天后于线下商家处领取一份额外精美礼品！</p>\
+                        <div class="space_5"></div>\
+                        <ul class="rank">\
+                        </ul>\
+                        <div class="space_10"></div>\
+                        <div class="btns">\
+                            <a onclick="hidePrompt(1,this);">返回</a>\
+                        </div>\
+                    </div>\
+                    <div class="space_20"></div>\
+                </div>');
+                startpage = 1;
+                count = 0;
+                getRank();
+                break;
+            case 11: //分享
+                $('body').append('<div class="share">\
+                    <img src="images/share.png" />\
+                    <div class="clear"></div>\
+                    <p>点击右上角</p>\
+                    <p>分享或发送给好友</p>\
+                    <p>就能获得更多博饼机会</p>\
+                    <a class="btn" onclick="hidePrompt(2);">我知道啦</a>\
+                    <div style="position:fixed;left:0;bottom:10px;width:100%;height:30px;text-align:center;font:16px/30px \'黑体\';color:#fff;">\
+                        <p style="display:inline-block;box-shadow:0 1px 2px rgba(0,0,0,1) inset;border-bottom:1px solid rgba(255,255,255,.3);background:rgba(0,0,0,.3);padding:0 10px;border-radius:3px;margin:0px;font:16px/30px \'黑体\';color:#fff;"><a style="color:#fff;margin:0 5px;text-decoration:underline;" href="javascript:void(0);">版权信息</a></p>\
+                    </div>\
+                </div>');
+                break;
+            case 12: //中奖
+                $('body').append('<div class="prompt">\
+                    <img class="prompt_h" src="images/prompt_img.png" />\
+                    <div class="cont">\
+                        <div class="space_5"></div>\
+                        <h3 class="tc f18">恭喜您已博得</h3>\
+                        <div class="space_10"></div>\
+                        <h2 class="tc f22" id="prize"></h2>\
+                        <div class="space_20"></div>\
+                        <div class="tc">\
+                            <div class="gift_img"><img id="giftimg" src="images/gift.png"></div>\
+                            <p>奖品名称：<span id="prizename"></span></p>\
+                        </div>\
+                        <p class="tc f16">累计：<span id="totalscore">0</span>积分</p>\
+                        <div class="space_20"></div>\
+                        <div class="btns">\
+                            <a onclick="hidePrompt(1,this);">确定</a>\
+                        </div>\
+                    </div>\
+                    <div class="space_20"></div>\
+                </div>');
+                break;
+            case 13: //没有奖品
+                $('body').append('<div class="prompt">\
+                    <img class="prompt_h" src="images/prompt_img.png" />\
+                    <div class="cont">\
+                        <div class="space_10"></div>\
+                        <h3 class="tc f18">您还未获得奖品哦哦！</h3>\
+                        <div class="space_10"></div>\
+                        <h3 class="tc f18">别灰心，大奖等着你！</h3>\
+                        <div class="space_5"></div>\
+                        <div class="btns">\
+                            <a onclick="hidePrompt(1,this);">再接再厉</a>\
+                        </div>\
+                    </div>\
+                    <div class="space_20"></div>\
+                </div>');
+                break;
+            default:
+                break;
+        }
+    }
+
+    function hidePrompt(state, obj) {
+        isshake = false;
+        switch (state) {
+            case 1: //隐藏普通提示
+                $(obj).parents('.prompt').remove();
+                break;
+            case 2: //隐藏分享提示
+                $('.share').remove();
+                break;
+            default:
+                break;
+        }
+    }
+    var changeObj;
+
+    function changeGift(obj) {
+        if (diceconf.bPass == '1') {
+            state = 2;
+        } else {
+            state = 1;
+        }
+        changeObj = $(obj);
+        switch (state) {
+            case 1: //弹出确认兑换
+                $("body,html").animate({
+                    scrollTop: 0
+                }, 300);
+                showPrompt(9);
+                break;
+            case 2: //输入兑奖码，确认兑换
+                $("body,html").animate({
+                    scrollTop: 0
+                }, 300);
+                showPrompt(91);
+                break;
+            default:
+                break;
+        }
+    }
+
+    function goExchange(obj) {
+        var id = changeObj.attr("data-id");
+        var isinput = $('#passInput').attr("data-id");
+        var password = $('#passInput').val();
+        if (isinput == '1') {
+            if (password != null && password.length == 0) {
+                alert("请输入密码");
+                return;
+            }
+        }
+        $.ajax({
+            type: "POST",
+            url: path + "/cj/dice/changeExchange",
+            data: {
+                id: id,
+                isinput: isinput,
+                password: password,
+                activityId: $('#aid').val()
+            },
+            dataType: "json",
+            success: function(data) {
+                if (data.status == "0") {
+                    $('.prompt').remove();
+                    isshake = false;
+                } else if (data.status == "2") {
+                    alert("密码错误");
+                } else {
+                    alert("兑换失败");
+                }
+            }
+        });
+    }
+    var is_get = false;
+
+    function getPrizeRecord() {
+        if (is_get) return;
+        is_get = true;
+        $.ajax({
+            type: "POST",
+            url: path + "/cj/dice/getPrizeRecord",
+            data: {
+                activityId: $('#aid').val(),
+                wechatid: $('#wechatid').val()
+            },
+            dataType: "json",
+            success: function(data) {
+                var list = data.list;
+                if (list == null || list.length == 0) {
+                    showPrompt(13);
+                } else if (typeof(list[0].tel) == "undefined" || list[0].tel == null || list[0].tel.length == 0) {
+                    showPrompt(6);
+                } else {
+                    if (list.length == 1) { //单个奖品
+                        showPrompt(7);
+                        if (list[0].prizeImg != null && list[0].prizeImg.length != 0) {
+                            $('#giftimg').attr("src", "http://image.hudongtui.com:29099/" + list[0].prizeImg);
+                        } else if (list[0].prizeType < 4) {
+                            $('#giftimg').attr("src", "http://jjb.m.yoxi2.cn:80/cj/images/giftbox_img" + list[0].prizeType + ".png");
+                        } else {
+                            $('#giftimg').attr("src", "http://jjb.m.yoxi2.cn:80/cj/images/giftbox_ico.png");
+                        }
+                        $('#prizename').text(list[0].prizeName);
+                        $('#prize').text(list[0].prize);
+                        $('#totalscore').text(diceconf.totalscore);
+                        $('.isExBtn').attr("data-id", "" + list[0].id);
+                        if (typeof(list[0].opState) != "undefined" && list[0].opState == '1') { //已经兑换
+                            $('.isExBtn').text("已兑换");
+                            $('.isExBtn').attr("onclick", "");
+                            $('.isExBtn').attr("class", "changed_btn");
+                        }
+                        if ($('#prize' + list[0].prizeType).val() == '1') { //不需要到店兑换
+                            $('.change').attr("style", "display:none;");
+                        }
+                    } else {
+                        showPrompt(8);
+                        $('#totalscore').text(diceconf.totalscore);
+                        var str_html = '';
+                        var count = 1;
+                        for (var key in list) {
+                            var giftimg = null;
+                            if (list[key].prizeImg != null && list[key].prizeImg.length != 0) {
+                                giftimg = "http://image.hudongtui.com:29099/" + list[0].prizeImg;
+                            } else if (list[key].prizeType < 4) {
+                                giftimg = "http://jjb.m.yoxi2.cn:80/cj/images/giftbox_img" + list[key].prizeType + ".png";
+                            } else {
+                                giftimg = "http://jjb.m.yoxi2.cn:80/cj/images/giftbox_ico.png";
+                            }
+                            if ($('#prize' + list[key].prizeType).val() == '1') { //不需要到店兑换
+                                str_html += '<li><em>' + count + '.</em><b>' + list[key].prize + '</b><img src="' + giftimg + '" /></li>';
+                            } else {
+                                if (typeof(list[key].opState) != "undefined" && list[key].opState == '1') {
+                                    str_html += '<li><a class="changed_btn"">已兑换</a><em>' + count + '.</em><b>' + list[key].prize + '</b><img src="' + giftimg + '" /></li>';
+                                } else {
+                                    str_html += '<li><a onclick="changeGift(this);" data-id="' + list[key].id + '">未兑换</a><em>' + count + '.</em><b>' + list[key].prize + '</b><img src="' + giftimg + '" /></li>';
+                                }
+                            }
+                            count++;
+                        }
+                        $('.prize_list').html(str_html);
+                    }
+                }
+                is_get = false;
+            },
+            timeout: 15000,
+            error: function(xhr, type) {
+                alert("网络异常，请刷新重试。");
+                is_get = false;
+            }
+        });
+    }
+    var ajaxload = false;
+    var startpage = 1;
+    var count = 0;
+
+    function getRank() {
+        if (ajaxload) return;
+        ajaxload = true;
+        $.ajax({
+            url: '/cj/dice/getScoreList/1261',
+            dataType: 'json',
+            type: 'POST',
+            data: {
+                currentPage: startpage
+            },
+            success: function(data) {
+                var bookshtml = "";
+                startpage = data.startpage;
+                var list = data.list;
+                for (var key in list) {
+                    count++;
+                    var headimgurl = list[key].headimgurl;
+                    if (headimgurl == null || headimgurl.length == 0) {
+                        headimgurl = "images/weixin_avatar.png";
+                    } else if (headimgurl.indexOf('group') > 0) {
+                        headimgurl = 'http://image.hudongtui.com:29099/' + headimgurl;
+                    } else {
+                        headimgurl = headimgurl.replace("/0", "/46");
+                    }
+                    bookshtml += '<li>\
+                                <span>' + list[key].score + '积分</span>\
+                                <em>' + count + '.</em>\
+                                <img src="' + headimgurl + '" />' + list[key].nickname + '\
+                            </li>';
+                }
+                $(".rank").append(bookshtml);
+                ajaxload = false;
+            },
+            error: function(xhr, type) {
+                ajaxload = false;
+            }
+        });
+    }
+
+    function saveuserinfo() {
+        var tel = $('#saveinfo').find('input[name="user_tel"]').val();
+        var name = $('#saveinfo').find('input[name="user_name"]').val();
+        var mail = $('#saveinfo').find('input[name="user_mail"]').val();
+        var qq = $('#saveinfo').find('input[name="user_qq"]').val();
+        var wechat = $('#saveinfo').find('input[name="user_weixin"]').val();
+        var other = $('#saveinfo').find('input[name="user_other"]').val();
+        var data = {
+            activityId: $('#aid').val(),
+            wechatid: $('#wechatid').val()
+        }
+        if (tel != null && tel.length == 0) {
+            alert("请输入手机号");
+            return;
+        }
+        if (tel != null && tel.length != 11) {
+            alert("请输入11位手机号");
+            return;
+        }
+        if (name != null && name.length == 0) {
+            alert("请输入姓名");
+            return;
+        }
+        if (mail != null && mail.length == 0) {
+            alert("请输入邮寄地址");
+            return;
+        }
+        if (qq != null && qq.length == 0) {
+            alert("请输入qq号");
+            return;
+        }
+        if (wechat != null && wechat.length == 0) {
+            alert("请输入微信号");
+            return;
+        }
+        if (other != null && other.length == 0) {
+            alert("请输入信息");
+            return;
+        }
+
+        if (tel != null && tel.length != 0) {
+            data['user_tel'] = tel;
+        }
+        if (name != null && name.length != 0) {
+            data['user_name'] = name;
+        }
+        if (mail != null && mail.length != 0) {
+            data['user_mail'] = mail;
+        }
+        if (qq != null && qq.length != 0) {
+            data['user_qq'] = qq;
+        }
+        if (wechat != null && wechat.length != 0) {
+            data['user_weixin'] = wechat;
+        }
+        if (other != null && other.length != 0) {
+            data['user_other'] = other;
+        }
+
+        $.ajax({
+            type: "POST",
+            url: path + "/cj/dice/saveUserinfo",
+            data: data,
+            dataType: "json",
+            success: function(data) {
+                if (data.status == "0") {
+                    $('#saveinfo').remove();
+                    isshake = false;
+                } else {
+                    alert("保存失败");
+                }
+            }
+        });
+    }
+    if (window.localStorage) {
+        var storage = window.localStorage;
+        if (storage.getItem("hd_dice_userinfo") && storage.getItem("hd_dice_userinfo") != "null") {} else {
+            window.localStorage.setItem("hd_dice_userinfo", "oQpsqt_DYYCsiGH58onhBQ0fRuag");
+        }
+    }
+    </script>
+</body>
+<iframe id="__WeixinJSBridgeIframe_SetResult" style="display: none;"></iframe>
+<iframe id="__WeixinJSBridgeIframe" style="display: none;"></iframe>
+
+</html>

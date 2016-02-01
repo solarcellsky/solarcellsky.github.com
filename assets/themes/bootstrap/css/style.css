@@ -80,3 +80,20 @@ h1, h2, h3, h4 {
   background: #57A957;
   border: 1px solid #4c964d;
   color: #FFF; }
+
+.withgo {
+  background: url(http://7xiq50.com1.z0.glb.clouddn.com/upload/go.png) no-repeat right top;
+  padding: 115px 0 0;
+}
+
+.withgo h1 {
+  color: #000;
+}
+#particles-js{
+  position: absolute;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+}

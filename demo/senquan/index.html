@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html lang="en" class="no-js">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+	<meta name="msapplication-tap-highlight" content="no" />
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/vertical-slider.css">
+	<link rel="stylesheet" href="css/main.css">
+
+	<script src="js/res/modernizr.min.js"></script>
+
+	<title>森泉葡萄示范园</title>
+
+</head>
+
+	<body>
+
+		<div class="vs-slider" id="demo-slider">
+
+			<div class="vs-section active">
+				<h2>森泉葡萄示范园</h2>
+				<div class="arrowDown animated fadeInDown infinite"><div class="inner"></div></div>
+			</div>
+
+			<div class="vs-section">
+				<h2>
+					农作物
+					<p>户太八号</p>
+				</h2>
+				<div class="arrowDown animated fadeInDown infinite"><div class="inner"></div></div>
+			</div>
+
+			<div class="vs-section">
+				<h2>
+					介绍
+					<p>森泉市级葡萄示范园位于秦岭北麓，地处终南山世界地质公园“中国北方第一峡“金龙峡风景区向北1000米曲峪老河道改造而成，森泉葡萄呼吸的是来自秦岭腹地富含阳离子的森林清爽空气，喝的是秦岭流淌下来、清澈见底的山泉水，扎根于曲余河老河床，吸收的是曲峪河从秦岭山上带下来的富含对人体有益的多种微量元素和矿物质。</p>
+				</h2>
+				<div class="arrowDown animated fadeInDown infinite"><div class="inner"></div></div>
+			</div>
+
+			<div class="vs-section">
+				<h2>
+					负责人
+					<p>石周鹏</p>
+				</h2>
+				<div class="arrowDown animated fadeInDown infinite"><div class="inner"></div></div>
+			</div>
+
+			<div class="vs-section">
+				<script src="http://api.map.baidu.com/api?v=1.3"></script>
+				<div id="allmap" style="height: 100%;width: 100%;border:1px solid #e0e0e0;"></div>
+				<script type="text/javascript">
+				// 百度地图API功能
+				var map = new BMap.Map("allmap"); // 创建Map实例
+				var point = new BMap.Point(106.454083, 30.53954);
+				var marker = new BMap.Marker(point); // 创建标注
+				map.addOverlay(marker); // 将标注添加到地图中
+				map.centerAndZoom(new BMap.Point(106.454083, 30.53954), 20); // 初始化地图,设置中心点坐标和地图级别
+				map.addControl(new BMap.NavigationControl()); // 左上角，添加比例尺
+				map.setCurrentCity("岳池县"); // 设置地图显示的城市 此项是必须设置的
+				map.enableScrollWheelZoom(false); //开启鼠标滚轮缩放
+				map.disableDragging(); //禁止拖拽
+				</script>
+				<div class="arrowDown animated fadeInDown infinite"><div class="inner"></div></div>
+			</div>
+
+			<div class="vs-section">
+				<div class="qrcodeLast">
+					<div class="qrWrapper">
+						<h3>扫一扫了解更多</h3>
+						<img src="images/qr.jpg">
+						<p class="qrTips">长按二维码可识别</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<footer>
+			<p>西安礼飨</p>
+		</footer>
+
+		<script src="js/res/jquery-2.1.4.js"></script>
+		<script src="js/res/hammer.min.js"></script>
+		<script src="js/res/mousewheel.min.js"></script>
+		<script src="js/res/velocity.min.js"></script>
+		<script src="js/res/velocity.ui.min.js"></script>
+
+		<script src="js/res/vertical-slider.js"></script>
+		<script src="js/main.js"></script>
+
+	</body>
+
+</html>

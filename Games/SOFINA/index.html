@@ -1,0 +1,1614 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta name="apple-touch-fullscreen" content="YES">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="pragram" content="no-cache">
+    <meta charset="utf-8">
+
+    <title>SOFINA新店有“礼”</title>
+
+    <script type="text/javascript" src="./js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="./js/christmassnow.js"></script>
+
+    <script type="text/javascript">
+    var phoneWidth = parseInt(window.screen.width);
+    var phoneScale = phoneWidth / 640;
+    var ua = navigator.userAgent;
+    if (/Android (\d+\.\d+)/.test(ua)) {
+        var version = parseFloat(RegExp.$1);
+        // andriod 2.3
+        if (version > 2.3) {
+            document
+                .write('<meta name="viewport" content="width=640, minimum-scale = ' + phoneScale + ', maximum-scale = ' + phoneScale + ', target-densitydpi=device-dpi">');
+            // andriod 2.3以上
+        } else {
+            document
+                .write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+        }
+        // 其他系统
+    } else {
+        document
+            .write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+    }
+    </script>
+    <script>
+    var hasgift = 0; //是否玩过
+    var shareType = 0; //是否玩过	
+    var daynum = 0;
+
+
+
+    $(document).ready(function() {
+        $('body').christmassnow({
+            snowflaketype: 1, // 1 to 25 types of flakes are available change the number from 1 to 25. each one contain different images.
+            snowflakesize: 2, //snowflakesize is 1 then it get the size of the image as random , if the snowflakesize is 2 means size of the image as custom
+            snowflakedirection: 1, // 1 means default no wind (top to bottom), 2 means random, 3 means left to right and 4 means  right to left
+            snownumberofflakes: 4, // number of flakes is user option
+            snowflakespeed: 10, // falling speed of flake 10 sec is default
+            flakeheightandwidth: 37 // if you are mention that option flakesize is 2 then this flakeheightandwidth should work values are in pixels 16*16.
+        });
+
+        /*			$("#index").hide();
+        			$("#active").hide();
+        			$("#prizes").hide();
+        			$("#information").show();
+        			$("#giftpage").hide();
+        			$("#description").hide();
+        			$("#offer").hide();*/
+        /**/
+        $(".irob").click(function() {
+            $("#index").hide();
+            $(".failbox").hide();
+            $(".cookiedfail").hide();
+            $(".sendMessage").show();
+            $("#active").show();
+
+        })
+
+
+        $(".adescription").click(function() {
+            $("#description").show();
+            $("#active").hide();
+            $("#offer").hide();
+            $(".contianer").css("background", "none");
+        });
+
+        $(".aoffer").click(function() {
+            $("#offer").show();
+            $("#active").hide();
+            $("#description").hide();
+            $(".contianer").css("background", "none");
+        })
+        $(".backindex").click(function() {
+            $("#index").hide();
+            $("#active").show();
+            $("#description").hide();
+            $("#offer").hide();
+            $(".contianer").css("background", "url(./img/wbg.jpg) no-repeat bottom");
+        })
+    });
+    </script>
+    <style>
+    body,
+    p,
+    h1,
+    h2,
+    dl,
+    dt,
+    dd {
+        margin: 0;
+        padding: 0;
+        font-size: 1rem;
+        color: #FFF;
+        background: #bae3f9;
+    }
+    img {
+        border: 0;
+    }
+    a,
+    button,
+    input {
+        -webkit-tap-highlight-color: rgba(255, 0, 0, 0);
+        border: 0;
+    }
+    ol,
+    ul {
+        list-style: none;
+    }
+    .hid {
+        width: 0;
+        height: 0;
+        overflow: hidden;
+        text-indent: -9999px;
+    }
+    body {
+        font-family: Helvetica;
+        height: 100%;
+    }
+    section {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: none;
+    }
+    .wrap {
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+    }
+    .contianer {
+        height: 100%;
+        width: 100%;
+        background: url(./img/wbg.jpg) no-repeat bottom;
+    }
+    /*index*/
+    
+    #index {
+        display: block;
+    }
+    .logo {
+        width: 561px;
+        height: 153px;
+        position: absolute;
+        left: 5%;
+        top: 3%;
+    }
+    .i-text {
+        width: 574px;
+        height: 40px;
+        position: absolute;
+        left: 4%;
+        top: 20%;
+        z-index: 9;
+    }
+    .i-text a {
+        width: 574px;
+        height: 40px;
+        display: block;
+    }
+    .i-content {} .i-content img {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+    .irob {
+        width: 169px;
+        height: 183px;
+        background: url(./img/btn-q.png) no-repeat;
+        position: absolute;
+        bottom: 0;
+        left: 38%;
+        -webkit-animation: swinging 2s ease-in-out 0s infinite;
+        -moz-animation: swinging 10s ease-in-out 0s infinite;
+        animation: swinging 10s ease-in-out 0s infinite;
+        -webkit-transform-origin: 50% 100%;
+        -moz-transform-origin: 50% 100%;
+        transform-origin: 50% 100%;
+    }
+    @-webkit-keyframes swinging {
+        0% {
+            -webkit-transform: rotate(15deg);
+        }
+        25% {
+            -webkit-transform: rotate(-15deg);
+        }
+        50% {
+            -webkit-transform: rotate(15deg);
+        }
+        75% {
+            -webkit-transform: rotate(-15deg);
+        }
+        100% {
+            -webkit-transform: rotate(15deg);
+        }
+    }
+    @-moz-keyframes swinging {
+        0% {
+            -webkit-transform: rotate(15deg);
+        }
+        25% {
+            -webkit-transform: rotate(-15deg);
+        }
+        50% {
+            -webkit-transform: rotate(15deg);
+        }
+        75% {
+            -webkit-transform: rotate(-15deg);
+        }
+        100% {
+            -webkit-transform: rotate(15deg);
+        }
+    }
+    @keyframes swinging {
+        0% {
+            -webkit-transform: rotate(15deg);
+        }
+        25% {
+            -webkit-transform: rotate(-15deg);
+        }
+        50% {
+            -webkit-transform: rotate(15deg);
+        }
+        75% {
+            -webkit-transform: rotate(-15deg);
+        }
+        100% {
+            -webkit-transform: rotate(15deg);
+        }
+    }
+    /*active*/
+    
+    #active {} .at-rule {
+        position: absolute;
+        left: 19%;
+        top: 2%;
+        z-index: 10;
+    }
+    .at-rule img {
+        margin-right: 30px;
+    }
+    .at-time {
+        width: 528px;
+        height: 88px;
+        position: absolute;
+        left: 8%;
+        top: 15%;
+        z-index: 9;
+        background: url(./img/tbg.png) no-repeat;
+    }
+    .timebar {
+        width: 440px;
+        height: 26px;
+        left: 82px;
+        top: 32px;
+        position: absolute;
+    }
+    #timebbbb {
+        overflow: hidden;
+        zoom: 1;
+    }
+    #timebarpa {
+        width: 100%;
+        height: 26px;
+        float: left;
+        background: url(./img/tbar.png) no-repeat;
+        text-indent: -9999%;
+        z-index: 99;
+    }
+    #timebg {
+        width: 100%;
+        height: 26px;
+        float: left;
+        z-index: 98;
+    }
+    .ngame {
+        position: absolute;
+        top: 40%;
+        left: 0;
+        z-index: 10;
+        animation: ngame 3s;
+        -moz-animation: ngame 3s;
+        /* Firefox */
+        
+        -webkit-animation: ngame 3s;
+        /* Safari and Chrome */
+        
+        -o-animation: ngame 3s;
+        /* Opera */
+        
+        opacity: 0;
+        display: none;
+        z-index: 99;
+    }
+    @-webkit-keyframes ngame
+    /* Safari and Chrome */
+    
+    {
+        0% {
+            top: 40%;
+            opacity: 1;
+        }
+        10% {
+            top: 40%;
+            opacity: 1;
+        }
+        20% {
+            top: 40%;
+            opacity: 1;
+        }
+        40% {
+            top: 20%;
+            opacity: 0;
+        }
+    }
+    .huahua {
+        z-index: 8;
+    }
+    .at-hua1 {
+        position: absolute;
+        right: 3%;
+        top: 30%;
+        width: 182px;
+        height: 190px;
+    }
+    .at-hua2 {
+        position: absolute;
+        left: 3%;
+        top: 45%;
+        width: 182px;
+        height: 190px;
+    }
+    .at-hua3 {
+        position: absolute;
+        right: 0;
+        top: 70%;
+        width: 157px;
+        height: 190px;
+    }
+    .huahua img {
+        -webkit-animation: swinging 10s ease-in-out 0s infinite;
+        animation: swinging 30s ease-in-out 0s infinite;
+        -moz-animation: swinging 30s ease-in-out 0s infinite;
+        -webkit-transform-origin: 50% 50%;
+    }
+    /*.at-hua2 img{-webkit-animation-delay: 5s;}
+.at-hua3 img{ -webkit-animation-delay: 8s;}*/
+    
+    @-webkit-keyframes aroundrotate {
+        0% {
+            -webkit-transform: rotate(10deg);
+        }
+        10% {
+            -webkit-transform: rotate(30deg);
+        }
+        20% {
+            -webkit-transform: rotate(50deg);
+        }
+        30% {
+            -webkit-transform: rotate(70deg);
+        }
+        40% {
+            -webkit-transform: rotate(90deg);
+        }
+        50% {
+            -webkit-transform: rotate(110deg);
+        }
+        75% {
+            -webkit-transform: rotate(130deg);
+        }
+        100% {
+            -webkit-transform: rotate(150deg);
+        }
+    }
+    .at-snow {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 9;
+    }
+    .at-tx {
+        position: absolute;
+        bottom: 67%;
+        left: 27%;
+        color: #e55868;
+        font-size: 32px;
+        font-family: '黑体';
+    }
+    .at-person-no {
+        position: absolute;
+        bottom: 34%;
+        left: -14%;
+        /*bottom:24%;left:23%;*/
+    }
+    .at-person {
+        position: absolute;
+        bottom: 31%;
+        left: -14%;
+        animation: myfirst 2s infinite;
+        -moz-animation: myfirst 2s infinite;
+        /* Firefox */
+        
+        -webkit-animation: myfirst 2s infinite;
+        /* Safari and Chrome */
+        
+        -o-animation: myfirst 2s infinite;
+        /* Opera */
+    }
+    @-webkit-keyframes myfirst
+    /* Safari and Chrome */
+    
+    {
+        0% {
+            bottom: 31%
+        }
+        10% {
+            bottom: 34%
+        }
+        20% {
+            bottom: 31%
+        }
+        30% {
+            bottom: 34%
+        }
+        40% {
+            bottom: 31%
+        }
+        50% {
+            bottom: 34%
+        }
+        60% {
+            bottom: 31%
+        }
+        70% {
+            bottom: 34%
+        }
+        80% {
+            bottom: 31%
+        }
+        90% {
+            bottom: 34%
+        }
+        100% {
+            bottom: 31%
+        }
+    }
+    .sendMessage {
+        position: absolute;
+        bottom: 0;
+        left: 20%;
+        width: 400px;
+        height: 563px;
+        z-index: 10;
+        text-indent: -9999px;
+    }
+    .at-gift a {
+        display: block;
+    }
+    .at-gift {
+        position: absolute;
+        bottom: -7%;
+        left: 0;
+        animation: myfirst 2s infinite;
+        -moz-animation: gift 2s infinite;
+        /* Firefox */
+        
+        -webkit-animation: gift 2s infinite;
+        /* Safari and Chrome */
+        
+        -o-animation: gift 2s infinite;
+        /* Opera */
+    }
+    @-webkit-keyframes gift
+    /* Safari and Chrome */
+    
+    {
+        0% {
+            bottom: -7%
+        }
+        10% {
+            bottom: -5%
+        }
+        20% {
+            bottom: -7%
+        }
+        30% {
+            bottom: -5%
+        }
+        40% {
+            bottom: -7%
+        }
+        50% {
+            bottom: -5%
+        }
+        60% {
+            bottom: -7%
+        }
+        70% {
+            bottom: -5%
+        }
+        80% {
+            bottom: -7%
+        }
+        90% {
+            bottom: -5%
+        }
+        100% {
+            bottom: -7%
+        }
+    }
+    .giftdown {
+        position: absolute;
+        bottom: -7%;
+        left: 30%;
+        width: 283px;
+        height: 900px;
+    }
+    #giftpart {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+    }
+    .fail-snow,
+    .fail-elk,
+    .fail-chirs,
+    .failbox,
+    .success,
+    .share,
+    .cookiefail {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 11;
+    }
+    .blank,
+    .blankgift {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 99;
+    }
+    /**/
+    
+    #prizes {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+    }
+    .cosmgift {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: none;
+        z-index: 9;
+        background: url(./img/giftgai.png) no-repeat top right;
+        text-align: center;
+    }
+    .prizesbtn {
+        position: absolute;
+        bottom: 3%;
+        left: 26%;
+        z-index: 10;
+    }
+    /*description*/
+    
+    #description {
+        z-index: 10;
+    }
+    .topbar {
+        left: 4%;
+        top: 0;
+    }
+    .topbar2 {
+        left: 7%;
+        top: 0;
+    }
+    .topbar .adescription {
+        margin-top: -20px;
+    }
+    .topbar2 .aoffer {}
+    /*.info-gift1{ position:absolute;left:0;top:0; background:url(./img/text2.png) no-repeat; width:100%; height:100%;}*/
+    
+    .textpic {
+        position: absolute;
+        left: 8%;
+        top: 15%;
+    }
+    .infoarea {
+        position: absolute;
+        top: 35%;
+        left: 22%;
+    }
+    .inp1 {
+        width: 328px;
+        height: 60px;
+        border: solid 12px #9fd9f6;
+        border-radius: 12px;
+        -webkit-border-radius: 25px;
+        -moz-border-radius: 25px;
+        margin-bottom: 30px;
+        font-size: 30px;
+        color: #646464;
+        font-family: "黑体";
+        display: block;
+    }
+    .inp2 {
+        margin: 200px 0 90px 0;
+    }
+    .submit {
+        width: 309px;
+        height: 100px;
+        background: url(./img/savebtn.png) no-repeat;
+        border: none;
+        margin: 40px 0 0 30px;
+    }
+    .textpic1 {
+        top: 6%;
+    }
+    .g-text {
+        position: absolute;
+        top: 15%;
+        left: 8%;
+        width: 533px;
+        height: 33px;
+    }
+    .gifesample {
+        position: absolute;
+        left: 15%;
+        top: 20%;
+        height: 600px;
+        overflow-y: auto;
+    }
+    .gifesample ul {
+        overflow: hidden;
+        zoom: 1;
+    }
+    .gifesample li {
+        position: relative;
+        width: 400px;
+        height: 279px;
+        display: block;
+    }
+    .gifesample li img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 257px;
+        height: 259px;
+    }
+    .gifesample li span {
+        position: absolute;
+        left: 280px;
+        top: 100px;
+        width: 100px;
+        height: 40px;
+    }
+    .gifesample span {
+        font-family: "黑体";
+        font-size: 30px;
+        color: #646464;
+        font-weight: bold;
+        position: absolute;
+    }
+    /*.gifesample .n1{top:130px;right:130px;}
+.gifesample .n2{top:420px;right:130px;}*/
+    
+    .ga {
+        top: 85%;
+        left: 10%;
+    }
+    .ga input {
+        float: left;
+        margin: 0 35px 0 0;
+    }
+    .submit1 {
+        width: 275px;
+        height: 100px;
+        background: url(./img/sharebtn.png) no-repeat;
+    }
+    .submit2 {
+        width: 209px;
+        height: 100px;
+        background: url(./img/againbtn.png) no-repeat;
+    }
+    /**/
+    
+    .textpic2 {
+        left: 5%;
+        text-align: center;
+        margin: 5px 0;
+    }
+    .textpic3 {
+        position: absolute;
+        left: 0
+    }
+    .textarea {
+        position: absolute;
+        top: 15%;
+        left: 0;
+        color: #646464;
+        width: 100%;
+        height: 767px;
+        overflow: hidden;
+        overflow-y: auto;
+        background: url(./img/wbg.jpg) no-repeat bottom;
+    }
+    .textarea p {
+        font-family: "黑体";
+        font-size: 24px;
+        text-align: center;
+        color: #646464;
+        padding: 0 35px 0 35px;
+    }
+    .textarea p.title {
+        color: #e55868;
+        font-weight: bold;
+    }
+    .textarea p .red {
+        color: #e55868;
+    }
+    .textarea p img {
+        margin: 20px 0;
+    }
+    #mygift {
+        width: 400px;
+        height: 482px;
+        position: absolute;
+        bottom: 8%;
+        left: 22%;
+    }
+    .wait {
+        font-size: 36px;
+        color: #FF3333;
+        text-align: center;
+        line-height: 50px;
+    }
+    .load6 {
+        margin: 200px auto 0;
+        width: 150px;
+        text-align: center;
+    }
+    .load6 > div {
+        width: 30px;
+        height: 30px;
+        background-color: #67CF22;
+        border-radius: 100%;
+        display: inline-block;
+        -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+        animation: bouncedelay 1.4s infinite ease-in-out;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+    .load6 .bounce1 {
+        -webkit-animation-delay: -0.32s;
+        animation-delay: -0.32s;
+    }
+    .load6 .bounce2 {
+        -webkit-animation-delay: -0.16s;
+        animation-delay: -0.16s;
+    }
+    @-webkit-keyframes bouncedelay {
+        0%, 80%, 100% {
+            -webkit-transform: scale(0.0)
+        }
+        40% {
+            -webkit-transform: scale(1.0)
+        }
+    }
+    @keyframes bouncedelay {
+        0%, 80%, 100% {
+            transform: scale(0.0);
+            -webkit-transform: scale(0.0);
+        }
+        40% {
+            transform: scale(1.0);
+            -webkit-transform: scale(1.0);
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <div class="loading" style="position:fixed;width:100%;height:100%;background:#fff;z-index:10000;">
+        <div class="load6">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="contianer">
+            <!--首页-->
+
+            <!--先玩玩游戏再看嘛~-->
+            <div class="ngame"><img src="./img/nogame.png" />
+            </div>
+
+
+            <!--首页-->
+            <section id="index">
+                <div class="drop"></div>
+                <div class="logo"><img data-src="img/logo.png" src="./img/logo.png">
+                </div>
+                <div class="i-text">
+                    <a href="http://mp.weixin.qq.com/s?__biz=MjM5NDMxNTg2Mw==&mid=202024558&idx=1&sn=66c9062439fa7d3f04230911297245e0#rd" alt="关注“Sofina苏菲娜”微信，更多惊喜等着你"><img src="./img/bar.png" style="width:100%; height:100%;" />
+                    </a>
+                </div>
+                <div class="i-content">
+                    <img id="pinm" src="./" data-src="./img/ipng.png" style="" />
+                    <div class="irob" id="irob"></div>
+                </div>
+            </section>
+            <!--/首页-->
+
+
+
+            <!--活动页-->
+            <section id="active">
+                <div class="at-rule">
+                    <img src="./img/rulebar1.png" class="cl adescription" />
+                    <img src="./img/rulebar2.png" class="cl firstgame" onClick="firstgame()" />
+                    <img src="./img/rulebar3.png" class="cl aoffer" />
+                </div>
+                <div class="at-time">
+                    <div class="timebar" id="timebar">
+                        <div id="timebarpa" style="width:100%;"></div>
+                    </div>
+                </div>
+                <div class="at-hua1 huahua"><img src="./img/gfflower1.png" />
+                </div>
+                <div class="at-hua2 huahua"><img src="./img/gfflower2.png" />
+                </div>
+                <div class="at-hua3 huahua"><img src="./img/gfflower3.png" />
+                </div>
+                <!--抱礼物~-->
+                <div class="at-snow" style="display:;">
+                    <div class="at-tx">
+                        <p></p>
+                    </div>
+                    <div id="giftpart">
+                        <div class="giftdown">
+                            <div class="at-person-no"></div>
+                            <div class="at-gift"><img src="" />
+                            </div>
+                        </div>
+                        <div class="sendMessage" onClick="sendMessage()" id="btnSendCode"></div>
+                        <div id="mygift" style="display:none;"></div>
+                    </div>
+                </div>
+                <!--挑战不成功~-->
+                <div class="failbox" style="display:none;">
+                    <!--	<div class="blank"></div> -->
+                    <img id="failboximg" onClick="hidefail()" />
+                </div>
+                <div class="cookiefail" style="display:none;">
+                    <div class="blank"></div>
+                    <img id="failboximg2" onClick="hidefail2()" />
+                </div>
+
+
+
+                <!--挑战成功~-->
+                <div class="success" id="successbox" style="display:none;">
+                    <div class="blank"></div>
+                    <img id="success" src="" />
+                    <div class="share" id="share" style="display:none;"><img src="./img/share.png" />
+                    </div>
+                </div>
+            </section>
+            <!--/活动页-->
+
+
+
+            <!--<div class="wait" style="display:none;">加载礼物中,请耐心等待...></div>
+        
+    -->
+            <!--揭晓奖品-->
+            <section id="prizes" style="display:;">
+
+                <!--奖品iPad-->
+                <div class="cosmgift cosmgift1" style="display: none;"><img src="./img/cosmgift1.png" style="width:100%;height:100%;" />
+                </div>
+                <!--奖品十周年礼盒-->
+                <div class="cosmgift cosmgift2" style="display: none;"><img src="./img/cosmgift2.png" />
+                </div>
+                <!--奖品圣诞套装-->
+                <div class="cosmgift cosmgift3" style="display: none;"><img src="./img/cosmgift3.png" />
+                </div>
+                <!--奖品新品美白精华乳-->
+                <div class="cosmgift cosmgift4" style="display: none;"><img src="./img/cosmgift4.png" />
+                </div>
+                <!--奖品50元优惠券-->
+                <div class="cosmgift cosmgift5" style="display: none;" id="taobaogift"><img src="./img/cosmgift5.png" />
+                </div>
+
+                <div class="prizesbtn"><img src="./img/btn.png" id="infor1" />
+                </div>
+            </section>
+
+            <!--揭晓奖品-->
+            <!--完善资料-->
+            <section id="information">
+                <div class="info-gift1" id="info-gift1" style="display:block;">
+                    <div class="textpic"><img src="./img/text1.png" />
+                    </div>
+                    <div class="infoarea">
+                        <input type="text" value="请输入您的姓名" class="inp1" id="name" />
+                        <input type="text" value="请输入您的手机号码" class="inp1" id="mobile" />
+                        <input type="text" value="请输入您的地址" class="inp1" id="address" />
+                        <input type="button" value="" class="submit" onClick="checkSubmit()" />
+                    </div>
+                </div>
+                <div class="info-gift2" id="info-gift2" style="display:none;">
+                    <div class="textpic"><img src="./img/text2.png" />
+                    </div>
+                    <div class="infoarea">
+                        <input type="text" value="请输入您的淘宝账号ID" class="inp1 inp2" id="taobaoID" />
+                        <input type="button" value="" class="submit" onClick="checkSubmit2()" />
+                    </div>
+                </div>
+            </section>
+
+
+            <!--奖品-->
+            <section id="giftpage">
+                <div class="textpic textpic1"><img src="./img/text3.png" />
+                </div>
+                <div class="g-text">
+                    <a href="http://mp.weixin.qq.com/s?__biz=MjM5NDMxNTg2Mw==&mid=202024558&idx=1&sn=66c9062439fa7d3f04230911297245e0#rd"><img src="./img/text4.png" style="width:100%; height:100%;" />
+                    </a>
+                </div>
+                <div class="gifesample">
+                    <ul>
+                    </ul>
+                </div>
+                <div class="infoarea ga">
+                    <input type="button" value="" class="submit submit1" onClick="shareBox()" />
+                    <input type="button" value="" class="submit submit2" onClick="turnBack()" />
+                </div>
+                <div class="blankgift" style=""></div>
+                <div class="share" id="share2" style="display:none;"><img src="./img/share2.png" />
+                </div>
+            </section>
+            <!--奖品-->
+
+
+
+            <!--活动说明-->
+            <section id="description">
+                <div class="at-rule topbar">
+                    <img src="./img/topbar1.png" class="backindex" />
+                    <img src="./img/rulebar2.png" class="firstgame" onClick="firstgame()" />
+                    <img src="./img/rulebar3.png" class="aoffer" />
+                </div>
+                <div class="textarea">
+                    <div class="textpic2"><img src="./img/text5.png" />
+                    </div>
+                    <div class="textpic2">
+                        <a href="http://mp.weixin.qq.com/s?__biz=MjM5NDMxNTg2Mw==&mid=202024558&idx=1&sn=66c9062439fa7d3f04230911297245e0#rd" alt="关注“Sofina苏菲娜”微信，更多惊喜等着你"><img src="./img/text4.png" />
+                        </a>
+                    </div>
+                    <p>&nbsp;</p>
+                    <p class="title">活动时间</p>
+                    <p>即日起-2015年1月3日</p>
+                    <p>&nbsp;</p>
+                    <p class="title">活动规则</p>
+                    <p>
+                        参与游戏，从圣诞老人、麋鹿、雪人手中竞赛抢礼物，抢到礼物并邀请好友打开，
+                        <br /> 即可获得苏菲娜圣诞好礼，
+                        <span class="red">100%中奖</span>。</p>
+                    <p>&nbsp;</p>
+                    <p class="title">奖品设置</p>
+                    <p>
+                        一等奖：ipad mini3 金色 WLAN版 16GB（1名）
+                        <br />
+                    </p>
+                    <p><img src="./img/ruleimg1.png" />
+                    </p>
+                    <p>一等奖将在活动结束后从正确填写淘宝ID用户中抽取
+                        <br> 并通过苏菲娜官方微信公布，密切关注官微别错过哦~
+                    </p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>二等奖：Sofina苏菲娜豪华十周年礼盒（5名）</p>
+                    <p><img src="./img/ruleimg2.png" />
+                    </p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>三等奖：秋冬Sofina苏菲娜圣诞套装（5名）
+                        <br /> （芯美颜泡沫按摩润肤洁面乳+映美焕采滋润保湿妆前乳+2015年台历）
+                        <br />
+                    </p>
+                    <p><img src="./img/ruleimg3.png" />
+                    </p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>四等奖：Sofina苏菲娜新品美白精华乳液 50g（5名）
+                        <br />
+                    </p>
+                    <p><img src="./img/ruleimg4.png" />
+                    </p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>五等奖：Sofina苏菲娜天猫优惠券（100,000名）</p>
+                    <p><img src="./img/ruleimg5.png" />
+                    </p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                </div>
+            </section>
+            <!--活动说明-->
+            <!--优惠-->
+            <section id="offer">
+                <div class="at-rule topbar2	">
+                    <img src="./img/rulebar1.png" class="adescription" />
+                    <img src="./img/rulebar2.png" class="firstgame" onClick="firstgame()" />
+                    <img src="./img/topbar2.png" class="backindex" />
+                </div>
+                <div class="textarea">
+                    <div class="textpic3"><img src="./img/b2c.jpg" id="b2c" />
+                    </div>
+                </div>
+            </section>
+            <!--优惠-->
+        </div>
+    </div>
+
+    <audio src="./img/JingleBells.mp3" id="audio" autoplay="autoplay" loop=""></audio>
+
+    <script type="text/javascript">
+    var audio = document.getElementById('audio');
+    audio.oncanplay = playmusic();
+
+    var firsttaped = 0;
+
+    function playmusic() {
+        $('html').on('touchstart', function() {
+            if (firsttaped == 0) {
+                audio.play();
+                firsttaped = 1;
+            }
+        });
+    };
+
+
+    document.body.ondrag = function() {
+        return false;
+    };
+    var content = document.querySelector("#mygift");
+    content.addEventListener("touchstart", function(e) {
+        e.preventDefault();
+        countClickedTimes();
+    })
+    var content2 = document.querySelector("#btnSendCode");
+    content2.addEventListener("touchstart", function(e) {
+        e.preventDefault();
+        sendMessage();
+    })
+
+    document.onreadystatechange = loading;
+
+    function loading() {
+        if (document.readyState == "complete") {
+            setTimeout(function() {
+                $(".loading").hide();
+
+            }, 0);
+        }
+    }
+
+
+    //随机数字
+    rnd.today = new Date();
+    rnd.seed = rnd.today.getTime();
+
+    function rnd() {
+        rnd.seed = (rnd.seed * 9301 + 49297) % 233280;
+        return rnd.seed / (233280.0);
+    };
+
+    function rand(number) {
+        return Math.ceil(rnd() * number);
+    };
+    //alert(rand(3));
+    irand = rand(3);
+
+    // 随机图片 
+    $("#irob").click(function() {
+        $(".at-person-no").html('<img src="./img/person' + irand + '.png"/>'); //抱礼物角色
+        $(".at-tx").html('<img src="./img/gifttx' + irand + '.png"/>'); //抱礼物角色
+    })
+
+    //清零
+    $(".cl").click(function() {
+        clearall();
+        $('.sendMessage').show();
+    });
+
+
+    //抢礼物
+
+    /*奖品按钮*/
+    function firstgame() {
+        if (hasgift == 0 && daynum == 0) { //没玩过	
+            $(".ngame").show();
+            setTimeout(function() {
+                $(".ngame").hide();
+            }, 2000);
+        } else {
+            //alert("以前玩过");
+            $("#index").hide();
+            $("#active").hide();
+            $("#prizes").hide();
+            $("#information").hide();
+            //	$("#giftpage").hide();
+            $("#description").hide();
+            $("#offer").hide();
+            $("#share").hide();
+            $("#giftpage").show();
+            $(".blankgift").hide();
+            $(".contianer").css("background", "url(./img/wbg.jpg) no-repeat bottom");
+            shareType = 2;
+        }
+    }
+
+
+
+
+    var times = 0;
+    var sclick = 0; //是否click挑战成功
+
+    function countClickedTimes() {
+
+        if (times > 19) {
+            //向后台发送处理数据
+
+            times = 0;
+            $.ajax({
+                type: "POST", //用POST方式传输
+                dataType: "JSON", //数据格式:JSON
+                url: 'probability.php', //目标地址
+                data: "",
+                error: function(XMLHttpRequest, textStatus, errorThrown) {},
+                success: function(data) {
+                    //countClickedTimes(data);
+                    var gifttype = 0;
+
+                    if (undefined != data) {
+                        gifttype = data.angle;
+                    }
+
+                    if (gifttype > 0) {
+                        clearall();
+                        $('.sendMessage').show();
+
+                        var prizenum = $("#prize" + gifttype);
+                        if (prizenum.length > 0) {
+                            prizenum.html(Number(prizenum.html()) + 1);
+                        } else {
+                            var num = $('.gifesample').children('li').length + 1;
+                            $('.gifesample').children('ul').append('<li><img src="./img/giftsample' + gifttype + '.png" /><span class="n' + num + '">X <b id="prize' + gifttype + '">1</b>份</span></li>');
+                        }
+                        setGift(gifttype);
+                        $(".blank").show();
+                        setTimeout(function() {
+                            $(".blank").hide();
+                        }, 3000);
+                        $(".success").show();
+                        daynum++;
+                        $(".giftdown").css("bottom", "-7%");
+                        sclick = 1;
+                        hasgift = 1;
+                        shareType = 1;
+                    }
+                    /*				else{//未取到礼物	 
+                    				}*/
+                }
+            });
+
+        } else if (times == 5) {
+            $(".at-tx").show().html('快~加油~快抢到了'); //加油文字
+        }
+
+        //$(".at-tx").html(times);
+        times++;
+    }
+
+
+
+    //时间条
+    var progressId = "timebar";
+
+    function setProgressBar(progress) {
+        if (progress) {
+            $("#timebarpa").css("width", String(progress) + "%");
+            $("#timebarpa").html(String(progress) + "%");
+        }
+    }
+
+    var i_ProgressBar = 100;
+
+    function doProgressBarLoading() {
+        if (i_ProgressBar > 100) {
+            alert("加载完毕?！！");
+            return;
+        }
+        if (i_ProgressBar <= 100) {
+            setProgressBar(i_ProgressBar);
+            i_ProgressBar = i_ProgressBar - 5;
+        }
+    }
+
+
+    var iheight = window.screen.height;
+    var width = window.screen.width;
+
+    var InterValObj; //timer变量，控制时间
+    var ISetProgressBar;
+    //var count = 10; //间隔函数，1秒执行
+    var curCount = 10; //当前剩余秒数
+    var code = ""; //验证码
+    var codeLength = 6; //验证码长度
+
+    function sendMessage() {
+
+        //alert(daynum);
+
+        if (daynum == 3) {
+            //alert("每天限玩3次。")
+            $(".cookiefail").show(); //.html('<img src="img/fail'+irand+'.png"/>');
+            $("#failboximg2").attr("src", "./img/cookiefail.png");
+            $(".blank").show();
+            setTimeout(function() {
+                $(".blank").hide();
+            }, 2000);
+
+            if (iheight == 1280) {
+                $(".at-hua1").removeClass("huahua");
+                $(".at-hua2").removeClass("huahua");
+                $(".at-hua3").removeClass("huahua");
+            };
+
+
+            return false;
+        }
+
+
+        $("#mygift").show();
+        $(".giftdown").animate({
+            bottom: "-20%"
+        }, 5000);
+        //    curCount = count;
+        var dealType; //验证方式
+
+        //产生验证码
+        for (var i = 0; i < codeLength; i++) {
+            code += parseInt(Math.random() * 9).toString();
+        }
+        //设置button效果，开始计时
+        // $("#btnSendCode").attr("disabled", "true");
+        $("#timebarpa").html(curCount);
+        InterValObj = window.setInterval(SetRemainTime, 500); //启动计时器，1秒执行2次
+
+
+        $('.sendMessage').hide();
+        //$('.sendMessage').css("bottom","50%");
+        $(".at-person-no").addClass("at-person");
+
+    }
+
+
+    function clearall() {
+        //alert('clearall!');
+        times = 0;
+        curCount = 10;
+        $(".at-person-no").removeClass("at-person");
+        i_ProgressBar = 100;
+        window.clearInterval(InterValObj);
+        $(".at-tx").html('<img src="./img/gifttx' + irand + '.png"/>'); //抱礼物角色文字
+        $("#mygift").hide();
+        $("#timebarpa").css("width", "100%");
+        $(".giftdown").animate({
+            bottom: "-7%"
+        });
+
+        //window.clearInterval(ISetProgressBar);
+    }
+
+
+
+    //timer处理函数
+    function SetRemainTime() {
+        if (curCount < 0.3) {
+            if (times < 20) {
+                $(".blank").show();
+                setTimeout(function() {
+                    $(".blank").hide();
+                }, 3000);
+
+                $(".failbox").show(); //.html('<img src="img/fail'+irand+'.png"/>');
+                $("#failboximg").attr("src", "./img/fail" + irand + ".png");
+
+
+                clearall();
+            }
+        } else {
+            doProgressBarLoading();
+            curCount = curCount - 0.5;
+            $("#timebarpa").html("" + curCount + "秒");
+        }
+    }
+
+
+
+
+
+
+    function hidefail() {
+        $(".failbox").hide();
+        setTimeout(function() {
+            $(".sendMessage").show();
+        }, 500);
+        $(".giftdown").css("bottom", "-7%");
+    }
+
+
+
+    function hidefail2() {
+        $(".cookiefail").hide();
+        //setTimeout(function() { 
+        $("#index").show();
+        $("#active").show();
+        $(".blank").hide();
+        //},500);
+    }
+
+
+
+    //抢礼物
+
+    //ipad
+    //alert(iheight;)
+    if (iheight == 480) { //iphone4屏幕高度;
+        $("#pinm").attr("src", "./img/i4-ipng.png");
+        $(".at-gift img").attr("src", "./img/gift.png");
+        // $(".at-gift img").attr("src","./img/i4-gift.png");
+        $("#success").attr("src", "./img/success.png");
+        $(".textarea").css({
+            "height": "815px"
+        });
+        $(".textpic3").css({
+            "height": "1330px"
+        });
+        $(".i-text").css({
+            "top": "22%"
+        });
+        $(".cosmgift img").css("height", "853px");
+        $("#giftpart").css("bottom", "-10%");
+        $(".cosmgift img").css("height", "853px");
+        $(".textpic").css("top", "11%");
+        $(".textpic1").css("top", "3%");
+        //$(".at-person-no").css("bottom","19%");
+        $("#b2c").after("<p> &nbsp;</p><p> &nbsp;</p><p> &nbsp;</p>");
+    } else if (iheight == 1024) { //ipad竖向屏幕高度;
+        $("#pinm").attr("src", "./img/ipad-ipng.png");
+        //$(".at-gift img").attr("src","./img/ipad-gift.png");
+        $(".at-gift img").attr("src", "./img/gift.png");
+        $("#success").attr("src", "./img/success.png");
+        $(".at-person-no").css("bottom", "34%");
+        $("#giftpart").css("bottom", "-11%");
+        $("#failboximg").css("top", "-15%");
+        $(".i-text").css("top", "22%");
+        $(".cosmgift img").css("height", "940px");
+        $(".textpic").css("top", "11%");
+        $(".textpic1").css("top", "3%");
+        $(".textpic3").css({
+            "height": "853px"
+        });
+        $(".textpic3 img").css("dispaly", "block");
+        $(".submit").css("margin", "20px 0 0 30px");
+        //$(".logo img").attr("src","./img/ipad-logo.png");
+        $("#b2c").after("<p> &nbsp;</p><p> &nbsp;</p>");
+        //$(".infoarea").css("left","20%");
+    } else if (iheight == 620) {
+        $("#pinm").attr("src", "./img/ipng.png");
+        $(".at-gift img").attr("src", "./img/gift.png");
+        $("#success").attr("src", "./img/success.png");
+        $(".textpic3").css({
+            "height": "1330px"
+        });
+        $(".at-person-no").css("bottom", "34%");
+        $("#giftpart").css("bottom", "0");
+    } else {
+        $("#pinm").attr("src", "./img/ipng.png");
+        $(".at-gift img").attr("src", "./img/gift.png");
+        $("#success").attr("src", "./img/success.png");
+        $(".textpic3").css({
+            "height": "1330px"
+        });
+        $(".at-person-no").css("bottom", "34%");
+        $("#giftpart").css("bottom", "0");
+        $(".textarea").css({
+            "height": "899px"
+        });
+    }
+
+    function infowrap() {
+            //个人资料页适配		
+            if (iheight == 480 || iheight == 1024 || iheight == 1280) { //iphone4屏幕高度
+                //alert("111")
+                $(".wrap").css("position", "absolute");
+            }
+        }
+        //ipad 横向屏幕高度
+
+    function orient() {
+            if (window.orientation == 90 || window.orientation == -90) {
+                //ipad、iphone横屏；Andriod竖屏  
+                alert("请使用竖屏操作")
+            }
+        }
+        //页面加载时调用  
+    $(function() {
+        orient();
+    });
+    //用户变化屏幕方向时调用  
+    $(window).bind('orientationchange', function(e) {
+        orient();
+    });
+
+    $(".success").click(function() {
+        setTimeout(function() {
+            $(".share").show();
+        }, 2000);
+    })
+    $("#infor1").click(function() {
+        var ssss = $("#taobaogift").css("display");
+        if (ssss == "block") {
+            $("#information").show();
+            $("#info-gift1").hide();
+            $("#info-gift2").show();
+            //alert(taobaogift)
+        } else {
+            $("#information").show();
+            $("#info-gift1").show();
+            $("#info-gift2").hide();
+            //alert(taobaogift)
+        }
+        infowrap(); //个人资料页适配
+
+        $("#prizes").hide();
+        $(".cosmgift").hide();
+    })
+
+
+    $("#taobaoID").focus(function() {
+        //	$("#moileMsg").html('');
+        if ($("#taobaoID").val() == "请输入您的淘宝账号ID") {
+            $("#taobaoID").val('');
+        }
+    });
+    $("#name").focus(function() {
+        //	$("#moileMsg").html('');
+        if ($("#name").val() == "请输入您的姓名") {
+            $("#name").val('');
+        }
+    });
+    $("#mobile").focus(function() {
+        //	$("#moileMsg").html('');
+        if ($("#mobile").val() == "请输入您的手机号码") {
+            $("#mobile").val('');
+        }
+    });
+    $("#address").focus(function() {
+        //	$("#moileMsg").html('');
+        if ($("#address").val() == "请输入您的地址") {
+            $("#address").val('');
+        }
+    });
+
+
+    //jquery 个人资料 |
+    function checkSubmit() {
+        if ($("#name").val() == "") {
+            alert("您的姓名不能为空！");
+            return false;
+        } else if (!$("#mobile").val().match(/^(\d{11})$/)) {
+            alert("手机号码格式不正确！");
+            return false;
+        } else if ($("#address").val() == "") {
+            alert("您的地址不能为空！");
+            return false;
+        } else {
+            $.ajax({
+                type: "POST", //用POST方式传输
+                dataType: "JSON", //数据格式:JSON
+                url: 'ajaxshake.php', //目标地址
+                data: {
+                    username: $("#name").val(),
+                    telphone: $("#mobile").val(),
+                    address: $("#address").val()
+                },
+                error: function(XMLHttpRequest, textStatus, errorThrown) {},
+                success: function(data) {
+
+                    /*		$("#name").val("请输入您的姓名");
+					$("#mobile").val("请输入您的手机号码");
+					$("#address").val("请输入您的地址");*/
+
+                    $("#information").hide();
+                    $("#share").hide();
+                    $("#share2").hide();
+                    $("#giftpage").show();
+                    $(".blankgift").show();
+                    setTimeout(function() {
+                        $(".blankgift").hide();
+                    }, 3000);
+                    $(".blank").hide();
+                    //	alert('个人资料保存成功!');
+                    shareType = 2;
+
+
+                }
+            });
+        }
+
+        infowrap(); //个人资料页适配	
+        return true;
+    }
+
+
+
+    //jquery 淘宝资料 |
+    function checkSubmit2() {
+        if ($("#taobaoID").val() == "") {
+            alert("您的淘宝账号ID不能为空！");
+            return false;
+        } else {
+            $.ajax({
+                type: "POST", //用POST方式传输
+                dataType: "JSON", //数据格式:JSON
+                url: 'ajaxshake.php', //目标地址
+                data: {
+                    tbid: $("#taobaoID").val()
+                },
+                error: function(XMLHttpRequest, textStatus, errorThrown) {},
+                success: function(data) {
+                    $("#information").hide();
+                    $("#share").hide();
+                    $("#share2").hide();
+                    $("#giftpage").show();
+                    $("#taobaoID").val($("#taobaoID").val());
+                    $(".blankgift").show();
+                    setTimeout(function() {
+                        $(".blankgift").hide();
+                    }, 3000);
+                    $(".blank").hide();
+                    shareType = 2;
+                }
+            });
+        }
+        infowrap(); //个人资料页适配	
+        return true;
+    }
+
+    function turnBack() {
+        $("#index").hide();
+        $("#active").show();
+        $("#prizes").hide();
+        $("#information").hide();
+        $("#giftpage").hide();
+        $("#description").hide();
+        $("#offer").hide();
+    }
+
+    function shareBox() {
+        $("#share2").show();
+    }
+
+    $("#share2 img").click(function() {
+        $("#share2").hide();
+    });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+{
+    "showFPS" : false,
+    "jsList" : [
+        "src/MyLoaderScene.js",
+        "src/resource.js",
+        "src/globals.js",
+        "src/GameStart.js",
+        "src/GameMain.js",
+        "src/GameEnd.js"
+    ]
+}

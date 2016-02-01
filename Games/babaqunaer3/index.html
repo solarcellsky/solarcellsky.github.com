@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>爸爸去哪儿3</title>
+<meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="full-screen" content="true"/>
+<meta name="screen-orientation" content="portrait"/>
+<meta name="x5-fullscreen" content="true"/>
+<meta name="360-fullscreen" content="true"/>
+<style>
+        body {
+            text-align: center;
+            background: #000000;
+            padding: 0;
+            border: 0;
+            margin: 0;
+            height: 100%;
+        }
+
+        html {
+            -ms-touch-action: none; /* Direct all pointer events to JavaScript code. */
+            overflow: hidden;
+        }
+
+        div, canvas {
+            display: block;
+            position: absolute;
+            margin: 0 auto;
+            padding: 0;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+<div style="position:relative;" id="gameDiv"></div>
+<script>var document_class = "Main";</script>
+<script src="launcher/hntv.js"></script>
+<p id="txt" style="position: absolute;z-index:9999;font-size: 14px;white-space:nowrap;color:#cfcfcf;text-align:center; width: 100%;bottom: 0px;margin-bottom:4px;">
+本页面由湖南卫视和快乐芒果互娱提供 火舞游戏</p>
+<script src="http://static.wanh5.com/js/wxhelper-1.0.0.js"></script>
+<script>
+    function setShare(str){
+        window['wxHelper'].update(
+                {
+                    title: '《爸爸去哪儿3》切切水果大作战，我爱挑衅，你敢来战？',
+                    desc: ""+str,
+                    img: 'http://hunantv.wanh5.com/babaqunaer3/share_icon.png',
+                    link: "http://hunantv.wanh5.com/babaqunaer3/"
+                }
+        );
+    }
+    setShare('《爸爸去哪儿3》切切水果大作战，我爱挑衅，你敢来战？');
+</script>
+<script src="launcher/egret_require.js"></script>
+<script src="launcher/egret_loader.js"></script>
+<script src="launcher/game-min.js?v=8"></script>
+<script>
+    apicode = "";
+    var support = [].map && document.createElement("canvas").getContext;
+    if (support) {
+        egret_h5.startGame();
+    }
+    else {
+        alert("Egret 不支持您当前的浏览器")
+    }
+</script>
+<div style="display:none;">
+<script type="text/javascript" src="http://tajs.qq.com/stats?sId=46495630" charset="UTF-8"></script>
+<script>
+            var _hmt = _hmt || [];
+            (function () {
+                var hm = document.createElement("script");
+                hm.src = "//hm.baidu.com/hm.js?9ec0e68ea9c16c4383f922f68fc5f95d";
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(hm, s);
+            })();
+        </script>
+<script type="text/javascript">
+var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+            document.write(unescape("%3Cspan id='cnzz_stat_icon_1253472040'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "w.cnzz.com/q_stat.php%3Fid%3D1253472040' type='text/javascript'%3E%3C/script%3E"));</script>
+</div>
+</body>
+</html>

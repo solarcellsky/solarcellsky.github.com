@@ -1,0 +1,44 @@
+/*清空默认设置*/
+* { margin: 0px; padding: 0px; outline: 0px; font-size: 100%; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); list-style:none; border:none; list-style:none;}
+a { text-decoration: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0.35);}
+html {margin:0px; padding:0px;  height: 100%; font-size: 100%; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;}
+body { margin: 0px; padding: 0px; width: 100%; height: 100%; line-height: 1.231; font-family: Microsoft YaHei; font-size: 14px; position: relative; min-height: 100%; -webkit-touch-callout: none; -webkit-box-orient: vertical; -webkit-box-align: stretch;}
+.relative { position: relative;}
+.absolute { position: absolute;}
+.hidden { display: none;}
+.block { display: block;}
+.vhidden {/*隐藏还占据位置*/visibility: hidden;}
+.share_popup{ display: none; position:absolute; top:0; left:0; z-index:1000; width:100%; height:auto;}
+
+/*提交信息页面*/
+#tjxx{ width:100%; height:auto; overflow:auto; display:none;}
+#bg_tjxx{ width:100%; height:auto; position:absolute; top:0; left:0;}
+#score{ position:absolute; font-size:20px; width:21%; left:57.8%;  text-align:center; color:#865311; }
+#phone{ position:absolute;  width:57%; left:21%;  font-size:20px; color:#865311; text-align:center; background-color:transparent;}
+#phone_tip{ position:absolute; width:100%; text-align:center; color:red; font-size:16px; display:none;}
+#btn_qd{ position:absolute; width:36.8%; left:31.6%;}
+
+/*提交成功*/
+/*#tjcg{ width:100%;  height:auto; overflow:auto; display:none;}
+#bg_tjcg{ width:100%; height:auto; position:absolute;}
+#btn_qd2{ width:21.7%; left:39.1%; position:absolute;}
+*/
+/*排行榜页面*/
+#phb{ width:100%; height:auto; overflow:auto; display:none;}
+#bg_phb{ width:100%; height:auto; position:absolute; top:0; left:0;}
+#list{ position:absolute; width:90%; margin-left:5%; overflow:auto; height:39%; font-size:14px;}
+#content li ul li{ display:inline-block; color:#714201; text-align:center; text-overflow:ellipsis;}
+.li1{ width:30%; white-space:nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis; overflow: hidden;  vertical-align:middle; font-weight:bold;}
+.li2{ width:35%; white-space:nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis; overflow: hidden;  vertical-align:middle; font-weight:bold;}
+.li3{ width:32%;  white-space:nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis; overflow: hidden;  vertical-align:middle; font-weight:bold;}
+.li_first{ line-height:210%; text-overflow:ellipsis;  vertical-align:middle;}
+.font{ font-size:16px;}
+#list2{ position:absolute; width:86%; margin-left:7%; font-size:14px;}
+#list2 li ul li{ display:inline-block; color:#714201; text-align:center; text-overflow:ellipsis; line-height:130%; font-weight:bold; } 
+#btn_return{ position:absolute; width:36.8%; left:31.6%;}
+
+
+
+
+
+

@@ -1,0 +1,372 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <meta charset="utf-8">
+    <title>今生无忧斑马线 圣诞狂欢摇不停</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/shakenum.js"></script>
+    <!--<script src="js/index.js"></script>-->
+    <script type="text/javascript" src="js/jquery.let_it_snow.js"></script>
+</head>
+
+<body>
+    <!--背景和logo-->
+
+    <div class="bg">
+        <img src="images/body_bg.png">
+
+        <!--<audio preload="preload"  id="car_audio" src="http://115.28.104.3:88/shake/js/shake.mp3" ></audio>-->
+
+        <canvas width="100%" height="100%" class="flare"></canvas>
+        <canvas width="100%" height="100%" class="snow"></canvas>
+        <canvas width="100%" height="100%" class="flake"></canvas>
+
+        <div class="irob"><img src="images/bt_main.png">
+            <i class="bt_top01" onClick="javascript:window.location.href='http://mp.weixin.qq.com/s?__biz=MzAxMDAzMDUzOA==&mid=202109379&idx=1&sn=0b8c29ce037c201a6a6335e157b3fcad#rd'"></i>
+            <i class="bt_top02" onClick="$('.my_prize').show();"></i>
+        </div>
+
+
+        <div class="gift_box05"><img src="images/box01.png">
+        </div>
+        <div class="gift_box">
+            <div class="gift_box01"><img src="images/box01.png">
+            </div>
+            <div class="gift_box02">
+                <em><img src="images/box04.png"></em>
+                <em style="float:right;"><img src="images/box02.png"></em>
+            </div>
+            <div class="gift_box03">
+                <em><img src="images/box03.png"></em>
+                <em><img src="images/box01.png"></em>
+                <em style="float:right; margin-right:0%;"><img src="images/box05.png"></em>
+            </div>
+            <div class="gift_box04">
+                <em><img src="images/box05.png"></em>
+                <em><img src="images/box02.png"></em>
+                <em style="float:right; margin-right:0%;"><img src="images/box04.png"></em>
+            </div>
+        </div>
+
+        <div class="bt_charts" onClick="$('.charts').show();"><img src="images/bt_charts.png">
+        </div>
+        <div class="bt_rule" onClick="$('.rule').show();"><img src="images/bt_rule.png">
+        </div>
+
+    </div>
+
+
+    <div class="prize">
+        <img src="images/tc_bg.png">
+        <i class="close"> <img src="images/close.png"></i>
+        <div class="prize_main">
+            <h1>恭喜你获得以下礼物</h1>
+            <div class="prize01">
+                <img src="images/gift.png">
+                <i class="bt_share" onClick="$('.share').show();"><img src="images/bt_share.png"></i>
+                <p>狂摇抢iphone6等豪礼！</p>
+                <i class="bt_again" onClick="$('.prize').hide();"><img src="images/bt_again.png"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="share" onClick="$('.share').hide();">
+        <img src="images/share.png">
+    </div>
+
+    <div class="my_prize">
+        <img src="images/tc_bg.png">
+        <i class="close"> <img src="images/close.png"></i>
+        <div class="prize_main">
+            <h1>你已经累计<br/>获得<b>10元</b>红包<br/>别忘了有钱大家赚</h1>
+            <div class="prize02">
+                <i class="bt_share" onClick="$('.share').show();"><img src="images/bt_Buddy.png"></i>
+                <p>狂摇抢iphone6等豪礼！</p>
+                <i class="bt_share" onClick="$('.prize_rule').show();"><img src="images/bt_prizes .png"></i>
+                <p>集齐10元兑换手机话费！</p>
+                <i class="bt_again" onClick="$('.my_prize').hide();"><img src="images/bt_Return.png"></i>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="rule">
+        <img src="images/tc_bg.png">
+        <i class="close"> <img src="images/close.png"></i>
+        <div class="rule_txt">
+            <p><b>活动时间：</b>即日起至2015年1月2日</p>
+            <p><b>兑奖时间：</b>即日起至2015年1月2日</p>
+            <p><b>活动规则：</b>
+                <br>1、每人每天可以摇动3次圣诞树，邀请小伙伴每人每天可以帮你摇3次！
+                <br>2、圣诞树摇动次数最多的前十名将获得斑马君送出的圣诞好礼。
+                <br>3、排行榜将在12月24日24:00截止统计，以统计数据为准，前三名的次数需超过100次才具有兑奖资格，其他不限。</p>
+            <p><b>红包及礼品兑换</b>
+                </br>
+                收到的红包将以手机话费的形式进行发放，请正确填写手机号码，红包将取整数金额兑换，10元起兑换，例如小明抢到103.3元红包，则可以兑换100元手机话费。排行榜前三名将不会获得话费奖励。</p>
+            <p><b>礼品发放</b>
+                </br>
+                手机话费将在1月5日前发放，实物礼品iPhone6将依据官网运货情况而定；其他礼品将在1月8日前寄出。</p>
+        </div>
+    </div>
+
+    <div class="prize_rule prize_rule01">
+        <img src="images/tc_bg.png">
+        <i class="close"> <img src="images/close.png"></i>
+        <div class="prize_main_rule">
+            <h1>兑奖规则：</h1>
+            <span>您可以兑换<br><b>iPhone6一台</b></span>
+            <div class="input_tel">
+                <img src="images/input.png">
+                <input type="text" class="tel" id="utel" onChange="checkForm()" value="请输入手机号码" onFocus="if (value =='请输入手机号码'){value =''}" onBlur="if (value ==''){value='请输入手机号码'}">
+            </div>
+            <div class="input_tel">
+                <img src="images/input.png">
+                <input name="q" type="text" class="address" value="请输入姓名+地址" onFocus="if (value =='请输入姓名+地址'){value =''}" onBlur="if (value ==''){value='请输入姓名+地址'}">
+            </div>
+            <p>
+                1、收到的红包将以手机话费的形式进行发放，取整数金额兑换，例如小明抢到103.3元红包，则可以兑换100元手机话费。
+                <br>2、实物奖品将与您核实后，直接邮寄到您填写的地址。</p>
+        </div>
+    </div>
+
+    <div class="prize_rule prize_rule02">
+        <img src="images/tc_bg.png">
+        <i class="close"> <img src="images/close.png"></i>
+        <div class="prize_main_rule">
+            <h1>兑奖规则：</h1>
+            <span>您可以兑换<br><b>50元话费</b></span>
+            <div class="input_tel">
+                <img src="images/input.png">
+                <input type="text" class="tel" id="utel" onChange="checkForm()" value="请输入手机号码" onFocus="if (value =='请输入手机号码'){value =''}" onBlur="if (value ==''){value='请输入手机号码'}">
+            </div>
+            <p>
+                1、收到的红包将以手机话费的形式进行发放，取整数金额兑换，例如小明抢到103.3元红包，则可以兑换100元手机话费。
+                <br>2、实物奖品将与您核实后，直接邮寄到您填写的地址。</p>
+        </div>
+    </div>
+
+
+    <div class="charts">
+        <img src="images/tc_bg.png">
+        <i class="close"> <img src="images/close.png"></i>
+        <div class="charts_main">
+            <h1>圣诞树摇动次数排行榜</h1>
+            <span>你的树已被摇动<b>8</b>次<br>好友排名第<b>20</b>位</span>
+        </div>
+
+        <div class="charts_tab">
+            <table>
+                <tr>
+                    <td width="30%">世界排名</td>
+                    <td width="30%">微信名</td>
+                    <td width="20%">次数</td>
+                    <td width="20%">奖品</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>卡卡</td>
+                    <td>36</td>
+                    <td><em class="small_img" onClick="$('.big_img').show();"><img src="images/prize01.png"></em>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>小一</td>
+                    <td>32</td>
+                    <td><em><img src="images/prize02.png"></em>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>lala</td>
+                    <td>30</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>may</td>
+                    <td>24</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>park</td>
+                    <td>50</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>豆豆</td>
+                    <td>52</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>天天</td>
+                    <td>21</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>大地皇者</td>
+                    <td>10</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>雪</td>
+                    <td>5</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>芳芳</td>
+                    <td>3</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>芳芳</td>
+                    <td>3</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>芳芳</td>
+                    <td>3</td>
+                    <td>&nbsp;</td>
+                </tr>
+            </table>
+
+            <div class="big_img" onClick="$('.big_img').hide();"><img src="images/prize01.png">
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+    $(document).ready(function() {
+        init();
+    });
+
+    $(document).ready(function() {
+
+        $("canvas.flare").let_it_snow({
+            windPower: 0,
+            speed: 0,
+            color: "#392F52",
+            size: 120,
+            opacity: 0.00000001,
+            count: 40,
+            interaction: false
+        });
+
+        $("canvas.snow").let_it_snow({
+            windPower: 3,
+            speed: 1,
+            count: 250,
+            size: 0
+        });
+
+        $("canvas.flake").let_it_snow({
+            windPower: -3,
+            speed: 1,
+            count: 20,
+            size: 10,
+            image: "images/white-snowflake.png"
+        });
+
+    });
+
+    var s;
+    s += " 屏幕分辨率的高：" + window.screen.height;
+    s += " 屏幕分辨率的宽：" + window.screen.width;
+    s += " 屏幕可用工作区高度：" + window.screen.availHeight;
+    s += " 屏幕可用工作区宽度：" + window.screen.availWidth;
+    s += " 你的屏幕设置是 " + window.screen.colorDepth + " 位彩色";
+    //alert(s);
+    //运行以上代码获取手机屏幕高度;
+    //iphone4 屏幕高度:480
+    //iphone5 屏幕高度:568
+    //iphone6 屏幕高度:667
+    //红米note2 屏幕高度:1280
+    //执行
+    var iheight = window.screen.height;
+    var iwidth = window.screen.width;
+    if (iheight == 480 && iwidth == 320) { //iphone4屏幕高度;
+        document.writeln("<style type=\"text/css\">");
+        document.writeln(".prize,.my_prize,.rule,.prize_rule,.charts{ top:30%;}");
+        document.writeln("</style>");
+        // alert('iphone4')
+        //}else if(iheight == 568){//iphone5屏幕高度;
+        // alert('iphone5')
+    }
+
+
+    $('.close').click(function() {
+        $('.prize').hide();
+        $('.my_prize').hide();
+        $('.rule').hide();
+        $('.prize_rule').hide();
+        $('.charts').hide();
+    });
+
+    $('.gift_box05').click(function() {
+        $('.prize').show();
+        $('.gift_box05').hide();
+    });
+
+    function checkForm() {
+        if (!document.getElementById || !document.createTextNode) return false;
+        var utel = document.getElementById("utel");
+        var str = utel.value;
+        var regPartton = /1[3-8]+\d{9}/;
+        if (!str || str == null) {
+            alert("手机号码不能为空！");
+            utel.focus();
+            return false;
+        } else if (!regPartton.test(str) || str.length > 11) {
+            alert("手机号码格式不正确！");
+            utel.focus();
+            return false;
+        }
+    }
+
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        WeixinJSBridge.call('showOptionMenu');
+        WeixinJSBridge.on('menu:share:appmessage', function(argv) {
+            WeixinJSBridge.invoke('sendAppMessage', {
+                "appid": "",
+                "img_url": "http://115.28.104.3:88/christ/images/share_img.jpg",
+                "img_width": "180",
+                "img_height": "180",
+                "link": window.location.href,
+                "desc": "一个人有几个蛋？摇一摇你就知道了 ",
+                "title": "圣诞狂欢，摇不要停，iphone6任你拿！"
+            }, function(res) {
+                report(link, fakeid, 1);
+            });
+        });
+        WeixinJSBridge.on('menu:share:timeline', function(argv) {
+            WeixinJSBridge.invoke('shareTimeline', {
+                "img_url": "http://115.28.104.3:88/christ/images/share_img.jpg",
+                "img_width": "180",
+                "img_height": "180",
+                "link": window.location.href,
+                "desc": "圣诞狂欢，摇不要停，iphone6任你拿！",
+                "title": "圣诞狂欢，摇不要停，iphone6任你拿！"
+            }, function(res) {});
+        });
+    });
+    </script>
+</body>
+
+</html>
