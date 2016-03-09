@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta id="viewport" name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <title>ViewPort</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="" rel="stylesheet">
+    <script type="text/javascript">
+    (function(doc, win) {
+        var docEl = doc.documentElement,
+            isIOS = navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),
+            dpr = isIOS ? Math.min(win.devicePixelRatio, 3) : 1,
+            dpr = window.top === window.self ? dpr : 1, //被iframe引用时，禁止缩放
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+        docEl.dataset.dpr = dpr;
+        var recalc = function() {
+            var width = docEl.clientWidth;
+            if (width / dpr > 750) {
+                width = 750 * dpr;
+            }
+            docEl.dataset.width = width
+            docEl.dataset.percent = 100 * (width / 750);
+            docEl.style.fontSize = 100 * (width / 750) + 'px';
+        };
+        recalc()
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+    })(document, window);
+    </script>
+</head>
+
+<body style="width: 7.5rem;margin:0 auto;padding: 0;">
+<h1 style="font-size: 0.5rem;background: #f0f0f0;margin: 0;padding: 0.5rem;">Hello World</h1>
+</body>
+
+</html>
