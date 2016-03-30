@@ -1,0 +1,82 @@
+{
+	"site":[
+		{"id":"","src":"images/intro/cover-gif.jpg"},
+		{"id":"","src":"images/intro/slogan.png"},
+		{"id":"","src":"images/intro/btn.png"},
+		{"id":"","src":"images/select/btn.png"},
+		{"id":"","src":"images/select/gameA.png"},
+		{"id":"","src":"images/select/gameB.png"},
+		{"id":"","src":"images/select/gameC.png"},
+		{"id":"","src":"images/select/tip.png"},
+		{"id":"","src":"images/select/tip-copy.gif"},
+		{"id":"","src":"images/guide/btn1.png"},
+		{"id":"","src":"images/guide/btn2.png"},
+		{"id":"","src":"images/guide/g-1.gif"},
+		{"id":"","src":"images/guide/g-2.gif"},
+		{"id":"","src":"images/guide/g-3.gif"},
+		{"id":"","src":"images/guide/guide1.jpg"},
+		{"id":"","src":"images/guide/guide2.jpg"},
+		{"id":"","src":"images/guide/guide3.jpg"},
+		{"id":"","src":"images/guide/xz1.png"},
+		{"id":"","src":"images/guide/xz2.png"}
+	],
+	"GameAqueue":[
+        {"id":"","src":"images/tuoluo/tl.png"},
+        {"id":"","src":"images/tuoluo/shijuan.png"},
+        {"id":"","src":"images/tuoluo/bg.jpg"},
+        {"id":"","src":"images/tuoluo/toufa.png"},
+        {"id":"","src":"images/tuoluo/quan.png"}
+
+	],
+	"GameBqueue":[
+		{"id":"","src":"images/tiehuan/back.jpg"},
+		{"id":"","src":"images/tiehuan/npc-girl0.png"},
+		{"id":"","src":"images/tiehuan/npc-girl1.png"},
+		{"id":"","src":"images/tiehuan/npc0.png"},
+		{"id":"","src":"images/tiehuan/npc1.png"},
+		{"id":"","src":"images/tiehuan/npc2.png"},
+		{"id":"","src":"images/tiehuan/npc3.png"},
+		{"id":"","src":"images/tiehuan/play0.png"},
+		{"id":"","src":"images/tiehuan/play1.png"},
+		{"id":"","src":"images/tiehuan/play10.png"},
+		{"id":"","src":"images/tiehuan/play11.png"},
+		{"id":"","src":"images/tiehuan/play12.png"},
+		{"id":"","src":"images/tiehuan/play13.png"},
+		{"id":"","src":"images/tiehuan/play14.png"},
+		{"id":"","src":"images/tiehuan/play2.png"},
+		{"id":"","src":"images/tiehuan/play3.png"},
+		{"id":"","src":"images/tiehuan/play4.png"},
+		{"id":"","src":"images/tiehuan/play5.png"},
+		{"id":"","src":"images/tiehuan/play6.png"},
+		{"id":"","src":"images/tiehuan/play7.png"},
+		{"id":"","src":"images/tiehuan/play8.png"},
+		{"id":"","src":"images/tiehuan/play9.png"},
+		{"id":"","src":"images/tiehuan/road0.png"},
+		{"id":"","src":"images/tiehuan/road1.png"},
+		{"id":"","src":"images/tiehuan/road2.png"},
+		{"id":"","src":"images/tiehuan/road3.png"},
+		{"id":"","src":"images/tiehuan/title.png"},
+		{"id":"","src":"images/tiehuan/ui_bar.png"},
+		{"id":"","src":"images/tiehuan/ui_btn.png"},
+		{"id":"","src":"images/tiehuan/mi.png"}
+	],
+
+	"GameCqueue":[
+		{"id":"","src":"images/tiaoma/ge.png"},
+		{"id":"","src":"images/tiaoma/bg.jpg"},
+		{"id":"","src":"images/tiaoma/boy.png"},
+		{"id":"","src":"images/tiaoma/boy2.png"},
+		{"id":"","src":"images/tiaoma/jump.png"},
+		{"id":"","src":"images/tiaoma/title.png"},
+		{"id":"","src":"images/tiaoma/yun-1.png"},
+		{"id":"","src":"images/tiaoma/yun-2.png"},
+		{"id":"","src":"images/tiaoma/yun-3.png"}
+		
+	]
+
+
+
+
+}
+
+

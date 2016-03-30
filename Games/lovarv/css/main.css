@@ -1,0 +1,1099 @@
+body,
+html,
+.wrap {
+    overflow: hidden;
+    width: 100%;
+    font-size: 12px;
+    height: 100%;
+    background-color: #000;
+    /*color: #fff;*/
+}
+
+body {
+    font-family: 'Microsoft YaHei', sans-serif;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+td {
+    height: 100%;
+    background: red;
+    vertical-align: middle;
+}
+
+table {
+    height: 20%;
+}
+
+button {
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    border-radius: 0;
+    border: 0;
+}
+
+@font-face {
+    font-family: 'hytt';
+    src: url('../fonts/hytt.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.loading {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../images/intro/bg.jpg);
+    background-size: cover;
+    font-family: 'hytt';
+    text-align: center;
+    font-size: 24px;
+    z-index: 1000;
+}
+
+.loading .load-ani {
+    width: 51.6%;
+    margin: 41% auto 0;
+}
+
+.l-txt {
+    margin-top: 7%;
+}
+
+.slider-wrap {
+    width: 100%;
+    height: 1000%;
+    overflow: hidden;
+    -webkit-transition: -webkit-transform 1s;
+}
+
+.section {
+    width: 100%;
+    height: 10%;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.mod {
+    position: absolute;
+    z-index: 1;
+}
+
+.section canvas {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+
+}
+
+.section .page {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.gamebox {
+    position: relative;
+    z-index: 11;
+    display: none;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: #7ec6b2;
+}
+.gamebox-1{
+    background-color: #7FC5B2;
+}
+.gamebox-2{
+    background-color: #7FC5B2;
+}
+
+.gamebox-3{
+    background-color: #7FC5B2;
+}
+
+.intro {
+    background: url(../images/intro/bg.jpg);
+    background-size: cover;
+}
+
+.intro .slogan {
+    width: 75.6%;
+    left: 11%;
+    top: 2%;
+    z-index: 2;
+}
+
+.intro .child {
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/intro/cover-gif.jpg);
+    background-repeat: no-repeat;
+    background-size: 200%;
+    -webkit-animation: child .2s steps(1) infinite;
+    bottom: 0;
+}
+
+@-webkit-keyframes child {
+    0% {
+        background-position: 0 bottom;
+    }
+    50% {
+        background-position: 100% bottom;
+    }
+    100% {
+        background-position: 0 bottom;
+    }
+}
+
+.game>.mod {
+    display: none;
+}
+
+.game .select-game {
+    display: block;
+}
+
+.intro .btn {
+    bottom: 4.5%;
+    left: 26%;
+    width: 44.8%;
+    z-index: 2;
+}
+
+.select-game {
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: url(../images/intro/bg.jpg);
+    background-size: cover;
+    overflow: hidden;
+}
+
+.select-game .tip {
+    width: 100%;
+}
+
+.select-game .unlocked {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 13;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+}
+
+.select-game .unlocked-con {
+    width: 73.2%;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+}
+
+.select-game .unlocked-con .date {
+    width: 22.8%;
+    left: 36%;
+    top: 60%;
+}
+
+.game-list {
+    width: 100%;
+    margin: 2% auto 0;
+    position: relative;
+}
+
+.game-list img {
+    width: 53%;
+    margin: 0 auto;
+}
+
+.game-list img.boxsize {
+    opacity: 0;
+}
+
+.game-list .swiper-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    overflow: visible;
+}
+
+.select-game .tip-copy {
+    width: 30%;
+    margin: 10% auto 0;
+}
+
+.game-guide {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+    background: url(../images/intro/bg.jpg);
+    background-size: cover;
+}
+
+.game-guide .guide {
+    z-index: 4;
+    width: 92%;
+    left: 4%;
+    bottom: 16%;
+    background: url(../images/guide/zh.png) 50% 99% no-repeat;
+    background-size: 100%;
+    -webkit-transform: translateY(100%);
+}
+
+.game-guide .show-guide {
+    -webkit-animation: guide-ani 1s forwards;
+}
+
+@-webkit-keyframes guide-ani {
+    0% {
+        -webkit-transform: translateY(100%);
+    }
+    100% {
+        -webkit-transform: translateY(0%);
+    }
+}
+
+.game-guide .guide img {
+    width: 96%;
+    margin: 0 auto;
+}
+
+.game-guide .guide .btn-box {
+    z-index: 10;
+    bottom: 6%;
+    left: 0;
+    width: 89%;
+    left: 6%;
+}
+
+.game-guide .guide .btn-box .btn1 {
+    float: left;
+    width: 40%;
+}
+
+.game-guide .guide .btn-box .btn2 {
+    float: right;
+    width: 58%;
+    position: relative;
+}
+
+.game-guide .guide .btn-box .btn2 .g {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+}
+
+.game-guide .guide .btn-box .btn2 .g-1 {
+    top: -5%;
+}
+
+.game-guide .guide .btn-box .btn2 .g-2 {
+    top: -8%;
+}
+
+.game-guide .guide .btn-box .btn2 .g-3 {
+    top: -10%;
+}
+
+.game-guide .zx1,
+.game-guide .zx2 {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+}
+
+.game-guide .zx2 {
+    z-index: 1;
+}
+
+
+.game-guide .guide .btn3{
+    right: 7%;
+    top: 21%;
+    z-index: 10;
+    width: 20.35%;
+}
+
+.game-result {
+    z-index: 12;
+}
+
+.game-result .result-1 {
+    /*   background: rgb(227, 242, 238);
+    background: -moz-radial-gradient(center, circle cover, rgba(227, 242, 238, 1) 0%, rgba(126, 197, 179, 1) 100%);
+    background: -webkit-radial-gradient(center, circle cover, rgba(227, 242, 238, 1) 0%, rgba(126, 197, 179, 1) 100%);
+    background: radial-gradient(circle at center, rgba(227, 242, 238, 1) 0%, rgba(126, 197, 179, 1) 100%);*/
+    background-color: #7dc5b2;
+}
+
+.game-result .result-2 {
+    background-color: #ffe660;
+}
+
+.game-result .result-3 {
+    background-color: #fe8687;
+}
+
+.game-info,
+.game-rank,.total-rank {
+    z-index: 13;
+    background: url(../images/intro/bg.jpg);
+    background-size: cover;
+}
+
+.game-info .title {
+    width: 34.53%;
+    left: 33%;
+    top: 2%;
+}
+
+.game-info .rule-box {
+    width: 87.5%;
+    margin: 8% auto 0;
+    position: relative;
+    background: url(../images/zhi.jpg);
+    background-size: 100%;
+    box-shadow: 5px 5px 0px rgba(4, 0, 0, 0.2);
+    padding: 10% 0 6% 0;
+}
+
+.game-info .rule-box .rule-con {
+    width: 90%;
+    font-size: 12px;
+    top: 22%;
+    left: 6%;
+    line-height: 16px;
+    margin: 0 auto;
+    overflow-y: auto;
+    padding: 5px;
+    max-height: 201px;
+    -webkit-overflow-scrolling: touch;
+}
+
+.info-form {
+    padding: 9% 0 10% 0;
+    position: relative;
+    width: 87.5%;
+    margin: 5% auto 0;
+    background: url(../images/zhi.jpg) 0% 70% no-repeat;
+    background-size: 100%;
+    box-shadow: 5px 5px 0px rgba(4, 0, 0, 0.2);
+    position: absolute;
+    left: 6.5%;
+    bottom: 5%;
+    z-index: 2;
+}
+
+.info-form .form-box {
+    width: 80%;
+    margin: 0 auto 0;
+    border: 1px solid #000;
+    padding: 2px;
+    position: relative;
+}
+
+.info-form .form-box input {
+    border: 1px solid #000;
+    display: block;
+    height: 35px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 0;
+    width: 100%;
+    padding-left: 70px;
+    font-family: 'hytt';
+    font-size: 24px;
+}
+
+.info-form .form-box .label {
+    position: absolute;
+    width: 63px;
+    left: 7px;
+    top: 11px;
+}
+
+.info-form .show-rank-btn {
+    width: 53%;
+    margin: 8% auto 0;
+}
+
+.game-rank {
+    z-index: 13;
+}
+
+.game-rank .title {
+    width: 47.5%;
+    left: 26.25%;
+    top: 1.5%;
+    z-index: 2;
+}
+
+.game-rank .rank-con {
+    width: 87.5%;
+    margin: 8% auto 0;
+    padding: 16% 0 4% 0;
+    background: url(../images/zhi.jpg);
+    background-size: 100%;
+    box-shadow: 5px 5px 0px rgba(4, 0, 0, 0.2);
+    position: relative;
+}
+
+.zk {
+    position: absolute;
+    border: 1px solid #000;
+    left: 3px;
+    right: 3px;
+    top: 3px;
+    bottom: 3px;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.zk::after {
+    position: absolute;
+    border: 1px solid #000;
+    left: 2px;
+    right: 2px;
+    top: 2px;
+    bottom: 2px;
+    content: '';
+}
+
+.rank-list {
+    border: 1px solid #000;
+    width: 76.5%;
+    margin: 0 auto 20px;
+}
+
+.rank-list .item {
+    border-bottom: 1px solid #000;
+    border-top: 1px solid #000;
+    padding: 0 2px;
+    margin-top: 2px;
+    overflow: hidden;
+}
+
+.rank-list .item:nth-child(1) {
+    border-top: 0;
+}
+
+.rank-list .item:nth-last-child(1) {
+    margin-bottom: 2px;
+    border-bottom: 0;
+}
+
+.rank-list .item .item-con {
+    overflow: hidden;
+}
+
+.rank-list .item span {
+    float: left;
+    border-left: 1px solid #000;
+    width: 20%;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5% 0;
+}
+
+.rank-list .item:nth-child(1) span {
+    border-top: 1px solid #000;
+}
+
+.rank-list .item:nth-last-child(1) span {
+    border-bottom: 1px solid #000;
+}
+
+.rank-list .bg-item span {
+    background-color: #ffd033;
+}
+
+.rank-list .item span:nth-child(2) {
+    width: 50%;
+}
+
+.rank-list .item span:nth-child(3) {
+    width: 30%;
+    border-right: 1px solid #000;
+}
+
+.rank-con .agin-btn {
+    width: 54%;
+    margin: 5% auto;
+}
+
+.game-rank .btn-box {
+    width: 87.5%;
+    margin: 6% auto 0;
+    overflow: hidden;
+    
+}
+
+.game-rank .btn-box .btn {
+    width: 47%;
+    float: left;
+}
+
+/*.game-rank .btn-box .show-share-guide {*/
+.game-rank .btn-box .show-page-add_tow {
+    float: right;
+}
+
+/*  */
+.add-page .btn-box {
+    position: absolute;;
+    width: 87.5%;
+    left: 6.25%;
+    top: 84%;
+    overflow: hidden;
+
+}
+
+.add-page .btn-box .btn {
+    width: 47%;
+    float: left;
+}
+
+.add-page .btn-box .show-share-guide {
+    float: right;
+}
+
+.add-page {
+    background-image: url("../images/addpage/page_bg.jpg");
+    background-size: cover;
+    display: none;
+    top: 0;
+    left: 0;
+}
+.game-rank {
+    display: none;
+    top: 0;
+    left: 0;
+}
+
+.game-result .result {
+    -webkit-transform: translateY(-100%);
+}
+
+.game-result .show-result {
+    -webkit-animation: show-result .5s forwards;
+}
+
+@-webkit-keyframes show-result {
+    from {
+        -webkit-transform: translateY(-100%);
+    }
+    to {
+        -webkit-transform: translateY(0%);
+    }
+}
+
+.game-result .result .result-con {
+    width: 98.4%;
+    margin: 2% auto 0;
+    position: relative;
+}
+
+.result .result-con .title {
+    width: 77.4%;
+    border: 1px solid #000;
+    top: 7%;
+    left: 11.29%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.result .result-con .title h3 {
+    font-size: 24px;
+    border-bottom: 1px solid #000;
+    padding: 3% 0;
+}
+
+.result .result-con .title h3 b {
+    color: #ffd033;
+}
+
+.result .result-con .title p {
+    font-size: 15px;
+    padding: 2% 0;
+    line-height: 18px;
+}
+
+.result .result-con .btn {
+    bottom: 8%;
+    width: 43.5%;
+    left: 28.25%;
+    display: none;
+}
+.result .result-con .btn-box_add {
+    position: absolute;
+    bottom: 8%;
+    left: 10%;
+    width: 80%;
+    overflow: hidden;
+}
+.result .result-con .btn-box_add .btn_add{
+    float: left;
+    width: 48%;
+}
+.result .result-con .btn-box_add .show-page-add{
+    float: right;
+}
+
+.result .result-con .btn-box{
+    position: absolute;
+    bottom: 8%;
+    left: 10%;
+    width: 80%;
+    overflow: hidden;
+    display: none;
+    
+    
+}
+.result .result-con .btn-box .btn2{
+    float: left;
+    width: 48%;
+}
+.result .result-con .btn-box .show-testderive{
+    float: right;
+}
+
+.testdrive {
+    background: url(../images/intro/bg.jpg);
+    background-size: cover;
+}
+
+.testdrive .title {
+    width: 49%;
+    margin: 5% auto 0;
+}
+
+.testdrive .form {
+    width: 81%;
+    margin: 5% auto 0;
+    position: relative;
+}
+
+.game-countdown {
+    display: none;
+    z-index: 11;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    font-family: 'hytt';
+    text-align: center;
+}
+
+.game-countdown p {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    left: 0;
+    top: 50%;
+    -webkit-transform: translateY(-80%);
+    font-size: 80px;
+}
+
+.game-countdown-mode-tip {
+    background-image: url(../images/tuoluo/yao.png);
+    background-position: 50% 40%;
+    background-repeat: no-repeat;
+    background-size: 43%;
+}
+
+.game-countdown-mode-tip p {
+    display: none;
+}
+
+.game-container {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.game-count {
+    top: 19%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-family: 'hytt';
+    font-size: 0;
+}
+
+.game-count p {
+    font-size: 75px;
+    letter-spacing: -2px;
+    position: relative;
+    display: inline-table;
+    color: #fff;
+    -webkit-text-stroke: 2.5px #4e7c70;
+    font-weight: bold;
+    text-shadow: 0 4px 1px rgba(0, 0, 0, 0.1);
+}
+
+.game-count sub {
+    top: 33px;
+    right: -22px;
+    width: 22px;
+    position: absolute;
+
+}
+.game-count-2 {
+    background-color: #ffe661;
+}
+.game-count-2 .game-count p{
+    -webkit-text-stroke: 2.5px #c06225;
+}
+.game-count-3 {
+    background-color: #fe8688;
+}
+.game-count-3 .game-count p{
+    -webkit-text-stroke: 2.5px #f55353;
+}
+
+.game-count-3 .game-count sub{
+    right: -25px;
+}
+.touch-layer{
+    left: 0;
+    top: 0;
+    z-index: 10;
+    display: none;
+    
+}
+.game-count-2 .touch-layer{
+    display: block;
+}
+
+.touch-layer .left-layer{
+    width: 50%;
+    left: 0;
+    -webkit-user-select: none;
+}
+.touch-layer .right-layer{
+    width: 50%;
+    right: 0;
+    -webkit-user-select: none;
+}
+.jump-btn{
+    width: 22%;
+    height: 23%;
+    left: 40%;
+    bottom: 7%;
+    display: none;
+
+}
+.game-count-3 .jump-btn{
+    display: block;
+}
+
+
+.game-load {
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    font-size: 24px;
+    font-family: 'hytt';
+    z-index: 20;
+    background: url(../images/intro/bg.jpg);
+    background-size: cover;
+}
+.game-laod-con{
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-80%);
+    left: 0;
+    width: 100%;
+}
+.formbox {
+    position: absolute;
+    top: 0;
+    left: 21%;
+    width: 77%;
+    height: 100%;
+}
+
+.formbox input {
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+    display: block;
+    height: 36%;
+    margin-top: 1%;
+    width: 100%;
+    font-weight: bold;
+    font-size: 14px;
+    min-height: 10px;
+}
+
+.formbox input.mobile {
+    margin-top: 10%;
+}
+
+.testdrive .btn-box {
+    width: 82%;
+    margin: 4% auto 0;
+    overflow: hidden;
+}
+
+.testdrive .btn-box .submit-btn {
+    float: left;
+    width: 57%;
+}
+
+.testdrive .btn-box .back-btn {
+    float: right;
+    width: 34%;
+}
+
+.testdrive .car-box {
+    position: relative;
+    width: 100%;
+    margin-top: 5%;
+}
+.testdrive .wenan {
+    position: relative;
+    width: 73%;
+    margin:3% auto 0
+}
+
+.testdrive .carimg {
+    width: 74.6%;
+    margin: 0% auto 0;
+}
+
+.testdrive .hand {
+    position: absolute;
+    right: 0;
+    top: 1%;
+    width: 22.3%;
+}
+
+.testdrive .hand2 {
+    right: auto;
+    left: 0;
+    -webkit-transform: rotateY(180deg);
+}
+
+.share-guide {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 100;
+    background-repeat: no-repeat;
+    background-position: 88% 5%;
+    display: none;
+}
+
+.share-guide-1 {
+    background-image: url(../images/share-guide-1.png);
+    background-size: 66.4%;
+}
+
+.share-guide-2 {
+    background-image: url(../images/share-guide-2.png);
+    background-size: 65%;
+}
+
+.share-guide-3 {
+    background-image: url(../images/share-guide-3.png);
+    background-size: 74%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.total-rank {
+    z-index: 13;
+    left: 0;
+    top: 0;
+    display: none;
+    
+}
+
+.total-rank .title {
+    width: 47.5%;
+    left: 26.25%;
+    top: 1.5%;
+    z-index: 2;
+}
+
+.total-rank .total-rank-con {
+    width: 87.5%;
+    margin: 8% auto 0;
+    padding: 16% 0 4% 0;
+    background: url(../images/zhi.jpg);
+    background-size: 100%;
+    box-shadow: 5px 5px 0px rgba(4, 0, 0, 0.2);
+    position: relative;
+}
+
+
+.total-rank .total-rank-con {
+    width: 87.5%;
+    margin: 8% auto 0;
+    padding: 16% 0 4% 0;
+    background: url(../images/zhi.jpg);
+    background-size: 100%;
+    box-shadow: 5px 5px 0px rgba(4, 0, 0, 0.2);
+    position: relative;
+}
+
+
+
+
+
+.total-rank-list {
+    border: 1px solid #000;
+    width: 76.5%;
+    margin: 0 auto;
+}
+
+.total-rank-list .item {
+    border-bottom: 1px solid #000;
+    border-top: 1px solid #000;
+    padding: 0 2px;
+    margin-top: 2px;
+    overflow: hidden;
+}
+
+.total-rank-list .item:nth-child(1) {
+    border-top: 0;
+}
+
+.total-rank-list .item:nth-last-child(1) {
+    margin-bottom: 2px;
+    border-bottom: 0;
+}
+
+.total-rank-list .item .item-con {
+    overflow: hidden;
+}
+
+.total-rank-list .item span {
+    float: left;
+    border-left: 1px solid #000;
+    width: 20%;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5% 0;
+}
+
+.total-rank-list .item:nth-child(1) span {
+    border-top: 1px solid #000;
+}
+
+.total-rank-list .item:nth-last-child(1) span {
+    border-bottom: 1px solid #000;
+}
+
+.total-rank-list .bg-item span {
+    background-color: #ffd033;
+}
+
+.total-rank-list .item span:nth-child(2) {
+    width: 50%;
+}
+
+.total-rank-list .item span:nth-child(3) {
+    width: 30%;
+    border-right: 1px solid #000;
+}
+
+.total-rank-con .agin-btn {
+    width: 54%;
+    margin: 5% auto;
+}
+
+.total-rank .btn-box {
+    width: 87.5%;
+    margin: 6% auto 0;
+    overflow: hidden;
+}
+
+.total-rank .btn-box .btn {
+    width: 47%;
+    float: left;
+}
+
+.total-rank .btn-box .show-share-guide {
+    float: right;
+}
+
+
+
+.total-rank .start-game-btn{
+    width: 54%;
+    margin: 5% auto;
+}
+
+
+
+
+
+
+
+
+
+
+.orientLayer {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMwAAAC5CAMAAABTEyCyAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAMiaVRYdFhNTDpjb20uYWRvYmUueG1wAAAAAAA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjMtYzAxMSA2Ni4xNDU2NjEsIDIwMTIvMDIvMDYtMTQ6NTY6MjcgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDUzYgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkQxMTdGQjVFODE3NjExRTU4Q0MxQjdCQkRENzIyNDYxIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkQxMTdGQjVGODE3NjExRTU4Q0MxQjdCQkRENzIyNDYxIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RDExN0ZCNUM4MTc2MTFFNThDQzFCN0JCREQ3MjI0NjEiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RDExN0ZCNUQ4MTc2MTFFNThDQzFCN0JCREQ3MjI0NjEiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz79nriFAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAqlQTFRFTGlx////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////xWgKGQAAAOJ0Uk5TAF5gFkBzMIDA0DoQUFfwHSugkCDgAQPXSAdwFbAFBgkKJFMttw9MQiMUGU43HB6UtIcpQ0ECaXhRWzY9qE8vn6+4Sf1USvFSDQRHG208unRijPapRfw0tktyCLW7sSGmiBPPIkYniyb0NfJj+jJdEmYlvdT5H+UR+NqkbDsuKjk/DIHhjp6FM2XoGMLs32jj/rPNODGtTVUXnVYad31756KYZ3pkvtx2lmqGq/vY5o/LfER+LFw+m6eq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);
+    background-repeat: no-repeat;
+    background-size: 30%;
+    background-position: 50% 50%;
+    background-color: #000;
+    display: none;
+}
+
+@media screen and (min-aspect-ratio: 13/8) {
+    #orientLayer {
+        display: block;
+    }
+}
+
+@media screen and (max-height: 420px) {
+    .game-result .result .result-con {
+        width: 90%;
+        margin-top: -5%;
+    }
+    .game-rank .btn-box,.total-rank .btn-box {
+        width: 80%;
+        margin-top: 3%;
+    }
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>和吴秀波对视5秒钟</title>
+		<meta name="viewport" content="target-densitydpi=320,width=640,user-scalable=no"/>
+		<meta name="format-detection" content="telephone=no" />
+		<!-- 微信分享 -->
+		<meta name="wxm:timeline_title" content="敢不敢和吴秀波对视5秒钟？">
+		<meta name="wxm:appmessage_title" content="敢不敢和吴秀波对视5秒钟？">
+		<meta name="wxm:appmessage_desc" content="已验证！有些人能拿走他150元！">
+		<!-- 分享缩略图，必须为绝对路径-->
+		<meta name="wxm:img_url" content="http://wximg.qq.com/wxp/moment/E1IXOmIPx/img/share.jpg">
+		<!-- 分享链接-->
+		<meta name="wxm:link" content="http://wximg.qq.com/wxp/moment/E1IXOmIPx/html/index.html">
+
+			<!--swiper皮肤-->
+		<link rel="stylesheet" href="css/swiper-3.1.0.min.css">
+			<!-- 自定义样式 -->
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<!-- 预加载视频 -->
+		<link rel="prerender" href="media/video1.mp4" />
+	</head>
+	<body>
+		<!-- <div ontouchend="bgm.toggle()" id="music"></div>
+		<div class="moved"><img class="movei" src="img/move.png"></div> -->
+		<!-- 舞台容器 -->
+		<div id="swiper-container" class="swiper-container hidden">			
+			<div class="swiper-wrapper">				
+				<div class="swiper-slide swiper-no-swiping loading">
+					<div class="move_text x-c">
+						<img src="img/load_text.png">
+					</div>
+					<div class="load_move">
+						<div class="move_car">
+							<img src="img/car.png">
+						</div>
+						<div class="move_lt1 ltr">
+							<img src="img/luntai.png">
+						</div>
+						<div class="move_lt2 ltr">
+							<img src="img/luntai.png">
+						</div>
+					</div>
+					<div class="loading_text x-c"><span>0%</span></div>
+					<div class="loading_wifi x-c">容量较小，没有wifi也能看</div>
+					<!-- 资源预加载 -->
+					<div class="preload">
+						<video preload="auto" src="media/video1.mp4"></video>
+						<img src="img/playerBtn.png">
+						<img src="img/pic_end.jpg">
+						<img src="img/pic_end1.png">
+						<img src="img/pointer.png">
+					</div>
+				</div>
+				<div class="swiper-slide swiper-no-swiping index">
+					<div class="video">
+						<video id="myVideo1" width="100%" height="100%" preload="auto" x-webkit-airplay="true" webkit-playsinline="true">
+							<source type="video/mp4" src="media/video1.mp4"/>
+						</video>
+					</div>
+					<div class="canvas">
+						<canvas id="myCanvas" class="myCanvas"></canvas>
+					</div>
+					<div class="drimg">
+						<img id="drawImg" src="img/pic_start.jpg">
+					</div>
+					<div class="startBtn">
+						<img class="c-c" src="img/playerBtn.png">
+					</div>
+					<div class="show">
+						<div class="show_pic">
+							<img src="img/pic_end.jpg">
+						</div>
+						<div class="show_move hxm">
+							<img src="img/pic_end1.png">
+						</div>
+						<div class="pointer">
+							<img class="pm" src="img/pointer.png">
+							<div class="point_t x-c">请点击</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>
+<!-- 微信分享js -->
+<!-- <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script> -->
+<script src="//wximg.gtimg.com/wxp/libs/wxmoment/0.0.4/wxmoment.min.js"></script>
+	<!--jq2.1.1，含tap事件-->
+<script src="js/jquery-2.1.1.min.js" ></script>
+	<!-- swiper3.0 -->
+<script src="js/swiper-3.1.0.min.js"></script>
+	<!--pace插件-->
+<script  src="js/pace-1.0.0.min.js"></script>
+<!-- 自定义外部js -->
+<!--<script src="script/bgm.js" ></script>-->
+<script src="js/index.js"></script>
+<!-- <script type="text/javascript" src="js/share.js"></script> -->

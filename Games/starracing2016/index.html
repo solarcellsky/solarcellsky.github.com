@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <title>送明星到片场 领319现金</title>
+    <link rel="stylesheet" type="text/css" href="public/index.css">
+    <link rel="stylesheet" href="public/modal.css">
+    <script type="text/javascript">
+    ! function(e, n) {
+        "use strict";
+        e.UEM = e.UEM || {}, e.UEM.perf = n()
+    }(this, function() {
+        "use strict";
+
+        function e() {
+            g.uaeId && !i() && c()
+        }
+
+        function n(e) {
+            var n;
+            e = g.beforeHandleError(e) || e, g.uaeId && !r(o(e)) && (n = {
+                app: "uae" + g.uaeId,
+                path: encodeURIComponent(p.location.pathname + p.location.hash).substring(0, 50),
+                err_msg: encodeURIComponent(o(e)).substring(0, 1999),
+                err_file: t(e.filename),
+                err_line: e.lineno || "",
+                err_col: e.colno || "",
+                err_type: encodeURIComponent(e.error && e.error.name || ""),
+                err_custom_key: encodeURIComponent(p.location.hash || "").substring(0, 50)
+            }, u(a(n)))
+        }
+
+        function r(e) {
+            return e.toLowerCase().indexOf("script error") >= 0 ? !0 : !1
+        }
+
+        function t(e) {
+            return e ? e : encodeURIComponent("filename is empty<br>ua:" + window.navigator.userAgent).substring(0, 1999)
+        }
+
+        function o(e) {
+            try {
+                return (e.error && e.error.stack || e.message || "").replace(/\r/g, "").replace(/\n/g, " <br> ").replace(/\\/g, "/")
+            } catch (n) {
+                return n.message || ""
+            }
+        }
+
+        function a(e) {
+            var n = p.location.href,
+                r = p.location.host,
+                t = e.err_file;
+            return t.length > 0 && -1 !== t.indexOf(r) && (t = 0 === n.indexOf("https") ? t.substring(8 + r.length, t.length) : t.substring(7 + r.length, t.length)), e.err_file = encodeURIComponent(t), e
+        }
+
+        function i() {
+            return Math.random() > g.percent ? !0 : void 0
+        }
+
+        function c() {
+            if (p.performance && p.performance.timing) {
+                var e = p.performance.timing,
+                    n = +new Date;
+                e.loadEventStart ? s(e, n) : p.addEventListener("load", function() {
+                    s(e, n)
+                })
+            }
+        }
+
+        function s(e, n) {
+            var r = e.navigationStart;
+            f("app", "uae" + g.uaeId), f("path", g.path), f("dns", e.domainLookupEnd - e.domainLookupStart), f("conn", e.connectEnd - e.connectStart), f("req", e.responseStart - e.requestStart), f("res", e.responseEnd - e.responseStart), f("rt", e.responseEnd - r), f("ws", e.domLoading - r), f("fs", n - r), f("intr", e.domContentLoadedEventEnd - r), u(m)
+        }
+
+        function u(e) {
+            (new Image).src = d(e)
+        }
+
+        function d(e) {
+            var n = l;
+            for (var r in e) n += "&" + r + "=" + e[r];
+            return n += "&_t=" + (new Date).getTime()
+        }
+
+        function f(e, n) {
+            m[e] = n
+        }
+        var p = window,
+            l = "http://bench.uc.cn/c?uc_param_str=ntnwcpfr",
+            m = {},
+            g = {};
+        return window.JSTracker = window.JSTracker || [], setInterval(function() {
+            var e = JSTracker.length,
+                r = {},
+                t = {};
+            if (e > 0)
+                for (; e-- > 0;) t = JSTracker.shift(), r.message = t.msg || "", r.filename = t.filename || "", r.lineno = t.line || "", r.colno = t.col || "", n(r)
+        }, 1e3), e.config = function(e) {
+            g.uaeId = e.uaeId, g.path = e.path || "index", g.percent = e.percent || .1, g.beforeHandleError = e.beforeHandleError || function(e) {
+                return e
+            }
+        }, p.addEventListener("error", n), e
+    });
+    </script>
+</head>
+
+<body>
+    <!-- Components here -->
+    <div id="page-index" class="logic-page">
+        <div class="btn-go-rule">游戏规则</div>
+        <div class="slogan"></div>
+        <div class="game-desc">
+            <p>UC全明星探案</p>
+            <p>正在拍摄...</p>
+        </div>
+        <div class="banner-index"></div>
+        <div class="star-selector-title">你，想送哪位明星去片场?</div>
+        <ul class="wrap-star-selector">
+            <li id="star-option-1" class="line-1">
+                <span></span>
+            </li>
+            <li id="star-option-2" class="line-1">
+                <span></span>
+            </li>
+            <li id="star-option-3" class="line-1">
+                <span></span>
+            </li>
+            <li id="star-option-4" class="line-2">
+                <span></span>
+            </li>
+            <li id="star-option-5" class="line-2">
+                <span></span>
+            </li>
+        </ul>
+        <div class="dashed-top"></div>
+        <div class="dashed-left"></div>
+        <div class="dashed-right"></div>
+        <div class="btn-select-star button">就Ta了</div>
+    </div>
+    <div id="page-game" class="logic-page">
+        <div class="start-game"></div>
+        <div class="star-comment-wrap">
+            <div class="avatar"></div>
+            <div class="comment"></div>
+        </div>
+        <div class="game-status">
+            <div class="coin-num-before">
+                <div class="coin-num-0"></div>
+                <div class="coin-num-1"></div>
+            </div>
+            <div class="coin-num">0</div>
+            <div class="distance">
+                <label class="msg-remind">还剩</label>
+                <span></span>
+                <label class="msg-m">m</label>
+            </div>
+        </div>
+        <!-- <div class="ratio">
+        RATIO <span>2</span>
+    </div>
+    <div class="fps">
+        FPS <span>0</span>
+    </div> -->
+        <div class="sky"></div>
+        <div class="sketch"></div>
+        <canvas id="canvas-scene"></canvas>
+    </div>
+    <div id="page-result" class="logic-page">
+        <div class="header">
+            <div class="btn-go-rule"></div>
+        </div>
+        <div class="main-wrap">
+            <div class="container319">
+                <div class="wave">
+                    <div class="wave2"></div>
+                    <div class="wave1"></div>
+                    <span class="up">0</span>
+                </div>
+                <img class="cover" data-src="images/result/cover_02aed45.png">
+            </div>
+            <!-- 不兼容游戏黑名单 -->
+            <section id="wrap-blacklist" class="wrap-game-status">
+                <div class="game-status">
+                    <p>你的手机无法参加该活动</p>
+                    <p>可以换台手机体验哦</p>
+                </div>
+                <div class="action-fucking-wrap">
+                    <div class="btn-download button">下载UC浏览器</div>
+                </div>
+                <div class="msg-notice-collection">
+                    <p>在UC搜索【319】，集更多金币领现金</p>
+                    <p>3月19日 11:00/15:00/18:00 开抢</p>
+                </div>
+            </section>
+            <!-- 非微信非QQ用户 -->
+            <section id="wrap-others-browser" class="wrap-game-status">
+                <div class="game-status">
+                    <p>小主赛车成绩棒棒哒</p>
+                    <p>下载UC参与游戏，可以赢319现金喔</p>
+                </div>
+                <div class="action-fucking-wrap">
+                    <div class="btn-download button">下载UC浏览器</div>
+                </div>
+                <div class="msg-notice-collection">
+                    <p>在UC搜索【319】，集更多金币领现金</p>
+                    <p>3月19日 11:00/15:00/18:00 开抢</p>
+                </div>
+            </section>
+            <!-- IOS不能分享版本 -->
+            <section id="wrap-ios-no-share" class="wrap-game-status">
+                <div class="game-status">
+                    <p>你已经获得<span class="total-point"></span>金币</p>
+                    <p>还需<span class="remind-point"></span>金币即可获得319现金喔</p>
+                </div>
+                <div class="action-fucking-wrap">
+                    <div class="btn-download-latest button">升级最新版，邀朋友集金币</div>
+                    <div class="btn-again">
+                        <p>再玩一次</p>
+                        <p>（取最新成绩）</p>
+                    </div>
+                </div>
+            </section>
+            <!-- 已开启跑道，朋友接力已结束 -->
+            <section id="wrap-friend-created-finished" class="wrap-game-status">
+                <div class="game-status">
+                    <p><span class="nick-owner"></span> 已经获得<span class="total-point"></span>金币</p>
+                    <p>已经可以在UC摇一摇领现金啦</p>
+                </div>
+                <div class="action-fucking-wrap">
+                    <div class="btn-check-myself button">查看我的成绩</div>
+                </div>
+                <div class="msg-notice-collection">
+                    <p>在UC搜索【319】，集更多金币领现金</p>
+                    <p>3月19日 11:00/15:00/18:00 开抢</p>
+                </div>
+            </section>
+            <!-- 已开启跑道，来朋友页面接力 -->
+            <section id="wrap-friend-created" class="wrap-game-status">
+                <div class="game-status">
+                    <p><span class="nick-owner"></span> 已经获得<span class="total-point"></span>金币</p>
+                    <p>还需<span class="remind-point"></span>金币即可获得319现金喔</p>
+                </div>
+                <div class="action-fucking-wrap">
+                    <div class="btn-help button btn-left">帮Ta集金币</div>
+                    <div class="btn-check-myself button btn-right">查看我的成绩</div>
+                </div>
+                <div class="msg-notice-collection">
+                    <p>在UC搜索【319】，集更多金币领现金</p>
+                    <p>3月19日 11:00/15:00/18:00 开抢</p>
+                </div>
+            </section>
+            <!-- 未开启跑道，朋友接力已结束 -->
+            <section id="wrap-friend-finished" class="wrap-game-status">
+                <div class="game-status">
+                    <p><span class="nick-owner"></span> 已经获得<span class="total-point"></span>金币</p>
+                    <p>已经可以在UC摇一摇领现金啦</p>
+                </div>
+                <div class="action-fucking-wrap">
+                    <div class="btn-want-play button">我也要玩</div>
+                </div>
+                <div class="msg-notice-collection">
+                    <p>在UC搜索【319】，集更多金币领现金</p>
+                    <p>3月19日 11:00/15:00/18:00 开抢</p>
+                </div>
+            </section>
+            <!-- 未开启跑道，来朋友页面帮接力 -->
+            <section id="wrap-friend" class="wrap-game-status">
+                <div class="game-status">
+                    <p><span class="nick-owner"></span> 已经获得<span class="total-point"></span>金币</p>
+                    <p>还需<span class="remind-point"></span>金币即可获得319现金喔</p>
+                </div>
+                <div class="action-fucking-wrap">
+                    <div class="btn-help btn-left">帮Ta集金币</div>
+                    <div class="btn-want-play btn-right">我也要玩</div>
+                </div>
+                <div class="msg-notice-collection">
+                    <p>在UC搜索【319】，集更多金币领现金</p>
+                    <p>3月19日 11:00/15:00/18:00 开抢</p>
+                </div>
+            </section>
+            <!-- 已满足获奖资格 -->
+            <section id="wrap-finished" class="wrap-game-status">
+                <div class="game-status">
+                    <p>你已经获得<span class="total-point"></span>金币</p>
+                    <p>点击下方按钮去领现金</p>
+                </div>
+                <div class="action-fucking-wrap">
+                    <div class="btn-go-draw btn-left btnRock">去领现金</div>
+                    <div class="btn-share-again btn-right">继续分享</div>
+                </div>
+                <div class="msg-notice-collection">
+                    <p>在UC搜索【319】，集更多金币领现金</p>
+                    <p>3月19日 11:00/15:00/18:00 开抢</p>
+                </div>
+            </section>
+            <!-- 未满足获奖资格 -->
+            <section id="wrap-unfinished" class="wrap-game-status">
+                <div class="game-status">
+                    <p>你已经获得<span class="total-point"></span>金币</p>
+                    <p>还需<span class="remind-point"></span>金币即可获得319现金喔</p>
+                </div>
+                <div class="action-fucking-wrap">
+                    <div class="btn-share btn-left btnRock">找朋友集金币</div>
+                    <div class="btn-again btn-right">
+                        <p>挑战新成绩</p>
+                        <p>（取最高分）</p>
+                    </div>
+                </div>
+                <div class="msg-notice-collection">
+                    <p>在UC搜索【319】，集更多金币领现金</p>
+                    <p>3月19日 11:00/15:00/18:00 开抢</p>
+                </div>
+            </section>
+        </div>
+        <!-- 封神榜 -->
+        <div id="cmp-friends"></div>
+        <script type="text/tpl" id="tpl-cmp-friends">
+            <p class="title"></p>
+            <ul>
+                <% if (data) { data.forEach(function (d) { %>
+                    <li>
+                        <div class="avatar">
+                            <img src="<%= filter.avatar(d.avatar) %>">
+                        </div>
+                        <p class="time">
+                            <%= format(d.createTime, 'MM月DD日 HH:mm') %>
+                        </p>
+                        <p>
+                            <%= filter.nick(d.nick) %>获得了<span class="red"><%= d.record %></span>金币</p>
+                    </li>
+                    <% }); } else { %>
+                        <p>加载失败</p>
+                        <% } %>
+            </ul>
+        </script>
+    </div>
+    <section id="banner-go-uc">
+        <div class="banner-coin"></div>
+        <div class="banner-desc"></div>
+    </section>
+    <!-- Components end -->
+    <script type="text/javascript">
+    'use strict';
+    window.addEventListener('error', function() {
+        // alert('message:' + event.message + '`filename:' + event.filename + '`lineno:' + event.lineno);
+    });
+    </script>
+    <script type="text/javascript">
+    window.UEM.perf.config({
+        uaeId: '2023'
+    });
+    </script>
+    <script type="text/javascript">
+    'use strict';
+    window.__data = {};
+    window.CONF = {
+        RESOURCE: {
+            INDEX: [
+                'images/loading_brush_68847b2.png',
+                'images/loading_road_line_c1572e6.png',
+                'images/banner_index_9d842ac.png',
+                'images/slogan_475cec5.png',
+                'images/star/0.png',
+                'images/star/1.png',
+                'images/star/2.png',
+                'images/star/3.png',
+                'images/star/4.png'
+            ],
+            GAME: [
+                'images/game/car.png',
+                'images/game/street_lamp_left.png',
+                'images/game/street_lamp_right.png',
+                'images/game/passerby0.png',
+                'images/game/passerby1.png',
+                'images/game/passerby2.png',
+                'images/game/passerby3.png',
+                'images/game/passerby4.png',
+                'images/game/passerby5.png',
+                'images/game/building0_front.png',
+                'images/game/building0_side.png',
+                'images/game/building1_front.png',
+                'images/game/building1_side.png',
+                'images/game/building2_front.png',
+                'images/game/building2_side.png',
+                'images/game/building3_front.png',
+                'images/game/building3_side.png',
+                'images/game/building4_front.png',
+                'images/game/building4_side.png',
+                'images/game/building5_front.png',
+                'images/game/building5_side.png',
+                'images/game/building6_front.png',
+                'images/game/building6_side.png',
+                'images/game/building7_front.png',
+                'images/game/building7_side.png',
+                'images/game/tree_left.png',
+                'images/game/tree_right.png',
+                'images/game/gold_coin.png',
+                'images/game/traffic_cone_frames.png',
+                'images/game/peng.png',
+                'images/game/smoke_frames.png',
+                'images/game/smoke_less_frames.png',
+                'images/game/obstacle_car_0.png',
+                'images/game/obstacle_car_1.png',
+                'images/game/obstacle_car_2.png',
+                'images/game/obstacle_car_3.png',
+                'images/game/fog.png',
+                'images/star/0.png',
+                'images/star/1.png',
+                'images/star/2.png',
+                'images/star/3.png',
+                'images/star/4.png',
+                'images/start_game_ac968c6.png',
+                'images/sketch_78072ba.png',
+                'images/sky_8234540.png',
+                'images/coin_num_0_2912dab.png',
+                'images/coin_num_1_1cfc6d3.png',
+                'images/gesture_teach_6cd1f0d.png',
+                'images/gesture_point_3bf5135.png',
+                'images/mask_game_result_deb8363.png',
+                'images/game_fail_3f4c1f3.png',
+                'images/rule_coin_ba90ba2.png'
+            ],
+            GAME_MUSIC: [
+                'sound/bgm.mp3',
+                'sound/321go.mp3',
+                'sound/gameover.mp3'
+            ],
+            RESULT: [
+                'images/header_ae5ef07.png',
+                'images/result/coin_a3d8c7f.png',
+                'images/result/wave2_f0d4352.png',
+                'images/result/wave1_b39b6d5.png',
+                'images/result/cover_02aed45.png',
+                'images/mask_share_car_5bcd0ee.png',
+                'images/mask_share_smoke_4ad8d2e.png',
+                'images/share_icon_8b2f675.png'
+            ],
+            GO_UC: [
+                'images/banner_coin_43eb7fe.png'
+            ],
+            GO_UC_BANNER: [
+                'images/banner_go_main_7432fd6.png',
+                'images/banner_upgrade_b0172d3.png',
+                'images/banner_download_129ace0.png'
+            ]
+        },
+        RESOLUTION_RATIO: 2,
+        MAX_RESOLUTION_RATIO: 2,
+        MIN_RESOLUTION_RATIO: 1.4,
+        SEGMENT_NUM: 6,
+        YATTER_INTER: 4000,
+        COMMENT_DURATION: 1500,
+        TOTALL_DISTANCE: 1000,
+        UPDATE_GEAR_COMBO: 5,
+        LOST_GOLD_NUM: 1,
+        MIN_COIN_NUM: 20,
+        HOME_PAGE: window.location.origin + '/starracing2016/index?uc_param_str=dsdnfrpfbivesscpgimibtbmnisieijblauputogpintnw&uc_biz_str=S%3Acustom%7CC%3Atitlebar_hover_2',
+        WECHAT_NOTICE_PAGE: window.location.origin + '/starracing2016/wechat?uc_param_str=dsdnfrpfbivesscpgimibtbmnisieijblauputogpintnw',
+        RULE_PAGE: window.location.origin + 'rule.html',
+        MAIN_MEETING_PAGE: 'http://319.uc.cn/starplay/index?ato=main&uc_param_str=dspfssnieisivecpmibifrdnlagd&entry=flycar&uc_biz_str=S%3Acustom%7CC%3Atitlebar_hover_2',
+        STAR: [{
+            name: 'TFBOYS',
+            avatar: 'images/star/3.png',
+            avatarShare: 'images/star/3_share.png'
+        }, {
+            name: '黄晓明',
+            avatar: 'images/star/1.png',
+            avatarShare: 'images/star/1_share.png'
+        }, {
+            name: '陈乔恩',
+            avatar: 'images/star/2.png',
+            avatarShare: 'images/star/2_share.png'
+        }, {
+            name: '迪丽热巴',
+            avatar: 'images/star/4.png',
+            avatarShare: 'images/star/4_share.png'
+        }, {
+            name: '柳岩',
+            avatar: 'images/star/0.png',
+            avatarShare: 'images/star/0_share.png'
+        }],
+        DOWNLOAD_URL: {
+            "IOS": "https://itunes.apple.com/cn/app/uc-liu-lan-qi/id586871187?mt=8",
+            "IOS_WECHAT": "http://a.app.qq.com/o/simple.jsp?pkgname=com.UCMobile&g_f=992088",
+            "ANDROID": "http://pdds.ucweb.com/download/newest/UCBrowser/zh-cn/145/999/319feiche",
+            "ANDROID_WECHAT": "http://fusion.qq.com/cgi-bin/qzapps/unified_jump?appid=10936&from=singlemessage&isTimeline=false&actionFlag=0&params=pname%3Dcom.UCMobile%26versioncode%3D165%26channelid%3D%26actionflag%3D0&isappinstalled=0"
+        },
+        GAME_FPS: 35,
+        BACKGROUND_GAME_FPS: 10,
+        DEFAULT: {
+            OWNER_NICK: 'Ta',
+            NICK: '车友',
+            FIRST_OWNER_NICK: '车主',
+            AVATAR: 'http://image.uc.cn/s/uae/g/01/starracing2016/race/default_avatar.png'
+        },
+        MAX_NICK_NAME: 5,
+        LEAST_WAITING_TIME: 1700,
+        LATEST_UC_VERSION: {
+            IOS: '10.9.7',
+            ANDROID: '10.9.5.729'
+        },
+        IOS_NO_SHARE_VERSION: '10.9.5.',
+        WECHAT_BLOCK: false,
+        WECHAT_TIMELINE_BLOCK: false
+    };
+    window.CONF.GAME_POINT_TIMES = window.CONF.WECHAT_BLOCK ? 4 : 1;
+    window.CONF.GAME_POINT_TIMES = 4;
+    window.MSG = {
+        COMMENT: {
+            YATTER: [
+                '加油，么么哒',
+                '你是最棒的',
+                '天才赛车手',
+                '车技不错喔'
+            ],
+            CRASH: [
+                '啊哦，撞车了',
+                '小心，会扣分',
+                '别让我失望哦'
+            ]
+        },
+        REMIND: '【赢319现金活动】兑奖马上开始！',
+        SHARE: {
+            TITLE: '快来！我正在护送XXX去片场，有319现金！',
+            DESC: '城会玩！赛车送明星，就拿319现金！',
+            IMG_URL: 'http://rec.uc.cn/favicon.ico'
+        }
+    };
+    window.FILTER = {
+        getUserPageUrl: function(magic) {
+            return window.location.origin + '/starracing2016/index' +
+                '?magic=' + magic +
+                '&uc_param_str=dsdnfrpfbivesscpgimibtbmnisieijblauputogpintnw' +
+                '&uc_biz_str=S%3Acustom%7CC%3Atitlebar_hover_2';
+        },
+        nick: function(nick) {
+            if (!nick) {
+                return CONF.DEFAULT.NICK;
+            }
+            if (nick && nick.length > CONF.MAX_NICK_NAME) {
+                var i = 0,
+                    num = 0,
+                    patrn = /^[a-zA-Z0-9]$/;
+                while (i < nick.length) {
+                    if (patrn.exec(nick[i])) {
+                        num += 1;
+                    } else {
+                        num += 2;
+                    }
+                    if (num > CONF.MAX_NICK_NAME * 2) {
+                        break;
+                    }
+                    i++;
+                }
+                if (i !== nick.length) {
+                    return nick.substr(0, i) + '...';
+                }
+            }
+            return nick;
+        },
+        avatar: function(avatar) {
+            if (avatar && avatar.length) {
+                return avatar;
+            } else {
+                return CONF.DEFAULT.AVATAR;
+            }
+        },
+        inBlacklist: function() {
+            var ua = window.navigator.userAgent;
+            if (ua.indexOf('Coolpad 8720L') > 0 ||
+                ua.indexOf('SM-G3818') > 0 ||
+                ua.indexOf('SM-G3812') > 0) {
+                return true;
+            }
+            return false;
+        }
+    };
+    window.onload = UEM.perf;
+    </script>
+    <script type="text/javascript">
+    "use strict";
+    window.localStorage && !window.localStorage.getItem("needReloadForMiddlewareBug") && (window.localStorage.setItem("needReloadForMiddlewareBug", !0), setTimeout(function() {
+        window.UC_FLYCAR_APP_INITED || window.location.reload(!0)
+    }, 2e3));
+    </script>
+    <script type="text/javascript" src="public/index.js"></script>
+</body>
+
+</html>

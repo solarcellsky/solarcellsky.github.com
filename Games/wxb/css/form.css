@@ -1,0 +1,298 @@
+/*! Copyright©2008-2016 10101111.com All Rights Reserved.2016-03-28 */
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, "microsoft yahei";
+    font-size: 14px
+}
+
+.content {
+    position: absolute;
+    width: 640px;
+    height: 1008px;
+    overflow: hidden
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%
+}
+
+.swiper-wrapper {
+    -webkit-perspective: 1200px;
+    perspective: 1200px
+}
+
+.swiper-slide {
+    position: relative;
+    -webkit-transform-style: preserve-3d;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    background: url(../images/bg.jpg) no-repeat;
+    background-size: 100% 100%
+}
+
+.hidden {
+    visibility: hidden
+}
+
+.x-c,
+.w-c {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -webkit-backface-visibility: hidden
+}
+
+.y-c,
+.h-c {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -webkit-backface-visibility: hidden
+}
+
+.c-c {
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -webkit-backface-visibility: hidden
+}
+
+.pm {
+    animation: pm 1.2s ease-in-out infinite alternate;
+    -webkit-animation: pm 1.2s ease-in-out infinite alternate;
+    -webkit-backface-visibility: hidden
+}
+
+@-webkit-keyframes pm {
+    0% {
+        -webkit-transform: translateY(0px);
+        opacity: 1
+    }
+    100% {
+        -webkit-transform: translateY(-15px);
+        opacity: .6
+    }
+}
+
+.abs {
+    position: absolute
+}
+
+.rel {
+    position: relative
+}
+
+.page1 .title {
+    position: absolute;
+    width: 408px;
+    height: 170px;
+    top: 80px
+}
+
+.page1 .personal {
+    position: absolute;
+    width: 570px;
+    height: 332px;
+    top: 270px
+}
+
+.page1 .teleBlock {
+    position: absolute;
+    width: 318px;
+    height: 55px;
+    background: url(../images/telephone.png) no-repeat;
+    background-size: 100% 100%;
+    top: 605px
+}
+
+.page1 .teleBlock input {
+    position: absolute;
+    width: 220px;
+    height: 40px;
+    font-size: 24px;
+    color: #f4d499;
+    line-height: 40px;
+    display: inline-block;
+    border: solid 0;
+    background-color: rgba(0, 0, 0, 0);
+    left: 95px;
+    top: 10px;
+    text-align: center
+}
+
+.page1 .errorText {
+    position: absolute;
+    font-size: 20px;
+    color: #d9b37b;
+    top: 730px;
+    display: none
+}
+
+.page1 .startBtn {
+    position: absolute;
+    width: 320px;
+    height: 94px;
+    top: 700px
+}
+
+.page1 .logo {
+    position: absolute;
+    width: 120px;
+    height: 37px;
+    top: 20px;
+    right: 20px
+}
+
+.page2 .logo {
+    position: absolute;
+    width: 120px;
+    height: 37px;
+    top: 20px;
+    right: 20px
+}
+
+.page2 .title {
+    position: absolute;
+    width: 407px;
+    height: 160px;
+    top: 60px
+}
+
+.page2 .mess {
+    position: absolute;
+    width: 100%;
+    height: 35px;
+    font-size: 24px;
+    color: #d9b37b;
+    text-align: center;
+    line-height: 35px;
+    top: 230px
+}
+
+.page2 .mess span {
+    font-size: 24px;
+    color: #d9b37b;
+    line-height: 35px;
+    padding: 0 5px
+}
+
+.page2 .downloadBtn {
+    position: absolute;
+    width: 406px;
+    height: 52px;
+    top: 270px
+}
+
+.page2 .pointer {
+    position: absolute;
+    width: 152px;
+    height: 154px;
+    top: 250px;
+    left: 66%
+}
+
+.page2 .mess_b {
+    position: absolute;
+    width: 100%;
+    height: 35px;
+    font-size: 20px;
+    color: #d9b37b;
+    text-align: center;
+    line-height: 35px;
+    top: 330px
+}
+
+.page2 .video1 {
+    position: absolute;
+    width: 640px;
+    height: 400px;
+    top: 390px;
+    display: block
+}
+
+.page2 .video2 {
+    position: absolute;
+    width: 640px;
+    height: 400px;
+    top: 390px;
+    display: none
+}
+
+.page2 .vid_title {
+    position: absolute;
+    width: 550px;
+    height: 51px;
+    top: 800px
+}
+
+.page2 .vid_title .title1 {
+    position: absolute;
+    width: 266px;
+    height: 51px;
+    right: 0;
+    background: url(../images/xiubo.png) no-repeat;
+    background-position: bottom center
+}
+
+.page2 .vid_title .title1.tActive {
+    background: url(../images/xiubo1.png) no-repeat
+}
+
+.page2 .vid_title .title2 {
+    position: absolute;
+    width: 266px;
+    height: 51px;
+    left: 0;
+    background: url(../images/langman.png) no-repeat;
+    background-position: bottom center
+}
+
+.page2 .vid_title .title2.tActive {
+    background: url(../images/langman1.png) no-repeat
+}
+
+.page2 .code_text {
+    position: absolute;
+    width: 255px;
+    height: 19px;
+    bottom: 50px
+}
+
+.page2 .code_msk {
+    position: absolute;
+    width: 100%;
+    height: 423px;
+    z-index: 10;
+    bottom: -423px
+}
+
+.page2 .code_msk img {
+    position: absolute;
+    width: 100%;
+    height: 100%
+}
+
+.page2 .code_msk .closeBtn {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    z-index: 1;
+    top: 0;
+    right: 0
+}
+
+.msk {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, .4);
+    display: none
+}
+
+.msk .msk_img {
+    position: absolute
+}

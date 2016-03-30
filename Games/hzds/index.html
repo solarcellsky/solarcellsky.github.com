@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, minimal-ui" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="keywords" content="花样红颜 颜值有礼">
+    <meta name="description" content="花样红颜 颜值有礼">
+    <title>花样红颜 颜值有礼</title>
+    <!--<link rel="stylesheet" href="css/normalize.css">-->
+    <link rel="stylesheet" href="css/common.css">
+    <!--<link rel="stylesheet" href="css/swiper.min.css">-->
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/fakeloader.css">
+    <link rel="stylesheet" href="css/page1.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="phoenix">
+    <!--<div class="preload" style="height: 100%;background: url(images/loading2.gif) no-repeat center center;"></div>-->
+    <div class="fakeloader">
+        <div class="spinner3">
+            <div class="dot1"></div>
+            <div class="dot2"></div>
+        </div>
+    </div>
+    <div style="display: none" class="audio rotate">
+        <audio id="audio1" loop="loop" preload="auto">
+            <source type="audio/mpeg" src="audio/mp3.mp3">
+        </audio>
+    </div>
+    <div class="swiper-container pager_swiper" style="display: none;">
+        <div class="swiper-wrapper">
+            <section class="swiper-slide page1 page">
+                <div class="bg pab"></div>
+                <div class="white-box pab ani" swiper-animate-effect="fadeIn" swiper-animate-duration="3s" swiper-animate-delay="1s"></div>
+                <div class="flower pab ani" swiper-animate-effect="zoomIn" swiper-animate-duration="3s" swiper-animate-delay="2s"></div>
+                <div class="text_left pab ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="3s" swiper-animate-delay="2s"></div>
+                <div class="text_right pab ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="3s" swiper-animate-delay="2.5s"></div>
+                <div class="bottle pab"></div>
+                <!--<div class="tip pab"></div>-->
+                <div class="btns-wrap">
+                    <div class="btn ani" style="z-index: 9999;" swiper-animate-effect="bounceIn" swiper-animate-duration="2s" swiper-animate-delay="4s">快来测测你的颜值有多少
+                    </div>
+                </div>
+                <div class="logo pab">杭州大厦春季美妆节</div>
+                <div class="level lt pab ani leafX1" swiper-animate-effect="fadeIn" swiper-animate-duration="5s" swiper-animate-delay="0s"></div>
+                <div class="level lb pab ani leafX2" swiper-animate-effect="fadeIn" swiper-animate-duration="5s" swiper-animate-delay="0s"></div>
+                <div class="level rt pab ani leafX1" swiper-animate-effect="fadeIn" swiper-animate-duration="5s" swiper-animate-delay="0s"></div>
+                <div class="level rb pab ani leafX2" swiper-animate-effect="fadeIn" swiper-animate-duration="5s" swiper-animate-delay="0s"></div>
+                <div class="title pab"></div>
+                <canvas id="sakura" width="100%" height="100%"></canvas>
+                <!--<p class="test">-->
+                <!--1234567890快来测测你的颜值有多少上传照片测重新上传再测一次获得一次抽奖机会分享到朋友圈美妆节福利领取奖品据说上传正脸清晰照片测试更准确哦靠脸吃饭买东西不需要花钱-->
+                <!--据未完全统计勇于晒出颜值后，有效期美妆节福利杭州大厦春季美妆节分点击使用检测你的颜值系统正在全方位部置于画框中移动双指将面都会获得抽奖机会一次靠脸吃饭，买化妆品不需要花钱！这张脸给你打99分，少一分是怕你骄傲！你离奥斯卡只差一座小金人了哇塞！快来围观，这里有个美人哎呦！这么迷人呢！快到碗里来-->
+                <!--</p>-->
+                <!--<p class="test">使用规则：满<span class="man">100</span>元抵用</p>-->
+                <!--<p class="test">礼券说明：本券仅限杭州大厦A座1楼化妆品商场使</p>-->
+                <!--<p class="test">用，消费满<span class="man">100</span>元可抵用<span class="money">100</span>元，恕不叠加使用。</p>-->
+                <!--<p class="test">使用时间：2016.3.18-3.20</p>-->
+                <!--<p class="test">使用说明：付款时向收银员出示本券即可完成核销</p>-->
+                <!--<p class="test">杭州大厦春季美妆节返回上一页元化妆品抵用券</p>-->
+            </section>
+            <section class="swiper-slide page2 page ">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" xmlns:xml="http://www.w3.org/XML/1998/namespace" class="svg-defs">
+                    <defs>
+                        <pattern id='image' width="1" height="1" viewBox="0 0 100 100" preserveAspectRatio="none">
+                            <image xlink:href="images/pattern_141.gif" width="100" height="100" preserveAspectRatio="none"></image>
+                        </pattern>
+                        <g id="shape-butterfly-1">
+                            <path class="path" fill="" clip-rule="evenodd" d="M8.65,2.85c0.934-0.2,2.15-0.333,3.65-0.4c1.534-0.1,2.667-0.083,3.4,0.05
+    c1.533,0.267,3.45,0.767,5.75,1.5c2.466,0.8,4.35,1.617,5.65,2.45c2.066,1.2,3.883,2.383,5.45,3.55c2.567,2.1,4.35,3.8,5.35,5.1
+    l2.1,2.5c0.933,1.167,1.517,1.983,1.75,2.45c0.333,0.767,1.083,2.117,2.25,4.05c0.233,0.467,0.717,1.683,1.45,3.65
+    c0.733,2.067,1.2,3.45,1.4,4.15c0.467,1.733,0.917,3.767,1.35,6.1l0.4,3.85l-0.25-3.4c-0.6-5.967-1.267-10.25-2-12.85
+    c-0.733-2.434-2.167-5.467-4.3-9.1c-0.966-1.667-1.566-3-1.8-4c-0.233-0.933-0.1-1.267,0.4-1c1.3,0.733,2.917,3.867,4.85,9.4
+    c1.667,4.7,2.85,11.2,3.55,19.5c0.567,6.934,0.667,11.917,0.3,14.95l0.2,0.05c0.231,0,0.348-0.05,0.35-0.15v0.05l0.1,0.05v27.4
+    c-0.032-0.018-0.065-0.035-0.1-0.05v-0.05c-0.7,0.267-0.983,0.117-0.85-0.45c0.067-0.333,0.017-0.817-0.15-1.45
+    c-0.2-0.6-0.316-0.983-0.35-1.15l-0.5-1.65c-0.533-2.967-0.833-5.034-0.9-6.2c-0.1-1.533-0.133-2.4-0.1-2.6
+    c0-0.933,0.167-1.667,0.5-2.2c0.567-0.9,0.684-1.75,0.35-2.55c-0.167-0.367-0.367-0.6-0.6-0.7c-0.333-0.133-0.517,0.283-0.55,1.25
+    c-0.033,1.533-0.167,2.9-0.4,4.1c-0.1,2.3-0.267,3.684-0.5,4.15c-0.333,0.667-1.25,2.95-2.75,6.85c-1.167,2.8-2.233,4.817-3.2,6.05
+    c-0.9,1.2-1.583,2.1-2.05,2.7c-0.8,1-1.434,1.667-1.9,2c-2.067,1.333-3.633,2.067-4.7,2.2c-3.033,0.267-4.95,0.317-5.75,0.15
+    c-0.8-0.167-1.383-0.217-1.75-0.15c-0.533,0.1-1.033,0.45-1.5,1.05c-0.5,0.667-1.217,1.284-2.15,1.85
+    c-0.934,0.567-1.85,0.934-2.75,1.1c-2.467,0.433-4.45,0.25-5.95-0.55c-0.7-0.4-1.467-1.15-2.3-2.25c-0.6-0.867-1.033-1.567-1.3-2.1
+    c-0.267-0.667-0.483-1.483-0.65-2.45c-0.3-1.467-0.383-2.717-0.25-3.75c0.267-1.9,0.45-3.05,0.55-3.45
+    c0.233-1.233,0.566-2.333,1-3.3C9.25,77.45,9.767,76.4,10,76c0.667-1.233,1.55-2.583,2.65-4.05c1.1-1.434,2.184-2.583,3.25-3.45
+    c0.367-0.3,1.15-0.867,2.35-1.7c0.767-0.566,1.917-1.25,3.45-2.05c1.733-0.933,3.267-1.633,4.6-2.1
+    c2.133-0.733,4.534-1.467,7.2-2.2c0.467-0.1,1.517-0.3,3.15-0.6c0.967-0.233,0.4-0.4-1.7-0.5c-2.434-0.1-4.534-0.3-6.3-0.6
+    c-1.566-0.267-3.383-0.7-5.45-1.3c-2.8-0.8-4.467-1.317-5-1.55c-1.567-0.667-3.2-1.75-4.9-3.25c-1.733-1.533-3-3.1-3.8-4.7
+    c-0.533-1.067-0.967-2.434-1.3-4.1c-0.233-1.067-0.3-2.133-0.2-3.2c0.133-0.833,0.183-1.3,0.15-1.4v-0.6
+    c-2.467-3.233-3.983-5.433-4.55-6.6c-0.533-1.033-0.883-1.833-1.05-2.4c-0.3-0.867-0.466-1.85-0.5-2.95
+    c-0.033-2.367,0.034-4.117,0.2-5.25c0.3-1.034,0.483-1.8,0.55-2.3c0.167-0.867,0.034-1.533-0.4-2c-0.6-0.7-1.133-1.517-1.6-2.45
+    c-0.566-1.133-0.833-2.117-0.8-2.95c0.033-1.333,0.167-2.367,0.4-3.1c0.367-1.267,1.05-2.267,2.05-3
+    C4.417,4.25,6.483,3.317,8.65,2.85z" />
+                        </g>
+                    </defs>
+                </svg>
+                <section class="scene3d" style="top: 0;left: 0;">
+                    <div class="butterfly_container">
+                        <var class="rotate3d">
+                            <var class="scale">
+                                <var class="translate3d">
+                                    <var class="translate3d-1">
+                                        <figure class="butterfly">
+                                            <svg class="wing left" viewBox="0 0 50 100" class="icon shape-codepen">
+                                                <use class="left" xlink:href="#shape-butterfly-1"></use>
+                                            </svg>
+                                            <svg class="wing right" viewBox="0 0 50 100" class="icon shape-codepen">
+                                                <use class="left" xlink:href="#shape-butterfly-1"></use>
+                                            </svg>
+                                        </figure>
+                                    </var>
+                                </var>
+                            </var>
+                        </var>
+                    </div>
+                    <div class="butterfly_container" style="margin-top: -150px; margin-left: 140px;
+              -webkit-animation-duration: 5s;
+              -moz-animation-duration: 5s;
+              -ms-animation-duration: 5s;
+              -o-animation-duration: 5s;
+              animation-duration: 5s;">
+                        <var class="rotate3d">
+                            <var class="scale">
+                                <var class="translate3d">
+                                    <var class="translate3d-1">
+                                        <figure class="butterfly">
+                                            <svg class="wing left" viewBox="0 0 50 100" style="-webkit-animation-duration: .75s;
+                  -moz-animation-duration: .75s;
+                  -ms-animation-duration: .75s;
+                  -o-animation-duration: .75s;
+                  animation-duration: .75s;">
+                                                <use class="left" xlink:href="#shape-butterfly-1"></use>
+                                            </svg>
+                                            <svg class="wing right" viewBox="0 0 50 100" style="-webkit-animation-duration: .75s;
+                  -moz-animation-duration: .75s;
+                  -ms-animation-duration: .75s;
+                  -o-animation-duration: .75s;
+                  animation-duration: .75s;">
+                                                <use class="left" xlink:href="#shape-butterfly-1"></use>
+                                            </svg>
+                                        </figure>
+                                    </var>
+                                </var>
+                            </var>
+                        </var>
+                    </div>
+                    <div class="butterfly_container scale_half" style="margin-top: -10px; margin-left: 50px;
+              -webkit-animation-duration: 5s;
+              -moz-animation-duration: 5s;
+              -ms-animation-duration: 5s;
+              -o-animation-duration: 5s;
+              animation-duration: 5s;">
+                        <var class="rotate3d">
+                            <var class="scale">
+                                <var class="translate3d">
+                                    <var class="translate3d-1">
+                                        <figure class="butterfly">
+                                            <svg class="wing left" viewBox="0 0 50 100" style="-webkit-animation-duration: .75s;
+                  -moz-animation-duration: .75s;
+                  -ms-animation-duration: .75s;
+                  -o-animation-duration: .75s;
+                  animation-duration: .75s;">
+                                                <use class="left" xlink:href="#shape-butterfly-1"></use>
+                                            </svg>
+                                            <svg class="wing right" viewBox="0 0 50 100" style="-webkit-animation-duration: .75s;
+                  -moz-animation-duration: .75s;
+                  -ms-animation-duration: .75s;
+                  -o-animation-duration: .75s;
+                  animation-duration: .75s;">
+                                                <use class="left" xlink:href="#shape-butterfly-1"></use>
+                                            </svg>
+                                        </figure>
+                                    </var>
+                                </var>
+                            </var>
+                        </var>
+                    </div>
+                    <div class="butterfly_container scale_half" style="margin-top: 20px;
+              -webkit-animation-duration: 20s;
+              -moz-animation-duration: 20s;
+              -ms-animation-duration: 20s;
+              -o-animation-duration: 20s;
+              animation-duration: 20s;">
+                        <var class="rotate3d">
+                            <var class="scale">
+                                <var class="translate3d">
+                                    <var class="translate3d-1">
+                                        <figure class="butterfly">
+                                            <svg class="wing left" viewBox="0 0 50 100" style="-webkit-animation-duration: 1s;
+                  -moz-animation-duration: 1s;
+                  -ms-animation-duration: 1s;
+                  -o-animation-duration: 1s;
+                  animation-duration: 1s;">
+                                                <use class="left" xlink:href="#shape-butterfly-1"></use>
+                                            </svg>
+                                            <svg class="wing right" viewBox="0 0 50 100" style="-webkit-animation-duration: 1s;
+                  -moz-animation-duration: 1s;
+                  -ms-animation-duration: 1s;
+                  -o-animation-duration: 1s;
+                  animation-duration: 1s;">
+                                                <use class="left" xlink:href="#shape-butterfly-1"></use>
+                                            </svg>
+                                        </figure>
+                                    </var>
+                                </var>
+                            </var>
+                        </var>
+                    </div>
+                    <div class="butterfly_container scale_half" style="margin-top: 100px; margin-left: 50px;
+              -webkit-animation-duration: 20s;
+              -moz-animation-duration: 20s;
+              -ms-animation-duration: 20s;
+              -o-animation-duration: 20s;
+              animation-duration: 20s;">
+                        <var class="rotate3d">
+                            <var class="scale">
+                                <var class="translate3d">
+                                    <var class="translate3d-1">
+                                        <figure class="butterfly">
+                                            <svg class="wing left" viewBox="0 0 50 100" style="-webkit-animation-duration: 1.2s;
+                  -moz-animation-duration: 1.2s;
+                  -ms-animation-duration: 1.2s;
+                  -o-animation-duration: 1.2s;
+                  animation-duration: 1.2s;">
+                                                <use class="left" xlink:href="#shape-butterfly-1"></use>
+                                            </svg>
+                                            <svg class="wing right" viewBox="0 0 50 100" style="-webkit-animation-duration: 1.2s;
+                  -moz-animation-duration: 1.2s;
+                  -ms-animation-duration: 1.2s;
+                  -o-animation-duration: 1.2s;
+                  animation-duration: 1.2s;">
+                                                <use class="left" xlink:href="#shape-butterfly-1"></use>
+                                            </svg>
+                                        </figure>
+                                    </var>
+                                </var>
+                            </var>
+                        </var>
+                    </div>
+                    <div class="butterfly_container scale_third" style="margin-top: 150px;
+              -webkit-animation-duration: 20s;
+              -moz-animation-duration: 20s;
+              -ms-animation-duration: 20s;
+              -o-animation-duration: 20s;
+              animation-duration: 20s;">
+                        <var class="rotate3d">
+                            <var class="scale">
+                                <var class="translate3d">
+                                    <var class="translate3d-1">
+                                        <figure class="butterfly">
+                                            <svg class="wing left" viewBox="0 0 50 100" style="-webkit-animation-duration: .35s;
+                  -moz-animation-duration: .35s;
+                  -ms-animation-duration: .35s;
+                  -o-animation-duration: .35s;
+                  animation-duration: .35s;">
+                                                <use class="left" xlink:href="#shape-butterfly-1"></use>
+                                            </svg>
+                                            <svg class="wing right" viewBox="0 0 50 100" style="-webkit-animation-duration: .35s;
+                  -moz-animation-duration: .35s;
+                  -ms-animation-duration: .53s;
+                  -o-animation-duration: .35s;
+                  animation-duration: .35s;">
+                                                <use class="left" xlink:href="#shape-butterfly-1"></use>
+                                            </svg>
+                                        </figure>
+                                    </var>
+                                </var>
+                            </var>
+                        </var>
+                    </div>
+                    <div class="butterfly_container scale_third" style="margin-top: -250px; margin-left: 300px;
+              -webkit-animation-duration: 4s;
+              -moz-animation-duration: 4s;
+              -ms-animation-duration: 4s;
+              -o-animation-duration: 4s;
+              animation-duration: 4s;">
+                        <var class="rotate3d">
+                            <var class="scale">
+                                <var class="translate3d">
+                                    <var class="translate3d-1">
+                                        <figure class="butterfly">
+                                            <svg class="wing left" viewBox="0 0 50 100" style="-webkit-animation-duration: .45s;
+                  -moz-animation-duration: .45s;
+                  -ms-animation-duration: .45s;
+                  -o-animation-duration: .45s;
+                  animation-duration: .45s;">
+                                                <use class="left" xlink:href="#shape-butterfly-1"></use>
+                                            </svg>
+                                            <svg class="wing right" viewBox="0 0 50 100" style="-webkit-animation-duration: .45s;
+                  -moz-animation-duration: .45s;
+                  -ms-animation-duration: .45s;
+                  -o-animation-duration: .45s;
+                  animation-duration: .45s;">
+                                                <use class="left" xlink:href="#shape-butterfly-1"></use>
+                                            </svg>
+                                        </figure>
+                                    </var>
+                                </var>
+                            </var>
+                        </var>
+                    </div>
+                </section>
+                <div class="leaf1 pab ani leafPT2" swiper-animate-effect="fadeIn" swiper-animate-duration="5s" swiper-animate-delay="0s"></div>
+                <div class="leaf2 pab ani leafPB2" swiper-animate-effect="fadeIn" swiper-animate-duration="5s" swiper-animate-delay="0s"></div>
+                <div class="title pab"></div>
+                <div class="image-box pab">
+                    <div class="image-wrap pab" id="clipArea">
+                        <!--<img src="images/flower_03.png">-->
+                    </div>
+                    <div class="te1 pab xx1">据说上传正脸清晰
+                        <br/>照片测试更准确哦</div>
+                    <div class="te2 pab xx1"></div>
+                    <div class="te3 pab xx1">移动双指将面
+                        <br/>部置于画框中</div>
+                    <div class="te4 pab xx1">系统正在全方位
+                        <br/>检测你的颜值...</div>
+                    <canvas id="canvas01" class="swiper-no-swiping"></canvas>
+                    <div class="rotateBtn" id="rotateBtn">
+                        旋转照片
+                    </div>
+                </div>
+                <!--<div class="btn2 pab" id="rotate2">旋转</div>-->
+                <div class="btns-wrap">
+                    <div class="btn2" id="upload2">上传照片</div>
+                    <div class="btn3" id="clipBtn">确认上传</div>
+                    <div class="btn3" id="myBtn" style="display: none;">我的礼品</div>
+                    <input type="file" id="file" style="opacity: 0;">
+                </div>
+                <!--<div class="btn2 pab">测颜值</div>-->
+                <!--<div class="btn3 pab">重新上传</div>-->
+                <div class="logo pab">杭州大厦春季美妆节</div>
+                <img src="" fileName="" id="hit" style="display:none;z-index: 9">
+            </section>
+            <section class="swiper-slide page3 page">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" xmlns:xml="http://www.w3.org/XML/1998/namespace" class="svg-defs">
+                    <defs>
+                        <pattern id='image' width="1" height="1" viewBox="0 0 100 100" preserveAspectRatio="none">
+                            <image xlink:href="images/pattern_141.gif" width="100" height="100" preserveAspectRatio="none"></image>
+                        </pattern>
+                        <g id="shape-butterfly-1">
+                            <path class="path" fill="" clip-rule="evenodd" d="M8.65,2.85c0.934-0.2,2.15-0.333,3.65-0.4c1.534-0.1,2.667-0.083,3.4,0.05
+    c1.533,0.267,3.45,0.767,5.75,1.5c2.466,0.8,4.35,1.617,5.65,2.45c2.066,1.2,3.883,2.383,5.45,3.55c2.567,2.1,4.35,3.8,5.35,5.1
+    l2.1,2.5c0.933,1.167,1.517,1.983,1.75,2.45c0.333,0.767,1.083,2.117,2.25,4.05c0.233,0.467,0.717,1.683,1.45,3.65
+    c0.733,2.067,1.2,3.45,1.4,4.15c0.467,1.733,0.917,3.767,1.35,6.1l0.4,3.85l-0.25-3.4c-0.6-5.967-1.267-10.25-2-12.85
+    c-0.733-2.434-2.167-5.467-4.3-9.1c-0.966-1.667-1.566-3-1.8-4c-0.233-0.933-0.1-1.267,0.4-1c1.3,0.733,2.917,3.867,4.85,9.4
+    c1.667,4.7,2.85,11.2,3.55,19.5c0.567,6.934,0.667,11.917,0.3,14.95l0.2,0.05c0.231,0,0.348-0.05,0.35-0.15v0.05l0.1,0.05v27.4
+    c-0.032-0.018-0.065-0.035-0.1-0.05v-0.05c-0.7,0.267-0.983,0.117-0.85-0.45c0.067-0.333,0.017-0.817-0.15-1.45
+    c-0.2-0.6-0.316-0.983-0.35-1.15l-0.5-1.65c-0.533-2.967-0.833-5.034-0.9-6.2c-0.1-1.533-0.133-2.4-0.1-2.6
+    c0-0.933,0.167-1.667,0.5-2.2c0.567-0.9,0.684-1.75,0.35-2.55c-0.167-0.367-0.367-0.6-0.6-0.7c-0.333-0.133-0.517,0.283-0.55,1.25
+    c-0.033,1.533-0.167,2.9-0.4,4.1c-0.1,2.3-0.267,3.684-0.5,4.15c-0.333,0.667-1.25,2.95-2.75,6.85c-1.167,2.8-2.233,4.817-3.2,6.05
+    c-0.9,1.2-1.583,2.1-2.05,2.7c-0.8,1-1.434,1.667-1.9,2c-2.067,1.333-3.633,2.067-4.7,2.2c-3.033,0.267-4.95,0.317-5.75,0.15
+    c-0.8-0.167-1.383-0.217-1.75-0.15c-0.533,0.1-1.033,0.45-1.5,1.05c-0.5,0.667-1.217,1.284-2.15,1.85
+    c-0.934,0.567-1.85,0.934-2.75,1.1c-2.467,0.433-4.45,0.25-5.95-0.55c-0.7-0.4-1.467-1.15-2.3-2.25c-0.6-0.867-1.033-1.567-1.3-2.1
+    c-0.267-0.667-0.483-1.483-0.65-2.45c-0.3-1.467-0.383-2.717-0.25-3.75c0.267-1.9,0.45-3.05,0.55-3.45
+    c0.233-1.233,0.566-2.333,1-3.3C9.25,77.45,9.767,76.4,10,76c0.667-1.233,1.55-2.583,2.65-4.05c1.1-1.434,2.184-2.583,3.25-3.45
+    c0.367-0.3,1.15-0.867,2.35-1.7c0.767-0.566,1.917-1.25,3.45-2.05c1.733-0.933,3.267-1.633,4.6-2.1
+    c2.133-0.733,4.534-1.467,7.2-2.2c0.467-0.1,1.517-0.3,3.15-0.6c0.967-0.233,0.4-0.4-1.7-0.5c-2.434-0.1-4.534-0.3-6.3-0.6
+    c-1.566-0.267-3.383-0.7-5.45-1.3c-2.8-0.8-4.467-1.317-5-1.55c-1.567-0.667-3.2-1.75-4.9-3.25c-1.733-1.533-3-3.1-3.8-4.7
+    c-0.533-1.067-0.967-2.434-1.3-4.1c-0.233-1.067-0.3-2.133-0.2-3.2c0.133-0.833,0.183-1.3,0.15-1.4v-0.6
+    c-2.467-3.233-3.983-5.433-4.55-6.6c-0.533-1.033-0.883-1.833-1.05-2.4c-0.3-0.867-0.466-1.85-0.5-2.95
+    c-0.033-2.367,0.034-4.117,0.2-5.25c0.3-1.034,0.483-1.8,0.55-2.3c0.167-0.867,0.034-1.533-0.4-2c-0.6-0.7-1.133-1.517-1.6-2.45
+    c-0.566-1.133-0.833-2.117-0.8-2.95c0.033-1.333,0.167-2.367,0.4-3.1c0.367-1.267,1.05-2.267,2.05-3
+    C4.417,4.25,6.483,3.317,8.65,2.85z" />
+                        </g>
+                    </defs>
+                </svg>
+                <section class="scene3d" style="top: 0;left: 0;">
+                    <div class="butterfly_container">
+                        <var class="rotate3d">
+                            <var class="scale">
+                                <var class="translate3d">
+                                    <var class="translate3d-1">
+                                        <figure class="butterfly">
+                                            <svg class="wing left" viewBox="0 0 50 100" class="icon shape-codepen">
+                                                <use class="left" xlink:href="#shape-butterfly-1"></use>
+                                            </svg>
+                                            <svg class="wing right" viewBox="0 0 50 100" class="icon shape-codepen">
+                                                <use class="left" xlink:href="#shape-butterfly-1"></use>
+                                            </svg>
+                                        </figure>
+                                    </var>
+                                </var>
+                            </var>
+                        </var>
+                    </div>
+                    <div class="butterfly_container" style="margin-top: -150px; margin-left: 140px;
+              -webkit-animation-duration: 5s;
+              -moz-animation-duration: 5s;
+              -ms-animation-duration: 5s;
+              -o-animation-duration: 5s;
+              animation-duration: 5s;">
+                        <var class="rotate3d">
+                            <var class="scale">
+                                <var class="translate3d">
+                                    <var class="translate3d-1">
+                                        <figure class="butterfly">
+                                            <svg class="wing left" viewBox="0 0 50 100" style="-webkit-animation-duration: .75s;
+                  -moz-animation-duration: .75s;
+                  -ms-animation-duration: .75s;
+                  -o-animation-duration: .75s;
+                  animation-duration: .75s;">
+                                                <use class="left" xlink:href="#shape-butterfly-1"></use>
+                                            </svg>
+                                            <svg class="wing right" viewBox="0 0 50 100" style="-webkit-animation-duration: .75s;
+                  -moz-animation-duration: .75s;
+                  -ms-animation-duration: .75s;
+                  -o-animation-duration: .75s;
+                  animation-duration: .75s;">
+                                                <use class="left" xlink:href="#shape-butterfly-1"></use>
+                                            </svg>
+                                        </figure>
+                                    </var>
+                                </var>
+                            </var>
+                        </var>
+                    </div>
+                    <div class="butterfly_container scale_half" style="margin-top: -10px; margin-left: 50px;
+              -webkit-animation-duration: 5s;
+              -moz-animation-duration: 5s;
+              -ms-animation-duration: 5s;
+              -o-animation-duration: 5s;
+              animation-duration: 5s;">
+                        <var class="rotate3d">
+                            <var class="scale">
+                                <var class="translate3d">
+                                    <var class="translate3d-1">
+                                        <figure class="butterfly">
+                                            <svg class="wing left" viewBox="0 0 50 100" style="-webkit-animation-duration: .75s;
+                  -moz-animation-duration: .75s;
+                  -ms-animation-duration: .75s;
+                  -o-animation-duration: .75s;
+                  animation-duration: .75s;">
+                                                <use class="left" xlink:href="#shape-butterfly-1"></use>
+                                            </svg>
+                                            <svg class="wing right" viewBox="0 0 50 100" style="-webkit-animation-duration: .75s;
+                  -moz-animation-duration: .75s;
+                  -ms-animation-duration: .75s;
+                  -o-animation-duration: .75s;
+                  animation-duration: .75s;">
+                                                <use class="left" xlink:href="#shape-butterfly-1"></use>
+                                            </svg>
+                                        </figure>
+                                    </var>
+                                </var>
+                            </var>
+                        </var>
+                    </div>
+                    <div class="butterfly_container scale_half" style="margin-top: 20px;
+              -webkit-animation-duration: 20s;
+              -moz-animation-duration: 20s;
+              -ms-animation-duration: 20s;
+              -o-animation-duration: 20s;
+              animation-duration: 20s;">
+                        <var class="rotate3d">
+                            <var class="scale">
+                                <var class="translate3d">
+                                    <var class="translate3d-1">
+                                        <figure class="butterfly">
+                                            <svg class="wing left" viewBox="0 0 50 100" style="-webkit-animation-duration: 1s;
+                  -moz-animation-duration: 1s;
+                  -ms-animation-duration: 1s;
+                  -o-animation-duration: 1s;
+                  animation-duration: 1s;">
+                                                <use class="left" xlink:href="#shape-butterfly-1"></use>
+                                            </svg>
+                                            <svg class="wing right" viewBox="0 0 50 100" style="-webkit-animation-duration: 1s;
+                  -moz-animation-duration: 1s;
+                  -ms-animation-duration: 1s;
+                  -o-animation-duration: 1s;
+                  animation-duration: 1s;">
+                                                <use class="left" xlink:href="#shape-butterfly-1"></use>
+                                            </svg>
+                                        </figure>
+                                    </var>
+                                </var>
+                            </var>
+                        </var>
+                    </div>
+                    <div class="butterfly_container scale_half" style="margin-top: 100px; margin-left: 50px;
+              -webkit-animation-duration: 20s;
+              -moz-animation-duration: 20s;
+              -ms-animation-duration: 20s;
+              -o-animation-duration: 20s;
+              animation-duration: 20s;">
+                        <var class="rotate3d">
+                            <var class="scale">
+                                <var class="translate3d">
+                                    <var class="translate3d-1">
+                                        <figure class="butterfly">
+                                            <svg class="wing left" viewBox="0 0 50 100" style="-webkit-animation-duration: 1.2s;
+                  -moz-animation-duration: 1.2s;
+                  -ms-animation-duration: 1.2s;
+                  -o-animation-duration: 1.2s;
+                  animation-duration: 1.2s;">
+                                                <use class="left" xlink:href="#shape-butterfly-1"></use>
+                                            </svg>
+                                            <svg class="wing right" viewBox="0 0 50 100" style="-webkit-animation-duration: 1.2s;
+                  -moz-animation-duration: 1.2s;
+                  -ms-animation-duration: 1.2s;
+                  -o-animation-duration: 1.2s;
+                  animation-duration: 1.2s;">
+                                                <use class="left" xlink:href="#shape-butterfly-1"></use>
+                                            </svg>
+                                        </figure>
+                                    </var>
+                                </var>
+                            </var>
+                        </var>
+                    </div>
+                    <div class="butterfly_container scale_third" style="margin-top: 150px;
+              -webkit-animation-duration: 20s;
+              -moz-animation-duration: 20s;
+              -ms-animation-duration: 20s;
+              -o-animation-duration: 20s;
+              animation-duration: 20s;">
+                        <var class="rotate3d">
+                            <var class="scale">
+                                <var class="translate3d">
+                                    <var class="translate3d-1">
+                                        <figure class="butterfly">
+                                            <svg class="wing left" viewBox="0 0 50 100" style="-webkit-animation-duration: .35s;
+                  -moz-animation-duration: .35s;
+                  -ms-animation-duration: .35s;
+                  -o-animation-duration: .35s;
+                  animation-duration: .35s;">
+                                                <use class="left" xlink:href="#shape-butterfly-1"></use>
+                                            </svg>
+                                            <svg class="wing right" viewBox="0 0 50 100" style="-webkit-animation-duration: .35s;
+                  -moz-animation-duration: .35s;
+                  -ms-animation-duration: .53s;
+                  -o-animation-duration: .35s;
+                  animation-duration: .35s;">
+                                                <use class="left" xlink:href="#shape-butterfly-1"></use>
+                                            </svg>
+                                        </figure>
+                                    </var>
+                                </var>
+                            </var>
+                        </var>
+                    </div>
+                    <div class="butterfly_container scale_third" style="margin-top: -250px; margin-left: 300px;
+              -webkit-animation-duration: 4s;
+              -moz-animation-duration: 4s;
+              -ms-animation-duration: 4s;
+              -o-animation-duration: 4s;
+              animation-duration: 4s;">
+                        <var class="rotate3d">
+                            <var class="scale">
+                                <var class="translate3d">
+                                    <var class="translate3d-1">
+                                        <figure class="butterfly">
+                                            <svg class="wing left" viewBox="0 0 50 100" style="-webkit-animation-duration: .45s;
+                  -moz-animation-duration: .45s;
+                  -ms-animation-duration: .45s;
+                  -o-animation-duration: .45s;
+                  animation-duration: .45s;">
+                                                <use class="left" xlink:href="#shape-butterfly-1"></use>
+                                            </svg>
+                                            <svg class="wing right" viewBox="0 0 50 100" style="-webkit-animation-duration: .45s;
+                  -moz-animation-duration: .45s;
+                  -ms-animation-duration: .45s;
+                  -o-animation-duration: .45s;
+                  animation-duration: .45s;">
+                                                <use class="left" xlink:href="#shape-butterfly-1"></use>
+                                            </svg>
+                                        </figure>
+                                    </var>
+                                </var>
+                            </var>
+                        </var>
+                    </div>
+                </section>
+                <div class="leaf1 pab ani leafPT3" swiper-animate-effect="fadeIn" swiper-animate-duration="5s" swiper-animate-delay="0s"></div>
+                <div class="leaf2 pab ani leafPB3" swiper-animate-effect="fadeIn" swiper-animate-duration="5s" swiper-animate-delay="0s"></div>
+                <div class="point-wrap">
+                    <div class="point-text" id="loadedNum">82</div>
+                    <canvas class="bg" id="canvasBg"></canvas>
+                    <canvas class="mask canvas" id="loadingProgress"></canvas>
+                    <div class="fen pab">分</div>
+                    <div class="particle pab"></div>
+                </div>
+                <div class="title score3 score">靠脸吃饭
+                    <br/>买化妆品不需要花钱！</div>
+                <div class="title score1 score">这张脸给你打99分
+                    <br/>少一分是怕你骄傲</div>
+                <div class="title score2 score">你离奥斯卡只差一座小金人了！</div>
+                <div class="title score4 score">哇塞！快来围观
+                    <br/>这里有个美人！</div>
+                <div class="title score5 score">哎呦！这么迷人呢！
+                    <br/>快到碗里来！</div>
+                <div class="btns-wrap">
+                    <div class="btn1 againBtn" style="position: relative;z-index: 99">再测一次</div>
+                    <div class="btn2 winBtn" style="position: relative;z-index: 99">获得一次抽奖机会</div>
+                    <div class="btn2 shareBtn" style="position: relative;z-index: 99">分享到朋友圈</div>
+                    <div class="btn2 linkBtn" style="position: relative;z-index: 99;display: block;">美妆节福利</div>
+                </div>
+                <div class="logo pab">杭州大厦春季美妆节</div>
+                <div class="share">
+                    <div class="icon"></div>
+                    <div class="te">据未完全统计：</div>
+                    <div class="te2">勇于晒出颜值后，都会获得抽奖机会一次</div>
+                </div>
+            </section>
+            <section class="swiper-slide page4 page">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" xmlns:xml="http://www.w3.org/XML/1998/namespace" class="svg-defs">
+                    <defs>
+                        <pattern id='image' width="1" height="1" viewBox="0 0 100 100" preserveAspectRatio="none">
+                            <image xlink:href="images/pattern_141.gif" width="100" height="100" preserveAspectRatio="none"></image>
+                        </pattern>
+                        <g id="shape-butterfly-1">
+                            <path class="path" fill="" clip-rule="evenodd" d="M8.65,2.85c0.934-0.2,2.15-0.333,3.65-0.4c1.534-0.1,2.667-0.083,3.4,0.05
+    c1.533,0.267,3.45,0.767,5.75,1.5c2.466,0.8,4.35,1.617,5.65,2.45c2.066,1.2,3.883,2.383,5.45,3.55c2.567,2.1,4.35,3.8,5.35,5.1
+    l2.1,2.5c0.933,1.167,1.517,1.983,1.75,2.45c0.333,0.767,1.083,2.117,2.25,4.05c0.233,0.467,0.717,1.683,1.45,3.65
+    c0.733,2.067,1.2,3.45,1.4,4.15c0.467,1.733,0.917,3.767,1.35,6.1l0.4,3.85l-0.25-3.4c-0.6-5.967-1.267-10.25-2-12.85
+    c-0.733-2.434-2.167-5.467-4.3-9.1c-0.966-1.667-1.566-3-1.8-4c-0.233-0.933-0.1-1.267,0.4-1c1.3,0.733,2.917,3.867,4.85,9.4
+    c1.667,4.7,2.85,11.2,3.55,19.5c0.567,6.934,0.667,11.917,0.3,14.95l0.2,0.05c0.231,0,0.348-0.05,0.35-0.15v0.05l0.1,0.05v27.4
+    c-0.032-0.018-0.065-0.035-0.1-0.05v-0.05c-0.7,0.267-0.983,0.117-0.85-0.45c0.067-0.333,0.017-0.817-0.15-1.45
+    c-0.2-0.6-0.316-0.983-0.35-1.15l-0.5-1.65c-0.533-2.967-0.833-5.034-0.9-6.2c-0.1-1.533-0.133-2.4-0.1-2.6
+    c0-0.933,0.167-1.667,0.5-2.2c0.567-0.9,0.684-1.75,0.35-2.55c-0.167-0.367-0.367-0.6-0.6-0.7c-0.333-0.133-0.517,0.283-0.55,1.25
+    c-0.033,1.533-0.167,2.9-0.4,4.1c-0.1,2.3-0.267,3.684-0.5,4.15c-0.333,0.667-1.25,2.95-2.75,6.85c-1.167,2.8-2.233,4.817-3.2,6.05
+    c-0.9,1.2-1.583,2.1-2.05,2.7c-0.8,1-1.434,1.667-1.9,2c-2.067,1.333-3.633,2.067-4.7,2.2c-3.033,0.267-4.95,0.317-5.75,0.15
+    c-0.8-0.167-1.383-0.217-1.75-0.15c-0.533,0.1-1.033,0.45-1.5,1.05c-0.5,0.667-1.217,1.284-2.15,1.85
+    c-0.934,0.567-1.85,0.934-2.75,1.1c-2.467,0.433-4.45,0.25-5.95-0.55c-0.7-0.4-1.467-1.15-2.3-2.25c-0.6-0.867-1.033-1.567-1.3-2.1
+    c-0.267-0.667-0.483-1.483-0.65-2.45c-0.3-1.467-0.383-2.717-0.25-3.75c0.267-1.9,0.45-3.05,0.55-3.45
+    c0.233-1.233,0.566-2.333,1-3.3C9.25,77.45,9.767,76.4,10,76c0.667-1.233,1.55-2.583,2.65-4.05c1.1-1.434,2.184-2.583,3.25-3.45
+    c0.367-0.3,1.15-0.867,2.35-1.7c0.767-0.566,1.917-1.25,3.45-2.05c1.733-0.933,3.267-1.633,4.6-2.1
+    c2.133-0.733,4.534-1.467,7.2-2.2c0.467-0.1,1.517-0.3,3.15-0.6c0.967-0.233,0.4-0.4-1.7-0.5c-2.434-0.1-4.534-0.3-6.3-0.6
+    c-1.566-0.267-3.383-0.7-5.45-1.3c-2.8-0.8-4.467-1.317-5-1.55c-1.567-0.667-3.2-1.75-4.9-3.25c-1.733-1.533-3-3.1-3.8-4.7
+    c-0.533-1.067-0.967-2.434-1.3-4.1c-0.233-1.067-0.3-2.133-0.2-3.2c0.133-0.833,0.183-1.3,0.15-1.4v-0.6
+    c-2.467-3.233-3.983-5.433-4.55-6.6c-0.533-1.033-0.883-1.833-1.05-2.4c-0.3-0.867-0.466-1.85-0.5-2.95
+    c-0.033-2.367,0.034-4.117,0.2-5.25c0.3-1.034,0.483-1.8,0.55-2.3c0.167-0.867,0.034-1.533-0.4-2c-0.6-0.7-1.133-1.517-1.6-2.45
+    c-0.566-1.133-0.833-2.117-0.8-2.95c0.033-1.333,0.167-2.367,0.4-3.1c0.367-1.267,1.05-2.267,2.05-3
+    C4.417,4.25,6.483,3.317,8.65,2.85z" />
+                        </g>
+                    </defs>
+                </svg>
+                <section class="scene3d" style="top: 0;left: 0;">
+                    <div class="butterfly_container">
+                        <var class="rotate3d">
+                            <var class="scale">
+                                <var class="translate3d">
+                                    <var class="translate3d-1">
+                                        <figure class="butterfly">
+                                            <svg class="wing left" viewBox="0 0 50 100" class="icon shape-codepen">
+                                                <use class="left" xlink:href="#shape-butterfly-1"></use>
+                                            </svg>
+                                            <svg class="wing right" viewBox="0 0 50 100" class="icon shape-codepen">
+                                                <use class="left" xlink:href="#shape-butterfly-1"></use>
+                                            </svg>
+                                        </figure>
+                                    </var>
+                                </var>
+                            </var>
+                        </var>
+                    </div>
+                    <div class="butterfly_container" style="margin-top: -150px; margin-left: 140px;
+              -webkit-animation-duration: 5s;
+              -moz-animation-duration: 5s;
+              -ms-animation-duration: 5s;
+              -o-animation-duration: 5s;
+              animation-duration: 5s;">
+                        <var class="rotate3d">
+                            <var class="scale">
+                                <var class="translate3d">
+                                    <var class="translate3d-1">
+                                        <figure class="butterfly">
+                                            <svg class="wing left" viewBox="0 0 50 100" style="-webkit-animation-duration: .75s;
+                  -moz-animation-duration: .75s;
+                  -ms-animation-duration: .75s;
+                  -o-animation-duration: .75s;
+                  animation-duration: .75s;">
+                                                <use class="left" xlink:href="#shape-butterfly-1"></use>
+                                            </svg>
+                                            <svg class="wing right" viewBox="0 0 50 100" style="-webkit-animation-duration: .75s;
+                  -moz-animation-duration: .75s;
+                  -ms-animation-duration: .75s;
+                  -o-animation-duration: .75s;
+                  animation-duration: .75s;">
+                                                <use class="left" xlink:href="#shape-butterfly-1"></use>
+                                            </svg>
+                                        </figure>
+                                    </var>
+                                </var>
+                            </var>
+                        </var>
+                    </div>
+                    <div class="butterfly_container scale_half" style="margin-top: -10px; margin-left: 50px;
+              -webkit-animation-duration: 5s;
+              -moz-animation-duration: 5s;
+              -ms-animation-duration: 5s;
+              -o-animation-duration: 5s;
+              animation-duration: 5s;">
+                        <var class="rotate3d">
+                            <var class="scale">
+                                <var class="translate3d">
+                                    <var class="translate3d-1">
+                                        <figure class="butterfly">
+                                            <svg class="wing left" viewBox="0 0 50 100" style="-webkit-animation-duration: .75s;
+                  -moz-animation-duration: .75s;
+                  -ms-animation-duration: .75s;
+                  -o-animation-duration: .75s;
+                  animation-duration: .75s;">
+                                                <use class="left" xlink:href="#shape-butterfly-1"></use>
+                                            </svg>
+                                            <svg class="wing right" viewBox="0 0 50 100" style="-webkit-animation-duration: .75s;
+                  -moz-animation-duration: .75s;
+                  -ms-animation-duration: .75s;
+                  -o-animation-duration: .75s;
+                  animation-duration: .75s;">
+                                                <use class="left" xlink:href="#shape-butterfly-1"></use>
+                                            </svg>
+                                        </figure>
+                                    </var>
+                                </var>
+                            </var>
+                        </var>
+                    </div>
+                    <div class="butterfly_container scale_half" style="margin-top: 20px;
+              -webkit-animation-duration: 20s;
+              -moz-animation-duration: 20s;
+              -ms-animation-duration: 20s;
+              -o-animation-duration: 20s;
+              animation-duration: 20s;">
+                        <var class="rotate3d">
+                            <var class="scale">
+                                <var class="translate3d">
+                                    <var class="translate3d-1">
+                                        <figure class="butterfly">
+                                            <svg class="wing left" viewBox="0 0 50 100" style="-webkit-animation-duration: 1s;
+                  -moz-animation-duration: 1s;
+                  -ms-animation-duration: 1s;
+                  -o-animation-duration: 1s;
+                  animation-duration: 1s;">
+                                                <use class="left" xlink:href="#shape-butterfly-1"></use>
+                                            </svg>
+                                            <svg class="wing right" viewBox="0 0 50 100" style="-webkit-animation-duration: 1s;
+                  -moz-animation-duration: 1s;
+                  -ms-animation-duration: 1s;
+                  -o-animation-duration: 1s;
+                  animation-duration: 1s;">
+                                                <use class="left" xlink:href="#shape-butterfly-1"></use>
+                                            </svg>
+                                        </figure>
+                                    </var>
+                                </var>
+                            </var>
+                        </var>
+                    </div>
+                    <div class="butterfly_container scale_half" style="margin-top: 100px; margin-left: 50px;
+              -webkit-animation-duration: 20s;
+              -moz-animation-duration: 20s;
+              -ms-animation-duration: 20s;
+              -o-animation-duration: 20s;
+              animation-duration: 20s;">
+                        <var class="rotate3d">
+                            <var class="scale">
+                                <var class="translate3d">
+                                    <var class="translate3d-1">
+                                        <figure class="butterfly">
+                                            <svg class="wing left" viewBox="0 0 50 100" style="-webkit-animation-duration: 1.2s;
+                  -moz-animation-duration: 1.2s;
+                  -ms-animation-duration: 1.2s;
+                  -o-animation-duration: 1.2s;
+                  animation-duration: 1.2s;">
+                                                <use class="left" xlink:href="#shape-butterfly-1"></use>
+                                            </svg>
+                                            <svg class="wing right" viewBox="0 0 50 100" style="-webkit-animation-duration: 1.2s;
+                  -moz-animation-duration: 1.2s;
+                  -ms-animation-duration: 1.2s;
+                  -o-animation-duration: 1.2s;
+                  animation-duration: 1.2s;">
+                                                <use class="left" xlink:href="#shape-butterfly-1"></use>
+                                            </svg>
+                                        </figure>
+                                    </var>
+                                </var>
+                            </var>
+                        </var>
+                    </div>
+                    <div class="butterfly_container scale_third" style="margin-top: 150px;
+              -webkit-animation-duration: 20s;
+              -moz-animation-duration: 20s;
+              -ms-animation-duration: 20s;
+              -o-animation-duration: 20s;
+              animation-duration: 20s;">
+                        <var class="rotate3d">
+                            <var class="scale">
+                                <var class="translate3d">
+                                    <var class="translate3d-1">
+                                        <figure class="butterfly">
+                                            <svg class="wing left" viewBox="0 0 50 100" style="-webkit-animation-duration: .35s;
+                  -moz-animation-duration: .35s;
+                  -ms-animation-duration: .35s;
+                  -o-animation-duration: .35s;
+                  animation-duration: .35s;">
+                                                <use class="left" xlink:href="#shape-butterfly-1"></use>
+                                            </svg>
+                                            <svg class="wing right" viewBox="0 0 50 100" style="-webkit-animation-duration: .35s;
+                  -moz-animation-duration: .35s;
+                  -ms-animation-duration: .53s;
+                  -o-animation-duration: .35s;
+                  animation-duration: .35s;">
+                                                <use class="left" xlink:href="#shape-butterfly-1"></use>
+                                            </svg>
+                                        </figure>
+                                    </var>
+                                </var>
+                            </var>
+                        </var>
+                    </div>
+                    <div class="butterfly_container scale_third" style="margin-top: -250px; margin-left: 300px;
+              -webkit-animation-duration: 4s;
+              -moz-animation-duration: 4s;
+              -ms-animation-duration: 4s;
+              -o-animation-duration: 4s;
+              animation-duration: 4s;">
+                        <var class="rotate3d">
+                            <var class="scale">
+                                <var class="translate3d">
+                                    <var class="translate3d-1">
+                                        <figure class="butterfly">
+                                            <svg class="wing left" viewBox="0 0 50 100" style="-webkit-animation-duration: .45s;
+                  -moz-animation-duration: .45s;
+                  -ms-animation-duration: .45s;
+                  -o-animation-duration: .45s;
+                  animation-duration: .45s;">
+                                                <use class="left" xlink:href="#shape-butterfly-1"></use>
+                                            </svg>
+                                            <svg class="wing right" viewBox="0 0 50 100" style="-webkit-animation-duration: .45s;
+                  -moz-animation-duration: .45s;
+                  -ms-animation-duration: .45s;
+                  -o-animation-duration: .45s;
+                  animation-duration: .45s;">
+                                                <use class="left" xlink:href="#shape-butterfly-1"></use>
+                                            </svg>
+                                        </figure>
+                                    </var>
+                                </var>
+                            </var>
+                        </var>
+                    </div>
+                </section>
+                <div class="leaf1 pab ani leafPT4" swiper-animate-effect="fadeIn" swiper-animate-duration="5s" swiper-animate-delay="0s"></div>
+                <div class="leaf2 pab ani leafPB4" swiper-animate-effect="fadeIn" swiper-animate-duration="5s" swiper-animate-delay="0s"></div>
+                <div class="card-wrap card-wrapF">
+                    <div class="money0 pab">￥</div>
+                    <div class="money pab">20</div>
+                    <div class="moneyx pab">化妆品抵用券</div>
+                    <div class="money2 pab">满<span class="cill">100</span>元使用</div>
+                    <!--<div class="code pab">领取码: <span class="code2">2342335</span></div>-->
+                    <div class="code pab useCode">点击使用 有效期3.18-3.20</div>
+                </div>
+                <div class="card-wrap card-wrapF2 card-wrap2" style="display: none">
+                    <div class="money0 pab">￥</div>
+                    <div class="money pab">200</div>
+                    <div class="moneyx pab">化妆品抵用券</div>
+                    <div class="money2 pab">满<span class="cill">100</span>元使用</div>
+                    <div class="code pab useCode">点击使用 有效期3.18-3.20</div>
+                </div>
+                <div class="text">恭喜你中奖啦</div>
+                <div class="btns-wrap">
+                    <div class="btn1 againBtn" style="position: relative;z-index: 99">再测一次</div>
+                    <div class="btn2 shareBtn" style="position: relative;z-index: 99">分享到朋友圈</div>
+                    <div class="btn2 linkBtn" style="position: relative;z-index: 99;display: block">美妆节福利</div>
+                </div>
+                <div class="logo pab">杭州大厦春季美妆节</div>
+                <div class="share">
+                    <div class="icon"></div>
+                    <div class="te">据未完全统计：</div>
+                    <div class="te2">勇于晒出颜值后，都会获得抽奖机会一次</div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div id="land" class="land">
+        <p>请使用竖屏</p>
+    </div>
+</body>
+<!--<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>-->
+<!--<script src="js/libs/zepto-min.js"></script>-->
+<script src="js/jquery-2.1.0.min.js"></script>
+<script src="js/swiper.3.1.2.min.js"></script>
+<script src="js/swiper.animate.min.js"></script>
+<!--<script src="js/libs/PreLoad.js"></script>-->
+<!--<script src="js/libs/fakeloader.min.js"></script>-->
+<!--<script src="js/tool.js"></script>-->
+<!--<script src="js/share.js"></script>-->
+<!--<script src="js/images/sonic.js"></script>-->
+<!--<script src="js/images/comm.js"></script>-->
+<!--<script src="js/images/hammer.js"></script>-->
+<!--<script src="js/images/iscroll-zoom.js"></script>-->
+<!--<script src="js/images/jquery.photoClip.js?v=1"></script>-->
+<script src="js/imgClip.js"></script>
+<script src="js/move.js"></script>
+<script src="js/exif.js"></script>
+<script src="js/qrcode.js"></script>
+<script src="js/main.js"></script>
+<!--<script src="js/photo.js"></script>-->
+<!-- sakura shader -->
+<script id="sakura_point_vsh" type="x-shader/x_vertex">
+uniform mat4 uProjection;
+uniform mat4 uModelview;
+uniform vec3 uResolution;
+uniform vec3 uOffset;
+uniform vec3 uDOF;  //x:focus distance, y:focus radius, z:max radius
+uniform vec3 uFade; //x:start distance, y:half distance, z:near fade start
+
+attribute vec3 aPosition;
+attribute vec3 aEuler;
+attribute vec2 aMisc; //x:size, y:fade
+
+varying vec3 pposition;
+varying float psize;
+varying float palpha;
+varying float pdist;
+
+//varying mat3 rotMat;
+varying vec3 normX;
+varying vec3 normY;
+varying vec3 normZ;
+varying vec3 normal;
+
+varying float diffuse;
+varying float specular;
+varying float rstop;
+varying float distancefade;
+
+void main(void) {
+    // Projection is based on vertical angle
+    vec4 pos = uModelview * vec4(aPosition + uOffset, 1.0);
+    gl_Position = uProjection * pos;
+    gl_PointSize = aMisc.x * uProjection[1][1] / -pos.z * uResolution.y * 0.5;
+
+    pposition = pos.xyz;
+    psize = aMisc.x;
+    pdist = length(pos.xyz);
+    palpha = smoothstep(0.0, 1.0, (pdist - 0.1) / uFade.z);
+
+    vec3 elrsn = sin(aEuler);
+    vec3 elrcs = cos(aEuler);
+    mat3 rotx = mat3(
+        1.0, 0.0, 0.0,
+        0.0, elrcs.x, elrsn.x,
+        0.0, -elrsn.x, elrcs.x
+    );
+    mat3 roty = mat3(
+        elrcs.y, 0.0, -elrsn.y,
+        0.0, 1.0, 0.0,
+        elrsn.y, 0.0, elrcs.y
+    );
+    mat3 rotz = mat3(
+        elrcs.z, elrsn.z, 0.0,
+        -elrsn.z, elrcs.z, 0.0,
+        0.0, 0.0, 1.0
+    );
+    mat3 rotmat = rotx * roty * rotz;
+    normal = rotmat[2];
+
+    mat3 trrotm = mat3(
+        rotmat[0][0], rotmat[1][0], rotmat[2][0],
+        rotmat[0][1], rotmat[1][1], rotmat[2][1],
+        rotmat[0][2], rotmat[1][2], rotmat[2][2]
+    );
+    normX = trrotm[0];
+    normY = trrotm[1];
+    normZ = trrotm[2];
+
+    const vec3 lit = vec3(0.6917144638660746, 0.6917144638660746, -0.20751433915982237);
+
+    float tmpdfs = dot(lit, normal);
+    if(tmpdfs < 0.0) {
+        normal = -normal;
+        tmpdfs = dot(lit, normal);
+    }
+    diffuse = 0.4 + tmpdfs;
+
+    vec3 eyev = normalize(-pos.xyz);
+    if(dot(eyev, normal) > 0.0) {
+        vec3 hv = normalize(eyev + lit);
+        specular = pow(max(dot(hv, normal), 0.0), 20.0);
+    }
+    else {
+        specular = 0.0;
+    }
+
+    rstop = clamp((abs(pdist - uDOF.x) - uDOF.y) / uDOF.z, 0.0, 1.0);
+    rstop = pow(rstop, 0.5);
+    //-0.69315 = ln(0.5)
+    distancefade = min(1.0, exp((uFade.x - pdist) * 0.69315 / uFade.y));
+}
+
+
+</script>
+<script id="sakura_point_fsh" type="x-shader/x_fragment">
+#ifdef GL_ES
+//precision mediump float;
+precision highp float;
+#endif
+
+uniform vec3 uDOF;  //x:focus distance, y:focus radius, z:max radius
+uniform vec3 uFade; //x:start distance, y:half distance, z:near fade start
+
+//const vec3 fadeCol = vec3(0.08, 0.03, 0.06);
+const vec3 fadeCol = vec3(1, 0.13, 0.13);
+
+varying vec3 pposition;
+varying float psize;
+varying float palpha;
+varying float pdist;
+
+//varying mat3 rotMat;
+varying vec3 normX;
+varying vec3 normY;
+varying vec3 normZ;
+varying vec3 normal;
+
+varying float diffuse;
+varying float specular;
+varying float rstop;
+varying float distancefade;
+
+float ellipse(vec2 p, vec2 o, vec2 r) {
+    vec2 lp = (p - o) / r;
+    return length(lp) - 1.0;
+}
+
+void main(void) {
+    vec3 p = vec3(gl_PointCoord - vec2(0.5, 0.5), 0.0) * 2.0;
+    vec3 d = vec3(0.0, 0.0, -1.0);
+    float nd = normZ.z; //dot(-normZ, d);
+    if(abs(nd) < 0.0001) discard;
+
+    float np = dot(normZ, p);
+    vec3 tp = p + d * np / nd;
+    vec2 coord = vec2(dot(normX, tp), dot(normY, tp));
+
+    //angle = 15 degree
+    const float flwrsn = 0.258819045102521;
+    const float flwrcs = 0.965925826289068;
+    mat2 flwrm = mat2(flwrcs, -flwrsn, flwrsn, flwrcs);
+    vec2 flwrp = vec2(abs(coord.x), coord.y) * flwrm;
+
+    float r;
+    if(flwrp.x < 0.0) {
+        r = ellipse(flwrp, vec2(0.065, 0.024) * 0.5, vec2(0.36, 0.96) * 0.5);
+    }
+    else {
+        r = ellipse(flwrp, vec2(0.065, 0.024) * 0.5, vec2(0.58, 0.96) * 0.5);
+    }
+
+    if(r > rstop) discard;
+
+    vec3 col = mix(vec3(1.0, 0.8, 0.75), vec3(1.0, 0.9, 0.87), r);
+    //vec3 col = mix(vec3(0.0, 1.0, 1.0), vec3(0.0, 0.0, 1.0), r);
+    float grady = mix(0.0, 1.0, pow(coord.y * 0.5 + 0.5, 0.35));
+    //col *= vec3(1.0, grady, grady);
+  col *= vec3(1, 0.4, 0.4);
+    //col *= mix(0.8, 1.0, pow(abs(coord.x), 0.3));
+    //col = col * diffuse + specular;
+
+    //col = mix(fadeCol, col, distancefade);
+
+    float alpha = (rstop > 0.001)? (0.5 - r / (rstop * 2.0)) : 1.0;
+    alpha = smoothstep(0.0, 1.0, alpha) * palpha;
+  alpha = 0.7;
+
+     gl_FragColor = vec4(col * 0.5, alpha);
+    //gl_FragColor = vec4(col * 1.0, 1.0);
+}
+
+
+</script>
+<!-- effects -->
+<script id="fx_common_vsh" type="x-shader/x_vertex">
+uniform vec3 uResolution;
+attribute vec2 aPosition;
+
+varying vec2 texCoord;
+varying vec2 screenCoord;
+
+void main(void) {
+    gl_Position = vec4(aPosition, 0.0, 1.0);
+    texCoord = aPosition.xy * 0.5 + vec2(0.5, 0.5);
+    screenCoord = aPosition.xy * vec2(uResolution.z, 1.0);
+}
+
+
+</script>
+<script id="bg_fsh" type="x-shader/x_fragment">
+#ifdef GL_ES
+//precision mediump float;
+precision highp float;
+#endif
+
+uniform vec2 uTimes;
+
+varying vec2 texCoord;
+varying vec2 screenCoord;
+
+void main(void) {
+    vec3 col;
+    float c;
+    vec2 tmpv = texCoord * vec2(0.8, 1.0) - vec2(0.95, 1.0);
+    c = exp(-pow(length(tmpv) * 1.8, 2.0));
+    col = mix(vec3(0.02, 0.0, 0.03), vec3(0.96, 0.98, 1.0) * 1.5, c);
+    gl_FragColor = vec4(col * 0.5, 1.0);
+}
+
+
+</script>
+<script id="fx_brightbuf_fsh" type="x-shader/x_fragment">
+#ifdef GL_ES
+//precision mediump float;
+precision highp float;
+#endif
+uniform sampler2D uSrc;
+uniform vec2 uDelta;
+
+varying vec2 texCoord;
+varying vec2 screenCoord;
+
+void main(void) {
+    vec4 col = texture2D(uSrc, texCoord);
+    gl_FragColor = vec4(col.rgb * 2.0 - vec3(0.5), 1.0);
+}
+
+
+</script>
+<script id="fx_dirblur_r4_fsh" type="x-shader/x_fragment">
+#ifdef GL_ES
+//precision mediump float;
+precision highp float;
+#endif
+uniform sampler2D uSrc;
+uniform vec2 uDelta;
+uniform vec4 uBlurDir; //dir(x, y), stride(z, w)
+
+varying vec2 texCoord;
+varying vec2 screenCoord;
+
+void main(void) {
+    vec4 col = texture2D(uSrc, texCoord);
+    col = col + texture2D(uSrc, texCoord + uBlurDir.xy * uDelta);
+    col = col + texture2D(uSrc, texCoord - uBlurDir.xy * uDelta);
+    col = col + texture2D(uSrc, texCoord + (uBlurDir.xy + uBlurDir.zw) * uDelta);
+    col = col + texture2D(uSrc, texCoord - (uBlurDir.xy + uBlurDir.zw) * uDelta);
+    gl_FragColor = col / 5.0;
+}
+
+
+</script>
+<!-- effect fragment shader template -->
+<script id="fx_common_fsh" type="x-shader/x_fragment">
+#ifdef GL_ES
+//precision mediump float;
+precision highp float;
+#endif
+uniform sampler2D uSrc;
+uniform vec2 uDelta;
+
+varying vec2 texCoord;
+varying vec2 screenCoord;
+
+void main(void) {
+    gl_FragColor = texture2D(uSrc, texCoord);
+}
+
+
+</script>
+<!-- post processing -->
+<script id="pp_final_vsh" type="x-shader/x_vertex">
+uniform vec3 uResolution;
+attribute vec2 aPosition;
+varying vec2 texCoord;
+varying vec2 screenCoord;
+void main(void) {
+    gl_Position = vec4(aPosition, 0.0, 1.0);
+    texCoord = aPosition.xy * 0.5 + vec2(0.5, 0.5);
+    screenCoord = aPosition.xy * vec2(uResolution.z, 1.0);
+}
+
+
+</script>
+<script id="pp_final_fsh" type="x-shader/x_fragment">
+#ifdef GL_ES
+//precision mediump float;
+precision highp float;
+#endif
+uniform sampler2D uSrc;
+uniform sampler2D uBloom;
+uniform vec2 uDelta;
+varying vec2 texCoord;
+varying vec2 screenCoord;
+void main(void) {
+    vec4 srccol = texture2D(uSrc, texCoord) * 2.0;
+    vec4 bloomcol = texture2D(uBloom, texCoord);
+    vec4 col;
+    //col = srccol + bloomcol * (vec4(1.0) + srccol);
+    col = srccol;
+    //col *= smoothstep(1.0, 0.0, pow(length((texCoord - vec2(0.5)) * 2.0), 1.2) * 0.5);
+    col *= smoothstep(1.0, 0.0, pow(length((texCoord - vec2(0.5)) * 2.0), 0.0) * 0.5);
+    col = pow(col, vec4(0.45454545454545)); //(1.0 / 2.2)
+
+    gl_FragColor = vec4(col.rgb, 1.0);
+    gl_FragColor.a = 1.0;
+}
+</script>
+<script src="js/level.js"></script>
+
+</html>

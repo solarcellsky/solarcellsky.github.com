@@ -1,0 +1,213 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="keywords" content=" " />
+    <meta name="description" content=" " />
+    <meta name="viewport" content="width=640, user-scalable=no,target-densitydpi=device-dpi">
+    <meta name="format-detection" content="telephone=no, email=no" />
+    <title>佰草集</title>
+    <link rel="stylesheet" href="style/public.css?v9" type="text/css" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <div id="loading">
+            <div></div>
+        </div>
+        <div id="page_loading">
+            <div></div>
+            <p><span id="loadPor">0</span>%</p>
+        </div>
+        <!--首页-->
+        <div id="index" class="pageBox">
+            <img class="imgBg" _src="images/index_bg.jpg" />
+            <div class="logo"></div>
+            <div class="p1_t1">
+                <img _src="images/p1_t1.png" />
+            </div>
+            <div class="p1_e1">
+                <img _src="images/p1_e1.png" />
+            </div>
+            <div id="js_pai" class="pai">
+                <ul>
+                    <li>
+                        <img _src="images/pai_i1.png" />
+                    </li>
+                    <li>
+                        <img _src="images/pai_i3.png" />
+                    </li>
+                    <li>
+                        <img _src="images/pai_i2.png" />
+                    </li>
+                </ul>
+                <div class="hand">
+                    <img _src="images/p1_e2.png" />
+                    <img _src="images/p1_e2.png" />
+                </div>
+            </div>
+            <div id="in-btn">
+                <img _src="images/in_btn.png" />
+            </div>
+        </div>
+        <!--p2-->
+        <div id="p2" class="pageBox">
+            <img class="imgBg" _src="images/p2_bg.jpg" />
+            <div class="logo"></div>
+            <div class="p2_t1">
+                <img _src="images/p2_t1.png">
+            </div>
+            <div class="p2_t2">
+                <img _src="images/p2_t2.png">
+            </div>
+            <div id="p2_btn">
+                <div><img _src="images/p2_btn.png"></div>
+            </div>
+            <img id="rule_btn" _src="images/rule-btn.png" />
+        </div>
+        <!--游戏页面-->
+        <div id="game" class="pageBox">
+            <img class="imgBg" _src2="images/g_bg.jpg" />
+            <div class="logo"></div>
+            <canvas id="canvas"></canvas>
+            <div id="part">
+                <img _src2="images/part1.png" />
+                <img _src2="images/part2.png" />
+            </div>
+            <div id="timer">
+                <div class="tm-p">
+                    <div id="tm-progress"></div>
+                    <div class="tm-box"><span id="tm-time">0</span>s</div>
+                </div>
+                <img class="timer_i" _src2="images/time_i.png" />
+            </div>
+            <div id="score">
+                <div class="sc-p">
+                    <div id="sc-progress"></div>
+                    <div class="sc-box">得分: <span id="sc-score">0</span></div>
+                </div>
+                <img class="score_i" _src2="images/score_i.png" />
+            </div>
+            <div id="start-box">
+                <div id="g_msg">
+                </div>
+                <img class="g-rule" _src2="images/g_rule.png" />
+                <div id="startBtn"><img _src2="images/start.png"><span>50</span></div>
+            </div>
+            <div id="win" class="popup">
+                <div class="go-box1">
+                    <img _src2="images/g_tc1.png" />
+                    <span id="bslj"></span>
+                    <span id="continue"></span>
+                </div>
+                <div class="go-box2">
+                    <img _src2="images/g_complete.png" />
+                    <span id="g_complete"></span>
+                </div>
+            </div>
+            <div id="alert">
+                <div class="alert-box">
+                    <img id="alert-t1" _src2="images/alert_t1.png" />
+                    <img id="alert-t2" _src2="images/alert_t2.png" />
+                    <ul id="al_btn">
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--领奖-->
+        <div id="prize" class="popup">
+            <div class="prize-box">
+                <img class="border1_1" _src2="images/border1_1.png" />
+                <img class="border1_2" _src2="images/border1_1.png" />
+                <div id="p_complete">
+                    <div class="pb-con">
+                        <img _src2="images/prize_t1.png" />
+                        <p class="pr-prize">&nbsp;</p>
+                        <p class="pr-hint">我们即刻发送短信给您，请注意查看手机</p>
+                    </div>
+                    <div class="pb-con pbc2">
+                        <img _src2="images/prize_t2.png" />
+                        <p class="pr-prize">&nbsp;</p>
+                        <p class="pr-hint">我们将在一周内致电您，与您沟通领取方式，谢谢</p>
+                    </div>
+                    <p class="pb-hint">*分享给好友，领取电影票红包哟！</p>
+                    <div id="shareBtn">
+                        <img _src2="images/shareBtn.png" />
+                    </div>
+                </div>
+                <div id="p_form">
+                    <div class="form">
+                        <img _src2="images/form.jpg" />
+                        <input id="name" type="text" />
+                        <input id="tel" type="tel" maxlength="11" />
+                    </div>
+                    <div id="submit">
+                        <img _src2="images/submit.png" />
+                    </div>
+                </div>
+                <img class="logo2" _src2="images/logo2.png" />
+                <img id="colse" _src2="images/colse.png" />
+            </div>
+        </div>
+        <!--活动规则-->
+        <div id="rule" class="popup">
+            <img class="imgBg" _src="images/rule.jpg" />
+            <div class="logo"></div>
+        </div>
+        <!--分享-->
+        <div id="share" class="popup">
+            <img _src2="images/shareHint.png" />
+        </div>
+        <!--分享完成-->
+        <div id="fxwc" class="popup">
+            <img _src2="images/fxwc.jpg" />
+            <a href="javascript:;"></a>
+        </div>
+    </div>
+    <div id="js_hint" class="hint"></div>
+    <!--music Go-->
+    <div id="js_musicBtn" class="musicBtn">
+        <div class="music_icon">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <span></span>
+        </div>
+        <div style="display: none;">
+            <audio id="media" src="sound/bg1.mp3" loop></audio>
+        </div>
+    </div>
+    <!--music END-->
+    <!--图片预加载-->
+    <div style="display:none;">
+        <img _src="images/logo.png" />
+        <img _src2="images/time.png" />
+        <img _src2="images/time_p.png" />
+        <img _src2="images/score.png" />
+        <img _src2="images/score_p.png" />
+        <img id="g_door" _src="images/g_door.png" />
+        <img id="g_role" _src="images/g_role.png" />
+        <img id="g_score" _src="images/g_score.png" />
+        <img id="g_click" _src="images/g_click.png" />
+        <img _src2="images/alert.png" />
+        <img _src2="images/border1_2.png" />
+    </div>
+    <script src="script/jquery.min.js"></script>
+    <script src="script/base.js"></script>
+    <script src="script/jweixin-1.0.0.js"></script>
+    <script src="script/hammer.min.js"></script>
+    <script src="script/tweenjs-0.6.2.min.js"></script>
+    <script src="script/easeljs-0.8.2.min.js"></script>
+    <script src="script/public.js?v13"></script>
+    <script>
+    var _smq = _smq || [];
+    _xx.imgLoad();
+    </script>
+</body>
+
+</html>

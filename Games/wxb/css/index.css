@@ -1,0 +1,323 @@
+/*全局样式设置*/
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, "microsoft yahei";
+  font-size: 14px;
+}
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+.swiper-wrapper {
+  -webkit-perspective: 1200px;
+  perspective: 1200px;
+}
+.swiper-slide {
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  background: url(../img/bg.jpg) no-repeat;
+  background-size: 100% 100%;
+}
+.hidden {
+  visibility: hidden;
+}
+/*辅助布局*/
+.x-c,
+.w-c {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -webkit-backface-visibility: hidden;
+}
+.y-c,
+.h-c {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -webkit-backface-visibility: hidden;
+}
+.c-c {
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -webkit-backface-visibility: hidden;
+}
+/*可重用样式*/
+.abs {
+  position: absolute;
+}
+.rel {
+  position: relative;
+}
+/*动画*/
+/*呼吸*/
+.hx {
+  animation: hx 1.2s ease-in-out infinite alternate;
+  -webkit-animation: hx 1.2s ease-in-out infinite alternate;
+  -webkit-backface-visibility: hidden;
+}
+@keyframes hx {
+  0% {
+    -webkit-transform: scale(1, 1);
+    box-shadow: 0 1px 2px #edd2aa;
+  }
+  100% {
+    -webkit-transform: scale(1.01, 1.01);
+    box-shadow: 0 1px 30px #cccccc;
+  }
+}
+.hxm {
+  animation: hxm 1.2s ease-in-out infinite alternate;
+  -webkit-animation: hxm 1.2s ease-in-out infinite alternate;
+  -webkit-backface-visibility: hidden;
+}
+@keyframes hxm {
+  0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*手指点击效果*/
+.pm {
+  animation: pm 1.2s ease-in-out infinite alternate;
+  -webkit-animation: pm 1.2s ease-in-out infinite alternate;
+  -webkit-backface-visibility: hidden;
+}
+@-webkit-keyframes pm {
+  0% {
+    -webkit-transform: translateY(8px);
+  }
+  100% {
+    -webkit-transform: translateY(-8px);
+  }
+}
+/*轮胎旋转车移动的动画*/
+.carm {
+  animation: carm 3.5s ease-in-out normal forwards;
+  -webkit-animation: carm 3.5s ease-in-out normal forwards;
+  -webkit-backface-visibility: hidden;
+}
+@-webkit-keyframes carm {
+  0% {
+    left: -308px;
+  }
+  100% {
+    left: 140px;
+  }
+}
+.ltr {
+  animation: ltr 0.5s linear infinite;
+  -webkit-animation: ltr 0.5s linear infinite;
+  -webkit-backface-visibility: hidden;
+}
+@-webkit-keyframes ltr {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+/*图片拉长动画*/
+.ltem {
+  animation: ltem 3.5s ease-in-out normal forwards;
+  -webkit-animation: ltem 3.5s ease-in-out normal forwards;
+  -webkit-backface-visibility: hidden;
+}
+@-webkit-keyframes ltem {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 350px;
+  }
+}
+/*图片缩放动画*/
+.ts {
+  animation: ts 1s ease-in-out normal forwards;
+  -webkit-animation: ts 1s ease-in-out normal forwards;
+  -webkit-backface-visibility: hidden;
+}
+@-webkit-keyframes ts {
+  0% {
+    -webkit-transform: scale(2);
+    opacity: 0.5;
+    top: 50px;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    opacity: 1;
+    top: 0px;
+  }
+}
+/*分页布局设置*/
+.loading .move_text {
+  position: absolute;
+  width: 207px;
+  height: 92px;
+  top: 250px;
+}
+.loading .move_text img {
+  position: absolute;
+}
+.loading .load_move {
+  position: absolute;
+  width: 308px;
+  height: 78px;
+  top: 380px;
+  left: -308px;
+}
+.loading .load_move .move_car {
+  position: absolute;
+  width: 308px;
+  height: 78px;
+}
+.loading .load_move .move_lt1 {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  left: 0px;
+  top: 35px;
+  left: 83px;
+}
+.loading .load_move .move_lt2 {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  top: 38px;
+  left: 238px;
+}
+.loading .loading_text {
+  position: absolute;
+  font-size: 24px;
+  color: #f2d3a5;
+  top: 500px;
+}
+.loading .loading_text span {
+  font-size: 26px;
+  color: #f2d3a5;
+}
+.loading .loading_wifi {
+  position: absolute;
+  font-size: 20px;
+  color: #f2d3a5;
+  bottom: 50px;
+}
+.loading .preload {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: -1px;
+  left: -1px;
+}
+.loading .preload video {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: -1px;
+  left: -1px;
+}
+.loading .preload img {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: -1px;
+  left: -1px;
+}
+.index .video {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  top: -100%;
+}
+.index .video video {
+  width: 100%;
+  height: 100%;
+}
+.index .canvas {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+}
+.index .drimg {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  top: -100%;
+}
+.index .drimg img {
+  width: 100%;
+  height: 100%;
+}
+.index .startBtn {
+  position: absolute;
+  z-index: 3;
+  background: url(../img/pic_start.jpg) no-repeat;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100%;
+}
+.index .startBtn img {
+  position: absolute;
+  width: 105px;
+  height: 105px;
+}
+.index .show {
+  z-index: 3;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  display: none;
+}
+.index .show .show_pic {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  display: none;
+}
+.index .show .show_pic img {
+  width: 100%;
+  height: 100%;
+}
+.index .show .show_move {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+}
+.index .show .show_move img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -6px;
+  left: -30px;
+}
+.index .show .pointer {
+  position: absolute;
+  width: 220px;
+  height: 140px;
+  top: 67%;
+  left: 46%;
+}
+.index .show .pointer img {
+  position: absolute;
+  bottom: -20px;
+  left: 100px;
+}
+.index .show .pointer .point_t {
+  position: absolute;
+  bottom: -65px;
+  font-size: 24px;
+  color: #fff;
+}
