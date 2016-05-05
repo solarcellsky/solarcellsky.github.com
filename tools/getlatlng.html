@@ -1,0 +1,156 @@
+<!DOCTYPE>
+<html>
+<head>
+    <title>点击地图获取经纬度</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <script src="http://ditu.google.cn/maps/api/js?v=3&sensor=false&language=zh-CN"></script>
+    <style type="text/css">
+    <!--
+    * {padding: 0;margin: 0;}
+    html,body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        font-size: 12px;
+    }
+    #map {
+        width: 100%;
+        height: 100%;
+    }
+    #toolbox {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        background: #fff;
+        padding: 15px;
+        border: 1px solid #aaa;
+        box-shadow: 0 0 1em rgba(0,0,0,.2);
+    }
+    #toolbox dt {
+        padding: 5px 0;
+        font-weight: 700;
+    }
+    #toolbox dd {
+        padding: 5px 0;
+    }
+    input {
+        border: 1px solid #e0e0e0;
+        padding: 5px;
+    }
+    textarea {
+        border: 1px solid #e0e0e0;
+        resize: none;
+        padding: 5px;
+    }
+    -->
+    </style>
+</head>
+<body>
+ 
+    <div id="map"></div>
+    <div id="toolbox">
+        <dl>
+            <dt>坐标</dt>
+            <dd>经度 <input type="text" name="lng" id="lng" value="108.94804109999995"></dd>
+            <dd>纬度 <input type="text" name="lat" id="lat" value="34.3130103"></dd>
+            <dt>地址</dt>
+            <dd><textarea name="address" id="address" cols="45" rows="4">中国陕西省西安市未央区利君V时代B座</textarea></dd>
+        </dl>
+    </div>
+<script language="javascript" type="text/javascript">
+    var map;
+    var marker;
+    var infowindow;
+    var geocoder;
+    var markersArray = [];
+
+    function initialize() {
+        //设置中心点
+        var latlng = new google.maps.LatLng(34.3130103, 108.94804109999995);
+        var myOptions = {
+            zoom: 15,
+            center: latlng,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        map = new google.maps.Map(document.getElementById("map"), myOptions);
+        geocoder = new google.maps.Geocoder();
+        //监听点击地图事件
+        google.maps.event.addListener(map, 'click', function (event) {
+            placeMarker(event.latLng);
+        });
+    }
+
+    function placeMarker(location) {
+        clearOverlays(infowindow);//清除地图中的标记
+        marker = new google.maps.Marker({
+            position: location,
+            map: map
+        });
+        markersArray.push(marker);
+        //根据经纬度获取地址
+        if (geocoder) {
+            geocoder.geocode({ 'location': location }, function (results, status) {
+                if (status == google.maps.GeocoderStatus.OK) {
+                    if (results[0]) {
+                        attachSecretMessage(marker, results[0].geometry.location, results[0].formatted_address);
+                    }
+                } else {
+                    alert("Geocoder failed due to: " + status);
+                }
+            });
+        }
+    }
+    //在地图上显示经纬度地址
+    function attachSecretMessage(marker, piont, address) {
+        var message = "<b>座標:</b>" + piont.lat() + " , " + piont.lng() + "<br />" + "<b>地址:</b>" + address;
+        var infowindow = new google.maps.InfoWindow(
+            {
+                content: message,
+                size: new google.maps.Size(50, 50)
+            });
+        infowindow.open(map, marker);
+        if (typeof (mapClick) == "function") mapClick(piont.lng(), piont.lat(), address);
+    }
+    //删除所有标记阵列中消除对它们的引用
+    function clearOverlays(infowindow) {
+        if (markersArray && markersArray.length > 0) {
+            for (var i = 0; i < markersArray.length; i++) {
+                markersArray[i].setMap(null);
+            }
+            markersArray.length = 0;
+        }
+        if (infowindow) {
+            infowindow.close();
+        }
+    }
+    function setiInit() {
+        // 页面加载显示默认lng lat address---begin
+        var lattxt = document.getElementById("lat").value;
+        var lngtxt = document.getElementById("lng").value;
+        var addresstxt = document.getElementById("address").value;
+        if (lattxt != '' && lngtxt != '' && addresstxt != '') {
+            var latlng = new google.maps.LatLng(lattxt, lngtxt);
+            marker = new google.maps.Marker({
+                position: latlng,
+                map: map
+            });
+            markersArray.push(marker);
+            attachSecretMessage(marker, latlng, addresstxt);
+        }
+        // ---end
+    }
+    function mapClick(lng, lat, address) {
+        document.getElementById("lng").value = lng;
+        document.getElementById("lat").value = lat;
+        document.getElementById("address").value = address;
+    }
+    initialize();
+    window.onload = function () {
+        setiInit();
+    }
+</script>
+
+</body>
+</html>

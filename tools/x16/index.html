@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>x16编码转换</title>
+    <meta name="keywords" content="x16编码转换">
+    <link href="skin.css" rel="stylesheet" media="screen" type="text/css" />
+    <script src="app.js"></script>
+</head>
+
+<body>
+<div class="w950">
+    <h1>x16编码转换</h1>
+    <strong>内容源文本框:</strong>
+    <textarea name="code" id="code"  cols="45" rows="5" onfocus="if(this.value=='在这里粘贴或输入'){this.value='';}">\x65\x76\x61\x6c</textarea>
+    <input type="checkbox" checked id="true">是否启用\x加密
+    <div class="btn_row">
+        <input onClick="JavaDe()" type="button" class="btn fl" value='16进制解密"\x"'>
+        <input onClick="JavaEn()" type="button"  class="btn fl last" value='16进制加密'>
+    </div>
+    <strong>转换结果：</strong>
+    <textarea name="show2" id="show2" cols="45" rows="5" onclick="this.select();"></textarea>
+</div>  
+</body>
+
+</html>
