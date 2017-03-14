@@ -1,0 +1,171 @@
+@charset "utf-8";
+/* CSS Document */
+*{ padding:0; margin:0}
+.myxinxi4 .moban{ position:relative; width:100%; top:0px;z-index:99999; }
+.myxinxi4 .moban .moban1{ position:absolute; margin:auto;  width:100%; } 
+.myxinxi4 .moban .moban1 .max_64{max-width:640px; position:relative;}
+.myxinxi4 .moban .moban1 img{ width:100%; height:auto;z-index:99999; }
+.myxinxi4 .moban .moban1 .moban1_a_1{z-index:99999999; width:100%; background:#f15951; text-align:center; color:#FFF; font-size:25pt; padding:1.5% 0; font-weight:bold; }
+.myxinxi4 .moban .moban1 .moban1_a_1 ul li:nth-child(2){ position:absolute; width:11.875%; right:2%; top:7%;}
+
+.myxinxi4 .moban .moban1 .moban1_a{ position:relative; margin-right:15%;top:0px;width:85%;} 
+.myxinxi4 .moban .moban1 .moban1_a .guanbianniu{ width:8%; position:absolute; left:100%; top:0%; padding-top:30%; }
+.myxinxi4 .moban1_a_2{overflow:scroll; height:1000px;overflow-x:hidden; background:#FFF;}
+.myxinxi4 .moban1_a_2 .null{ padding:35% 0; height:600px;}
+
+.myxinxi4 .moban .moban1_a_2{ overflow-y:hidden;} 
+.myxinxi4 .moban .content{ height:1000px; overflow-y:scroll;}	
+
+.myxinxi4 .moban .moban1_a_3{position:fixed; bottom:0px;  max-width:544px; width:85%; z-index:999}
+
+.myxinxi4 .moban .content3 { padding:3% 0;background:#f15951;}
+.myxinxi4 .moban .content3 ul { background:#f15951;}
+.myxinxi4 .moban .content3 ul li{ width:13.6%; float:left; margin-left:5.5%;}
+
+
+
+/* content*/
+.myxinxi4 .content{ position:relative;  width:100%; margin:auto;}
+.myxinxi4 .contenta{width:96%; padding:2.5% 2%;position:relative; border-bottom:1px solid #dedddd;}
+.myxinxi4 .contentb{ text-align:center; font-size:20pt; color:#666; padding-top:30%;}
+.myxinxi4 .content1{ width:14.375%;   border-radius:10px; float:left; position:relative; }
+
+.myxinxi4 .hongdian{ display:inline-block; position:absolute; width:8px; height:8px; -moz-border-radius:10px; -webkit-border-radius:10px;border-radius:10px; background:#fc3548; border:2px #ffffff solid; }
+
+.myxinxi4 .content1 img{ width:100%; height:auto; border-radius:100px; -webkit-border-radius:100px; -ms-border-radius:100px; -moz-border-radius:100px; -o-border-radius:100px;}
+.myxinxi4 .content2{float:left; width:80%; margin-left:5%; margin-top:2%;}
+.myxinxi4 .content2 .yiyong{ font-style:normal; color:#bdbdbd}
+.myxinxi4 .content2 .shenhe{ font-style:normal; color:#ec6030}
+.myxinxi4 .content2 .yihe{ font-style:normal; color:#d9412a}
+.myxinxi4 .content2 i{font-size:15pt; }
+.myxinxi4 .content2 p:nth-child(1){ font-size:18pt; color:#626262; word-break:break-all; word-wrap:break-word; overflow: hidden; white-space: nowrap;text-overflow: ellipsis;}
+.myxinxi4 .content2 p:nth-child(1) span:last-child{ float:right;color:#939292}
+.myxinxi4 .linqu{ color:#d9412a; font-size:18pt; }
+.myxinxi4 .content2 p:nth-child(2){ font-size:18pt; color:#9c9c9c; padding-top:1%; overflow: hidden; white-space: nowrap;text-overflow: ellipsis;}
+
+
+
+@media screen and (min-width:641px) {
+	body{background:#3a3e4a;}
+	}
+
+
+@media screen and (max-width:600px) {
+	
+	.myxinxi4  .content2 i{font-size:14pt; }
+	.myxinxi4  .content2 p:nth-child(1){ font-size:16pt; }
+/*	 .content2 p:nth-child(1)  span:last-child{ font-size:14pt;}*/
+    .myxinxi4  .content2 p:nth-child(2){ font-size:16pt;}
+	.myxinxi4  .linqu{ color:#d9412a; font-size:16pt; }
+	.myxinxi4  .contentb{ font-size:19pt; }
+   
+	}
+	
+@media screen and (max-width:550px) {
+	
+	.myxinxi4 .content2 i{font-size:13pt; }
+	.myxinxi4 .content2 p:nth-child(1){ font-size:14pt; }
+	/*.content2 p:nth-child(1)  span:last-child{ font-size:13pt;}*/
+    .myxinxi4 .content2 p:nth-child(2){ font-size:14pt;}
+	.myxinxi4 .linqu{ color:#d9412a; font-size:14pt; }
+    .myxinxi4 .contentb{ font-size:18pt; }
+	}
+	
+@media screen and (max-width:500px) {
+	
+
+	.myxinxi4 .content2 i{font-size:12pt; }
+	.myxinxi4 .content2 p:nth-child(1){ font-size:12pt; }
+/*	.content2 p:nth-child(1)  span:last-child{ font-size:12pt;}*/
+   .myxinxi4  .content2 p:nth-child(2){ font-size:12pt;}
+	.myxinxi4 .linqu{ color:#d9412a; font-size:13pt; }
+	.myxinxi4 .contentb{ font-size:17pt; }
+
+	}
+@media screen and (max-width:450px) {
+	
+
+	.myxinxi4 .content2 i{font-size:11pt; }
+	.myxinxi4 .content2 p:nth-child(1){ font-size:11pt; }
+   /* .content2 p:nth-child(1)  span:last-child{ font-size:11pt;}*/
+    .myxinxi4 .content2 p:nth-child(2){ font-size:11pt;}
+	.myxinxi4 .linqu{ color:#d9412a; font-size:12pt; }
+	.myxinxi4 .contentb{ font-size:16pt; }
+
+	}
+
+@media screen and (max-width:400px) {
+	
+
+	.myxinxi4 .content2 i{font-size:10pt; }
+	.myxinxi4 .content2 p:nth-child(1){ font-size:10pt; }
+	/*.content2 p:nth-child(1)  span:last-child{ font-size:10pt;}*/
+    .myxinxi4 .content2 p:nth-child(2){ font-size:10pt;}
+	.myxinxi4 .linqu{ color:#d9412a; font-size:11pt; }
+	.myxinxi4 .contentb{ font-size:15pt; }
+
+	}
+
+
+@media screen and (max-width:320px) {
+	
+
+	.myxinxi4 .content2 i{font-size:9pt; }
+	.myxinxi4 .content2 p:nth-child(1){ font-size:9pt; }
+/*	.content2 p:nth-child(1)  span:last-child{ font-size:9pt;}*/
+    .myxinxi4 .content2 p:nth-child(2){ font-size:9pt;}
+	.myxinxi4 .linqu{ color:#d9412a; font-size:10pt; }
+    .myxinxi4 .contentb{ font-size:14pt; }
+
+	}
+
+
+
+
+
+@media screen and (min-width:641px) {
+body{background:#3a3e4a;}
+	}
+@media screen and (max-width:600px) {
+    .myxinxi4 .moban .moban1 .moban1_a_1{ font-size:23pt;}
+	.myxinxi4 .moban .content3{font-size:22pt; }
+	}
+	
+
+	
+@media screen and (max-width:550px) {
+	.myxinxi4 .moban .moban1 .moban1_a_1{ font-size:20pt;}
+   .myxinxi4 .moban .content3{font-size:20pt; }
+	}
+	
+@media screen and (max-width:480px) {
+	.myxinxi4 .moban .moban1 .moban1_a_1{ font-size:18pt;}
+	.myxinxi4 .moban .content1_b li{ width:20%;  float:left; }
+
+   
+	 }
+	 
+@media screen and (max-width:450px) {
+	.myxinxi4 .moban .content3{font-size:18pt; }
+	 }
+	 
+	 
+@media screen and (max-width:430px) {
+	.myxinxi4 .moban .moban1 .moban1_a_1{ font-size:16pt;}
+	
+   .myxinxi4 .moban .content1_c p span{ font-size:20pt;}
+	 }
+		
+ @media screen and (max-width:380px) {
+	.myxinxi4 .moban .moban1 .moban1_a_1{ font-size:14pt;}
+    .myxinxi4 .moban .content3{font-size:16pt; }
+	 }
+	 
+ @media screen and (max-width:350px) {
+	.myxinxi4 .moban .anniu ul li{  font-size:12pt;}
+
+	 }
+	 
+ @media screen and (max-width:330px) {
+	.myxinxi4 .moban .moban1 .moban1_a_1{ font-size:12pt; }
+	 }

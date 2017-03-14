@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>签到</title>
+    <link rel="stylesheet" type="text/css" href="css/base.css?t=1452915014036">
+    <link rel="stylesheet" type="text/css" href="css/index.css?t=1452915014036">
+    <link rel="stylesheet" type="text/css" href="css/qrcode-box.css?t=1452915014036">
+</head>
+
+<body style="zoom: 1;">
+    <header class="exchange">
+        <h2>积分记录</h2>
+        <a href="home.html" class="touch-redirect back"><span class="icon iconfont arrow"></span>返回</a>
+    </header>
+    <div id="details">
+        <ul>
+            <li class="fn-clear">
+                <dl class="fn-left">
+                    <dt>连续签到</dt>
+                    <dd>2016-01-19 10:59</dd>
+                </dl>
+                <div class="score  fn-right">
+                    + 1
+                </div>
+            </li>
+            <li class="fn-clear">
+                <dl class="fn-left">
+                    <dt>签到</dt>
+                    <dd>2016-01-19 10:59</dd>
+                </dl>
+                <div class="score  fn-right">
+                    + 8
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div id="score-qrcode" class="hidden">
+        <div class="box">
+            <div class="wrap">
+                <div class="qrcode-inner">
+                    <img src="http://133490.weixin.drip.im/score/qrcode?openid=oBG0juLQ-D2EBPKr9BbZEiFq1tP8" class="qrcode">
+                </div>
+                <p>扫描二维码来给我积分</p>
+            </div>
+        </div>
+    </div>
+    <script src="js/core/sea.js?t=1452915014036"></script>
+    <script>
+    seajs.use("./js/app.js?t=1452915014036", function(app) {
+        app.init('./init');
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>红包加大</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css?t=756757">
+    <link rel="stylesheet" type="text/css" href="css/common.css?t=5465">
+</head>
+
+<body style="zoom: 1;">
+    <div class="box_home dp_n" id="homeBox" style="display: block;">
+        <img src="images/bg1.jpg?t=6565656" class="img_bg img_bgq">
+        <img src="images/bg2.jpg?t=4234234" class="img_bg img_bgw">
+        <!-- 首页 -->
+        <div class="home" id="main" style="transform: scale(2.3125); transform-origin: 50% top 0px;">
+            <!-- 中间部分 -->
+            <div class="box_yunmai" id="selHq" style="display: none;">
+                <a class="btn_yunmai" data-num="5">
+                    <div class="box_haoqing">
+                        <div class="img_haoqing"></div>
+                        <div class="text_haoqing">
+                            <p class="ta_l">云麦好轻</p>
+                            <p class="ta_l">50人帮砍领取</p>
+                        </div>
+                    </div>
+                </a>
+                <a class="btn_yunmai" data-num="6">
+                    <div class="box_color">
+                        <div class="img_color"></div>
+                        <div class="text_color">
+                            <p>好轻Color</p>
+                            <p>25人帮砍领取</p>
+                        </div>
+                    </div>
+                </a>
+                <a class="btn_yunmai" data-num="7">
+                    <div class="box_mini">
+                        <div class="img_mini"></div>
+                        <div class="text_mini">
+                            <p>好轻mini</p>
+                            <p>15人帮砍领取</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- end-中间部分 -->
+            <!-- 帮砍 -->
+            <div class="box_gift dp_n" id="giftBox" style="display: block;">
+                <div class="img_gift" id="giftImg"></div>
+                <div class="box_imgall dp_n" id="sucGiftTit">
+                    <div class="img_Haoqing dp_n" id="giftImgHq"></div>
+                    <div class="img_Color dp_n" id="giftImgColor"></div>
+                    <div class="img_Mini dp_n" id="giftImgMini"></div>
+                    <div class="text_none ta_c">
+                        <p>你的次数已加完了，</p>
+                        <p>邀请好友来帮你把红包加到最大！</p>
+                    </div>
+                </div>
+                <p class="ta_c pb_10"><a class="btn_help" id="startGiftBtn">帮好友红包加大</a></p>
+                <!-- 邀请好友帮砍 -->
+            </div>
+            <!-- end-帮砍 -->
+            <div class="btn_bottombox">
+                <p class="text_rule"><a class="btn_rule" id="ruleBtn_1">活动规则</a></p>
+                <p class="f_l"><a class="btn_process" id="myProBtn">我要参与</a></p>
+                <p class="f_r"><a class="btn_buy" id="buyHq">双十一特惠、购买</a></p>
+            </div>
+        </div>
+        <!--END-首页 -->
+    </div>
+    <!-- 砍价进度 -->
+    <div class="progress dp_n" id="myPro">
+        <div class="box" id="myProBox" style="height: 1414.70588235294px; transform: scale(2.17647058823529); transform-origin: 50% top 0px;">
+            <p class="text_ptitle">红包加大进度</p>
+            <div class="img_head"><img id="myHeadImg" src="http://wx.qlogo.cn/mmopen/ajNVdqHZLLC0jP4HNjH7ttREKYib422cWTWuBmdHN4ZzznSwj6mhUCHD0Oe0niaNPD1C2RCP6H5eFsDra9MgBIOw/0"></div>
+            <p class="text_name" id="myName">老任</p>
+            <div class="text_box_big" id="goldBox">
+                <div class="text_box mb_5">
+                    <div id="surPrice"></div>
+                </div>
+                <div class="golds"></div>
+            </div>
+            <div class="bar clear pt_10 pb_10">
+                <div class="grey">
+                    <div class="red" id="bar"></div>
+                </div>
+            </div>
+            <div class="btn_box clear">
+                <p><a class="btn_back" id="backIndex">返回首页</a></p>
+                <p><a class="btn_int" id="helpBtn_1">邀请好友</a></p>
+                <p><a class="btn_gethq" id="receiveHqBtn">领取好轻</a></p>
+            </div>
+            <p class="clear pb_20"></p>
+            <div class="box_yellow clear">
+                <div class="box_inside">
+                    <p class="ta_c">已邀请<span id="myFriNum"></span>位好友加大红包</p>
+                    <div class="box_scroll clear" id="myFriList"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end-砍价进度 -->
+    <!-- 成功砍掉的价格 -->
+    <div class="box_cut dp_n" id="sucCut">
+        <img src="images/bargain.jpg?t=34535" class="img_cut_bg">
+        <div class="box" id="sucCutBox" style="transform: scale(2.3125); transform-origin: 50% top 0px;">
+            <p class="text_money">4元</p>
+            <div class="text_need" id="mySucCutTit">
+                <p>还需邀请
+                    <label id="surFri">14</label>名好友</p>
+                <p>帮砍就可以领取
+                    <label>好轻</label>啦！</p>
+            </div>
+            <div class="text_need dp_n" id="friSucCutTit">
+                <p>挑选好轻，砍价0元免费拿！</p>
+                <p><span id="myName_2">老任</span>，你还在犹豫什么？</p>
+            </div>
+            <p class="pt_30"><a class="btn_invite" id="sucHelpBtn">邀请好友帮加</a></p>
+        </div>
+    </div>
+    <!-- 邀请好友 -->
+    <div class="box_invite dp_n" id="helpBox">
+        <div class="img_invite"></div>
+    </div>
+    <!-- end-邀请好友 -->
+    <!-- 规则 -->
+    <div class="box_rule dp_n" id="ruleGrey">
+        <div class="rule">
+            <a class="btn_close" id="ruleClose"></a>
+            <h1>活动规则</h1>
+            <p class="text_title">活动时间</p>
+            <p class="text_content">1、活动截止于15年11月13日&nbsp;24时；</p>
+            <br>
+            <p class="text_title">参与方式</p>
+            <p class="text_content">1、选择1款中意的好轻，邀请对应数量好友即可砍价完成；</p>
+            <p class="text_content">2、砍价完成，每天22时即可兑换领取；</p>
+            <p class="text_content">3、双11当天，10至22时每整点领取；</p>
+            <p class="text_content">4、未能砍价成功可以前往<b>[天猫 或 京东]</b>购买好轻，云麦减肥<b>部落晒单赢免单资格</b>;</p>
+            <p class="text_content">5、本活动最终解释权归云麦微信所有；</p>
+            <p class="text_content">6、活动详细说明猛戳→<a href="http://mp.weixin.qq.com/s?__biz=MzA5MDc1NTYyNw==&amp;mid=400584330&amp;idx=1&amp;sn=ee098027da40aa8059b1f014c2f198b2#rd">[活动详情]</a></p>
+        </div>
+    </div>
+    <!-- end-规则 -->
+    <!-- 一键购买 -->
+    <div class="box_buy dp_n" id="buyBox">
+        <div class="buy">
+            <a class="btn_close" id="buyClose"></a>
+            <div class="text_white">
+                <p>云麦狂欢双11，特价优惠嗨翻天</p>
+                <p>立即下单，百个免单等你拿!</p>
+                <br>
+            </div>
+            <p class="ta_c pb_10 pt_10">
+                <a class="btn_tmall" id="btnTmall"></a>
+            </p>
+            <p class="ta_c pb_10">
+                <a class="btn_jd" id="btnJd" href="http://sale.jd.com/m/act/43TZrF1vBwK2Y.html"></a>
+            </p>
+            <p class="ta_c pb_10">
+                <a class="btn_free" id="btnFree" href="http://s.p.qq.com/pub/jump?d=AAAV2Krk"></a>
+            </p>
+        </div>
+    </div>
+    <!--end-一键购买 -->
+    <!-- 领取成功 -->
+    <div class="box_succeed dp_n" id="postBox">
+        <div class="succeed">
+            <div class="img_title"></div>
+            <a class="btn_close" id="postClose"></a>
+            <div class="img_mini_big dp_n" id="postMiniImg"></div>
+            <div class="img_color_big dp_n" id="postColorImg"></div>
+            <div class="img_haoqing_big dp_n" id="postHqImg"></div>
+            <div class="box_text" id="postInput">
+                <p class="pt_5">
+                    <input type="text" placeholder="姓名" id="name">
+                </p>
+                <p class="pt_10 pb_10">
+                    <input type="text" placeholder="电话" id="tel">
+                </p>
+                <p><a class="btn_get" id="postBtn">领取好轻</a></p>
+            </div>
+            <div class="postSucTit dp_n" id="postSucTit">
+                <p>恭喜您,提交成功!</p>
+                <p>我们将在活动结束后与您联系领奖哟~</p>
+            </div>
+        </div>
+    </div>
+    <!-- end-领取成功 -->
+    <!-- 关注 -->
+    <div class="box_foucs dp_n" id="guanZhu">
+        <div class="focus">
+            <p class="text_focus">咦？您还没关注“云麦”哟~</p>
+            <p>成功关注，即可帮Ta砍价拿好轻</p>
+            <p class="ta_c text_focus"><a class="btn_focus" href="http://mp.weixin.qq.com/s?__biz=MzA5MDc1NTYyNw==&amp;mid=202285683&amp;idx=1&amp;sn=05f9f9082f3b9d7c680ae1a6aaad696a#rd">立即关注</a></p>
+        </div>
+    </div>
+    <!-- end-关注 -->
+    <!-- 弹窗 -->
+    <div class="pop_box dp_n" id="tipBox">
+        <div class="windows">
+            <a class="btn_close" id="tipClose"></a>
+            <div id="tipCon"></div>
+        </div>
+    </div>
+    <!-- end-弹窗 -->
+    <script type="text/javascript" src="http://libs.baidu.com/jquery/1.9.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/lib/jquery.cookie.js"></script>
+    <script type="text/javascript" src="js/lib/jweixin.js"></script>
+    <script type="text/javascript" src="js/lib/common.js"></script>
+    <script type="text/javascript" src="js/index.js?t=5345345"></script>
+</body>
+<iframe id="__WeixinJSBridgeIframe_SetResult" style="display: none;"></iframe>
+<iframe id="__WeixinJSBridgeIframe" style="display: none;"></iframe>
+
+</html>

@@ -1,0 +1,90 @@
+
+score.png
+size: 4096,2048
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+base
+  rotate: false
+  xy: 4, 253
+  size: 1008, 532
+  orig: 1008, 532
+  offset: 0, 0
+  index: -1
+foto1
+  rotate: false
+  xy: 2520, 886
+  size: 552, 620
+  orig: 552, 620
+  offset: 0, 0
+  index: -1
+foto2
+  rotate: false
+  xy: 2520, 258
+  size: 552, 620
+  orig: 552, 620
+  offset: 0, 0
+  index: -1
+foto3
+  rotate: false
+  xy: 3080, 886
+  size: 552, 620
+  orig: 552, 620
+  offset: 0, 0
+  index: -1
+ice1
+  rotate: false
+  xy: 1902, 209
+  size: 334, 1817
+  orig: 334, 1817
+  offset: 0, 0
+  index: -1
+ice2
+  rotate: false
+  xy: 2244, 295
+  size: 268, 1731
+  orig: 268, 1731
+  offset: 0, 0
+  index: -1
+menu
+  rotate: false
+  xy: 4, 4
+  size: 241, 241
+  orig: 241, 241
+  offset: 0, 0
+  index: -1
+paper
+  rotate: false
+  xy: 4, 793
+  size: 1890, 1233
+  orig: 1890, 1233
+  offset: 0, 0
+  index: -1
+restart
+  rotate: false
+  xy: 3552, 1785
+  size: 241, 241
+  orig: 241, 241
+  offset: 0, 0
+  index: -1
+shop
+  rotate: false
+  xy: 3080, 637
+  size: 241, 241
+  orig: 241, 241
+  offset: 0, 0
+  index: -1
+stamp
+  rotate: false
+  xy: 1020, 364
+  size: 823, 421
+  orig: 823, 421
+  offset: 0, 0
+  index: -1
+text
+  rotate: false
+  xy: 2520, 1514
+  size: 1024, 512
+  orig: 1024, 512
+  offset: 0, 0
+  index: -1

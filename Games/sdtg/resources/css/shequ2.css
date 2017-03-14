@@ -1,0 +1,196 @@
+@charset "utf-8";
+/* CSS Document */
+*{ padding:0; margin:0}
+.shequ2 .moban{ position:relative; width:100%; top:0px;z-index:99999; }
+.shequ2 .moban .moban1{ position:absolute; margin:auto;  width:100%;} 
+.shequ2 .moban .moban1 .max_64{max-width:640px; position:relative;}
+.shequ2 .moban .moban1 img{ width:100%; height:auto;z-index:99999; }
+.shequ2 .moban .moban1 .moban1_a_1{z-index:99999999; width:100%; background:#FFF; text-align:center; color:#f15951; font-size:25pt; padding:1.5% 0; position:relative; font-weight:bold;  }
+.shequ2 .moban .moban1 .right{ position:absolute;right:2%; font-weight:normal; font-size:18pt; bottom:10%;  }
+.shequ2 .moban .moban1 .moban1_a_1 ul li:nth-child(2){ position:absolute; width:11.875%; right:2%; top:7%;}
+
+.shequ2 .moban .moban1 .moban1_a{ position:relative; margin-right:15%;top:0px;width:85%;} 
+.shequ2 .moban .moban1 .moban1_a .guanbianniu{width:8%; position:absolute; left:100%; top:0%; padding-top:30%;}
+.shequ2 .moban1_a_2{overflow:scroll; height:1000px;overflow-x:hidden; background:#f2f2f2;}
+.shequ2 .moban1_a_2 .null{ padding:35% 0; height:450px;}
+.shequ2 .moban .moban1_a_2{ overflow-y:hidden;} 
+.shequ2 .moban .content{ height:1000px; overflow-y:scroll;}	
+.shequ2 .moban .content .contenta{ width:85%; margin:auto; background:#FFF; margin-top:1%; padding:10% 5%; padding-bottom:1%; border-radius:10px; border:1px solid #bcbbbb }
+.shequ2 .moban .content .contenta .contenta_1{ width:15%; float:left; }
+.shequ2 .moban .content .contenta .contenta_1 img{ border-radius:100px; -moz-border-radius:100px; -webkit-border-radius:100px;}
+.shequ2 .moban .content .contenta .contenta_2{  float:left; margin-left:5%; width:80%;  }
+.shequ2 .moban .content .contenta .contenta_2 .mingc{ font-size:18pt; color:#a4530b; }
+.shequ2 .moban .content .contenta .contenta_2 p span{ display:inline-block;}
+.shequ2 .moban .content .contenta .contenta_2 p:nth-child(2){ font-size:15pt; color:#5c5c5c; -ms-word-break: break-all;
+word-break: break-all; 
+ word-break: break-word; 
+-webkit-hyphens: auto;
+-moz-hyphens: auto;
+hyphens: auto;
+white-space: nowrap;
+text-overflow: ellipsis;}
+.shequ2 .moban .content .contenta .contenta_2 p .laizi{ padding-left:5%;}
+.shequ2 .moban .content .contenta .contenta_2 p .youxi{ color:#f92900;}
+.shequ2 .moban .content .contenta .contenta_3 { font-size:15pt; color:#5c5c5c; word-break:break-all; word-wrap:break-word;}
+.shequ2 .moban .content .contenta .contenta_4 {  padding-top:2%;}
+.shequ2 .moban .content .contenta .contenta_4_boder{ border-bottom:1px solid #f2f2f2;}
+.shequ2 .moban .content .contenta .contenta_4_1{ width:50%; float:right; position:relative; height:30px;}
+.shequ2 .moban .content .contenta .contenta_4_1 .contenta_4_1_1{ position:absolute; top:1%;  width:33.3333333%;  text-align:center;}
+.shequ2 .moban .content .contenta .contenta_4_1 .contenta_4_1_2{ position:absolute;  top:10%; left:50%; }
+.shequ2 .moban .content .contenta .contenta_4_1 .contenta_4_1_1 .img{ display:inline-block; width:25%;}
+.shequ2 .moban .content .contenta .contenta_4_1 .contenta_4_1_1 .shuzi{ display:inline-block; font-size:15pt; color:#f05127;}
+.shequ2 .moban .content .contenta .contenta_4_1 .contenta_4_1_1 .img3{ display:inline-block; float:right; width:90%;}
+.shequ2 .moban .content .contenta .contenta_5 { padding-top:4%;}
+.shequ2 .moban .content .contenta .contenta_5 .contenta_5_1{ width:13%; float:left;}
+.shequ2 .moban .content .contenta .contenta_5 .contenta_5_1 img { border-radius:100px;}
+.shequ2 .moban .content .contenta .contenta_5 .contenta_5_2  { width:75%; float:left;margin-left:5%; }
+.shequ2 .moban .content .contenta .contenta_5 .contenta_5_2 p{font-size:15pt;color:#5c5c5c;word-break:break-all; word-wrap:break-word;}
+.shequ2 .moban .content .contenta .contenta_5 .contenta_5_2  .mingc{ color:#09b492;  padding-top:1%; padding-bottom:2%;}
+.shequ2 .moban .content .contenta .contenta_5 .contenta_5_2 .shijian{ float:right; font-size:12pt; color:#5c5c5c; vertical-align:bottom;}
+.shequ2 .moban .content .contenta .contenta_6{ width:6%; margin:auto; padding-top:8%;}
+
+
+
+
+
+
+.shequ2 .moban .moban1_a_3{position:fixed; bottom:0px;  max-width:544px; width:85%; z-index:999}
+
+.shequ2 .moban .content3 { padding:3% 0;background:#f15951;}
+.shequ2 .moban .content3 ul { background:#f15951;}
+.shequ2 .moban .content3 ul li{ width:13.6%; float:left; margin-left:5.5%;}
+
+
+
+/* content*/
+.shequ2 .content{ position:relative;  width:100%; margin:auto;}
+
+
+
+
+@media screen and (min-width:641px) {
+	body{background:#3a3e4a;}
+	}
+
+
+@media screen and (max-width:600px) {
+	.shequ2 .moban .moban1 .right{  font-size:16pt;  }
+    .shequ2 .moban .content .contenta .contenta_2 .mingc{ font-size:16pt; }
+	.shequ2 .moban .content .contenta .contenta_2 p:nth-child(2){ font-size:14pt;}
+	.shequ2 .moban .content .contenta .contenta_3 { font-size:14pt;}
+    .shequ2 .moban .content .contenta .contenta_4_1 .contenta_4_1_1 .shuzi{ font-size:14pt; }
+	.shequ2 .moban .content .contenta .contenta_5 .contenta_5_2 p{font-size:14pt;}
+	.shequ2 .moban .content .contenta .contenta_5 .contenta_5_2 .shijian{ font-size:11pt; }
+	
+	}
+	
+@media screen and (max-width:550px) {
+	
+	.shequ2 .moban .moban1 .right{  font-size:14pt;  }
+	.shequ2 .moban .content .contenta .contenta_2 .mingc{ font-size:15pt; }
+	.shequ2 .moban .content .contenta .contenta_2 p:nth-child(2){ font-size:13pt;}
+	.shequ2 .moban .content .contenta .contenta_3 { font-size:13pt;}
+	.shequ2 .moban .content .contenta .contenta_4_1 .contenta_4_1_1 .shuzi{ font-size:13pt; }
+	.shequ2 .moban .content .contenta .contenta_5 .contenta_5_2 p{font-size:13pt;}
+	.shequ2 .moban .content .contenta .contenta_5 .contenta_5_2 .shijian{ font-size:10pt; }
+   
+	}
+	
+@media screen and (max-width:500px) {
+	
+    .shequ2 .moban .moban1 .right{  font-size:13pt;  }
+	.shequ2 .moban .content .contenta .contenta_2 .mingc{ font-size:14pt; }
+	.shequ2 .moban .content .contenta .contenta_2 p:nth-child(2){ font-size:12pt;}
+	.shequ2 .moban .content .contenta .contenta_3 { font-size:12pt;}
+	.shequ2 .moban .content .contenta .contenta_4_1 .contenta_4_1_1 .shuzi{ font-size:12pt; }
+	.shequ2 .moban .content .contenta .contenta_5 .contenta_5_2 p{font-size:12pt;}
+	.shequ2 .moban .content .contenta .contenta_5 .contenta_5_2 .shijian{ font-size:9pt; }
+   
+	}
+@media screen and (max-width:450px) {
+    .shequ2 .moban .moban1 .right{  font-size:11pt;  }
+	.shequ2 .moban .content .contenta .contenta_2 .mingc{ font-size:12pt; }
+	.shequ2 .moban .content .contenta .contenta_2 p:nth-child(2){ font-size:10pt;}
+	.shequ2 .moban .content .contenta .contenta_3 { font-size:10pt;}
+	.shequ2 .moban .content .contenta .contenta_4_1 .contenta_4_1_1 .shuzi{ font-size:10pt; }
+	
+	.shequ2 .moban .content .contenta .contenta_5 .contenta_5_2 p{font-size:11pt;}
+	.shequ2 .moban .content .contenta .contenta_5 .contenta_5_2 .shijian{ font-size:8pt; }
+   
+	}
+
+@media screen and (max-width:400px) {
+	
+
+   .shequ2 .moban .moban1 .right{  font-size:10pt;  }
+   .shequ2 .moban .content .contenta .contenta_2 .mingc{ font-size:10pt; }
+	.shequ2 .moban .content .contenta .contenta_2 p:nth-child(2){ font-size:9pt;}
+	.shequ2 .moban .content .contenta .contenta_3 { font-size:9pt;}
+	.shequ2 .moban .content .contenta .contenta_4_1 .contenta_4_1_1 .shuzi{ font-size:9pt; }
+	.shequ2 .moban .content .contenta .contenta_5 .contenta_5_2 p{font-size:10pt;}
+	.shequ2 .moban .content .contenta .contenta_5 .contenta_5_2 .shijian{ font-size:7pt; }
+    
+	}
+
+
+@media screen and (max-width:320px) {
+	
+	.shequ2 .moban .moban1 .right{  font-size:9pt;  }
+	.shequ2 .moban .content .contenta .contenta_2 .mingc{ font-size:9pt; }
+	.shequ2 .moban .content .contenta .contenta_2 p:nth-child(2){ font-size:8pt;}
+	.shequ2 .moban .content .contenta .contenta_3 { font-size:8pt;}
+	.shequ2 .moban .content .contenta .contenta_4_1 .contenta_4_1_1 .shuzi{ font-size:8pt; }
+	.shequ2 .moban .content .contenta .contenta_5 .contenta_5_2 p{font-size:9pt;}
+
+	}
+
+
+
+
+
+@media screen and (min-width:641px) {
+body{background:#3a3e4a;}
+	}
+@media screen and (max-width:600px) {
+    .shequ2 .moban .moban1 .moban1_a_1{ font-size:23pt;}
+	.shequ2 .moban .content3{font-size:22pt; }
+	}
+	
+
+	
+@media screen and (max-width:550px) {
+	.shequ2 .moban .moban1 .moban1_a_1{ font-size:20pt;}
+   .shequ2 .moban .content3{font-size:20pt; }
+	}
+	
+@media screen and (max-width:480px) {
+	.shequ2 .moban .moban1 .moban1_a_1{ font-size:18pt;}
+	.shequ2 .moban .content1_b li{ width:20%;  float:left; }
+
+   
+	 }
+	 
+@media screen and (max-width:450px) {
+	.shequ2 .moban .content3{font-size:18pt; }
+	 }
+	 
+	 
+@media screen and (max-width:430px) {
+	.shequ2 .moban .moban1 .moban1_a_1{ font-size:16pt;}
+	
+   .shequ2 .moban .content1_c p span{ font-size:20pt;}
+	 }
+		
+ @media screen and (max-width:380px) {
+	.shequ2 .moban .moban1 .moban1_a_1{ font-size:14pt;}
+    .shequ2 .moban .content3{font-size:16pt; }
+	 }
+	 
+ @media screen and (max-width:350px) {
+	.shequ2 .moban .anniu ul li{  font-size:12pt;}
+
+	 }
+	 
+ @media screen and (max-width:330px) {
+	.shequ2 .moban .moban1 .moban1_a_1{ font-size:12pt; }
+	 }

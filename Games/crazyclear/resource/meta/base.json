@@ -1,0 +1,99 @@
+{
+    "maxPlayTimes": 20,
+    "deleteAllSameMaxTimes": 6,
+    "gameName": "蜂狂连消",
+    "overWords": ["次连击，消除了", "块!!!"],
+    "downloadURL": "http://wx.tongbu.com/app/10008848?from=singlemessage&isappinstalled=0",
+    "iconURL": "http://wzxh.crazyhornets.cn/html5/c-h5/launcher/c_icon.png",
+    "weiXinShareURL": "http://wzxh.crazyhornets.cn/html5/c-h5/launcher/release.html",
+    "weiXinAppKey": "wx4bc8abc7f5f56cf9",
+    "weiBoRalateUid": "5249613968",
+    "weiXinShareOkURL": "http://wzxh.crazyhornets.cn/html5/c-h5/launcher/share_ok.html",
+    "pos": [
+        [0, 0],
+        [0, 1],
+        [0, 2],
+        [0, 3],
+        [0, 4],
+        [1, 0],
+        [1, 1],
+        [1, 2],
+        [1, 3],
+        [1, 4],
+        [2, 0],
+        [2, 1],
+        [2, 2],
+        [2, 3],
+        [2, 4],
+        [3, 0],
+        [3, 1],
+        [3, 2],
+        [3, 3],
+        [3, 4],
+        [4, 0],
+        [4, 1],
+        [4, 2],
+        [4, 3],
+        [4, 4],
+        [5, 0],
+        [5, 1],
+        [5, 2],
+        [5, 3],
+        [5, 4],
+        [6, 0],
+        [6, 1],
+        [6, 2],
+        [6, 3],
+        [6, 4]
+    ],
+    "task": [
+        {
+            "content": "不错啊，",
+            "num": 10,
+            "des": "小小手"
+        },
+        {
+            "content": "还行啊，",
+            "num": 20,
+            "des": "小快手"
+        },
+        {
+            "content": "赞啊，",
+            "num": 30,
+            "des": "无影手"
+        },
+        {
+            "content": "膜拜，",
+            "num": 40,
+            "des": "无敌手"
+        },
+        {
+            "content": "X，",
+            "num": 50,
+            "des": "妇科圣手"
+        }
+    ],
+    "combo": [
+        {
+            "num_qiang": 3,
+            "des_qiang": "弱弱的"
+        },
+        {
+            "num_qiang": 6,
+            "des_qiang": "迅捷的"
+        },
+        {
+            "num_qiang": 9,
+            "des_qiang": "眼观六路的"
+        },
+        {
+            "num_qiang": 13,
+            "des_qiang": "所向披靡的"
+        },
+        {
+            "num_qiang": 14,
+            "des_qiang": "神一般的"
+
+        }
+    ]
+}

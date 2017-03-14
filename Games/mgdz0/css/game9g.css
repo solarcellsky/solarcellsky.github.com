@@ -1,0 +1,763 @@
+
+.game9gloading { display: none !important;position: fixed; z-index: 9999; width: 100%; height: 100%; left: 0; top: 0; background: #F00; }
+.game9gloading img.game9glogo { display: block; margin: 25% auto 0 auto; width: 70%; }
+.game9gloading img.game9glogo_up { display: block; margin: 10% auto 0 auto; width: 70%; margin-bottom: 15px; }
+.game9gloading img.cplogo { display: block; margin: 0 auto; max-width: 50%; }
+.game9gloading img.splogo { display: block; margin: 30px auto 0 auto; max-width: 50%; }
+
+img.game9gad { position: fixed; z-index: 9995; left: 0; top: 0; width: 100%; cursor: pointer; }
+img.game9gadbottom { position: fixed; z-index: 9995; left: 0; bottom: 0; width: 100%; cursor: pointer; }
+img.game9gzhongsoutip { position: fixed; z-index: 9999; top: 0; right: 5%; width: 50%; }
+
+img.game9gshare { position: fixed; width: 100%; left: 0; top: 0; z-index: 9999; }
+img.game9gucicon { position: absolute; left: 0; top: 0; width: 64px; height: 64px; z-index: 9999; background-color: #FFF; }
+
+.game9gdialog { position: fixed; z-index: 9999; left: 5vw; top: 20vh; width: 90vw; color: #000; background-color: #FFF; border-radius: 3vw; }
+.game9gdialogheader { margin-top: 5vw; font-size: 5vw; font-weight: bold; text-align: center; }
+.game9gdialogcontent { margin: 7vw 3vw; text-align: center; font-size: 4.5vw; font-weight: normal; line-height: 6vw; }
+.game9gdialogcontent input { display: block; width: 70vw; height: 10vw; line-height: 10vw; margin: 4vw auto 0 auto; padding: 0 3vw; font-size: 4.5vw; text-align: center; border: 0; }
+.game9gdialogfooter { padding: 2vw 0; border-top: 1px solid #B2B2B2; text-align: center; }
+.game9gdialogfooter a { display: inline-block; margin: 0 3vw; width: 30vw; height: 12vw; line-height: 12vw; cursor: pointer; color: #FFF; font-size: 4.5vw; text-align: center; text-decoration: none; background-color: #2D9916; border-radius: 2vw; overflow: hidden; }
+
+.game9gmask { z-index: 9998; background-color: rgb(0, 0, 0); position: fixed; left: 0px; top: 0px; width: 100%; height: 100%; opacity: 0.5 }
+
+.game9gprogress { position: fixed; z-index: 9999; left: 20vw; top: 20vh; width: 60vw; height: 60vw; border-radius: 50%; background: #FFF; }
+.game9gprogresstext { line-height: 60vw; text-align: center; font-family: SimHei; font-size: 7vw; color: #FBC71B;  }
+.game9gprogresswrap { position: absolute; top: 0; width: 30vw; height: 60vw; overflow: hidden; }
+.game9gprogresswrap.rightprogress { right: 0; }
+.game9gprogresswrap.leftprogress { left: 0; }
+.game9gprogresscircle { position: absolute; top: 0; width: 54vw; height: 54vw; border: 3vw solid #CCC; border-radius: 50%; -webkit-transform: rotate(45deg); transform: rotate(45deg); }
+.game9gprogresscircle.rightcircle { right: 0; border-top: 3vw solid #982200; border-right: 3vw solid #982200; }
+.game9gprogresscircle.leftcircle { left: 0; border-bottom: 3vw solid #982200; border-left: 3vw solid #982200; }
+.game9gprogressbtns { position: fixed; z-index: 9999; left: 20vw; top: 60vh; width: 60vw; }
+.game9gprogressbtns a { display: block; margin: 6vw auto; width: 40vw; height: 12vw; line-height: 12vw; text-align: center; font-size: 5vw; background: #FBC71B; color: #FFF; border-radius: 2vw; }
+.game9gprogressmask { z-index: 9998; background-color: rgb(0, 0, 0); position: fixed; left: 0px; top: 0px; width: 100%; height: 100%; opacity: 0.75;}
+
+.game9gsharetip { position: fixed; z-index: 9999; width: 100%; height: 100%; left: 0; top: 0; background: #000; opacity: 0.9; font-size: medium; font-family: SimHei; }
+.game9gsharetip img.goup { position: absolute; top: 1%; right: 5%; height: 11%; }
+/*.game9gsharetip div.title { position: absolute; top: 12%; right: 20%; }*/
+/*.game9gsharetip div.content { position: absolute; left: 0; top: 40%; width: 100%; text-align: center; font-size: 1.5em; font-weight: bold; color: #696969; }*/
+.game9gsharetip div.title { position: absolute; top: 18%; right: 20%; color: #FFF; }
+.game9gsharetip div.content { position: absolute; top: 10%; right: 5%; width: 100%; text-align: center; font-size: 1.3em; color: #FFF; }
+.game9gsharetip div.ignore { position: absolute; left: 10%; bottom: 20%; padding-left: 50px; color: #777; }
+.game9gsharetip img.godown { position: absolute; left: 10%; bottom: 10%; height: 10%; }
+.game9gsharetip a { position: absolute; cursor: pointer; left: 5%; bottom: 4%; color: #777; }
+.game9gsharetip img.pm { position: absolute; left: 0; top: 35%; width: 100%; cursor: pointer; }
+
+.game9gsharemask { position: fixed; z-index: 9996; left: 0; top: 0; width: 100%; height: 100%; opacity: 0.5; background: #000; }
+@-webkit-keyframes game9gshareeventmove { from { top: 0; } to { top: 5px; } }
+		@keyframes game9gshareeventmove { from { top: 0; } to { top: 5px; } }
+img.game9gshareevent { position: fixed; z-index: 9997; left: 0; top: 0; width: 100%;
+	-webkit-animation: game9gshareeventmove 0.4s ease-in-out infinite alternate;
+			animation: game9gshareeventmove 0.4s ease-in-out infinite alternate;
+}
+img.game9ggohome { position: fixed; z-index: 9997; left: 3%; top: 2%; width: 18%; }
+
+/************************************ UI *******************************************/
+
+.game9g9gstart { display: none !important;position: fixed; z-index: 9998; left: 4vw; top: 3vw; width: 15vw; height: 15vw; background: url(../img/9gicon.png) no-repeat; background-size: contain; display: none;}
+.game9g9gstart { -webkit-transition: left 0.2s; -moz-transition: left 0.2s; transition: left 0.2s; }
+.game9g9gstartbadge { color: #FFF; background: #E00000; position: absolute; right: 0; top: 0; border-radius: 50%; width: 6vw; height: 6vw; line-height: 6vw; text-align: center; /* border: 1px solid #FFF; */ font-size: 4vw; font-weight: bold;}
+.game9g9gstarttip { position: fixed; z-index: 9996; left: 16%; top: 9%; width: 46%; opacity: 0; }
+
+.game9gmenumask { position: fixed; z-index: 9997; left: 0; top: 0; width: 100%; height: 100%; }
+.game9gmenu { position: fixed; z-index: 9999; left: -75%; top: 0; width: 75%; height: 100%; background: #000; border-right: 1px solid #777; }
+.game9gmenu { -webkit-transition: left 0.2s; -moz-transition: left 0.2s; transition: left 0.2s; }
+.game9gmenu.showmenu { left: 0; }
+.game9gmenu .game9gmenumy { margin: 4vw 0; text-align: center;}
+.game9gmenu .game9gmenumy img { width: 20vw; height: 20vw; border: 2px solid #FFF; border-radius: 50%;}
+.game9gmenu .game9gmenumy div { display: none; }
+.game9gmenu ul { list-style-type: none; margin: 0 auto; padding: 0; width: 50vw;}
+.game9gmenu ul li { position: relative; margin: 2vw 0; padding-top: 2.5vw; text-align: left; }
+.game9gmenu ul li img { vertical-align: middle; width: 15vw; height: 15vw; }
+.game9gmenu ul li a { font-size: 5vw; font-family: SimHei; color: #FFF; text-align: left; text-decoration: none; margin-left: 3vw;}
+.game9gmenu ul li div { position: absolute; left: 11vw; top: 0; width: 6vw; height: 6vw; line-height: 6vw; text-align: center; font-size: 4vw; font-family: Arial; color: #FFF; background: #F00; border-radius: 50%; }
+.game9gmenu .game9ggzbanner { width: 100%; left: 0; bottom: 0; position: absolute; }
+
+.game9gmask { position: fixed; z-index: 9997; left: 0; top: 0; width: 100%; height: 100%; background: #000; opacity: 0.7; }
+
+.game9gchoosegame { position: fixed; z-index: 9998; left: 10vw; top: 10vh; width: 80vw; /* height: 80vh; */ border-radius: 4vw; background: #FFF; }
+.game9gchoosegame p { margin: 8vw 0 5vw 0; color: #313131; font-size: 5vw; font-weight: bold; line-height: 100%; text-align: center; }
+.game9gchoosegame ul { margin: 0 3vw; padding: 0; list-style: none; overflow: auto;zoom:1; }
+.game9gchoosegame ul li { float: left; margin: 3vw 0; width: 24.667vw; text-align: center; }
+.game9gchoosegame ul li img { width: 16vw; height: 16vw; border: 0; border-radius: 3vw; }
+.game9gchoosegame ul li span { display: block; max-width: 24vw; max-height: 8vw; font-size: 4vw; color: #777; line-height: 10vw; overflow: hidden; }
+.game9gchoosegame div { margin: 5vw 0 8vw 0; text-align: center; }
+.game9gchoosegame div a { display: inline-block; margin: 0 3vw; width: 22vw; height: 10vw; line-height: 10vw; color: #FFF; font-size: 4vw; background: #999; border-radius: 2vw; }
+
+/************************************ Chat UI *******************************************/
+
+.game9guichatpopupwrap { position: fixed; z-index: 9997; top: 0; left: 0; width: 100%; text-align: left; }
+.game9guichatpopupmask { position: absolute; z-index: 9998; top: 0; left: 0; width: 100%; height: 100%; background: #000; opacity: 0.8; }
+.game9guichatpopup { position: relative; z-index: 9999; margin: 5vw; text-align: left; }
+.game9guichatpopup div { display: inline-block; vertical-align: middle; text-align: left; background: #FFF; padding: 1vw 4vw; border-radius: 2vw; font-size: 4vw; max-width: 68vw; max-height: 10vw; line-height: 5.5vw; overflow: hidden;}
+.game9guichatpopup img { width: 10vw; height: 10vw; border-radius: 50%; vertical-align: middle; margin-right: 3vw;}
+
+.game9guichatreplymask { position: fixed; z-index: 9998; top: 0; left: 0; width: 100%; height: 100%; background: #000; opacity: 0.8; }
+.game9guichatreply { position: fixed; z-index: 9999; left: 0; top: 10vh; padding: 10vw 0;width: 100%; text-align: center;}
+.game9guichatreply input { border: 2px solid #F38800; border-radius: 2vw; width: 60vw; height: 10vw; padding: 0 3vw;font-size: 5vw; vertical-align: middle; }
+.game9guichatreply .game9guichatreplybtn { display: inline-block;margin-left: 3vw; width: 20vw; height: 10vw;line-height: 10vw;font-size: 5vw; color: #FFF; background: #F38800; border-radius: 2vw; text-align: center; vertical-align: middle; }
+.game9guichatreply .game9guichatreplytip { display: block;margin: 4vw auto;color: #F38800;font-size: 5vw;text-decoration: underline;}
+
+.game9guirequestwrap { position: fixed; z-index: 9999; top: 0; left: 0; width: 100%; }
+.game9guirequestmask { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #000; opacity: 0.8; }
+.game9guirequest { position: relative; margin: 5vw; }
+.game9guirequest .game9guirequesthead { width: 10vw; height: 10vw; border-radius: 50%; vertical-align: middle; margin-right: 3vw;}
+.game9guirequest .game9guirequesttext { display: inline-block; vertical-align: middle; color: #FFF; font-size: 4vw; max-width: 70vw;  max-height: 11vw;line-height: 5.5vw; overflow: hidden;}
+.game9guirequest .game9guirequesttext img { margin: 0 1vw; vertical-align: middle; width: 5vw; height: 5vw; }
+.game9guirequest .game9guiresponsebtns { margin-top: 2vw;text-align: center;}
+.game9guirequest .game9guiresponsebtns a { display: inline-block;margin: 0 3vw;padding: 2vw 5vw;color: #FFF;border-radius: 1vw;font-size: 4vw;}
+.game9guirequest .game9guiresponsebtns a.game9guiresponseagree { background: #F00;}
+.game9guirequest .game9guiresponsebtns a.game9guiresponsereject { background: #CCC;}
+
+/************************************ PK UI *******************************************/
+
+.game9gpk { position: fixed; z-index:  9991; left: 0; top: 0; width: 100vw; height: 27vw; }
+.game9gpkbg { width: 100%; height: 100%; background: #000; opacity: 0.9; }
+.game9gpkmask { position: fixed; z-index: 9991; left: 0; top: 0; width: 100%; height: 100%; background: #EDEDED; /*opacity: 0.8;*/ }
+
+.game9gpkrole { position: fixed; z-index: 9992; width: 30vw; text-align: center; }
+.game9gpkrole.matchhero { left: 35vw; top: 5vh; }
+.game9gpkrole.matchtarget { left: 35vw; bottom: 5vh; }
+.game9gpkrole.roomhero { position: absolute; left: 3vw; }
+.game9gpkrole.roomtarget { position: absolute; right: 3vw; }
+.game9gpkrole.resulthero { position: absolute; left: 3vw; }
+.game9gpkrole.resulttarget { position: absolute; right: 3vw; }
+.game9gpkrolehead { width: 20vw; height: 20vw; box-sizing: border-box; border: 2px solid #81CC82; border-radius: 10vw; }
+.game9gpkrole.hero .game9gpkrolehead { border-color: #D96C56; }
+.game9gpkresultchaticon { position: absolute; z-index: 9993; top: 13vw; right: 5vw; width: 8vw; height: 8vw; background: url(../img/icon_more.png); background-size: 8vw 8vw; }
+.game9gpkrolename { margin-top: 3vw; width: 30vw; }
+.game9gpkrolename span { display: inline-block; width: 24vw; height: 5vw; line-height: 5vw; font-size: 4vw; color: #474748; overflow: hidden; }
+.game9gpkrolename img { width: 6vw; height: 6vw; border-radius: 3vw; }
+.game9gpkrolecity { font-size: 4vw; color: #474748; }
+
+.game9gpkconfirm { position: fixed; z-index: 9993; left: 5vw; width: 90vw; bottom: 10vw; padding: 5vw 0; background: #FFF; border-radius: 3vw; }
+.game9gpkconfirmicon { float: left; margin: 0 3vw; width: 20vw; height: 20vw; border-radius: 10vw; }
+.game9gpkconfirmtext { float: left; width: 38vw; font-size: 4vw; line-height: 6vw; }
+.game9gpkconfirmbtn { float: left; margin: 3vw; width: 20vw; }
+.game9gpkconfirmbtn a { display: block; width: 20vw; height: 8vw; line-height: 8vw; border-radius: 2vw; font-size: 4vw; text-align: center; color: #FFF; }
+.game9gpkconfirmbtnok { background: #429101; }
+.game9gpkconfirmbtncancel { background: #FF0202; margin-top: 2vw; }
+
+.game9gpkbtn { position: fixed; z-index: 9993; display: block; left: 30vw; bottom: 10vh; width: 40vw; height: 12vw; line-height: 12vw; text-align: center; color: #FFF; font-size: 6vw; background: #FFA300; border-radius: 3vw; }
+
+.game9gpktip { position: fixed; z-index: 9993; left: 20vw; top: 30vh; width: 60vw; height: 60vw; box-sizing: border-box; border-radius: 30vw; background: #FFF; border: 1vw solid #CCC; }
+.game9gpktiptext { position: fixed; z-index: 9994; left: 20vw; top: 30vh; width: 60vw; height: 60vw; line-height: 60vw; text-align: center; }
+
+.game9gpkroom { position: fixed; z-index: 9992; width: 100%; height: 100%; left: 0; top: 0; }
+.game9gpkroomplayers { margin-top: 3vw; background: url(../img/flash.png) 39vw 0 no-repeat; background-size: 24vw 24vw; height: 35vw; }
+
+.game9gpktime { position: absolute; z-index: 9992; left: 40vw; top: 1vw; width: 20vw; height: 20vw; line-height: 20vw; border-radius: 10vw; background: #FFF; text-align: center; font-size: 10vw; color: #FFF; background: url(../img/clock.png) 0 1.5vw no-repeat; background-size: contain; }
+
+.game9gpkplayer { position: absolute; z-index: 9992; top: 3vw; width: 25vw; text-align: center; }
+.game9gpkplayer.hero { left: 0; }
+.game9gpkplayer.target { right: 0; }
+.game9gpkplayerhead { width: 16vw; height: 16vw; box-sizing: border-box; border: 2px solid #81CC82; border-radius: 8vw; }
+.game9gpkplayer.hero .game9gpkplayerhead { border-color: #D96C56; }
+.game9gpkplayername { margin-top: 1.5vw; font-size: 4vw; color: #7A7677; width: 25vw; overflow: hidden; display: none; }
+
+.game9gpkscore { position: absolute; top: 4vw; text-align: center; }
+.game9gpkscore.hero { left: 25vw; }
+.game9gpkscore.target { right: 25vw; }
+.game9gpkscoretitle { color: #8A8989; width: 12vw; font-size: 4vw; padding-bottom: 2vw; border-bottom: 1px solid #8A8989; }
+.game9gpkscoretext { font-size: 4vw; padding-top: 2vw; }
+.game9gpkscore.hero .game9gpkscoretext { color: #D76A56; }
+.game9gpkscore.target .game9gpkscoretext { color: #81CC82; }
+
+.game9gpkfight { position: absolute; left: 0; bottom: 0; width: 100%; height: 5vw; }
+.game9gpkfight div { position: absolute; height: 100%; }
+.game9gpkfightbest { width: 50%; }
+.game9gpkfightscore { width: 100%; }
+.game9gpkfightbest.hero { left: 0; background: #D76A56; }
+.game9gpkfightscore.hero { left: 0; background: #D34B34; }
+.game9gpkfightbest.target { right: 0; background: #81CC82; }
+.game9gpkfightscore.target { right: 0; background: #43C143; }
+
+.game9gpktimeout { position: fixed; z-index: 9992; left: 30vw; top: 42vh; width: 40vw; background: url(../img/clock2.png) 10vw 0 no-repeat; background-size: 20vw 20vw; padding-top: 22vw; font-size: 10vw; text-align: center; }
+
+.game9gpkresult { position: fixed; z-index: 9992; width: 100%; height: 100%; left: 0; top: 0; }
+.game9gpkresultplayers { margin-top: 3vw; background: url(../img/flash.png) 39vw 0 no-repeat; background-size: 24vw 24vw; height: 35vw; }
+.game9gpkresultscore { position: relative; margin-top: 6vw; }
+.game9gpkresultscoretext { position: absolute; top: 0; font-size: 6vw; }
+.game9gpkresultscoretext.hero { left: 6vw; }
+.game9gpkresultscoretext.target { right: 6vw; }
+.game9gpkresultscorebar { position: relative; margin: 0 15vw; height: 6vw; }
+.game9gpkresultscorebar div { position: absolute; width: 0%; height: 100%; }
+.game9gpkresultscorebar div.hero { left: 0; background: #D76A56; }
+.game9gpkresultscorebar div.target { right: 0; background: #81CC82; }
+.game9gpkresultwinner { margin-top: 6vw; font-size: 12vw; text-align: center; }
+.game9gpkresultwinner.win { color: red; }
+.game9gpkresultwinner.lose { color: green; }
+.game9gpkresultbtn { margin-top: 6vw; text-align: center;}
+.game9gpkresultbtn a { display: inline-block; margin: 2vw; width: 26vw; height: 13vw; line-height: 13vw; border-radius: 3vw; text-align: center; font-size: 4vw; }
+.game9gpkresultbtn a.resultred { background: #D96C56; color: #FFF; }
+.game9gpkresultbtn a.resultwhite { background: #FFF; color: #5E5A59; }
+
+.game9gpkemojilist { position: fixed; z-index: 9994; left: 10vw; width: 80vw; bottom: 3vh; background: #FFF; border-radius: 5vw; }
+.game9gpkemojilist img { margin: 1vw; width: 14vw; height: 14vw; }
+.game9gpkemoji { position: fixed; z-index: 9995; width: 16vw; height: 16vw; }
+.game9gpkemojiflyleft { -webkit-animation: game9gpkemojiflyleft 1.5s linear; animation: game9gpkemojiflyleft 1.5s linear; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards; }
+.game9gpkemojiflyright { -webkit-animation: game9gpkemojiflyright 1.5s linear; animation: game9gpkemojiflyright 1.5s linear; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards; }
+@-webkit-keyframes game9gpkemojiflyleft { 0% { -webkit-transform: none; } 100% { -webkit-transform: translate3d(-64px, 0, 0); } }
+         keyframes game9gpkemojiflyleft { 0% { transform: none; } 100% { transform: translate3d(-64px, 0, 0); } }
+@-webkit-keyframes game9gpkemojiflyright { 0% { -webkit-transform: none; } 100% { -webkit-transform: translate3d(64px, 0, 0); } }
+         keyframes game9gpkemojiflyright { 0% { transform: none; } 100% { transform: translate3d(64px, 0, 0); } }
+
+.game9gpkintro { position: fixed; z-index: 9994; left: 10vw; top: 25vh; width: 80vw; border-radius: 5vw; }
+
+.game9gpkgamelist { position: fixed; z-index: 9993; left: 5vw; top: 50vh;}
+.game9gpkgame { display: inline-block; vertical-align: top; margin: 0 4vw; }
+.game9gpkgame img { width: 20vw; height: 20vw; border: 1vw solid #FFF; border-radius: 3vw; }
+.game9gpkgame div { font-size: 4vw; color: #222; margin-top: 1vw; max-width: 22vw; text-align: center; }
+
+.game9gpkwait { position: fixed; z-index: 9994; left: 30vw; top: 20vh; width: 40vw; height: 40vw; border-radius: 50%; background: #FFF; }
+.game9gpkwaittext { line-height: 40vw; text-align: center; font-family: SimHei; font-size: 6vw; color: #464646;  }
+.game9gpkwaitwrap { position: absolute; top: 0; width: 20vw; height: 40vw; overflow: hidden; }
+.game9gpkwaitwrap.rightwait { right: 0; }
+.game9gpkwaitwrap.leftwait { left: 0; }
+.game9gpkwaitcircle { position: absolute; top: 0; width: 36vw; height: 36vw; border: 2vw solid #CCC; border-radius: 50%; -webkit-transform: rotate(45deg); transform: rotate(45deg); }
+.game9gpkwaitcircle.rightcircle { right: 0; border-top: 2vw solid #D34A36; border-right: 2vw solid #D34A36; }
+.game9gpkwaitcircle.leftcircle { left: 0; border-bottom: 2vw solid #D34A36; border-left: 2vw solid #D34A36; }
+
+.game9gpkprogress { position: fixed; z-index: 9994; left: 20vw; top: 30vh; width: 60vw; height: 60vw; border-radius: 50%; background: #FFF; }
+.game9gpkprogresstext { line-height: 60vw; text-align: center; font-family: SimHei; font-size: 7vw; color: #FBC71B;  }
+.game9gpkprogresswrap { position: absolute; top: 0; width: 30vw; height: 60vw; overflow: hidden; }
+.game9gpkprogresswrap.rightprogress { right: 0; }
+.game9gpkprogresswrap.leftprogress { left: 0; }
+.game9gpkprogresscircle { position: absolute; top: 0; width: 54vw; height: 54vw; border: 3vw solid #CCC; border-radius: 50%; -webkit-transform: rotate(45deg); transform: rotate(45deg); }
+.game9gpkprogresscircle.rightcircle { right: 0; border-top: 3vw solid #982200; border-right: 3vw solid #982200; }
+.game9gpkprogresscircle.leftcircle { left: 0; border-bottom: 3vw solid #982200; border-left: 3vw solid #982200; }
+
+@-webkit-keyframes circleloadright { 0% { -webkit-transform: rotate(45deg); } 50% { -webkit-transform: rotate(225deg); } 100% { -webkit-transform: rotate(225deg); } }
+         keyframes circleloadright { 0% { transform: rotate(45deg); } 50% { transform: rotate(225deg); } 100% { transform: rotate(225deg); } }
+@-webkit-keyframes circleloadleft { 0% { -webkit-transform: rotate(45deg); } 50% { -webkit-transform: rotate(45deg); } 100% { -webkit-transform: rotate(225deg); } }
+         keyframes circleloadleft { 0% { transform: rotate(45deg); } 50% { transform: rotate(45deg); } 100% { transform: rotate(225deg); } }
+
+.game9gpkmatchlist { position: fixed; z-index: 9993; left: 20vw; bottom: 5vh; }
+.game9gpkmatcharrow { margin: 0 auto; width: 0; height: 0; border-top: 4vw solid #81CC82; border-left: 4vw solid transparent; border-right: 4vw solid transparent;}
+.game9gpkmatchscroll { position: relative; width: 60vw; height: 30vw; overflow: hidden; }
+.game9gpkmatchscroll img { position: absolute; left: 0; top: 10vw; margin: 1vw; box-sizing: border-box; width: 18vw; height: 18vw; border-radius: 50%; border: 2px solid #81CC82;}
+.game9gpkmatchscroll img { -webkit-transition: left 0.2s; -moz-transition: left 0.2s; transition: left 0.2s; }
+
+.game9gpkroomcreate { position: fixed; z-index: 9993; left: 0; top: 5vh; width: 100%; }
+.game9gpkroomcreate b { display: block; margin-top: 3vw; color: #0E0E0E; font-size: 5.5vw; text-align: center; }
+.game9gpkroomcreate span { display: block; margin-top: 3vw;text-align: center;font-size: 4.5vw;color: #777;}
+/*.game9gpkroomcreate img { display: block; margin: 13vw auto; width: 20vw; height: 20vw; box-sizing: border-box; border: 2px solid #D96C56; border-radius: 10vw; }*/
+.game9gpkroomcreate div { margin: 6vw auto; padding: 5vw; width: 50vw; height: 50vw; background: #FFF; }
+.game9gpkroomcreate p { display: block; margin: 0 auto; padding: 4vw 10vw; width: 55vw; color: #0E0E0E; font-size: 4.5vw; background: #FFF; border-radius: 5vw; line-height: 8vw; }
+
+.game9gpkgames { position: fixed; z-index: 9997; left: 7vw; top: 8vh; width: 78vw; height: 78vh; padding: 3vh 4vw; background: #FFF; border-radius: 5vw; }
+.game9gpkgames ul { margin: 0; padding: 0; list-style: none; height: 70vh; overflow-y: scroll; }
+.game9gpkgames li { padding: 3vw 0; border-bottom: 1px solid #EEE; overflow: auto; zoom: 1; }
+.game9gpkgames li img { float: left; width: 13vw; height: 13vw; border-radius: 2vw; margin-right: 2vw; }
+.game9gpkgames li p { margin: 1vw 0 0 0; font-size: 4.3vw; font-weight: normal; color: #333; }
+.game9gpkgames li p label { margin-left: 2vw;padding: 0.4vw 1.5vw; font-size: 4vw; background: #F00; color: #FFF; border-radius: 2vw; }
+.game9gpkgames li span { display: block; margin-top: 2vw; font-size: 4vw; font-weight: normal; color: #888; }
+.game9gpkgames div { margin-top: 4vw; text-align: center; }
+.game9gpkgames div a { display: inline-block;margin: 0 5vw; padding: 2vw 4vw;font-size: 5vw;color: #FFF;background: #CECECE;border-radius: 2vw;}
+.game9gpkgamesmask { position: fixed; z-index: 9996; left: 0; top: 0; width: 100%; height: 100%; opacity: 0.5; background: #000; }
+
+.game9gpkother { position: fixed; z-index: 9997; padding: 6vw 0;left: 10vw; top: 30vh; width: 80vw; text-align: center; background: #FFF;border-radius: 3vw;}
+.game9gpkother a { display: block; margin: 6vw auto; width: 46vw; height: 17vw; background-size: contain; background-repeat: no-repeat; }
+.game9gpkother a.game9gpkweixin { background-image: url(../app/playmode2.png); }
+.game9gpkother a.game9gpkrandom { background-image: url(../app/playmode1.png); }
+.game9gpkothermask { position: fixed; z-index: 9996; left: 0; top: 0; width: 100%; height: 100%; opacity: 0.5; background: #000; }
+
+/************************************ animate.css *******************************************/
+
+@-webkit-keyframes bounce {
+  from, 20%, 53%, 80%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+  }
+
+  40%, 43% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    -webkit-transform: translate3d(0, -30px, 0);
+    transform: translate3d(0, -30px, 0);
+  }
+
+  70% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    -webkit-transform: translate3d(0, -15px, 0);
+    transform: translate3d(0, -15px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0,-4px,0);
+    transform: translate3d(0,-4px,0);
+  }
+}
+
+@keyframes bounce {
+  from, 20%, 53%, 80%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+  }
+
+  40%, 43% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    -webkit-transform: translate3d(0, -30px, 0);
+    transform: translate3d(0, -30px, 0);
+  }
+
+  70% {
+    -webkit-animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    -webkit-transform: translate3d(0, -15px, 0);
+    transform: translate3d(0, -15px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0,-4px,0);
+    transform: translate3d(0,-4px,0);
+  }
+}
+
+.bounce {
+  -webkit-animation: bounce 1s;
+          animation: bounce 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes bounceIn {
+  from, 20%, 40%, 60%, 80%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+  }
+
+  20% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  40% {
+    -webkit-transform: scale3d(.9, .9, .9);
+    transform: scale3d(.9, .9, .9);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03, 1.03, 1.03);
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+
+  80% {
+    -webkit-transform: scale3d(.97, .97, .97);
+    transform: scale3d(.97, .97, .97);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes bounceIn {
+  from, 20%, 40%, 60%, 80%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+  }
+
+  20% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  40% {
+    -webkit-transform: scale3d(.9, .9, .9);
+    transform: scale3d(.9, .9, .9);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03, 1.03, 1.03);
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+
+  80% {
+    -webkit-transform: scale3d(.97, .97, .97);
+    transform: scale3d(.97, .97, .97);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.bounceIn {
+  -webkit-animation: bounceIn 1s;
+          animation: bounceIn 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes bounceInLeft {
+  0%, 60%, 75%, 90%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+            transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-3000px, 0, 0);
+            transform: translate3d(-3000px, 0, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(25px, 0, 0);
+            transform: translate3d(25px, 0, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+            transform: translate3d(-10px, 0, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(5px, 0, 0);
+            transform: translate3d(5px, 0, 0);
+  }
+
+  100% {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes bounceInLeft {
+  0%, 60%, 75%, 90%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+            transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-3000px, 0, 0);
+            transform: translate3d(-3000px, 0, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(25px, 0, 0);
+            transform: translate3d(25px, 0, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+            transform: translate3d(-10px, 0, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(5px, 0, 0);
+            transform: translate3d(5px, 0, 0);
+  }
+
+  100% {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+.bounceInLeft {
+  -webkit-animation: bounceInLeft 1s;
+          animation: bounceInLeft 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes bounceInRight {
+  0%, 60%, 75%, 90%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+            transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(3000px, 0, 0);
+            transform: translate3d(3000px, 0, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(-25px, 0, 0);
+            transform: translate3d(-25px, 0, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(10px, 0, 0);
+            transform: translate3d(10px, 0, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(-5px, 0, 0);
+            transform: translate3d(-5px, 0, 0);
+  }
+
+  100% {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes bounceInRight {
+  0%, 60%, 75%, 90%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+            transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(3000px, 0, 0);
+            transform: translate3d(3000px, 0, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(-25px, 0, 0);
+            transform: translate3d(-25px, 0, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(10px, 0, 0);
+            transform: translate3d(10px, 0, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(-5px, 0, 0);
+            transform: translate3d(-5px, 0, 0);
+  }
+
+  100% {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+.bounceInRight {
+  -webkit-animation: bounceInRight 1s;
+          animation: bounceInRight 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes bounceOutLeft {
+  20% {
+    opacity: 1;
+    -webkit-transform: translate3d(20px, 0, 0);
+            transform: translate3d(20px, 0, 0);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(-2000px, 0, 0);
+            transform: translate3d(-2000px, 0, 0);
+  }
+}
+
+@keyframes bounceOutLeft {
+  20% {
+    opacity: 1;
+    -webkit-transform: translate3d(20px, 0, 0);
+            transform: translate3d(20px, 0, 0);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(-2000px, 0, 0);
+            transform: translate3d(-2000px, 0, 0);
+  }
+}
+
+.bounceOutLeft {
+  -webkit-animation: bounceOutLeft 1s;
+          animation: bounceOutLeft 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes bounceOutRight {
+  20% {
+    opacity: 1;
+    -webkit-transform: translate3d(-20px, 0, 0);
+            transform: translate3d(-20px, 0, 0);
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(2000px, 0, 0);
+            transform: translate3d(2000px, 0, 0);
+  }
+}
+
+@keyframes bounceOutRight {
+  20% {
+    opacity: 1;
+    -webkit-transform: translate3d(-20px, 0, 0);
+            transform: translate3d(-20px, 0, 0);
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(2000px, 0, 0);
+            transform: translate3d(2000px, 0, 0);
+  }
+}
+
+.bounceOutRight {
+  -webkit-animation: bounceOutRight 1s;
+          animation: bounceOutRight 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+            transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+            transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+}
+
+.pulse {
+  -webkit-animation: pulse 1s infinite;
+          animation: pulse 1s infinite;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fadeOut {
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+@keyframes fadeOut {
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+.fadeOut {
+  -webkit-animation: fadeOut 0.5s;
+          animation: fadeOut 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.fadeOutSlow {
+  -webkit-animation: fadeOut 1s;
+          animation: fadeOut 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes flash {
+  0% {opacity: 1;}
+  50% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes flash {
+  0% {opacity: 1;}
+  50% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.flashSlow {
+  -webkit-animation: flash 1s;
+          animation: flash 1s;
+}
+
+.flashFast {
+  -webkit-animation: flash 0.2s;
+          animation: flash 0.2s;
+}
+
+.once {
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+.twice {
+  -webkit-animation-iteration-count: 2;
+          animation-iteration-count: 2;
+}
+
+.thrice {
+  -webkit-animation-iteration-count: 3;
+          animation-iteration-count: 3;
+}
+
+.quartic {
+  -webkit-animation-iteration-count: 4;
+          animation-iteration-count: 4;
+}
+
+.quintic {
+  -webkit-animation-iteration-count: 5;
+          animation-iteration-count: 5;
+}
+
+.sextic {
+  -webkit-animation-iteration-count: 6;
+          animation-iteration-count: 6;
+}
+
+.septic {
+  -webkit-animation-iteration-count: 7;
+          animation-iteration-count: 7;
+}
+
+.infinite {
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}

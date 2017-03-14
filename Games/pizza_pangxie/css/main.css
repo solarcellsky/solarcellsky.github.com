@@ -1,0 +1,235 @@
+body{
+	font-family: "微软雅黑", "宋体", sans-serif;	
+}
+body img {
+	display: block;
+	width: 100%;
+}
+.bg {
+	position: relative;
+	width: 100%;
+}
+.steps{
+	position:absolute;
+	width:100%;
+	left:0;
+	top:0;
+}
+.bg img {
+	width: 100%;
+}
+.ab {
+	position: absolute;
+}
+.point-box {
+	width: 14.6875%;
+	left: 39.84%;
+	top: 15.22%;
+}
+.point {
+	  top: 3%;
+  left: 17%;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  width: 66%;
+  text-align: center;
+}
+.butt-1 {
+	width: 39.0625%;
+	left: 13.125%;
+	bottom: 14.63%;
+}
+.butt-2 {
+	width: 39.0625%;
+	right: 8.75%;
+	bottom: 14.63%;
+}
+.ms-box {
+	width: 30.78%;
+	top: 8.6%;
+	right: 29.6875%;
+}
+.ms {
+	top: 16%;
+	left: 9%;
+	color: #f9ecc6;
+	font-size: 1rem;
+	font-weight: bold;
+}
+.ms b {
+	font-weight: normal;
+}
+.game-ms {
+	font-size: 1.3rem;
+	display: inline-block;
+	padding-bottom: 4%;
+	white-space: nowrap;
+}
+.scor-box {
+	top: 8.6%;
+	right: 0;
+	width: 30.15625%;
+}
+.scor {
+	top: 16%;
+	left: 9%;
+	color: #f9ecc6;
+	font-size: 1rem;
+	font-weight: bold;
+}
+.scor b {
+	font-weight: normal;
+}
+.game-num {
+	font-size: 1.3rem;
+	display: inline-block;
+	padding-bottom: 5%;
+}
+.crab-1 {
+	width: 35.78%;
+	left: 0;
+	top: 33.978%;
+}
+.crab-2 {
+	width: 35.78%;
+	right: 3.906%;
+	top: 26.408%;
+}
+.crab-3 {
+	width: 35.78%;
+	left: 39.375%;
+	top: 57.39%;
+}
+.tool {
+	width: 40.9375%;
+	left: 31.5625%;
+	bottom: 0;
+}
+.racb-4 {
+	width: 35.78%;
+	left: 32.1%;
+	top: 34.33%;
+}
+.racb-5 {
+	width: 37.03125%;
+	left: 40.3125%;
+	top: 59.15%;
+}
+.game-hand {
+	width: 9.84375%;
+	right: 22.03125%;
+	bottom: 25.176%;
+}
+.tool-1 {
+	width: 41.4%;
+	left: 29.29%;
+	bottom: 0;
+}
+.arbor {
+	width: 100%;
+	bottom: 0;
+	z-index: 2;
+}
+.racb-6 {
+	width: 41.09375%;
+	left: 29.45%;
+	top: 40.93%;
+}
+.make-img {
+	width: 79.53%;
+	left: 10.23%;
+	top: 35.03%;
+}
+.shar-bg {
+	width: 100%;
+	top: 0;
+	z-index: 8;
+}
+.share-img {
+	width: 56.40625%;
+	left: 23.4375%;
+	top: 13.028%;
+}
+.inter-img-1 {
+	width:85.9375%;
+	left:7.031%;
+	top: 26.25%;
+}
+.inter-img-2 {
+	width: 55%;
+	left: 22.5%;
+	top: 35.21%;
+}
+.inter-ms {
+	top: 36%;
+	left: 0;
+	font-weight: bold;
+	font-size: 4rem;
+	color: #fff;
+	width: 97%;
+	text-align: center;
+	font-family: "微软雅黑", "宋体", sans-serif;
+}
+.inter-img-3 {
+	width: 57.34%;
+	left: 21.32%;
+	top: 35.21%;
+}
+.in-img {
+	width: 100%;
+	bottom: 0;
+	z-index: 2;
+}
+.star-buton {
+	width: 53.28125%;
+	left: 27.65%;
+	bottom: 10.12%;
+	z-index: 10;
+}
+.music{
+	position:absolute;
+	width:10%;
+	right:4.06%;
+	top:1%;
+	z-index:98;
+}
+.sure{
+	position:absolute;
+	width:51.636%;
+	left:24.181%;
+	top:62.272%;
+	height:16.727%;
+}
+.load{
+	position:absolute;
+	width:65.9375%;
+	left:17.031%;
+	top:26.634%;
+	z-index:100;
+}
+.load span{
+	position: absolute;
+    width: 24%;
+    left: 38.5%;
+    top: 60%;
+    text-align: center;
+    color: #fff;
+    display: inline-block;
+}
+.load span strong{
+	font-size: 2rem;
+    display: inline-block;
+    float: left;
+    margin-top: -20%;
+    margin-left: 5%;
+}
+.cover{
+	position:absolute;
+	width:100%;
+	left:0;
+	top:0;
+	height:100%;
+	background:rgba(0,0,0,0.8);
+	z-index:99;
+}

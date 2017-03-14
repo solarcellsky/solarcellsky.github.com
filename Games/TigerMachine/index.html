@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="format-detection" content="telephone=no">
+        <title>欢乐老虎机</title>
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+    <body>
+        <div id="loading"></div>
+
+        <div class="game">
+            <div class="text-panel">
+                <div class="text hide text-jackpot" id="textJackpot"></div>
+                <div class="text hide text-spinning" id="textSpinning"></div>
+                <div class="text text-spin" id="textSpin"></div>
+                <div class="text hide text-money-over" id="textMoneyOver"></div>
+                <div class="text hide text-won" id="textWon"></div>
+            </div><!-- texts -->
+
+            <div class="panel">
+                <div class="range">
+                    <ul id="sevenFirst" class="bar bar-one"></ul>
+                    <ul id="sevenSecond" class="bar bar-two"></ul>
+                    <ul id="sevenThird" class="bar bar-three"></ul>
+                </div><!-- range -->
+            </div><!-- panel -->
+
+            <div class="controls">
+                <div class="info coins" id="Coins">0</div>
+                <div class="info bet" id="Bet">0</div>
+                
+                <div class="c_txt"></div>
+
+                <button id="minBet" class="min disabled">Min Bet</button>
+                <button id="maxBet" class="max">Max Bet</button>
+                <button id="Spin" class="spin">Spin</button>
+
+                <div style="opacity:0;width: 1px;height: 1px;">
+                    <input type="text" id="hiddenControls">
+                    <audio src="assets/sound/button.mp3"></audio>
+                    <audio src="assets/sound/jackpot.mp3"></audio>
+                    <audio src="assets/sound/spin.mp3"></audio>
+                    <audio src="assets/sound/no-money.mp3"></audio>
+                    <audio src="assets/sound/win.mp3"></audio>
+                </div><!-- hidden controls -->
+
+                <div class="clear"></div>
+            </div><!-- controls -->
+        </div><!-- game -->
+
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery-ui.min.js"></script>
+        <script src="assets/js/app.min.js"></script>
+    </body>
+</html>

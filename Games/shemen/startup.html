@@ -1,0 +1,813 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+<title>谁是足球之星</title>
+<meta name="description" content="web" />
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="ZHOUZONE,345460126@qq.com">
+<link rel="stylesheet" href="css/style.min.css">
+<style>
+body{width:640px;margin: 0 auto;}
+#__bs_notify__{display: none!important;}
+</style>
+<!--移动端版本兼容 -->
+<script type="text/javascript">
+  (function(win) {
+      var screenWidth =  parseInt(window.screen.width), 
+          screenHeight =  parseInt(window.screen.height);
+      var phoneScale = screenWidth/640;
+      var ua = navigator.userAgent;
+      if (/Android (\d+\.\d+)/.test(ua)){
+          var version = parseFloat(RegExp.$1);
+          if(version>2.3){
+              document.write('<meta name="viewport" content="width=640, minimum-scale = '+phoneScale+', maximum-scale = '+phoneScale+', target-densitydpi=device-dpi">');
+          }else{
+              document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+          }
+          // 其他系统
+      } else {
+          document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+      };
+      var doc = win.document;
+      var docEl = doc.documentElement;
+      var tid;
+      function refreshRem() {
+          var width = docEl.getBoundingClientRect().width,
+              height = docEl.getBoundingClientRect().height;
+          if (width > 640) { // 最大宽度
+              width = 640;
+          }
+          var rem = width / 10; // 将屏幕宽度分成10份， 1份为1rem
+          docEl.style.fontSize = rem + 'px';      
+          var isMobile = /AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent));   
+          if(screenWidth/screenHeight>320/500 && isMobile){  
+            //docEl.style.fontSize = 64*(320/500)/(screenWidth/screenHeight)+'px';
+          }
+      }
+      win.addEventListener('resize', function() {
+          clearTimeout(tid);
+          tid = setTimeout(refreshRem, 300);
+      }, false);
+      win.addEventListener('pageshow', function(e) {
+          if (e.persisted) {
+              clearTimeout(tid);
+              tid = setTimeout(refreshRem, 300);
+          }
+      }, false);
+      refreshRem();
+  })(window);
+</script>
+<!--移动端版本兼容 end -->
+<script>
+var _czc = _czc || [];
+_czc.push(["_setAccount", "1259537460"]);
+</script>
+</head>
+<body>
+<!-- 加载页面 start -->
+<div class="loading" id="pageLoading">
+<div class="loading-logo"><span id="progressNum">0%</span><div class="footerball"></div><div class="shadow"></div></div>
+    <div class="copyright">天翼爱音乐出品</div>
+</div>
+<!-- 加载页面 start -->
+<!-- 游戏开始页 start -->
+<div id="pageIndex" class="modal transparent active">
+    <div class="cicon icon-logo-index"></div>
+    <div class="person-list">
+        <div class="cicon icon-index-person1"></div>
+        <div class="cicon icon-index-person2"></div>
+        <div class="cicon icon-index-person3"></div>
+        <div class="cicon icon-index-person4"></div>
+    </div>
+    <div class="bg"></div>
+    <div class="cicon icon-index-title"></div>
+    <a class="cicon icon-btn-start" id="btnStartSelect">开始游戏</a>
+</div>
+<!-- 游戏开始页 end -->
+<!-- 游戏页 start -->
+<div id="pageGame" class="modal transparent active" style="display:none;">
+   <canvas id="game" style="display:none;">您的浏览器不支持HTML5</canvas>
+   <div id="log"></div>
+   <div class="cicon icon-arrow"></div>
+</div>
+<!-- 游戏页 end -->
+<!-- 游戏引导页 start -->
+<div id="pageGameLeadin" class="modal transparent ">
+  <div class="cicon icon-select-title2"></div>
+  <div class="cicon icon-shake-hand"></div>
+  <div class="cicon icon-desc"></div>
+</div>
+<!-- 游戏引导页 end -->
+<!-- 游戏结束页 start -->
+<div id="pageGameover" class="modal page-prize ">
+ <div class="content-area">
+   <div class="cicon icon-lottery-title">进球数</div>
+   <div class="cicon icon-score-bg"><span class="bold" id="score"></span><span>球</span></div>
+   <div class="title" id="resultText"></div>
+   <div class="footer-btn form-area">
+     <a class="cicon icon-btn-replay fr btnReplay">不服再战</a>
+     <a class="cicon icon-btn-get fl" id="btnToGetPrize">领取礼物</a>
+   </div>
+ </div>
+ <a id="btnAd" class="cicon icon-ad"></a>
+</div>
+<!-- 游戏结束页 end -->
+<!-- 选择人物 start -->
+<div id="pageSelectPerson" class="modal transparent">
+    <div class="cicon icon-select-title"></div>
+    <div class="select-list">
+        <ul>
+            <li><span class="cicon icon-player1"></span></li>
+            <li><span class="cicon icon-player2"></span></li>
+            <li><span class="cicon icon-player3"></span></li>
+            <li><span class="cicon icon-player4"></span></li>
+        </ul>
+    </div>
+    <div class="aleft"><div class="cicon icon-btn-select left" id="btnLeft"></div></div>
+    <div class="aright"><div class="cicon icon-btn-select right" id="btnRight"></div></div>
+    <a class="cicon icon-btn-select-ok" id="btnStartPlay">点击进场</a>
+</div>
+<!-- 选择人物 end -->
+<!-- 抽奖页 start -->
+<div id="pageLottery" class="modal page-prize ">
+ <div class="content-area">
+    <div class="footerball">
+        <div class="cicon icon-lotter-footerball-shadow"></div>
+        <div class="cicon icon-lotter-footerball animate" id="btnLottery"></div>
+    </div>
+    <div class="title">待领奖品<span id="lotterNum">0</span>个</div>
+    <div class="center" style="font-size:20px;color:#FFF;">（每人限领5次奖品）</div>
+   <div class="footer-btn form-area center">
+     <a class="cicon icon-btn-replay fr btnReplay">不服再战</a>
+     <a class="cicon icon-btn-pk fl btnShare">好友PK</a>
+     <a class="btnLinkRule">活动规则</a>
+   </div>
+ <div class="cicon icon-btn-close"></div>
+ </div>
+ <div class="titleup">单击足球查看你获得礼包</div>
+</div>
+<!-- 抽奖页 end -->
+<!-- 5元三网话费 start -->
+<div id="pagePrize01" class="modal page-prize ">
+ <div class="content-area">
+   <div class="form-area">
+      <div class="input-area"><input type="tel" maxlength="11" placeholder="请输入三网手机号码" class="input phone"></div>
+      <div class="input-area">
+          <a class="fr btnCode codeFront">获取验证码</a>
+          <input type="tel" maxlength="6" placeholder="请输入验证码" class="input for-code">
+      </div>
+   </div>
+   <div class="footer-btn form-area">
+     <a class="cicon icon-btn-yellow1 fr btnGetNormalPrize">确定领取</a>
+     <a class="cicon icon-btn-yellow btnCancle fl">取消</a>
+   </div>
+ </div>
+</div>
+<!-- 5元三网话费 end -->
+<!-- 10元三网话费 start -->
+<div id="pagePrize07" class="modal page-prize ">
+ <div class="content-area">
+   <div class="cicon icon-lottery-title">恭喜你获得</div>
+   <div class="title">10元三网话费</div>
+   <div class="form-area">
+      <div class="input-area"><input type="tel" maxlength="11" placeholder="请输入三网手机号码" class="input phone"></div>
+      <div class="input-area">
+          <a class="fr btnCode codeFront">获取验证码</a>
+          <input type="tel" maxlength="6" placeholder="请输入验证码" class="input for-code">
+      </div>
+   </div>
+   <div class="footer-btn form-area">
+     <a class="cicon icon-btn-sure fr btnGetNormalPrize">确定领取</a>
+     <a class="cicon icon-btn-cancel btnCancle fl">取消</a>
+   </div>
+ </div>
+</div>
+<!-- 10元三网话费 end -->
+<!-- 10M三网流量 start -->
+<div id="pagePrize02" class="modal page-prize">
+ <div class="content-area">
+   <div class="cicon icon-lottery-title">恭喜你获得</div>
+   <div class="title">10M三网流量</div>
+ <div class="form-area">
+    <div class="input-area"><input type="tel" maxlength="11" placeholder="请输入三网手机号码" class="input phone"></div>
+    <div class="input-area">
+        <a class="fr btnCode codeFront">获取验证码</a>
+        <input type="tel" maxlength="6" placeholder="请输入验证码" class="input for-code">
+    </div>
+ </div>
+ <div class="footer-btn form-area">
+   <a class="cicon icon-btn-sure fr btnGetNormalPrize">确定领取</a>
+   <a class="cicon icon-btn-cancel btnCancle fl">取消</a>
+ </div>
+ </div>
+</div>
+<!-- 10M三网流量 end -->
+<!-- 30M三网流量 start -->
+<div id="pagePrize03" class="modal page-prize ">
+ <div class="content-area">
+   <div class="cicon icon-lottery-title">恭喜你获得</div>
+   <div class="title">30M三网流量</div>
+ <div class="form-area">
+    <div class="input-area"><input type="tel" maxlength="11" placeholder="请输入三网手机号码" class="input phone"></div>
+    <div class="input-area">
+        <a class="fr btnCode codeFront">获取验证码</a>
+        <input type="tel" maxlength="6" placeholder="请输入验证码" class="input for-code">
+    </div>
+ </div>
+ <div class="footer-btn form-area">
+   <a class="cicon icon-btn-sure fr btnGetNormalPrize">确定领取</a>
+   <a class="cicon icon-btn-cancel btnCancle fl">取消</a>
+ </div>
+ </div>
+</div>
+<!-- 30M三网流量 end -->
+<!-- 音乐盒铃声列表 start -->
+<div id="pagePrize04" class="modal page-prize">
+ <div class="content-area">
+ <div class="musiclist">
+   <ul>
+     <!-- <li><span class="cicon icon-spause"></span>《喜欢你》GEM邓紫棋</li>
+     <li><span class="cicon icon-spause"></span>《喜欢你》GEM邓紫棋</li>
+     <li><span class="cicon icon-spause"></span>《喜欢你》GEM邓紫棋</li>
+     <li><span class="cicon icon-spause"></span>《喜欢你》GEM邓紫棋</li>
+     <li><span class="cicon icon-spause"></span>《喜欢你》GEM邓紫棋</li>
+     <li><span class="cicon icon-spause"></span>《喜欢你》GEM邓紫棋</li> -->
+   </ul>
+ </div>
+ <div class="cicon icon-sline"></div>
+ <div class="center tips-line">每月更新歌曲，资费5元/月</div>
+ <div class="footer-btn form-area">
+   <a class="cicon icon-btn-yellow1 fr" id="btnToCrebtuser">确认订购</a>
+   <a class="cicon icon-btn-yellow btnCancle fl">取消</a>
+ </div>
+ </div>
+</div>
+<!-- 音乐盒铃声列表 end -->
+<!-- 音乐盒 start -->
+<div id="pagePrize04-1" class="modal page-prize ">
+ <div class="content-area">
+ <div class="form-area">
+    <div class="input-area"><input type="tel" maxlength="11" value="" placeholder="请输入天翼手机号码" class="input phone"></div>
+    <div class="input-area">
+        <a class="fr btnCode btnGtServerCode">获取验证码</a>
+        <input type="text" maxlength="6" placeholder="请输入验证码" value="" class="input for-code">
+    </div>
+    <div class="input-area for-rule">
+        <span class="cicon icon-checked"></span><span class="cicon icon-unchecked"></span>同意《会员服务条款》并成为爱音乐普通会员
+    </div>
+ </div>
+ <div class="footer-btn form-area">
+   <a class="cicon icon-btn-yellow1 fr" id="btnIsCrebtuser">确认订购</a>
+   <a class="cicon icon-btn-yellow btnCancle fl">取消</a>
+ </div>
+ </div>
+</div>
+<!-- 音乐盒 end -->
+<!-- 钻石会员 start -->
+<div id="pagePrize05" class="modal page-prize ">
+ <div class="content-area">
+ <div class="cicon icon-lottery-title">恭喜你获得</div>
+   <div class="title">订钻石会员</div>
+    <div class="title">返10元话费资格</div>
+    <div class="title small">资费10元/月</div>
+ <div class="prize-content">
+   <p>钻石会员权益：</p>
+   <p>1.每月享爱音乐全场彩铃免费订购</p>
+   <p>2.高品质歌曲任意下载</p>
+   <p>3.获得专属音乐盒</p>
+ </div>
+ <div class="form-area">
+    <div class="input-area"><input type="tel" maxlength="11" placeholder="请输入天翼手机号码" class="input phone"></div>
+    <div class="input-area">
+        <a class="fr btnCode btnGtServerCode">获取验证码</a>
+        <input type="text" maxlength="6" placeholder="请输入验证码" class="input for-code">
+    </div>
+    <div class="input-area for-rule">
+        <span class="cicon icon-checked"></span><span class="cicon icon-unchecked"></span> 同意《会员服务条款》
+    </div>
+ </div>
+ <div class="footer-btn form-area">
+   <a class="cicon icon-btn-get fr" id="btnSubMember">领礼物</a>
+   <a class="cicon icon-btn-cancel btnCancle fl">取消</a>
+ </div>
+ </div>
+</div>
+<!-- 钻石会员 end -->
+<!-- vip优惠券 start -->
+<div id="pagePrize06" class="modal page-prize ">
+ <div class="content-area">
+   <div class="cicon icon-lottery-title">恭喜你获得</div>
+   <div class="title">唯品会优惠券口令</div>
+   <div class="kl">爱音乐</div>
+ <div class="prize-content">
+   <p>使用流程：唯品会新用户生成唯品会订单——支付页面选择“口令优惠”——输入口令【爱音乐】享200减25</p>
+   <p>1）仅限唯品会新用户使用,每位用户仅限使用口令一次；</p>
+  <p>2）使用时间：2016年6月17-7月12日；</p>
+  <p>3）优惠口令与优惠券不可同时使用；</p>
+  <p>4）口令优惠仅限唯品会自营专场使用，商家直发、唯品国际专场不支持使用；</p>
+  <p>5）唯品会和爱音乐可在法律法规范围内对本次活动规则进行解释。</p>
+  
+ </div>
+ <div class="footer-btn form-area center">
+   <a class="cicon icon-btn-cancel btnCancle">取消</a>
+ </div>
+ </div>
+</div>
+<!-- vip优惠券 end -->
+<!-- 免费咖啡 start -->
+<div id="pagePrize08" class="modal page-prize ">
+ <div class="content-area">
+   <div class="cicon icon-lottery-title">恭喜你获得</div>
+   <div class="center" style="margin-top:40px;"><span class="cicon icon-logo-coffee"></span></div>
+   <div class="title">连咖啡·免费咖啡券</div>
+  <div class="prize-content">
+   <p>使用须知：</p>
+    <p>1、截图该页面，并添加爱音乐小编：（微信号）；</p>
+    <p>2、发送截图给爱音乐小编进行验证，并根据小编指引进群，领取由连咖啡Coffee Box发放的免费咖啡福利一份；</p>
+    <p>3、该福利仅针对获奖用户有效，不得私拉他人进群，咖啡链接不得外发。如有违反者，取消咖啡福利领取资格。</p>
+  </div>
+ <div class="footer-btn form-area center">
+   <a class="cicon icon-btn-cancel btnCancle">取消</a>
+ </div>
+ </div>
+</div>
+<!-- 免费咖啡 end -->
+<!-- 咖啡奖品一送一 start -->
+<div id="pagePrize09" class="modal page-prize ">
+ <div class="content-area">
+   <div class="cicon icon-lottery-title">恭喜你获得</div>
+   <div class="center"><span class="cicon icon-logo-coffee"></span></div>
+   <div class="title">连咖啡·新用户买一送一券</div>
+   <div class="center-code"></div>
+   <div class="qrcode"><img src="images/qrcode.png"><br><span>TIPS：先保存以上二维码，继续领奖哦！</span></div>
+   <div class="prize-content">
+     <p>使用须知：</p>
+     <p>1、此为新人首单专项，保存二维码，扫码进入领券页面；</p>
+     <p>2、选择2杯咖啡下单，结账时会自动抵扣2杯中价格较低或同等的1杯；</p>
+     <p>3、单笔订单內可不限次数叠加，多买多送</p>
+   </div>
+   <div class="footer-btn form-area center">
+     <a class="cicon icon-btn-cancel btnCancle">取消</a>
+   </div>
+ </div>
+</div>
+<!-- 咖啡奖品一送一 end -->
+<!-- 未中奖 start -->
+<div id="pagePrizeNone" class="modal page-prize ">
+ <div class="content-area">
+ <div class="cicon icon-lottery-title">未中奖</div>
+   <div class="title">爱音乐向你投递了</div>
+   <a href="javascript:" id="btnLinkMusic">一个有毒的欧洲杯歌单</a>
+   <div class="footer-btn form-area center">
+     <a class="cicon icon-btn-replay fr btnReplay">不服再战</a>
+     <a class="cicon icon-btn-pk fl btnShare">好友PK</a>
+   </div>
+ </div>
+ <div class="cicon icon-btn-close"></div>
+</div>
+<!-- 未中奖 end -->
+<!-- 会员服务条款 start -->
+<div id="pageMemberRule" class="modal page-prize ">
+<div class="content-area">
+ <div class="inner">
+   <div class="cicon icon-lottery-title">会员服务条款</div>
+    <div class="content-dialog" id="ruleContent">
+      <div class="dialog-top">
+      <div class="center" style="padding-top:0;padding-bottom:.5rem;"><div class="cicon icon-title-rule"></div></div>
+          <p>尊敬的用户，欢迎您使用爱音乐会员服务。</p>
+          <p>为使用爱音乐所提供的会员服务（以下简称“本服务”），您应当阅读并遵守《会员服务协议》（以下简称“本协议”）。请您务必仔细阅读并全面理解本《会员服务协议》（以下简称“本协议”）的全部条款内容，有关免除或限制责任条款将会以加粗</p>
+      </div>
+      <div class="dialog-center">
+        <div class="inner">
+          <p style="margin-top:0rem;">及下划线形式提请您注意；对于开通或使用某项服务的单独协议，您需要选择接受或不接受该项单独协议。</p>
+          <p>您对本服务的任何购买、接受赠与或任何其他获取行为，以及登录、查看、订阅、升级等任何对本服务的使用行为，均视为您已阅读并同意遵守本协议项下全部内容。
+          </p>
+          <p>如果您未满18周岁，请在法定监护人的陪同下阅读本协议。
+          </p>
+          <p>本协议是您与爱音乐之间关于您使用本服务所订立的协议，具有合同效力。“爱音乐”是指天翼爱音乐文化科技有限公司及其相关服务可能存在的运营关联单位。“用户”或“会员”是指使用爱音乐相关服务的使用人，在本协议中更多地称为“您”。您确认本协议后，本协议即在您和爱音乐之间产生法律效力。请您务必在注册之前认真阅读全部服务协议内容，如有任何疑问，可向爱音乐咨询。自您点击协议正本下方的“注册”按钮并按照爱音乐注册程序成功注册为用户时起，即视为您同意并签署了本服务协议。
+          </p>
+          <p>爱音乐各项服务的所有权、运作以及解释权归爱音乐所有。
+          </p>
+          <p>第一条 本协议的内容
+          </p>
+          <p>本协议及会员选择接受的各单项协议、爱音乐不定时发布的各项会员管理规定、业务规则等，均视为本协议不可分割的组成部分，会员应当一并遵守。
+          </p>
+          <p>第二条 会员及会员服务
+          </p>
+          <p>1、本协议所称“会员”，指同意本协议所有内容，按照爱音乐要求提供个人资料并完成注册程序的爱音乐用户。
+          </p>
+          <p>2、本协议所称“会员服务”，指由爱音乐提供仅限于注册会员可以购买或使用的服务，您根据您的级别可购买或使用不同会员服务（以下简称“本服务”）。
+          </p>
+          <p>3、会员服务的变动及中止/终止
+          </p>
+          <p>爱音乐可能根据用户需求、产品变化、网站运营需要、市场环境变化、国家政策变动等对现有的产品及具体服务内容作出调整，包括但不限于增加、减少或变更产品类型，增加或减少各个级别会员可购买或使用的会员服务，将某级别的会员可购买或使用的会员服务调整为其他级别的会员可购买或使用的会员服务。具体会员服务种类、级别、内容、收费标准、缴费模式、服务期限等以当时爱音乐相关页面公布的内容为准，您可根据需要选择相应服务。
+          </p>
+          <p>由于互联网服务的特殊性，爱音乐可能会按照相关法规、双方约定或在其他必要时，中止或终止向会员提供本服务，届时，爱音乐会依法保护会员的合法权益。
+          </p>
+          <p>第三条 会员必须自行准备或承担以下事项：
+          </p>
+          <p>(1)自行配备上网的所需设备，包括个人电脑、调制解调器或其他必备上网装置。
+          </p>
+          <p>(2)自行负担个人上网所支付的网络接入服务有关的电话费用、网络费用。
+          </p>
+          <p>由于以上事项而导致会员无法正常使用本服务的，爱音乐不承担任何法律责任。
+          </p>
+          <p>第四条 会员行为管理
+          </p>
+          <p>您必须遵循相关法律法规、国家政策规定，遵守爱音乐所有使用服务的网络协议、规定、程序和惯例，不得实施包括但不限于以下行为：
+          </p>
+          <p>1、使用爱音乐提供的任何服务用于非法用途；
+          </p>
+          <p>2、干扰爱音乐运作或利用本服务干扰他人、或损害他人合法权益；
+          </p>
+          <p>3、以营利、经营为目的为自己或他人购买或使用本服务；
+          </p>
+          <p>4、通过任何机器人软件、蜘蛛软件、爬虫软件、刷屏软件等任何程序、软件方式为自己或他人购买或使用本服务；
+          </p>
+          <p>5、通过任何不正当手段或以违反诚实信用原则的方式为自己或他人购买或使用本服务；
+          </p>
+          <p>6、通过任何其他违反相关法律法规、国家政策等的方式为自己或他人购买或使用本服务；
+          </p>
+          <p>7、通过任何方式搜集爱音乐其他用户的个人资料，并以发送垃圾邮件、连锁邮件、垃圾短信、即时消息等方式干扰、骚扰其他用户的；
+          </p>
+          <p>8、发布不当信息，包括但不限于：
+          </p>
+          <p>（1）反对宪法所确定的基本原则的或违反其他法律法规的；
+          </p>
+          <p>（2）危害国家安全，泄露国家秘密，颠覆国家政权，破坏国家统一的；
+          </p>
+          <p>（3）损害国家荣誉和利益的；
+          </p>
+          <p>（4）煽动民族仇恨、民族歧视，破坏民族团结的；
+          </p>
+          <p>（5）破坏国家宗教政策，宣扬邪教和封建迷信的；
+          </p>
+          <p>（6）散布谣言，扰乱社会秩序，破坏社会稳定的；
+          </p>
+          <p>（7）散布淫秽、色情、赌博、暴力、凶杀、恐怖或者教唆犯罪的；
+          </p>
+          <p>（8）侮辱或者诽谤他人，侵害他人合法权益的；
+          </p>
+          <p>（9）发布包含广告、宣传、促销等内容的信息；
+          </p>
+          <p>（10）含有法律、行政法规限制或禁止的其他内容的。
+          </p>
+          <p>第五条 会员个人资料管理及隐私保护
+          </p>
+          <p>1、您在注册账号或使用本服务的过程中，可能需要填写一些必要的信息。若国家法律法规有特殊规定的，您需要填写真实的身份信息。若您填写的信息不完整，则无法使用本服务或在使用过程中受到限制。所有原始键入的资料将引用为注册资料。若您提供的资料包含有不真实、不准确、不全面的信息的，爱音乐保留终止向该用户提供本协议项下全部服务的权利。
+          </p>
+          <p>2、爱音乐将通过网页公告或发送站内信息、电子邮件、短信、彩信、WAPPUSH和客户端消息推送的形式，告知内容包括但不限于会员服务内容的开始、中止、终止、修改、活动促销、会员关怀和积分返利、增减及收费标准的变动等。您同意接收来自爱音乐的信息。
+          </p>
+          <p>3、爱音乐可能为您提供选择屏蔽各类活动促销、会员关怀和积分返利信息的功能，但任何时候您都不得以本协议未明确约定或爱音乐未书面许可的方式屏蔽、过滤活动促销、会员关怀和积分返利信息。您应对自己根据爱音乐推送的活动促销、会员关怀和积分返利信息进行的行为负责，除法律明确规定以外，您应承担根据上述活动促销、会员关怀和积分返利信息进行的活动产生的结果。
+          </p>
+          <p>4、隐私保护
+          </p>
+          <p>爱音乐不公开您的个人信息，除非有法律要求或爱音乐在诚信的基础上认为透露这些信息在以下四种情况是必要的：
+          </p>
+          <p>（1）根据有关法律的规定；
+          </p>
+          <p>（2）根据司法机关、行政机关处理具体案件的要求；
+          </p>
+          <p>（3）根据权利人要求，或受害人要求提供侵权会员的信息的；
+          </p>
+          <p>（4）符合其他相关的要求。
+          </p>
+          <p>在上述情况下，由于爱音乐提供用户个人资料而引起的任何后果，爱音乐不承担违约责任或侵权责任。
+          </p>
+          <p>用户应对个人资料进行妥善保管及保密，由于用户原因导致个人资料被泄露或利用的，爱音乐对此不承担任何违约责任或侵权责任。
+          </p>
+          <p>第六条 会员账号管理及保密
+          </p>
+          <p>1、会员账号管理
+          </p>
+          <p>用户注册成功成为会员的，将得到一个账号，该账号为会员在爱音乐活动、使用或购买服务、发布表信息的身份认证。您充分了解并同意，您必须对自己注册账号在爱音乐所作出的一切行为、所发布的一切信息负责。您同意，若发现任何非法使用用户账号或爱音乐安全漏洞的情况，应立即通告爱音乐管理人员。
+          </p>
+          <p>2、会员账号的保密
+          </p>
+          <p>您应当对账号和密码保密。由于您的原因导致密码或您的任何其他信息泄露的，由此引起的一起后果由您自行承担。您可以变更账号密码。
+          </p>
+          <p>第七条 电子邮件
+          </p>
+          <p>用户在注册时应当选择稳定性及安全性相对较好的电子邮箱，同意接受并阅读爱音乐发给用户的各类电子邮件。只要爱音乐成功发送了电子邮件，即视为用户已经接收到相关的电子邮件，电子邮件在发信服务器上所记录的发出时间视为送达时间。因您自身原因，包括但不限于会员注册邮箱故障、会员未及时查阅邮件，致使电子邮件无法正常接收或阅读的，由您承担相应后果。
+          </p>
+          <p>第八条 服务条款的修改
+          </p>
+          <p>爱音乐有权在必要时修改本协议条款，本协议条款一旦发生变动，您可以在相关服务页面上查阅最新版本的协议条款。本协议条款变更后，如果您继续使用本服务，则视为您接受服务条款的变更。如果您不同意修改后的协议，您应当停止使用本服务。
+          </p>
+          <p>第九条 违约责任
+          </p>
+          <p>1、由于您违反本协议约定或实施不符合法律法规、本协议规定或网站其他规定的行为对您、爱音乐及（或）任何第三方所引起的任何直接、间接的损害的，您应当就您的行为对爱音乐以及任何第三方所造成的一切损失承担赔偿责任，并承担上述行为对您所造成的损失。
+          </p>
+          <p>2、若爱音乐发现或收到任何第三方举报会员实施的行为违反本协议或相关法律法规规定的，爱音乐有权采取删除、屏蔽相关信息或断开链接的措施，对违反规定或法律的会员予以警告或暂停或终止向该会员提供部分或全部服务。
+          </p>
+          <p>第十条 服务费
+          </p>
+          <p>1、收取标准：
+          </p>
+          <p>爱音乐根据会员级别不同，收取或不收取服务费。收费标准在相应服务页面进行展示。
+          </p>
+          <p>2、款项支付及服务开通
+          </p>
+          <p>会员服务可通过爱音乐指定的渠道（包括但不限于移动终端、WEB门户、WAP门户、客户端APP应用、短信门户、OTT门户以及IVR门户）开通，根据页面指示按照指定付款方式支付服务费，在会员按约定支付一定费用后开通。
+          第十一条 服务期限
+          </p>
+          <p>本服务的服务期限以您自行选择并支付相应服务费用的期限为准，您也可以登陆本服务的相应服务页面查询。
+          </p>
+          <p>第十二条 信息内容的所有权
+          </p>
+          <p>本协议定义的信息内容包括：文字、软件、音乐、图片、视频、图表，广告中的全部内容，以及爱音乐为用户提供的其他信息。所有这些信息内容的知识产权归爱音乐所有，受版权、商标、标识和其它财产所有权法律的保护。您只能在爱音乐和广告商授权下才能使用这些内容，而不能擅自复制、再造这些内容、或生产制造与内容有关的派生产品。
+          </p>
+          <p>第十三条 适用法律
+          </p>
+          <p>本协议签订地为中华人民共和国广东省广州市越秀区。本协议的成立、生效、履行、解释及纠纷解决，适用中华人民共和国法律。
+          </p>
+          <p>第十四条 争议解决
+          </p>
+          <p>由于本协议的履行或与本协议有关的争议，您与爱音乐双方应通过友好协商解决，协商不成的，任何一方均应当将纠纷或争议提请本协议签订地有管辖权的法院管辖。</p>
+
+            <p>第十五条 协议生效及条款效力</p>
+
+          <p>您使用本服务即视为您已阅读并同意受本协议的约束。本协议所有条款的标题仅为阅读方便，本身并无实际含义，不能作为本协议含义解释的依据。若本协议任何条款与中华人民共和国法律相抵触而无效或不可履行的，其余条款仍然有效，依旧保持对双方的约束力。</p>
+        </div>
+      </div>
+      <div class="dialog-bottom"></div>
+    </div>
+ </div>
+ <div class="cicon icon-btn-close"></div>
+ </div>
+</div>
+<!-- 会员服务条款 end -->
+<!-- 弹窗 start -->
+<div id="pagePrizeDialog" class="modal transparent ">
+  <!-- 登记成功 start -->
+  <div class="prize-dialog" id="prizeDialogOk" >
+    <div class="hd">
+      <div class="cicon icon-lottery-title">棒棒哒</div>
+    </div>
+    <div class="bd">
+      <div class="desc">
+        <p>登记成功，</p>
+        <p>奖品将在活动结束后</p>
+        <p>10个工作日内发放。</p>
+      </div>
+      <div class="footer-btn center">
+         <a class="cicon icon-btn-pk fr btnShare">好友PK</a>
+         <a class="cicon icon-btn-continue fl btnBackLottery">继续抽奖</a>
+       </div>
+    </div>
+  </div>
+  <!-- 登记成功 end -->
+
+  <!-- 音乐盒业务 start  -->
+    <!-- 提示未开通彩铃业务 start -->
+    <div class="prize-dialog" id="prizeDialogCrbtuserNone" style="display:none;">
+      <div class="hd"><div class="headbg"></div><div class="cicon icon-dialog-close"></div></div>
+      <div class="bd">
+        <div class="desc">
+          <p>你暂未开通彩铃功能，</p>
+            <p>需先开通彩铃功能才能订购音</p>
+            <p>乐盒，彩铃功能收费按具体省</p><p>份实际收取（参考5元/月）</p>
+        </div>
+        <div class="footer-btn center">
+           <a class="cicon icon-btn-white fr" id="btnCrbtuserOpen">确认订购</a>
+           <a class="cicon icon-btn-yellow btnCancle fl">取消</a>
+         </div>
+      </div>
+    </div>
+    <!-- 提示未开通彩铃业务 end -->
+    <!-- 成功开通彩铃业务 start -->
+    <div class="prize-dialog" id="prizeDialogCrbtuserOk" style="display:none;">
+      <div class="hd"><div class="headbg"></div><div class="cicon icon-dialog-close"></div></div>
+      <div class="bd">
+        <div class="desc">
+          <p>你已成功开通彩铃功能，</p>
+          <p>现订购音乐盒可先享返</p>
+          <p>5元资格</p>
+        </div>
+        <div class="form-area">
+          <div class="input-area"><input type="tel" maxlength="11" placeholder="请输入天翼手机号码" class="input phone"></div>
+          <div class="input-area">
+              <a class="fr btnCode btnSer btnGtServerCode">获取验证码</a>
+              <input type="text" maxlength="6" placeholder="请输入验证码" class="input for-code">
+          </div>
+          <div class="input-area for-rule">
+              <span class="cicon icon-checked"></span><span class="cicon icon-unchecked"></span>同意《会员服务条款》并成为爱音乐普通会员
+          </div>
+       </div>
+        <div class="footer-btn center">
+           <a class="cicon icon-btn-white fr" id="btnSubMusicBoxFromOpen">确认订购</a>
+           <a class="cicon icon-btn-yellow btnCancle fl">取消</a>
+         </div>
+      </div>
+    </div>
+    <!-- 成功开通彩铃业务 end -->
+    <!-- 提示确认订购音乐盒 start -->
+    <div class="prize-dialog" id="pageDialogMusicboxMakeSure" style="display:none;">
+      <div class="hd"><div class="headbg"></div><div class="cicon icon-dialog-close"></div></div>
+      <div class="bd">
+        <div class="desc">
+        <p>开通音乐盒，</p>
+        <p>资费5元/月，先订购，活动结</p>
+        <p>束后10天内返5元话费。</p>
+        </div>
+        <div class="footer-btn center">
+           <a class="cicon icon-btn-white fr" id="btnSubMusicBox">确认订购</a>
+           <a class="cicon icon-btn-yellow fl btnBackLottery">继续抽奖</a>
+         </div>
+      </div>
+    </div>
+    <!-- 提示确认订购音乐盒 end -->
+    <!-- 成功订购音乐盒 start -->
+    <div class="prize-dialog" id="pageDialogMusicbox" style="display:none;">
+      <div class="hd"><div class="headbg"></div><div class="cicon icon-dialog-close"></div></div>
+      <div class="bd">
+        <div class="desc">
+          <p>已成功办理音乐盒，</p>
+          <p>话费将在活动结束后10个工作</p>
+          <p>日内发放。本月如未退订，</p>
+          <p>下月自动续费，每月5元。</p>
+        </div>
+        <div class="footer-btn center">
+           <a class="cicon icon-btn-white btnShare fr">好友PK</a>
+           <a class="cicon icon-btn-yellow btnBackLottery fl">继续抽奖</a>
+         </div>
+      </div>
+    </div>
+    <!-- 成功订购音乐盒 end -->
+  <!-- 音乐盒业务 end  -->
+
+  <!-- 钻石会员业务 start -->
+    <!-- 提示确认订购钻石会员业务 start -->
+    <div class="prize-dialog" id="pageDialogMemberMakeSure" style="display:none;">
+      <div class="hd">
+        <div class="cicon icon-lottery-title">棒棒哒</div>
+      </div>
+      <div class="bd">
+        <div class="desc">
+          <p>开通钻石会员，资费10元/月，</p>
+          <p>活动结束后10个工作日内返还</p>
+          <p>10元话费。</p>
+        </div>
+        <div class="footer-btn center">
+           <a class="cicon icon-btn-sub fr" id="btnSubMemberMakeSure">确认订购</a>
+           <a class="cicon icon-btn-cancel btnCancle fl">取消</a>
+         </div>
+      </div>
+    </div>
+    <!-- 提示确认订购钻石会员业务 end -->
+    <!-- 成功订购钻石会员业务 start -->
+    <div class="prize-dialog" id="pageDialogMemberOk" style="display:none;">
+      <div class="hd">
+        <div class="cicon icon-lottery-title">棒棒哒</div>
+      </div>
+      <div class="bd">
+        <div class="desc">
+        <p>已开通钻石会员！活动结束后</p>
+        <p>10个工作日内返还10元话费。</p>
+        <p>如未退订，下月自动续费，</p><p>每月10元。</p>
+        </div>
+        <div class="footer-btn center">
+           <a class="cicon icon-btn-pk btnShare fr">pk好友</a>
+           <a class="cicon icon-btn-continue btnBackLottery fl">继续抽奖</a>
+         </div>
+      </div>
+    </div>
+    <!-- 成功订购钻石会员业务 end -->
+  <!-- 钻石会员业务 end -->
+
+</div>
+<!-- 弹窗 end -->
+
+<!-- 游戏规则页 start -->
+<div id="pageRule" class="modal page-prize ">
+<div class="content-area">
+ <div class="inner">
+   <div class="cicon icon-lottery-title">活动规则</div>
+    <div class="content-dialog">
+    <div class="center" style="padding-top:0;padding-bottom:.5rem;"><div class="cicon icon-title-rule"></div></div>
+    <div class="dialog-center">
+	    <div class="inner">
+	    	<p>一、活动时间</p>
+			<p>2016年6月17日-2016年7月12日</p>
+			<p>二、活动奖品</p>
+			<p>iPad air2、索爱蓝牙音箱、2016欧洲杯吉祥物公仔、10-100元不等话费、10M/30M流量、钻石会员免费体验、唯品会新用户满200-25优惠口令、连咖啡新用户买一送一券、连咖啡免费咖啡福利。</p>
+			<p>三、领奖须知</p>
+			<p>1、活动期间每个用户可以领5次奖，针对同一个奖品，每个手机号码最多只能领取1次。
+			流量/话费/实体奖品等将在活动结束后10个工作日内送达，如果届时未收到奖品，请在7月26日内联系爱音乐在线客服，逾期将默认放弃领奖；</p>
+			<p>2、通过活动页面获得订购钻石会员将先从您手机账户中扣取10元，在活动结束后10个工作日内将10元话费返回到手机账户中。短信发送 QX 到 118100 可取消会员身份和所有会员服务。</p>
+			<p>3、连咖啡优惠券：“新用户买一送一券”需扫指定二维码进入页面领奖；“免费咖啡福利券”需截图该页面，发送爱音乐小编并领取相应福利。</p>
+			<p>4、唯品会新用户200减25优惠口令使用说明：唯品会新用户生成唯品会订单——支付页面选择“口令优惠”——输入口令【爱音乐】享200减25。</p>
+
+			<p>*爱音乐可在法律法规范围内对本次活动规则进行解释。</p>
+		</div>
+	</div>
+    </div>
+ </div>
+ <div class="cicon icon-btn-close"></div>
+ </div>
+</div>
+<!-- 游戏规则页 end -->
+<!-- 分享页 start -->
+<div id="pageShare" class="modal transparent ">
+  <div class="cicon icon-share-footerball"></div>
+  <div class="cicon icon-share-man"></div>
+</div>
+<!-- 分享页 end -->
+<div id="pageRotate">
+    <img src="images/rotate.jpg" width="150">
+</div>
+<div id="btnMusic"><div class="cicon icon-play"></div><div class="cicon icon-pause"></div></div>
+<audio style="display: none" id="music" loop="loop" src="audio/bg.mp3"></audio>
+<script src="js/jweixin-1.0.0.js"></script>
+<script src="js/libs/zepto/zepto.js"></script>
+<script src="js/libs/createjs/createjs.js"></script>
+<script src="js/libs/GSAP/TweenMax.min.js"></script>
+<script src="js/libs/seajs/3.0.0/sea.js"></script>
+<script src="js/MZ.js"></script>
+
+<script>
+var LotteryNum = 0;
+$('#lotterNum').html(LotteryNum);
+seajs.config({
+  base: "./js/",
+  alias: {
+  },
+  map: [
+    [ /^(.*\/js\/.*\.(?:css|js))(?:.*)$/i, '$1?20151215' ]
+  ]
+})
+var HOSTNAME = document.domain;
+var ICONSTR,LINKSTR,DESCSTR,TITLE;
+var apiHost;
+if(HOSTNAME=='m.muzhibuluo.com'){
+  apiHost = 'http://api.m.muzhi.us';
+}else{
+  apiHost = 'http://test.api.muzhibuluo.com';
+}
+var apiPrefix = apiHost+'/api/imusic_s14e01/';
+
+seajs.use('module/app',function(app){
+    app.init();
+});
+
+Zepto.post('/auth/anonymous/login?t='+new Date().getTime()+'&gamesRedirectUri='+encodeURIComponent(location.href.split('#')[0]),function(res){
+  console.log('location.href',location.href);
+    if(res.result === 'error'){
+        console.log('login error', res.errmsg);
+        location.href = res.url;
+    }else if(res.result === 'unauth'){
+        console.log('login unauth', res.url);
+        location.href = res.url;
+    }else{
+        console.log('logined', res);
+        console.log('current wechat user', res.user);
+        $(document).on('ajaxBeforeSend', function(e, xhr, options){
+          xhr.setRequestHeader("Authorization","Bearer "+res.mz_jwt);
+        })
+        getJSSDK();
+    }
+})
+function getJSSDK(){
+  Zepto.get('/auth/wechat/jssdk?t='+new Date().getTime()+'&originalUrl='+encodeURIComponent(location.href.split('#')[0]),function(res){
+      var jssdk = res.jssdk;
+      wx.config({
+          debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+          appId: jssdk.appId, // 必填，公众号的唯一标识
+          timestamp: jssdk.timestamp, // 必填，生成签名的时间戳
+          nonceStr: jssdk.nonceStr,   // 必填，生成签名的随机串
+          signature: jssdk.signature, // 必填，签名，见附录1
+          jsApiList: [
+              'onMenuShareTimeline',
+              'onMenuShareAppMessage',
+              'onMenuShareQQ',
+              'onMenuShareWeibo'
+          ] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+      });
+      ICONSTR ='http://'+ HOSTNAME+'/2016/q1/biz/imusic_s14e01/images/shareicon.jpg';
+      LINKSTR = HOSTNAME+'/2016/q1/biz/imusic_s14e01/startup.html';
+      DESCSTR = '叹球星发挥失常？不如自己上场！据说“足球之星”还可以抽到iPad air哦……';
+      TITLE = "谁是足球巨星 ";
+      MZ.wechat.init({
+         title: TITLE,
+         desc: DESCSTR,
+         link: LINKSTR,
+         imgUrl: ICONSTR
+      })
+  })
+  Zepto.ajax({
+    url: apiPrefix + 'init',
+    type: 'post',
+    success: function(data){
+      LotteryNum = data.lotteryNum;
+      $('#lotterNum').html(LotteryNum);
+    }
+  })
+}
+
+</script>
+  <div style="display:none;"><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1259537460'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1259537460' type='text/javascript'%3E%3C/script%3E"));</script></div>
+</body>
+</html>

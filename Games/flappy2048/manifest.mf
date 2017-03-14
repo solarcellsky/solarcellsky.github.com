@@ -1,0 +1,21 @@
+﻿CACHE MANIFEST
+
+# Version 1
+
+CACHE:
+index_files/clicktostart.png
+index_files/fbshare.png
+index_files/flappy2048.js
+index_files/gameover.png
+index_files/ground.png
+index_files/jquery.min.js
+index_files/local_storage_manager.js
+index_files/logo.png
+index_files/playagain.png
+index_files/soundoff.png
+index_files/wing.png
+index_files/wingfill.png
+
+
+NETWORK:
+*

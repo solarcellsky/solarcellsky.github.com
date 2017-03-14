@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="target-densitydpi=320,width=640,user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <title id="pagetitle"></title>
+    <link rel="stylesheet" type="text/css" href="css/app.css" />
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript">
+    if ($(window).height() < 1000) {
+        document.write('<meta name="viewport" content="target-densitydpi=320,width=' + 1000 / ($(window).height() / 640) + ',user-scalable=no" />');
+    }
+    </script>
+    <script type="text/javascript" src="js/pace-1.0.0.min.js"></script>
+    <script type="text/javascript" src="js/fbf-0.0.5.min.js"></script>
+    <script type="text/javascript" src="js/shake.js"></script>
+    <script type="text/javascript" src="js/app.js?v=20151205"></script>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script type="text/javascript" src="js/weixin.js?v=2015"></script>
+    <script type="text/javascript" src="js/core.js?v=2015"></script>
+    <script type="text/javascript">
+    var origin = "newspaper";
+    //			if(isWeixin()){
+    getWeixinShareData();
+    //			}
+    var flag = ucar.uitls.getUrlParam("paperfrom");
+    if (flag == "ctdsb") { //楚天都市报 
+        $("#pagetitle").html('楚天都市报头条出“大事”了');
+    } else if (flag == "whwb") { //武汉晚报 
+        $("#pagetitle").html('武汉晚报头条出“大事”了');
+    } else if (flag == "cjsb") { //长江商报 
+        $("#pagetitle").html('长江商报头条出“大事”了');
+    } else if (flag == "yzwb") { //扬子晚报 
+        $("#pagetitle").html('扬子晚报头条出“大事”了');
+    } else if (flag == "njcb") { //南京晨报 
+        $("#pagetitle").html('南京晨报今日特别福利在这里');
+    } else if (flag == "jlwb") { //金陵晚报 
+        $("#pagetitle").html('每人500元券！今日特别福利在这里！');
+    } else if (flag == "dhb") { //大河报 
+        $("#pagetitle").html('每人500元券！今日特别福利在这里！');
+    } else if (flag == "zzwb") { //郑州晚报 
+        $("#pagetitle").html('每人500元券！今日特别福利在这里！');
+    } else if (flag == "dfjb") { //东方今报 
+        $("#pagetitle").html('每人500元券！今日特别福利在这里！');
+    } else if (flag == "szwb") { //深圳晚报 
+        $("#pagetitle").html('深圳晚报头条出“大事”了');
+    } else if (flag == "nd") { //南都 
+        $("#pagetitle").html('南方都市报头条出“大事”了');
+    } else if (flag == "ycwb") { //羊城晚报 
+        $("#pagetitle").html('羊城晚报头条出“大事”了');
+    } else if (flag == "szdsb") { //深圳都市报 
+        $("#pagetitle").html('深圳都市报头条出“大事”了');
+    } else {
+        $("#pagetitle").html('楚天都市报头条出“大事”了');
+    }
+    </script>
+</head>
+
+<body>
+    <div class="ab hide">
+        <script>
+        var img0 = 'jpg';
+        if (navigator.userAgent.match(/Android/i)) img0 = 'png';
+        var localgetUrlParam = function(key) {
+            if (!key) {}
+            var url = window.location.search;
+            url = url.split("?")[1];
+            if (!url) {
+                return null;
+            }
+            var value = null;
+            var params = url.split("&");
+            $.each(params,
+                function(i, param) {
+                    var kv = param.split("=");
+                    if (kv[0] == key) {
+                        value = decodeURIComponent(kv[1]);
+                        return false;
+                    }
+                });
+            return value;
+        };
+        var paperfrom = localgetUrlParam("paperfrom");
+        if (!paperfrom) {
+            paperfrom = "cjsb";
+        }
+        var img1 = './' + paperfrom + '/1.' + img0 + '?v=20151205',
+            img2 = './' + paperfrom + '/2.' + img0 + '?v=20151205';
+        document.write('<img class="ab " src="' + img1 + '" /><img class="ab " src="' + img2 + '" />');
+        </script>
+    </div>
+    <div class="page" id="page2">
+        <div id="btn500" class="x-c ab"></div>
+    </div>
+    <div class="page " id="page1">
+    </div>
+    <div class="page hide" id="page3">
+        <img id="yyy" class="ab c-c" src="images/yyy.png" />
+    </div>
+    <audio id="a1" src="./music/1_.mp3"></audio>
+    <audio id="a2" src="./music/2_.mp3"></audio>
+</body>
+
+</html>

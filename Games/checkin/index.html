@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>签到</title>
+    <link rel="stylesheet" type="text/css" href="css/base.css?t=1452915014036">
+    <link rel="stylesheet" type="text/css" href="css/index.css?t=1452915014036">
+    <link rel="stylesheet" type="text/css" href="css/qrcode-box.css?t=1452915014036">
+</head>
+
+<body style="zoom: 1;">
+    <header>
+        <div class="wrap">
+            <div class="avatar fn-left">
+                <a href="home.html" class="touch-redirect to-score-index">
+                    <img src="http://wx.qlogo.cn/mmopen/ajNVdqHZLLDr2ptZWgk9WqcrEZ02Owz0y6ld1XAYib03RibQIdDYrAdKmDjAWKBJFHLxMAwian4ial85pd53n3iaDFA/0">
+                    <span class="nick">老任</span>
+                </a>
+            </div>
+            <div class="entries check fn-right">
+                <a href="javascript:void(0);" class="qrcode"><i class="icon iconfont"></i>积分二维码</a>
+                <a href="prizes.html" class="prize touch-redirect"><i class="icon iconfont"></i>我的奖品</a>
+                <a href="rank.html" class="rank touch-redirect"><i class="icon iconfont"></i>签到排行榜</a>
+            </div>
+        </div>
+        <div class="index-guard">
+            <img src="images/score-index-guard.png?t=1452915014036">
+        </div>
+    </header>
+    <div id="check-box">
+        <div class="wrap score-display  co ">
+            <h2> 已连续签到 </h2>
+            <div class="indicators">
+                <i data-score="1">1</i><em class="day">天</em>
+            </div>
+            <img src="images/score-shadow-icon.png?t=1452915014036" class="shadow">
+            <span class="next-aim">
+    	        <img src="images/score-prize-icon.png?t=1452915014036">
+    	        连续签到 <em>3天</em> 
+    	        有积分奖励噢！
+    	    </span>
+            <svg>
+                <circle cx="50%" cy="50%" stroke="#cbcbcb" fill="none" r="45%"></circle>
+                <circle cx="50%" cy="50%" class="shape" stroke="#33cc00" r="45%" fill="none" stroke-dasharray="0% 1069">
+                    <animate attributeType="XML" attributeName="stroke-dasharray" from="0 1069" to="94% 1069" dur="0.5s" begin="0" fill="freeze">
+                    </animate>
+                </circle>
+            </svg>
+        </div>
+        <div id="navs">
+            <ul>
+                <li><a href="home.html">本次签到获得<i>9积分</i></a><span class="icon iconfont arrow"></span></li>
+                <li><a href="rank.html">当前共签到<i>1天</i>，排行<i>223位</i>，好棒</a><span class="icon iconfont arrow"></span></li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 扑扑星互动 版权所有</p>
+    </footer>
+    <div id="score-qrcode" class="hidden">
+        <div class="box">
+            <div class="wrap">
+                <div class="qrcode-inner">
+                    <img src="http://133490.weixin.drip.im/score/qrcode?openid=oBG0juLQ-D2EBPKr9BbZEiFq1tP8" class="qrcode">
+                </div>
+                <p>扫描二维码来给我积分</p>
+            </div>
+        </div>
+    </div>
+    <script src="js/core/sea.js?t=1452915014036"></script>
+    <script>
+    seajs.use("./js/app.js?t=1452915014036", function(app) {
+        app.init('./init');
+    });
+    </script>
+</body>
+</html>

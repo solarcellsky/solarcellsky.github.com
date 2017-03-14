@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>猫狗大战</title>
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/game9g.css">
+    <script src="js/pupuxing.gameloading.min.js"></script>
+     <script>
+    (function(doc, win) {
+        var docEl = doc.documentElement,
+            isIOS = navigator.userAgent.match(/iphone|ipod|ipad/gi),
+            dpr = isIOS ? Math.min(win.devicePixelRatio, 3) : 1,
+            dpr = window.top === window.self ? dpr : 1, //被iframe引用时，禁止缩放
+            scale = 1 / dpr,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+        docEl.dataset.dpr = dpr;
+        var metaEl = doc.createElement('meta');
+        metaEl.name = 'viewport';
+        metaEl.content = 'initial-scale=1,maximum-scale=1, minimum-scale=1';
+        docEl.firstElementChild.appendChild(metaEl);
+        var recalc = function() {
+            var width = docEl.clientWidth;
+            if (width / dpr > 640) {
+                width = 640 * dpr;
+            }
+            docEl.style.fontSize = 100 * (width / 640) + 'px';
+        };
+        recalc()
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+    })(document, window);
+    </script>
+    
+</head>
+
+<body>
+    <div id="stage"></div>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/lufylegend-1.9.9.min.js"></script>
+    <script src="js/Funcs.js"></script>
+    <script src="js/game.js"></script>
+    <script>
+    LInit(16, "stage", 640, 960, main);
+    </script>
+    <div class="cover" id="over">
+        <div class="coverwrapper">
+            <div>
+                <p>恭喜你，2015年的我成功挑起猫狗大战<span id="point">0</span>次，被评为<span id="result">最挑逗渣渣</span>。</p>
+                <a href="javascript:;" class="btn1" id="replay">再来一次</a>
+                <a href="javascript:;" class="btn1" id="btshare">炫耀一下</a>
+                <a href="javascript:;" class="btn1" id="toactivity">更多游戏</a>
+            </div>
+            <a href="javascript:;" id="close"><img src="img/bt1.png"> </a>
+        </div>
+    </div>
+    <script>
+    $("#btshare").click(function() {
+        dp_share();
+    })
+    $("#toactivity").click(function() {
+        clickMore();
+    })
+
+    $("#close").click(function() {
+        backStart();
+    })
+    $("#replay").click(function() {
+        gamelayer.removeAllChild();
+        gameInit();
+        $("#over").fadeOut(100);
+        issubmit = false;
+    })
+
+    //回到开始页面
+    function backStart() {
+        issubmit = false;
+        gamelayer.removeAllChild();
+        startlayer.visible = true;
+        $("#over").fadeOut(100);
+    }
+    </script>
+    
+</body>
+
+</html>

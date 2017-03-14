@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charet=UTF-8">
+		<meta charset="utf-8">
+		<title>2016运势</title>
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<meta name="viewport" content="width=640">
+		<link rel="stylesheet" type="text/css" href="css/css.css">
+		<script src="js/jquery-1.11.1.min.js"></script>
+        <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+        <script>
+            var _globalShare = {
+                title:'桃花运or事业旺，2016年你的运势_______?',
+                desc:'偏财运？事业运？小三上位？烂桃花？点击了解，2016你的运势。'
+            }
+            var shareLink = 'http://red.ayibang.com/activity/fortune/';
+            var appId = 'wx30ffbb438bd4e11b',
+                timestamp = '1449565443',
+                nonceStr = '65273eb05e214530643ba76654065d74',
+                signature = 'adb00f52ab0984620ba3732f97025ab255e629c9';
+
+            wx.config({
+                debug:false,
+                appId: appId,
+                timestamp: timestamp,
+                nonceStr: nonceStr,
+                signature: signature,
+                jsApiList: [
+                    'checkJsApi',
+                    'onMenuShareTimeline',
+                    'onMenuShareAppMessage',
+                    'onMenuShareQQ',
+                    'onMenuShareWeibo',
+                    'chooseImage',
+                ]
+            });
+            wx.ready(function() {
+                var resourceid = null;
+                var host = location.host;
+                var wxdatas = {
+                    title: _globalShare.title,
+                    desc: _globalShare.desc,
+                    link: shareLink,
+                    imgUrl: "img/200x200.png",
+                    trigger: function (res) {
+                    },
+                    success: function (res) {
+                    },
+                    cancel: function (res) {
+                    },
+                    fail: function (res) {
+                    }
+                };
+
+                wx.onMenuShareTimeline(wxdatas);
+                wx.onMenuShareQQ(wxdatas);
+                wx.onMenuShareWeibo(wxdatas);
+
+                // 分享给好友
+                wxdatas.title = _globalShare.title;
+                wx.onMenuShareAppMessage(wxdatas);
+
+                var startbtn = $('.btn-start'),//开始按钮
+                    onebox = $('.page-cover'),//第一页
+                    starbox = $('.page-start'),//第二页
+                    imgbtn = $('.buttons a'),//拍照按钮以及上传靓照按钮
+                    parstbox = $('.page-parsing'),//结果页
+                    pkbtn = $('.btn-pk'),//分享按钮
+                    pkbox = $('.share'),//分享层
+                	//各个状态的值
+                    states =[
+                    	{
+                    		"score":"-∞",
+                    		"text":"2016年的你，天妒英才，君子何尝去小人，小人如草去还生。",
+                    		"button":{
+                    			"class":"summry-6",
+                    			"href":"http://red.ayibang.com/giftpack/index?code=wrm43l"
+                    		},
+                    		"classdiv":["stars-3","stars-0","stars-3","stars-1"]
+                    	},
+                    	{
+                    		"score":"72",
+                    		"text":"2016年的你，命犯桃花一朵朵，每朵都是烂结果。",
+                    		"button":{
+                    			"class":"summry-1",
+                    			"href":"http://act.m.dmall.com/special/100035/v2.html"
+                    		},
+                    		"classdiv":["stars-0","stars-3","stars-2","stars-3"]
+                    	},
+                    	{
+                    		"score":"75",
+                    		"text":"2016年的你，万丈高楼平地起，辉煌只能靠自己，势单力薄。",
+                    		"button":{
+                    			"class":"summry-7",
+                    			"href":"http://t.cn/RUrrbn7"
+                    		},
+                    		"classdiv":["stars-3","stars-2","stars-2","stars-3"]
+                    	},
+                    	{
+                    		"score":"80",
+                    		"text":"2016年的你，不愿做奴隶的人民，却做了人民币的奴隶。",
+                    		"button":{
+                    			"class":"summry-5",
+                    			"href":"http://mp.weixin.qq.com/s?__biz=MjM5NzEzNTY3Ng==&mid=401119519&idx=1&sn=959fe08b8a39ab429a368d868eabd797&scene=1&srcid=1127jpUKugVGADr1WAuMUgQ3#wechat_redirect"
+                    		},
+                    		"classdiv":["stars-3","stars-2","stars-2","stars-4"]
+                    	},
+                    	{
+                    		"score":"82",
+                    		"text":"2016年的你，过着八戒的生活，却渴望着悟空的身材，犹叹当年小蛮腰，如今一身五花膘。",
+                    		"button":{
+                    			"class":"summry-4",
+                    			"href":"http://mp.weixin.qq.com/s?__biz=MjM5MjI4ODI5OQ==&mid=400683190&idx=2&sn=9414d53e5bf3613fbf39b7cb1c9d3062&scene=1&srcid=11264HjdsdWdZ4UcOSxEbKrc&key=ff7411024a07f3eb76d62c55dbab3c762d236861d11892f875"
+                    		},
+                    		"classdiv":["stars-2","stars-3","stars-3","stars-1"]
+                    	},
+                    	{
+                    		"score":"86",
+                    		"text":"2016年的你，一闪一闪亮晶晶，周围都是狐狸精，严防劈腿，小三上位！",
+                    		"button":{
+                    			"class":"summry-2",
+                    			"href":"http://h5.edaijia.cn/activities/bd_1448516729#page-unbind"
+                    		},
+                    		"classdiv":["stars-3","stars-3","stars-2","stars-3"]
+                    	},
+                    	{
+                    		"score":"96",
+                    		"text":"2016年的你，有一百种成为土豪的可能，拨开乌云见明月，富可敌“聪”。",
+                    		"button":{
+                    			"class":"summry",
+                    			"href":"http://red.ayibang.com/giftpack/index?code=r9lxu5"
+                    		},
+                    		"classdiv":["stars-3","stars-4","stars-5","stars-2"]
+                    	},
+                    	{
+                    		"score":"+∞",
+                    		"text":"2016年的你，人品大爆发，日子很澎湃，有酒有菜有人爱。",
+                    		"button":{
+                    			"class":"summry-8",
+                    			"href":"http://red.ayibang.com/giftpack/index?code=fzp455"
+                    		},
+                    		"classdiv":["stars-5","stars-5","stars-5","stars-5"]
+                    	}
+                    ];
+                //点击开始进入第二页
+                startbtn.click(function(){
+                    onebox.hide();
+                    starbox.show();
+                })
+                //点击拍照或者上传靓照加载分数的各种状态
+                 imgbtn.on("click",function(){
+                    var num = (parseInt(7*Math.random())+0),//0-8的随机数
+                        score = (states[num]["score"]),//随机获取的分数                
+	                    texts = (states[num]["text"]),//随机获取的分数描述
+	                    buttonname = (states[num]["button"]["class"]),//随机获取的分数按钮
+						buttonsrc = (states[num]["button"]["href"]),
+                        start = (states[num]["classdiv"]),//随机获取的星星的状态值
+                        time = null; 
+                    wx.chooseImage({
+                        count: 1, // 默认9
+                        sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
+                        sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
+                        success: function (res) {
+                            var localIds = res.localIds;
+                                $('#img-result').attr('src', localIds);
+                                //照片上传以后第二页消失第三页显示
+                                starbox.hide();  
+                                parstbox.show();
+                        }
+                    });   
+                    if(!appId) {
+                        alert('服务不可用，请稍后再试~~~');
+                    }
+                    //分数的值
+		    $('#score').text('');
+                    $('#score').text(score);
+                    //分数描述(结果出来之前不改变这个值，结果出来之后这句才可以用，结果出来之后给page-parsing添加一个class名称page-parsing done
+                    setInterval(function(){
+                        autoplay();
+                        $('.status').text(texts);
+                    },3000);
+                 	//按钮的状态
+                    var str = $('.summry').attr('class').split(' ')[1];
+                    if(str != ''){
+                        $('.summry').toggleClass(buttonname);
+                    }else{
+                        $('.summry').addClass(buttonname);
+                    }
+                    $('#btn').attr('href',buttonsrc);
+                    //星星的状态
+                     var stardiv = $('.stars');
+                    for(var i=0;i<start.length;i++){
+                    	$(stardiv[i]).attr("class","stars");
+						$(stardiv[i]).addClass(start[i]);  
+                    }
+                })
+                pkbtn.click(function(){
+					pkbox.show();
+				})
+                pkbox.click(function(){
+                	$(this).hide();
+                })
+            });
+        </script>
+	</head>
+	<body>
+		<div class="container">
+			<section class="page page-cover">
+				<div class="bg"></div>
+				<div class="behind-peoples"></div>
+				<div class="peoples"></div>
+				<div class="before-peoples"></div>
+				<div class="title"></div>
+				<a href="javascript:void(0)" class="btn-start"></a>
+			</section>
+			<section class="page page-start">
+				<div class="bg"></div>
+				<div class="slogan"></div>
+				<div class="girl"></div>
+				<div class="buttons">
+					<a href="javascript:void(0)" class="btn-takephoto"></a>
+					<a href="javascript:void(0)" class="btn-upload"></a>
+				</div>
+			</section>
+			<section class="page page-parsing">
+				<div class="bg"></div>
+				<div class="photo-wrapper"></div>
+				<div class="photo-frame"></div>
+				<div class="status">半仙儿，正在努力测算中……</div>
+				<div class="tips">温馨提示：姐不是天桥下算命的，唠不出 那么多你爱听的嗑…… </div>
+				<div class="tips2">
+				<div class="scores"><span id="score">98</span></div>
+				<a href="javascript:void(0)" class="summry " id="btn"></a>
+				<div class="details">
+					<div class="detail-item item-0"><div class="stars"></div></div>
+					<div class="detail-item item-1"><div class="stars"></div></div>
+					<div class="detail-item item-2"><div class="stars"></div></div>
+					<div class="detail-item item-3"><div class="stars"></div></div>
+				</div>
+				<a href="javascript:void(0)" class="btn-pk"></a>
+				</div>
+			</section>
+			<section class="masker share">
+				<div class="line"></div>
+				<div class="words"></div>
+				<div class="boy"></div>
+			</section>
+		</div>
+	
+<script>
+function autoplay(){
+	$('.page-parsing').addClass('.page-parsing done');
+}
+</script>
+
+</body></html>

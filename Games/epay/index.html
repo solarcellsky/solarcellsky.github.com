@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>博饼</title>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/jweixin-1.0.0.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <style type="text/css">
+    a {
+        outline: none;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+    .pause {
+        position: absolute;
+        z-index: 10000;
+        top: 10px;
+        right: 10px;
+    }
+    .pause a {
+        width: 30px;
+        height: 30px;
+        background: url(img/units-icons.png) 0 0 no-repeat;
+        display: block;
+        background-size: 90px auto;
+    }
+    .pause a.on {
+        -webkit-animation: reverseRotataZ 1.2s linear infinite
+    }
+    .pause a.off {} .pause span {
+        color: #fff;
+        font-size: 16px;
+        ;
+        position: absolute;
+        left: -40px;
+        top: 5px;
+        text-shadow: 1px 1px 1px #000;
+        letter-spacing: 2px;
+        -webkit-transition: all .2s linear;
+        opacity: 0;
+        -webkit-transform: translateX(-20px)
+    }
+    .pause span.z-show {
+        opacity: 1;
+        -webkit-transform: translateX(0px)
+    }
+    html,
+    body,
+    div,
+    p,
+    span,
+    i,
+    em {
+        padding: 0;
+        margin: 0;
+    }
+    body {
+        font: 12px/1.4 Arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+        background-color: rgb(0, 0, 0);
+        margin: 0;
+        padding: 0;
+        bodder: 0;
+    }
+    img {
+        position: absolute;
+    }
+    .page {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+    input {
+        position: absolute;
+        BACKGROUND-COLOR: transparent;
+        border: 0px;
+    }
+    textarea {
+        position: absolute;
+        BACKGROUND-COLOR: transparent;
+        border: 0px;
+        resize: none;
+        overflow: hidden;
+    }
+    .hide {
+        display: none;
+    }
+    .kami {
+        width: 30px;
+        height: 10px;
+        position: relative;
+    }
+    .padding_top {
+        margin: 0px;
+        padding: 0px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+    @-webkit-keyframes arrowleft {
+        0% {
+            -webkit-transform: translateX(0);
+        }
+        50% {
+            -webkit-transform: translateX(-40px);
+        }
+        100% {
+            -webkit-transform: translateX(-15px);
+        }
+    }
+    @-webkit-keyframes arrowleft2 {
+        0% {
+            -webkit-transform: translateX(0);
+        }
+        40% {
+            -webkit-transform: translateX(-40px);
+        }
+        80% {
+            -webkit-transform: translateX(-10px);
+        }
+        100% {
+            -webkit-transform: translateX(10px);
+        }
+    }
+    @-webkit-keyframes arrowleft3 {
+        0% {
+            -webkit-transform: translateX(0);
+        }
+        40% {
+            -webkit-transform: translateX(40px);
+        }
+        80% {
+            -webkit-transform: translateX(20px);
+        }
+        100% {
+            -webkit-transform: translateX(-10px);
+        }
+    }
+    @-webkit-keyframes arrowleft4 {
+        0% {
+            -webkit-transform: translateX(0);
+        }
+        50% {
+            -webkit-transform: translateX(20px);
+        }
+        100% {
+            -webkit-transform: translateX(10px);
+        }
+    }
+    .a1 {
+        animation: 3.5s linear 0s normal none infinite arrowleft;
+        -webkit-animation: 3.5s linear 0s normal none infinite arrowleft;
+    }
+    .a2 {
+        animation: 3.5s linear 0s normal none infinite arrowleft3;
+        -webkit-animation: 3.5s linear 0s normal none infinite arrowleft3;
+    }
+    .a3 {
+        animation: 3.5s linear 0s normal none infinite arrowleft2;
+        -webkit-animation: 3.5s linear 0s normal none infinite arrowleft2;
+    }
+    .a4 {
+        animation: 3.5s linear 0s normal none infinite arrowleft4;
+        -webkit-animation: 3.5s linear 0s normal none infinite arrowleft4;
+    }
+    .a5 {
+        animation: 3.5s linear 0s normal none infinite arrowlef2;
+        -webkit-animation: 3.5s linear 0s normal none infinite arrowleft2;
+    }
+    .a6 {
+        animation: 3.5s linear 0s normal none infinite arrowleft;
+        -webkit-animation: 3.5s linear 0s normal none infinite arrowleft;
+    }
+    </style>
+</head>
+
+<body>
+
+    <div id="loading" style="display: none;">
+        <span id="loading_number" style="color:white;position:absolute; font-size:1.5em; width:3em; text-align:center; left:40%; top:40%; ">100%</span>
+    </div>
+
+
+    <div class="padding_top" style="width: 757px; height: 826px;">
+
+        <div class="page1 hide page" style="z-index: 1; position: fixed; height: 100%; width: 100%; display: none;">
+            <img class="back" src="img/back.png" style="width: 757px; height: 856.592592592593px;">
+        </div>
+
+        <div class="page2 hide page" style="z-index: 1; position: fixed; height: 100%; width: 100%; display: block; background-color: rgb(247, 35, 35);">
+            <img class="back" src="img/p1-back.png" style="width: 757px; height: 856.592592592593px;">
+            <img class="title" src="img/p1-title.png" style="width: 757px; height: 67.3037037037037px; top: 313.574074074074px; left: 0px;">
+            <img class="txt" src="img/title_txt.png" style="width: 757px; height: 68.8333333333333px; top: 382.407407407407px; left: 0px;">
+            <img class="btn1" src="img/p1-btn1.png" style="width: 139.571875px; height: 36.7111111111111px; top: 275.333333333333px; left: 52.04375px;">
+            <img class="btn2" src="img/p1-btn2.png" style="width: 139.571875px; height: 36.7111111111111px; top: 275.333333333333px; left: 217.6375px;">
+            <img class="btn3" src="img/p1-btn3.png" style="width: 139.571875px; height: 36.7111111111111px; top: 275.333333333333px; left: 385.596875px;">
+            <img class="btn4" src="img/p1-btn4.png" style="width: 139.571875px; height: 36.7111111111111px; top: 275.333333333333px; left: 548.825px;">
+            <img class="wb" src="img/wb.png" style="width: 757px; height: 255.448148148148px; top: 443.592592592593px; left: 0px;">
+            <img class="s1" src="img/img/s_1.png" style="width: 106.453125px; height: 68.8333333333333px; top: 501.718518518519px; left: 272.046875px;">
+            <img class="s2" src="img/img/s_6.png" style="width: 106.453125px; height: 68.8333333333333px; top: 501.718518518519px; left: 165.59375px;">
+            <img class="s3" src="img/img/s_1.png" style="width: 106.453125px; height: 68.8333333333333px; top: 501.718518518519px; left: 425.8125px;">
+            <img class="s4" src="img/img/s_4.png" style="width: 106.453125px; height: 68.8333333333333px; top: 524.662962962963px; left: 212.90625px;">
+            <img class="s5" src="img/img/s_2.png" style="width: 106.453125px; height: 68.8333333333333px; top: 517.014814814815px; left: 354.84375px;">
+            <img class="s6" src="img/img/s_3.png" style="width: 106.453125px; height: 68.8333333333333px; top: 524.662962962963px; left: 295.703125px;">
+            <img class="wan" src="img/wan.png" style="width: 757px; height: 255.448148148148px; top: 443.592592592593px; left: 0px;">
+            <span id="time" style="position: absolute; color: rgb(255, 255, 255); font-size: 2em; top: 322.751851851852px; left: 366.671875px;">2</span>
+
+            <div class="rank" style="display: none;">
+                <img class="r-back" src="img/p5-back.jpg" style="width: 757px; height: 856.592592592593px;">
+                <img class="btn6" src="img/p2-btn2.png" style="width: 153.765625px; height: 41.3px; top: 734.222222222222px; left: 217.6375px;">
+
+                <img class="r-btn1" src="img/p4-btn1.png" style="width: 73.334375px; height: 48.9481481481482px; top: 7.64814814814815px; left: 638.71875px;">
+                <span id="myscore" style="z-index: 100; position: absolute; top: 588.907407407407px; font-size: 0.7em; left: 340.65px;">null</span><span id="myrank" style="z-index: 100; position: absolute; top: 588.907407407407px; font-size: 0.7em; left: 536.996875px;">0</span>
+                <div id="table2" style="position: absolute; overflow: auto; top: 295.218518518519px; left: 189.25px; width: 402.15625px; height: 260.037037037037px;">
+                    <table style="width:100%; text-align:center; line-height:2.0em;">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div id="rank">1</div>
+                                </td>
+                                <td>
+                                    <div id="name">改良</div>
+                                </td>
+                                <td>
+                                    <div id="score">368</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div id="rank">2</div>
+                                </td>
+                                <td>
+                                    <div id="name">张力</div>
+                                </td>
+                                <td>
+                                    <div id="score">127</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div id="rank">3</div>
+                                </td>
+                                <td>
+                                    <div id="name">哈哈大王</div>
+                                </td>
+                                <td>
+                                    <div id="score">98</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div id="rank">4</div>
+                                </td>
+                                <td>
+                                    <div id="name">蔡佳斌</div>
+                                </td>
+                                <td>
+                                    <div id="score">88</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div id="rank">5</div>
+                                </td>
+                                <td>
+                                    <div id="name">森林猪</div>
+                                </td>
+                                <td>
+                                    <div id="score">79</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div id="rank">6</div>
+                                </td>
+                                <td>
+                                    <div id="name">一山霸</div>
+                                </td>
+                                <td>
+                                    <div id="score">50</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div id="rank">7</div>
+                                </td>
+                                <td>
+                                    <div id="name">微信解决方案--杨勇</div>
+                                </td>
+                                <td>
+                                    <div id="score">50</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div id="rank">8</div>
+                                </td>
+                                <td>
+                                    <div id="name">冰心柠檬</div>
+                                </td>
+                                <td>
+                                    <div id="score">50</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div id="rank">9</div>
+                                </td>
+                                <td>
+                                    <div id="name">Kevin</div>
+                                </td>
+                                <td>
+                                    <div id="score">50</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div id="rank">10</div>
+                                </td>
+                                <td>
+                                    <div id="name">hjleochen</div>
+                                </td>
+                                <td>
+                                    <div id="score">25</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="page3 hide page" style="z-index: 1; position: fixed; height: 100%; width: 100%; display: none; background-color: rgb(247, 35, 35);">
+            <img class="back">
+            <img class="back_ewm">
+            <img class="back_ewm2">
+            <img class="btn1">
+            <img class="btn1_g">
+            <img class="btn2">
+            <img class="btn3">
+            <img class="pic">
+            <input type="text" id="name" placeholder="输入姓名" style="font-size:1em">
+            <input type="tel" id="tel" placeholder="联系方式" style="font-size:1em">
+            <img class="popTip">
+        </div>
+
+        <div class="page4 hide page" style="z-index: 1; position: fixed; height: 100%; font-weight: bold; width: 100%; display: none; background-color: rgb(247, 35, 35);">
+            <img class="back" src="img/p3-back.jpg" style="width: 757px; height: 856.592592592593px;">
+            <img class="btn1" src="img/p3-btn1.png" style="width: 220.003125px; height: 61.1851851851852px; top: 734.222222222222px; left: 153.765625px;">
+            <img class="btn2" src="img/p3-btn2.png" style="width: 220.003125px; height: 61.1851851851852px; top: 734.222222222222px; left: 406.8875px;">
+            <div id="table1" style="position: absolute; top: 370.17037037037px; left: 201.078125px; width: 461.296875px; height: 458.888888888889px;">
+                <table style="width:100%; text-align:center; font-size:0.8em; line-height:2.3em;"></table>
+            </div>
+            <img class="btn1" src="img/p3-btn1.png" style="width: 220.003125px; height: 61.1851851851852px; top: 734.222222222222px; left: 153.765625px;">
+            <img class="btn2" src="img/p3-btn2.png" style="width: 220.003125px; height: 61.1851851851852px; top: 734.222222222222px; left: 406.8875px;">
+        </div>
+        <div class="page5 hide page" style="z-index: 1; position: fixed; height: 100%; width: 100%; display: none; background-color: rgb(247, 35, 35);">
+            <img class="back" src="img/p4-back.png" style="width: 757px; height: 856.592592592593px;">
+            <div class="back_txt" style="overflow: auto; position: absolute; line-height: 1.5em; width: 331.1875px; height: 443.592592592593px; top: 252.388888888889px; left: 224.734375px;">
+                <h2 style="font-size:1.2em; color:#FF0000">活动时间：</h2>
+                <p>即日起至2015年9月27日前每周三（10:00-23:59）及9月27日中秋节（10:00-23:59）</p>
+
+                <h2 style="font-size:1.2em; color:#FF0000">活动对象：</h2>
+                <p>福建电信用户（异网用户暂不参与本次活动）</p>
+                <h2 style="font-size:1.2em; color:#FF0000">
+活动规则：</h2>
+                <p>1.用户进入博饼程序后即可参与本次活动，活动每天将设置10000个博饼机会，先到先得，抽完为止。</p>
+                <p>2.每位用户每周三及中秋节各有2次参与博饼活动的机会。</p>
+                <p>3.每位用户每天至“福建电信翼支付”公众号签到即可获得5个积分，积分可累计叠加。</p>
+                <p>4.游戏结束后，参与游戏所获积分将累计排名记录至活动最后一天（2015年9月27日），积分排名前十的用户将获得翼支付送出的超级大奖</p>
+                <p>5.游戏结束后，获奖用户需留下姓名及正确的福建电信手机号码，所获奖品电信充值卡卡密将在福建电信翼支付公众号上进行一对一发布用户可在fj.189.cn上进行充值。</p>
+                <p>6. 分享朋友圈可获得50个积分。</p>
+            </div>
+            <img class="btn1" src="img/p4-btn1.png" style="width: 73.334375px; height: 48.9481481481482px; top: 15.2962962962963px; left: 650.546875px;">
+
+        </div>
+        <div class="page6 hide page" style="z-index: 1; position: fixed; height: 100%; width: 100%; display: none; background-color: rgb(247, 35, 35);">
+            <img class="back">
+            <img class="btn1">
+
+        </div>
+        <div class="page7 hide page" style="z-index: 1; position: fixed; height: 100%; width: 100%; display: none; background-color: rgb(247, 35, 35);">
+            <img class="back">
+            <img class="btn1">
+            <div id="table3" style="position: absolute; top: 351.814814814815px; left: 260.21875px;">
+                <table style="width:100%; text-align:center; font-size:1.5em; line-height:2.3em;"></table>
+            </div>
+        </div>
+
+    </div>
+
+    <!--<div class="pause">
+    <a class="off" href="#">
+    </a>
+    <span>开启</span>
+</div>-->
+
+    <audio src="audios/voice.mp3" autoplay="autoplay" loop="" id="bgaudio" preload=""></audio>
+
+    <img src="img/pop.png" style="top: 0px; left: 0px; opacity: 1; z-index: 1000; position: absolute; width: 100%; height: 100%; display: none;" id="share">
+
+    <audio src="audios/audio.mp3" id="audio"></audio>
+
+    <script>
+    $(function() {
+
+
+        var audio = document.getElementById('audio');
+
+        //        $(document).one("touchstart",function() {
+        //            audio.play();
+        //        });
+    })
+
+    function musicControl(obj) {
+        var classname = $.trim(obj.attr('class'));
+
+        if (classname == 'on') {
+            audio.pause();
+            obj.removeClass('on').addClass('off');
+            obj.siblings('span').text('关闭');
+            //bird.find('img').attr('src',jpg);
+            $('.pause span').addClass('z-show');
+            $('.music-icon').removeClass('active');
+
+            setTimeout(function() {
+                $('.pause span').removeClass('z-show');
+            }, 500);
+        } else if (classname == 'off') {
+            audio.play();
+            obj.removeClass('off').addClass('on');
+            obj.siblings('span').text('开启');
+            // bird.find('img').attr('src',gif);
+            $('.music-icon').addClass('active');
+            $('.pause span').addClass('z-show');
+            setTimeout(function() {
+                $('.pause span').removeClass('z-show');
+            }, 500);
+        };
+        return false;
+    };
+
+    $('.pause a').click(function() {
+        musicControl($(this));
+    });
+    </script>
+
+
+    <script type="text/javascript">
+    wx.config({
+        debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+        appId: 'wxfab63a520ce95f72',
+        timestamp: '1446452308',
+        nonceStr: 'nMD7D4gIc2QWQrP0',
+        signature: '31dcff77e8caafb1b4399d0f4556e7d983fa3046',
+        jsApiList: [
+            'onMenuShareQQ',
+            'uploadImage',
+            'chooseImage',
+            'onMenuShareTimeline',
+            'onMenuShareAppMessage'
+        ]
+    });
+
+    var shareSuccess = function(res) {
+        $.ajax({
+            url: './server.php',
+            type: 'POST',
+            data: {
+                "openId": openId,
+                "share": "share"
+            },
+            dataType: 'HTML',
+            timeout: 10000,
+            complete: function(result) {
+
+            }
+        });
+    };
+
+    var defaultLink = "http://www.1ceyou.com/web/bobing/code/index.php?uid=oO31Ot6_LWktVkw7n6D6EOsioKD0";
+    var defaultImg = "http://www.1ceyou.com/web/bobing/code/share.jpg";
+    var weixinShare = {
+
+        title: "摇翻朋友圈，博动大胡建——翼支付邀您博饼啦  ",
+        desc: "可能今年福建首个微信博饼，火爆超乎想象  ",
+        link: defaultLink,
+        imgUrl: defaultImg,
+        type: '',
+        dataUrl: '',
+        success: shareSuccess
+    };
+
+    var qqShare = {
+        title: "摇翻朋友圈，博动大胡建——翼支付邀您博饼啦  ",
+        desc: "可能今年福建首个微信博饼，火爆超乎想象    ",
+        link: defaultLink,
+        imgUrl: defaultImg,
+        success: shareSuccess
+    };
+
+    var friendShare = {
+        title: "摇翻朋友圈，博动大胡建——翼支付邀您博饼啦 ",
+
+        link: defaultLink,
+        imgUrl: defaultImg,
+        success: shareSuccess
+    };
+
+    function setShareUrl($url) {
+        weixinShare.link = qqShare.link = friendShare.link = $url;
+    }
+
+    wx.ready(function() {
+        wx.showOptionMenu();
+        wx.onMenuShareTimeline(friendShare);
+        wx.onMenuShareAppMessage(weixinShare);
+        wx.onMenuShareQQ(qqShare);
+        //     bindShareCallBack(function(){alert("fdsafdsaf");},this);
+    });
+
+    function setShareContent(content) {
+        friendShare.title = weixinShare.desc = qqShare.desc = content;
+    }
+
+    var images = {
+        localId: [],
+        serverId: []
+    };
+
+    function chooseImage() {
+        wx.chooseImage({
+            success: function(res) {
+                images.localId = res.localIds;
+                alert('已选择 ' + res.localIds.length + ' 张图片');
+            }
+        });
+    }
+
+    function uploadImage() {
+        if (images.localId.length == 0) {
+            alert('请先使用 chooseImage 接口选择图片');
+            return;
+        }
+
+        var i = 0,
+            length = images.localId.length;
+        images.serverId = [];
+
+        function upload() {
+            wx.uploadImage({
+                localId: images.localId[i],
+                success: function(res) {
+                    i++;
+                    alert('已上传：' + i + '/' + length);
+                    images.serverId.push(res.serverId);
+                    if (i < length) {
+                        upload();
+                    }
+                },
+                fail: function(res) {
+                    alert(JSON.stringify(res));
+                }
+            });
+        }
+        upload();
+    }
+    </script>
+    <script type="text/javascript">
+    var window_w = document.documentElement.clientWidth;
+    var window_h = document.documentElement.clientHeight;
+    var wip = 320;
+    var hip = 540;
+    if (navigator.userAgent.indexOf("Firefox") != -1) {
+        window_w = 320;
+        window_h = 540;
+    }
+
+    var openId = 'oO31Ot6_LWktVkw7n6D6EOsioKD0';
+    var gameTime = 2;
+    </script>
+    <script type="text/javascript" src="js/animate.js?1446452310"></script>
+    <script type="text/javascript" src="js/tools.js?1446452310"></script>
+    <script type="text/javascript" src="js/main.js?1446452310"></script>
+    <script type="text/javascript" src="js/shake.js"></script>
+
+
+
+</body>
+<iframe id="__WeixinJSBridgeIframe_SetResult" style="display: none;"></iframe>
+<iframe id="__WeixinJSBridgeIframe" style="display: none;"></iframe>
+
+</html>

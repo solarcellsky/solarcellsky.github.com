@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html style="font-size: 59.875px; -webkit-user-select: none;">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="apple-touch-fullscreen" content="YES">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" name="viewport">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="pragram" content="no-cache">
+    <title>打土豪，赚积分，兑现金，抢6S，更多好礼玩了就知道！</title>
+    <script type="text/javascript" src="./js/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="./js/createjs.js?34"></script>
+    <script type="text/javascript" src="./js/main.js?87"></script>
+    <script type="text/javascript" src="./js/xingkec.js"></script>
+    <link type="text/css" rel="stylesheet" href="./css/style.css?65">
+</head>
+<iframe id="__WeixinJSBridgeIframe_SetResult" style="display: none;"></iframe>
+<iframe id="__WeixinJSBridgeIframe" style="display: none;"></iframe>
+
+<body>
+    <!-----加载页---------->
+    <div class="loading" style="position:fixed;width:100%;height:100%;background:rgba(0,0,0,0.9);z-index:10000;">
+        <div class="load">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+    <!--钱币飘落-->
+    <div class="qian_luo hide">
+        <div id="snowzone">
+        </div>
+    </div>
+    <script>
+    (function() {
+        function snow(left, height, src) {
+            var div = document.createElement("div");
+            var img = document.createElement("img");
+            div.appendChild(img);
+            img.className = "roll";
+            img.src = src;
+            div.style.left = left + "px";
+            div.style.height = height + "px";
+            div.className = "div";
+            document.getElementById("snowzone").appendChild(div);
+            setTimeout(function() {
+                document.getElementById("snowzone").removeChild(div);
+                // console.log(window.innerHeight);
+            }, 5000);
+        }
+
+        setInterval(function() {
+            var left = Math.random() * window.innerWidth;
+            var height = Math.random() * window.innerHeight;
+            var src = "./img/qian" + Math.floor(Math.random() * 4 + 1) + ".png"; //四张张图片分别为"qian1.png"、"qian2.png"、"qian3.png"、"qian4.png"
+            snow(left, height, src);
+        }, 500);
+    })();
+    </script>
+    <!--音乐符号-->
+    <div class="music"><img src="./img/music.png"></div>
+    <!--首页-->
+    <div class="shouye">
+        <div class="page_bg"><img src="./img/shouye_bg.jpg"></div>
+        <div class="logo"><img src="./img/logo.png"></div>
+        <div class="zhuti hide"><img src="./img/zhuti.png"></div>
+        <div class="shou_txt"><img src="./img/shou_txt.png"></div>
+        <div class="start_btn"><img src="./img/start_btn.png"></div>
+        <!--好友进来显示-->
+        <div class="hy_come hide">
+            <div class="ta_txt"><span class="user">XXX</span>的土豪还能打<span class="times">9</span>次</div>
+            <div class="TA_btn"><img src="./img/TA_btn.png"></div>
+        </div>
+        <div class="phb_btn"><img src="./img/phb_btn.png"></div>
+        <div class="rule_btn"><img src="./img/rule_btn.png"></div>
+        <div class="caifu_btn"><img src="./img/caifu_btn.png"></div>
+        <div class="suning_txt"><img src="./img/suning_txt.png"></div>
+    </div>
+    <!--喊好友曝光土豪页面-->
+    <div class="yaoq_wap hide">
+        <div class="page_bg"><img src="./img/shouye_bg2.jpg"></div>
+        <div class="logo"><img src="./img/logo.png"></div>
+        <div class="yaoqing">
+            <div class="zhuti2 hide pulse" style="display: block;"><img src="./img/zhuti2.png"></div>
+            <!--自己页面显示-->
+            <div class="shou_txt3" style="display: none;"><img src="./img/shou_txt3.png"></div>
+            <!--好友页面显示-->
+            <div class="shou_txt2 hide">
+                <div><img src="./img/shou_txt2.png"></div>
+                <div class="tishi"><span>Kevin</span>的土豪已经打过了！</div>
+            </div>
+            <div class="tips">PS：你也可以打好友的土豪，收集金币越多，抢到6S的 几率越大哦！
+            </div>
+            <div class="share_btn"><img src="./img/share_btn.png"></div>
+        </div>
+        <div class="phb_btn"><img src="./img/phb_btn.png"></div>
+        <div class="rule_btn"><img src="./img/rule_btn.png"></div>
+        <div class="caifu_btn"><img src="./img/caifu_btn.png"></div>
+        <div class="suning_txt"><img src="./img/suning_txt.png"></div>
+    </div>
+    <!--游戏页面-->
+    <div class="game hide">
+        <div class="page_bg flash"><img src="./img/guang.png"></div>
+        <div class="logo"><img src="./img/logo.png"></div>
+        <div class="game_bot"><img src="./img/game_bot.png"></div>
+        <div class="jifen hide">
+            <div class="jifenpai"><img src="./img/jifenpai.png"></div>
+            <div class="score_txt">拳击：<span class="score"></span></div>
+            <div class="jbshu"></div>
+            <div class="time_txt"><span></span>'s</div>
+        </div>
+        <div class="pager hide">
+            <img class="pager0" src="./img/pager.png">
+            <img class="pager1 hide" src="./img/pager1.png">
+            <img class="pager2 hide" src="./img/pager2.png">
+        </div>
+        <!--游戏结束显示的人物-->
+        <div class="over_pager hide"><img src="./img/over_pager.png"></div>
+        <div class="pager_txt">
+            <img src="">
+            <div class="hide">
+                <img src="./img/text1_1.png">
+                <img src="./img/text1_2.png">
+                <img src="./img/text1_3.png">
+                <img src="./img/text1_4.png">
+                <img src="./img/text1_5.png">
+                <img src="./img/text2_1.png">
+                <img src="./img/text2_2.png">
+                <img src="./img/text2_3.png">
+                <img src="./img/text2_4.png">
+            </div>
+        </div>
+        <!--钱币掉下来-->
+        <div class="jinbi1 hide"><img src="./img/jinbi1.png"></div>
+        <div class="jinbi2 hide"><img src="./img/jinbi2.png"></div>
+        <div class="jinbi3 hide"><img src="./img/jinbi3.png"></div>
+        <div class="jinbi4 hide"><img src="./img/jinbi2.png"></div>
+        <div class="jinbi5 hide"><img src="./img/jinbi3.png"></div>
+        <div class="jinbi6 hide"><img src="./img/jinbi1.png"></div>
+        <div class="jinbi7 hide"><img src="./img/jinbi2.png"></div>
+        <div class="jinbi8 hide"><img src="./img/jinbi3.png"></div>
+        <div class="jinbi9 hide"><img src="./img/jinbi1.png"></div>
+        <div class="jinbi10 hide"><img src="./img/jinbi2.png"></div>
+    </div>
+    <!--游戏开始前说明-->
+    <div class="game_rule hide">
+        <div class="tc_box ">
+            <div class="tanc_bg"><img src="./img/tanc_bg.png"></div>
+            <div class="tanc_tit"><img src="./img/rule_tit2.png"></div>
+            <div class="rule_txt2"><img src="./img/rule_txt2.png"></div>
+            <div class="kaishi"><img src="./img/kaishi.png"></div>
+        </div>
+        <div class="ready_tips hide"><img src="./img/ready_tips.png"></div>
+        <div class="go_tips hide"><img src="./img/go_tips.png"></div>
+    </div>
+    <!--游戏结束弹窗-->
+    <div class="game_over hide">
+        <div class="tc_box">
+            <div class="tanc_bg"><img src="./img/tanc_bg.png"></div>
+            <div class="tanc_tit"><img src="./img/timeover_tit.png"></div>
+            <div class="gameover_txt">
+                <p class="gameover_txt1">游戏结束</p>
+                <p class="gameover_txt2">恭喜你获得了<span>0</span>个金币</p>
+            </div>
+            <div class="again_btn"><img src="./img/again_btn.png"></div>
+            <div class="tijiao"><img src="./img/tijiao.png"></div>
+        </div>
+    </div>
+    <!--游戏规则页-->
+    <div class="rule_wap hide">
+        <div class="rule">
+            <div class="rule_bg"><img src="./img/rule_bg.png"></div>
+            <div class="rule_txt"><img src="./img/rule_txt.png"></div>
+            <div class="rule_tit"><img src="./img/rule_tit.png"></div>
+            <div class="close_btn"><img src="./img/close_btn.png"></div>
+            <div class="rule_sbtn"><img src="./img/share_btn.png"></div>
+        </div>
+    </div>
+    <!--排行榜-->
+    <div class="phb_wap hide">
+        <div class="phb_box">
+            <div class="phb_bg"><img src="./img/phb_bg.png"></div>
+            <div class="phb_tit"><img src="./img/phb_tit.png"></div>
+            <div class="jinbi_zong">我的金币：<span>0</span></div>
+            <div class="phb_scroll">
+                <ul class="phb_con">
+                    <!--<li>
+					<div class="phb_left"><span class="phb_num"><img src="./img/num1.png"/></span><span class="touxiang"><img src="./img/touxiang2.jpg"/></span><span class="user_name">用户1</span></div>
+					<div class="phb_right">金币：<span class="jb_num">888,8</span></div>
+				</li>
+				<li>
+					<div class="phb_left"><span class="phb_num"><img src="./img/num2.png"/></span><span class="touxiang"><img src="./img/touxiang2.jpg"/></span><span class="user_name">用户1</span></div>
+					<div class="phb_right">金币：<span class="jb_num">888,8</span></div>
+				</li>
+				<li>
+					<div class="phb_left"><span class="phb_num"><img src="./img/num3.png"/></span><span class="touxiang"><img src="./img/touxiang2.jpg"/></span><span class="user_name">用户1</span></div>
+					<div class="phb_right">金币：<span class="jb_num">888,8</span></div>
+				</li>
+				<li>
+					<div class="phb_left"><span class="phb_num">4</span><span class="touxiang"><img src="./img/touxiang2.jpg"/></span><span class="user_name">用户1</span></div>
+					<div class="phb_right">金币：<span class="jb_num">888,8</span></div>
+				</li>
+				<li>
+					<div class="phb_left"><span class="phb_num">5</span><span class="touxiang"><img src="./img/touxiang2.jpg"/></span><span class="user_name">用户1</span></div>
+					<div class="phb_right">金币：<span class="jb_num">888,8</span></div>
+				</li>
+				<li>
+					<div class="phb_left"><span class="phb_num">6</span><span class="touxiang"><img src="./img/touxiang2.jpg"/></span><span class="user_name">用户1</span></div>
+					<div class="phb_right">金币：<span class="jb_num">888,8</span></div>
+				</li>-->
+                </ul>
+            </div>
+            <div class="phb_sbtn"><img src="./img/share_btn.png"></div>
+            <div class="phb_close"><img src="./img/close_btn.png"></div>
+        </div>
+    </div>
+    <!--我的财富-->
+    <div class="money_wap hide">
+        <div class="money_tit"><img src="./img/money_tit.png"></div>
+        <p class="my_money">我的金币：<span>0</span></p>
+        <div class="duih_btn"><img src="./img/duih_btn.png"></div>
+        <div class="quan_box">
+            <p class="quan_tit"><img src="./img/quan_tit.png"></p>
+            <div class="tab_h"><span class="jine_h">理财券金额</span><span class="dhm_h">理财券兑换码</span></div>
+            <ul class="quan_scroll">
+                <!--<li><span class="jine_num">10元</span><span class="dhm_num">123456789#</span><a href=""><span class="shiyong_btn"><img src="./img/shiyong_btn.png"/></span></a></li>
+			<li><span class="jine_num">20元</span><span class="dhm_num">123456789#</span><a href=""><span class="shiyong_btn"><img src="./img/shiyong_btn.png"/></span></a></li>
+			<li><span class="jine_num">50元</span><span class="dhm_num">123456789#</span><a href=""><span class="shiyong_btn"><img src="./img/shiyong_btn.png"/></span></a></li>
+			<li><span class="jine_num">100元</span><span class="dhm_num">123456789#</span><a href=""><span class="shiyong_btn"><img src="./img/shiyong_btn.png"/></span></a></li>
+			<li><span class="jine_num">200元</span><span class="dhm_num">123456789#</span><a href=""><span class="shiyong_btn"><img src="./img/shiyong_btn.png"/></span></a></li>-->
+            </ul>
+        </div>
+        <div class="return_shou"><img src="./img/return_shou.png"></div>
+        <div class="warm2">理财券可用于投资苏宁理财平台票据理财和定期理财产品，满100元即可使用</div>
+        <div class="com_mess"><img src="./img/com_mess.png"></div>
+    </div>
+    <!--兑换理财券-->
+    <div class="dhq_wap hide">
+        <div class="money_tit"><img src="./img/dhq_tit.png"></div>
+        <p class="my_money">我的金币：<span>0</span></p>
+        <ul class="quan_con">
+            <li ontouchstart="duiHuan(1)">
+                <div class="quan_img"><img src="./img/quan5.png"></div>
+                <div class="quan_txt">兑换需<span class="quan5_bi">500</span>金币</div>
+            </li>
+            <li ontouchstart="duiHuan(2)">
+                <div class="quan_img"><img src="./img/quan4.png"></div>
+                <div class="quan_txt">兑换需<span class="quan4_bi">900</span>金币</div>
+            </li>
+            <li ontouchstart="duiHuan(3)">
+                <div class="quan_img"><img src="./img/quan3.png"></div>
+                <div class="quan_txt">兑换需<span class="quan3_bi">1200</span>金币</div>
+            </li>
+            <li ontouchstart="duiHuan(4)">
+                <div class="quan_img"><img src="./img/quan2.png"></div>
+                <div class="quan_txt">兑换需<span class="quan2_bi">2000</span>金币</div>
+            </li>
+            <li class="last" ontouchstart="duiHuan(5)">
+                <div class="quan_img"><img src="./img/quan1.png"></div>
+                <div class="quan_txt">兑换需<span class="quan1_bi">2800</span>金币</div>
+            </li>
+        </ul>
+        <div class="return"><img src="./img/return.png"></div>
+        <div class="warm2">理财券可用于投资苏宁理财平台票据理财和定期理财产品，满100元即可使用</div>
+        <div class="com_mess"><img src="./img/com_mess.png"></div>
+    </div>
+    <!--兑换弹窗-->
+    <div class="tchuang hide">
+        <div class="tc_box">
+            <div class="tanc_bg"><img src="./img/tanc_bg.png"></div>
+            <div class="tanc_tit"><img src="./img/tanc_tit.png"></div>
+            <!--兑换券面值-->
+            <div class="quan1_txt hide"><img src="./img/quan5_txt.png"></div>
+            <div class="quan2_txt hide"><img src="./img/quan4_txt.png"></div>
+            <div class="quan3_txt hide"><img src="./img/quan3_txt.png"></div>
+            <div class="quan4_txt hide"><img src="./img/quan2_txt.png"></div>
+            <div class="quan5_txt hide"><img src="./img/quan1_txt.png"></div>
+            <div class="warm">理财券可用于投资苏宁理财平台票据理财和定期理财产品，满100元即可使用</div>
+            <div class="confirm_btn"><img src="./img/confirm_btn.png"></div>
+            <div class="cancel_btn"><img src="./img/cancel_btn.png"></div>
+        </div>
+    </div>
+    <!--打完提示窗-->
+    <div class="wan_tips hide">
+        <div class="wan_box">
+            <div class="rule_bg"><img src="./img/rule_bg.png"></div>
+            <div class="rule_tit"><img src="./img/tips_tit.png"></div>
+            <div class="wan_txt "><img src="./img/wan_txt.png"></div>
+            <!--十次打完-->
+            <div class="wan_txt2 hide"><img src="./img/wan_txt2.png"></div>
+            <div class="code"><img src="./img/code_img.png"></div>
+            <div class="code_txt"><img src="./img/code_txt.png"></div>
+            <div class="wan_close"><img src="./img/close_btn.png"></div>
+        </div>
+    </div>
+    <!--游戏结束-->
+    <div class="gameOver hide">
+        <div class="page_bg"><img src="./img/over_bg.jpg"></div>
+        <div class="logo"><img src="./img/logo.png"></div>
+        <div class="result_txt">
+            <p class="result_txt1">游戏结束</p>
+            <p class="result_txt2">恭喜你获得了<span>200</span>个金币</p>
+        </div>
+        <div class="mymon_btn"><img src="./img/mymon_btn.png"></div>
+        <!--打自己土豪显示-->
+        <div class="wan_own hide">
+            <div class="over_txt"><img src="./img/over_txt.png"></div>
+            <div class="over_share"><img src="./img/share_btn.png"></div>
+        </div>
+        <!--打好友土豪显示-->
+        <div class="wan_hao hide">
+            <div class="mine_btn"><img src="./img/mine_btn.png"></div>
+            <div class="wan_share"><img src="./img/share_btn2.png"></div>
+        </div>
+        <div class="code2"><img src="./img/code_img.png"></div>
+        <div class="code_txt2"><img src="./img/code_txt2.png"></div>
+    </div>
+    <div class="share_wap hide">
+        <div class="page_bg"><img src="./img/share_img.png"></div>
+        <div class="share_close"><img src="./img/share_close.png"></div>
+    </div>
+    <script type="text/javascript">
+    /*****当页面加载完后隐藏loading********/
+    document.onreadystatechange = loading;
+
+    function loading() {
+        //调整i4样式
+        var iheight = window.screen.height;
+        if (iheight == 667 || iheight == 736) {
+            //i6尺寸
+            $('.page_bg img').css('height', '100%');
+        } else if (iheight == 480) {
+            //i4尺寸
+
+        }
+
+        if (document.readyState == "complete") {
+            //加载完成
+            $(".loading").hide();
+            $('.qian_luo').show();
+            $('.zhuti').show();
+            $('.zhuti').addClass('bounceIn');
+            setTimeout(function() {
+                $('.zhuti').removeClass('bounceIn');
+                $('.zhuti').addClass('pulse');
+            }, 800)
+        }
+
+    };
+    </script>
+    <!-- 分享配置 -->
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script>
+    /*
+     * 注意：
+     * 1. 所有的JS接口只能在公众号绑定的域名下调用，公众号开发者需要先登录微信公众平台进入“公众号设置”的“功能设置”里填写“JS接口安全域名”。
+     * 2. 如果发现在 Android 不能分享自定义内容，请到官网下载最新的包覆盖安装，Android 自定义分享接口需升级至 6.0.2.58 版本及以上。
+     * 3. 常见问题及完整 JS-SDK 文档地址：http://mp.weixin.qq.com/wiki/7/aaa137b55fb2e0456bf8dd9148dd613f.html
+     *
+     * 开发中遇到问题详见文档“附录5-常见错误及解决办法”解决，如仍未能解决可通过以下渠道反馈：
+     * 邮箱地址：weixin-open@qq.com
+     * 邮件主题：【微信JS-SDK反馈】具体问题
+     * 邮件内容说明：用简明的语言描述问题所在，并交代清楚遇到该问题的场景，可附上截屏图片，微信团队会尽快处理你的反馈。
+     */
+
+    wx.config({
+        debug: false,
+        appId: 'wx09db92c3699aee13',
+        timestamp: '1447235260',
+        nonceStr: 'kzt5guQJ10DV7GRp',
+        signature: '51dd47e05fbcccf713670d1a32950231db982799',
+        jsApiList: [
+            // 所有要调用的 API 都要加到这个列表中
+            'onMenuShareTimeline',
+            'onMenuShareAppMessage',
+            'startRecord',
+            'chooseWXPay',
+            'stopRecord',
+            'onRecordEnd',
+            'playVoice',
+            'pauseVoice',
+            'stopVoice',
+            'uploadVoice',
+            'downloadVoice',
+            'chooseImage',
+            'downloadImage',
+            'uploadImage',
+            'previewImage'
+
+        ]
+    });
+    </script>
+    <script>
+    var fid
+    var gid = 'omc5zvxQ1O3BXlE5raQ_v9ZfaY18';
+    var sid = '';
+    if (gid != "") {
+        fid = gid;
+    } else {
+        fid = sid;
+    }
+    //alert(fid)
+    var wecha = 'omc5zvyYyJ9BtN-_f0HDYbKWGrfM';
+
+    //alert(wecha);
+    // if(shareid==null){
+    var newurl = location.protocol + '//' + location.host + location.pathname;
+    var shareUrl = location.protocol + '//' + location.host + '/share.php?uid=' + wecha;
+    var shareTitle = '打土豪，赚积分，兑现金，抢6S，更多好礼玩了就知道！';
+    var shareIMG = location.protocol + '//' + location.host + '/logo.png'; //分享图标
+    var shareUserTitle = '我在玩“打土豪”游戏，敢来挑战吗？';
+    var shareQuanTitle = '打土豪，赚积分，兑现金，抢6S，更多好礼玩了就知道！';
+    wx.ready(function() {
+        Games.ConfigShare(shareTitle, shareUserTitle, shareUrl, shareIMG, function() {
+            //code ...
+        });
+    });
+
+    wx.error(function(res) {
+        alert(res.errMsg);
+    });
+
+    // }
+    </script>
+    <!-- 分享配置 -->
+</body>
+
+</html>

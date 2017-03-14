@@ -1,0 +1,72 @@
+.main{ width:100%; overflow:hidden}
+
+.bg{ background:url(../images/bg.png?t=201411241628) no-repeat}
+
+.mainBox_bg{ height:560px; background:url(../images/bg.jpg?t=201410281256) no-repeat center}
+.gameBox{ width:100%; height:600px; float:left; overflow:hidden; background:url(../images/bg.jpg?t=201411212138) no-repeat center}
+.gameBox .tags{ width:100%; height:46px; float:left; position:absolute; left:0; top:30px; z-index:999999}
+.gameBox .times, .gameBox .finish{ width:80px; height:46px; font-size:20px; line-height:46px; color:#fff; text-shadow:2px 2px 1px #7B3201; text-align:center; float:left; padding-right:50px}
+.gameBox .finish{ float:right; background-position:-250px 0; padding:0 0 0 51px}
+.gameBox .outerBox{ width:100%; height:640px; float:left; overflow:hidden; position:fixed; top:0; z-index:999990}
+.gameBox .box{ width:414px; height:486px; padding-top:280px; float:left; overflow:hidden; position:absolute; left:50%; margin:0 0 0 -207px; background-position:71px -3750px}
+.gameBox .box .fat_1, .gameBox .box .fat_2, .gameBox .box .fat_3, .gameBox .box .fat_big{ width:414px; height:79px; float:left; position:absolute; margin-top:20px; background-position:40px -250px; -webkit-transition: -webkit-transform 0.9s linear; -webkit-transform: translate3d(0,0,0)}
+.gameBox .box .fat_2{ background-position:155px -335px}
+.gameBox .box .fat_3{ background-position:290px -420px}
+.gameBox .box .fat_big{ height:188px; background-position:90px -55px}
+.gameBox .box .fat{ width:414px; height:486px; float:left; background-position:0 -800px; position:absolute; z-index:9999; -webkit-transition: -webkit-transform 0.5s linear; -webkit-transform: translate3d(0,0,0)}
+
+.start_btn{ width:200px; height:50px; float:left; text-align:center; border-radius:6px; font-size:28px; line-height:50px; color:#fff; background-color:#2BC798; border:none; margin:30px 0 0 50px}
+
+.mask{ width:100%; height:100%; position:fixed; top:0; left:0; display:none; background:rgba(0,0,0,0.6); z-index:9999900; float:left}
+.mask_black_8{ background:rgba(0,0,0,0.8)}
+.op_0{ opacity:0}
+
+.upStart{ width:90px; height:100px; float:left; margin:0 0 0 -45px; position:absolute; left:50%; top:400px; background-position:0 -3145px}
+.surTime{ width:150px; height:80px; float:left; position:absolute; top:75px; left:20px; background-position:0 -2765px}
+.totalNum{ width:125px; height:80px; float:left; position:absolute; top:76px; right:20px; background-position:0 -2895px}
+.handBox{ width:50%; height:881px; float:left; position:absolute; right:0; overflow:hidden}
+.handBox .hand{ width:196px; height:451px; float:left; background-position:0 -1300px; margin-top:330px; animation:spins 2s linear infinite; -moz-animation:spins 2s linear infinite; -webkit-animation:spins 2s linear infinite; -o-animation:spins 2s linear infinite}
+
+@keyframes spins { 0%{ margin-top:330px} 100%{ margin-top:230px}}
+@-moz-keyframes spins{ 0%{ margin-top:330px} 100%{ margin-top:230px}}
+@-webkit-keyframes spins{ 0%{ margin-top:330px} 100%{ margin-top:230px}}
+@-o-keyframes spins{ 0%{ margin-top:330px} 100%{ margin-top:230px}}
+
+.startGameTit{ width:230px; height:90px; float:left; position:absolute; left:50%; margin:20px 0 0 -115px; background-position:0 -3370px}
+
+.startGameBox{ width:270px; height:372px; float:left; position:absolute; left:50%; margin:118px 0 0 -135px; background:url(../images/startBg.png?t=201410281256) no-repeat; background-size:270px 372px}
+.startGameBox .startBtn{ width:112px; height:112px; float:left; margin:29px 0 0 78px}
+.startGameBox .startBtn:active{ background:url(../images/startBg_active.jpg?t=201410281256) no-repeat; background-size:112px 112px}
+.startGameBox .results{ width:230px; height:153px; float:left; margin:38px 0 0 20px}
+.startGameBox .results .info{ width:220px; float:left; line-height:26px; color:#fff; padding:0 5px}
+.startGameBox .results .ta_c{ text-align:center}
+.startGameBox .results .co_or{ color:#FFB828; font-size:18px}
+.startGameBox .results .fs_18{ font-size:14px}
+
+.menu{ width:100%; height:48px; float:left; position:fixed; bottom:0; z-index:999995}
+.menu a{ width:31%; height:42px; float:left; background-color:#E05638; color:#fff; box-shadow:5px 6px #AB2305; line-height:42px; text-align:center}
+.menu .mr_per_5{ margin-right:3%}
+.menu .co_gr{ background-color:#50D629; box-shadow:5px 6px #259121}
+
+.rankBox{ width:280px; height:460px; float:left; position:absolute; margin:-230px 0 0 -140px; top:50%; left:50%; background-position:0 -1770px}
+.rankBox .close{ width:32px; height:32px; float:right; margin:30px 7px 30px 0}
+.rankBox .tab{ width:280px; float:left; font-size:14px;  -webkit-transition: -webkit-transform 0.3s linear; -webkit-transform: translate3d(0,0,0)}
+.rankBox .tab th{ height:32px; text-align:center; color:#FF4E18; font-weight:bold}
+.rankBox .tab td{ height:32px; text-align:center; color:#746966}
+.rankBox .tabBox{ width:280px; height:320px; float:left; overflow:hidden}
+
+.ruleBox{ width:280px; height:460px; float:left; position:absolute; margin:-230px 0 0 -140px; top:50%; left:50%; background-position:0 -2250px}
+.ruleBox .close{ width:32px; height:32px; float:right; margin:30px 7px 0 0}
+.ruleBox .con{ width:250px; float:left; padding:40px 0 0 15px; color:#FF4E18; line-height:20px}
+
+.userInfo{ width:300px; height:360px; float:left; position:absolute; opacity:0.9; margin:-180px 0 0 -150px; top:50%; left:50%; background-color:#EDEDED; overflow:hidden; border-radius:8px}
+.userInfo .tit{ width:100%; font-size:18px; text-align:center; line-height:30px; height:30px; padding-top:30px; color:#ee3200; float:left}
+.userInfo .subTit{ width:100%; text-align:center; line-height:30px; height:30px; padding-bottom:20px; color:#666; float:left}
+.userInfo .itit{ color:#077DFF; float:left; font-size:16px; line-height:24px; padding:0 0 7px 15px}
+.userInfo .input{ width:250px; height:38px; float:left; border:1px solid #B6b6b6; padding:0 10px; border-radius:5px; margin:0 0 15px 15px; background-color:#fff}
+.userInfo .input input{ width:250px; height:28px; line-height:28px; padding:0; font-size:16px; margin-top:5px; border:none; float:left}
+.userInfo .i_btn{ width:300px; float:left; border-top:1px solid #C1C1C1; margin-top:19px}
+.userInfo .i_btn a{ width:149px; height:58px; color:#007AFF; text-align:center; line-height:58px; font-size:16px; float:left}
+.userInfo .i_btn .bo_r{ border-right:1px solid #C1C1C1}
+
+.share{ width:180px; height:150px; float:right; background-position:0 -4400px; margin:10px 15px 0 0}

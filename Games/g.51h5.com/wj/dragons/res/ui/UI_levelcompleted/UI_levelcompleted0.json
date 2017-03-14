@@ -1,0 +1,132 @@
+{"frames": [
+
+{
+	"filename": "lc_bg.png",
+	"frame": {"x":2,"y":2,"w":500,"h":500},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":500,"h":500},
+	"sourceSize": {"w":500,"h":500}
+},
+{
+	"filename": "lc_brillo_bg.png",
+	"frame": {"x":906,"y":2,"w":333,"h":329},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":333,"h":329},
+	"sourceSize": {"w":333,"h":329}
+},
+{
+	"filename": "lc_button_menu.png",
+	"frame": {"x":1423,"y":184,"w":150,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":150,"h":150},
+	"sourceSize": {"w":150,"h":150}
+},
+{
+	"filename": "lc_button_menu_press.png",
+	"frame": {"x":1575,"y":184,"w":150,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":150,"h":150},
+	"sourceSize": {"w":150,"h":150}
+},
+{
+	"filename": "lc_button_next.png",
+	"frame": {"x":1423,"y":336,"w":150,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":150,"h":150},
+	"sourceSize": {"w":150,"h":150}
+},
+{
+	"filename": "lc_button_next_press.png",
+	"frame": {"x":1575,"y":336,"w":150,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":150,"h":150},
+	"sourceSize": {"w":150,"h":150}
+},
+{
+	"filename": "lc_button_replay.png",
+	"frame": {"x":868,"y":333,"w":150,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":150,"h":150},
+	"sourceSize": {"w":150,"h":150}
+},
+{
+	"filename": "lc_button_replay_press.png",
+	"frame": {"x":1020,"y":333,"w":150,"h":150},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":150,"h":150},
+	"sourceSize": {"w":150,"h":150}
+},
+{
+	"filename": "lc_star_buttom_center.png",
+	"frame": {"x":504,"y":277,"w":180,"h":180},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":180,"h":180},
+	"sourceSize": {"w":180,"h":180}
+},
+{
+	"filename": "lc_star_buttom_left.png",
+	"frame": {"x":686,"y":277,"w":180,"h":180},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":180,"h":180},
+	"sourceSize": {"w":180,"h":180}
+},
+{
+	"filename": "lc_star_buttom_right.png",
+	"frame": {"x":1241,"y":2,"w":180,"h":180},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":180,"h":180},
+	"sourceSize": {"w":180,"h":180}
+},
+{
+	"filename": "lc_star_center.png",
+	"frame": {"x":1423,"y":2,"w":180,"h":180},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":180,"h":180},
+	"sourceSize": {"w":180,"h":180}
+},
+{
+	"filename": "lc_star_left.png",
+	"frame": {"x":1605,"y":2,"w":180,"h":180},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":180,"h":180},
+	"sourceSize": {"w":180,"h":180}
+},
+{
+	"filename": "lc_star_right.png",
+	"frame": {"x":1241,"y":184,"w":180,"h":180},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":180,"h":180},
+	"sourceSize": {"w":180,"h":180}
+},
+{
+	"filename": "lc_top_bg.png",
+	"frame": {"x":504,"y":2,"w":400,"h":273},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":273},
+	"sourceSize": {"w":400,"h":273}
+}],
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "UI_levelcompleted0.png",
+	"format": "RGBA8888",
+	"size": {"w":1787,"h":504},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:c454ed9799a30a888fa70dac5c3e0ba3:16009bbf77e6f0993ccb4c44a700d900:16eb5c4eb21818aedc86e2810c4adee9$"
+}
+}

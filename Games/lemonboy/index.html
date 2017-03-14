@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>柠檬小子DEMO</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi" />
+    <link rel="icon" type="image/GIF" href="res/favicon.ico"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="full-screen" content="yes"/>
+    <meta name="screen-orientation" content="portrait"/>
+    <meta name="x5-fullscreen" content="true"/>
+    <meta name="360-fullscreen" content="true"/>
+    <link rel="stylesheet"  href="res/css/css.css">
+    <style>
+        body, canvas, div {
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            -khtml-user-select: none;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+    </style>
+    <script src="watercover.min.js"></script>
+</head>
+<body style="text-align: center; padding:0; margin: 0; background: #000;">
+<div style="position:absolute;top:0;left: 0; width: 100%;height: 100%;overflow: hidden;pointer-events: none;">
+<div id="ls_hmtl">
+    <audio id="ls_audio1" src=""  style="display:none"> </audio>
+    <audio id="ls_audio2" src=""   style="display:none"> </audio>
+    <audio id="ls_audio3" src=""   style="display:none"> </audio>
+
+    <span class="ls_audioDiv ls_p R_anims2" style="display: none" data-ls_key="0"><img src="./res/png/home/music_on.png"></span>
+    <div id="ls_share"> <div></div></div>
+    <div id="r_list"> <div class="r_listText"> <div class="close"></div> <div id="r_lt2">    <div class="ls_scroll">  </div>      </div> </div></div>
+    <div id="GameDescription"> <div class="game_d"><div></div></div></div>
+
+</div>
+</div>
+<canvas id="gameCanvas" width="640" height="960"></canvas>
+
+<script cocos src="game.min.js"></script>
+</body>
+</html>

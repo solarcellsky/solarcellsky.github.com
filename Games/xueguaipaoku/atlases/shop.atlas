@@ -1,0 +1,69 @@
+
+shop.png
+size: 2048,2048
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+back
+  rotate: false
+  xy: 4, 140
+  size: 1413, 1885
+  orig: 1413, 1885
+  offset: 0, 0
+  index: -1
+buy_off
+  rotate: false
+  xy: 524, 25
+  size: 335, 107
+  orig: 335, 107
+  offset: 0, 0
+  index: -1
+buy_on
+  rotate: false
+  xy: 867, 25
+  size: 335, 107
+  orig: 335, 107
+  offset: 0, 0
+  index: -1
+coins
+  rotate: false
+  xy: 1425, 1769
+  size: 512, 256
+  orig: 512, 256
+  offset: 0, 0
+  index: -1
+cost
+  rotate: false
+  xy: 4, 4
+  size: 512, 128
+  orig: 512, 128
+  offset: 0, 0
+  index: -1
+count
+  rotate: false
+  xy: 1425, 1633
+  size: 512, 128
+  orig: 512, 128
+  offset: 0, 0
+  index: -1
+count_bg
+  rotate: false
+  xy: 1945, 1928
+  size: 96, 97
+  orig: 96, 97
+  offset: 0, 0
+  index: -1
+fade
+  rotate: false
+  xy: 1425, 1364
+  size: 12, 12
+  orig: 12, 12
+  offset: 0, 0
+  index: -1
+ok
+  rotate: false
+  xy: 1425, 1384
+  size: 241, 241
+  orig: 241, 241
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,12 @@
+{"file":"s-sign.png","frames":{
+"sign_bg":{"x":1,"y":770,"w":357,"h":71,"offX":0,"offY":0,"sourceW":357,"sourceH":71},
+"sign_border":{"x":360,"y":770,"w":234,"h":69,"offX":0,"offY":0,"sourceW":234,"sourceH":69},
+"sign_done":{"x":1,"y":1,"w":445,"h":580,"offX":0,"offY":0,"sourceW":445,"sourceH":580},
+"sign_drop":{"x":537,"y":841,"w":21,"h":21,"offX":0,"offY":0,"sourceW":21,"sourceH":21},
+"sign_footer":{"x":1,"y":704,"w":640,"h":64,"offX":0,"offY":0,"sourceW":640,"sourceH":64},
+"sign_getcode":{"x":765,"y":824,"w":170,"h":49,"offX":0,"offY":0,"sourceW":170,"sourceH":49},
+"sign_head":{"x":1,"y":583,"w":640,"h":119,"offX":0,"offY":0,"sourceW":640,"sourceH":119},
+"sign_name":{"x":360,"y":841,"w":175,"h":45,"offX":0,"offY":0,"sourceW":175,"sourceH":45},
+"sign_ok":{"x":596,"y":840,"w":89,"h":44,"offX":0,"offY":0,"sourceW":89,"sourceH":44},
+"sign_reg":{"x":596,"y":770,"w":167,"h":68,"offX":0,"offY":0,"sourceW":167,"sourceH":68},
+"sign_tel":{"x":765,"y":770,"w":172,"h":52,"offX":0,"offY":0,"sourceW":172,"sourceH":52}}}

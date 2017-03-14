@@ -1,0 +1,306 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta name="robots" content="none" />
+    <meta name="viewport" id="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>我们约饭吧</title>
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+    <style type="text/css">
+    .wrap {
+        padding-bottom: 62px;
+    }
+    
+    .float_a_d {
+        position: fixed;
+        z-index: 102;
+        width: 45px;
+        right: 20px;
+        top: 209px;
+    }
+    
+    .float_a_d img {
+        width: 100%;
+    }
+    
+    .a_d {
+        position: fixed;
+        bottom: 0;
+        z-index: 100;
+        width: 100%;
+        height: 50px;
+        background: rgba(0, 0, 0, .8);
+    }
+    
+    .a_d_box {
+        overflow: hidden;
+    }
+    
+    .a_d_pic {
+        width: 28px;
+        height: auto;
+        float: left;
+        margin-top: 8px;
+        margin-left: 10px;
+    }
+    
+    .a_d_link {
+        float: right;
+        color: #fff;
+        padding: 0 14px;
+        line-height: 26px;
+        text-align: center;
+        background: #ff3333;
+        display: block;
+        margin-top: 12px;
+        margin-right: 10px;
+        border-radius: 4px;
+    }
+    
+    .a_d_txt {
+        color: #fff;
+        line-height: 50px;
+        margin: 0 50px 0 46px;
+        letter-spacing: 0.5px;
+    }
+    </style>
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?373afb8e001721b0730c88f55fbf4b14";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+    <script src="http://f.shiyi11.com/ui/js/common/jquery-1.8.3.min.js"></script>
+</head>
+
+<body>
+    <div class="wrap rel">
+        <img src="http://wx.qlogo.cn/mmopen/ajNVdqHZLLCjT7Wu4jBJWTBrAkeJ5ZrGQVhCictekQxXMia4siaicMDHZLd3qrQYJ9wCalCCdQFyOvARjpXibaUlpBw/0" style="left:-3000px;position: absolute;">
+        <img src="assets/share_logo.jpg" style="left:-3000px;position: absolute;">
+        <div class="progress_warp mcenter rel">
+            <div class="progress_line_bg abscenter">
+                <div class="progress"></div>
+            </div>
+            <div class="progress_label rel dbox">
+                <span><em class="on">1</em></span>
+                <span><em>2</em></span>
+                <span><em>3</em></span>
+                <span><em>4</em></span>
+                <span><em>5</em></span>
+                <span><em>6</em></span>
+                <span><em>7</em></span>
+                <span><em>8</em></span>
+                <span><em>9</em></span>
+                <span><em>10</em></span>
+            </div>
+        </div>
+        <div class="question_wrap mcenter rel">
+            <div class="question_pic rel">
+                <img src="assets/dot.gif">
+                <div class="skip abs">换一题</div>
+            </div>
+            <p class="question"></p>
+        </div>
+        <div class="answer mcenter">
+            <ul></ul>
+        </div>
+        <div style="display:none">
+            <form id="submitForm" name="submitForm" action="http://sh65.weileiba.cn/topic/wx201601180.html?step=2" method="post">
+                <div style="display:none">
+                    <input type="hidden" value="ZmMzYmZkNGM5MDJlZTY2ZDNjOWJiNTNjOWQzNDc1OTQ2NGNiNzQyMQ==" name="_sh_token_" />
+                </div>
+                <input type="hidden" id="qa_content" name="qa_content">
+            </form>
+        </div>
+        <script type="text/javascript">
+        var questions = [{
+            'id': '1',
+            'title': '我平常偏好哪种口味？',
+            'answers': ["酸", "咸", "辣", "甜", "清淡"]
+        }, {
+            'id': '2',
+            'title': '下雪天会去吃啤酒炸鸡吗？',
+            'answers': ["会", "不会"]
+        }, {
+            'id': '3',
+            'title': '最擅长哪种烹饪方式？',
+            'answers': ["蒸", "炒", "焖", "不会做饭"]
+        }, {
+            'id': '4',
+            'title': '觉得自己的厨艺怎么样？',
+            'answers': ["只擅长吃", "会做一些家常菜", "吃过我做的菜，都会爱上我"]
+        }, {
+            'id': '5',
+            'title': '吃饭时我一般在什么时候喝汤？',
+            'answers': ["饭前喝汤，先暖一下胃", "饭后喝汤，漱漱口", "边吃饭边喝汤"]
+        }, {
+            'id': '6',
+            'title': '我最喜欢吃的火锅锅底是？',
+            'answers': ["清汤", "红汤", "鸳鸯", "番茄", "都不是"]
+        }, {
+            'id': '7',
+            'title': '涮火锅时我喜欢的荤素搭配是？',
+            'answers': ["蔬菜多荤菜少", "全荤", "全素", "各占一半"]
+        }, {
+            'id': '8',
+            'title': '能忍受别人在火锅里放自己不爱吃的食物吗？',
+            'answers': ["能", "不能", "可以涮但必须在我吃完之后"]
+        }, {
+            'id': '9',
+            'title': '会因为就餐环境而影响食欲吗？',
+            'answers': ["会，环境太脏吃不下去", "不会，味道才是王道绝不受外界干扰"]
+        }, {
+            'id': '10',
+            'title': '对吃饭地点有什么要求？',
+            'answers': ["邻近地铁口或交通方便比较好认的地点", "方便停车", "无所谓"]
+        }, {
+            'id': '11',
+            'title': '喜欢在包里放什么零食？',
+            'answers': ["饼干", "糖果", "饮品", "不放零食"]
+        }, {
+            'id': '12',
+            'title': '冬天最爱喝什么？',
+            'answers': ["咖啡", "奶茶", "蜂蜜水", "茶", "开水"]
+        }, {
+            'id': '13',
+            'title': '最喜欢喝什么茶？',
+            'answers': ["花茶", "绿茶", "红茶"]
+        }, {
+            'id': '14',
+            'title': '喝咖啡习惯加糖吗？',
+            'answers': ["加糖", "不加", "不喝咖啡"]
+        }, {
+            'id': '15',
+            'title': '冬季水果里我最爱的是什么？',
+            'answers': ["桔子", "甘蔗", "柚子", "青枣", "以上都没有"]
+        }, {
+            'id': '16',
+            'title': '我对吃狗肉的态度是？',
+            'answers': ["反对", "不反对"]
+        }, {
+            'id': '17',
+            'title': '我最喜欢吃哪国菜？',
+            'answers': ["中国菜", "日本料理", "泰国菜", "法国菜", "其他"]
+        }, {
+            'id': '18',
+            'title': '我最受不了什么味道？',
+            'answers': ["汽油味", "油漆味", "口臭味", "食物放坏的味道", "其他"]
+        }, {
+            'id': '19',
+            'title': '我喝酸奶舔不舔酸奶盖？',
+            'answers': ["每次都舔", "从来不舔"]
+        }, {
+            'id': '20',
+            'title': '会在冬天吃冰淇淋吗？',
+            'answers': ["会", "不会", "其他"]
+        }, ];
+
+        var userAnswers = [];
+        var answeredQuestionId = null;
+        var randomId;
+        var dNum = 0;
+        var flag = 0;
+
+        $(function() { //入口函数开始     
+
+            //获取随机题目
+            function getRandomQuestion() {
+                if (answeredQuestionId != null) {
+                    questions.splice(answeredQuestionId, 1);
+                    answeredQuestionId = null;
+                }
+
+                //获取随机id
+                randomId = getRandomId(randomId);
+                return questions[randomId];
+            }
+
+            function getRandomId(newRandomId) {
+                //获取随机id
+                var rid = parseInt(Math.random() * (questions.length));
+                if (newRandomId == rid) return getRandomId(rid);
+
+                return rid;
+            }
+
+            function genarateQuestionHtml(currentQuestion) {
+                $('.question_pic img').attr('src', 'assets/' + currentQuestion.id + '.jpg');
+                $('.question').html(currentQuestion.title);
+
+                var answersHtml = '';
+                $.each(currentQuestion.answers, function(id, answer) {
+                    answersHtml += '<li data-qid="' + currentQuestion.id + '" data-aid="' + id + '" id="be-wxgame1222-tm' + currentQuestion.id + '">' + answer + '</li>';
+                });
+                $('.answer ul').html(answersHtml);
+                $('.answer li').bind('click', function() {
+                    $('.answer li').unbind();
+                    nextFn(this);
+                    //_hmt.push(['_trackEvent', 'nav', 'click', 'literature']);
+                });
+            }
+
+            function changeFn() { //换一题随机封装函数开始
+                var currentQuestion = getRandomQuestion();
+                $('.wrap').fadeOut(300);
+                var timer = null;
+                clearTimeout(timer);
+                timer = setTimeout(function() {
+                    genarateQuestionHtml(currentQuestion);
+                }, 300);
+                $('.wrap').fadeIn(300);
+            }
+
+            function nextFn(_this) { //下一题封装函数开始
+                var qid = parseInt($(_this).attr('data-qid'));
+                var aid = parseInt($(_this).attr('data-aid'));
+                userAnswers.push(qid + '_' + aid);
+                $(_this).addClass('on');
+
+                dNum++;
+                var myWidth = 11 * dNum;
+
+                //console.log(userAnswers.join("|"));
+
+                if (dNum >= 10) {
+                    $(_this).removeClass('on');
+                    //submit userAnswers
+                    $("#qa_content").val(userAnswers.join("|"));
+                    $("#submitForm").submit();
+                } else {
+                    setTimeout(function() {
+                        $('.progress_label em').eq(dNum).addClass('on');
+                        $('.progress').css('width', myWidth + '%');
+                    }, 300)
+
+                    //change question
+                    answeredQuestionId = randomId;
+                    changeFn();
+                }
+            }
+
+            //init question
+            $('.skip').click(function() {
+                if (flag == 0) {
+                    flag = 1;
+                    changeFn();
+                    setTimeout(function() {
+                        flag = 0;
+                    }, 600)
+                }
+            })
+
+            var currentQuestion = getRandomQuestion();
+            genarateQuestionHtml(currentQuestion);
+        });
+        </script>
+    </div>
+</body>
+
+</html>

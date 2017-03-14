@@ -1,0 +1,154 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+<title>68微游戏 - 404</title>
+<style>
+*{ margin:0px; padding:0px; list-style:none;}
+.right{ float:right;}
+.clear{ clear:both;}
+.block{ display:block;}
+.hide{ display:none;}
+body{ font-family:"Arial, Helvetica, "Microsoft Yahei", "微软雅黑", STXihei, "华文细黑", sans-serif;";  background:#3a3b3f;}
+/*错误提示*/
+.error{
+	 width:100%;
+	 max-width:640px;
+	 margin:auto;
+	 background:#fffefc;
+	 position:relative;
+
+}
+
+.error .error1 {
+	width:52.5%;
+	margin:auto;	
+	
+	}
+.error .error1  img{
+	width:100%;
+	height:auto;
+	}
+.error .error2{
+	width:95%;
+	margin:auto;
+	margin-top:5%;
+	color:#525353;
+	font-size:17pt;
+	text-indent:5%;
+	word-break:break-all;
+	word-wrap:break-word;
+	}
+.error .error2 a{
+	color:#d4566e;
+	}
+.error .error3{ 
+    width:41.5%;
+	margin:auto;
+	margin-top:5%;
+	padding-top:2%;
+	padding-bottom:2%;
+	text-align:center;
+	border:1px solid #8bc152;
+	-webkit-border-radius:10px;
+	   -moz-border-radius:10px;
+	        border-radius:10px;
+ }	
+@media screen and (max-width:600px) {
+	.error .error2{
+	      font-size:16pt;
+	}
+}
+	
+@media screen and (max-width:550px) {
+	.error .error2{
+	      font-size:15pt;
+	}
+	}
+	
+@media screen and (max-width:500px) {
+	.error .error2{
+	      font-size:14pt;
+	}
+	}
+	
+
+	 
+@media screen and (max-width:450px) {
+	.error .error2{
+	      font-size:12pt;
+	}
+
+ }
+	 
+	 
+@media screen and (max-width:400px) {
+	
+	 .error .error2{
+	      font-size:10pt;
+	}
+
+}
+		
+ 	 
+ @media screen and (max-width:350px) {
+	.error .error2{
+	      font-size:9pt;
+	}
+
+ }
+	 
+
+</style>
+</head>
+<script>
+window.onload=function(){
+	var client=document.documentElement.clientHeight;
+	var error=document.getElementsByClassName("error")[0];
+	    
+	//alert(client);
+    var error_a=document.getElementsByClassName("error_a")[0];
+    var error_a_h=error_a.offsetHeight;
+		error.style.height=client+'px';
+	    error_a.style.paddingTop=(client-error_a_h)/2.5+'px';
+	   
+	
+	
+	
+   
+}
+
+</script>
+<body>
+<div class="error">
+      <div class="error_a">
+             <div class="error1">
+                     <img src="error.png" width="336" height="267"> 
+             </div>
+             <div class="error2">
+                      小伙伴你迷路了哦，<a href="http://www.play68.com">点击</a>回到小土豆身边吧！
+             </div>
+             <div class="error3">
+             <a href="http://www.play68.com">好吧,去首页<span id='time'>(5)</span></a>
+             </div>
+      </div>
+
+</div>
+<script>
+var node = document.getElementById('time');
+function loop(N){
+	N = N === undefined ? 4 : N;
+	if(N<0){
+		window.location.href = "http://www.play68.com";
+		return;
+	}
+	node.innerHTML = "(" + N + ")";
+	setTimeout(function(){
+		loop(N-1);
+	}, 1000);
+}
+setTimeout(loop, 1000);
+</script>
+</body>
+</html>

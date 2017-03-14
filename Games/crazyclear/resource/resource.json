@@ -1,0 +1,32 @@
+{
+"resources":
+	[
+        {"name":"description","type":"json","url":"config/description.json"},
+
+        {"name":"fontGreen","type":"font","url":"font/font_green.fnt"},
+        {"name":"comboFont","type":"font","url":"font/combo.fnt"},
+
+        {"name":"loadBg","type":"image","url":"load/loadBg.jpg"},
+        {"name":"loadLine","type":"image","url":"load/loadLine.png"},
+        {"name":"loadBar","type":"image","url":"load/loadBar.png"},
+
+        {"name":"buttJson","type":"sheet","url":"butt/butt.json"},
+        {"name":"gameJson","type":"sheet","url":"game/game.json"},
+        {"name":"overJson","type":"sheet","url":"over/over.json"},
+
+        {"name":"upBg","type":"image","url":"game/xiaoguo_01.jpg"},
+        {"name":"downBg","type":"image","url":"game/xiaoguo_02.jpg"},
+
+        {"name":"gameBase","type":"json","url":"meta/base.json"},
+
+        {"name":"bear_png","type":"image","url":"actor/bear.png"},
+        {"name":"bear_skeleton_json","type":"json","url":"actor/bear_skeleton.json"},
+        {"name":"bear_json","type":"json","url":"actor/bear.json"}
+	],
+
+"groups":
+	[
+        {"name":"preload","keys":"buttJson,gameJson,overJson,gameBase,fontGreen,upBg,downBg,bear_png,bear_json,bear_skeleton_json,comboFont"},
+        {"name":"loading","keys":"loadBg,loadLine,loadBar"}
+	]
+}

@@ -1,0 +1,235 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+body{
+	overflow: hidden;
+}
+/* 结束页面 */
+#gameEnd{
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 3000;
+}
+#babyImg{
+	width: 235px;
+	height: 235px;
+	position: absolute;
+	top: 32%;
+	left: 50%;
+	margin-left: -117px;
+	margin-top: -117px;
+}
+#main_end_title{
+	width: 160px;
+	height: 24px;
+	position: absolute;
+	top: 15.5%;
+	left: 50%;
+	margin-left: -80px;
+	margin-top: -12px;
+	font-size: 24px;
+	text-align: center;
+	line-height: 24px;
+}
+#main_end_info{
+	width: 250px;
+	height: 250px;
+	position: absolute;
+	
+	top: 35%;
+	left: 50%;
+	margin-left: -125px;
+	margin-top: -30px;
+}
+#text1{
+	top: 46%;
+	left: 30%;
+}
+#num1{
+	top: 46%;
+	left: 72%;
+}
+#text2{
+	top: 73%;
+	left: 30%;
+}
+#num2{
+	top: 73%;
+	left: 72%;
+}
+#text3{
+	top: 98%;
+	left: 30%;
+	/*border: 1px solid red;*/
+}
+#num3{
+	
+	top: 98%;
+	left: 72%;
+}
+#text1,#num1,#text2,#num2,#text3,#num3{
+	font-size: 26px;
+	text-align: center;
+	line-height: 40px;
+	width: 140px;
+	height: 40px;
+	position: absolute;
+	margin-left: -70px;
+	margin-top: -20px;
+}
+#getFree{
+	width: 270px;
+	height: 96px;
+	margin-left: -135px;
+	margin-top: -48px;
+	position: absolute;
+	top: 76.5%;
+	left: 50%;
+}
+#main_end_left{
+	width: 162px;
+	height: 68px;
+	position: absolute;
+	margin-left: -81px;
+	margin-top: -34px;
+	top: 93%;
+	left: 29%;
+}
+#main_end_right{
+	width: 162px;
+	height: 68px;
+	position: absolute;
+	margin-left: -81px;
+	margin-top: -34px;
+	top: 93%;
+	left: 71%;
+}
+/* 排行榜 */
+#ip{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 101;
+	top: 0;
+	left: 0;
+	display: none;
+}
+
+#ipName{
+	width: 180px;
+	height: 40px;
+	border-radius: 10px;
+	position: absolute;
+	margin-left: -90px;
+	margin-top: -20px;
+	top: 40%;
+	left: 50%;
+}
+#submitBtn{
+	width: 183px;
+	height: 59px;
+	position: absolute;
+	margin-left: -90px;
+	margin-top: -30px;
+	top: 68%;
+	left: 50%;
+}
+#backBtn{
+	width: 183px;
+	height: 59px;
+	position: absolute;
+	margin-left: -90px;
+	margin-top: -30px;
+	top: 80%;
+	left: 50%;
+}
+/* ......... */
+#gamePhb{
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	overflow: hidden;
+}
+#main_phb{
+	width: 300px;
+	height: 350px;
+	position: absolute;
+	margin-left: -150px;
+	margin-top: -175px;
+	top: 53%;
+	left: 50%;
+	list-style: none;
+	overflow: scroll;
+	overflow: auto;
+	overflow-x: hidden;
+}
+#main_phb_li{
+	margin-top: 5px;
+	/*border-bottom:1px blue dashed;*/
+	/*border: 1px solid blue;*/
+}
+#info_1{
+	
+	text-align: center;
+	/*border: 1px solid red;*/
+	width: 20px;
+	height: 25px;
+}
+#info_2{
+	text-align: center;
+	/*border: 1px solid blue;*/
+	width: 60px;
+	height: 25px;
+	position: absolute;
+	left: 120px;
+	overflow:hidden;
+}
+#info_3{
+	/*border: 1px solid blue;*/
+	text-align: center;
+	width: 50px;
+	height: 25px;
+	float: right;
+	margin-right: -0px;
+}
+#info_1,#info_2,#info_3{
+	font-size: 20px;
+}
+#phbclose{
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	margin-left: -25px;
+	margin-top: -25px;
+	top: 15%;
+	left: 93%;
+}
+/* 最后一步哦 */
+#endStay{
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 100;
+}
+/* 领奖成功 */
+#getSuccess{
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 100;
+}

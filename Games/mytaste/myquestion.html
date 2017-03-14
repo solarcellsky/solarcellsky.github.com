@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta name="robots" content="none">
+    <meta name="viewport" id="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>我要出题</title>
+    <link rel="stylesheet" type="text/css" href="css/qa.css">
+    <script>
+    window.onload = function() {
+        function getfont() {
+            var html1 = document.documentElement;
+            var screen = html1.clientWidth;
+            html1.style.fontSize = 0.0625 * screen + 'px';
+        }
+
+        getfont();
+        window.onresize = function() {
+            getfont();
+        }
+    }
+    </script>
+    <script src="js/jquery-1.8.3.min.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="logo">
+            <img src="images/logo_alpha.png">
+        </div>
+        <div class="ctStepTwo content por">
+            <div class="progressBar por">
+                <div class="progressBarLabels xcenter">
+                    <span class="current">1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>4</span>
+                    <span>5</span>
+                    <span>6</span>
+                    <span>7</span>
+                    <span>8</span>
+                    <span>9</span>
+                    <span>10</span>
+                </div>
+                <div class="progressBarBgValidShape ycenter"></div>
+                <div class="progressBarBgInvalidShape xycenter"></div>
+            </div>
+            <div class="question center ctStep02Question">
+                <div class="pic center">
+                    <img src="images/stepPic14.jpg?v12080930">
+                </div>
+                <p>喝咖啡习惯加糖吗？</p>
+                <div class="skip">换一题</div>
+            </div>
+            <div class="answer center">
+                <ul>
+                    <li data-qid="14" data-aid="0">加糖</li>
+                    <li data-qid="14" data-aid="1">不加</li>
+                    <li data-qid="14" data-aid="2">不喝咖啡</li>
+                </ul>
+            </div>
+            <div style="display:none">
+                <form id="submitForm" name="submitForm" action="http://h5.shihuo.me/topic/wx20151022.html?step=2" method="post">
+                    <div style="display:none">
+                        <input type="hidden" value="ZmI4MTgwOWQxZTk0ODYxNjQ3OWJhYjZlYTFlNTAwMDRlOGQ3MmQ2YQ==" name="_sh_token_">
+                    </div>
+                    <input type="hidden" id="qa_content" name="qa_content">
+                </form>
+            </div>
+        </div>
+        <script type="text/javascript">
+        var questions = [{
+            'id': '1',
+            'title': '我平常偏好哪种口味？',
+            'answers': ["酸", "咸", "辣", "甜", "清淡"]
+        }, {
+            'id': '2',
+            'title': '下雪天会去吃啤酒炸鸡吗？',
+            'answers': ["会", "不会"]
+        }, {
+            'id': '3',
+            'title': '最擅长哪种烹饪方式？',
+            'answers': ["蒸", "炒", "焖", "不会做饭"]
+        }, {
+            'id': '4',
+            'title': '觉得自己的厨艺怎么样？',
+            'answers': ["只擅长吃", "会做一些家常菜", "吃过我做的菜，都会爱上我"]
+        }, {
+            'id': '5',
+            'title': '吃饭时我一般在什么时候喝汤？',
+            'answers': ["饭前喝汤，先暖一下胃", "饭后喝汤，漱漱口", "边吃饭边喝汤"]
+        }, {
+            'id': '6',
+            'title': '我最喜欢吃的火锅锅底是？',
+            'answers': ["清汤", "红汤", "鸳鸯", "番茄", "都不是"]
+        }, {
+            'id': '7',
+            'title': '涮火锅时我喜欢的荤素搭配是？',
+            'answers': ["荤菜多蔬菜少", "蔬菜多荤菜少", "全荤", "全素", "各占一半"]
+        }, {
+            'id': '8',
+            'title': '能忍受别人在火锅里放自己不爱吃的食物吗？',
+            'answers': ["能", "不能", "可以涮但必须在我吃完之后"]
+        }, {
+            'id': '9',
+            'title': '会因为就餐环境而影响食欲吗？',
+            'answers': ["会，环境太脏吃不下去", "不会，味道才是王道绝不受外界干扰"]
+        }, {
+            'id': '10',
+            'title': '对吃饭地点有什么要求？',
+            'answers': ["装修浪漫有情调", "邻近地铁口或交通方便比较好认的地点", "方便停车", "无所谓"]
+        }, {
+            'id': '11',
+            'title': '喜欢在包里放什么零食？',
+            'answers': ["饼干", "糖果", "饮品", "不放零食"]
+        }, {
+            'id': '12',
+            'title': '冬天最爱喝什么？',
+            'answers': ["咖啡", "奶茶", "蜂蜜水", "茶", "开水"]
+        }, {
+            'id': '13',
+            'title': '最喜欢喝什么茶？',
+            'answers': ["花茶", "绿茶", "红茶"]
+        }, {
+            'id': '14',
+            'title': '喝咖啡习惯加糖吗？',
+            'answers': ["加糖", "不加", "不喝咖啡"]
+        }, {
+            'id': '15',
+            'title': '冬季水果里我最爱的是什么？',
+            'answers': ["桔子", "甘蔗", "柚子", "青枣", "以上都没有"]
+        }, {
+            'id': '16',
+            'title': '我对吃狗肉的态度是？',
+            'answers': ["反对", "不反对"]
+        }, {
+            'id': '17',
+            'title': '我最喜欢吃哪国菜？',
+            'answers': ["中国菜", "日本料理", "泰国菜", "法国菜", "其他"]
+        }, {
+            'id': '18',
+            'title': '我最受不了什么味道？',
+            'answers': ["汽油味", "油漆味", "口臭味", "食物放坏的味道", "其他"]
+        }, {
+            'id': '19',
+            'title': '我喝酸奶舔不舔酸奶盖？',
+            'answers': ["每次都舔", "从来不舔"]
+        }, {
+            'id': '20',
+            'title': '会在冬天吃冰淇淋吗？',
+            'answers': ["会", "不会", "其他"]
+        }, ];
+
+        var userAnswers = [];
+        var answeredQuestionId = null;
+        var randomId;
+        var dNum = 0;
+
+        $(function() { //入口函数开始   	
+
+            //获取随机题目
+            function getRandomQuestion() {
+                if (answeredQuestionId != null) {
+                    questions.splice(answeredQuestionId, 1);
+                    answeredQuestionId = null;
+                }
+
+                //获取随机id
+                randomId = getRandomId(randomId);
+                return questions[randomId];
+            }
+
+            function getRandomId(newRandomId) {
+                //获取随机id
+                var rid = parseInt(Math.random() * (questions.length));
+                if (newRandomId == rid) return getRandomId(rid);
+
+                return rid;
+            }
+
+            function genarateQuestionHtml(currentQuestion) {
+                $('.question .pic img').attr('src', 'images/stepPic' + currentQuestion.id + '.jpg?v12080930');
+                $('.question p').html(currentQuestion.title);
+
+                var answersHtml = '';
+                $.each(currentQuestion.answers, function(id, answer) {
+                    answersHtml += '<li data-qid="' + currentQuestion.id + '" data-aid="' + id + '">' + answer + '</li>';
+                });
+                $('.answer ul').html(answersHtml);
+                $('.answer li').bind('click', function() {
+                    nextFn(this);
+                });
+            }
+
+            function changeFn() { //换一题随机封装函数开始
+                var currentQuestion = getRandomQuestion();
+                $('.wrap').fadeOut(500);
+                var timer = null;
+                clearTimeout(timer);
+                timer = setTimeout(function() {
+                    genarateQuestionHtml(currentQuestion);
+                }, 500);
+                $('.wrap').fadeIn(500);
+            }
+
+            function nextFn(_this) { //下一题封装函数开始
+                var qid = parseInt($(_this).attr('data-qid'));
+                var aid = parseInt($(_this).attr('data-aid'));
+                userAnswers.push(qid + '_' + aid);
+                $(_this).addClass('current');
+
+                dNum++;
+                var myWidth = 1.5 * dNum;
+                if (dNum >= 10) {
+                    $(_this).removeClass('current');
+
+                    //submit userAnswers
+                    $("#qa_content").val(userAnswers.join("|"));
+                    $("#submitForm").submit();
+                } else {
+                    setTimeout(function() {
+                        $('.progressBarLabels span').eq(dNum).addClass('current');
+                        $('.progressBarBgValidShape').css('width', myWidth + 'rem');
+                    }, 500)
+
+                    //change question
+                    answeredQuestionId = randomId;
+                    changeFn();
+                }
+            }
+
+            //init question
+            $('.skip').bind('click', changeFn);
+            var currentQuestion = getRandomQuestion();
+            genarateQuestionHtml(currentQuestion);
+        });
+        </script>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+{
+"resources":
+	[
+        {"name":"bg_jpg","type":"image","url":"assets/bg.jpg"},
+        {"name":"bg2_png","type":"image","url":"assets/bg2.png"},
+
+        {"name":"tip_png","type":"image","url":"assets/tip.png"},
+        {"name":"s1_png","type":"image","url":"assets/s1.png"},
+        {"name":"s2_png","type":"image","url":"assets/s2.png"},
+        {"name":"miao_png","type":"image","url":"assets/miao.png"},
+        {"name":"gameover_png","type":"image","url":"assets/gameover.jpg"},
+
+
+        {"name":"start_btn_png","type":"image",	"url":"assets/start_btn.png"},
+
+        {"name":"qq_btn_png","type":"image", "url":"assets/qq_btn.png"},
+        {"name":"replay_btn_png","type":"image",	"url":"assets/replay_btn.png"},
+        {"name":"share_btn_png","type":"image",	"url":"assets/share_btn.png"},
+
+        {"name":"btn_png","type":"image",	"url":"assets/btn.png"},
+        {"name":"ge_png","type":"image",	"url":"assets/ge.png"},
+        {"name":"tip2_png","type":"image",	"url":"assets/tip2.png"},
+        {"name":"logo_png","type":"image",	"url":"assets/logo.png"},
+
+        {"name":"icon1_png","type":"image",	"url":"assets/icon1.png"},
+        {"name":"icon2_png","type":"image",	"url":"assets/icon2.png"},
+        {"name":"icon3_png","type":"image",	"url":"assets/icon3.png"},
+
+        {"name":"hong1_png","type":"image",	"url":"assets/hong1.png"},
+        {"name":"hong2_png","type":"image",	"url":"assets/hong2.png"},
+
+        {"name":"anniu_png","type":"image","url":"assets/anniu.png"},
+        {"name":"anniu_json","type":"json","url":"assets/anniu.json"},
+
+        {"name":"anniu_png","type":"image","url":"assets/anniu.png"},
+        {"name":"anniu_json","type":"json","url":"assets/anniu.json"},
+
+        {"name":"numberText_png","type":"image",	"url":"assets/numberText.png"},
+        {"name":"numberText_json","type":"json",	"url":"assets/numberText.json"},
+
+        {"name":"numberText2_png","type":"image",	"url":"assets/numberText2.png"},
+        {"name":"numberText2_json","type":"json",	"url":"assets/numberText2.json"},
+
+        {"name":"bgSound","type":"sound"," soundType":"music",	"url":"assets/bgSound.mp3"},
+
+        {"name":"homepage_jpg","type":"image",	"url":"assets/homepage.jpg"}
+	],
+
+"groups":
+	[
+        {"name":"preload","keys":"bgSound,hong1_png,hong2_png,bg2_png,icon1_png,icon2_png,icon3_png,logo_png,gameover_png,miao_png,s1_png,s2_png,numberText2_png,numberText2_json,numberText_png,numberText_json,ge_png,tip2_png,anniu_png,anniu_json,btn_png,bg_jpg,tip_png,start_btn_png,replay_btn_png,qq_btn_png,share_btn_png,homepage_jpg"}
+	]
+}

@@ -1,0 +1,38 @@
+body{ background:#fff; font:12px arial, "Microsoft Yahei", "Hiragino Sans GB", sans-serif}
+body, ul, li, h1, h2, h3, h4, h5, h6, p, th, td, dl, dt, dd{ margin:0; padding:0; font-weight:normal; font-style:normal}
+table, h1, h2, h3, h4, h5, h6{ font-size:12px}
+ul, li, dl, dt, dd{ list-style-type:none}
+table{ border-collapse:collapse; border-spacing:0; border:0}
+img{ border:none; vertical-align:bottom}
+a, button{ cursor:pointer}
+*:focus { outline: none}
+
+.html_hidden{ height:100%; overflow:hidden}
+
+a:link{ text-decoration:none}
+a:visited{ text-decoration:none}
+a:hover{ text-decoration:none}
+a:active{ text-decoration:none}
+
+.font_14{ font-size:14px}
+.font_16{ font-size:16px}
+.font_20{ font-size:20px}
+.font_26{ font-size:26px}
+.font_32{ font-size:32px}
+.fw_b{ font-weight:bold}
+
+.co_red{ color:#F00}
+.co_or{ color:#F60}
+.co_999{ color:#999}
+.co_666{ color:#666}
+
+.f_l{ float:left}
+.f_r{ float:right}
+.ta_l{ text-align:left}
+.ta_c{ text-align:center}
+.ta_r{ text-align:right}
+.dp_n{ display:none}
+.clear{ clear:both}
+
+.plr_20{ padding-left:20px; padding-right:20px}
+.pt_10{ padding-top:10px}

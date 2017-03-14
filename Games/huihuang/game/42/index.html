@@ -1,0 +1,494 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/lift.css" />
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/linkzpUrl.js"></script>
+    <script src="../../js/linkbaiduUrl.js"></script>
+    <script src="../../js/jump.js"></script>
+    <script>
+    var ansNum = 9;
+
+    function getString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return decodeURIComponent(r[2]);
+        return ""
+    }
+
+    function getQueryString(name) {
+        var str4 = new Array();
+        var str3 = null;
+        var str2 = window.location.href;
+        var str = new Array();
+        str = str2.split("/");
+        if (str[4] != "") {
+            str4 = str[4].split("_")
+        }
+        if (name == "url") {
+            str3 = str[3] + "/" + str[4] + "/";
+        }
+        return str3
+    }
+
+    function getNum(str) {
+        resNum = 1;
+        if (str != "") {
+            var d = 0;
+            for (var a = 0; a < str.length; a++) {
+                d = d + str.charCodeAt(a);
+            }
+            d = (d % ansNum) + 1;
+            resNum = d;
+        }
+        return resNum;
+    }
+
+    function randomString(len) {
+        len = len;
+        var $chars = 'abcdefhijkmnprstwxyz';
+        var maxPos = $chars.length;
+        var pwd = '';
+        for (i = 0; i < len; i++) {
+            pwd += $chars.charAt(Math.floor(Math.random() * maxPos))
+        }
+        return pwd
+    }
+    var strName = "v" + randomString(4);
+    if (getString("from") != "") {
+        var timeNum = Date.parse(new Date());
+        timeNum = timeNum.toString();
+        timeNum = timeNum.substr(0, 10);
+        var newUrl = getQueryString('url').replace("/result", "");
+        location.href = linkUrl + newUrl + "?username=" + getString("username");
+        //location.href = jumpUrl + "weicount/jump.html?url=" +newUrl+ "&username=" + getString("username");
+    }
+    var modal = 0;
+    var userName = getString("username");
+    if (userName == "") {
+        userName = '\u4f60';
+        modal = 1;
+
+    } else {
+        modal = 0;
+    }
+    var result = ["", "\u88ab\u5f02\u6027\u8868\u767d", "\u88ab\u540c\u6027\u8868\u767d", "\u88ab\u5305\u517b", "\u88ab\u6697\u604b", "\u5347\u804c\u52a0\u85aa", "\u76f8\u4eb2\u6210\u529f", "\u9047\u5230\u771f\u7231", "\u8273\u9047", "\u6027\u53d6\u5411\u8d8b\u5411\u6b63\u5e38"];
+    var num = getNum(userName); //结果id
+    if (modal == 1) {
+        var title = "\u4e0b\u534a\u5e74\u4f60\u7684\u610f\u5916\u4e4b\u559c\u662f...?";
+    } else {
+        var title = "-name-\u4e0b\u534a\u5e74\u7684\u610f\u5916\u4e4b\u559c\u662f-info-";
+        title = title.replace("-name-", userName);
+        title = title.replace("-info-", result[num]);
+    }
+    var count = 42; //测试id
+    var resultTitle = "-name-\u4e0b\u534a\u5e74\u7684\u610f\u5916\u4e4b\u559c\u662f";
+    resultTitle = resultTitle.replace("-name-", userName);
+    var desArray = ["", "\u666e\u666e\u901a\u901a\u4e5f\u662f\u5e78\u798f\u3002", "\u8fd9\uff0c\u770b\u4f60\u7684\u54af......", "\u543c\u543c\uff0c\u4ece\u6b64\u751f\u6d3b\u65e0\u5fe7\uff01\uff01", "\u5440\uff0c\u4f60\u7684\u9b45\u529b\u5982\u6b64\u4e4b\u5927\uff01\uff01", "\u55ef\uff0c\u52aa\u529b\u5de5\u4f5c\u7684\u5fc5\u7136\u7ed3\u679c\u3002", "\u54c8\uff0c\u627e\u5230\u53e6\u4e00\u534a\u3002", "\u606d\u559c\u606d\u559c\uff0c\u771f\u6b63\u7684\u559c\u4e8b\uff0c\u591a\u5c11\u4eba\u5bfb\u89c5\u4e00\u8f88\u5b50\u672a\u679c\u3002", "\u561b\uff0c\u5076\u5c14\u4e3a\u751f\u6d3b\u6dfb\u52a0\u4e00\u70b9\u6fc0\u60c5\u3002", "\u989d\uff0c\u53ef\u559c\u53ef\u8d3a......"];
+    Date.prototype.format = function(format) {
+        var o = {
+            "M+": this.getMonth() + 1, //month 
+            "d+": this.getDate(), //day 
+            "h+": this.getHours(), //hour 
+            "m+": this.getMinutes(), //minute 
+            "s+": this.getSeconds(), //second 
+            "q+": Math.floor((this.getMonth() + 3) / 3), //quarter 
+            "S": this.getMilliseconds() //millisecond 
+        }
+        if (/(y+)/.test(format)) {
+            format = format.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+        }
+        for (var k in o) {
+            if (new RegExp("(" + k + ")").test(format)) {
+                format = format.replace(RegExp.$1, RegExp.$1.length == 1 ? o[k] : ("00" + o[k]).substr(("" + o[k]).length));
+            }
+        }
+        return format;
+    }
+    var now = new Date();
+    var nowTime = now.format("yyyy.MM.d");
+    var boxTitle = "\u4e0b\u534a\u5e74\u4f60\u7684\u610f\u5916\u4e4b\u559c\u662f...?";
+    var desStr = "\u4eca\u5e74\u4e0b\u534a\u5e74\uff0c\u5feb\u6765\u770b\u770b\u4f60\u4f1a\u6709\u4ec0\u4e48\u610f\u5916\u4e4b\u559c\uff01";
+    </script>
+    <script>
+    if (modal == 1) {
+        document.write("<title>" + title + "</title>");
+    } else {
+        document.write("<title>" + title + "</title>");
+    }
+    </script>
+</head>
+<div style="display:none;">
+    <script>
+    document.write('<img src="../../images/' + count + '/' + num + '.jpg?v=2.0">');
+    </script>
+</div>
+
+<body>
+    <style type="text/css">
+    .navbar {
+        margin-bottom: 30px;
+    }
+    
+    .navbar a i {
+        color: #FF5C61;
+    }
+    
+    .navbar a.btn {
+        background: #FF5C61;
+        border: none;
+        font-weight: bold;
+        color: #fff;
+        margin-right: 10px;
+        margin-top: 10px;
+        border-radius: 3px;
+    }
+    </style>
+    <div id="content_page" style="display: block;">
+        <div class="t_img container text-center">
+            <script>
+            document.write('<img src="../../images/' + count + '/' + num + '.jpg" class="img-circle" width="216" height="216" style="margin-top: 30px;"/>');
+            </script>
+        </div>
+        <div class="yuyan container text-center">
+            <div class="yuyan_title">
+                <h1>
+                    <strong>        
+                        <script>
+                            if(result!=""){
+                                document.write(result[num]);
+                            }
+                        </script>
+                    </strong>
+                </h1>
+                <p class="text-muted small">
+                    <script>
+                    document.write(resultTitle);
+                    </script>
+                </p>
+            </div>
+            <!-- E yuyan_title -->
+            <div class="yuyan_des">
+                <p>
+                    <script>
+                    if (desArray != "") {
+                        if (desArray instanceof Array) {
+                            document.write(desArray[num]);
+                        } else {
+                            document.write(desArray);
+                        }
+                    }
+                    </script>
+                </p>
+            </div>
+            <!-- E yuyan_des -->
+        </div>
+        <div class="who container text-center">
+            <p class="text-muted small">
+                <script>
+                document.write(userName);
+                </script>
+            </p>
+            <p class="text-muted small">
+                <script>
+                document.write(nowTime);
+                </script>
+            </p>
+        </div>
+        <!-- E who -->
+        <div class="buttons text-center container">
+            <a href="javascript:;" data-toggle="modal" data-target="#myModal" class="btn btn-default" id="aa"><strong>看看我的</strong></a>
+        </div>
+        <!-- E buttons -->
+    </div>
+    <!-- E content -->
+    <style type="text/css">
+    #content_page .buttons a.btn-default {
+        background: #F8E71C;
+        border-color: #F8E71C;
+        color: #393233;
+    }
+    
+    .ad {
+        padding-bottom: 0px;
+    }
+    
+    .ad a {
+        display: inline-block;
+        width: 100%;
+        height: 49px;
+        line-height: 49px;
+        text-align: center;
+        margin-top: 0px;
+        background: #555
+    }
+    
+    .ad a .h4 {
+        font-size: 16px;
+        color: #fff;
+        font-weight: bold;
+        display: block;
+        text-align: left;
+        margin-left: 10px
+    }
+    
+    .ad a small {
+        font-size: 16px;
+        color: #aaa;
+        border-top: 1px solid rgba(255, 255, 255, 0.8);
+        padding-top: 4px;
+    }
+    
+    .yuyan_index h1 {
+        font-size: 30px;
+    }
+    
+    .yuyan_index .t_img img {
+        height: 216px;
+        height: 216px;
+        margin-top: 30px;
+    }
+    
+    .yuyan_des {
+        margin-bottom: 20px;
+        margin-top: 20px;
+        padding: 0 20px;
+        font-weight: bold;
+    }
+    
+    .yuyan_title h1 {
+        margin-bottom: 5px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid #2B2B2B;
+        display: inline-block;
+    }
+    
+    .who a {
+        display: block;
+        margin-bottom: 5px;
+    }
+    
+    .who p {
+        margin: 0;
+    }
+    </style>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title text-center" id="myModalLabel">
+                        <script>
+                            document.write(boxTitle);
+                        </script>
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <script>
+                    document.write('<form class="form" action="result.html" onSubmit="return checkSubmit();">');
+                    </script>
+                    <p class="iii">
+                        <script>
+                        document.write(desStr);
+                        </script>
+                    </p>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-addon bold">姓名</div>
+                            <input type="text" class="form-control input-lg" id="content1" name="username" placeholder="在此输入..." autocorrect="off" />
+                        </div>
+                    </div>
+                    </form>
+                </div>
+                <div class="modal-footer text-center">
+                    <button type="button" class="btn btn-lg btn-primary" id="analysis_btn">完工，开始分析！</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- E myModal -->
+    <style type="text/css">
+    #myModal {
+        padding-top: 30px;
+    }
+    
+    #myModal button.close {
+        background: rgba(255, 255, 255, 0.2);
+        position: absolute;
+        border: 0;
+        right: 0;
+        top: 2px;
+        color: #fff !important;
+        padding: 10px 20px;
+        border-radius: 0 5px 0 5px;
+        opacity: 1
+    }
+    
+    #myModal button.close span {
+        color: #fff !important;
+    }
+    
+    #myModal .iii {
+        padding-top: 10px;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 1.5;
+        margin-bottom: 15px;
+    }
+    
+    #myModal input.form-control {
+        box-shadow: 0px 0px 8px rgba(82, 168, 236, 0.6)
+    }
+    
+    .modal-backdrop.in {
+        opacity: .85
+    }
+    
+    #myModal .modal-header {
+        background: #FF566A;
+        padding: 40px 20px;
+        border-radius: 5px 5px 0 0;
+        background: #FF566A url(../../images/42/tt1.jpg) 0 0 no-repeat;
+        background-size: cover;
+    }
+    
+    #myModal .modal-header h4 {
+        color: #fff;
+        font-size: 32px;
+        font-weight: bold;
+        text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.50);
+    }
+    
+    #myModal .modal-footer .btn {
+        width: 100%;
+        font-size: 18px;
+        font-weight: bold;
+        background: #F8E71C;
+        border-color: #F8E71C;
+        color: #393233;
+    }
+    
+    #myModal textarea {
+        background: #FFFCDD;
+        border: 1px solid rgba(150, 150, 150, 0.30);
+        box-shadow: inset 1px 1px 4px 0px rgba(171, 171, 171, 0.50);
+        border-radius: 4px;
+        font-size: 16px;
+    }
+    
+    .ld {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 1);
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        color: #fff;
+        padding-top: 80px
+    }
+    
+    .spinner {
+        margin: 100px auto;
+        width: 50px;
+        height: 60px;
+        text-align: center;
+        font-size: 10px;
+    }
+    
+    .spinner > div {
+        background-color: #FF566A;
+        height: 100%;
+        width: 6px;
+        display: inline-block;
+        -webkit-animation: stretchdelay 1.2s infinite ease-in-out;
+        animation: stretchdelay 1.2s infinite ease-in-out;
+    }
+    
+    .spinner .rect2 {
+        -webkit-animation-delay: -1.1s;
+        animation-delay: -1.1s;
+    }
+    
+    .spinner .rect3 {
+        -webkit-animation-delay: -1.0s;
+        animation-delay: -1.0s;
+    }
+    
+    .spinner .rect4 {
+        -webkit-animation-delay: -0.9s;
+        animation-delay: -0.9s;
+    }
+    
+    .spinner .rect5 {
+        -webkit-animation-delay: -0.8s;
+        animation-delay: -0.8s;
+    }
+    
+    @-webkit-keyframes stretchdelay {
+        0%,
+        40%,
+        100% {
+            -webkit-transform: scaleY(0.4)
+        }
+        20% {
+            -webkit-transform: scaleY(1.0)
+        }
+    }
+    
+    @keyframes stretchdelay {
+        0%,
+        40%,
+        100% {
+            transform: scaleY(0.4);
+            -webkit-transform: scaleY(0.4);
+        }
+        20% {
+            transform: scaleY(1.0);
+            -webkit-transform: scaleY(1.0);
+        }
+    }
+    </style>
+    <script>
+    var second = '0';
+
+    function loading() {
+        $("#content_page").show();
+        return false;
+    }
+    window.onload = function() {
+        if (modal == 1) {
+            $("#myModal").modal('show');
+            $("#content_page").show();
+        } else {
+
+            setTimeout("loading()", second)
+        }
+    }
+
+    function analysis() {}
+    $("#analysis_btn").on('click', function() {
+        var content1 = $("#content1").val();
+        if (content1) {
+            // window.location.href = linkUrl + strName + '/' + count + '/result/?username=' + content1;
+            window.location.href = './result.html?username=' + content1;
+        }
+    });
+    if (modal == 0) {
+        //document.write('<script type="text\/javascript">var cpro_id="u2408498";(window["cproStyleApi"] = window["cproStyleApi"] || {})[cpro_id]={at:"3",hn:"0",wn:"0",imgRatio:"1.7",scale:"20.12",pat:"6",tn:"template_inlay_all_mobile_lu_native",rss1:"#FFFFFF",adp:"1",ptt:"0",titFF:"%E5%BE%AE%E8%BD%AF%E9%9B%85%E9%BB%91",titFS:"14",rss2:"#000000",titSU:"0",ptbg:"70",ptp:"0"}<\/script><script src="http:\/\/cpro.baidustatic.com\/cpro\/ui\/cm.js" type="text\/javascript"><\/script>');
+        //document.write('<script type="text\/javascript">var cpro_id="u2408498";(window["cproStyleApi"] = window["cproStyleApi"] || {})[cpro_id]={at:"3",hn:"0",wn:"0",imgRatio:"1.7",scale:"20.12",pat:"6",tn:"template_inlay_all_mobile_lu_native",rss1:"#FFFFFF",adp:"1",ptt:"0",titFF:"%E5%BE%AE%E8%BD%AF%E9%9B%85%E9%BB%91",titFS:"14",rss2:"#000000",titSU:"0",ptbg:"70",ptp:"0"}<\/script><script src="http:\/\/cpro.baidustatic.com\/cpro\/ui\/cm.js" type="text\/javascript"><\/script>');
+    }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+CACHE MANIFEST
+
+# 2016-01-06 v1.0.1
+
+resource/assets/audience.json
+resource/assets/audience.png
+resource/assets/teamBlue.json
+resource/assets/teamBlue.png
+resource/assets/teamYellow.json
+resource/assets/teamYellow.png
+common/config.js
+resource/assets/mix.json
+resource/assets/mix.png
+resource/assets/vs.png
+resource/assets/sp.json
+resource/assets/sp.png
+resource/assets/audio/bg1.mp3
+resource/assets/audio/bg2.mp3
+resource/assets/audio/bg3.mp3
+resource/assets/audio/eff1.wav
+resource/assets/audio/match.mp3
+resource/assets/winbg_blue.png
+resource/assets/winbg_yellow.png
+resource/assets/xblogo.png
+resource/assets/bg.png
+resource/assets/wanda.jpg
+
+resource/assets/n1/vs.png
+resource/assets/n1/winbg_blue.png
+resource/assets/n1/winbg_yellow.png
+
+NETWORK:
+*

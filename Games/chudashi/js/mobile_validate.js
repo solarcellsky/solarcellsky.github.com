@@ -1,0 +1,1 @@
+function mobileValidate(mobile){if(null===mobile||""===mobile)return!1;var reg=/^0?(13[0-9]|14[57]|15[012356789]|17[0678]|18[0-9])[0-9]{8}$/;return reg.test(mobile)?!0:!1}

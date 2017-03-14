@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html style="font-size: 46.25px;">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta name="robots" content="none">
+    <meta name="viewport" id="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>你真的懂我吗</title>
+    <link rel="stylesheet" type="text/css" href="css/qa.css">
+    <script>
+    window.onload = function() {
+        function getfont() {
+            var html1 = document.documentElement;
+            var screen = html1.clientWidth;
+            html1.style.fontSize = 0.0625 * screen + 'px';
+        }
+
+        getfont();
+        window.onresize = function() {
+            getfont();
+        }
+    }
+    </script>
+    <script src="js/jquery-1.8.3.min.js"></script>
+</head>
+
+<body>
+    <div class="wrap" id="step-1">
+        <img src="images/300.jpg" style="left:-3000px;position: absolute;">
+        <div class="logo">
+            <img src="images/logo_alpha.png">
+        </div>
+        <div class="ctStepTwo content por">
+            <div class="progressBar por">
+                <div class="progressBarLabels xcenter">
+                    <span class="current">1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>4</span>
+                    <span>5</span>
+                    <span>6</span>
+                    <span>7</span>
+                    <span>8</span>
+                    <span>9</span>
+                    <span>10</span>
+                </div>
+                <div class="progressBarBgValidShape ycenter"></div>
+                <div class="progressBarBgInvalidShape xycenter"></div>
+            </div>
+            <div class="question center ctStep02Question">
+                <div class="pic center">
+                    <img src="images/stepPic6.jpg">
+                </div>
+                <p>新的一年我最想收到的饰品礼物是？</p>
+                <div class="skip">换一题</div>
+            </div>
+            <div class="answer center">
+                <ul>
+                    <li data-qid="6" data-aid="0" id="be-wxgame1222-tm6">手表</li>
+                    <li data-qid="6" data-aid="1" id="be-wxgame1222-tm6">珠宝配饰</li>
+                    <li data-qid="6" data-aid="2" id="be-wxgame1222-tm6">戒指</li>
+                    <li data-qid="6" data-aid="3" id="be-wxgame1222-tm6">太阳镜</li>
+                    <li data-qid="6" data-aid="4" id="be-wxgame1222-tm6">以上都没有</li>
+                </ul>
+            </div>
+        </div>
+        <script type="text/javascript">
+        var questions = [{
+            'id': '1',
+            'title': '在新的一年里，以下哪个城市是我首选会去旅行的？',
+            'answers': ["巴黎", "东京", "马尔代夫", "罗马", "夏威夷"]
+        }, {
+            'id': '2',
+            'title': '新的一年我最想要更换的电子产品是？',
+            'answers': ["耳机", "手机", "IPAD", "电脑", "相机"]
+        }, {
+            'id': '3',
+            'title': '哪项是新的一年我最想尝试的心跳游戏？',
+            'answers': ["蹦极", "跳伞", "攀岩", "过山车", "鬼屋"]
+        }, {
+            'id': '4',
+            'title': '阿拉丁说可以许一个新年愿望，我会选？',
+            'answers': ["顺利买到回家的票", "过年期间不要让我加班", "买买买的宝贝都能年前到货", "涨工资了", "找到恋人或和恋人感情升级"]
+        }, {
+            'id': '5',
+            'title': '新的一年我最想收到的自制手工礼物是？',
+            'answers': ["贺卡", "围巾手套", "工艺品", "烘焙", "以上都没有"]
+        }, {
+            'id': '6',
+            'title': '新的一年我最想收到的饰品礼物是？',
+            'answers': ["手表", "珠宝配饰", "戒指", "太阳镜", "以上都没有"]
+        }, {
+            'id': '7',
+            'title': '2016年我最想听到的第一句话是什么？',
+            'answers': ["多吃点", "你真美/帅", "我养你", "随便买", "加工资"]
+        }, {
+            'id': '8',
+            'title': '新年我最期待哪个节日？',
+            'answers': ["春节", "圣诞节", "元旦", "情人节", "以上都不是"]
+        }, {
+            'id': '9',
+            'title': '如果送我萌宠做新年礼物，我会喜欢？',
+            'answers': ["喵星人", "汪星人", "兔子", "小乌龟", "以上都没有"]
+        }, {
+            'id': '10',
+            'title': '新的一年，我最想尝试的一种旅行方式？',
+            'answers': ["徒步", "骑行", "长途自驾游", "搭车旅行", "以上都没有"]
+        }, {
+            'id': '11',
+            'title': '新的一年，以下哪项是我最想玩的？',
+            'answers': ["滑雪", "潜水", "跳伞", "攀岩", "冲浪"]
+        }, {
+            'id': '12',
+            'title': '新年里和全家出游，我首选的是？',
+            'answers': ["野外聚餐", "自驾观光", "农家乐", "去商场"]
+        }, {
+            'id': '13',
+            'title': '我希望新的一年开始尝试哪项体育运动？',
+            'answers': ["长跑", "瑜伽", "搏击操", "球类运营", "我新的一年完全不想动"]
+        }, {
+            'id': '14',
+            'title': '新年节假日我一定要做的事？',
+            'answers': ["睡懒觉", "打麻将", "吃顿好的", "逛街", "看片"]
+        }, {
+            'id': '15',
+            'title': '我对收到群发祝福短信（微信）的反应？',
+            'answers': ["不予理睬", "勉强回应", "我也群发你", "拉黑此人"]
+        }, {
+            'id': '16',
+            'title': '新年的第一个祝福电话我会打给谁？',
+            'answers': ["家人", "恋人", "最好的朋友", "以上都没有"]
+        }, {
+            'id': '17',
+            'title': '作为单身狗，新的一年我会？',
+            'answers': ["希望有很多人帮我介绍优质对象", "继续一个人静静", "缘分会不期而至", "用各种方式主动贱卖自己", "年底就成为已婚人士"]
+        }, {
+            'id': '18',
+            'title': '新年我最想看的影片是？',
+            'answers': ["神探夏洛克", "澳门风云3", "星球大战7", "恶棍天使", "老炮儿"]
+        }, {
+            'id': '19',
+            'title': '新的一年我最大的愿望是？',
+            'answers': ["家人和睦、健康", "有稳定、幸福的感情", "事业/学业顺利", "减肥成功", "买买买更上一层楼"]
+        }, {
+            'id': '20',
+            'title': '我最想和谁一起跨年',
+            'answers': ["家人", "恋人", "最好的朋友", "同事", "以上都没有"]
+        }, {
+            'id': '21',
+            'title': '新的一年，我最想收到的礼物是',
+            'answers': ["心仪品牌的奢侈品", "饱含心意的礼物，价格多少不重要", "和对的人进行一次完美的旅行", "实用的东西，我马上能用起来", "以上都没有"]
+        }, {
+            'id': '22',
+            'title': '我对新年的态度是',
+            'answers': ["终于要发年终奖了", "能回去见见爸妈和朋友咯", "怎么又过年了，好快", "又老了一岁", "没有任何感觉"]
+        }, {
+            'id': '23',
+            'title': '如果用一道美食代表我对2016年的期望，我最可能选的是',
+            'answers': ["平平淡淡的阳春面", "一如既往的家常豆腐", "无比刺激的芥末拌饭", "跌沓起伏的味觉糖", "新鲜特别的鱼子酱"]
+        }, {
+            'id': '24',
+            'title': '新的一年我最想做的疯狂举动是',
+            'answers': ["裸泳", "亲吻陌生人", "去机场选择最近出发的航班就出发", "纹身", "在公众场合大声表白"]
+        }, {
+            'id': '25',
+            'title': '2016年我想尝试新的？',
+            'answers': ["发型", "包包", "穿衣风格", "手机", "另一半"]
+        }, {
+            'id': '26',
+            'title': '我最可能用什么方式迎接新年第一天？',
+            'answers': ["睡懒觉", "做一顿丰盛的早餐", "在家打扫卫生", "出去和朋友嗨", "宅在家里看片"]
+        }, ];
+
+        var userAnswers = [];
+        var answeredQuestionId = null;
+        var randomId;
+        var dNum = 0;
+
+        $(function() { //入口函数开始   	
+
+            //获取随机题目
+            function getRandomQuestion() {
+                if (answeredQuestionId != null) {
+                    questions.splice(answeredQuestionId, 1);
+                    answeredQuestionId = null;
+                }
+
+                //获取随机id
+                randomId = getRandomId(randomId);
+                return questions[randomId];
+            }
+
+            function getRandomId(newRandomId) {
+                //获取随机id
+                var rid = parseInt(Math.random() * (questions.length));
+                if (newRandomId == rid) return getRandomId(rid);
+
+                return rid;
+            }
+
+            function genarateQuestionHtml(currentQuestion) {
+                $('.question .pic img').attr('src', 'images/stepPic' + currentQuestion.id + '.jpg?v=1.1.20151222');
+                $('.question p').html(currentQuestion.title);
+
+                var answersHtml = '';
+                $.each(currentQuestion.answers, function(id, answer) {
+                    answersHtml += '<li data-qid="' + currentQuestion.id + '" data-aid="' + id + '" id="be-wxgame1222-tm' + currentQuestion.id + '">' + answer + '</li>';
+                });
+                $('.answer ul').html(answersHtml);
+                $('.answer li').bind('click', function() {
+                    $('.answer li').unbind();
+                    nextFn(this);
+                    //_hmt.push(['_trackEvent', 'nav', 'click', 'literature']);
+                });
+            }
+
+            function changeFn() { //换一题随机封装函数开始
+                var currentQuestion = getRandomQuestion();
+                $('.wrap').fadeOut(500);
+                var timer = null;
+                clearTimeout(timer);
+                timer = setTimeout(function() {
+                    genarateQuestionHtml(currentQuestion);
+                }, 500);
+                $('.wrap').fadeIn(500);
+            }
+
+            function nextFn(_this) { //下一题封装函数开始
+                var qid = parseInt($(_this).attr('data-qid'));
+                var aid = parseInt($(_this).attr('data-aid'));
+                userAnswers.push(qid + '_' + aid);
+                $(_this).addClass('current');
+
+                dNum++;
+                var myWidth = 1.5 * dNum;
+
+                if (dNum >= 10) {
+                    $(_this).removeClass('current');
+                    //submit userAnswers
+                    $("#qa_content").val(userAnswers.join("|"));
+                    $("#step-1").hide();
+                    $("#step-2").show();
+                } else {
+                    setTimeout(function() {
+                        $('.progressBarLabels span').eq(dNum).addClass('current');
+                        $('.progressBarBgValidShape').css('width', myWidth + 'rem');
+                    }, 500)
+
+                    //change question
+                    answeredQuestionId = randomId;
+                    changeFn();
+                }
+            }
+
+            //init question
+            $('.skip').bind('click', changeFn);
+            var currentQuestion = getRandomQuestion();
+            genarateQuestionHtml(currentQuestion);
+        });
+        </script>
+    </div>
+    <div class="wrap" id="step-2">
+        <div class="logo">
+            <img src="images/logo_alpha.png">
+        </div>
+        <div class="content">
+            <div class="stepOneHeader">
+                <img class="center" src="images/contitle.png">
+                <div class="avetar" style="background: url(http://wx.qlogo.cn/mmopen/ajNVdqHZLLCjT7Wu4jBJWTBrAkeJ5ZrGQVhCictekQxXMia4siaicMDHZLd3qrQYJ9wCalCCdQFyOvARjpXibaUlpBw/0) no-repeat center;
+background-size: cover;">
+                </div>
+                <p style="text-align: center;font-size: 1rem;">我是老任</p>
+            </div>
+            <div class="stepOnePlay">
+                <p>回答10套题后发送给好友，看他们对你有多了解～</p>
+                <a href="index.html">施主，快来选题吧！</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

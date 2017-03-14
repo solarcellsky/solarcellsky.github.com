@@ -1,0 +1,14 @@
+[
+{"Id":"GameStart","Desc":"游戏开始图 640*960","Src":"/resource/images/game/start.jpg"},
+{"Id":"GameScene","Desc":"游戏主场景图 640*960","Src":"/resource/images/game/bg.jpg"},
+{"Id":"GameEnd","Desc":"游戏结束图 640*960","Src":"/resource/images/game/board.jpg"},
+
+{"Id":"GameRole01","Desc":"游戏角色1 143*175","Src":"/resource/images/game/person-fs.png"},
+{"Id":"GameRole01-1","Desc":"游戏角色1-1 143*175","Src":"/resource/images/game/person-fs-wet.png"},
+{"Id":"GameRole02","Desc":"游戏角色2 143*175","Src":"/resource/images/game/person-ldh.png"},
+{"Id":"GameRole02-1","Desc":"游戏角色2-1 143*175","Src":"/resource/images/game/person-ldh-wet.png"},
+{"Id":"GameRole02","Desc":"游戏角色3 143*175","Src":"/resource/images/game/person-lj.png"},
+{"Id":"GameRole02-1","Desc":"游戏角色3-1 143*175","Src":"/resource/images/game/person-lj-wet.png"},
+
+{"Id":"Logo","Desc":"品牌标志","Src":"/resource/images/game/e-logo.png"}
+]

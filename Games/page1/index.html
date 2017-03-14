@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=yes, maximum-scale=1, minimum-scale=1, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no" name="format-detection">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="expires" content="Wed, 26 Feb 1997 08:21:57 GMT">
+    <title>西安中大国际</title>
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/iscroll.js"></script>
+    <script>
+    function GetCookieVal(offset) {
+        var endstr = document.cookie.indexOf(";", offset);
+        if (endstr == -1)
+            endstr = document.cookie.length;
+        return unescape(document.cookie.substring(offset, endstr));
+    }
+
+    function SetCookie(name, value) {
+        var expdate = new Date();
+        var argv = SetCookie.arguments;
+        var argc = SetCookie.arguments.length;
+        var expires = (argc > 2) ? argv[2] : null;
+        var path = (argc > 3) ? argv[3] : null;
+        var domain = (argc > 4) ? argv[4] : null;
+        var secure = (argc > 5) ? argv[5] : false;
+        if (expires != null) expdate.setTime(expdate.getTime() + (expires * 1000));
+        document.cookie = name + "=" + escape(value) + ((expires == null) ? "" : ("; expires=" + expdate.toGMTString())) + ((path == null) ? "" : ("; path=" + path)) + ((domain == null) ? "" : ("; domain=" + domain)) + ((secure == true) ? "; secure" : "");
+    }
+
+    function DelCookie(name) {
+        var exp = new Date();
+        exp.setTime(exp.getTime() - 1);
+        var cval = GetCookie(name);
+        document.cookie = name + "=" + cval + "; expires=" + exp.toGMTString();
+    }
+
+    function GetCookie(name) {
+        var arg = name + "=";
+        var alen = arg.length;
+        var clen = document.cookie.length;
+        var i = 0;
+        while (i < clen) {
+            var j = i + alen;
+            if (document.cookie.substring(i, j) == arg)
+                return GetCookieVal(j);
+            i = document.cookie.indexOf(" ", i) + 1;
+            if (i == 0) break;
+        }
+        return null;
+    }
+    </script>
+    <script>
+    function queryString(key) {
+        return (document.location.search.match(new RegExp("(?:^\\?|&)" + key + "=(.*?)(?=&|$)")) || ['', null])[1];
+    }
+    if (!queryString('t1'))
+        document.location.href += (document.location.href.indexOf('?') > 0 ? '&' : '?') + 't1=' + new Date().getTime();
+    var openid = queryString('openid');
+    if (openid) {
+        SetCookie('openid', openid);
+        document.location.replace('sm.min.html?t1=' + queryString('t1'));
+    }
+    var openid = GetCookie('openid');
+
+    function loadcss(file) {
+        $.get(file, null, function(result) {
+            result = result.replace(/([\d.]*)px/g, function(m, m1) {
+                if (m1 === '.' || m1 === '1')
+                    return m;
+                var zoom = $(window).width() / 640;
+                if (zoom > 5 || zoom < 0.50)
+                    return m;
+                return m1 * zoom + 'px';
+            });
+            var d = document.createElement("style");
+            d.type = "text/css";
+            d.id = file;
+            d.innerHTML = result;
+            document.getElementsByTagName("head")[0].appendChild(d);
+            $('body>div:first').fadeIn('fast');
+        });
+    }
+    loadcss('css/default.css');
+    </script>
+</head>
+
+<body>
+    <div style="display:none;width:100%"><img id="imgSm" src="images/xq1.jpg?t=2547">
+        <br> <img id="imgSm1" src="images/xq2.jpg?t=3445">
+    </div>
+    <div class="divmess" style="display:none"></div>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script>
+    new IScroll('body', {
+        hScrollbar: false,
+        vScrollbar: true,
+        momentum: true,
+        checkDOMChanges: true,
+        tap: true
+    });
+    var showtxttime;
+    var showtxt = function(txt, time) {
+        if (showtxttime)
+            clearTimeout(showtxttime);
+        var div = $('.divmess').html(txt);
+        div.stop();
+        div.show();
+        if (!time)
+            time = 2000;
+        showtxttime = setTimeout(function() {
+            div.fadeOut('slow');
+        }, time);
+    }
+    setTimeout(function() {
+        wx.ready(function(result) {
+            var shareData = {
+                imgUrl: 'http://yby.mairuikeji.com/zd/images/hb.png',
+                "link": 'http://yby.mairuikeji.com/zd/sm.min.html?t=1426748e217744',
+                "desc": "时尚COSMO&中大国际十五周年庆 COSMO GIRL 欢乐派对",
+                title: '中大国际十五周年庆"金"喜派送',
+                success: function(result) {
+                    if (result && result.errMsg && result.errMsg.indexOf('ok') >= 0) {
+                        $.post('/zdsvc/svc.ashx/starFx', {
+                            openid: openid
+                        }, function(result) {
+                            if (result && result.名称) {
+                                showtxt('恭喜您！！！<br/>获得 ' + result.名称 + ' ' + result.金额 + '元', 3000);
+                            }
+                        });
+                    }
+                }
+            };
+            wx.onMenuShareTimeline(shareData);
+            wx.onMenuShareAppMessage(shareData);
+            wx.onMenuShareWeibo(shareData);
+            wx.onMenuShareQQ(shareData);
+            wx.hideMenuItems({
+                menuList: ['menuItem:exposeArticle', 'menuItem:setFont', 'menuItem:readMode', 'menuItem:share:facebook', 'menuItem:copyUrl']
+            });
+            wx.showMenuItems({
+                menuList: ['menuItem:jsDebug']
+            });
+        });
+        $.post('http://th.mairuikeji.com/wxsvc/s.ashx/GetToken', {
+            cururl: document.location.href
+        }, function(result) {
+            if (result) {
+                result.debug = false;
+                result.jsApiList = ['checkJsApi', 'onMenuShareTimeline', 'onMenuShareAppMessage', 'onMenuShareQQ', 'onMenuShareWeibo', 'hideMenuItems', 'showMenuItems', 'hideAllNonBaseMenuItem', 'showAllNonBaseMenuItem', 'translateVoice', 'startRecord', 'stopRecord', 'onRecordEnd', 'playVoice', 'pauseVoice', 'stopVoice', 'uploadVoice', 'downloadVoice', 'chooseImage', 'previewImage', 'uploadImage', 'downloadImage', 'getNetworkType', 'openLocation', 'getLocation', 'hideOptionMenu', 'showOptionMenu', 'closeWindow', 'scanQRCode', 'chooseWXPay', 'openProductSpecificView', 'addCard', 'chooseCard', 'openCard'];
+                wx.config(result);
+            }
+        })
+    }, 1000);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/jweixin-1.0.0.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <title>剁手不如砍价</title>
+    <style type="text/css">
+    a {
+        outline: none;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+    .pause {
+        position: absolute;
+        z-index: 10000;
+        top: 5px;
+        right: 5px;
+    }
+    .pause a {
+        width: 30px;
+        height: 30px;
+        background: url(img/units-icons.png) 0 0 no-repeat;
+        display: block;
+        background-size: 90px auto;
+    }
+    .pause a.on {
+        -webkit-animation: reverseRotataZ 1.2s linear infinite
+    }
+    .pause a.off {} .pause span {
+        color: #fff;
+        font-size: 16px;
+        ;
+        position: absolute;
+        left: -40px;
+        top: 5px;
+        text-shadow: 1px 1px 1px #000;
+        letter-spacing: 2px;
+        -webkit-transition: all .2s linear;
+        opacity: 0;
+        -webkit-transform: translateX(-20px)
+    }
+    .pause span.z-show {
+        opacity: 1;
+        -webkit-transform: translateX(0px)
+    }
+    .coffee-steam-box {
+        -webkit-transform: translate(-40px, -40px)
+    }
+    @-webkit-keyframes reverseRotataZ {
+        0% {
+            -webkit-transform: rotateZ(0deg)
+        }
+        100% {
+            -webkit-transform: rotateZ(-360deg)
+        }
+    }
+    .audio {
+        position: absolute;
+        z-index: 10;
+        visibility: hidden;
+        opacity: 0;
+        left: 0px;
+        top: 0px;
+        width: 100px;
+        height: 30px;
+    }
+    html,
+    body,
+    div,
+    p,
+    span,
+    i,
+    em {
+        padding: 0;
+        margin: 0;
+    }
+    body {
+        font: 12px/1.4 Arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+        background-color: rgb(0, 0, 0);
+        margin: 0;
+        padding: 0;
+        bodder: 0;
+    }
+    img {
+        position: absolute;
+    }
+    .page {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+    input {
+        position: absolute;
+        BACKGROUND-COLOR: transparent;
+        border: 0px;
+    }
+    textarea {
+        position: absolute;
+        BACKGROUND-COLOR: transparent;
+        border: 0px;
+        resize: none;
+        overflow: hidden;
+    }
+    .hide {
+        display: none;
+    }
+    table img {
+        widht: 30px;
+        height: 30px;
+        position: relative;
+    }
+    #rule {
+        -webkit-animation: pulse 2s infinite linear;
+        animation: pulse 2s infinite linear;
+    }
+    @-webkit-keyframes pulse {
+        0% {
+            -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+        }
+        50% {
+            -webkit-transform: scale3d(1.1, 1.1, 1.1);
+            transform: scale3d(1.1, 1.1, 1.1);
+        }
+        100% {
+            -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+        }
+    }
+    @keyframes pulse {
+        0% {
+            -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+        }
+        50% {
+            -webkit-transform: scale3d(1.1, 1.1, 1.1);
+            transform: scale3d(1.1, 1.1, 1.1);
+        }
+        100% {
+            -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+        }
+    }
+    #fadeInUp {
+        -webkit-animation: bounceIn 4s infinite linear;
+        animation: bounceIn 4s infinite linear;
+    }
+    @-webkit-keyframes bounceIn {
+        0%, 20%, 40%, 60%, 80%, 100% {
+            -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+            transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        }
+        0% {
+            opacity: 0;
+            -webkit-transform: scale3d(.3, .3, .3);
+            transform: scale3d(.3, .3, .3);
+        }
+        20% {
+            -webkit-transform: scale3d(1.1, 1.1, 1.1);
+            transform: scale3d(1.1, 1.1, 1.1);
+        }
+        40% {
+            -webkit-transform: scale3d(.9, .9, .9);
+            transform: scale3d(.9, .9, .9);
+        }
+        60% {
+            opacity: 1;
+            -webkit-transform: scale3d(1.03, 1.03, 1.03);
+            transform: scale3d(1.03, 1.03, 1.03);
+        }
+        80% {
+            -webkit-transform: scale3d(.97, .97, .97);
+            transform: scale3d(.97, .97, .97);
+        }
+        100% {
+            opacity: 1;
+            -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+        }
+    }
+    </style>
+</head>
+<iframe id="__WeixinJSBridgeIframe_SetResult" style="display: none;"></iframe>
+<iframe id="__WeixinJSBridgeIframe" style="display: none;"></iframe>
+
+<body>
+
+    <div id="loading" style="width: 740px; position: absolute; height: 826px; top: 0px; left: 0px; display: none; background: rgb(154, 144, 117);">
+        <img class="load" src="img/loading.gif" style="width: 740px; height: 826px; top: 0px; left: 0px;">
+        <span id="loading_number" style="position: absolute; display: none; font-size: 2em; top: 443.592592592593px; left: 300.625px;">100%</span>
+    </div>
+
+
+    <div class="padding_top" style="width: 740px; height: 826px;">
+
+        <div class="page1 hide page" style="z-index: 1; position: fixed; height: 100%; width: 100%; display: none; background-color: rgb(114, 158, 143);">
+            <img class="back">
+            <img class="p1" id="rule">
+        </div>
+
+        <div class="page2 hide page" style="z-index: 1; height: 100%; width: 100%; display: none; background-color: rgb(247, 35, 35);">
+            <img class="back">
+            <img class="p1" id="rule">
+        </div>
+
+        <div class="page3 hide page" style="z-index: 1; position: fixed; height: 100%; width: 100%; display: none; background-color: rgb(154, 144, 117);">
+            <img class="back">
+            <img class="p1">
+            <img class="p2" id="rule">
+            <img class="p3" id="rule">
+            <img class="p4">
+            <img class="p5">
+            <span class="score" style="position:absolute; color:#fff; font-size:1.2em;text-align:center;">0</span>
+            <span class="qian" style="position:absolute; color:#900; font-size:3.5em;"></span>
+            <span class="bai" style="position:absolute; color:#900; font-size:3.5em;"></span>
+            <span class="shi" style="position:absolute; color:#900; font-size:3.5em;"></span>
+            <span class="ge" style="position:absolute; color:#900; font-size:3.5em;"></span>
+        </div>
+
+        <div class="page4 hide page" style="z-index: 1; position: fixed; height: 100%; width: 100%; display: none; background-color: rgb(198, 165, 194);">
+            <img class="back">
+            <img class="p1">
+            <img class="p2">
+            <img class="p3">
+            <img class="p4" id="rule">
+            <img class="p5">
+            <span class="score" style="position:absolute; font-size:1.4em; text-align:center; color:#fff">0</span>
+            <span class="key" style="position:absolute; font-size:1.6em;  text-align:center;">13214435423543</span>
+            <span class="qian" style="position:absolute; color:#900; font-size:3.5em;"></span>
+            <span class="bai" style="position:absolute;color:#900; font-size:3.5em;"></span>
+            <span class="shi" style="position:absolute;color:#900; font-size:3.5em;"></span>
+            <span class="ge" style="position:absolute; color:#900;font-size:3.5em;"></span>
+        </div>
+
+        <div class="page5 hide page" style="z-index: 1; position: fixed; height: 100%; width: 100%; opacity: 1; display: block; background-color: rgb(198, 165, 194);">
+            <img class="back" src="img/p5-1.png" style="width: 740px; height: 826px; top: 0px; left: 0px;">
+            <img class="p1" src="img/p5-3.png" style="width: 601.25px; height: 78.0111111111111px; top: 397.703703703704px; left: 76.3125px;">
+            <img class="p2" id="rule" src="img/p5-2.png" style="width: 395.4375px; height: 39.7703703703704px; top: 520.074074074074px; left: 173.4375px;">
+            <img class="p3" id="rule" src="img/p5-4.png" style="width: 395.4375px; height: 39.7703703703704px; top: 611.851851851852px; left: 173.4375px;">
+            <img class="p4" src="img/p3-5.png" style="width: 97.125px; height: 70.362962962963px; top: 688.333333333333px; left: 323.75px;">
+            <img class="p5" src="img/p3-6.png" style="width: 393.125px; height: 79.5407407407407px; top: 260.037037037037px; left: 161.875px;">
+            <span class="score" style="position: absolute; color: rgb(255, 255, 255); font-size: 1.2em; text-align: center; top: 435.944444444444px; left: 185px; width: 76.3125px;">0</span>
+            <span class="qian" style="position: absolute; color: rgb(153, 0, 0); font-size: 3.5em; top: 253.918518518519px; left: 240.5px;">5</span>
+            <span class="bai" style="position: absolute; color: rgb(153, 0, 0); font-size: 3.5em; top: 253.918518518519px; left: 305.25px;">2</span>
+            <span class="shi" style="position: absolute; color: rgb(153, 0, 0); font-size: 3.5em; top: 253.918518518519px; left: 363.0625px;">9</span>
+            <span class="ge" style="position: absolute; color: rgb(153, 0, 0); font-size: 3.5em; top: 253.918518518519px; left: 427.8125px;">9</span>
+            <img class="head" src="http://wx.qlogo.cn/mmopen/G1BZaria9xrbL9GIJ2EH3kADB8zu5pj5iaWOJHgVFL0zGSrYNGEMz5n0lhex4ExJv4kIZyJauhQd9mOVgypHZicicp0jGmhXwAiaY/0" style="width: 69.375px; height: 45.8888888888889px; top: 397.703703703704px; left: 80.9375px;">
+
+        </div>
+
+
+        <div class="page6 hide page" style="z-index: 1; position: fixed; height: 100%; width: 100%; display: none; background-color: rgb(114, 158, 143);">
+            <img class="back">
+            <img class="p1">
+            <img class="p2" id="rule">
+            <img class="p3" id="rule">
+            <img class="p4" id="fadeInUp">
+            <img class="p5">
+            <span class="score" style="position:absolute;color:#fff; font-size:1.2em;text-align:center;">0</span>
+            <span class="qian" style="position:absolute; color:#900; font-size:3.5em;"></span>
+            <span class="bai" style="position:absolute; color:#900; font-size:3.5em;"></span>
+            <span class="shi" style="position:absolute; color:#900; font-size:3.5em;"></span>
+            <span class="ge" style="position:absolute; color:#900; font-size:3.5em;"></span>
+        </div>
+
+        <div class="page7 hide page" style="z-index: 1; height: 100%; width: 100%; opacity: 1; display: none; background-color: rgb(247, 35, 35);">
+            <img class="back" src="img/p2-1.png" style="width: 740px; height: 826px; top: 0px; left: 0px;">
+            <img class="p1" src="img/p2-2.png" style="width: 411.625px; height: 39.7703703703704px; top: 619.5px; left: 161.875px;">
+        </div>
+
+    </div>
+
+    <div class="pause">
+        <a class="on" href="#">
+        </a>
+        <span>开启</span>
+    </div>
+
+    <img src="img/share.png" style="top:0px;left:0px;opacity:1;z-index:1000;position:absolute;width:100%;height:100%;display:none;" id="share">
+    <img src="img/cut.png" style="top:0px;left:0px;opacity:1;z-index:1000;position:absolute;width:100%;height:100%;display:none;" id="cut">
+
+    <audio src="audios/audio.mp3" autoplay="autoplay" loop="" id="audio"></audio>
+
+    <script>
+    $(function() {
+
+
+        var audio = document.getElementById('audio');
+
+        //        $(document).one("touchstart",function() {
+        //            audio.play();
+        //        });
+    })
+
+    function musicControl(obj) {
+        var classname = $.trim(obj.attr('class'));
+
+        if (classname == 'on') {
+            audio.pause();
+            obj.removeClass('on').addClass('off');
+            obj.siblings('span').text('关闭');
+            //bird.find('img').attr('src',jpg);
+            $('.pause span').addClass('z-show');
+            $('.music-icon').removeClass('active');
+
+            setTimeout(function() {
+                $('.pause span').removeClass('z-show');
+            }, 500);
+        } else if (classname == 'off') {
+            audio.play();
+            obj.removeClass('off').addClass('on');
+            obj.siblings('span').text('开启');
+            // bird.find('img').attr('src',gif);
+            $('.music-icon').addClass('active');
+            $('.pause span').addClass('z-show');
+            setTimeout(function() {
+                $('.pause span').removeClass('z-show');
+            }, 500);
+        };
+        return false;
+    };
+
+    $('.pause a').click(function() {
+        musicControl($(this));
+    });
+    </script>
+    <script type="text/javascript">
+    var window_w = document.documentElement.clientWidth;
+    var window_h = document.documentElement.clientHeight;
+    var wip = 320;
+    var hip = 540;
+    if (navigator.userAgent.indexOf("Firefox") != -1) {
+        window_w = 320;
+        window_h = 540;
+    }
+
+
+    var first = "1";
+    var openId = "ot4qsuBBRKVtYHnx_OSSTgApGBJA";
+    var friendId = "ot4qsuDUME-In4HZNa3xEPIXwK14";
+    var hNum = "0";
+    var myPic = "http://wx.qlogo.cn/mmopen/Q3auHgzwzM7St3BvOj3Y6wKG9YyH2CFyprIQqH6ibdpOdaLhiarkdFtnDFqQhUHtQibDwGbAvoYREiamO57lqK352A/0";
+    var fPic = "http://wx.qlogo.cn/mmopen/G1BZaria9xrbL9GIJ2EH3kADB8zu5pj5iaWOJHgVFL0zGSrYNGEMz5n0lhex4ExJv4kIZyJauhQd9mOVgypHZicicp0jGmhXwAiaY/0";
+    var price = "5299";
+    var can = "1";
+    var myNum = 0
+    </script>
+    <script type="text/javascript" src="js/animate.js?1446451372"></script>
+    <script type="text/javascript" src="js/tools.js?1446451372"></script>
+    <script type="text/javascript" src="js/main.js?1446451372"></script>
+    <script type="text/javascript" src="js/shake.js"></script>
+
+
+
+
+    <script type="text/javascript">
+    wx.config({
+        debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+        appId: 'wx175d2160f44ceec7',
+        timestamp: '1446451372',
+        nonceStr: '20rucWu8b4t0xl7a',
+        signature: '22d4cd3f81a3b273f3cbc64cd6edc5749877f291',
+        jsApiList: [
+            'onMenuShareQQ',
+            'uploadImage',
+            'chooseImage',
+            'onMenuShareTimeline',
+            'onMenuShareAppMessage'
+        ]
+    });
+
+    var shareSuccess = function(res) {
+
+    };
+
+    var defaultLink = "http://www.1ceyou.com/web/6s/code/index.php?uid=ot4qsuBBRKVtYHnx_OSSTgApGBJA";
+    var defaultImg = "http://www.1ceyou.com/web/6s/code/share.jpg";
+    var weixinShare = {
+
+        title: "剁手不如砍价！ ",
+        desc: "召唤更多的伙伴们来帮忙砍价！",
+        link: defaultLink,
+        imgUrl: defaultImg,
+        type: '',
+        dataUrl: '',
+        success: shareSuccess
+    };
+
+    var qqShare = {
+        title: "剁手不如砍价！ ",
+        desc: "召唤更多的伙伴们来帮忙砍价！",
+        link: defaultLink,
+        imgUrl: defaultImg,
+        success: shareSuccess
+    };
+
+    var friendShare = {
+        title: "召唤更多的伙伴们来帮忙砍价！",
+
+        link: defaultLink,
+        imgUrl: defaultImg,
+        success: shareSuccess
+    };
+
+    function setShareUrl($url) {
+        weixinShare.link = qqShare.link = friendShare.link = $url;
+    }
+
+    wx.ready(function() {
+
+        wx.onMenuShareTimeline(friendShare);
+        wx.onMenuShareAppMessage(weixinShare);
+        wx.onMenuShareQQ(qqShare);
+        //     bindShareCallBack(function(){alert("fdsafdsaf");},this);
+    });
+
+    function setShareContent(content) {
+        friendShare.title = weixinShare.desc = qqShare.desc = content;
+    }
+
+    var images = {
+        localId: [],
+        serverId: []
+    };
+
+    function chooseImage() {
+        wx.chooseImage({
+            success: function(res) {
+                images.localId = res.localIds;
+                alert('已选择 ' + res.localIds.length + ' 张图片');
+            }
+        });
+    }
+
+    function uploadImage() {
+        if (images.localId.length == 0) {
+            alert('请先使用 chooseImage 接口选择图片');
+            return;
+        }
+
+        var i = 0,
+            length = images.localId.length;
+        images.serverId = [];
+
+        function upload() {
+            wx.uploadImage({
+                localId: images.localId[i],
+                success: function(res) {
+                    i++;
+                    alert('已上传：' + i + '/' + length);
+                    images.serverId.push(res.serverId);
+                    if (i < length) {
+                        upload();
+                    }
+                },
+                fail: function(res) {
+                    alert(JSON.stringify(res));
+                }
+            });
+        }
+        upload();
+    }
+    </script>
+
+
+
+</body>
+
+</html>

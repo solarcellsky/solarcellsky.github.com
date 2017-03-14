@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta id="viewport" name="viewport" content="width=640, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<link href="style/animatestyle.css" type="text/css" rel="stylesheet"></link>
+
+		<script src="js/jquery.1.7.1.min.js"></script>
+		<script src="js/jquery.easing.js"></script>
+		<script src="js/build/three.min.js"></script>
+		<script src="js/controls/DeviceOrientationControls.js"></script>
+		<script src="js/renderers/CSS3DRenderer.js"></script>
+		<script src="js/TweenMax.min.js"></script>
+		<script src="script/jweixin-1.0.0.js"></script>
+		<script src="https://static.alipay.com/aliBridge/1.0.0/aliBridge.min.js"></script>
+		<script src="http://tjs.sjs.sinajs.cn/open/thirdpart/js/jsapi/mobile.js" charset="utf-8"></script>
+
+		<script src="script/preload.js"></script>
+		<script src="script/base.js"></script>
+		<script src="script/ios/birdFire.js"></script>
+		<script src="script/animateSprite.js"></script>
+		<script src="script/ios/birdFire.js"></script>
+		<script src="script/star.js"></script>
+		<script src="script/attack.js"></script>
+		<script src="script/publicSDK.js"></script>
+		<script src="script/attack.js"></script>
+		<script src="script/weiboJssdk.js"></script>
+
+
+		<script>
+			if (userAgent().isIOS) {document.getElementById('viewport').content='width=640,user-scalable=no';}
+			if(userAgent().isAndroid && navigator.userAgent.split('HUAWEI').length > 1) {document.getElementById('viewport').content='width=640,user-scalable=no';}
+		</script>
+		<title>愤怒的小鸟</title>
+	</head>
+	<body>
+
+	<img src="http://2016mcd.angrybirds.nimads.com/html/mobile/panorama/img/share.jpg" style="position:absolute; top: -2000px;">
+
+	<script src="script/ios/main.js"></script>
+	<script src="script/ios/index.js"></script>
+	<div style='display:none'>
+		<img src="img/loading2.gif">
+		<!--<img src="img/load.png">-->
+		<img src="img/pig/p1.png">
+		<img src="img/pig/p2.png">
+		<img src="img/pig/p3.png">
+		<img src="img/pig/p4.png">
+		<img src="img/pig/p5.png">
+		<img src="img/pig/p6.png">
+		<img src="img/p/1.jpg">
+		<img src="img/p/2.jpg">
+		<img src="img/p/3.jpg">
+		<img src="img/p/4.jpg">
+		<img src="img/p/5.jpg">
+		<img src="img/p/6.jpg">
+		<img src="img/birdfly.png">
+		<!--<img src="img/boom.png">-->
+		<img src="img/boom2.png">
+		<img src="img/slingshot/shot.png">
+		<img src="img/slingshot/force.png">
+	</div>
+
+	<audio id="bg_m" src="music/bg.mp3" loop="loop" autoplay="autoplay"></audio>
+	<audio id="pull_m" src="music/pull.mp3"></audio>
+	<audio id="hit_m" src="music/hit.mp3"></audio>
+	<audio id="miss_m" src="music/miss.mp3"></audio>
+
+		<div id="container" style="position:absolute; margin: 0; padding: 0; top: 0; left: 0; width: 640px; height: 1040px; overflow: hidden;">
+			<img src="img/aim.png" style="position: absolute; top: 370px; left: 255px; width: 115px;">
+			<div id="birdcon" style="position:absolute;"></div>
+			<img src="img/slingshot/slingshot.png" style="position: absolute; top: 680px; left: 160px; width: 300px;">
+			<img id="tape" src="img/slingshot/force_1.png" style="position:absolute; top: 682px; left: 165px; width: 290px;">
+			<img id="tape2" src="img/slingshot/force_2.png" style="position:absolute; top: 682px; left: 165px; width: 290px; display: none;">
+			<img src="img/birdlifeshadow.png" style="position: absolute; top: 835px; left: 490px;">
+			<img id="life1" src="img/birdlife.png" style="position: absolute; top: 836px; left: 490px;">
+			<img id="life2" src="img/birdlife.png" style="position: absolute; top: 836px; left: 541px;">
+			<img id="life3" src="img/birdlife.png" style="position: absolute; top: 836px; left: 591px;">
+			<img src="img/head.png" style="position: absolute; top: -30px; left: 490px;">
+			<img id="head1" src="img/head1.png" style="position: absolute; top: -30px; left: 490px; display: none;">
+			<img id="head2" src="img/head2.png" style="position: absolute; top: -30px; left: 490px; display: none;">
+			<div class="attack" style="top: 100px;">
+				<div id="miss" style="left: 10px;display: none;">
+					<img class="miss_1" src="img/attack_tips/miss_tips1.png" style="top: 100px;left: 70px;opacity: 0;"/>
+					<img class="miss_2" src="img/attack_tips/miss_tips2.png" style="top: 110px;left: 150px;opacity: 0;"/>
+					<img class="miss_3" src="img/attack_tips/miss_tips3.png" style="top: 100px;left: 200px;opacity: 0;"/>
+				</div>
+
+				<div id="hit" style="display: none; left: -20px;">
+					<img class="light" src="img/attack_tips/light.png" style="top: 100px;left: -50px;opacity: 0;"/>
+
+					<div class="cool" style="display: none;">
+						<img class="en" src="img/attack_tips/cool_en.png" style="top: 55px;left: 100px;opacity: 0;"/>
+						<img class="cn" src="img/attack_tips/cool_cn.png" style="top: 160px;left: 355px;opacity: 0;"/>
+					</div>
+
+					<div class="yeah" style="display: none;">
+						<img class="en" src="img/attack_tips/yeah_en.png" style="top: 55px;left: 100px;opacity: 0;"/>
+						<img class="cn" src="img/attack_tips/yeah_cn.png" style="top: 160px;left: 355px;opacity: 0;"/>
+					</div>
+				</div>
+
+				<div id="win_prize" style="display: none;">
+					<img class="ticket" src="img/attack_tips/ticket.png" style="left: 385px;top: 50px;opacity: 0;"/>
+					<img class="ticket2" src="img/attack_tips/ticket2.png" style="left: 385px;top: 50px;opacity: 0;"/>
+					<img class="light" src="img/attack_tips/light.png" style="top: 100px;left: -50px;opacity: 0;"/>
+
+					<img class="txt_1" src="img/attack_tips/bangbangbang.png" style="top: 100px;left: -10px;opacity: 0;"/>
+					<img class="txt_2" src="img/attack_tips/boom.png" style="top: 100px;left: -10px;opacity: 0;"/>
+					<img class="txt_3" src="img/attack_tips/wow.png" style="top: 100px;left: -10px;opacity: 0;"/>
+					<img class="txt_4" src="img/attack_tips/ohdear.png" style="top: 100px;left: -10px;opacity: 0;"/>
+					<img class="txt_5" src="img/attack_tips/omg.png" style="top: 100px;left: 40px;opacity: 0;"/>
+				</div>
+			</div>
+
+			<div id="gametipscon">
+				<img src="img/attack_tips/txt.png" style="top: 920px; left: 130px;">
+				<img src="img/tips/txt2.png" style="top: 490px; left: 260px;">
+				<img src="img/attack_tips/arrow.png" style=" position: absolute; top: 810px; left: 290px;" class="arrow">
+			</div>
+
+			<div id="overfailedcon" style="display: none;">
+				<div style="width: 640px; height: 1040px; background-color: black; opacity: .65;"></div>
+				<img id="oframe2" src="img/tips/oframe2.png" style="top: 280px; left: 140px;">
+				<img src="img/tips/tipslight.png" style="top: 200px; left: 0px; " class="olight">
+				<img src="img/tips/contxt4.png" style="top: 320px; left: 170px;">
+				<img src="img/tips/overpig.png" style="top: 360px; left: 155px;">
+				<img class="mybagbtn" src="img/tips/bag_btn.png" style="top: 720px; left: 260px">
+				<img class="againbtn" src="img/tips/againbtn.png" style="top: 830px; left: 170px;">
+				<img class="sharebtn" src="img/tips/sharebtn.png" style="top: 830px; left: 328px;">
+			</div>
+
+			<div id="overcon" style="display: none;">
+				<div style="width: 640px; height: 1040px; background-color: black; opacity: .65;"></div>
+				<div id="ostarcon"></div>
+
+				<img id="obird1" src="img/tips/birdd1.png" style="top: 60px;left: 200px; display: none;">
+				<img id="obird2" src="img/tips/birdd2.png" style="top: 60px;left: 160px; display: none;">
+				<img id="obird3" src="img/tips/birdd3.png" style="top: 60px;left: 200px; display: none;">
+
+				<img id="oframe" src="img/tips/ff.png" style="top: 270px; left: 52px;">
+				<img id="olight" src="img/tips/light.png" style="top: 230px; left: -30px;">
+
+				<img id="contxt1" src="img/tips/contxt1.png" style="top: 280px; left: 210px; display: none;">
+				<img id="contxt2" src="img/tips/contxt2.png" style="top: 280px; left: 160px; display: none;">
+				<img id="contxt3" src="img/tips/contxt3.png" style="top: 280px; left: 190px; display: none;">
+
+				<img src="img/tips/tipslight.png" style="top: 300px; left: 0px; " class="olight">
+				<img id="num1" src="img/tips/onum1.png" style="top: 405px; left: 305px; display: none;">
+				<img id="num2" src="img/tips/onum2.png" style="top: 405px; left: 305px; display: none;">
+				<img id="num3" src="img/tips/onum3.png" style="top: 405px; left: 305px; display: none;">
+				<img id="txt" src="img/tips/otxt.png" style="top: 430px; left: 170px; display: none;">
+
+				<img id="oprize1" src="img/attack_tips/ticket.png" style="top: 520px; left: 220px; display: none;">
+				<img id="oprize2" src="img/attack_tips/ticket2.png" style="top: 520px; left: 220px; display: none;">
+
+				<img class="mybagbtn" src="img/tips/bag_btn.png" style="top: 720px; left: 260px">
+				<img class="againbtn" src="img/tips/againbtn.png" style="top: 830px; left: 170px;">
+				<img class="sharebtn" src="img/tips/sharebtn.png" style="top: 830px; left: 340px;">
+			</div>
+
+			<div id="sharecon" style="display: none;">
+				<div style="width: 640px; height: 1040px; background-color: black; opacity: 1;"></div>
+				<img src="img/shareline.png" style="top: 110px; left: 120px; ">
+				<img src="img/shareshot.png" style="top: 800px; left: -30px; ">
+				<img id="sbrid" src="img/fire.png" style="top: 680px; left: 30px; width: 150px;">
+				<img id="shareboom" src="img/shareboom.png" style="top: -20px; left: 370px; display: none; ">
+				<img id="stxt1" src="img/sharetxt2.png" style="top: 110px; left: 240px; opacity: 0">
+				<img id="stxt2" src="img/sharetxt1.png" style="top: 50px; left: 300px; opacity: 0;">
+			</div>
+
+			<div id="music_con" style="top: 85px;left: 50px;">
+				<img class="music_off" src="img/off.png" style="display: none;"/>
+				<img class="music_on" src="img/on.png"/>
+			</div>
+
+		</div>
+		<div id="loading" style="position:absolute; margin: 0; padding: 0; top: 0; left: 0; width: 640px; height: 1040px; overflow: hidden;">
+			<div style="position:absolute; width: 640px; height: 1040px; background-color: #9B0000"></div>
+			<!--<div class="loading"></div>-->
+			<img src="img/loading2.gif" style="position:absolute; top: 410px; left: 265px">
+			<p id="progress" style="position: absolute; top: 550px; left: 0; width: 640px; text-align: center; font-size: 23px; color: #fcca0f;"></p>
+		</div>
+
+	<img src="img/logo.jpg" style="position:absolute; top: 0; left: 30px;">
+
+
+	<!--<p id="alpha" style="position: absolute; font-size: 30px; top: 0; left: 0; width: 640px; color: #FFFFFF; display: block;">1</p>-->
+	<!--<p id="beta" style="position: absolute; font-size: 30px; top: 100px; left: 0; width: 640px; color: #FFFFFF; display: block;">2</p>-->
+	<!--<p id="gamma" style="position: absolute; font-size: 30px; top: 200px; left: 0; width: 640px; color: #FFFFFF; display: block;">3</p>-->
+	<!--<p id="orient" style="position: absolute; font-size: 30px; top: 300px; left: 0; width: 640px; color: #FFFFFF; display: block;">4</p>-->
+	</body>
+</html>

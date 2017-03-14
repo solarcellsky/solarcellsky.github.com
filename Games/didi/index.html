@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>老滴哥带你玩</title>
+	<script>
+		if(/Android (\d+\.\d+)/.test(navigator.userAgent)){
+			var version = parseFloat(RegExp.$1);
+			if(version>2.3){
+				var phoneScale = parseInt(window.screen.width)/640;
+				document.write('<meta name="viewport" content="width=640, minimum-scale = '+ phoneScale +', maximum-scale = '+ phoneScale +', target-densitydpi=device-dpi">');
+			}else{
+				document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+			}
+		}else{
+			document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+		}
+	</script>
+<link type="text/css" href="css/main.css" rel="stylesheet">
+<script src="js/libs/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/didi.js"></script>
+<script type="text/javascript" src="js/weixin.js"></script>
+<script src="js/libs/AudioMgr.js"></script>
+<script src="js/libs/easeljs-0.8.2.min.js"></script>
+<script src="js/libs/tweenjs-0.6.2.min.js"></script>
+<script src="js/libs/preloadjs-0.6.2.min.js"></script>
+<script src="js/libs/TweenMax.min.js"></script>
+<script src="js/animate/loading.js"></script>
+<script src="js/animate/game.js"></script>
+<script src="js/main.js"></script>
+	<script>
+		var _czc = _czc || [];
+		_czc.push(["_setAccount", "1259533569"]);
+	</script>
+</head>
+<body id="page">
+	<canvas id="canvas"></canvas>
+	<div class="landscape_tip hide">
+		<div class="landtip">
+			<div></div>
+			<div></div>
+		</div>
+	</div>
+    <div style="display:none;"><script src="http://s4.cnzz.com/z_stat.php?id=1259533569&web_id=1259533569" language="JavaScript"></script></div>
+</body>
+</html>

@@ -1,0 +1,338 @@
+{
+  "ID": "845a8489-786e-45b1-828b-4ad444c84014",
+  "Version": "2.3.1.1",
+  "Name": "UpLayerNode",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 34,
+        "Children": [
+          {
+            "FileData": {
+              "Type": "PlistSubImage",
+              "Path": "upBar.png",
+              "Plist": "g_ui.plist"
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleY": 1.0
+            },
+            "Position": {
+              "X": 0.0,
+              "Y": 87.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "RightMargin": -640.0,
+            "TopMargin": -87.0,
+            "Tag": 35,
+            "Children": [
+              {
+                "FileData": {
+                  "Type": "PlistSubImage",
+                  "Path": "time.png",
+                  "Plist": "g_ui.plist"
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleY": 1.0
+                },
+                "Position": {
+                  "X": 4.4636,
+                  "Y": 78.537
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.007,
+                  "Y": 0.9027
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": 4.4636,
+                "RightMargin": 527.5364,
+                "TopMargin": 8.463,
+                "BottomMargin": 17.537,
+                "Tag": 36,
+                "ActionTag": 488385596,
+                "Size": {
+                  "X": 108.0,
+                  "Y": 61.0
+                },
+                "Name": "time_2",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "PlistSubImage",
+                  "Path": "timeProgreesdikuang.png",
+                  "Plist": "g_ui.plist"
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleY": 1.0
+                },
+                "Position": {
+                  "X": 130.0723,
+                  "Y": 66.2976
+                },
+                "Scale": {
+                  "ScaleX": 1.009,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.2032,
+                  "Y": 0.762
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": 130.0723,
+                "RightMargin": 219.9277,
+                "TopMargin": 20.7024,
+                "BottomMargin": 18.2976,
+                "Tag": 37,
+                "ActionTag": 1306659302,
+                "Size": {
+                  "X": 290.0,
+                  "Y": 48.0
+                },
+                "Name": "timeProgreesdikuang_3",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "PlistSubImage",
+                  "Path": "score.png",
+                  "Plist": "g_ui.plist"
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleY": 1.0
+                },
+                "Position": {
+                  "X": 443.4269,
+                  "Y": 73.9274
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.6929,
+                  "Y": 0.8497
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": 443.4269,
+                "RightMargin": 14.5731,
+                "TopMargin": 13.0726,
+                "BottomMargin": 13.9274,
+                "Tag": 38,
+                "ActionTag": -442081629,
+                "Size": {
+                  "X": 182.0,
+                  "Y": 60.0
+                },
+                "Name": "score_4",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "LabelText": "0000000000",
+                "LabelBMFontFile_CNB": {
+                  "Type": "Normal",
+                  "Path": "all_0.fnt",
+                  "Plist": ""
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 538.1133,
+                  "Y": 39.2099
+                },
+                "Scale": {
+                  "ScaleX": 0.7003,
+                  "ScaleY": 1.1675
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.8408,
+                  "Y": 0.4507
+                },
+                "PreSize": {
+                  "X": 0.4,
+                  "Y": 0.0583
+                },
+                "LeftMargin": 410.1133,
+                "RightMargin": -26.1133,
+                "TopMargin": 19.7901,
+                "BottomMargin": 11.2099,
+                "Tag": 39,
+                "ActionTag": -2047951975,
+                "Size": {
+                  "X": 256.0,
+                  "Y": 56.0
+                },
+                "Name": "Text_2",
+                "ctype": "TextBMFontObjectData"
+              },
+              {
+                "ProgressInfo": 100,
+                "ImageFileData": {
+                  "Type": "PlistSubImage",
+                  "Path": "timeprogress.png",
+                  "Plist": "g_ui.plist"
+                },
+                "AnchorPoint": {
+                  "ScaleY": 1.0
+                },
+                "Position": {
+                  "X": 135.0313,
+                  "Y": 61.8895
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.211,
+                  "Y": 0.7114
+                },
+                "PreSize": {
+                  "X": 0.4406,
+                  "Y": 0.0417
+                },
+                "LeftMargin": 135.0313,
+                "RightMargin": 222.9687,
+                "TopMargin": 25.1105,
+                "BottomMargin": 21.8895,
+                "Tag": 40,
+                "ActionTag": 1938406023,
+                "Size": {
+                  "X": 282.0,
+                  "Y": 40.0
+                },
+                "Name": "LoadingBar_1",
+                "ctype": "LoadingBarObjectData"
+              },
+              {
+                "LabelText": "000",
+                "LabelBMFontFile_CNB": {
+                  "Type": "Normal",
+                  "Path": "all3_0.fnt",
+                  "Plist": ""
+                },
+                "AnchorPoint": {
+                  "ScaleY": 1.0
+                },
+                "Position": {
+                  "X": 244.3451,
+                  "Y": 61.3634
+                },
+                "Scale": {
+                  "ScaleX": 0.6945,
+                  "ScaleY": 0.5005
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.3818,
+                  "Y": 0.7053
+                },
+                "PreSize": {
+                  "X": 0.175,
+                  "Y": 0.0833
+                },
+                "LeftMargin": 244.3451,
+                "RightMargin": 283.6549,
+                "TopMargin": 25.6366,
+                "BottomMargin": -18.6366,
+                "CallBackType": "Touch",
+                "Tag": 41,
+                "ActionTag": -32415145,
+                "Size": {
+                  "X": 112.0,
+                  "Y": 80.0
+                },
+                "Name": "Text_3",
+                "ctype": "TextBMFontObjectData"
+              }
+            ],
+            "ActionTag": 1456930971,
+            "Size": {
+              "X": 640.0,
+              "Y": 87.0
+            },
+            "Name": "upBar_1",
+            "ctype": "SpriteObjectData"
+          }
+        ],
+        "Size": {
+          "X": 0.0,
+          "Y": 0.0
+        },
+        "Name": "Node",
+        "ctype": "SingleNodeObjectData"
+      },
+      "UsedResources": [
+        "all_0.fnt",
+        "all_0.png",
+        "all3_0.fnt",
+        "all3_0.png",
+        "g_ui.plist",
+        "g_ui.png"
+      ],
+      "ctype": "GameProjectData"
+    }
+  },
+  "Type": "Node"
+}

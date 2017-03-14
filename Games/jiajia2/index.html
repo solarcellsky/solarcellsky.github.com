@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="page" content=",SALE,2015092904,INDEX," />
+    <title>分期乐二周年，全民来砍价！</title>
+    <link href="res/css/m_global/m_global.css?v=15c8692646734f74f564122dff588f4f" rel="stylesheet" media="screen">
+    <link href="res/2015092904/css/style.css?v=29d22b35faaf1af8d7f9912c1fa4e5b3" rel="stylesheet" media="screen">
+</head>
+
+<body>
+    <script>
+    //移动端html计算基数
+    (function(doc, win) {
+        var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function() {
+                var clientWidth = docEl.clientWidth > 640 ? 640 : docEl.clientWidth;
+                if (!clientWidth) return;
+                docEl.style.fontSize = 20 * (clientWidth / 320) + "px";
+            };
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+    </script>
+    <!--[[页面结构-->
+    <!--
+        加载：./res/sale/2015092904/img/ld_bg.jpg
+              ./res/sale/2015092904/img/ld_shine.png
+              ./res/sale/2015092904/img/ld.png
+              ./res/sale/2015092904/img/ldp.png
+        首屏：./res/sale/2015092904/img/insbg1.png
+              ./res/sale/2015092904/img/instit1.png
+              ./res/sale/2015092904/img/insbg2.png
+              ./res/sale/2015092904/img/instit2.png
+              ./res/sale/2015092904/img/sz1.png（数字这里从sz0.ong到sz9.png）
+              ./res/sale/2015092904/img/ins1.png
+              ./res/sale/2015092904/img/ins2.png
+              ./res/sale/2015092904/img/ins3.png
+              ./res/sale/2015092904/img/kan.png
+    -->
+    <article class="loading fn-pr fx1">
+        <img class="imgauto" src="./res/sale/2015092904/img/ld_bg.jpg">
+        <img class="shine fn-pa imgauto" src="./res/sale/2015092904/img/ld_shine.png">
+        <!-- 加载中的动画 -->
+        <div class="finish js-section">
+            <div class="person ani-z"></div>
+            <img class="ld tl fn-pa imgauto" src="./res/sale/2015092904/img/ld.png">
+            <p class="prog fn-pa"><span id="load_process">0</span>%···</p>
+        </div>
+        <!-- 加载完首页的动画，加载完删除hide添加on类名 -->
+        <div class="sec-index hide fn-pa js-section js-bargain-btn" id="index_section">
+            <div class="sec-one">
+                <img class="imgauto" src="./res/sale/2015092904/img/insbg1.png">
+                <div class="op">
+                    <img class="tit1 fn-pa" src="./res/sale/2015092904/img/instit1.png">
+                    <div class="ins-1 ani-z"></div>
+                </div>
+            </div>
+            <div class="sec-two">
+                <div class="ins-2 ani-z"></div>
+            </div>
+            <div class="sec-three fn-pa">
+                <img class="insbg imgauto fn-pa" src="./res/sale/2015092904/img/insbg2.png">
+                <div class="op">
+                    <div class="ins-3 ani-z">
+                        <img class="tit2 fn-pa" src="./res/sale/2015092904/img/instit2.png">
+                        <div class="num">
+                            <img src="./res/sale/2015092904/img/sz2.png">
+                            <img src="./res/sale/2015092904/img/sz8.png">
+                            <img src="./res/sale/2015092904/img/sz9.png">
+                            <img src="./res/sale/2015092904/img/sz7.png">
+                            <img src="./res/sale/2015092904/img/sz2.png">
+                        </div>
+                        <a class="kan" href="./launch.html" id="bargain_btn"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+    <!-- 默认播放按钮，停止music-block添加m-stop类名，无法操作audio样式 -->
+    <div class="music-block m-stop js-bg-audio-btn">
+        <audio loop="loop" autoplay="autoplay" id="bg_audio">
+            <source src="res/sale/2015092904/img/bg-music.mp3" type="audio/mpeg" />
+        </audio>
+    </div>
+    <!--页面结构]]-->
+
+    <input type="hidden" id="is_login" value="0" />
+    <script charset="utf-8" type="text/javascript" src="res/seajs/sea.js"></script>
+    <script charset="utf-8" type="text/javascript" src="res/seajs/zepto.min.js"></script>
+    <script type="text/javascript">
+    // document.domain = './';
+    var G_USER_INFO = {};
+    G_USER_INFO['isLogin'] = 0;
+
+    // seajs config
+    seajs.config({
+        base: './res/'
+    });
+
+    //是否是在App端打开（目前只支持IOS）
+    var G_IS_APP = false;
+    var G_PLATFORM = "";
+
+    seajs.use(['widget/weixin', 'widget/util', 'js/lazyload.js'], function(Weixin, Util, Lazyload) {
+        //全局商品详情页面跳转处理
+        $(document).on($.CLICK, '[data-app-sku-id]', function() {
+            var sku_id = $(this).data('app-sku-id'),
+                stat = $('meta[name=page]').attr('content');
+            stat && $.Stat.clickStat(sku_id);
+            if (!sku_id) {
+                return true;
+            }
+            Util.locationHref('http://m.fenqile.com/app/product/view/' + sku_id + '.html');
+        });
+        //图片懒惰加载
+        $("body").find("img[data-original]").lazyload({
+            effect: 'fadeIn'
+        });
+    });
+    //懒惰加载添加默认图片
+    $('[data-original]').each(function() {
+        if (!$(this).prop('src') && $(this).data('default-img') == 1) {
+            $(this).prop('src', 'res/img/global/default_bg.png');
+        }
+    });
+    //关闭弹层
+    $('.js-close-layer').on($.CLICK, function(e) {
+        e.preventDefault();
+        $('.js-layer').addClass('hide');
+    });
+    //显示指定弹层
+    $('.js-show-layer-btn').on($.CLICK, function(e) {
+        e.preventDefault();
+        var selector = $(this).data('selector');
+        $('.js-layer').addClass('hide');
+        $(selector).removeClass('hide');
+    });
+    (function() {
+        var G_HIDE_CLS = 'hide';
+        var touch = {};
+        var is_show_head_nav = false;
+        //滚动一定距离才显示头部导航栏
+        $(window).bind("scroll", function() {
+            var top = $(window).scrollTop();
+            if (top < 250) { //隐藏
+                is_show_head_nav = false;
+                $('.js-head-nav-bar').addClass(G_HIDE_CLS);
+            } else { //无需隐藏
+                is_show_head_nav = true;
+            }
+        });
+        //头部和底部导航栏
+        $(document).on('touchstart', function(e) {
+            touch.x1 = e.touches[0].clientX;
+            touch.y1 = e.touches[0].clientY;
+        });
+        $(document).on('touchmove', function(e) {
+            touch.x2 = e.touches[0].clientX;
+            touch.y2 = e.touches[0].clientY;
+            if (touch.y2 - touch.y1 > 30) {
+                is_show_head_nav && $('.js-head-nav-bar').addClass(G_HIDE_CLS);
+                $('.js-bottom-nav-bar').removeClass(G_HIDE_CLS);
+            }
+            if (touch.y1 - touch.y2 > 30) {
+                is_show_head_nav && $('.js-head-nav-bar').removeClass(G_HIDE_CLS);
+                $('.js-bottom-nav-bar').addClass(G_HIDE_CLS);
+            }
+        });
+        $(document).on('touchend', function(e) {
+            touch.x1 = -1;
+            touch.y1 = -1;
+        });
+        //点击导航栏链接高亮
+        $('.js-nav-bar').on($.CLICK, 'a', function() {
+            $('.js-nav-bar a').removeClass('on');
+            $(this).addClass('on');
+        });
+        //返回顶部
+        seajs.use(['js/mod/gotop.js'], function(Gotop) {
+            Gotop.init();
+        });
+
+    })();
+    </script>
+
+    <script charset="utf-8" type="text/javascript" src="res/2015092904/js/index.js?v=338c1e450c06a744e4b3950b88d86a82"></script>
+</body>
+
+</html>

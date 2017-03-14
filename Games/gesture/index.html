@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script language="javascript">
+        document.write('<meta name="viewport" content="width=640, minimum-scale = '+window.screen.width/640+', maximum-scale = '+window.screen.width/640+', target-densitydpi=device-dpi">');
+    </script>
+    <meta name="msapplication-tap-highlight" content="no">
+    <style>
+    body{margin:0px; overflow:hidden; background:#000}
+    .abs{position:absolute}
+    .fix{position:fixed}
+    .pt{ background-color:transparent; border-color:transparent;}
+    </style>
+    <title>特别的手势给特别的你</title>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="js/share.js"></script>
+    <script src="js/minified/TweenMax.min.js"></script>
+    <script src="js/easeljs-0.8.1.min.js"></script>
+    <script src="js/tweenjs-0.6.1.min.js"></script>
+    <script src="js/movieclip-0.8.1.min.js"></script>
+    <script src="js/preloadjs-0.6.1.min.js"></script>
+    <script src="js/soundjs-0.6.1.min.js"></script>
+    <script src="s0.js"></script>
+    <script src="s1.js"></script>
+    <script src="s2.js"></script>
+    <script src="js/main.js"></script>
+</head>
+
+<body style="margin:0px;">
+    <canvas id="canv" class="abs" width="640" height="1040" style="background-color:#000;"></canvas>
+    <input id="custom" class="abs pt" type="text" maxlength="9" value="我想自己填" style="visibility:hidden; top: 444px; left: 115px;font-size:30px; color:#747474; width:380px; height:30px; text-align:center;">
+    <input id="nick" class="abs pt" type="text" maxlength="9" style="visibility:hidden; top: 796px; left: 245px;font-size:24px; color:#FFF; width:280px; height:24px;">
+    <div id="auBtn" class="abs" style="left:555px; top:30px; width:55px; height:55px; display:none; background-image:url(img/auImg.png); background-position:0px 0px"></div>
+    <audio id="bgm" src="sounds/bgm.mp3" preload="auto" loop></audio>
+    <div id="HVTip" class="abs" style="z-index:1;visibility:hidden; background-color:#1B1A20;background-image:url(img/HVtip.png); background-position:center center; background-repeat:no-repeat;background-size:160px 150px"></div>
+</body>
+
+</html>

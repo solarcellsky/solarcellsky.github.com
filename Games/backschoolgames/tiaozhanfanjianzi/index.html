@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>挑战繁简字</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link href="css/css.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="wrap" style="height:100%; overflow:visible;">
+        <!-- one begin -->
+        <div class="box01" id="wbegin">
+            <div class="cont">
+                <div class="font"><img src="images/logo45300.png" width="153" height="153"></div>
+                <div class="text">
+                    <div class="t01">挑战你认识多少个繁体字</div>
+                    <div class="t02">从6个繁体字中选出正确的
+                        <br>10秒不出手就算输</div>
+                </div>
+                <div class="btn" id="start"></div>
+            </div>
+        </div>
+        <!-- one end -->
+        <!-- g begin -->
+        <div class="box02" id="main" style="display:none;">
+            <div class="font"></div>
+            <div class="time"><span>10</span>秒</div>
+            <div class="flist">
+                <ul id="selects_box">
+                    <li id='s_0' class="cell"></li>
+                    <li id='s_1' class="cell"></li>
+                    <li id='s_2' class="cell"></li>
+                    <li id='s_3' class="cell"></li>
+                    <li id='s_4' class="cell"></li>
+                    <li id='s_5' class="cell"></li>
+                </ul>
+            </div>
+        </div>
+        <!-- g end -->
+        <!-- e begin -->
+        <div class="box03" id="wend" style="display:none;">
+            <div class="cont">
+                <div class="lose" id="text_pic">
+                    <div class="pic"></div>
+                    <div class="text" id="text_top"></div>
+                    <div class="txt" id="text_bottom"></div>
+                    <div class="txt" id="text_end" style="display:black;"></div>
+                </div>
+                <div class="bcot">
+                    <div class="btn01" id="tryagain">再来一把</div>
+                    <div id="whshare" class="btn02">炫耀才华</div>
+                </div>
+            </div>
+            <!-- e end -->
+        </div>
+        <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1409 @@
+.bean3_box {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+.bean3_box img {
+	width: 100%;
+}
+.bean3_text {
+	position: absolute;
+	width: 62.03125%;
+	top: 0;
+	left: 18.98%;
+}
+.bean3_button1 {
+	position: absolute;
+	width: 58.4375%;
+	left: 20.78125%;
+	top: 32.4%;
+}
+.bean3_button2 {
+	position: absolute;
+	width: 58.4375%;
+	left: 20.78125%;
+	top: 46.827%;
+}
+.bean3_button3 {
+	position: absolute;
+	width: 58.4375%;
+	left: 20.78125%;
+	top: 60.96%;
+}
+.bean3_button4 {
+	position: absolute;
+	width: 21.71875%;
+	left: 39.14%;
+	bottom: 2%;
+}
+/*bean5*/
+
+.bean5_box {
+	position: relative;
+	width: 100%;
+}
+.bean5_box img {
+	width: 100%;
+}
+.bean5_point {
+	position: absolute;
+	width: 35.34%;
+	right: 0;
+	top: 2.4%;
+}
+.point_text {
+	position: absolute;
+	right: 2.47%;
+	top: 8.7%;
+	font-size: 1.2rem;
+	font-weight: bold;
+	color: #fff;
+}
+.bean_bg {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	z-index: 8;
+}
+.bean5_img_box {
+	position: absolute;
+	width: 94.375%;
+	left: 2.8125%;
+	top: 25%;
+}
+.bean5_img {
+	position: relative;
+	width: 100%;
+}
+.bean5_text {
+	position: absolute;
+	width: 57.12%;
+	left: 21.44%;
+	top: 15.789%;
+	z-index: 11;
+}
+.bean5_light {
+	position: absolute;
+	width: 54.3046%;
+	left: 24.85%;
+	top: 43.64%;
+	z-index: 10;
+}
+.bean5_cup {
+	position: absolute;
+	width: 18.87%;
+	left: 40.563%;
+	top: 61.684%;
+	z-index: 11;
+}
+.bean5_bowl {
+	position: absolute;
+	width: 33.6159%;
+	left: 34.69205%;
+	top: 84.42%;
+}
+/*bean6*/
+
+.bean6_img_box {
+	position: absolute;
+	top: 28.27%;
+	width: 94.375%;
+	left: 2.8125%;
+}
+.bean6_text {
+	position: absolute;
+	width: 57.22%;
+	left: 21.44%;
+	top: 20.89%;
+	z-index: 11;
+}
+.bean6_light {
+	position: absolute;
+	width: 60.596%;
+	left: 20.1%;
+	top: 44.842%;
+	z-index: 10;
+}
+.bean6_cup {
+	position: absolute;
+	width: 24%;
+	left: 37.98%;
+	top: 67.579%;
+	z-index: 11;
+}
+.bean6_bowl {
+	position: absolute;
+	width: 33.6159%;
+	left: 32.69205%;
+	top: 85.263%;
+}
+/*bean7*/
+
+.bean7_img_box {
+	position: absolute;
+	width: 94.84375%;
+	left: 2.578125%;
+	top: 27.8846%;
+}
+.bean7_text {
+	position: absolute;
+	width: 73.64%;
+	left: 13.179%;
+	top: 16.78%;
+	z-index: 11;
+}
+.bean7_light {
+	position: absolute;
+	width: 67.38%;
+	left: 16.3%;
+	top: 35.51%;
+	z-index: 10;
+}
+.bean7_cushaw {
+	position: absolute;
+	top: 61.3%;
+	width: 22.734%;
+	left: 38.6%;
+	z-index: 11;
+}
+.bean7_bow {
+	position: absolute;
+	width: 33.6159%;
+	left: 32.69205%;
+	top: 84.1%;
+}
+/*bean8*/
+
+.bean8_text {
+	position: absolute;
+	width: 82.03125%;
+	left: 8.984%;
+	top: 9.66%;
+	z-index: 11;
+}
+.bean8-redtext {
+	position: absolute;
+	width: 47.446%;
+	left: 26.276%;
+	top: 50.45%;
+}
+.bean8_light {
+	position: absolute;
+	width: 67.38%;
+	left: 16.3%;
+	top: 37.51%;
+	z-index: 10;
+}
+.bean8_witch {
+	position: absolute;
+	top: 61.3%;
+	width: 22.734%;
+	left: 37.06%;
+	z-index: 11;
+}
+.bean8_bow {
+	position: absolute;
+	width: 33.6159%;
+	left: 32.69205%;
+	top: 84.1%;
+}
+/*bean9*/
+
+.bean9_text {
+	position: absolute;
+	width: 63.75%;
+	left: 18.125%;
+	top: 8.173%;
+}
+.bean9_button {
+	position: absolute;
+	width: 76.95%;
+	left: 11.52%;
+	bottom: 8.25%;
+}
+.bean9_result_box {
+	position: absolute;
+	width: 100%;
+	top: 42.19%;
+}
+.bean9_result {
+	position: relative;
+	width: 100%;
+	text-align: center;
+	height: 4rem;
+	line-height: 4rem;
+	color: #fff;
+	font-size: 3.5rem;
+}
+.bean9_img {
+	position: absolute;
+	width: 25.3125%;
+	left: 22.3%;
+	bottom: 22.59%;
+}
+.bean9_num {
+	position: absolute;
+	left: 47.65%;
+	top: 71.8%;
+	color: #fff;
+	font-size: 2rem;
+	font-weight: bold;
+}
+.bean9_resultHigh_box {
+	position: absolute;
+	width: 44.6875%;
+	left: 27.65625%;
+	top: 25.96%;
+}
+.bean9_resultHigh {
+	position: relative;
+	width: 100%;
+	text-align: center;
+	color: #a6937c;
+	font-size: 1rem;
+}
+.bean9_bowl {
+	position: absolute;
+	width: 100%;
+	top: 38.96%;
+}
+/*bean10*/
+
+.bean10_img {
+	position: absolute;
+	width: 83.4375%;
+	left: 8.2815%;
+	top: 10.57%;
+}
+.bean10_button1 {
+	position: absolute;
+	width: 57.8125%;
+	left: 21.09%;
+	bottom: 23.076%
+}
+.bean10_bg_box {
+	position: absolute;
+	width: 95.46%;
+	left: 4.53%;
+	top: 19.903%;
+}
+.bean10_bg {
+	position: relative;
+	width: 100%;
+}
+.bean10_bg input {
+	color: #7c7764;
+	background: #fcfbd4;
+	font-size: 0.9rem;
+	padding-left: 3%;
+	border-radius: 5px;
+	border: 1px solid #9b997c;
+	height: 2.2rem;
+	line-height: 2.2rem;
+}
+.bean10_bg_img {
+	position: absolute;
+	width: 66.448%;
+	left: 16.775%;
+	top: 12.75%;
+}
+.bean_mobile_text {
+	position: absolute;
+	width: 38.46%;
+	left: -9.1%;
+	top: 63.5%;
+}
+.bean10_mobile {
+	position: absolute;
+	width: 43%;
+	right: 22.5%;
+	top: 61.57%;
+}
+.bean10_password {
+	position: absolute;
+	width: 54%;
+	left: 4.9%;
+	top: 52.63%;
+}
+.bean10_op {
+	position: absolute;
+	width: 27.98%;
+	left: 63.666%;
+	top: 53.58%;
+}
+.bean10_getButton {
+	position: absolute;
+	width: 54%;
+	left: 23%;
+	bottom: 12.759%;
+}
+.bean10_1img {
+	position: absolute;
+	width: 100%;
+	top: 39.711%;
+}
+.bean10_text {
+	position: absolute;
+	width: 66.25%;
+	left: 16.875%;
+	top: 8.173%;
+}
+.bean_bg {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	z-index: 8;
+}
+.bean10_f_box {
+	position: absolute;
+	width: 95.46875%;
+	left: 2.265%;
+	top: 7.59%;
+}
+.gift-2 .bean10_f_box {
+	top: 18%;
+}
+.gift-2 .bean10_x {
+	/*top: 4%;*/
+}
+.bean10_ftext {
+	position: absolute;
+	width: 83.306%;
+	left: 8.346%;
+	top: 15.31%;
+}
+.bean10_ftext1 {
+	position: absolute;
+	width: 83.306%;
+	left: 8.346%;
+	top: 16.173%;
+}
+.bean10_give {
+	position: absolute;
+	width: 10.8%;
+	left: 17.185%;
+	top: 35.72%;
+	z-index: 9;
+}
+.bean10_give1 {
+	position: absolute;
+	width: 10.8%;
+	left: 19.375%;
+	top: 42.74%;
+}
+.bean10_greens {
+	position: absolute;
+	width: 70.05%;
+	left: 14.975%;
+	top: 37.16%;
+}
+.bean10_greens1 {
+	position: absolute;
+	width: 57.8125%;
+	left: 21.09375%;
+	top: 30.143%;
+}
+.bean10_wupo {
+	position: absolute;
+	width: 94.3%;
+	left: -2%;
+	top: -18%;
+}
+.bean10_x {
+	position: absolute;
+	width: 6.546%;
+	right: 5%;
+}
+.bean10_button {
+	position: absolute;
+	width: 54.173%;
+	left: 22.91%;
+	bottom: 9.09%;
+}
+/*redbean11*/
+
+.bean11_red {
+	position: absolute;
+	width: 70.3125%;
+	left: 14.84%;
+	top: 14.78%;
+}
+/*orangbean12*/
+
+.bean12_orange {
+	position: absolute;
+	width: 95.3125%;
+	left: 2.34375%;
+	top: 8.077%;
+}
+.bean12_orange_bowl {
+	position: absolute;
+	width: 84.6875%;
+	top: 39.423%;
+	left: 7.65625%;
+}
+.bean12_orange_img {
+	position: absolute;
+	width: 64.53125%;
+	left: 17.73%;
+	top: 7.78%;
+}
+.bean12_orange_button {
+	position: absolute;
+	width: 39.6875%;
+	left: 30.15625%;
+	bottom: 5.98%;
+}
+/*bean12-yellow*/
+
+.bean12_yellow_img {
+	position: absolute;
+	width: 56.137%;
+	left: 21.93%;
+	top: 4.7%;
+}
+.bean12_yellow_bowl {
+	position: absolute;
+	width: 29.62%;
+	left: -3%;
+	top: -6%;
+}
+/*bean13*/
+
+.bean13_text {
+	position: absolute;
+	width: 64.53125%;
+	left: 17.734%;
+	top: 3.846%;
+}
+.bean13_img {
+	position: absolute;
+	width: 100%;
+	top: 18.557%;
+}
+.bean13_button {
+	position: absolute;
+	width: 21.71875%;
+	left: 39.14%;
+	bottom: 14.423%;
+}
+.bean13_turn1 {
+	position: absolute;
+	width: 21.40625%;
+	left: 0;
+	top: 3.937%;
+}
+.bean13_turn2 {
+	position: absolute;
+	width: 21.40625%;
+	left: 50%;
+	top: 3.937%;
+}
+.bean13_turn3 {
+	position: absolute;
+	width: 21.40625%;
+	left: 30.5625%;
+	top: 53.07%;
+}
+.bean13_turn4 {
+	position: absolute;
+	width: 21.40625%;
+	left: 46.25%;
+	top: 83.622%;
+}
+.bean13_bottomText {
+	position: absolute;
+	width: 25.15625%;
+	left: 37.42%;
+	bottom: 5.48%;
+}
+.bean13_fimg {
+	position: absolute;
+	width: 100%;
+	top: 0;
+}
+.share-animite {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	bottom: 0;
+	background: url(../img/bean13-fimg1.png) no-repeat center bottom/100% auto;
+	height: 10%;
+}
+.bean13_1text {
+	position: absolute;
+	width: 80%;
+	left: 10%;
+	top: 6.82%;
+}
+.bean13_1button {
+	position: absolute;
+	width: 18.4375%;
+	right: 3.125%;
+	top: 2.8846%;
+}
+.share-before .bean13_1button {
+	position: absolute;
+	width: 37.343%;
+	right: 31.32%;
+	top: 81.8846%;
+}
+.bean13_1img {
+	position: absolute;
+	width: 57.812%;
+	left: 21.093%;
+	top: 46.615%;
+	z-index: 3;
+}
+.bean13_point {
+	position: absolute;
+	width: 51.5625%;
+	left: 24.21875%;
+	bottom: 3.44%;
+}
+.bean13_1light {
+	position: absolute;
+	width: 100%;
+	top: 9.038%;
+}
+/*orangebean14*/
+
+/*yellowbean14*/
+
+/*bean15*/
+
+.bean15_img {
+	position: absolute;
+	width: 100%;
+	top: 23.0769%;
+}
+.bean15_text {
+	position: absolute;
+	width: 64.0642%;
+	left: 17.968%;
+	top: 44.038%;
+	z-index: 10;
+}
+.bean15_two {
+	position: absolute;
+	width: 58.46875%;
+	left: 20.7656%;
+	top: 52.596%;
+	z-index: 10;
+}
+.bean15_light {
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	z-index: 9;
+}
+/*bean17*/
+
+.bean17_text_box {
+	position: absolute;
+	width: 100%;
+	top: 11.25%;
+}
+.bean17_point_box {
+	position: absolute;
+	width: 100%;
+	top: 6%;
+}
+.bean17_point {
+	position: relative;
+	width: 100%;
+	text-align: center;
+	color: #fff;
+	font-size: 1rem;
+	height: 1.8rem;
+	line-height: 1.8rem;
+}
+.bean17_number {
+	font-weight: normal;
+	font-size: 1.2rem;
+}
+.bean17_text {
+	position: absolute;
+	width: 82.03125%;
+	left: 8.98%;
+	top: 25.38%;
+}
+.bean17_name {
+	font-weight: normal;
+}
+.bean17_red {
+	position: absolute;
+	width: 50%;
+	left: 0;
+	top: 39.04%;
+	height: 32%;
+	background: url(../img/bean17-red.png) no-repeat center top/100% auto;
+}
+.bean17_orange {
+	position: absolute;
+	width: 50%;
+	right: 0;
+	top: 39.04%;
+}
+.bean17_blue {
+	position: absolute;
+	width: 50%;
+	left: 0;
+	bottom: 0;
+}
+.bean17_yellow {
+	position: absolute;
+	width: 50%;
+	right: 0;
+	bottom: 0;
+}
+.bean17_redimg {
+	position: absolute;
+	width: 21.5625%;
+	left: 0;
+	top: 40.096%;
+}
+.bean17_orangeimg {
+	position: absolute;
+	width: 21.5625%;
+	right: 29.218%;
+	top: 40.096%;
+}
+.bean17_blueimg {
+	position: absolute;
+	width: 21.5625%;
+	left: 30.3125%;
+	top: 70.385%;
+}
+.bean17_yellowimg {
+	position: absolute;
+	width: 21.5625%;
+	left: 46.41%;
+	top: 88.846%;
+}
+/*bean18*/
+
+.bean18_text {
+	position: absolute;
+	width: 94.843%;
+	left: 2.578%;
+	top: 7.211%;
+}
+.bean18_img {
+	position: absolute;
+	width: 100%;
+	top: 21.03125%;
+}
+.bean18_button {
+	position: absolute;
+	width: 58.75%;
+	left: 20.625%;
+	top: 87%;
+}
+/*bean20*/
+
+.bean20_text {
+	position: absolute;
+	width: 100%;
+	top: 7.211%;
+}
+/*bean26*/
+
+.bean26_box {
+	position: absolute;
+	width: 95.15625%;
+	left: 2.421875%;
+	top: 30.1923%;
+}
+.bean26_text {
+	position: absolute;
+	width: 58.456%;
+	left: 20.77%;
+	top: 22.52%;
+}
+.bean26_dc_box {
+	position: absolute;
+	width: 100%;
+	top: 40.289%;
+}
+.bean26_dc {
+	position: relative;
+	width: 75.533%;
+	margin: 0 auto;
+}
+.bean26_dc li {
+	position: relative;
+	width: 23.056%;
+	margin-right: 2%;
+	float: left;
+}
+.bean26_dc li:nth-child(4n) {
+	margin-right: 0;
+}
+.bean26_day_box {
+	position: absolute;
+	width: 100%;
+	top: 14.53%;
+}
+.bean26_day {
+	position: relative;
+	text-align: center;
+	font-size: 2.5rem;
+	font-weight: bold;
+	color: #fff;
+}
+.bean26_line {
+	position: absolute;
+	width: 100%;
+	top: 42.3%;
+	z-index: 9;
+}
+/*hean27*/
+
+.bean27_img {
+	position: absolute;
+	width: 83.4375%;
+	left: 8.28152%;
+	top: 9.615%;
+}
+.bean27_button {
+	position: absolute;
+	width: 51.5625%;
+	left: 24.21875%;
+	bottom: 23.6538%;
+}
+.bean27_bg_box {
+	position: absolute;
+	width: 95.46875%;
+	left: 2.265%;
+	top: 19.23%;
+}
+.bean27_bg_box input {
+	border: 1px solid #999575;
+	border-radius: 5px;
+	background: #fdfacf;
+	color: #4d473e;
+	font-size: 0.8rem;
+	height: 2rem;
+	padding-left: 2%;
+}
+.bean27_ftext {
+	position: absolute;
+	width: 44.517%;
+	left: 27.74%;
+	top: 11.5%;
+}
+.bean27_mobile {
+	position: absolute;
+	width: 38.625%;
+	left: 5.56%;
+	top: 34.16%;
+}
+.hean27_text_img {
+	position: absolute;
+	width: 42.5%;
+	left: 28.75%;
+	top: 8.35%;
+}
+.bean27_mobile_text {
+	position: absolute;
+	width: 38.46%;
+	left: 48.9%;
+	top: 32.15%;
+}
+.bean27_password {
+	position: absolute;
+	width: 53.68%;
+	top: 44.67%;
+	left: 4.9%;
+}
+.bean27_op {
+	position: absolute;
+	width: 27.987%;
+	top: 45.09%;
+	right: 6.55%;
+}
+.bean27_getButton {
+	position: absolute;
+	width: 54.337%;
+	left: 22.83%;
+	top: 59.77%;
+}
+.bean27_gua {
+	position: absolute;
+	width: 46.32%;
+	left: -3%;
+	bottom: -2%;
+}
+.bean27_number {
+	position: absolute;
+	width: 13.09%;
+	left: 47.62%;
+	top: 20.69%;
+	color: #ec0909;
+	font-weight: bold;
+	font-size: 1.5rem;
+}
+/*bean28*/
+
+.bean28_button1 {
+	position: absolute;
+	width: 25.78%;
+	left: 54.84%;
+	top: 20.48%;
+}
+.bean28_button2 {
+	position: absolute;
+	width: 23.4375%;
+	right: 8.59375%;
+	top: 25.288%;
+}
+.bean28_button3 {
+	position: absolute;
+	width: 72.65625%;
+	left: 13.67%;
+	top: 35.19%;
+}
+.bean28_button4 {
+	position: absolute;
+	width: 72.65625%;
+	left: 13.67%;
+	top: 51.25%;
+}
+.bean28_button5 {
+	position: absolute;
+	width: 72.65625%;
+	left: 13.67%;
+	top: 67.019%;
+}
+.bean28_button6 {
+	position: absolute;
+	width: 51.5625%;
+	left: 24.21%;
+	bottom: 6.44%;
+}
+.bean28_text {
+	position: absolute;
+	width: 35.96%;
+	left: 32.02%;
+	top: 18.18%;
+}
+.bean28_img {
+	position: absolute;
+	width: 94.375%;
+	left: 2.8125%;
+	top: 30.673%;
+}
+.bean28_bowl {
+	position: absolute;
+	width: 40%;
+	left: -2%;
+	top: -15%;
+}
+.bean28_second_box {
+	position: absolute;
+	width: 60.54%;
+	left: 18.72%;
+	top: 23.368%;
+}
+.bean28_second {
+	position: absolute;
+	width: 100%;
+	top: 30%;
+}
+.bean28_number {
+	position: relative;
+	width: 100%;
+	text-align: center;
+	color: #5f402a;
+	font-size: 2rem;
+}
+.bean28_gua {
+	position: absolute;
+	width: 40.89%;
+	right: -1%;
+	bottom: -4%;
+}
+/*bean30*/
+
+.bean30_img {
+	position: absolute;
+	width: 52.81%;
+	left: 4.966%;
+	top: -21%;
+}
+.bean30_text {
+	position: absolute;
+	width: 45.52%;
+	left: 27.23%;
+	top: 32.84%;
+}
+.bean30_button {
+	position: absolute;
+	width: 67.38%;
+	left: 16.31%;
+	bottom: 16.84%;
+}
+/*ranking1*/
+
+.ranking1_nav_box {
+	position: absolute;
+	width: 100%;
+	top: 3.26%;
+}
+.ranking1_first {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 33.3%;
+}
+.ranking1_height {
+	position: absolute;
+	left: 33.3%;
+	top: 0;
+	width: 33.3%;
+}
+.ranking1_my {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 33.3%;
+}
+.ranking1_box {
+	position: absolute;
+    width: 97.5%;
+    left: 1.25%;
+    top: 16.35%;
+    height: 80%;
+}
+.ranking1 {
+	position: relative;
+    width: 100%;
+    float: left;
+    height: 100%;
+    overflow: auto;
+    display: block;
+}
+.ranking1 li {
+	position: relative;
+	width: 100%;
+}
+.ranking1_text {
+	position: absolute;
+	left: 4.4%;
+	top: 32.9%;
+	color: #fff;
+	font-size: 1.3rem;
+}
+.ranking_text {
+	position: absolute;
+	left: 0;
+	top: 30.9%;
+	color: #fff;
+	font-size: 1.2rem;
+	width: 60%;
+	text-align: center;
+}
+.ranking1_num {
+	font-weight: normal;
+	display: inline-block;
+	padding-bottom: 0.5rem;
+}
+.ranking1-name {
+	position: absolute;
+    left: 25.64%;
+    top: 21.9%;
+    color: #fff;
+    font-size: 1.2rem;
+    width: 50%;
+    height: 63%;
+    /* overflow: hidden; */
+    word-break: break-all;
+    line-height: 2rem;
+}
+.ranking2_myRanking .ranking1-name{
+	left: 30.64%;
+}
+.ranking_address {
+	position: absolute;
+	right: 0;
+	top: 30.9%;
+	color: #fff;
+	font-size: 1.2rem;
+	width: 35%;
+	text-align: center;
+}
+.ranking1_address {
+	position: absolute;
+	right: 0;
+	top: 26.9%;
+	color: #fff;
+	font-size: 1.3rem;
+	width: 28%;
+	text-align: center;
+}
+/*ranking2*/
+
+.ranking2_nav_box {
+	position: absolute;
+	top: 3.26%;
+	width: 100%;
+}
+.ranking2_box {
+	position: absolute;
+	width: 97.5%;
+	left: 1.25%;
+	top: 22.35%;
+}
+.ranking2_first {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 33.3%;
+}
+.ranking2_height {
+	position: absolute;
+	left: 33.3%;
+	top: 0;
+	width: 33.3%;
+}
+.ranking2_my {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 33.3%;
+}
+.ranking2_text {
+	position: absolute;
+	width: 25.29%;
+	left: 0;
+	top: 0;
+}
+.mainbody {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	height: 100%;
+	left: 0;
+}
+.rule-btn {
+	position: absolute;
+	width: 22.093%;
+	right: 0;
+	top: 3.461%;
+}
+.ms-btn {
+	position: absolute;
+	width: 22.093%;
+	right: 0;
+	top: 8%;
+}
+.list-btn {
+	position: absolute;
+	width: 22.093%;
+	right: 0;
+	top: 13%;
+}
+.start {
+	position: absolute;
+	width: 58.59%;
+	left: 20.703%;
+	bottom:5%;
+}
+.tip .close {
+	position: absolute;
+	width: 7%;
+	right: 5%;
+	top: 5%;
+	z-index: 9;
+}
+.ranking2_text1 {
+	position: absolute;
+	width: 68.28125%;
+	left: 15.859375%;
+	top: 51.538%;
+}
+.ranking2_text2 {
+	position: absolute;
+	width: 68.28125%;
+	left: 15.859375%;
+	top: 72.019%;
+}
+.ranking2_myRanking {
+	position: absolute;
+	width: 100%;
+	top: 59.423%;
+}
+.ranking2_button {
+	position: absolute;
+	width: 51.5625%;
+	left: 24.21875%;
+	bottom: 6.44%;
+}
+.rank_img {
+	position: absolute;
+	width: 42.8125%;
+	left: 28.59%;
+	top: 15.57%;
+}
+/*ranking2-1*/
+
+.ranking2_1 {
+	position: absolute;
+	width: 91.875%;
+	left: 4.0625%;
+	top: 71.057%;
+}
+/*play1*/
+
+.play1_stated {
+	position: absolute;
+	width: 21.71%;
+	right: 3.125%;
+	top: 1.826%;
+}
+.play1_text_img {
+	position: absolute;
+	width: 71.718%;
+	left: 14.14%;
+	top: 15.76%;
+}
+.play1_bg {
+	position: absolute;
+	width: 100%;
+	top: 35.288%;
+}
+.play1_bg_text {
+	position: absolute;
+	width: 75.625%;
+	top: 0;
+	left: 12.1875%;
+}
+.play1_img1 {
+	position: absolute;
+	width: 42.03125%;
+	left: 5.625%;
+	top: 39.38%;
+}
+.play1_squage1 {
+	position: absolute;
+	width: 7.5%;
+	left: 6.625%;
+	top: 66.73%;
+}
+.play1_img_text1 {
+	position: absolute;
+	width: 17.96%;
+	left: 30%;
+	top: 66.73%;
+}
+.play1_img2 {
+	position: absolute;
+	width: 42.03125%;
+	right: 5.625%;
+	top: 39.38%;
+}
+.play1_squage2 {
+	position: absolute;
+	width: 7.5%;
+	left: 51.09%;
+	top: 66.73%;
+}
+.play1_img_text2 {
+	position: absolute;
+	right: 5.625%;
+	width: 28.59%;
+	top: 66.73%;
+}
+.play1_button {
+	position: absolute;
+	width: 51.40625%;
+	left: 24.29%;
+	bottom:4%;
+}
+.play1_img {
+	position: absolute;
+	width: 71.4%;
+	left: 14.296%;
+	top: 31.057%;
+}
+/*play2*/
+
+.play2_bg {
+	position: absolute;
+	width: 100%;
+	top: 12.44%;
+}
+.play2_bg_text {
+	position: absolute;
+	width: 90.625%;
+	left: 4.6875%;
+	top: 0;
+}
+.play2_text_img {
+	position: absolute;
+	width: 75.156%;
+	left: 12.42%;
+	top: 25.11%;
+}
+/*play3*/
+
+.play3_bg_text {
+	position: absolute;
+	top: 0;
+	width: 89.53%;
+	left: 5.23%;
+}
+.play3_img {
+	position: relative;
+	max-width: 66.25%;
+	left: 16.875%;
+	top: 38.65%;
+}
+.play3_left_button {
+	position: absolute;
+	width: 9.84375%;
+	left: 2.34%;
+	top: 46.538%;
+}
+.play3_right_button {
+	position: absolute;
+	width: 9.84375%;
+	right: 2.34%;
+	top: 46.538%;
+}
+.play3_squae {
+	position: absolute;
+	width: 7.5%;
+	left: 8%;
+	top: 108%;
+}
+.play3_img_text {
+	position: absolute;
+	width: 65.5625%;
+	left: 18.4375%;
+	top: 108%;
+}
+.play3_text_img {
+	position: absolute;
+	width: 43.125%;
+	left: 28.4375%;
+	top: 22.8%;
+}
+/*play4*/
+
+.play4_img {
+	position: relative;
+	max-width: 65.3125%;
+	left: 17.343%;
+	top: 33.46%;
+}
+.play4_squae {
+	position: absolute;
+	width: 7.5%;
+	left: 31.03%;
+	top: 108%;
+}
+.play51_squae {
+	position: absolute;
+	width: 7.5%;
+	left: 31.03%;
+	top: 108%;
+}
+.play4_img_text {
+	position: absolute;
+	width: 11.718%;
+	left: 50.59%;
+	top: 107%;
+}
+.play4_city {
+	position: absolute;
+	left: 48.4375%;
+	width: 31.25%;
+	top: 105%;
+}
+.play4_city select {
+	position: relative;
+	width: 100%;
+	border-radius: 5px;
+	color: #404040;
+	font-size: 0.5rem;
+	height: 1.2rem;
+}
+.play4_town {
+	position: absolute;
+	left: 48.4375%;
+	width: 31.25%;
+	top: 116.87%;
+}
+.play4_town select {
+	position: relative;
+	width: 100%;
+	border-radius: 5px;
+	color: #404040;
+	font-size: 0.5rem;
+	height: 1.2rem;
+}
+/*play5*/
+
+.play5_img_text {
+	position: absolute;
+	width: 42.03%;
+	left: 40.0625%;
+	top: 109.596%;
+}
+.play5_img {
+	position: absolute;
+	width: 59.53%;
+	left: 20.23%;
+	top: 33.173%;
+}
+.play5_squae {
+	position: absolute;
+	width: 7.5%;
+	left: 29.68%;
+	top: 72.59%;
+}
+/*negativ*/
+
+.negativ_bg {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	z-index: 2;
+}
+.negativ_img {
+	position: absolute;
+	width: 100%;
+	top: 3%;
+}
+.negativ_button {
+	position: absolute;
+	width: 58.75%;
+	left: 20.625%;
+	bottom: 5.67%;
+}
+.negativ_number {
+	position: absolute;
+	left: 46.875%;
+	top: 60.86%;
+	width: 38.28125%;
+	color: #4972b0;
+	font-weight: bolder;
+	font-size: 3rem;
+}
+.add_img {
+	position: absolute;
+	width: 100%;
+	top: 6%;
+}
+.add_number {
+	position: absolute;
+	left: 53.875%;
+	top: 58.86%;
+	width: 38.28125%;
+	color: #ff6925;
+	font-weight: bolder;
+	font-size: 3rem;
+}

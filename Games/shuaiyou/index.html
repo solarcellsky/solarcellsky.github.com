@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html class="html_hidden">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title id="titId">甩油</title>
+    <link href="css/index.css?v=201411241628" rel="stylesheet" type="text/css">
+    <link href="css/common.css?v=201411241628" rel="stylesheet" type="text/css">
+</head>
+
+<body class="html_hidden">
+    <div class="dp_n"><img src="images/share.jpg"></div>
+    <div class="main mainBox_bg" id="mainBox" style="display: none; height: 826px;">
+        <div class="startGameTit bg"></div>
+        <div class="startGameBox">
+            <span class="startBtn" id="mainStartBtn"></span>
+            <div class="results">
+                <div class="info" id="info" style="padding-top: 76.5px;">
+                    <div class="ta_c">天呐~这不会是真的吧？
+                        <br><span class="co_or">小麦</span>居然用了30秒甩了<span class="co_or">199</span>斤？</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="menu" id="menu" style="display: none;">
+        <a class="mr_per_5" id="rule">活动规则</a>
+        <a class="mr_per_5 co_gr" href="http://www.iyunmai.com/m/index.html">即刻卖肉</a>
+        <a id="mainRankBtn">排行榜</a>
+    </div>
+    <div class="gameBox dp_n" id="gameBox" style="display: block; height: 826px;">
+        <div class="tags">
+            <span class="times bg" id="times">30 秒</span>
+            <span class="finish bg" id="finish">0 斤</span>
+        </div>
+        <div class="outerBox">
+            <div id="box" class="box bg">
+                <span class="fat bg" id="fat_bg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="mask" id="startBox" style="display: block;">
+        <div class="surTime bg"></div>
+        <div class="totalNum bg"></div>
+        <div class="upStart bg"></div>
+        <div class="handBox">
+            <span class="hand bg"></span>
+        </div>
+    </div>
+    <div class="mask op_0" id="rankBox">
+        <div class="rankBox bg">
+            <a class="close" id="closeRank"></a>
+            <table class="tab" border="0" cellspacing="0" cellpadding="0">
+                <thead>
+                    <tr>
+                        <th width="150">昵称</th>
+                        <th width="70">最好成绩</th>
+                        <th width="60">排名</th>
+                    </tr>
+                </thead>
+            </table>
+            <div class="tabBox" id="tabBox">
+                <table class="tab" id="rankTab" border="0" cellspacing="0" cellpadding="0">
+                    <tbody>
+                        <tr>
+                            <td width="150">李高</td>
+                            <td width="70">850</td>
+                            <td width="60">1</td>
+                        </tr>
+                        <tr>
+                            <td width="150">贾换英</td>
+                            <td width="70">833</td>
+                            <td width="60">2</td>
+                        </tr>
+                        <tr>
+                            <td width="150">huli</td>
+                            <td width="70">561</td>
+                            <td width="60">3</td>
+                        </tr>
+                        <tr>
+                            <td width="150">~白云:</td>
+                            <td width="70">491</td>
+                            <td width="60">4</td>
+                        </tr>
+                        <tr>
+                            <td width="150">刘杨</td>
+                            <td width="70">435</td>
+                            <td width="60">5</td>
+                        </tr>
+                        <tr>
+                            <td width="150"> HUANGYIDUAN</td>
+                            <td width="70">431</td>
+                            <td width="60">6</td>
+                        </tr>
+                        <tr>
+                            <td width="150">法蓝</td>
+                            <td width="70">429</td>
+                            <td width="60">7</td>
+                        </tr>
+                        <tr>
+                            <td width="150">ＦīSH</td>
+                            <td width="70">398</td>
+                            <td width="60">8</td>
+                        </tr>
+                        <tr>
+                            <td width="150">风</td>
+                            <td width="70">343</td>
+                            <td width="60">9</td>
+                        </tr>
+                        <tr>
+                            <td width="150">锅锅。</td>
+                            <td width="70">329</td>
+                            <td width="60">10</td>
+                        </tr>
+                        <tr>
+                            <td width="150">solf</td>
+                            <td width="70">326</td>
+                            <td width="60">11</td>
+                        </tr>
+                        <tr>
+                            <td width="150">l...</td>
+                            <td width="70">322</td>
+                            <td width="60">12</td>
+                        </tr>
+                        <tr>
+                            <td width="150">雷艳花</td>
+                            <td width="70">321</td>
+                            <td width="60">13</td>
+                        </tr>
+                        <tr>
+                            <td width="150">summer</td>
+                            <td width="70">318</td>
+                            <td width="60">14</td>
+                        </tr>
+                        <tr>
+                            <td width="150">笨笨笨莹莹</td>
+                            <td width="70">314</td>
+                            <td width="60">15</td>
+                        </tr>
+                        <tr>
+                            <td width="150"></td>
+                            <td width="70">305</td>
+                            <td width="60">16</td>
+                        </tr>
+                        <tr>
+                            <td width="150">朴灿烈😍</td>
+                            <td width="70">304</td>
+                            <td width="60">17</td>
+                        </tr>
+                        <tr>
+                            <td width="150">特攻007</td>
+                            <td width="70">302</td>
+                            <td width="60">18</td>
+                        </tr>
+                        <tr>
+                            <td width="150">Winnie</td>
+                            <td width="70">299</td>
+                            <td width="60">19</td>
+                        </tr>
+                        <tr>
+                            <td width="150">江叔叔</td>
+                            <td width="70">298</td>
+                            <td width="60">20</td>
+                        </tr>
+                        <tr>
+                            <td width="150">猴猴猴</td>
+                            <td width="70">296</td>
+                            <td width="60">21</td>
+                        </tr>
+                        <tr>
+                            <td width="150">迅迅周</td>
+                            <td width="70">296</td>
+                            <td width="60">22</td>
+                        </tr>
+                        <tr>
+                            <td width="150">🍁冰鸽</td>
+                            <td width="70">286</td>
+                            <td width="60">23</td>
+                        </tr>
+                        <tr>
+                            <td width="150">杨显峰</td>
+                            <td width="70">283</td>
+                            <td width="60">24</td>
+                        </tr>
+                        <tr>
+                            <td width="150">王大福</td>
+                            <td width="70">281</td>
+                            <td width="60">25</td>
+                        </tr>
+                        <tr>
+                            <td width="150">浩_Des</td>
+                            <td width="70">281</td>
+                            <td width="60">26</td>
+                        </tr>
+                        <tr>
+                            <td width="150">叶卓致</td>
+                            <td width="70">281</td>
+                            <td width="60">27</td>
+                        </tr>
+                        <tr>
+                            <td width="150">树袋熊</td>
+                            <td width="70">280</td>
+                            <td width="60">28</td>
+                        </tr>
+                        <tr>
+                            <td width="150">鸩羽千夜</td>
+                            <td width="70">279</td>
+                            <td width="60">29</td>
+                        </tr>
+                        <tr>
+                            <td width="150">俭聪_</td>
+                            <td width="70">278</td>
+                            <td width="60">30</td>
+                        </tr>
+                        <tr>
+                            <td width="150">全宇明</td>
+                            <td width="70">277</td>
+                            <td width="60">31</td>
+                        </tr>
+                        <tr>
+                            <td width="150">郭英杰</td>
+                            <td width="70">268</td>
+                            <td width="60">32</td>
+                        </tr>
+                        <tr>
+                            <td width="150">曹元超</td>
+                            <td width="70">267</td>
+                            <td width="60">33</td>
+                        </tr>
+                        <tr>
+                            <td width="150">Allyn</td>
+                            <td width="70">266</td>
+                            <td width="60">34</td>
+                        </tr>
+                        <tr>
+                            <td width="150">Lambo</td>
+                            <td width="70">262</td>
+                            <td width="60">35</td>
+                        </tr>
+                        <tr>
+                            <td width="150">濮帅</td>
+                            <td width="70">260</td>
+                            <td width="60">36</td>
+                        </tr>
+                        <tr>
+                            <td width="150">黄嘉</td>
+                            <td width="70">260</td>
+                            <td width="60">37</td>
+                        </tr>
+                        <tr>
+                            <td width="150">醒alice</td>
+                            <td width="70">260</td>
+                            <td width="60">38</td>
+                        </tr>
+                        <tr>
+                            <td width="150">Z H X</td>
+                            <td width="70">259</td>
+                            <td width="60">39</td>
+                        </tr>
+                        <tr>
+                            <td width="150">小黑、</td>
+                            <td width="70">258</td>
+                            <td width="60">40</td>
+                        </tr>
+                        <tr>
+                            <td width="150">刘凯</td>
+                            <td width="70">254</td>
+                            <td width="60">41</td>
+                        </tr>
+                        <tr>
+                            <td width="150"> 沈丶先森℡</td>
+                            <td width="70">254</td>
+                            <td width="60">42</td>
+                        </tr>
+                        <tr>
+                            <td width="150">lew</td>
+                            <td width="70">253</td>
+                            <td width="60">43</td>
+                        </tr>
+                        <tr>
+                            <td width="150">。</td>
+                            <td width="70">252</td>
+                            <td width="60">44</td>
+                        </tr>
+                        <tr>
+                            <td width="150">Wj</td>
+                            <td width="70">251</td>
+                            <td width="60">45</td>
+                        </tr>
+                        <tr>
+                            <td width="150">乐娴</td>
+                            <td width="70">250</td>
+                            <td width="60">46</td>
+                        </tr>
+                        <tr>
+                            <td width="150">林剑伟</td>
+                            <td width="70">244</td>
+                            <td width="60">47</td>
+                        </tr>
+                        <tr>
+                            <td width="150">静二</td>
+                            <td width="70">241</td>
+                            <td width="60">48</td>
+                        </tr>
+                        <tr>
+                            <td width="150">ice</td>
+                            <td width="70">241</td>
+                            <td width="60">49</td>
+                        </tr>
+                        <tr>
+                            <td width="150">只要米饭</td>
+                            <td width="70">241</td>
+                            <td width="60">50</td>
+                        </tr>
+                        <tr>
+                            <td width="150">____Rebecca°</td>
+                            <td width="70">241</td>
+                            <td width="60">51</td>
+                        </tr>
+                        <tr>
+                            <td width="150">蓝亦枫</td>
+                            <td width="70">238</td>
+                            <td width="60">52</td>
+                        </tr>
+                        <tr>
+                            <td width="150">棟棟</td>
+                            <td width="70">236</td>
+                            <td width="60">53</td>
+                        </tr>
+                        <tr>
+                            <td width="150">阿达</td>
+                            <td width="70">236</td>
+                            <td width="60">54</td>
+                        </tr>
+                        <tr>
+                            <td width="150">桀</td>
+                            <td width="70">235</td>
+                            <td width="60">55</td>
+                        </tr>
+                        <tr>
+                            <td width="150">张耕畅</td>
+                            <td width="70">234</td>
+                            <td width="60">56</td>
+                        </tr>
+                        <tr>
+                            <td width="150">寻爱&amp;旭</td>
+                            <td width="70">233</td>
+                            <td width="60">57</td>
+                        </tr>
+                        <tr>
+                            <td width="150">Mr.Mai</td>
+                            <td width="70">233</td>
+                            <td width="60">58</td>
+                        </tr>
+                        <tr>
+                            <td width="150">yazi</td>
+                            <td width="70">231</td>
+                            <td width="60">59</td>
+                        </tr>
+                        <tr>
+                            <td width="150">csjkiller</td>
+                            <td width="70">228</td>
+                            <td width="60">60</td>
+                        </tr>
+                        <tr>
+                            <td width="150">老湿sama</td>
+                            <td width="70">227</td>
+                            <td width="60">61</td>
+                        </tr>
+                        <tr>
+                            <td width="150">小心眼的小老虎</td>
+                            <td width="70">226</td>
+                            <td width="60">62</td>
+                        </tr>
+                        <tr>
+                            <td width="150">✨舍我其谁✨</td>
+                            <td width="70">222</td>
+                            <td width="60">63</td>
+                        </tr>
+                        <tr>
+                            <td width="150">Diors Man</td>
+                            <td width="70">221</td>
+                            <td width="60">64</td>
+                        </tr>
+                        <tr>
+                            <td width="150">白磊</td>
+                            <td width="70">220</td>
+                            <td width="60">65</td>
+                        </tr>
+                        <tr>
+                            <td width="150">谢群策（两条鱼）</td>
+                            <td width="70">219</td>
+                            <td width="60">66</td>
+                        </tr>
+                        <tr>
+                            <td width="150">俊敏</td>
+                            <td width="70">219</td>
+                            <td width="60">67</td>
+                        </tr>
+                        <tr>
+                            <td width="150">L‘’nn</td>
+                            <td width="70">219</td>
+                            <td width="60">68</td>
+                        </tr>
+                        <tr>
+                            <td width="150">mickyjw</td>
+                            <td width="70">219</td>
+                            <td width="60">69</td>
+                        </tr>
+                        <tr>
+                            <td width="150">周强</td>
+                            <td width="70">219</td>
+                            <td width="60">70</td>
+                        </tr>
+                        <tr>
+                            <td width="150">等风来</td>
+                            <td width="70">218</td>
+                            <td width="60">71</td>
+                        </tr>
+                        <tr>
+                            <td width="150">Roc Song</td>
+                            <td width="70">217</td>
+                            <td width="60">72</td>
+                        </tr>
+                        <tr>
+                            <td width="150">钟爱一生</td>
+                            <td width="70">217</td>
+                            <td width="60">73</td>
+                        </tr>
+                        <tr>
+                            <td width="150">憨憨</td>
+                            <td width="70">217</td>
+                            <td width="60">74</td>
+                        </tr>
+                        <tr>
+                            <td width="150">盛世共享</td>
+                            <td width="70">216</td>
+                            <td width="60">75</td>
+                        </tr>
+                        <tr>
+                            <td width="150">XRAYCHN</td>
+                            <td width="70">216</td>
+                            <td width="60">76</td>
+                        </tr>
+                        <tr>
+                            <td width="150">西多桑</td>
+                            <td width="70">215</td>
+                            <td width="60">77</td>
+                        </tr>
+                        <tr>
+                            <td width="150">☀herr.x</td>
+                            <td width="70">215</td>
+                            <td width="60">78</td>
+                        </tr>
+                        <tr>
+                            <td width="150">zhouhong</td>
+                            <td width="70">212</td>
+                            <td width="60">79</td>
+                        </tr>
+                        <tr>
+                            <td width="150">沐禾</td>
+                            <td width="70">212</td>
+                            <td width="60">80</td>
+                        </tr>
+                        <tr>
+                            <td width="150">刘洋</td>
+                            <td width="70">212</td>
+                            <td width="60">81</td>
+                        </tr>
+                        <tr>
+                            <td width="150">繁花如水落幕</td>
+                            <td width="70">212</td>
+                            <td width="60">82</td>
+                        </tr>
+                        <tr>
+                            <td width="150">晨一</td>
+                            <td width="70">212</td>
+                            <td width="60">83</td>
+                        </tr>
+                        <tr>
+                            <td width="150"> HXS🐰</td>
+                            <td width="70">212</td>
+                            <td width="60">84</td>
+                        </tr>
+                        <tr>
+                            <td width="150">不知所措</td>
+                            <td width="70">212</td>
+                            <td width="60">85</td>
+                        </tr>
+                        <tr>
+                            <td width="150">陈琳</td>
+                            <td width="70">211</td>
+                            <td width="60">86</td>
+                        </tr>
+                        <tr>
+                            <td width="150">Amy Xu</td>
+                            <td width="70">211</td>
+                            <td width="60">87</td>
+                        </tr>
+                        <tr>
+                            <td width="150">幸Fu不折叠</td>
+                            <td width="70">210</td>
+                            <td width="60">88</td>
+                        </tr>
+                        <tr>
+                            <td width="150">冰河</td>
+                            <td width="70">209</td>
+                            <td width="60">89</td>
+                        </tr>
+                        <tr>
+                            <td width="150">Jao_Wang</td>
+                            <td width="70">207</td>
+                            <td width="60">90</td>
+                        </tr>
+                        <tr>
+                            <td width="150">cherry👠✨</td>
+                            <td width="70">207</td>
+                            <td width="60">91</td>
+                        </tr>
+                        <tr>
+                            <td width="150">刘青</td>
+                            <td width="70">206</td>
+                            <td width="60">92</td>
+                        </tr>
+                        <tr>
+                            <td width="150">千千</td>
+                            <td width="70">206</td>
+                            <td width="60">93</td>
+                        </tr>
+                        <tr>
+                            <td width="150">⚡球型閃電⚡</td>
+                            <td width="70">205</td>
+                            <td width="60">94</td>
+                        </tr>
+                        <tr>
+                            <td width="150">野生皮卡丘⢭</td>
+                            <td width="70">204</td>
+                            <td width="60">95</td>
+                        </tr>
+                        <tr>
+                            <td width="150">小明</td>
+                            <td width="70">204</td>
+                            <td width="60">96</td>
+                        </tr>
+                        <tr>
+                            <td width="150">有我在</td>
+                            <td width="70">204</td>
+                            <td width="60">97</td>
+                        </tr>
+                        <tr>
+                            <td width="150">好奇害死猫丶</td>
+                            <td width="70">203</td>
+                            <td width="60">98</td>
+                        </tr>
+                        <tr>
+                            <td width="150">叶财勇</td>
+                            <td width="70">202</td>
+                            <td width="60">99</td>
+                        </tr>
+                        <tr>
+                            <td width="150">呵呵哒~健~</td>
+                            <td width="70">202</td>
+                            <td width="60">100</td>
+                        </tr>
+                        <tr>
+                            <td width="150">似水流年</td>
+                            <td width="70">202</td>
+                            <td width="60">101</td>
+                        </tr>
+                        <tr>
+                            <td width="150"> G•Sunny🇨🇳</td>
+                            <td width="70">201</td>
+                            <td width="60">102</td>
+                        </tr>
+                        <tr>
+                            <td width="150">芒果柳丁</td>
+                            <td width="70">201</td>
+                            <td width="60">103</td>
+                        </tr>
+                        <tr>
+                            <td width="150">Gage ˇ</td>
+                            <td width="70">199</td>
+                            <td width="60">104</td>
+                        </tr>
+                        <tr>
+                            <td width="150">这是个好名字</td>
+                            <td width="70">198</td>
+                            <td width="60">105</td>
+                        </tr>
+                        <tr>
+                            <td width="150">影儿</td>
+                            <td width="70">197</td>
+                            <td width="60">106</td>
+                        </tr>
+                        <tr>
+                            <td width="150">被安静吵醒</td>
+                            <td width="70">196</td>
+                            <td width="60">107</td>
+                        </tr>
+                        <tr>
+                            <td width="150">信仰</td>
+                            <td width="70">195</td>
+                            <td width="60">108</td>
+                        </tr>
+                        <tr>
+                            <td width="150">EXCE</td>
+                            <td width="70">195</td>
+                            <td width="60">109</td>
+                        </tr>
+                        <tr>
+                            <td width="150"> 心愿梓晴</td>
+                            <td width="70">194</td>
+                            <td width="60">110</td>
+                        </tr>
+                        <tr>
+                            <td width="150">鹿鹿。</td>
+                            <td width="70">193</td>
+                            <td width="60">111</td>
+                        </tr>
+                        <tr>
+                            <td width="150">天涯海角</td>
+                            <td width="70">192</td>
+                            <td width="60">112</td>
+                        </tr>
+                        <tr>
+                            <td width="150">鹏哥就是浪</td>
+                            <td width="70">191</td>
+                            <td width="60">113</td>
+                        </tr>
+                        <tr>
+                            <td width="150">小⊙迪迪 ※</td>
+                            <td width="70">191</td>
+                            <td width="60">114</td>
+                        </tr>
+                        <tr>
+                            <td width="150">李永华☜</td>
+                            <td width="70">189</td>
+                            <td width="60">115</td>
+                        </tr>
+                        <tr>
+                            <td width="150">ZERQ</td>
+                            <td width="70">188</td>
+                            <td width="60">116</td>
+                        </tr>
+                        <tr>
+                            <td width="150">:)媒です</td>
+                            <td width="70">187</td>
+                            <td width="60">117</td>
+                        </tr>
+                        <tr>
+                            <td width="150">潘丹</td>
+                            <td width="70">185</td>
+                            <td width="60">118</td>
+                        </tr>
+                        <tr>
+                            <td width="150">yang u yeol</td>
+                            <td width="70">185</td>
+                            <td width="60">119</td>
+                        </tr>
+                        <tr>
+                            <td width="150">绿色极光</td>
+                            <td width="70">182</td>
+                            <td width="60">120</td>
+                        </tr>
+                        <tr>
+                            <td width="150">Rebecca</td>
+                            <td width="70">182</td>
+                            <td width="60">121</td>
+                        </tr>
+                        <tr>
+                            <td width="150">dee</td>
+                            <td width="70">180</td>
+                            <td width="60">122</td>
+                        </tr>
+                        <tr>
+                            <td width="150">『神经病』</td>
+                            <td width="70">178</td>
+                            <td width="60">123</td>
+                        </tr>
+                        <tr>
+                            <td width="150">C-超仔</td>
+                            <td width="70">178</td>
+                            <td width="60">124</td>
+                        </tr>
+                        <tr>
+                            <td width="150">文博</td>
+                            <td width="70">178</td>
+                            <td width="60">125</td>
+                        </tr>
+                        <tr>
+                            <td width="150">文</td>
+                            <td width="70">178</td>
+                            <td width="60">126</td>
+                        </tr>
+                        <tr>
+                            <td width="150">Joǎn</td>
+                            <td width="70">177</td>
+                            <td width="60">127</td>
+                        </tr>
+                        <tr>
+                            <td width="150">欢欢</td>
+                            <td width="70">176</td>
+                            <td width="60">128</td>
+                        </tr>
+                        <tr>
+                            <td width="150">我</td>
+                            <td width="70">175</td>
+                            <td width="60">129</td>
+                        </tr>
+                        <tr>
+                            <td width="150">VV</td>
+                            <td width="70">174</td>
+                            <td width="60">130</td>
+                        </tr>
+                        <tr>
+                            <td width="150">白狐</td>
+                            <td width="70">174</td>
+                            <td width="60">131</td>
+                        </tr>
+                        <tr>
+                            <td width="150">猫囝</td>
+                            <td width="70">174</td>
+                            <td width="60">132</td>
+                        </tr>
+                        <tr>
+                            <td width="150"> 小包子🍔</td>
+                            <td width="70">173</td>
+                            <td width="60">133</td>
+                        </tr>
+                        <tr>
+                            <td width="150">Manjusaka</td>
+                            <td width="70">173</td>
+                            <td width="60">134</td>
+                        </tr>
+                        <tr>
+                            <td width="150">钟先生。</td>
+                            <td width="70">173</td>
+                            <td width="60">135</td>
+                        </tr>
+                        <tr>
+                            <td width="150">yao</td>
+                            <td width="70">172</td>
+                            <td width="60">136</td>
+                        </tr>
+                        <tr>
+                            <td width="150"> rotion</td>
+                            <td width="70">171</td>
+                            <td width="60">137</td>
+                        </tr>
+                        <tr>
+                            <td width="150">BW</td>
+                            <td width="70">171</td>
+                            <td width="60">138</td>
+                        </tr>
+                        <tr>
+                            <td width="150">曾小智</td>
+                            <td width="70">169</td>
+                            <td width="60">139</td>
+                        </tr>
+                        <tr>
+                            <td width="150">琳</td>
+                            <td width="70">168</td>
+                            <td width="60">140</td>
+                        </tr>
+                        <tr>
+                            <td width="150">琼～琼</td>
+                            <td width="70">168</td>
+                            <td width="60">141</td>
+                        </tr>
+                        <tr>
+                            <td width="150">四儿爷</td>
+                            <td width="70">167</td>
+                            <td width="60">142</td>
+                        </tr>
+                        <tr>
+                            <td width="150">旋律</td>
+                            <td width="70">167</td>
+                            <td width="60">143</td>
+                        </tr>
+                        <tr>
+                            <td width="150">笨小猪</td>
+                            <td width="70">166</td>
+                            <td width="60">144</td>
+                        </tr>
+                        <tr>
+                            <td width="150">称娃(Jane)</td>
+                            <td width="70">166</td>
+                            <td width="60">145</td>
+                        </tr>
+                        <tr>
+                            <td width="150">jen's♥</td>
+                            <td width="70">166</td>
+                            <td width="60">146</td>
+                        </tr>
+                        <tr>
+                            <td width="150">罗慧军</td>
+                            <td width="70">165</td>
+                            <td width="60">147</td>
+                        </tr>
+                        <tr>
+                            <td width="150">冬岛</td>
+                            <td width="70">165</td>
+                            <td width="60">148</td>
+                        </tr>
+                        <tr>
+                            <td width="150">龙灰</td>
+                            <td width="70">164</td>
+                            <td width="60">149</td>
+                        </tr>
+                        <tr>
+                            <td width="150">蔡文樑</td>
+                            <td width="70">164</td>
+                            <td width="60">150</td>
+                        </tr>
+                        <tr>
+                            <td width="150">kavin</td>
+                            <td width="70">164</td>
+                            <td width="60">151</td>
+                        </tr>
+                        <tr>
+                            <td width="150">十年磨一剑</td>
+                            <td width="70">164</td>
+                            <td width="60">152</td>
+                        </tr>
+                        <tr>
+                            <td width="150">刘硕</td>
+                            <td width="70">164</td>
+                            <td width="60">153</td>
+                        </tr>
+                        <tr>
+                            <td width="150">冯弋尘</td>
+                            <td width="70">163</td>
+                            <td width="60">154</td>
+                        </tr>
+                        <tr>
+                            <td width="150">竹爷</td>
+                            <td width="70">162</td>
+                            <td width="60">155</td>
+                        </tr>
+                        <tr>
+                            <td width="150">梦郁冰雪熊熊</td>
+                            <td width="70">162</td>
+                            <td width="60">156</td>
+                        </tr>
+                        <tr>
+                            <td width="150">安仔</td>
+                            <td width="70">162</td>
+                            <td width="60">157</td>
+                        </tr>
+                        <tr>
+                            <td width="150">林诺</td>
+                            <td width="70">161</td>
+                            <td width="60">158</td>
+                        </tr>
+                        <tr>
+                            <td width="150">陈毓洁</td>
+                            <td width="70">160</td>
+                            <td width="60">159</td>
+                        </tr>
+                        <tr>
+                            <td width="150">杨阿狸</td>
+                            <td width="70">160</td>
+                            <td width="60">160</td>
+                        </tr>
+                        <tr>
+                            <td width="150">浩子</td>
+                            <td width="70">160</td>
+                            <td width="60">161</td>
+                        </tr>
+                        <tr>
+                            <td width="150">笑容不再</td>
+                            <td width="70">159</td>
+                            <td width="60">162</td>
+                        </tr>
+                        <tr>
+                            <td width="150"> 嘟嘴女王.</td>
+                            <td width="70">159</td>
+                            <td width="60">163</td>
+                        </tr>
+                        <tr>
+                            <td width="150">SolarTang 邓伟雄</td>
+                            <td width="70">158</td>
+                            <td width="60">164</td>
+                        </tr>
+                        <tr>
+                            <td width="150">🎀白鸽</td>
+                            <td width="70">158</td>
+                            <td width="60">165</td>
+                        </tr>
+                        <tr>
+                            <td width="150">郭梦甜</td>
+                            <td width="70">158</td>
+                            <td width="60">166</td>
+                        </tr>
+                        <tr>
+                            <td width="150">西贝朔</td>
+                            <td width="70">157</td>
+                            <td width="60">167</td>
+                        </tr>
+                        <tr>
+                            <td width="150">美丫</td>
+                            <td width="70">157</td>
+                            <td width="60">168</td>
+                        </tr>
+                        <tr>
+                            <td width="150">礼拜天🐳</td>
+                            <td width="70">156</td>
+                            <td width="60">169</td>
+                        </tr>
+                        <tr>
+                            <td width="150">吴龙飞</td>
+                            <td width="70">155</td>
+                            <td width="60">170</td>
+                        </tr>
+                        <tr>
+                            <td width="150"> 婷酱</td>
+                            <td width="70">154</td>
+                            <td width="60">171</td>
+                        </tr>
+                        <tr>
+                            <td width="150">周周</td>
+                            <td width="70">153</td>
+                            <td width="60">172</td>
+                        </tr>
+                        <tr>
+                            <td width="150">楷亘</td>
+                            <td width="70">152</td>
+                            <td width="60">173</td>
+                        </tr>
+                        <tr>
+                            <td width="150">A小馬♂</td>
+                            <td width="70">152</td>
+                            <td width="60">174</td>
+                        </tr>
+                        <tr>
+                            <td width="150">夏雨</td>
+                            <td width="70">152</td>
+                            <td width="60">175</td>
+                        </tr>
+                        <tr>
+                            <td width="150">优莜</td>
+                            <td width="70">151</td>
+                            <td width="60">176</td>
+                        </tr>
+                        <tr>
+                            <td width="150">栤栤栤儿🎸</td>
+                            <td width="70">150</td>
+                            <td width="60">177</td>
+                        </tr>
+                        <tr>
+                            <td width="150">无语丶东流</td>
+                            <td width="70">150</td>
+                            <td width="60">178</td>
+                        </tr>
+                        <tr>
+                            <td width="150">X.Lin！</td>
+                            <td width="70">149</td>
+                            <td width="60">179</td>
+                        </tr>
+                        <tr>
+                            <td width="150">玲</td>
+                            <td width="70">149</td>
+                            <td width="60">180</td>
+                        </tr>
+                        <tr>
+                            <td width="150">卐阝</td>
+                            <td width="70">149</td>
+                            <td width="60">181</td>
+                        </tr>
+                        <tr>
+                            <td width="150">徐勉</td>
+                            <td width="70">148</td>
+                            <td width="60">182</td>
+                        </tr>
+                        <tr>
+                            <td width="150">李斌</td>
+                            <td width="70">148</td>
+                            <td width="60">183</td>
+                        </tr>
+                        <tr>
+                            <td width="150">关鑫</td>
+                            <td width="70">148</td>
+                            <td width="60">184</td>
+                        </tr>
+                        <tr>
+                            <td width="150">☆花花☆</td>
+                            <td width="70">147</td>
+                            <td width="60">185</td>
+                        </tr>
+                        <tr>
+                            <td width="150">大明</td>
+                            <td width="70">147</td>
+                            <td width="60">186</td>
+                        </tr>
+                        <tr>
+                            <td width="150">小西瓜子</td>
+                            <td width="70">147</td>
+                            <td width="60">187</td>
+                        </tr>
+                        <tr>
+                            <td width="150">Yuer</td>
+                            <td width="70">147</td>
+                            <td width="60">188</td>
+                        </tr>
+                        <tr>
+                            <td width="150">老居</td>
+                            <td width="70">147</td>
+                            <td width="60">189</td>
+                        </tr>
+                        <tr>
+                            <td width="150">百度百丽</td>
+                            <td width="70">146</td>
+                            <td width="60">190</td>
+                        </tr>
+                        <tr>
+                            <td width="150">aka</td>
+                            <td width="70">145</td>
+                            <td width="60">191</td>
+                        </tr>
+                        <tr>
+                            <td width="150">佐罗</td>
+                            <td width="70">145</td>
+                            <td width="60">192</td>
+                        </tr>
+                        <tr>
+                            <td width="150">谢先生</td>
+                            <td width="70">145</td>
+                            <td width="60">193</td>
+                        </tr>
+                        <tr>
+                            <td width="150">俞黎</td>
+                            <td width="70">144</td>
+                            <td width="60">194</td>
+                        </tr>
+                        <tr>
+                            <td width="150">陳大歪</td>
+                            <td width="70">141</td>
+                            <td width="60">195</td>
+                        </tr>
+                        <tr>
+                            <td width="150">贺颖</td>
+                            <td width="70">140</td>
+                            <td width="60">196</td>
+                        </tr>
+                        <tr>
+                            <td width="150">何 刚</td>
+                            <td width="70">139</td>
+                            <td width="60">197</td>
+                        </tr>
+                        <tr>
+                            <td width="150">眞悅鄭悦真♚</td>
+                            <td width="70">138</td>
+                            <td width="60">198</td>
+                        </tr>
+                        <tr>
+                            <td width="150">小葵</td>
+                            <td width="70">137</td>
+                            <td width="60">199</td>
+                        </tr>
+                        <tr>
+                            <td width="150"> 开启好友验证</td>
+                            <td width="70">137</td>
+                            <td width="60">200</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="mask op_0" id="ruleBox">
+        <div class="ruleBox bg">
+            <a class="close" id="closeRule"></a>
+            <div class="con">
+                <p>活动时间：11月21日 - 11月25日</p>
+                <p class="pt_10">活动奖品：
+                    <br>云麦好轻 智能秤(1-2名)、Nike运动头带(3-5名)</p>
+                <p class="pt_10">
+                    活动规则：
+                    <br> 1、30秒计时，减脂斤数最多者优先排名，并将最高数值计入总榜。成绩相同时，按照完成先后顺序进行排名；
+                    <br> 2、你减肥，我买单！活动不限游戏次数，减脂需要耐心Fighting！
+                    <br> 3、游戏排行前5名均有可能获得相应奖品，最终获奖人以活动结束后总榜排名为准；
+                    <br> 4、进入前5名的用户，请您如实填写相关信息。信息有误将视为您自动放弃获奖资格；
+                    <br> 5、活动结束后，云麦会与前5名小伙伴进行联系，请您保持您的通讯畅通；
+                    <br> 6、本活动最终解释权归云麦公司所有；
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="mask op_0" id="infoBox">
+        <div class="userInfo">
+            <p class="tit">恭喜您！进入排行榜前10名</p>
+            <p class="subTit">请输入您的联系方式，以便活动结束后领奖使用。</p>
+            <p class="itit">手机号码</p>
+            <span class="input" id="telBox"><input id="tel" type="text"></span>
+            <p class="itit">姓名</p>
+            <span class="input" id="nameBox"><input id="name" type="text"></span>
+            <div class="i_btn">
+                <a class="bo_r" id="closeInfo">取消</a>
+                <a id="postInfoBtn">确认</a>
+            </div>
+        </div>
+    </div>
+    <div class="mask mask_black_8 op_0" id="shareBox">
+        <div class="share bg"></div>
+    </div>
+    <div class="dp_n" id="musicBox">
+        <audio src="music/1.mp3" preload="auto" defaultmuted="true"></audio>
+        <audio src="music/1.mp3" preload="auto" defaultmuted="true"></audio>
+        <audio src="music/1.mp3" preload="auto" defaultmuted="true"></audio>
+    </div>
+    <script type="text/javascript" src="js/lib/jquery.js"></script>
+    <script type="text/javascript" src="js/lib/jquery.cookie.js"></script>
+    <script type="text/javascript" src="js/index.js?v=201411241628"></script>
+</body>
+<iframe id="__WeixinJSBridgeIframe_SetResult" style="display: none;"></iframe>
+<iframe id="__WeixinJSBridgeIframe" style="display: none;"></iframe>
+
+</html>

@@ -1,0 +1,38 @@
+body, canvas, div {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -khtml-user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+html,body{
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	margin: 0;
+	padding: 0;
+}
+#loadingImg{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	text-align: center;
+}
+#loadingImg img{
+	width: 50px;
+	height: 50px;
+	vertical-align: middle;
+	margin: 40% auto 0;
+}
+.shareTips{
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 99;
+	background: rgba(0,0,0,.75) url(../res/fenxiang.png) no-repeat right top;
+}

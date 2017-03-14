@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>圣诞芭比</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="screen-orientation" content="portrait" />
+    <style>
+    body,
+    canvas,
+    div {
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        -khtml-user-select: none;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+    </style>
+    <script src="js/pupuxing.watercover.min.js?v=1"></script>
+    <script src="js/zepto.min.js"></script>
+    <script type="text/javascript" src="js/play68_sdk.js"></script>
+    <script type="text/javascript" src="js/play68.js"></script>
+</head>
+
+<body onload="updateShare(0);" style="padding:0; margin: 0; background: #000;">
+    <canvas id="gameCanvas"></canvas>
+    <script src="js/game7.min.js"></script>
+    <script>
+    var DEVICE = {
+        ISNEWSAPP: (/NewsApp/ig).test(navigator.userAgent),
+        ISWEIXIN: (/MicroMessenger/ig).test(navigator.userAgent),
+        ISANDROID: (/android/ig).test(navigator.userAgent),
+        ISIOS: (/iphone|ipod|ipad/ig).test(navigator.userAgent)
+    };
+    </script>
+    <script language=javascript>
+    function goHome() {
+        Play68.goHome();
+    }
+
+    function clickMore() {
+        Play68.goHome();
+    }
+
+    function dp_share() {
+        Play68_submitScore(score);
+    }
+
+    function dp_Ranking() {
+        Play68.goHome();
+    }
+    </script>
+</body>
+
+</html>

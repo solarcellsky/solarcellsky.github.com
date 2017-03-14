@@ -1,0 +1,142 @@
+{
+  "resources": [
+    "audiosprite.mp3"
+  ],
+  "spritemap": {
+    "Gopes_pecho": {
+      "start": 0,
+      "end": 2.089795918367347,
+      "loop": false
+    },
+    "Hechizo_encogimiento": {
+      "start": 4,
+      "end": 6.063673469387755,
+      "loop": false
+    },
+    "Hechizo_recuperacion": {
+      "start": 8,
+      "end": 10.063673469387755,
+      "loop": false
+    },
+    "Impacto_platano": {
+      "start": 12,
+      "end": 14.220408163265306,
+      "loop": false
+    },
+    "Loop_01": {
+      "start": 16,
+      "end":17.98,
+      "loop": true
+    },
+    "Loop_02": {
+      "start": 20,
+      "end": 21.98,
+      "loop": true
+    },
+    "Loop_03": {
+      "start": 24,
+      "end": 25.98,
+      "loop": true
+    },
+    "Loop_04": {
+      "start": 28,
+      "end": 29.98,
+      "loop": true
+    },
+    "Loop_05": {
+      "start": 32,
+      "end": 33.98,
+      "loop": true
+    },
+    "Loop_06": {
+      "start": 36,
+      "end": 37.98,
+      "loop": true
+    },
+    "Loop_07": {
+      "start": 40,
+      "end": 41.98,
+      "loop": true
+    },
+    "Loop_08": {
+      "start": 44,
+      "end": 45.98,
+      "loop": true
+    },
+    "Monaexcitada3": {
+      "start": 48,
+      "end": 50.84401360544218,
+      "loop": true
+    },
+    "Platano": {
+      "start": 52,
+      "end": 53.35836734693878,
+      "loop": false
+    },
+    "Stinger": {
+      "start": 55,
+      "end": 73.07673469387755,
+      "loop": false
+    },
+    "banana_launch": {
+      "start": 75,
+      "end": 75.43201814058956,
+      "loop": false
+    },
+    "button-trembling": {
+      "start": 77,
+      "end": 79,
+      "loop": false
+    },
+    "click": {
+      "start": 80,
+      "end": 80.78367346938775,
+      "loop": false
+    },
+    "explosion": {
+      "start": 82,
+      "end": 84.19428571428571,
+      "loop": false
+    },
+    "gameover_V2": {
+      "start": 86,
+      "end": 88.45551020408163,
+      "loop": false
+    },
+    "gong": {
+      "start": 90,
+      "end": 96.16646258503401,
+      "loop": false
+    },
+    "lock-breaking": {
+      "start": 98,
+      "end": 100,
+      "loop": false
+    },
+    "loro": {
+      "start": 101,
+      "end": 104.21306122448979,
+      "loop": false
+    },
+    "ping": {
+      "start": 106,
+      "end": 108.35102040816327,
+      "loop": false
+    },
+    "shoot": {
+      "start": 110,
+      "end": 111.38448979591837,
+      "loop": false
+    },
+    "terremoto": {
+      "start": 113,
+      "end": 118.61632653061224,
+      "loop": false
+    },
+    "win_V2": {
+      "start": 120,
+      "end": 130.11600907029478,
+      "loop": false
+    }
+  }
+}

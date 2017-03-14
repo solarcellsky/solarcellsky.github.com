@@ -1,0 +1,47 @@
+{
+"resources":
+	[
+		{"name":"bgImage","type":"image","url":"assets/bg.png"},
+		{"name":"farHill","type":"image","url":"assets/farHill.png"},
+		{"name":"hill","type":"image","url":"assets/hill.png"},
+		{"name":"hill2","type":"image","url":"assets/hill2.png"},
+		{"name":"board","type":"image","url":"assets/board.png"},
+		{"name":"cloud1","type":"image","url":"assets/cloud1.png"},
+		{"name":"cloud2","type":"image","url":"assets/cloud2.png"},
+		{"name":"grass","type":"image","url":"assets/grass.png"},
+		{"name":"tree","type":"image","url":"assets/tree.png"},
+		{"name":"tree2","type":"image","url":"assets/tree2.png"},
+		{"name":"startboard","type":"image","url":"assets/startboard.png"},
+		{"name":"trash1","type":"image","url":"assets/trash1.png"},
+		{"name":"trash2","type":"image","url":"assets/trash2.png"},
+		{"name":"pwu","type":"image","url":"assets/power@2x.png"},
+		{"name":"pwbg","type":"image","url":"assets/powerBG@2x.png"},
+		
+		{"name":"resultBg","type":"image","url":"assets/result.png"},
+		{"name":"share_btn","type":"image","url":"assets/share.png"},
+		{"name":"replay_btn","type":"image","url":"assets/replay.png"},
+		{"name":"friend_png","type":"image","url":"assets/friend.png"},
+		{"name":"friend_json","type":"json","url":"assets/friend.json"},
+		{"name":"cat_png","type":"image","url":"assets/cat.png"},
+		{"name":"cat_json","type":"json","url":"assets/cat.json"},
+		{"name":"stand_png","type":"image","url":"assets/stand.png"},
+		{"name":"stand_json","type":"json","url":"assets/stand.json"},
+		{"name":"bird_png","type":"image","url":"assets/bird.png"},
+		{"name":"bird_json","type":"json","url":"assets/bird.json"},
+		{"name":"banzi_png","type":"image","url":"assets/banzi.png"},
+		{"name":"banzi_json","type":"json","url":"assets/banzi.json"},
+		{"name":"eff","type":"image","url":"assets/item/texiao_shuiguo.png"},
+		{"name":"effj","type":"json","url":"assets/item/texiao_shuiguo.json"},
+
+		{"name":"cz","type":"image","url":"assets/item/changzi.png"},
+		{"name":"pg","type":"image","url":"assets/item/pingguo.png"},
+		{"name":"xj","type":"image","url":"assets/item/xiangjiao.png"},
+		{"name":"xg","type":"image","url":"assets/item/xigua.png"},
+		{"name":"yingzi","type":"image","url":"assets/item/yingzi.png"}
+	],
+
+"groups":
+	[	
+        {"name":"preload","keys":"eff,effj,cz,pg,xj,xg,yingzi,resultBg,share_btn,replay_btn,pwu,pwbg,bgImage,farHill,hill,hill2,board,cloud1,cloud2,grass,tree,tree2,startboard,trash2,friend_png,friend_json,cat_png,cat_json,bird_png,bird_json,banzi_png,banzi_json,stand_png,stand_json"}
+	]
+}

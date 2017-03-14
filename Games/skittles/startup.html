@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>直立吧！彩虹君</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css"  media="screen and (max-height: 480px)" />
+    <link rel="stylesheet" type="text/css" href="css/large-style.css"  media="screen and (min-height: 481px)" />
+</head>
+
+<body  style="margin: 0;background-color: #000000;overflow:hidden;">
+
+
+	<div class="canvasHolder" >
+		<canvas id="Canvas"  style="position: absolute; overflow:hidden;width: 100%;height: 100%"></canvas>
+	</div>
+
+    <div class="main" >
+        <div class="mainBox">
+            <div class="maibBoxTitle"></div>
+            <h2>本次成绩</h2>
+            <div class="mainScoreBox">
+                <div class="mainScoreWordBox">
+                    <p id="endScore">10"10</p>
+                </div>
+                <div class = "sabcde"></div>
+
+            </div>
+            <div class="mainWordBox">
+                <p>全宇宙排第<span id="mainWordBoxRanking">1422</span>名</p>
+                <p>击败全国<span id="mainWordBoxPresent">30%</span>的彩虹选手</p>
+            </div>
+        </div>
+        <div class="endWord"><img width="258px" src="res/endWord.png"></div>
+        <div class="mainButBox">
+            <div class="shareBut"><div class="mainButWordBox">炫耀一下</div></div>
+            <div class="replayBut"><div class="mainButWordBox">再耍一把</div></div>
+            <div class="rankingBut"><div class="mainButWordBox">看看你的排名中奖没</div></div>
+        </div>
+    </div>
+
+    <div class="rankmain" >
+        <div class = rankingMainBox>
+            <div class="rankingMainBoxTitle"></div>
+            <div class="rankingNamesBoxMain">
+                <div style="height: 1px;width: 100%"></div>
+                <div class = "rankingNamesBox">
+                </div>
+                <!--<div class = "loginMsg"></div>-->
+            </div>
+
+        </div>
+        <div class="rankmainButBox">
+            <div class="shareBut"><div class="mainButWordBox">炫耀一下</div></div>
+            <div class="replayBut"><div class="mainButWordBox">再耍一把</div></div>
+            <div class="priseBut"><div class="mainButWordBox">奖品预览</div></div>
+        </div>
+    </div>
+
+    <div class="loginMain" >
+        <div class = "loginMsgBox">
+            <div class = "loginX"></div>
+            <div class="inputBox">
+                <p> <input type="text" name="name" id ="name" maxlength="8"/></p>
+                <p> <input type="text" name="address" id="address" maxlength="8" /></p>
+                <p> <input type="text" name="phone" id="phone" maxlength="11" pattern="[0-9]"/></p>
+                <p> <input type="text" name="remarks" id="remarks"  /></p>
+            </div>
+        </div>
+        <div class = "loginCenter"></div>
+    </div>
+
+    <div class="shareDiv">
+        <div class="shareBox">
+        </div>
+
+        <div class="prisebottomword"></div>
+    </div>
+
+    <div class="priseDiv">
+        <div class="priseDivTitle"></div>
+        <div class="prise1"></div>
+        <div class="prise2"></div>
+        <div class="priseX"></div>
+        <div class="prisebottomword"></div>
+    </div>
+    <div id="rotate"><img src="res/rotate.jpg"></div>
+    </div>
+    <div style="display:none"><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1254527138'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1254527138' type='text/javascript'%3E%3C/script%3E"));</script></div>
+    <script type="text/javascript" src="libs/zepto.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="libs/tweenjs-0.5.1.min.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="libs/easeljs-0.7.1.min.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="libs/preloadjs-0.4.1.min.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="libs/soundjs-0.5.2.min.js" charset="UTF-8"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script type="text/javascript" src="js/tools.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="js/sprite.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="js/state.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="js/main.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="js/index.js" charset="UTF-8"></script>
+
+
+    <script type="text/javascript">
+
+
+
+
+        $(function(){
+            function orientationChange() {
+                if (window.orientation == 90 || window.orientation == -90) {
+                    $('#rotate').show();
+                } else {
+                    $('#rotate').hide();
+                }
+            }
+            window.onresize = orientationChange;
+
+        })
+
+        var manifest;
+        manifest = [
+            {src:"res/mainBg.jpg", id:"mainBg"},
+            {src:"res/leftbut.png", id:"leftbut"},
+            {src:"res/rightbut.png", id:"rightbut"},
+            {src:"res/BigSugar01.png", id:"BigSugar01"},
+            {src:"res/BigSugar02.png", id:"BigSugar02"},
+            {src:"res/BigSugar03.png", id:"BigSugar03"},
+            {src:"res/BigSugar04.png", id:"BigSugar04"},
+            {src:"res/pause.png", id:"pause"},
+            {src:"res/replay.png", id:"replay"},
+            {src:"res/front.png", id:"front"},
+            {src:"res/timebar.png", id:"timebar"},
+
+
+            {src:"res/learnBg.jpg", id:"learnBg"},
+            {src:"res/beginBg.jpg", id:"beginBg"},
+            {src:"res/beginBut.png", id:"beginBut"},
+
+            {src:"res/passBg.jpg", id:"endBg"},
+            {src:"res/balanceBar.png", id:"balanceBar"},
+            {src:"res/triangle.png", id:"triangle"},
+
+            {src:"res/endRainBow.png", id:"endRainBow"},
+            {src:"res/word1.png", id:"word1"},
+            {src:"res/word2.png", id:"word2"},
+            {src:"res/endBigSugar.png", id:"endBigSugar"},
+
+
+
+
+            {src:"res/car.png", id:"car"},
+
+
+            {src:"res/number/1.png", id:"1"},
+            {src:"res/number/2.png", id:"2"},
+            {src:"res/number/3.png", id:"3"},
+            {src:"res/number/4.png", id:"4"},
+            {src:"res/number/5.png", id:"5"},
+            {src:"res/number/6.png", id:"6"},
+            {src:"res/number/7.png", id:"7"},
+            {src:"res/number/8.png", id:"8"},
+            {src:"res/number/9.png", id:"9"},
+            {src:"res/number/0.png", id:"0"}
+
+
+//            {src:"res/music.mp3", id:"music"}
+//            , {src:"res/effect.mp3",id:"effect"}
+//            , {src:"res/music1.mp3",id:"music1"}
+//            , {src:"res/music2.mp3",id:"music2"}
+
+
+
+            , {src:"res/ready.png",id:"ready"}
+            , {src:"res/go.png",id:"go"}
+            , {src:"res/knowbut.png",id:"knowbut"}
+            , {src:"res/musicclose.png",id:"musicclose"}
+            , {src:"res/open.png",id:"open"}
+            , {src:"res/teachBg.jpg",id:"teachBg"}
+            , {src:"res/finger.png",id:"finger"}
+        ];
+         init(manifest);
+    </script>
+</body>
+</html>

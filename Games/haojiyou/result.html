@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html style="font-size: 46.25px;">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta name="robots" content="none">
+    <meta name="viewport" id="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>卧槽！老任 对 Kevin 的了解程度是 10%</title>
+    <link rel="stylesheet" type="text/css" href="css/qa.css">
+    <script>
+    window.onload = function() {
+        function getfont() {
+            var html1 = document.documentElement;
+            var screen = html1.clientWidth;
+            html1.style.fontSize = 0.0625 * screen + 'px';
+        }
+
+        getfont();
+        window.onresize = function() {
+            getfont();
+        }
+    }
+    </script>
+    <script src="js/jquery-1.8.3.min.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="logo">
+            <img src="images/logo_alpha.png">
+        </div>
+        <div class="dtStepThree content por">
+            <div class="stepThreeHeader">
+                <p class="info">你对Kevin‍微信超級會員的了解程度是...</p>
+                <div class="water por" style="background-position-y: 5.625rem;">
+                    <div class="inWater poa" style="top: 34%;">10%</div>
+                </div>
+                <p class="evaluate">我们还是别联系了</p>
+            </div>
+            <script type="text/javascript">
+            $(function() {
+                $('.water').css(
+                    'backgroundPositionY', '6.25rem'
+                );
+
+                var num = parseInt('10');
+                //var topPx = parseInt(num <= 33 ? 67 : (100 - num));
+
+                $('.inWater').css({
+                    top: '34%'
+                });
+
+                var bgNum = ((100 - num) / 100) * 6.25;
+                $('.water').stop().animate({
+                    'backgroundPositionY': bgNum + 'rem'
+                }, 1000)
+
+                var i = 0;
+                if (num) {
+                    var timer = setInterval(function() {
+                        i++;
+                        if (i == num) clearInterval(timer);
+                        $('.inWater').html(i + '%');
+                    }, 10);
+                }
+            });
+            </script>
+            <div class="stepThreeAlso">
+                <a href="index.html">我也来一题</a>
+                <a href=" #">你有新消息<i class="newInfo">1</i></a>
+            </div>
+            <div class="result_link">
+                <a href="qa.html">点我&gt;&gt;看正确答案</a>
+            </div>
+            <div class="other center">
+                <ul>
+                    <li class="clearfix">
+                        <div class="stepThreeAvatar">
+                            <img src="http://wx.qlogo.cn/mmopen/ajNVdqHZLLCjT7Wu4jBJWTBrAkeJ5ZrGQVhCictekQxXMia4siaicMDHZLd3qrQYJ9wCalCCdQFyOvARjpXibaUlpBw/0">
+                        </div>
+                        <div class="otherInfo">
+                            <p>我是老任</p>
+                            <span>我们还是别联系了</span>
+                        </div>
+                        <em>10%</em>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

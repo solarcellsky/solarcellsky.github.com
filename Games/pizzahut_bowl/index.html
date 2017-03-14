@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=yes" name="format-detection">
+    <title>必胜客快到碗里来</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/animite.css">
+    <link rel="stylesheet" type="text/css" href="css/vendor.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/edit.css">
+    <script async="" src="//www.google-analytics.com/analytics.js"></script>
+    <script type="text/javascript">
+    var ver = (new Date()).getTime();
+    </script>
+    <script type="text/javascript">
+    /*var arrsite = [1,1,1,1,0];
+    var tc= arrsite[Math.floor(Math.random()*5)];
+    //console.log(tc);
+    if(tc==0){
+    	location.href='wait.html';	
+    }*/
+    </script>
+</head>
+<iframe id="__WeixinJSBridgeIframe_SetResult" style="display: none;"></iframe>
+<iframe id="__WeixinJSBridgeIframe" style="display: none;"></iframe>
+
+<body>
+    <div class="hp-tips" style="display:none; z-index:999;"><img src="img/tips_03.png">
+    </div>
+    <div class="step index" style="display: none;">
+        <img src="img/index/c.png">
+        <div class="mainbody">
+            <div class="top hide">
+                <img src="img/qq1.png">
+                <div class="line-1 animated infinite  "><img src="img/line_02.png">
+                </div>
+                <div class="qq animated infinite "><img src="img/qq_03.png">
+                </div>
+            </div>
+            <!--div class="hd hide"><img src="img/index/hd_03.png"></div>
+            <div class="hhd hide"><img src="img/index/hhd_06.png"></div-->
+            <div class="dz-1 animated infinite wobbleY1 ">
+                <img src="img/index/dz_09.png">
+            </div>
+            <div class="dz-2 animated infinite wobbleY2 ">
+                <img src="img/index/dz_03.png">
+            </div>
+            <div class="dz-3 animated infinite wobbleY3 ">
+                <img src="img/index/dz_06.png">
+            </div>
+            <div class="dz-4 animated infinite wobbleY4 ">
+                <img src="img/index/dz_14.png">
+            </div>
+            <div class="wan animated infinite wobbleY6">
+                <!--span class="animated infinite "><img src="img/index/w1_03.png"></span-->
+                <span class="animated infinite "><img src="img/index/w2_03.png"></span>
+                <!--span class="animated infinite "><img src="img/index/w3_03.png"></span>
+                <span class="animated infinite "><img src="img/index/w4_03.png"></span>
+                <span class="animated infinite "><img src="img/index/w5_03.png"></span>
+                <span class="animated infinite "><img src="img/index/w6_03.png"></span-->
+
+            </div>
+        </div>
+        <a href="javascript:;" class="index-btn rule-btn hide">活动规则</a>
+        <a href="ms.html" class="index-btn ms-btn hide">秒杀大奖</a>
+        <a href="javascript:;" class="index-btn list-btn hide">查看排行</a>
+        <a href="javascript:;" class="index-btn start hide"><img src="img/bean3-button1.png">
+        </a>
+        <div class="tips begin hide"><img src="img/tips.jpg">
+            <a href="javascript:;" class="go"></a>
+            <a href="javascript:;" class="close"></a>
+        </div>
+    </div>
+    <div class="step" id="outer" style="display: none;">
+        <div id="middle">
+            <div id="container" style="position: relative; margin: 0px auto; width: 757px; height: 826px;">
+                <div style="position: absolute; width: 757px; left: 0px; top: 413px; text-align: center; color: rgb(255, 255, 255); font-weight: bold; font-style: normal; font-variant: normal; font-stretch: normal; font-size: 16px; line-height: normal; font-family: 宋体; text-shadow: rgb(204, 204, 204) 0px 2px 2px;"></div>
+            </div>
+        </div>
+    </div>
+    <a href="javascript:;" class="music on"><img id="music" src="img/music-on_03.png">
+    </a>
+    <div id="fps" style="position:absolute;top:0;left:0;color:#fff;"></div>
+    <!--游戏结束时的蒙蔽start-->
+    <div class="bean3_box gameover step step-3 game-score hide" style="">
+        <img src="img/bean9-bg.jpg">
+        <div class="tips-letter">
+            <img src="img/letters-tips_04.png">
+        </div>
+        <div class="bean9_result_box">
+            <div class="bean9_result bean9_result_text">
+
+            </div>
+        </div>
+
+        <a href="javascript:;" class="bean9_button lq-gift">
+            <img src="img/bean9-button.png">
+        </a>
+        <div class="bean9_img">
+            <img src="img/bean9-hight.png">
+        </div>
+        <div class="bean9_num">
+
+        </div>
+    </div>
+
+    <!--游戏结束时的蒙蔽end-->
+
+    <div class="bean3_box">
+
+        <div class="bean3_box step step-4 get-gift hide" style="">
+            <img src="img/bean10-bg.jpg">
+            <div class="bean_bg gift-pop gift-1" style="display:none;">
+                <!--img src="img/bean-bg.png">
+            <div class="bean10_bg_box">
+            	<div class="bean10_bg">
+                	<img src="img/gift-1_03.png">
+                    <a href="javascript:;" data-id=1 class="bean10_x close" style="display:block;">
+                    	<img src="img/bean10-X.png">
+                    </a>
+                    
+                    <div class="bean_mobile_text">
+                    	<img src="img/bean10-mobile-text.png">
+                    </div>
+                    <input type="text" class="bean10_mobile" value="请输入11位手机号码">
+                    
+                    <a href="javascript:;" data-id=1 class="bean10_getButton getprize">
+                    	<img src="img/bean27-get-button.png" style="display:block;">
+                    </a>
+                </div>
+            </div-->
+                <img src="img/gift/gift-6.jpg">
+                <input type="text" class="bean10_mobile phone-number" value="请输入11位手机号码">
+                <a href="javascript:;" data-id="1" class="ms-infor-submit getprize">
+                    <img src="img/gift/gift-next_04_06.png">
+                </a>
+            </div>
+            <div class="bean_bg gift-pop gift-2" style="display:none;">
+                <img src="img/gift/gift-2.jpg">
+                <a href="javascript:;" data-id="2" class="bean10_x close">
+                    <img src="img/gift/gift-next_03.png">
+                </a>
+            </div>
+            <div class="bean_bg gift-pop gift-3" style="display:none;">
+                <img src="img/gift/gift-2.jpg">
+                <a href="javascript:;" data-id="3" class="bean10_x close">
+                    <img src="img/gift/gift-next_03.png">
+                </a>
+            </div>
+            <div class="bean_bg gift-pop no-gift letter-1" style="display:none;">
+                <img src="img/bean-bg.png">
+                <div class="bean10_f_box">
+                    <img src="img/bean10-input-bg.png">
+                    <a href="javascript:;" data-id="4" class="bean10_x close">
+                        <img src="img/bean10-X.png">
+                    </a>
+                    <div class="bean12_orange_img">
+                        <img src="img/bean11-bule.png">
+                    </div>
+                    <a href="javascript:;" data-id="4" class="bean12_orange_button getprize">
+                        <img src="img/bean12_come_button.png">
+                    </a>
+                </div>
+            </div>
+            <div class="bean_bg gift-pop no-gift letter-2" style="display:none;">
+                <img src="img/bean-bg.png">
+                <div class="bean10_f_box">
+                    <img src="img/bean10-input-bg.png">
+                    <a href="javascript:;" data-id="5" class="bean10_x close">
+                        <img src="img/bean10-X.png">
+                    </a>
+                    <div class="bean12_orange_img">
+                        <img src="img/bean12_orange.png">
+                    </div>
+                    <a href="javascript:;" data-id="5" class="bean12_orange_button getprize">
+                        <img src="img/bean12_come_button.png">
+                    </a>
+                </div>
+            </div>
+            <div class="bean_bg gift-pop no-gift letter-3" style="display:none;">
+                <img src="img/bean-bg.png">
+                <div class="bean10_f_box">
+                    <img src="img/bean10-input-bg.png">
+                    <a href="javascript:;" data-id="6" class="bean10_x close">
+                        <img src="img/bean10-X.png">
+                    </a>
+                    <div class="bean12_yellow_bowl">
+                        <img src="img/bean12-yellowBowl.png">
+                    </div>
+                    <div class="bean12_yellow_img">
+                        <img src="img/bean12-yellow.png">
+                    </div>
+                    <a href="javascript:;" data-id="6" class="bean12_orange_button getprize">
+                        <img src="img/bean12_come_button.png">
+                    </a>
+                </div>
+            </div>
+            <div class="bean_bg gift-pop no-gift letter-4" style="display:none;">
+                <img src="img/bean-bg.png">
+                <div class="bean10_f_box">
+                    <img src="img/bean10-input-bg.png">
+                    <a href="javascript:;" data-id="7" class="bean10_x close">
+                        <img src="img/bean10-X.png">
+                    </a>
+                    <div class="bean11_red">
+                        <img src="img/bean11_red.png">
+                    </div>
+                    <a href="javascript:;" data-id="7" class="bean12_orange_button getprize">
+                        <img src="img/bean12_come_button.png">
+                    </a>
+                </div>
+            </div>
+
+
+
+        </div>
+        <div class="step share-before bean3_box hide" style="">
+            <img src="img/share-before.jpg">
+            <!--div class="bean13_1text">
+                <img src="img/bean13_1text.png">
+            </div-->
+            <div class="share-light animated infinite sharelight ">
+                <img src="img/light_02.png">
+            </div>
+            <div class="ms-letter-1">
+                <img src="img/ms1_03.png">
+            </div>
+            <!--div class="share-letter-1">
+            	<img src="img/share-letter-1_02.png">
+            </div-->
+            <a href="javascript:;" class="bean13_1button fp-rule1">
+                <img src="img/hd_04.png">
+            </a>
+            <div class="bean13_1img" style="width:0; left:50%">
+                <img src="img/gift-w_03.png">
+            </div>
+            <a href="javascript:;" class="bean13_point share-pop-1">
+                <img src="img/bean13_1button.png">
+            </a>
+        </div>
+        <div class="step step-5 share bean3_box hide" style="">
+            <img src="img/bean-bg.png">
+            <div class="bean13_fimg">
+                <img src="img/bean13-fimg.png">
+                <div class="share-animite">
+
+                </div>
+            </div>
+
+        </div>
+        <div class="step step-51 share-after bean3_box hide" style="">
+            <img src="img/bean15-bg.jpg">
+            <div class="bean15_img">
+                <img src="img/bean15-img.png">
+            </div>
+            <div class="bean15_text">
+                <img src="img/bean15-text.png">
+            </div>
+            <div class="bean15_light">
+                <img src="img/bean15-light.png">
+            </div>
+            <a href="javascript:;" class="bean15_two">
+                <img src="img/bean15-ma.png">
+            </a>
+
+        </div>
+        <div class="step step-6 gz bean3_box hide" style="">
+            <img src="img/bean11-red-bg.jpg">
+            <div class="bean15_text_img">
+                <img src="img/bean15-text1.png">
+            </div>
+            <div class="bean15_text">
+                <img src="img/bean15-text2.png">
+            </div>
+            <div class="bean15_light">
+                <img src="img/bean15-light.png">
+            </div>
+            <a href="javascript:;" class="bean15_two">
+                <img src="img/bean15-two.png">
+            </a>
+        </div>
+        <!--div class="step step-8 zj-box bean3_box hide">
+       		
+       	</div-->
+        <div class="step step-8 turn-over hide" style="">
+            <div class="over-1 bean3_box hide">
+                <img src="img/bean11-red-bg.jpg">
+                <div class="bean11_red">
+                    <img src="img/bean11-blue-img.png">
+                </div>
+                <a href="javascript:;" class="bean11_redButton">
+                    <img src="img/bean11-buleButton.png">
+                </a>
+            </div>
+            <div class="over-2 bean3_box hide">
+                <img src="img/bean11-red-bg.jpg">
+                <div class="bean12_orange">
+                    <img src="img/bean12-orange-img.png">
+                </div>
+                <a href="javascript:;" class="bean11_redButton">
+                    <img src="img/bean12_orangeButton.png">
+                </a>
+            </div>
+            <div class="over-3 bean3_box hide">
+                <img src="img/bean11-red-bg.jpg">
+                <div class="bean11_red">
+                    <img src="img/bean11-red-img.png">
+                </div>
+                <a href="javascript:;" class="bean11_redButton">
+                    <img src="img/bean11-redButton.png">
+                </a>
+            </div>
+            <div class="over-4 bean3_box hide">
+                <img src="img/bean11-red-bg.jpg">
+                <div class="bean12_orange">
+                    <img src="img/bean12-yellow.png">
+                </div>
+                <a href="javascript:;" class="bean11_redButton">
+                    <img src="img/bean12-yellowButton.png">
+                </a>
+            </div>
+        </div>
+        <div class="step step-9 bean3_box hide my-rank-list " style="">
+            <img src="img/ranking1-bg.jpg">
+            <div class="ranking1_nav_box">
+                <a href="javascript:;" class="ranking1_first">
+                    <img src="img/ranking1-first.png">
+                </a>
+                <a href="javascript:;" class="ranking1_height">
+                    <img src="img/ranking1-height.png">
+                </a>
+                <a href="javascript:;" class="ranking1_my">
+                    <img src="img/ranking1-my.png">
+                </a>
+            </div>
+            <div class="ranking1_box">
+
+                <ul class="ranking1">
+
+                </ul>
+            </div>
+        </div>
+        <div class="step step-10 bean3_box hide total-rank-list" style="">
+            <img src="img/ranking2-bg.jpg">
+            <div class="ranking2_nav_box">
+                <a href="javascript:;" class="ranking2_first">
+                    <img src="img/ranking2-first.png">
+                </a>
+                <a href="javascript:;" class="ranking2_height">
+                    <img src="img/ranking2-1height.png">
+                </a>
+                <a href="javascript:;" class="ranking2_my">
+                    <img src="img/ranking2-my.png">
+                </a>
+            </div>
+            <div class="ranking1_box">
+                <h1><img src="img/yxb_03.png"></h1>
+                <ul class="ranking1">
+
+                </ul>
+            </div>
+            <div class="ranking2_text1">
+                <img src="img/ranking2-text.png">
+            </div>
+            <div class="ranking2_myRanking">
+                <img src="img/ranking-bg1.png">
+                <div class="ranking1_text">
+                    第<b class="ranking1_num"></b>名
+                </div>
+                <div class="ranking1-name">
+
+                </div>
+                <div class="ranking1_address">
+
+                </div>
+            </div>
+            <div class="ranking2_text2">
+                <img src="img/ranking2-text2.png">
+            </div>
+            <div class="ranking2_1" style="display:none">
+                <img src="img/ranking2-1.png">
+            </div>
+            <a href="ms.html" class="ranking2_button go-ms">
+                <img src="img/ranking2-button.png">
+            </a>
+        </div>
+
+        <!--回链页面-->
+        <div class="step back-1 bean3_box hide" style="display: block;">
+            <img src="img/bean5-bg.jpg">
+            <a href="javascript:;" class="bean13_1button fp-rule">
+                <img src="img/hd_03.png">
+            </a>
+            <div class="bean17_text_box">
+                <img src="img/bean17-text-bg.png">
+                <div class="bean17_point_box">
+                    <div class="bean17_point">
+                        <b class="bean17_name">王仲侃</b>在“快到必胜客碗里来”游戏中
+                        <br> 获得
+                        <b class="bean17_number">6940</b>分
+                    </div>
+                </div>
+            </div>
+            <div class="bean17_text">
+                <img src="img/bean17-text.png">
+            </div>
+            <a href="javascript:;" class="bean17_red turn-1">
+
+            </a>
+            <a href="javascript:;" class="bean17_orange turn-1">
+                <img src="img/bean17-orange.png">
+            </a>
+            <a href="javascript:;" class="bean17_blue turn-1">
+                <img src="img/bean17-blue.png">
+            </a>
+            <a href="javascript:;" class="bean17_yellow turn-1">
+                <img src="img/bean17-yellow.png">
+            </a>
+            <div class="bean17_redimg animated infinite wobbleY7" style="width: 21.5625%; left: 0px; top: 45.096%;">
+                <img src="img/bean17-redimg.png">
+            </div>
+            <div class="bean17_orangeimg animated infinite wobbleY7" style="width: 21.5625%; right: 29.218%; top: 43.096%;">
+                <img src="img/bean17-orangeimg.png">
+            </div>
+            <div class="bean17_blueimg animated infinite wobbleY7" style="width: 21.5625%; left: 30.3125%; top: 70.385%;">
+                <img src="img/bean17-blueimg.png">
+            </div>
+            <div class="bean17_yellowimg animated infinite wobbleY7" style="width: 21.5625%; left: 40.41%; top: 84.846%;">
+                <img src="img/bean17-yellowimg.png">
+            </div>
+        </div>
+        <div class="step fp fp-1 bean_bg hide" style="">
+            <img src="img/bean-bg.png">
+            <div class="add_img">
+                <img src="img/add-img.png">
+            </div>
+            <a href="javascript:;" class="negativ_button  play-again">
+                <img src="img/negativ-button.png">
+            </a>
+        </div>
+        <div class="step fp fp-2  bean_bg hide" style="">
+            <img src="img/bean-bg.png">
+            <div class="negativ_img">
+                <img src="img/negativ-img.png">
+            </div>
+            <a href="javascript:;" class="negativ_button  play-again">
+                <img src="img/negativ-button.png">
+            </a>
+        </div>
+        <div class="step fp fp-3  bean3_box hide" style="">
+            <img src="img/bean-bg.png">
+            <div class="negativ_img">
+                <img src="img/c.png">
+            </div>
+            <a href="javascript:;" class="negativ_button  play-again">
+                <img src="img/negativ-button.png">
+            </a>
+        </div>
+        <div class="step fp fp-4  bean3_box hide" style="">
+            <img src="img/bean-bg.png">
+            <div class="negativ_img" style="top:8%;">
+                <img src="img/jf_03.png">
+            </div>
+            <a href="javascript:;" class="negativ_button play-again">
+                <img src="img/negativ-button.png">
+            </a>
+        </div>
+
+
+
+
+
+
+
+
+
+
+    </div>
+    <div class="step rule rule-1 hide" style="">
+        <img src="img/rule_03.jpg">
+        <a href="javascript:;" class="close"><img src="img/bean10-X.png">
+        </a>
+        <div class="rule-border">
+            <h2>活动规则</h2>
+            <div class="rule-list">
+                1. 活动期间：2015年10月12日-2015年10月25日。
+                <br> 2. 参与用户需要主动确认授权微信信息，个人信息仅在本次活动中使用。
+                <br> 3. 游戏玩法为：拖动屏幕上的必胜客碗接收上方掉落的游戏元素，不同游戏元素对应不同分值，具体如下：
+                <br> • 每个MM豆分值50分，接到碗里分数增加50分
+                <br> • 每个披萨分值为150分，接到碗里分数增加150分
+                <br> • 精灵南瓜饮分值100分，接到碗里分数增加100分
+                <br> • 幽灵巫婆指具有使得碗变大的功能，接到碗里碗会变大
+                <br> • 邪恶南瓜分值为-150分，接到碗里分数减少150分
+                <br> • 巫婆出现接到碗里会导致游戏结束。
+                <br> 4. 游戏结束后，参与者可获得随机奖品1份，奖品详情：
+                <br> • 易到打车券1张（价值20元，有效期：领取之日14日内有效）
+                <br> • 必胜客甜品优惠券1张：必胜客餐厅消费满150元即送幽灵巫婆指1份，有效期至2015年10月31日；
+                <br> • MM豆祝福语
+                <br> 5. 奖品的领取方式如下：
+                <br> • 易到打车券：自动存入用户输入的手机号所对应的已到账户中，用户下载易到APP后可使用；
+                <br> • 必胜客甜品优惠券：请截屏保存优惠券，在有效期内到店出示使用；
+                <br> 6. 分享游戏分数，请好友帮忙翻牌子，可以帮助加分或者减分，翻牌结果分为4种情况，即：积分翻倍、积分减半、积分增加3000或积分减少3000，积分增加的概率为70%，积分减少的概率为30%。
+                <br> 7. 每次游戏积分经过当天好友的翻牌，数值发生的变化作为本次游戏的最终得分。
+                <br> 8. 秒杀活动：
+                <br> • 2015年10月12日至2015年10月18日期间，游戏最终分数排名前30000名的用户，可参与2015年10月19日晚20：00开始的秒杀活动（下称“第一轮秒杀”）；
+                <br> • 2015年10月20日至2015年10月25日期间，游戏最终分数排名前30000名的用户，可参与2015年10月26日晚20：00开始的秒杀活动（下称“第二轮秒杀”）。
+                <br> 9. 秒杀活动开启后，具备秒杀资格的用户可以选择秒杀商品进行秒杀，商品数量有限，先抢先得。
+                <br> 10. 秒杀奖品为：
+                <br> • 第一轮秒杀：易到打车券礼包1份（价值200元，共7500份），必胜客法式芳香黄油肋眼牛排券1张（共2000份）；
+                <br> • 第二轮秒杀：易到打车券礼包1份（价值200元礼包券，共7500份），必胜客法式芳香黄油肋眼牛排券1张（共2000份），必胜客霸王餐(价值100元餐券,共30份）。
+                <br> 11. 秒杀奖品的领取方式如下：
+                <br> • 易到打车券：自动存入用户输入的手机号所对应的已到账户中，用户下载易到APP后可使用；
+                <br> • 必胜客霸王餐：用户填写地址信息，必胜客快递餐券给用户
+                <br> • 必胜客法式芳香黄油肋眼牛排券：请长按页面的二维码保存或者截屏保存页面，在有效期内到店出示使用；
+                <br> 12. 秒杀成功的用户，不可再次参与当轮秒杀。
+                <br>
+                <br> 活动声明：
+                <br> 1. 本次活动由百胜餐饮集团中国事业部必胜客品牌主办（简称“主办方”）。
+                <br> 2. 对于任何通过不正当手段参加活动者，主办方有权在不事先通知的前提下取消其参加活动及获奖资格。
+                <br> 3. 活动规则中涉及的时间均以系统时间为准。
+                <br> 4. 主办方不对因网络传输原因而导致参加者提交的信息错误承担任何责任。
+                <br> 5. 如遇不可抗力因素，本活动因故无法进行时，主办方在法律允许的范围内有权决定取消、终止、修改或暂停本活动。
+                <br>
+                <br>
+
+            </div>
+        </div>
+    </div>
+    <div class="step rule rule-2 hide" style="">
+        <img src="img/rule_04.jpg">
+        <a href="javascript:;" class="close"><img src="img/bean10-X.png">
+        </a>
+        <div class="rule-border">
+            <h2>互动规则</h2>
+            <div class="rule-list">
+                1. 分享游戏分数，请好友帮忙翻牌子，可以帮助加分或者减分，翻牌结果分为4种情况，即：积分翻倍、积分减半、积分增加3000或积分减少3000，积分增加的概率为70%，积分减少的概率为30%。
+                <br> 2. 每次游戏积分经过当天好友的翻牌，数值发生的变化作为本次游戏的最终得分。
+                <br>
+
+
+
+            </div>
+        </div>
+    </div>
+    <div class="step rule rule-3 hide" style="">
+        <img src="img/rule_03.jpg">
+        <a href="javascript:;" class="close"><img src="img/bean10-X.png">
+        </a>
+        <div class="rule-border">
+            <h2>互动与秒杀规则</h2>
+            <div class="rule-list">
+                1. 分享游戏分数，请好友帮忙翻牌子，可以帮助加分或者减分，翻牌结果分为4种情况，即：积分翻倍、积分减半、积分增加3000或积分减少3000，积分增加的概率为70%，积分减少的概率为30%。
+                <br> 2. 每次游戏积分经过当天好友的翻牌，数值发生的变化作为本次游戏的最终得分。
+                <br> 3. 秒杀奖品包括：易到200元专车券一份、必胜客代金券100元、必胜客法式芳香黄油肋眼牛排买一送一券。
+                <br> 4. 本活动分为2轮，每轮结束后游戏积分清零。
+                <br> 第一轮：10月12日-10月18日
+                <br> 截至第一轮结束时游戏分数排名30000名的用户可参与10月19日20:00的秒杀活动；
+                <br> 第二轮：10月20日-10月25日
+                <br> 截至第二轮结束时游戏分数排名30000名的用户可参与10月26日20:00的秒杀活动。
+                <br> 5. 秒杀参与方式：
+                <br> 1）关注官方微信号，每轮活动排名前30000名的游戏玩家将接收到秒杀的提示消息。
+                <br> 2）收藏本活动微信链接，右上角菜单的“秒杀大奖”进入秒杀页面
+                <br>
+            </div>
+        </div>
+    </div>
+    <div class="cover hide" style="height: 826px;"></div>
+    <div id="stu" style="display:none"></div>
+    <!--第一次出现的提示end-->
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+
+    <!--<script src="js/quark.base-1.0.0.alpha.min.js"></script>-->
+    <script src="js/quark.base-1.0.0.js"></script>
+    <script src="js/jQuery.md5.js"></script>
+    <script src="src/Button.js"></script>
+    <script src="src/main.js?v=2"></script>
+    <script src="src/Fruit.js?v=1"></script>
+    <script src="src/Boy.js"></script>
+    <script src="src/Num.js"></script>
+    <script src="js/jquery-css-transform.js"></script>
+    <script src="js/rotate3Di.js"></script>
+    <script src="js/main.js?v=6"></script>
+
+    <script type="text/javascript">
+    $().ready(function(e) {
+        var jsApiList = ['onMenuShareTimeline', 'onMenuShareAppMessage', 'hideMenuItems'];
+        var share_timeline_data = {
+            'title': '求加分，万圣节 | 不可错过的“Trick or Treat”，餐券用车券全在碗里等你，拿碗来接！',
+            'link': 'http://halloween.pizzahut.com.cn/index.html',
+            'img_url': 'http://halloween.pizzahut.com.cn/img/share1.png',
+            'callbackfunc': function() {
+                //alert("分享成功!" );
+                //_mz_evt('1001058', '100029231');
+                _trackEvent("Share-Success", "click", "Share");
+                //分享成功
+            }
+        };
+        var share_app_data = {
+            'title': '求加分↓↓↓和我一起拼手速！',
+            'desc': '万圣节 | 不可错过的“Trick or Treat”，餐券用车券全在碗里等你，拿碗来接！',
+            'link': 'http://halloween.pizzahut.com.cn/index.html',
+            'img_url': 'http://halloween.pizzahut.com.cn/img/share1.png',
+            'callbackfunc': function() {
+                //alert("分享成功!");
+                //_mz_evt('1001058', '100029231');
+                _trackEvent("Share-Success", "click", "Share");
+                //分享成功
+            }
+        };
+        var hide_menu_list = [];
+        construct('wx6173eb6085accfec', window.location, jsApiList, share_timeline_data, share_app_data, hide_menu_list);
+    });
+    </script>
+
+
+
+
+</body>
+
+</html>

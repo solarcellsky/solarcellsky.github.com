@@ -1,0 +1,15 @@
+info face="Oswald " size=30 bold=0 italic=0 charset="" unicode=0 stretchH=100 smooth=1 aa=1 padding=8,8,8,8 spacing=0,0
+common lineHeight=71 base=54 scaleW=512 scaleH=128 pages=1 packed=0
+page id=0 file="count.png"
+chars count=10
+char id=32   x=0     y=0     width=0     height=0     xoffset=0     yoffset=54    xadvance=27     page=0  chnl=0 
+char id=57   x=0     y=0     width=45     height=72     xoffset=-6     yoffset=-9    xadvance=48     page=0  chnl=0 
+char id=56   x=45     y=0     width=45     height=72     xoffset=-7     yoffset=-9    xadvance=47     page=0  chnl=0 
+char id=55   x=90     y=0     width=39     height=72     xoffset=-7     yoffset=-9    xadvance=41     page=0  chnl=0 
+char id=54   x=129     y=0     width=45     height=72     xoffset=-5     yoffset=-9    xadvance=48     page=0  chnl=0 
+char id=53   x=174     y=0     width=45     height=72     xoffset=-6     yoffset=-9    xadvance=48     page=0  chnl=0 
+char id=52   x=219     y=0     width=47     height=72     xoffset=-6     yoffset=-9    xadvance=49     page=0  chnl=0 
+char id=51   x=266     y=0     width=45     height=72     xoffset=-6     yoffset=-9    xadvance=47     page=0  chnl=0 
+char id=50   x=311     y=0     width=45     height=72     xoffset=-6     yoffset=-9    xadvance=47     page=0  chnl=0 
+char id=49   x=356     y=0     width=32     height=72     xoffset=-7     yoffset=-9    xadvance=35     page=0  chnl=0 
+char id=48   x=388     y=0     width=45     height=72     xoffset=-6     yoffset=-9    xadvance=49     page=0  chnl=0 

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0, width=device-width">
+    <meta name="screen-orientation" content="portrait">
+    <meta charset="utf-8">
+    <title>疯狂横扫一切-中大国际15周年庆典</title>
+    <link rel="stylesheet" href="static/css/game.css?v=5">
+    <script src="static/js/pupuxing.watercover.min.js"></script>
+    <script src="static/js/jquery-2.1.1.min.js"></script>
+    <script src="static/js/idangerous.swiper-2.6.1.min.js"></script>
+    <script src="static/js/jquery.fullPage.min.js"></script>
+</head>
+<iframe id="__WeixinJSBridgeIframe_SetResult" style="display: none;"></iframe>
+<iframe id="__WeixinJSBridgeIframe" style="display: none;"></iframe>
+
+<body>
+    <div id="mymian">
+        <div class="startsplash bg-img fp-section active fp-table">
+            <div id="close" style="display: none"></div>
+            <div id="yxgz" style="display: none"><img src="static/images/yxgz.png" style="width: 100%;height: 100%"></div>
+            <div id="start"></div>
+            <div id="hdgz"></div>
+            <div id="soccer" style="visibility: visible;">
+                <img src="static/images/shan2.png">
+            </div>
+            <div id="soccer_2">
+                <img src="static/images/shan.png">
+            </div>
+            <div id="firstPage"><img src="static/images/first.jpg" style="width: 100%;height: 100%"></div>
+        </div>
+        <div id="main_2" class="bg-img fp-section fp-table" style="height: 100%">
+            <div class="index-car bg-img"></div>
+            <div class="tip bg-img"></div>
+            <div id="rocket-to-top">
+                <div class="level-2" style="opacity: 0; display: block"></div>
+                <div class="level-3"></div>
+            </div>
+        </div>
+        
+        <!--游戏主场景 start-->
+        <div id="main">
+            <div id="guidePanel"></div>
+            <div id="gamePanel">
+                <div class="score-wrap">
+                    <div class="heart"></div>
+                    <span id="score">000000</span>
+                </div>
+
+                <canvas id="stage" height="576" width="320">
+                    <span>Browser does not support the canvas.</span>
+                </canvas>
+            </div>
+
+            <div id="gameoverPanel"></div>
+
+            <div id="resultPanel">
+                <div class="weixin-share"></div>
+                <a href="javascript:void(0)" class="replay">再玩一次</a>
+
+                <div id="scoreBoard" class="panel">
+                    <div class="score-result score-1">
+                        <div class="scorewrapper-wrapper">
+                            <div class="score-wrapper">
+                                <p class="tips">你木有抓到一个红包~</p>
+                                <a href="javascript:void(0)" class="share" data-desc="我开豪车一路狂飙，被妹纸们华丽丽的无视，心塞！">向基友们求人品！</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="score-result score-2">
+                        <div class="scorewrapper-wrapper">
+                            <div class="score-wrapper">
+                                <p class="tips" style="z-index:100000">矮油，成功抓到<span id="myContent">7</span>个现金红包！</p>
+                                <div class="rank">
+                                    <div class="inner">
+                                        <h4>累计获得现金红包</h4>
+                                        <h5>￥156元</h5>
+                                    </div>
+                                </div>
+                                <a href="javascript:void(0)" class="share" data-desc="喜讯：我开豪车成功追到{x}个妹纸！吼吼，请为我点赞！">向小伙伴炫耀！</a>
+                                <a href="duihuan.html" class="showmemoney">立即兑换</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="score-result score-3">
+                        <p class="tips" style="margin-top: 130px;z-index:100000">哦吼，成功抓到<span>30</span>个现金红包！
+                            <br> 送给你一个神秘礼盒
+                        </p>
+                        <div class="display score-0" style="height: 100%;left: 0;position: absolute;top: 0;width: 100%"></div>
+                        <div class="display score-4" style="height: 100%;left: 0;position: absolute;top: 0;width: 100%"></div>
+                        <div class="display score-5" style="height: 100%;left: 0;position: absolute;top: 0;width: 100%"></div>
+                        <div class="display score-6" style="height: 100%;left: 0;position: absolute;top: 0;width: 100%"></div>
+                        <div class="display score-7" style="height: 100%;left: 0;position: absolute;top: 0;width: 100%"></div>
+                        <a href="javascript:void(0)" class="lottery">打开礼盒</a>
+                    </div>
+                </div>
+
+                <div id="prize" class="panel">
+                    <div class="prize-default">
+                        <img src="static/images/jiang1.png" class="random-prize display_1">
+                        <img src="static/images/jiang2.png" class="random-prize display_2">
+                        <img src="static/images/jiang3.png" class="random-prize display_3">
+                        <img src="static/images/jiang4.png" class="random-prize display_4">
+                        <img src="static/images/jiang5.png" class="random-prize display_5">
+                        <img src="static/images/weizhongjiang.png" class="random-prize display_6">
+                        <a href="lq.jsp" id="lqjp" class="lingqu" style="background: url(static/images/lingqu.png) 0 0 no-repeat;background-size: 100%;height: 48px;width: 158px;" data-desc="我开豪车搭{x}个妹纸回家~获赠平安符，好人一生平安|我开豪车搭{x}个妹纸回家~桃花运从天而降，再接再厉">向小伙伴炫耀！</a>
+                        <a class="fenxiang share" style="display: none;background: url(static/images/xuanyao3.png) 0 0 no-repeat;background-size: 100%;height: 48px;width: 158px;z-index:100" data-desc="我开豪车搭{x}个妹纸回家~获赠平安符，好人一生平安|我开豪车搭{x}个妹纸回家~桃花运从天而降，再接再厉">向小伙伴炫耀！</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--游戏主场景 end-->
+    </div>
+    
+    <script src="./static/js/Game.js"></script>
+    <script src="./static/js/resource.js"></script>
+    <script src="./static/js/main.js"></script>
+    <script src="./static/js/go.js"></script>
+    <!--音乐 start-->
+    <div id="music">
+        <div class="music play"></div>
+        <span>开启</span>
+
+        <div class="musics"></div>
+    </div>
+    <script>
+    //音乐
+    var bgm = new Audio();
+    bgm.src = "static/js/bgm.mp3";
+    bgm.loop = true;
+    $(".music").on("tap", function() {
+        if ($(this).hasClass("play")) {
+            $(this).removeClass("play");
+            $("#music>span").addClass("zshow").html("关闭");
+            setTimeout(function() {
+                $("#music>span").removeClass("zshow")
+            }, 1000);
+            bgm.pause();
+        } else {
+            $(this).addClass("play");
+            $("#music>span").addClass("zshow").html("开启");
+            setTimeout(function() {
+                $("#music>span").removeClass("zshow")
+            }, 1000);
+            bgm.play();
+        }
+    })
+
+    function playmusic() {
+        $(".music").addClass("play");
+            bgm.play();
+        $("#mySwiper").one("touchstart", function() {
+            bgm.play();
+        })
+    }
+    </script>
+    <!--音乐 end-->
+
+    <script>
+    var msecs = 200; //改变时间得到不同的闪烁间隔；
+    var counter = 0;
+
+    function soccerOnload() {
+        setTimeout("blink()", msecs)
+    }
+
+    function blink() {
+        soccer.style.visibility =
+            (soccer.style.visibility == "hidden") ? "visible" : "hidden"
+        counter += 1;
+        setTimeout("blink()", msecs)
+    }
+    soccerOnload()
+
+    $(function() {
+        $(document).on("tap", "#hdgz", function() {
+            $("#yxgz").show();
+            $("#close").show();
+        })
+        $(document).on("tap", "#close", function() {
+            $("#yxgz").hide();
+            $("#close").show();
+        })
+        $(document).on("tap", "#start", function() {
+            // alert("活动结束");
+            //          location.reload();
+            // playmusic();
+            $(".startsplash").hide();
+            var engine = new Audio();
+            engine.src = "static/js/engine.mp3";
+            $(function() {
+                $('#mymian').fullpage({
+                    onLeave: function(index) {
+                        engine.play();
+                        if (index == 1) {
+                            $(".index-car").addClass('move');
+                            $("#main_2").fadeOut(1500);
+                            playmusic();
+                        }
+                    }
+                });
+            });
+        })
+    })
+    </script>
+    <input type="hidden" value="" id="count">
+    <!--分享开始 -->
+    <script type="text/javascript" src="static/js/jweixin-1.0.0.js"></script>
+   <!-- <script type="text/javascript" src="static/js/sha1.js"></script>-->
+    <script>
+    var count = $("#count").val(); // 个数
+    if (count == "") {
+        count = 0;
+    }
+    var basePath = $('#basePath').attr("value");
+    var myContent = $("#myContent").val();
+
+    var jsapi_ticket = $("#ticket").val();
+    if (jsapi_ticket == "") {
+        location.href = basePath + "weixin/login.do";
+    }
+    
+     window.config = {
+         link: 'http://devts.pupuxing.net/UsersData/pupuxing/game/zdhengsao/index.html',
+         imgUrl: 'http://devts.pupuxing.net/UsersData/pupuxing/game/zdhengsao/static/images/share.jpg',
+         img_url: 'http://devts.pupuxing.net/UsersData/pupuxing/game/zdhengsao/static/images/share.jpg',
+         title: "疯狂横扫一切-中大国际15周年庆典！",
+         desc: '东风吹，战鼓擂；我是VIP，我怕谁！不要睡了，起来抢！再磨蹭就抢完啦！！'
+      
+     };
+     window.timelineconfig = {
+         link: 'http://devts.pupuxing.net/UsersData/pupuxing/game/zdhengsao/index.html',
+         imgUrl: 'http://devts.pupuxing.net/UsersData/pupuxing/game/zdhengsao/static/images/share.jpg',
+         img_url: 'http://devts.pupuxing.net/UsersData/pupuxing/game/zdhengsao/static/images/share.jpg',
+         title: "疯狂横扫一切-中大国际15周年庆典！"
+     };
+      document.addEventListener('WeixinJSBridgeReady', function () {
+         var WJ = WeixinJSBridge;
+
+         WJ.on('menu:share:appmessage', function () {
+             WJ.invoke('sendAppMessage', config, function (res) {
+                 // _report('sendAppMessage', res.err_msg);
+             });
+         });
+
+         WJ.on('menu:share:timeline', function () {
+             config.title = config.title + config.desc;
+             WJ.invoke('shareTimeline', config, function (res) {
+                 // _report('shareTimeline', res.err_msg);
+             });
+         });
+
+
+         WJ.on('menu:share:weibo', function () {
+             WJ.invoke('shareWeibo', config, function (res) {
+                 // _report('shareWeibo', res.err_msg);
+             });
+         });
+     });
+        
+
+    //不能修改下面的命名
+    //var imgUrl = basePath + "weixin/static/images/fxxt.jpg"; //注意必须是绝对路径
+    //var lineLink = basePath + "weixin/share.jsp"; //同样，必须是绝对路径
+    //var shareTitle = "奔跑吧VIP，向钱冲！我抓到了" + count + "个红包，你行吗？我保证不虐你！";
+    //var desc = "东风吹，战鼓擂；我是VIP，我怕谁！不要睡了，起来抢！再磨蹭就抢完啦！";
+
+    
+    </script>
+    <!-- <script type="text/javascript" src="static/js/share.js"></script>-->
+
+    <!--分享结束-->
+     <script>
+     $(function () {
+         var postData = {
+             "currentUrl": location.href.split('#')[0]
+         }
+         $.post("http://devts.pupuxing.net/WeixinAPI/ConfigScriptJson", postData, function (wxConfig) {
+
+                wx.config(wxConfig);
+
+                wx.ready(function () {
+                    // config信息验证后会执行ready方法，所有接口调用都必须在config接口获得结果之后，config是一个客户端的异步操作，所以如果需要在页面加载时就调用相关接口，则须把相关接口放在ready函数中调用来确保正确执行。对于用户触发时才调用的接口，则可以直接调用，不需要放在ready函数中。
+                    var config = window.config;
+                    var timelineconfig = window.timelineconfig ? window.timelineconfig : window.config;
+                    wx.onMenuShareAppMessage(config);
+                    wx.onMenuShareTimeline(timelineconfig);
+                    wx.onMenuShareQQ(config);
+                    wx.onMenuShareWeibo(config);
+
+                    //wx.hideOptionMenu();
+                });
+
+                wx.error(function (res) {
+
+                    // config信息验证失败会执行error函数，如签名过期导致验证失败，具体错误信息可以打开config的debug模式查看，也可以在返回的res参数中查看，对于SPA可以在这里更新签名。
+
+                });
+            });
+        });
+      </script>
+</body>
+
+</html>

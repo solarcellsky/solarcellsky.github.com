@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>乐高</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <script src="js/jquery-1.11.min.js" type="text/javascript"></script>
+    <script src="js/jquery.transit.min.js" type="text/javascript"></script>
+    <script src="js/jquery.classyloader.min.js" type="text/javascript"></script>
+    <script src="js/jquery.mCustomScrollbar.js" type="text/javascript"></script>
+    <script src="js/viewport.js" type="text/javascript"></script>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="js/wx_share.js" type="text/javascript"></script>
+    <script>
+    var loade
+    var shuzi = 20;
+    $(function() {
+        document.body.addEventListener("touchmove", function(e) {
+            e.preventDefault();
+        }, false);
+        loader = $('.loader').ClassyLoader({
+            width: 159,
+            height: 159,
+            lineWidth: 7,
+            diameter: 76,
+            animate: false,
+            percentage: 100,
+            showText: false,
+            speed: 5,
+            lineColor: "rgba(245,38,27,1)",
+            remainingLineColor: "rgba(255,241,97,1)"
+        });
+        var imgs = ["images/gz_btn.png", "images/hezi5.png", "images/hezi1.png", "images/hezi2.png", "images/hezi3.png", "images/hezi4.png", "images/lego_txt.png", "images/guang.png", "images/pop_txt1.png", "images/pop_txt.png", "images/shou.png", "images/s_hezi1.png", "images/s_hezi2.png", "images/s_hezi3.png", "images/s_hezi4.png", "images/s_hezi5.png"];
+        var imgTotal = 0;
+        var img = new Image();
+        img.onload = function() {
+            imgTotal++;
+        }
+        var timer = setInterval(function() {
+
+            var sz = parseInt(100 / imgs.length * imgTotal)
+
+
+            $("#sz").html(sz);
+            if (imgTotal >= imgs.length) {
+                clearInterval(timer);
+                loader.setPercent(100).draw();
+                $(".wrap").css("opacity", "1");
+                $("#lod").fadeOut(1000, function() {
+                    $(".guang").show().addClass("op")
+                    $(".legao_g").show().addClass("animated bounceInUp");
+                    setTimeout(function() {
+                        $(".hz_2,.hz_5").show().addClass("animated tada");
+
+                    }, 1000);
+                    setTimeout(function() {
+                        $(".hz_3,.hz_4").show().addClass("animated tada");
+
+                    }, 1500);
+                    setTimeout(function() {
+
+                        $(".he_1").show().addClass("animated tada");
+
+                    }, 2000)
+                    setTimeout(function() {
+                        $(".he_1").addClass("kai");
+                        $(".tips_txt").show().delay(250).transition({
+                            scale: 1,
+                            y: 0
+                        }, 500, "linear", function() {
+                            setTimeout(function() {
+
+                                $(".tips_txt").transition({
+                                    scale: 1,
+                                    y: -1000,
+                                    opacity: 0
+                                }, 800, "linear", function() {
+                                    $(".pop_txt").show().addClass("animated fadeInDown");
+                                })
+
+                            }, 1000)
+
+                        });
+
+                    }, 3000)
+
+                });
+            } else {
+
+                img.src = imgs[imgTotal];
+
+            }
+        }, 50);
+
+        var myAuto = document.getElementById('audio');
+        myAuto.play();
+        $(".pop_txt a").on("click", function() {
+            _hmt.push(['_trackEvent', '首页-开始探索', 'click']);
+            $("#box1").hide();
+            $("#box2").fadeIn(500, function() {
+                $("#game_box1 h2").show().addClass("animated bounceInDown");
+                setTimeout(function() {
+                    $("#game_box1 .search_icon").transition({
+                        x: -332,
+                        y: -201
+                    }, 500, "linear", function() {
+                        $("#game_box1 .search_icon").transition({
+                            y: -352
+                        }, 1000, "linear", function() {
+                            $("#game_box1 .search_icon").transition({
+                                x: -191
+                            }, 1000, "linear", function() {
+                                $("#game_box1 .search_icon").transition({
+                                    y: -201
+                                }, 1000, "linear", function() {
+                                    $("#game_box1 .search_icon").transition({
+                                        x: -247,
+                                        y: -289
+                                    }, 1000, "linear", function() {
+                                        $(this).fadeOut(500);
+                                        $(".cc").hide();
+
+                                    })
+                                })
+
+
+                            })
+
+
+                        })
+                    })
+                }, 500)
+
+            });
+        });
+
+        $("#gz_close").on("click", function() {
+            $("#role_pop").hide();
+        });
+        $("#gz_btn").on("click", function() {
+            $("#role_pop").show();
+            $(".v_pp").mCustomScrollbar({
+                scrollButtons: {
+                    enable: false,
+                    scrollType: "continuous",
+                    scrollSpeed: 20,
+                    scrollAmount: 40
+                },
+                horizontalScroll: false,
+            });
+        });
+        $(".err_con").on("click", function() {
+            $("#cw_pop").show();
+        });
+        $("#game_box1 .game_bg a").on("click", function() {
+            $("#game_box1 .game_bg").fadeOut(500, function() {
+                $("#game_box1 .tiao > div").animate({
+                    width: "100%"
+                }, 1000, function() {
+                    $(".x_guang,.shou").show();
+                    $(".s_hezi").addClass("s_hezi1");
+                    $(".lg_tu").addClass("yshou");
+                    $(".h_hezi > div").width("20%");
+                    setTimeout(function() {
+                        $("#game_box1 .tips").show().addClass("animated bounceInUp");
+                    }, 500)
+                    setTimeout(function() {
+                        $("#game_box1 .loading_box").fadeOut(500);
+                    }, 2500)
+
+                    //
+                })
+            })
+        });
+        $("#game_box2 .game_bg a").on("click", function() {
+            $("#game_box2 .game_bg").fadeOut(500, function() {
+                $("#game_box2 .tiao > div").animate({
+                    width: "100%"
+                }, 1000, function() {
+                    $(".x_guang,.shou").show();
+                    $(".s_hezi").addClass("s_hezi2");
+                    $(".lg_tu").addClass("yshou");
+                    $(".h_hezi > div").width("40%");
+                    setTimeout(function() {
+                        $("#game_box2 .tips").show().addClass("animated bounceInUp");
+                    }, 500)
+                    setTimeout(function() {
+                        $("#game_box2 .loading_box").fadeOut(500);
+                    }, 2500)
+                })
+            })
+        });
+        $("#game_box3 .game_bg a").on("click", function() {
+            $("#game_box3 .game_bg").fadeOut(500, function() {
+                $("#game_box3 .tiao > div").animate({
+                    width: "100%"
+                }, 1000, function() {
+                    $(".x_guang,.shou").show();
+                    $(".s_hezi").addClass("s_hezi3");
+                    $(".lg_tu").addClass("yshou");
+                    $(".h_hezi > div").width("60%");
+                    setTimeout(function() {
+                        $("#game_box3 .tips").show().addClass("animated bounceInUp");
+                    }, 500)
+                    setTimeout(function() {
+                        $("#game_box3 .loading_box").fadeOut(500);
+                    }, 2500)
+                })
+            })
+        });
+        $("#game_box4 .game_bg a").on("click", function() {
+            $("#game_box4 .game_bg").fadeOut(500, function() {
+                $("#game_box4 .tiao > div").animate({
+                    width: "100%"
+                }, 1000, function() {
+                    $(".x_guang,.shou").show();
+                    $(".s_hezi").addClass("s_hezi4");
+                    $(".lg_tu").addClass("yshou");
+                    $(".h_hezi > div").width("80%");
+                    setTimeout(function() {
+                        $("#game_box4 .tips").show().addClass("animated bounceInUp");
+                    }, 500)
+                    setTimeout(function() {
+                        $("#game_box4 .loading_box").fadeOut(500);
+                    }, 2500)
+                })
+            })
+        });
+        $("#game_box5 .game_bg a").on("click", function() {
+            $("#game_box5 .game_bg").fadeOut(500, function() {
+                $("#game_box5 .tiao > div").animate({
+                    width: "100%"
+                }, 1000, function() {
+                    $(".x_guang,.shou").show();
+                    $(".s_hezi").addClass("s_hezi5");
+                    $(".lg_tu").addClass("yshou");
+                    $(".h_hezi > div").width("100%");
+                    setTimeout(function() {
+                        $("#game_box5 .tips").show().addClass("animated bounceInUp");
+                    }, 500)
+                    setTimeout(function() {
+                        $("#game_box5 .loading_box").fadeOut(500);
+                    }, 2500)
+                })
+            })
+        });
+        $("#game_box1 .game_end a").on("click", function() {
+            _hmt.push(['_trackEvent', '首页-继续探索第2盒', 'click']);
+            $("#game_box1").hide();
+            $(".x_guang,.shou").hide();
+            $(".s_hezi").removeClass("s_hezi1");
+            $(".lg_tu").removeClass("yshou");
+            $("#game_box2").fadeIn(500, function() {
+                $("#game_box2 h2").show().addClass("animated bounceInDown")
+            })
+        });
+        $("#game_box2 .game_end a").on("click", function() {
+            _hmt.push(['_trackEvent', '首页-继续探索第3盒', 'click']);
+            $("#game_box2").hide();
+            $(".x_guang,.shou").hide();
+            $(".s_hezi").removeClass("s_hezi2");
+            $(".lg_tu").removeClass("yshou");
+            $("#game_box3").fadeIn(500, function() {
+                $("#game_box3 h2").show().addClass("animated bounceInDown")
+            })
+        });
+        $("#game_box3 .game_end a").on("click", function() {
+            _hmt.push(['_trackEvent', '首页-继续探索第4盒', 'click']);
+            $("#game_box3").hide();
+            $(".x_guang,.shou").hide();
+            $(".s_hezi").removeClass("s_hezi3");
+            $(".lg_tu").removeClass("yshou");
+            $("#game_box4").fadeIn(500, function() {
+                $("#game_box4 h2").show().addClass("animated bounceInDown")
+            })
+        });
+        $("#game_box4 .game_end a").on("click", function() {
+            _hmt.push(['_trackEvent', '首页-继续探索第5盒', 'click']);
+            $("#game_box4").hide();
+            $(".x_guang,.shou").hide();
+            $(".s_hezi").removeClass("s_hezi4");
+            $(".lg_tu").removeClass("yshou");
+            $("#game_box5").fadeIn(500, function() {
+                $("#game_box5 h2").show().addClass("animated bounceInDown")
+            })
+        });
+        $("#game_box5 .game_end a").on("click", function() {
+            _hmt.push(['_trackEvent', '首页-立即抽奖', 'click']);
+            $("#game_box5").hide();
+            $("#box2").hide();
+            $(".list_con").hide();
+            $("#box3").fadeIn(500)
+
+        });
+        $("#cw_close").on("click", function() {
+            window.location.href = "main.php";
+
+        });
+        $(".cj_pop a").on("click", function() {
+            _hmt.push(['_trackEvent', '首页-我要抽奖', 'click']);
+            $("#jp1").fadeIn(500)
+
+        });
+        $("#ok_pop a").on("click", function() {
+            $("#ok_pop").fadeOut(500)
+
+        });
+        $(".tj_pop a").on("click", function() {
+            $("#ok_pop").fadeIn(500)
+
+        });
+        $(".fx_pop a").on("click", function() {
+            $(".fx_pop_txt").show();
+            $(".fx").hide(1, function() {
+                setTimeout(function() {
+                    $(".fx_pop_txt").fadeOut(500);
+                }, 3000)
+            });
+
+        });
+        $(".jp_con a").on("click", function() {
+            $("#box3").hide();
+            $("#box4").fadeIn(500);
+
+        });
+        $("#yy").on("click", function() {
+            if ($(this).hasClass("guan")) {
+                $(this).removeClass("guan");
+                myAuto.play();
+            } else {
+                $(this).addClass("guan");
+                myAuto.pause();
+            }
+        });
+        $("#cw_btn2").on("click", function() {
+            $("#fx_pop_w").show(1, function() {
+
+                setTimeout(function() {
+                    $("#fx_pop_w").hide();
+                }, 3000)
+            });
+
+        });
+        $("#zf_wei").bind("touchstart", function() {
+            _hmt.push(['_trackEvent', '首页页-购买乐高(一步之遥)', 'click']);
+        })
+
+
+        $(".lalala").bind("touchstart", function() {
+            _hmt.push(['_trackEvent', '中奖页-购买乐高(好可惜)', 'click']);
+        })
+
+    });
+    wx.ready(function() {
+        // 在这里调用 API
+        wx.error(function(res) {
+
+            //alert(res);
+
+        });
+        //wx.hideOptionMenu();
+        $.timelineTitle = "快来开启千变万化的乐高创意盒~20元亚马逊折扣码人人有份，还有更多惊喜好礼，等你解密！";
+        $.shareAppDesc = "喊朋友一起来探索赢定制款乐高钥匙扣！";
+        $.shareAppTitle = "创作粒的世界里不能没有TA 喊朋友一起来探索赢定制款乐高钥匙扣！";
+        $.shareUrl = "http://kongming.vfad.cn/lego/index.php?from=share";
+        $.shareImage = "http://kongming.vfad.cn/lego/images/OP1.jpg";
+
+        wx.onMenuShareAppMessage({
+            title: $.shareAppTitle,
+            desc: $.shareAppDesc,
+            link: $.shareUrl,
+            imgUrl: $.shareImage,
+            trigger: function(res) {
+
+            },
+            success: function(res) {
+                //alert(111);
+                _hmt.push(['_trackEvent', 'share_index_app', 'click']);
+                //window.location.href="luck_draw.php?share=1";
+
+            },
+            cancel: function(res) {
+
+            },
+            fail: function(res) {
+
+            }
+        });
+        wx.onMenuShareTimeline({
+            title: $.timelineTitle,
+            link: $.shareUrl,
+            imgUrl: $.shareImage,
+            trigger: function(res) {},
+            success: function(res) {
+                //alert(222);
+                _hmt.push(['_trackEvent', 'share_index_time', 'click']);
+                //window.location.href="luck_draw.php?share=1";
+
+            },
+            cancel: function(res) {
+
+            },
+            fail: function(res) {}
+        });
+    });
+    </script>
+</head>
+
+<body>
+    <div id="lod">
+        <div class="lod_content">
+            <div class="guang3 op"></div>
+            <div class="lod_img"></div>
+            <canvas class="loader"></canvas>
+        </div>
+        <div class="bai" style="display:none">
+            <em id="sz"></em>%
+        </div>
+    </div>
+    <div class="wrap" style="opacity:0">
+        <div class="box" id="box1">
+            <div class="logo1"></div>
+            <div class="logo2"></div>
+            <div class="logo3"></div>
+            <div class="legao_g" style="display: none">
+                <div class="guang" style="display:none"></div>
+                <div class="g_img"></div>
+            </div>
+            <div class="hezi_con">
+                <div class="tips_txt" style="display: none"></div>
+                <div class="hz_2" style="display: none"></div>
+                <div class="hz_3" style="display: none"></div>
+                <div class="hz_4" style="display: none"></div>
+                <div class="hz_5" style="display: none"></div>
+                <div class="he_1" style="display: none"></div>
+                <div class="pop_txt" style="display: none">
+                    <a href="#" class="daxiao"></a>
+                </div>
+            </div>
+            <a href="#" id="gz_btn"></a>
+        </div>
+        <div class="box" id="box2" style="display: none">
+            <div class="game_box" id="game_box1">
+                <div class="game_end">
+                    <a href="#"></a>
+                </div>
+                <div class="loading_box">
+                    <div class="load_bg">
+                        <div class="tiao">
+                            <div style="width: 0%"></div>
+                        </div>
+                    </div>
+                    <div class="tips" style="display:none"></div>
+                </div>
+                <div class="game_bg">
+                    <h2 style="display:none"></h2>
+                    <div class="game_con">
+                        <div class="cc"></div>
+                        <div class="err_con"></div>
+                        <a href="#"></a>
+                    </div>
+                    <span class="search_icon">
+       <div class="daxiao"></div></span>
+                </div>
+            </div>
+            <div class="game_box" id="game_box2" style="display: none">
+                <div class="game_end">
+                    <a href="#" style="background-image:url(images/btn_next3.png)"></a>
+                </div>
+                <div class="loading_box">
+                    <div class="load_bg">
+                        <div class="tiao">
+                            <div style="width: 0%"></div>
+                        </div>
+                    </div>
+                    <div class="tips" style="display:none"></div>
+                </div>
+                <div class="game_bg">
+                    <h2 style="display:none"></h2>
+                    <div class="game_con">
+                        <div class="err_con"></div>
+                        <a href="#"></a>
+                    </div>
+                    <span class="search_icon" style="display:none">
+       <div class="daxiao"></div></span>
+                </div>
+            </div>
+            <div class="game_box" id="game_box3" style="display: none">
+                <div class="game_end">
+                    <a href="#" style="background-image:url(images/btn_next4.png)"></a>
+                </div>
+                <div class="loading_box">
+                    <div class="load_bg">
+                        <div class="tiao">
+                            <div style="width: 0%"></div>
+                        </div>
+                    </div>
+                    <div class="tips" style="display:none"></div>
+                </div>
+                <div class="game_bg">
+                    <h2 style="display:none"></h2>
+                    <div class="game_con">
+                        <div class="err_con"></div>
+                        <a href="#"></a>
+                    </div>
+                    <span class="search_icon" style="display:none">
+       <div class="daxiao"></div></span>
+                </div>
+            </div>
+            <div class="game_box" id="game_box4" style="display: none">
+                <div class="game_end">
+                    <a href="#" style="background-image:url(images/btn_next5.png)"></a>
+                </div>
+                <div class="loading_box">
+                    <div class="load_bg">
+                        <div class="tiao">
+                            <div style="width: 0%"></div>
+                        </div>
+                    </div>
+                    <div class="tips" style="display:none"></div>
+                </div>
+                <div class="game_bg">
+                    <h2 style="display:none"></h2>
+                    <div class="game_con">
+                        <div class="err_con"></div>
+                        <a href="#"></a>
+                    </div>
+                    <span class="search_icon" style="display:none">
+       <div class="daxiao"></div></span>
+                </div>
+            </div>
+            <div class="game_box" id="game_box5" style="display: none">
+                <div class="game_end">
+                    <a href="#" class="daxiao"></a>
+                </div>
+                <div class="loading_box">
+                    <div class="load_bg">
+                        <div class="tiao">
+                            <div style="width: 0%"></div>
+                        </div>
+                    </div>
+                    <div class="tips" style="display:none"></div>
+                </div>
+                <div class="game_bg">
+                    <h2 style="display:none"></h2>
+                    <div class="game_con">
+                        <div class="err_con"></div>
+                        <a href="#"></a>
+                    </div>
+                    <span class="search_icon" style="display:none">
+       <div class="daxiao"></div></span>
+                </div>
+            </div>
+            <div class="list_con">
+                <div class="h_hezi">
+                    <div style="width:0"></div>
+                </div>
+                <div class="huang"></div>
+                <div class="x_guang op" style="display: none">
+                    <div class="g_n"></div>
+                    <div class="g_w"></div>
+                </div>
+                <div class="lg_tu">
+                </div>
+                <div class="shou" style="display: none"></div>
+                <div class="s_hezi"></div>
+                <div class="lg_wshou"></div>
+            </div>
+        </div>
+        <div class="box" id="box3" style="display: none">
+            <div class="cj_pop">
+                <div>
+                    <span class="op"></span>
+                    <a href="lucky.html"></a>
+                </div>
+            </div>
+            <!--<div class="jp_con" id="jp1" style="display: none">
+      <a href="#"></a>
+    </div>-->
+            <!--中奖1-->
+            <!--<div class="jp_con" id="jp2" style="display: none">
+      <a href="#"></a>
+    </div>-->
+            <!--中奖2-->
+            <!--<div class="jp_con" id="jp3" style="display: none">
+      <a href="#"></a>
+    </div>-->
+            <!--中奖3-->
+            <div id="mei_zhongjiang" style="display: none">
+                <!--没中奖-->
+                <div class="tit_pop_txt"></div>
+                <div class="lg_img_bt1"></div>
+                <div class="fx_pop">
+                    <span></span>
+                    <a href="#"></a>
+                </div>
+                <div class="fx_pop_txt" style="display: none">
+                    <div></div>
+                </div>
+                <a href="http://z.cn/lego" class="lalala"></a>
+                <span>LEGO19920</span>
+                <em>长按复制折扣码</em>
+                <div class="lg_img_bt"></div>
+            </div>
+            <div id="zf_wei" style="display: none">
+                <a href="http://z.cn/lego" class="lalala"></a>
+                <span>LEGO19920</span>
+                <em>长按复制折扣码</em>
+                <div class="lg_img_bt"></div>
+            </div>
+            <!--转发未中奖-->
+            <div id="zf_zhongjiang" style="display: none">
+                <div class="zj_txt"></div>
+                <div class="lg_img_bt" style="bottom: 72px;"></div>
+                <div class="tx_pop">
+                    <span></span>
+                    <a href="from.php"></a>
+                </div>
+            </div>
+        </div>
+        <!--<div class="box" id="box4" style="display: none">
+    <div class="input_con">
+      <div class="tit_tips"></div>
+      <div class="input_bg1">
+        <input type="text" id="user" value="" placeholder="真是姓名填写（涉及快递)"/>
+        <input type="text" id="phone" value=""/>
+        <textarea id="address"></textarea>
+      </div>
+      <div class="lg_img_bt"></div>
+      <div class="tj_pop"><span></span>
+        <a href="#"></a>
+      </div>
+    </div>
+  </div>-->
+        <!--<div class="box" id="box5" style="display: none">
+    <div class="tit_tips1"></div>
+    <div class="lg_img_bt"></div>
+    <div class="input_bg2">
+      <input type="text" id="text" value="" placeholder="钥匙圈上的字数限6个字"/>
+      <input type="text" id="user1" value="" placeholder=""/>
+      <input type="text" id="phone1" value=""/>
+      <textarea id="address"></textarea>
+    </div>
+    <div class="tj_pop" style="bottom: 33px;"><span></span>
+      <a href="#"></a>
+    </div>
+  </div>
+</div>-->
+        <a href="#" id="yy"></a>
+        <div id="role_pop" style="display: none">
+            <a href="#" id="gz_close"></a>
+            <div class="v_pp" style="overflow: hidden;">
+                <h3>活动时间：</h3>
+                <p> <em>2016年6月10日—2016年6月25日</em> </p>
+                <h3>活动步骤：</h3>
+                <p> 1. 参与“解密创意盒，探索乐高月”活动，就能获得<em>亚马逊乐高月20元抵扣码</em>；
+                    <br /> 2. 活动分为5站，每站需完成1个探索任务，才能打开/收集1个乐高月创意盒；
+                    <br /> 打开/集齐5个乐高月创意盒后，就能得到1次通关抽奖机会，奖品为<em>乐高探索中心门票/乐高拼砌包</em>，每位参与者仅能获得<em>1次通关抽奖的机会</em>哦！
+                    <br /> 3. 分享活动页面给好友，还能获得<em>1次抽取“定制款乐高刻字钥匙圈”</em>的机会，每位参与者仅能通过分享获得1次抽奖机会哦！
+                    <br /> 4. 获奖用户请在活动页面填写并提交完整的联络方式，乐高中国将会在活动结束后7日内联系您，并在20日内为您寄送奖品。 </p>
+                <h3>免责条款：</h3>
+                <p> 1，鉴于本活动之特殊性质，活动期间若发生黑客攻击或电信部门技术调整导致重大影响、病毒侵袭、网络故障、宽带、域名解析故障或其他网络设计或技术提供商的服务延迟、服务障碍或任何其他类似事件，致使活动无法正常进行，乐高玩具（上海）有限公司不对由此造成的任何损失承担任何责任。
+                    <br /> 2，鉴于不同型号的手机、不同终端的适配性、展示形式及用户参与活动时的客观环境存在差异，如发生网络延迟、手机卡死（包括但不仅限于以上情况），致使活动无法正常进行，乐高玩具（上海）有限公司不对由此造成的任何损失承担任何责任。
+                    <br /> 3，由于用户自身过错，如不按正常流程操作、填写信息不真实、不完整等类似情形致使无法核验用户真实信息而不能领取奖品的，乐高玩具（上海）有限公司免除交付奖品的责任。
+                    <br /> 4，任何人或任何网站冒充乐高玩具（上海）有限公司从事类似活动或恶意通知用户领奖，造成用户损失的，乐高玩具（上海）有限公司不对该等损失承担任何责任。 </p>
+            </div>
+            <div class="wx_jt"></div>
+        </div>
+        <div id="cw_pop" style="display: none">
+            <div>
+                <a href="#" id="cw_close"></a>
+                <a href="http://z.cn/lego" class="link_1 lalala"></a>
+                <a href="http://z.cn/lego" class="link_2 lalala"></a>
+                <input name="freecode" type="text" autofocus="" id="freecode" style=" font-size: 45px;  color: #565656;  font-weight: bold; text-align: center; border:none ;text-align: center;  position: absolute;  left: 0;  top: 472px; z-index:99999; background-color:transparent" value="LEGO19920" readonly="" />
+                <em>长按复制折扣码</em>
+                <a href="main.php" id="cw_btn1"></a>
+                <a href="#" id="cw_btn2"></a>
+            </div>
+        </div>
+        <div id="ok_pop" style="display: none">
+            <div>
+                <a href="#"></a>
+            </div>
+            <span> <img src="images/rwm.png" /> </span>
+        </div>
+        <div id="fx_pop_w" style="display:none">
+            <div></div>
+        </div>
+        <audio id="audio" src="mp3.mp3" style="opacity:0" preload="auto" controls="" loop="" hidden="true">
+        </audio>
+    </div>
+</body>
+
+</html>

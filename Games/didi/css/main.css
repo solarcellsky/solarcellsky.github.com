@@ -1,0 +1,37 @@
+@charset "utf-8";
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
+form,fieldset,input,textarea,p,blockquote,th,td,section,canvas {
+    padding: 0;
+    margin: 0;
+}
+li{ list-style: none;}
+
+html,body {
+    font-size: 22px;
+    color: #000;
+    font-family: 'Microsoft YaHei', Arial;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    -webkit-touch-callout:none; /* 禁用长触弹出的下载图片菜单 */
+    -webkit-user-select:none; /* 禁用长触选择文字等功能 */
+    background: #FFFFFF;
+}
+
+.hide{ display: none;}
+
+canvas{ /*width: 100%; height: 100%;*/ background: #FFFFFF; /* transform:rotate(90deg); position: absolute; left: 20px; top: 20px; transform-origin: center center;*/ }
+/*旋转*/
+
+.tip{ color: #FF0000; position: absolute; left: 0; top: 175px; font-size: 18px;}
+.landscape_tip{ position: absolute; left: 0; top: 0; width: 100%; height: 100%; background:#FFFFFF url("../images/bg.jpg");}
+.landtip{ width: 320px; height: 255px; position: absolute; left: 50%; top: 50%; margin: -130px 0 0 -160px; transform: scale(0.5,0.5)}
+.landtip>div:nth-of-type(1){ background: url("../images/landtxt.png") no-repeat center center; width: 320px; height: 255px;}
+@media screen and (orientation: portrait) {
+    /*竖屏 css*/
+    .landscape_tip{ display: none;}
+}
+@media screen and (orientation: landscape) {
+    /*横屏 css*/
+    .landscape_tip{ display: block;}
+}

@@ -1,0 +1,461 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline
+}
+
+html {
+    line-height: 1
+}
+
+ol,
+ul {
+    list-style: none
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+caption,
+th,
+td {
+    text-align: left;
+    font-weight: normal;
+    vertical-align: middle
+}
+
+q,
+blockquote {
+    quotes: none
+}
+
+q:before,
+q:after,
+blockquote:before,
+blockquote:after {
+    content: "";
+    content: none
+}
+
+a img {
+    border: none
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+    display: block
+}
+
+*, :before, :after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html,body {
+	width: 100%;
+	height: 100%;
+    font: normal normal normal 12px/1.2em Arial, sans-serif;
+    overflow: hidden
+}
+
+.game {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background: #180107 url('../images/bg.jpg?1408967554') no-repeat center top;
+    background-size: 100% 100%;
+    padding: 16% 10% 0;
+}
+
+.panel {
+    background: url('../images/panel-bg.png?1408967642') no-repeat center top;
+    width: 100%;
+    margin: 0 auto;
+    position: relative
+}
+
+.panel:after {
+    position: absolute;
+    display: block;
+    content: "";
+    background: url('../images/panel-shadow.png?1409047878') no-repeat center top;
+    background-size: 100% auto;
+    width: 100%;
+    height: 136px;
+    bottom: -150px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 1
+}
+
+.range {
+    width: 100%;
+    height: 130px;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+    top: 14px
+}
+
+.range:before {
+    position: absolute;
+    display: block;
+    content: "";
+    background: url('../images/panel-front.png?1409046533') no-repeat center top;
+    background-size: 100% auto;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 1px;
+    z-index: 1
+}
+
+.bar {
+	width: 33.3%;
+    display: block;
+    list-style: none;
+    float: left;
+    margin: 0;
+    padding: 0;
+    position: relative
+}
+
+.bar li {
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 271px;
+    margin: 0 1px
+}
+.bar li img {
+	width: 100%;
+}
+
+.controls {
+    width: 100%;
+    margin: 23px auto 0;
+    position: relative;
+    z-index: 2
+}
+
+.info {
+    height: 65px;
+    color: #fefefe;
+    display: block;
+    box-sizing: border-box;
+    text-align: center;
+    font-weight: bold;
+    line-height: 65px;
+    float: left;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.21);
+    font-size: 24px;
+    background: url('../images/info-center.png?1409048890') repeat-x left top;
+    padding: 0 10px;
+    position: relative;
+    margin: 0 12px 0 6px
+}
+
+.info:before {
+    position: absolute;
+    display: block;
+    content: "";
+    background: url('../images/info-left.png?1409048890') no-repeat center top;
+    width: 9px;
+    height: 65px;
+    top: 0;
+    left: -9px;
+    z-index: 1
+}
+
+.info:after {
+    position: absolute;
+    display: block;
+    content: "";
+    background: url('../images/info-right.png?1409048890') no-repeat center top;
+    width: 9px;
+    height: 65px;
+    top: 0;
+    right: -9px;
+    z-index: 1
+}
+.c_txt{
+	position: absolute;
+    display: block;
+	width: 105px;
+	height: 12px;
+	background: url('../images/c_txt.png?1409048890') no-repeat center center;
+	left: 0;
+	top: 65px;
+}
+
+button {
+    width: 74px;
+    height: 79px;
+    border: 0 none;
+    margin: -7px 0 0 5px;
+    padding: 0;
+    display: block;
+    float: left;
+    box-sizing: border-box;
+    text-indent: -9999px;
+    background: url('../images/buttons.png?1409050555') no-repeat left top;
+    cursor: pointer
+}
+
+button:focus {
+    outline: none
+}
+
+button.min {
+    background-position: 0 0;
+    position:absolute;
+    right:70px;
+    top: 0;
+}
+
+button.min:hover {
+    background-position: 0 -80px
+}
+
+button.min:active,
+button.min.active {
+    background-position: -74px 0
+}
+
+button.min.disabled {
+    background-position: -74px -79px !important;
+    cursor: default
+}
+
+button.max {
+    background-position: 0 -158px;
+    position:absolute;
+    right: -6px;
+    top: 0;
+}
+
+button.max:hover {
+    background-position: 0 -237px
+}
+
+button.max:active,
+button.max.active {
+    background-position: -74px -158px
+}
+
+button.max.disabled {
+    background-position: -74px -237px !important;
+    cursor: default
+}
+
+.spin {
+    line-height: normal;
+    background: url('../images/spin.png?1409052194') no-repeat center 0;
+    width: 100%;
+    height: 66px;
+    margin-top: 45px;
+    clear:both;
+}
+
+.spin:hover,
+.spin.hover {
+    background-position: center -66px
+}
+
+.spin.disabled {
+    opacity: 0.7;
+    cursor: default
+}
+
+.spin.disabled:hover {
+    background-position: 0 0
+}
+
+.lost {
+    width: 384px;
+    height: 128px;
+    background-color: #c00;
+    opacity: 0.9;
+    text-align: center;
+    line-height: 128px;
+    font-size: 100px;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+.clear {
+    clear: both
+}
+
+.rules {
+    background-color: #222;
+    padding: 0 5px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px
+}
+
+.rules img {
+    background-color: #101010;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px
+}
+
+.texts {
+    text-align: center;
+    margin-top: 0;
+    padding: 5px 0;
+    background-color: #101010;
+    color: #fff;
+    margin-bottom: 5px
+}
+
+#loading {
+    background: #180107 url('../images/loading.gif?1409055175') no-repeat center center;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 5
+}
+
+.text-panel {
+    width: 100%;
+    height: 80px;
+    margin: 0 auto;
+    position: relative
+}
+
+.text-panel .text {
+    width: 100%;
+    height: 100%;
+}
+
+.text-panel .text.text-jackpot {
+    background: url('../images/text-jackpot.png?1408966535') no-repeat center bottom;
+    background-size: 70% auto;
+}
+
+.text-panel .text.text-spinning {
+    background: url('../images/text-spinning.png?1408966543') no-repeat center bottom;
+    background-size: 70% auto;
+}
+
+.text-panel .text.text-spin {
+    background: url('../images/text-spin.png?1408966549') no-repeat center bottom;
+    background-size: 70% auto;
+}
+
+.text-panel .text.text-money-over {
+    background: url('../images/text-money-over.png?1408966556') no-repeat center bottom;
+    background-size: 70% auto;
+}
+
+.text-panel .text.text-won {
+    background: url('../images/text-won.png?1408966562') no-repeat center bottom;
+    background-size: 70% auto;
+}
+
+.text-panel .text.hide {
+    display: none
+}

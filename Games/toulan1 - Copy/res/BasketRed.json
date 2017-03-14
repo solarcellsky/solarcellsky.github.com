@@ -1,0 +1,258 @@
+{
+  "ID": "fe3d841a-02c8-4d64-811e-88d66ce99faa",
+  "Version": "2.3.1.1",
+  "Name": "BasketRed",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 537,
+        "Children": [
+          {
+            "FileData": {
+              "Type": "PlistSubImage",
+              "Path": "basket_line01.png",
+              "Plist": "basket.plist"
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": -2.36,
+              "Y": 36.74
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": -69.86,
+            "RightMargin": -65.14,
+            "TopMargin": -89.24,
+            "BottomMargin": -15.76,
+            "Tag": 557,
+            "ActionTag": -1010899275,
+            "Size": {
+              "X": 135.0,
+              "Y": 105.0
+            },
+            "Name": "basketBaffle",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "PlistSubImage",
+              "Path": "basket_red03.png",
+              "Plist": "basket.plist"
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": -3.4746,
+              "Y": -22.9825
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": -50.9746,
+            "RightMargin": -44.0254,
+            "TopMargin": 1.4825,
+            "BottomMargin": -44.4825,
+            "Tag": 542,
+            "ActionTag": 516981156,
+            "Size": {
+              "X": 95.0,
+              "Y": 43.0
+            },
+            "Name": "basketNet",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "PlistSubImage",
+              "Path": "basket_red01.png",
+              "Plist": "basket.plist"
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": -5.5,
+              "Y": 10.21
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": -57.5,
+            "RightMargin": -46.5,
+            "TopMargin": -18.21,
+            "BottomMargin": 2.21,
+            "Tag": 540,
+            "ActionTag": 2080723476,
+            "Size": {
+              "X": 104.0,
+              "Y": 16.0
+            },
+            "Name": "basket_red01_1",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "PlistSubImage",
+              "Path": "basket_miss.png",
+              "Plist": "basket.plist"
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": -1.3351,
+              "Y": 40.7295
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": -22.8351,
+            "RightMargin": -20.1649,
+            "TopMargin": -60.2295,
+            "BottomMargin": 21.2295,
+            "Tag": 558,
+            "ActionTag": 318054005,
+            "Size": {
+              "X": 43.0,
+              "Y": 39.0
+            },
+            "Name": "basket_miss_5",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "PlistSubImage",
+              "Path": "basket_red02.png",
+              "Plist": "basket.plist"
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": -5.07,
+              "Y": -5.08
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": -57.07,
+            "RightMargin": -46.93,
+            "TopMargin": -3.92,
+            "BottomMargin": -14.08,
+            "Tag": 541,
+            "ActionTag": 1081503299,
+            "Size": {
+              "X": 104.0,
+              "Y": 18.0
+            },
+            "Name": "basket_red02_2",
+            "ctype": "SpriteObjectData"
+          }
+        ],
+        "Size": {
+          "X": 0.0,
+          "Y": 0.0
+        },
+        "Name": "Node",
+        "ctype": "SingleNodeObjectData"
+      },
+      "UsedResources": [
+        "basket.plist",
+        "basket.png"
+      ],
+      "ctype": "GameProjectData"
+    }
+  },
+  "Type": "Node"
+}

@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>七彩转盘</title>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="screen-orientation" content="portrait"/>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+<body>
+
+<div id="loadingImg">
+    <div>
+        <img src="res/loading.gif">
+    </div>
+</div>
+<canvas id="gameCanvas"></canvas>
+<div class="shareTips" id="shareTips"></div>
+<script src="game.min.js"></script>
+<script >
+    function dp_submitScore(score){
+        if(score>0){
+            alert('Game Over')
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>手机拔河</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="full-screen" content="true"/>
+    <meta name="screen-orientation" content="portrait"/>
+    <meta name="x5-fullscreen" content="true"/>
+    <meta name="360-fullscreen" content="true"/>
+    <link rel="stylesheet" href="resource/assets/m.css">
+</head>
+
+<script src="libs/modules/socket.io/socket.io.js"></script>
+<script src="libs/jquery-2.1.3.min.js"></script>
+<script>
+    var _rid =getQuery('rid');
+    var _gid =getQuery('gid');
+    var _team =getQuery('team');
+    var _avt =getQuery('avatar');
+    var _authorize = getQuery('authorize');
+
+    var isWX = /micromessenger/.test(navigator.userAgent.toLowerCase());
+
+    if (isWX) {
+        if (_authorize!="true" || !_authorize) {
+            window.location.href = "http://node.ekche.com/game/phpFiles/oauth/bh_oauth.php?rid="+_rid+"&team="+_team+"&gid="+_gid;
+        }
+    }else{
+        _avt = _team=='blue' ? 'http://node.ekche.com/tugofwar/client/common/avt/1.png' : 'http://node.ekche.com/tugofwar/client/common/avt/2.png';
+    }
+
+    function getQuery (name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)","i");
+        var r = window.location.search.substr(1).match(reg);
+        if (r!=null) return (r[2]); return null;
+    }
+
+    $('#_body').attr('class',_team);
+    $('#img1').attr('src','img/logo_'+_team+'.png');
+    $('#img2').attr('src','img/logo_'+_team+'.png');
+
+</script>
+<body id="_body">
+    <div id="logo">
+        <img id="img1" alt="">
+        <p>等待其他队员加入...</p>
+    </div>
+    <div id="team">
+        <img id="img2" alt="">
+    </div>
+    <div id="phone">
+        <img src="resource/assets/phone.png" alt="">
+    </div>
+</body>
+</html>
+<script src="common/config.js"></script>
+<script src="m.js?v=1.0.01"></script>

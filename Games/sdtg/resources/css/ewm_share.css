@@ -1,0 +1,59 @@
+@charset "utf-8";
+/* CSS Document */
+*{ padding:0; margin:0}
+.clear{ clear:both;}
+.ewm_fenxiang{position:relative; width:100%; margin:auto ;  } 
+.ewm_fenxiang .fenxiang1{ position:fixed;width:100%; top:0px; min-height:980px;  z-index:9; }
+.ewm_fenxiang .fenxiang1 .yaoqing{ width:72.1875%; margin-left:8.5%;padding-top:1%; padding-bottom:2%;}
+.ewm_fenxiang .fenxiang1 .yaoqing img{ width:100%; height:auto; margin-left:20.5%;padding-top:1%; padding-bottom:2%;}
+.ewm_fenxiang .fenxiang1 .ewm_content{ width:100%; }
+.ewm_fenxiang .fenxiang1 .ewm_content .ewm_content_1{ width:80%; margin:auto;position:relative; padding-top:5%;}
+.ewm_fenxiang .fenxiang1 .ewm_content .ewm_content_1 .ewm_content_1_a{ display:inline-block; width:15%;vertical-align:middle; }
+.ewm_fenxiang .fenxiang1 .ewm_content .ewm_content_1 .ewm_content_1_a img{ width:100%; height:auto;-moz-border-radius:100px; -webkit-border-radius:100px;  border-radius:100px; }
+.ewm_fenxiang .fenxiang1 .ewm_content .ewm_content_1 .ewm_content_1_b{ display:inline-block; width:77% ; margin-left:2%; vertical-align:middle;font-size:20pt;  -ms-word-break: break-all; }
+.ewm_fenxiang .fenxiang1 .ewm_content .ewm_content_1 .ewm_content_1_b p{ word-break: break-all; 
+ word-break: break-word; 
+-webkit-hyphens: auto;
+-moz-hyphens: auto;
+hyphens: auto; }
+
+.ewm_fenxiang .fenxiang1 .ewm_content .ewm_content_1 .guanbi1{ width:10%; position:absolute; right:5%; top:-10%;}
+.ewm_fenxiang .fenxiang1 .ewm_content .ewm_content_1 .guanbi1 img{ width:100%; height:auto}
+
+.ewm_fenxiang .fenxiang1 .ewm_content .ewm_content_2{ width:35%; margin:auto; padding-top:3%; }
+.ewm_fenxiang .fenxiang1 .ewm_content .ewm_content_2 img{ width:100%; margin:auto; }
+.ewm_fenxiang .fenxiang1 .ewm_content .ewm_content_3{ width:80%; margin:auto; padding-top:3%; font-size:20pt;  word-break: break-word; 
+-webkit-hyphens: auto;
+-moz-hyphens: auto;
+hyphens: auto; }
+.ewm_fenxiang .fenxiang1 .ewm_content .ewm_content_3 img{ width:100%; margin:auto; }
+@media screen and (max-width:600px) {
+  .ewm_fenxiang .fenxiang1 .ewm_content .ewm_content_1 .ewm_content_1_b{ font-size:18pt; }
+  .ewm_fenxiang .fenxiang1 .ewm_content .ewm_content_3{ font-size:18pt; }
+	}
+	
+	@media screen and (max-width:550px) {
+  .ewm_fenxiang .fenxiang1 .ewm_content .ewm_content_1 .ewm_content_1_b{ font-size:16pt; }
+   .ewm_fenxiang .fenxiang1 .ewm_content .ewm_content_3{ font-size:17pt; }
+	}
+	
+	@media screen and (max-width:500px) {
+  .ewm_fenxiang .fenxiang1 .ewm_content .ewm_content_1 .ewm_content_1_b{ font-size:15pt; }
+  .ewm_fenxiang .fenxiang1 .ewm_content .ewm_content_3{ font-size:15pt; }
+	}
+	
+	@media screen and (max-width:450px) {
+  .ewm_fenxiang .fenxiang1 .ewm_content .ewm_content_1 .ewm_content_1_b{ font-size:14pt; }
+  .ewm_fenxiang .fenxiang1 .ewm_content .ewm_content_3{ font-size:14pt; }
+	}
+	
+	@media screen and (max-width:400px) {
+  .ewm_fenxiang .fenxiang1 .ewm_content .ewm_content_1 .ewm_content_1_b{ font-size:12pt; }
+  .ewm_fenxiang .fenxiang1 .ewm_content .ewm_content_3{ font-size:12pt; }
+	}
+	
+    @media screen and (max-width:350px) {
+  .ewm_fenxiang .fenxiang1 .ewm_content .ewm_content_1 .ewm_content_1_b{ font-size:10pt; }
+	}
+	
+	

@@ -1,0 +1,74 @@
+html{ font-size:10px;}
+.wanfa{position:relative; z-index:9999;}
+.wanfa .wanfa_1{background-color:rgba(0,0,0,0.75); width:100% ; height:1000px; position:absolute; z-index:9; }
+.wanfa .wanfa_1 .wanfa_2{width:100% ; position:relative; max-width:960px; margin:auto; color:#F00; }
+.wanfa .wanfa_1 .wanfa_2 .wanfa_3{position:fixed; top:20px; max-width:960px; width:100%;   }
+.wanfa .wanfa_1 .wanfa_2 .wanfa_3 .wanfa_4_1 { background:#db4453; width:52%; margin:auto; padding:1% 0; text-align:center ; font-size:3rem; color:#FFF; border-top-left-radius:1rem;border-top-right-radius:1rem; position:relative;}
+.wanfa .wanfa_1 .wanfa_2 .wanfa_3 .wanfa_4_1  span{ display:inline-block; width:5%; position:absolute; right:2%; top:20%;}
+.wanfa .wanfa_1 .wanfa_2 .wanfa_3 .wanfa_4_1  span img{ width:100%; height:auto;}
+.wanfa .wanfa_1 .wanfa_2 .wanfa_3 .wanfa_4_2{ background:#fffefc; width:52%; margin:auto;padding-bottom:3%; border-bottom-left-radius:1rem;border-bottom-right-radius:1rem;  }
+.wanfa .wanfa_1 .wanfa_2 .wanfa_3 .wanfa_4_2_1{ font-size:2.4rem; color:#525353; width:90%; padding-top:3%; margin:auto; word-break:break-all; word-wrap:break-word; }
+.wanfa .wanfa_1 .wanfa_2 .wanfa_3 .wanfa_4_2_2 { font-size:2.8rem; width:70%; text-align:center; background:#f6be4b; margin:auto; border-radius:10px; margin-top:15%; padding:1% 0; color:#FFF; }
+
+
+ @media screen and (orientation:landscape){}
+ @media screen and (orientation:portrait){
+	 .wanfa .wanfa_1 .wanfa_2 .wanfa_3 .wanfa_4_2{width:80%;}
+	 .wanfa .wanfa_1 .wanfa_2 .wanfa_3 .wanfa_4_1 {  width:80%; padding:2% 0;}
+	 
+	 .wanfa .wanfa_1 .wanfa_2 .wanfa_3 .wanfa_4_1 {  font-size:3rem}
+	 .wanfa .wanfa_1 .wanfa_2 .wanfa_3 .wanfa_4_2_1{ font-size:2.4rem;}
+	 .wanfa .wanfa_1 .wanfa_2 .wanfa_3 .wanfa_4_2_2 { font-size:2.8rem;}
+	 }
+/*
+		@media screen and (max-width:896px) and (orientation:landscape) {
+			  html{ font-size:9px;}
+			}
+		
+			@media screen and (max-width:832px) and (orientation:landscape) {
+			  html{ font-size:8px;}
+			  
+			}
+		
+			@media screen and (max-width:768px) and (orientation:landscape) {
+			  html{ font-size:7px;}
+			}
+		
+		
+			@media screen and (max-width:704px) and (orientation:landscape) {
+			  html{ font-size:6px;}
+			  
+			}
+		
+		
+			@media screen and (max-width:640px) and (orientation:landscape) {
+			  html{ font-size:5px;}
+			}
+	
+
+           @media screen and (max-width:580px) and (orientation:portrait) {
+			  html{ font-size:9px;}
+				 
+			}
+			
+			@media screen and (max-width:515px) and (orientation:portrait) {
+			  html{ font-size:8px;}
+			}
+			
+			@media screen and (max-width:450px) and (orientation:portrait) {
+			  html{ font-size:7px;}
+			 
+			}
+			
+			
+			@media screen and (max-width:385px) and (orientation:portrait) {
+			  html{ font-size:6px;}
+			}
+			
+			
+			@media screen and (max-width:320px) and (orientation:portrait) {
+			  html{ font-size:5px;}
+			}
+		*/
+
+

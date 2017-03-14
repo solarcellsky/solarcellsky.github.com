@@ -1,0 +1,11 @@
+@charset "utf-8";
+/* CSS Document */
+#loading_info{ max-width:960px; margin:auto; background:#FFF;}
+.load1{ width:42.7%;margin:auto; padding:5% 0;}
+.load2{ width:100%; font-size:2.3rem; text-align:center; color:#aaaaaa;}
+ @media screen and (orientation:landscape){}
+ @media screen and (orientation:portrait){
+	 #loading_info{ max-width:640px; margin:auto; background:#FFF;}
+	 .load1{ width:60%;margin:auto; padding:5% 0;}
+     .load2 { padding-top:20%;}
+ }

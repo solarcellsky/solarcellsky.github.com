@@ -1,0 +1,14 @@
+{"file":"texture.png","frames":{
+"black":{"x":449,"y":319,"w":50,"h":50,"offX":0,"offY":0,"sourceW":50,"sourceH":50},
+"blue":{"x":345,"y":387,"w":50,"h":50,"offX":0,"offY":0,"sourceW":50,"sourceH":50},
+"cat":{"x":1,"y":255,"w":290,"h":185,"offX":11,"offY":1,"sourceW":312,"sourceH":190},
+"milk":{"x":293,"y":387,"w":50,"h":50,"offX":0,"offY":0,"sourceW":50,"sourceH":50},
+"more":{"x":1,"y":678,"w":430,"h":116,"offX":0,"offY":0,"sourceW":430,"sourceH":116},
+"qizi":{"x":293,"y":255,"w":102,"h":130,"offX":0,"offY":0,"sourceW":102,"sourceH":130},
+"red":{"x":463,"y":255,"w":10,"h":10,"offX":0,"offY":0,"sourceW":10,"sourceH":10},
+"restartBtn":{"x":1,"y":442,"w":430,"h":116,"offX":0,"offY":0,"sourceW":430,"sourceH":116},
+"right":{"x":397,"y":255,"w":64,"h":62,"offX":0,"offY":0,"sourceW":64,"sourceH":62},
+"shareBtn":{"x":1,"y":560,"w":430,"h":116,"offX":0,"offY":0,"sourceW":430,"sourceH":116},
+"shareHint":{"x":397,"y":319,"w":50,"h":71,"offX":0,"offY":0,"sourceW":50,"sourceH":71},
+"startBtn":{"x":1,"y":796,"w":190,"h":190,"offX":0,"offY":0,"sourceW":190,"sourceH":190},
+"title":{"x":1,"y":1,"w":470,"h":252,"offX":1,"offY":1,"sourceW":474,"sourceH":254}}}

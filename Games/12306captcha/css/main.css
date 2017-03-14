@@ -1,0 +1,295 @@
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+p,
+ul,
+ol,
+li,
+a,
+span {
+    margin: 0;
+    padding: 0
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 12px;
+    font-weight: 700
+}
+
+ul,
+li {
+    list-style: none
+}
+
+html,
+body {
+    font: 400 12px/1.5 'Microsoft Yahei';
+    background: #fff
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400
+}
+
+.clearFix:after {
+    clear: both;
+    content: '.';
+    height: 0;
+    display: block;
+    visibility: hidden
+}
+
+input,
+a,
+:focus {
+    outline: 0;
+    resize: none
+}
+
+body,
+html {
+    height: 100%;
+    width: 100%
+}
+
+.loading-wrap {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 10000;
+    overflow: hidden;
+    background: #fff;
+    background-size: cover
+}
+
+.loading-wrap.loading {
+    z-index: 99999;
+    display: block;
+    display: box;
+    display: -webkit-box;
+    box-flex: 1;
+    -webkit-box-flex: 1;
+    box-align: center;
+    -webkit-box-align: center;
+    box-pack: center;
+    -webkit-box-pack: center;
+    box-orient: vertical;
+    -webkit-box-orient: vertical
+}
+
+.loading-wrap.loading .progress {
+    position: absolute;
+    top: 46.62698413%;
+    left: 82%;
+    text-align: center;
+    font-size: 14px;
+    color: red
+}
+
+.loading-wrap.loading .progress img {
+    width: 130px;
+    margin: 0 auto 10px;
+    display: block
+}
+
+.loading-wrap.loading .progress_bar {
+    position: absolute;
+    top: 45.63492063%;
+    left: 10%;
+    width: 70%;
+    height: 10px;
+    background: 0 0;
+    border: 1px solid #ffcd6d;
+    border-radius: 10px;
+    margin-top: 10px
+}
+
+.loading-wrap.loading .progress_bar span {
+    display: block;
+    width: 0;
+    height: 10px;
+    background: red;
+    border-radius: 4px
+}
+
+.loading-wrap.loading .progress-tip {
+    color: red;
+    width: 100%;
+    text-align: center;
+    top: 51.58730159%;
+    font-size: 14px;
+    position: absolute
+}
+
+.wrap {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #efeff4
+}
+
+.wrap .top {
+    background: url(../images/top.png) center top no-repeat;
+    background-size: contain;
+    height: 32.73809524%
+}
+
+.wrap .list {
+    background: #fff;
+    margin-top: 2.97619048%;
+    padding-bottom: .99206349%
+}
+
+.wrap .list h4 {
+    font-weight: 400;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    border-bottom: 1px solid #ccc;
+    margin: 0 10px
+}
+
+.wrap .list h4 span {
+    color: red;
+    margin: 0 5px
+}
+
+.wrap .list h4 b {
+    font-size: 18px
+}
+
+.wrap .list ul li {
+    float: left;
+    width: 24%;
+    margin-left: .8%;
+    position: relative;
+    margin-top: 3px
+}
+
+.wrap .list ul li.active:after {
+    background: url(../images/a.png) center center no-repeat;
+    content: '.';
+    position: absolute;
+    z-index: 10;
+    top: 10px;
+    right: 10px;
+    width: 14px;
+    height: 14px;
+    background-size: contain
+}
+
+.wrap .list ul li img {
+    width: 100%;
+    display: block
+}
+
+.wrap .btn {
+    width: 90%;
+    margin: 0 auto;
+    background: #517cca;
+    height: 42px;
+    line-height: 42px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+    left: 5%
+}
+
+.alert_wrap {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .7);
+    position: absolute;
+    z-index: 100;
+    display: box;
+    display: -webkit-box;
+    box-align: center;
+    -webkit-box-align: center;
+    box-pack: center;
+    -webkit-box-pack: center;
+    top: 0;
+    left: 0;
+    display: none
+}
+
+.alert_wrap .alert_con {
+    width: 220px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px
+}
+
+.alert_wrap .alert_con .t {
+    font-weight: 700;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 15px
+}
+
+.alert_wrap .alert_con .c {
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: 15px
+}
+
+.alert_wrap .alert_con .b {
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    color: #337ab7;
+    border-top: 1px solid #ccc
+}
+
+.tips {
+    position: absolute;
+    bottom: 100px;
+    text-align: center;
+    width: 100%;
+    display: none;
+    z-index: 20
+}
+
+.tips span {
+    background: rgba(0, 0, 0, .7);
+    padding: 6px 20px;
+    color: #fff;
+    font-size: 14px
+}
+
+.shareTip {
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: rgba(0, 0, 0, .7);
+    display: none
+}
+
+.shareTip span {
+    background: url(../images/shareTip.png) center center no-repeat;
+    background-size: contain;
+    width: 68.4375%;
+    height: 19.74206349%;
+    position: absolute;
+    top: 10px;
+    right: 10px
+}

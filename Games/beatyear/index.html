@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>限时打年兽，赢360黄金安仔</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no,target-densitydpi=device-dpi" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <meta name="full-screen" content="true" />
+    <meta name="screen-orientation" content="portrait" />
+    <meta name="x5-fullscreen" content="true" />
+    <meta name="360-fullscreen" content="true" />
+
+
+    <style>
+    body {
+        text-align: center;
+        background: #000000;
+        padding: 0;
+        border: 0;
+        margin: 0;
+        height: 100%;
+    }
+    html {
+        -ms-touch-action: none;
+        /* Direct all pointer events to JavaScript code. */
+        
+        overflow: hidden;
+    }
+    div,
+    canvas {
+        display: block;
+        position: absolute;
+        margin: 0 auto;
+        padding: 0;
+        border: 0;
+    }
+    </style>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+</head>
+<div style="display:none">
+    <input id="files-upload" type="file" width='0' height='0' multiple accept="image/.*;capture=camera" name="file">
+    <div id="result" name="result"></div>
+</div>
+<div style="position:relative;" id="gameDiv"></div>
+
+<!-- <script src="launcher/grayscale.js" async="false"></script> -->
+<script>
+var document_class = "GameApp";
+</script>
+<!--这部分内容在编译时会被替换，要修改文档类，请到工程目录下的egretProperties.json内编辑。-->
+<script src="launcher/egret_require.js"></script>
+<script src="launcher/egret_loader.js"></script>
+<script src="launcher/game-min.js"></script>
+<script type="text/javascript">
+//     if (window.DeviceMotionEvent) {
+//         window.addEventListener('devicemotion', deviceMotionHandler, false);
+//     } else {
+//         alert('本设备不支持devicemotion事件');
+//     }
+//     function deviceMotionHandler(eventData) {
+//         window["rootContainer"].deviceMotionHandler(eventData);
+//     }
+//
+</script>
+<!-- <div style="display:none">
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fa9feb11c0f8dc86283e1a6fc661600c7' type='text/javascript'%3E%3C/script%3E"));
+</script>    
+</div> -->
+
+<script type="text/javascript">
+//alert("hh");
+wx.config({
+    debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+    appId: 'wxfab63a520ce95f72',
+    timestamp: 1446449926,
+    nonceStr: 'WyIMQflR6EMupkBT',
+    signature: '4a064868ab9aaa7b856cd06b735dafaa38364315',
+    jsApiList: [
+
+        'onMenuShareTimeline',
+        'onMenuShareAppMessage',
+        'onMenuShareQQ'
+    ]
+});
+
+var shareSuccess = function(res) {
+    alert("success");
+};
+
+function bindShareCallBack(fun, obj) {
+    var nn = fun;
+    var oo = obj;
+
+    weixinShare.success = qqShare.success = friendShare.success = function(res) {
+        // alert("test");
+        nn.apply(oo);
+    };
+}
+
+var weixinShare = {
+    title: "限时打年兽，赢360黄金安仔",
+    desc: "360打年兽",
+    link: 'http://www.1ceyou.com/web/html5/',
+    imgUrl: 'http://www.1ceyou.com/web/html5/share.jpg',
+    type: '',
+    dataUrl: '',
+    success: shareSuccess
+};
+
+var qqShare = {
+    title: "限时打年兽，赢360黄金安仔",
+    desc: "360打年兽",
+    link: 'http://www.1ceyou.com/web/html5/',
+    imgUrl: 'http://www.1ceyou.com/web/html5/share.jpg',
+    success: shareSuccess
+};
+
+var friendShare = {
+    title: "限时打年兽，赢360黄金安仔",
+    link: 'http://www.1ceyou.com/web/html5/',
+    imgUrl: 'http://www.1ceyou.com/web/html5/share.jpg',
+    success: shareSuccess
+};
+
+wx.ready(function() {
+
+    wx.onMenuShareTimeline(friendShare);
+    wx.onMenuShareAppMessage(weixinShare);
+    wx.onMenuShareQQ(qqShare);
+    //     bindShareCallBack(function(){alert("fdsafdsaf");},this);
+});
+//     wx.error(function(res){
+
+//     });
+
+function setShareContent(content) {
+    weixinShare.desc = qqShare.desc = content;
+}
+</script>
+<script>
+var unlocakNum = 1;
+var awardTime = 0;
+var uid = "1446449926.8163";
+egret_h5.startGame();
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<TextureAtlas imagePath="sprites.png">
+	<SubTexture name="assets_btn_blue_fb.png" x="272" y="415" width="109" height="109"/>
+	<SubTexture name="assets_btn_blue_tw.png" x="405" y="300" width="109" height="109"/>
+	<SubTexture name="assets_btn_green.png" x="482" y="859" width="109" height="109"/>
+	<SubTexture name="assets_btn_grey.png" x="260" y="824" width="109" height="109"/>
+	<SubTexture name="assets_btn_pause.png" x="260" y="598" width="111" height="111"/>
+	<SubTexture name="assets_btn_play.png" x="260" y="711" width="111" height="111"/>
+	<SubTexture name="assets_btn_yellow.png" x="482" y="748" width="109" height="109"/>
+	<SubTexture name="assets_ground.png" x="0" y="0" width="800" height="298"/>
+	<SubTexture name="assets_hazard.png" x="168" y="300" width="124" height="56"/>
+	<SubTexture name="assets_hazard2.png" x="0" y="468" width="140" height="151"/>
+	<SubTexture name="assets_icon_cancel.png" x="371" y="824" width="109" height="109"/>
+	<SubTexture name="assets_icon_fb.png" x="373" y="637" width="109" height="109"/>
+	<SubTexture name="assets_icon_retry.png" x="383" y="411" width="109" height="109"/>
+	<SubTexture name="assets_icon_tw.png" x="294" y="300" width="109" height="109"/>
+	<SubTexture name="assets_icon_video.png" x="373" y="526" width="109" height="109"/>
+	<SubTexture name="assets_key_c.png" x="348" y="935" width="86" height="86"/>
+	<SubTexture name="assets_key_j.png" x="484" y="522" width="86" height="86"/>
+	<SubTexture name="assets_key_k.png" x="516" y="300" width="86" height="86"/>
+	<SubTexture name="assets_key_l.png" x="494" y="411" width="86" height="86"/>
+	<SubTexture name="assets_key_x.png" x="484" y="610" width="86" height="86"/>
+	<SubTexture name="assets_key_z.png" x="260" y="935" width="86" height="86"/>
+	<SubTexture name="assets_shadow.png" x="168" y="415" width="95" height="33"/>
+	<SubTexture name="assets_ui_continue.png" x="168" y="358" width="120" height="26"/>
+	<SubTexture name="assets_ui_hiscore.png" x="168" y="386" width="110" height="27"/>
+	<SubTexture name="assets_ui_new.png" x="272" y="526" width="80" height="36"/>
+	<SubTexture name="assets_ui_score.png" x="272" y="564" width="78" height="27"/>
+	<SubTexture name="assets_ui_window.png" x="0" y="300" width="166" height="166"/>
+	<SubTexture name="hurdles-hero-frameb1.png" x="130" y="621" width="128" height="128"/>
+	<SubTexture name="hurdles-hero-frameb2.png" x="142" y="468" width="128" height="128"/>
+	<SubTexture name="hurdles-hero-frameb3.png" x="130" y="881" width="128" height="128"/>
+	<SubTexture name="hurdles-hero-frameb4.png" x="130" y="751" width="128" height="128"/>
+	<SubTexture name="hurdles-hero-frameb5.png" x="0" y="881" width="128" height="128"/>
+	<SubTexture name="hurdles-hero-frameb6.png" x="0" y="751" width="128" height="128"/>
+	<SubTexture name="hurdles-hero-frameb7.png" x="0" y="621" width="128" height="128"/>
+</TextureAtlas>

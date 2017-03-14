@@ -1,0 +1,176 @@
+@charset 'utf-8';
+/**
+  * 重置字体：
+  * 1.设置默认font-family：
+  *	iOS 4.0+ 使用英文字体 Helvetica Neue，之前的iOS版本降级使用 Helvetica，中文字体设置为华文黑体STHeiTi。
+  * 原生Android下中文字体与英文字体都选择默认的无衬线字体。
+  * 2.避免iPhone及Android在横竖屏时，浏览器自动调整字体大小问题 
+ */
+html {
+	font-family: "Helvetica Neue", Helvetica, STHeiTi, Arial, sans-serif; /*1*/
+	-ms-text-size-adjust:100%;/*2*/
+	-webkit-text-size-adjust:100%;/*2*/
+	font-size:62.5%;
+}
+body,
+button, input, select, textarea {font-family: "Helvetica Neue", Helvetica, STHeiTi,Arial, sans-serif;}
+body{margin:0;font-size:1.4rem;line-height:1.5;color:#333333;background-color:#fff;height:100%;}
+
+/**
+ * 清除内外边距：
+ * 1.structural elements 结构元素
+ * 2.list elements 列表元素
+ * 3.text formatting elements 文本格式元素
+ * 4.structural elements 结构元素
+ * 5.table elements 表格元素
+ */
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote,figure, /*1*/
+dl, dt, dd, ul, ol, li, /*2*/
+pre, /*3*/
+fieldset, lengend, button, input, textarea, optgroup, select, form /* form elements 表单元素 */
+th, td /*5*/
+{ 
+    margin: 0;
+    padding: 0;
+}
+
+/**
+ * 重置列表元素
+ */
+ul, ol { list-style:none; }
+
+/**
+ * 重置图片元素
+ */
+img{border:0;}
+
+/**
+ * 清除浮动
+ */
+.clearfix:after{content:".";display:block;clear:both;visibility:hidden;height:0;}
+.clearfix{*zoom:1;}
+
+/**
+ * 重置表格元素：
+ * 1.表格单元格距离为0，border为单线
+ * 2.解决table中都是‘字母’及'数字'时不折行的问题 
+ */
+table {border-collapse:collapse;border-spacing:0;}/*1*/
+table td{word-wrap:break-word;word-break:break-all;}/*2*/
+
+/**
+ * 重置表单元素：
+ * 1.取消按钮在iPhone下的默认风格
+ * 2.设置input的placeholder属性的默认颜色
+ */
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {-webkit-appearance: none;cursor:pointer;}/*1*/
+
+input::-moz-placeholder, 
+textarea::-moz-placeholder { color: #cccccc; }
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder { color: #cccccc; }
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder { color: #cccccc; }/*2*/
+input,select,textarea{outline:none;}
+textarea {resize:none;}
+
+a{text-decoration:none;-webkit-tap-highlight-color:transparent;}
+a:active { outline:none;}
+.ell{text-overflow:ellipsis; white-space:nowrap; overflow:hidden;}
+.fl{float:left;}
+.fr{float:right;}
+*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+
+
+
+
+button, select { text-transform: none; }
+button[disabled], html input[disabled] { cursor: default; }
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+input { line-height: normal; }
+input[type="checkbox"], 
+input[type="radio"] {padding: 0; }
+input[type="number"]::-webkit-inner-spin-button, 
+input[type="number"]::-webkit-outer-spin-button { height: auto; }
+input[type="search"] { -webkit-appearance: textfield;}
+input[type="search"]::-webkit-search-cancel-button, 
+input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+optgroup {font-weight:bold;}
+svg:not(:root) { overflow: hidden; }
+abbr[title] { border-bottom: 1px dotted; }
+dfn { font-style: italic; }
+mark { background: #ff0; color: #000; }
+small { font-size: 80%; }
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+img { border: 0; vertical-align: middle; }
+hr { -moz-box-sizing: content-box; box-sizing: content-box; height: 0; }
+pre { overflow: auto; white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+code, kbd, pre, samp { font-family: monospace, monospace; font-size: 1em; }
+
+/* HTML5 display definitions
+   ========================================================================== */
+
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+    display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+
+audio,
+canvas,
+progress,
+video {
+    display: inline-block; /*1*/
+    vertical-align: baseline; /*2*/
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+
+[hidden],
+template {
+    display: none;
+}
+
+
+
+
+

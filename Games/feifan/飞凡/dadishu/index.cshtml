@@ -1,0 +1,57 @@
+﻿@{
+    Layout = null;
+}
+@using PPX.Game.Web.MvcExtension.Helper
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>{{index-page-title}}</title>
+    <!--必选-->
+    @RenderPage("~/Views/Activity/Partial/ActivityHeadPartail.cshtml")
+    <style>
+        body {
+            margin: 0px 0px 1px 0px; /* the extra 1px allows the iOS inner/outer check to work */
+            background: #000000;
+        }
+
+        #content {
+            margin: 0 auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body style="padding:0; margin: 0; background: #000;">
+    <input type="hidden" value="{{index-game-timer}}" id="gameTime">
+    <canvas id="gameCanvas" width="480" height="720"></canvas>
+    <script cocos src="~/BaseData/Game/dadishu/game.min.js"></script>
+    @{
+        string shareUrl = string.Format("{0}/Activity/Start?id={1}&sui={2}", WebClientContext.Current.ActivityShareBaseUrl, Request.QueryString["id"], PPX.Game.Web.MvcExtension.Helper.WebClientContext.Current.ThirdUserInfo.UserId);
+    }
+    <script>
+        window.config = {
+            link: '@Html.Raw(shareUrl)',
+            imgUrl: '{{weixin-share-image}}',
+            img_url: '{{weixin-share-image}}',
+            title: '{{weixin-share-friend-title}}',
+            desc: '{{weixin-share-friend-desc}}'
+        };
+        window.timelineconfig = {
+            link: '@Html.Raw(shareUrl)',
+            imgUrl: '{{weixin-share-image}}',
+            img_url: '{{weixin-share-image}}',
+            title: '{{weixin-share-timeline-title}}'
+        };
+    </script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="~/assets/layout/script/common/weixinShare.js"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head lang=en>
+    <meta charset=UTF-8>
+    <title>挖宝</title>
+    <meta name=viewport content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name=format-detection content="telephone=no">
+    <link rel=stylesheet href="css/common.min.css">
+    <link rel=stylesheet href="css/gamepage.min.css">
+</head>
+
+<body>
+    <div class="start-game-djs">3</div>
+    <div class="wrap">
+        <div class="game-first-box">
+            <div class="tip">可以兑奖啦，快去“我的宝藏”兑奖吧 &nbsp;&gt;&gt;</div>
+            <div class="game-first">
+                <div class="content">
+                    <div class="my-rank clearfix"><img id=myicon class=myicon>
+                        <p><span id="who"></span>的战绩</p>
+                    </div>
+                    <div class="tologin">登录查看战绩</div>
+                    <div class="text">
+                        <p></p>
+                        <p></p>
+                    </div>
+                    <div class="first-error"></div>
+                    <div class="btn-long"></div>
+                    <div class="friend-rank"></div>
+                    <div class="activeinfoline">查看活动详情</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="game-rules-box">
+        <div class="game-rules-bg">
+            <div class="game-rules-content">
+                <div class="game-rules-body">
+                    <div class="game-rule-yy yycontrol"></div>
+                    <div class="game-rule-jc jccontrol"></div>
+                    <div class="top-tip"></div>
+                    <div class="bottom-tip"></div>
+                    <div class="startbtn" id="startGame"></div>
+                    <div class="go">
+                        <div class="slh slh1"></div>
+                        <div class="slh slh2"></div>
+                        <div class="slh slh3"></div>
+                    </div>
+                    <div class="error-tip"><img src="http://h4.amap.com/activity/digger/img/gamepage/cannotClick-3b2a9613.png">
+                    </div>
+                    <div class="rule-chest"></div>
+                    <div class="rule-cursor cursor-move1"></div>
+                    <div class="bird"></div>
+                    <div class="center-area"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="rule-alert">
+        <div class="close"></div>
+    </div>
+    <div class="game-steg">
+        <canvas id="games"></canvas>
+        <div class="header">
+            <div class="js clearfix">
+                <div class="djs"><span id="djs">15</span>s</div>
+                <div class="loadingdjs">
+                    <div class="proess" id="proess">
+                        <div class="guang"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="yinyue yycontrol"></div>
+            <div class="jiaocheng jccontrol" id="jiaocheng"></div>
+        </div>
+        <div class="toast"></div>
+    </div>
+    <div class="resultpagebox"></div>
+    <div class="load-chest"></div>
+	
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="js/lib_wx.min.js"></script>
+    <script src="js/gameplug_wx.min.js"></script>
+    <script src="js/plugins/soundjs.min.js"></script>
+    <script type="text/javascript">
+    document.write('<script type="text/javascript" src="http://wb.amap.com/time.php?rn=' + God.random() + '"></scr' + 'ipt>');
+    </script>
+    <script src="js/gamepage_wx.min.js"></script>
+    <script type="text/html" id="resultpage">
+        <div class="resultpage">
+            <div class="chenghao">#{chenghao2}</div>
+            <div class="desc2 #{descclass}">#{desc2}</div>
+            <div class="nochest"></div>
+            <div class="chestlist1 clearfix">
+                <li>
+                    <div class="chestitem" id="checount"> <i class="checount"></i><span></span> </div>
+                    <div class="chestitem" id="liucount"> <i class="liucount"></i><span></span> </div>
+                </li>
+                <li>
+                    <div class="chestitem" id="youcount"> <i class="youcount"></i><span></span> </div>
+                    <div class="chestitem" id="juancount"> <i class="juancount"></i><span></span> </div>
+                </li>
+            </div>
+            <div class="wabao-self #{wabaotipclass}"></div>
+            <div class="rbtn1 #{btn1class}"></div>
+            <div class="friend-rank"> #{rank} </div>
+            <div class="rbtnlist clearfix">
+                <div class="rbtn2 #{rbtn2class}">我的宝藏</div>
+                <div class="rbtn3 activeinfo">活动详情</div>
+            </div>
+        </div>
+    </script>
+</body>
+
+</html>

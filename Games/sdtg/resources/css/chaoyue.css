@@ -1,0 +1,71 @@
+*{ margin:0px; padding:0px; list-style:none;}
+html{ font-size:10px;}
+.right{ float:right;}
+.clear{ clear:both;}
+.block{ display:block;}
+.hide{ display:none;}
+body{ font-family:"Arial, Helvetica, "Microsoft Yahei", "微软雅黑", STXihei, "华文细黑", sans-serif;";  }
+.chaoyue_960 { width:100%; max-width:960px; margin:auto; position:relative;font-weight:bold;}
+.chaoyue{ position:fixed; width:100%; height:1000px;background-color:rgba(0,0,0,0.75); z-index:9999; top:0; }
+.chaoyue .chaoyue_1{ max-width:480px; position:relative;width:100%; margin:auto; }
+.chaoyue .chaoyue_1 img{ width:100%; height:auto;}
+.chaoyue .chaoyue_2 { position:absolute; width:40%; left:30%; top:0px;}
+.chaoyue .chaoyue_2_a{ width:10%; margin:auto; }
+.chaoyue .up{  padding-top:1%;}
+.chaoyue .down{  padding-top:1%;}
+.chaoyue .chaoyue_2_a img{ width:100%; height:auto;  margin:auto;}
+.chaoyue .chaoyue_2_b { width:100%; margin:auto;  border-radius:10px; position:relative; padding-top:2%; padding-bottom:4%; }
+.chaoyue .chaoyue_2_b .chaoyue_2_b_left{ width:30%; float:left; }
+.chaoyue .chaoyue_2_b .chaoyue_2_b_left .touxiang{ position:absolute; width:20%; top:-35%; left:2%; color:#945613;}
+.chaoyue .chaoyue_2_b .chaoyue_2_b_left .touxiang .paiming{font-size:2.4rem; text-align:center;}
+.chaoyue  .yellow{ background:#f6bb42;}
+.chaoyue  .blue{ background:#68d0cf; }
+.chaoyue  .yellow .touxiang img{ width:100%; height:auto; border-radius:50%; -web-border-radius:50%; -moz-border-radius:50%; border:2px solid #f6bb42;} 
+.chaoyue  .blue .touxiang img{ width:100%; height:auto; border-radius:50%; -web-border-radius:50%; -moz-border-radius:50%; border:2px solid #68d0cf;} 
+.chaoyue .chaoyue_2_b .chaoyue_2_b_right{ width:70%; float:right; color:#FFF;}
+.chaoyue .chaoyue_2_b .chaoyue_2_b_right .mingc{ font-size:2.4rem; z-index:99; position:relative; padding-top:2%;}
+.chaoyue .chaoyue_2_b .chaoyue_2_b_right .fenshu{ font-size:2.9rem;}
+.chaoyue .chaoyue_2_b .chaoyue_2_b_right .guanbi{position:absolute; width:10%;left:120%; top:-50%;}
+.chaoyue .chaoyue_2_b .chaoyue_2_b_right .guanbi img{ width:100%; height:auto;}
+.chaoyue .chaoyue_2_b .chaoyue_2_b_right .sheng {position:absolute; width:13%;left:27%; top:-22%;}
+.chaoyue .chaoyue_2_b .chaoyue_2_b_right .sheng img{ width:100%; height:auto;}
+
+.chaoyue .chaoyue_2_c { width:40%; margin:auto; padding-top:10%;padding-bottom:10%;}
+.chaoyue .chaoyue_2_c img { width:100%; height:auto; }
+.chaoyue .chaoyue_2_d ul li{ width:30%;}
+.chaoyue .chaoyue_2_d ul li img{ width:100%; height:auto;;}
+.chaoyue .chaoyue_2_d ul li:nth-child(1){ float:left; margin-left:15%;}
+.chaoyue .chaoyue_2_d ul li:nth-child(2){ float:right; margin-right:15%; }
+
+ @media screen and (orientation:landscape){
+	 .chaoyue .chaoyue_2_b { padding-bottom:8%; }
+	  .chaoyue .chaoyue_2_b .chaoyue_2_b_right .guanbi{ top:-35%;}
+	  .chaoyue .chaoyue_2_b .chaoyue_2_b_right .sheng {top:-30%;}
+	  
+	 
+	 }
+ 
+ @media screen and (orientation:portrait){
+.chaoyue_960 { padding-top:10%; width:100%; max-width:640px; }
+.chaoyue .chaoyue_1{ max-width:640px; position:relative;width:100%; margin:auto; }
+.chaoyue .chaoyue_1 img{ width:100%; height:auto;}
+.chaoyue .chaoyue_2 { position:absolute; width:100%; left:0; top:0px;}
+.chaoyue .up{  padding-top:12%;}	`
+.chaoyue .down{  padding-top:1%;}
+.chaoyue .chaoyue_2_a img{ width:100%; height:auto;  margin:auto;}
+.chaoyue .chaoyue_2_b { width:59.375%;}
+
+
+
+	 }
+
+
+		
+
+
+
+
+
+
+
+

@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans" style="font-size: 200px;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>开红包</title>
+    <script src="http://jsqmt.qq.com/cdn_djl.js" type="text/javascript" async=""></script>
+    <script type="text/javascript">
+    function $getCookie(name) {
+        //读取COOKIE
+        var reg = new RegExp("(^| )" + name + "(?:=([^;]*))?(;|$)"),
+            val = document.cookie.match(reg);
+        return val ? (val[2] ? unescape(val[2]) : "") : null;
+    }
+
+    function getQuery(name, url) {
+        //参数：变量名，url为空则表从当前页面的url中取
+        var u = arguments[1] || window.location.search,
+            reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"),
+            r = u.substr(u.indexOf("\?") + 1).match(reg);
+        return r != null ? r[2] : "";
+    }
+
+    // if (!getQuery('code') && (!$getCookie('wx47031447c8352579_token') || !$getCookie('wx47031447c8352579_uin') || !$getCookie('wx47031447c8352579_skey') || !$getCookie('wx47031447c8352579_openId'))) {
+    if (!getQuery('code')) {
+        // var url = url || location.href.replace(/[?|&]code=[^&]*/g, '').replace(/#.*/, '');
+        // location.href = 'http://open.weixin.qq.com/connect/oauth2/authorize?appid=wx47031447c8352579&redirect_uri=' + encodeURIComponent(url) + '&response_type=code&scope=snsapi_base&state=qqchongzhi#wechat_redirect';
+    }
+
+    window.pt = 'wx';
+    </script>
+    <script src="js/get_client_width.min.js"></script>
+    <link rel="stylesheet" href="css/page-hb.css">
+    <script src="http://jqmt.qq.com/cdn_dianjiliu.js?a=0.23657971108332276"></script>
+</head>
+
+<body class="page-hb">
+    <div class="page-hb_inner">
+        <i class="balloon balloon_anit"><!--漂在空中的热气球--></i>
+        <!-- <a href="javascript:void(0);" class="rule-btn" id="showRule">规则</a> -->
+        <div class="hb-list hb-list_anit" id="hbList">
+            <!-- 交互说明：拆开后 hb__01_teared -->
+            <div class="hb-list_item hb__01">
+                <i class="hb-img">
+                <i class="tear"></i>
+                <!--<i class="txt-01">victor获得</i>
+                <i class="txt-02">1元话费券</i>-->
+                </i>
+                <i class="cloud"></i>
+            </div>
+            <div class="hb-list_item hb__02">
+                <i class="hb-img">
+                <i class="tear"></i>
+                </i>
+                <i class="cloud"></i>
+            </div>
+            <div class="hb-list_item hb__03">
+                <i class="hb-img">
+                <i class="tear"></i>
+                </i>
+                <i class="cloud"></i>
+            </div>
+            <div class="hb-list_item hb__04">
+                <i class="hb-img">
+                <i class="tear"></i>
+                </i>
+                <i class="cloud"></i>
+            </div>
+        </div>
+        <a href="http://chong.qq.com/promote/mobile/2015/kalends_10/wx_index.shtml?source=share" class="act-btn act-btn-primary">充话费 100%有奖</a>
+        <div class="reward" style="display:none;">
+            <h2 class="reward_t">
+                <i class="icon-gift"></i>
+                奖励情况
+            </h2>
+            <ul class="reward_list" id="giftDrawList">
+            </ul>
+        </div>
+        <div class="mod-act-mask" style="display:none;" id="mask">
+            <!-- S 规则弹窗 -->
+            <div class="act-dialog hide" id="rule">
+                <div class="act-dialog_bd">
+                    <div class="act-dialog_rules">
+                        <h2 class="act-dialog_rules__t">
+                        活动规则
+                    </h2>
+                        <ol class="act-dialog_rules__list">
+                            <li>
+                                1. 活动时间：2015.9.29-2015.10.5 23：59
+                            </li>
+                            <li>
+                                2. 活动期间，使用“微信话费充值券/充值卡”或在“微信钱包-手机充值”中成功充值话费，即可参与抽奖，仅限一次，100%有奖；抽奖可另获4份礼包，分享给好友，自己也可以抢，先到先得，每用户最多抢到4份礼包；
+                            </li>
+                            <li>
+                                3. 活动奖品：
+                                <br> 1）2899元泰国清迈6日游 1份
+                                <br> 2）百元滴滴打车礼包 100W份
+                                <br> 3）5-30元微信电影票抵扣礼包 200W份
+                                <br> 4）8.8元理财通现金奖 300W份
+                                <br> 5）2-20元同程网火车票/机票抵用券 300W份
+                                <br> 6）1-5元微信话费充值券 300W份
+                                <br>
+                            </li>
+                            <li>
+                                4. 用户抽奖后，所获奖品的领用信息将在【查看我的奖品】页面展示；
+                            </li>
+                            <li>
+                                5. 如有疑问，请<a href="http://kf.qq.com/touch/bill/150924sam4182b9e3dfd.html">点此反馈&gt;</a>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <a href="javascript:void(0);" class="act-dialog_closer"></a>
+            </div>
+            <!-- E 规则弹窗 -->
+            <div class="act-dialog_mod hide" id="dialog">
+                <div class="act-dialog">
+                    <div class="act-dialog_bd">
+                        <!-- 弹窗的内容模块，每个模块请单独一个dom包含着 -->
+                        <div class="act-dialog_suc">
+                            <div class="act-dialog_suc__view">
+                                <img id="awardImg" class="act-dialog_suc__img">
+                            </div>
+                            <div class="act-dialog_suc__info">
+                                <h4 class="act-dialog_suc__t" id="awardTitle"></h4>
+                                <p class="act-dialog_suc__d" id="awardName"></p>
+                            </div>
+                            <p class="act-dialog_tips" id="awardDesc"></p>
+                        </div>
+                    </div>
+                    <div class="act-dialog_ft">
+                        <button class="act-dialog_btn__single" id="awardConfirm"></button>
+                    </div>
+                    <a href="javascript:void(0);" class="act-dialog_closer"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/zepto.min.js"></script>
+    <script type="text/javascript" src="js/insertCoupon.js?t=18541"></script>
+
+    <script type="text/javascript">
+    function configTimeline(title, img, link, callback) {
+        onBridgeReady.push(function() {
+            WeixinJSBridge.on('menu:share:timeline', function() {
+                WeixinJSBridge.invoke('shareTimeline', {
+                    "appid": "",
+                    "img_url": img,
+                    "img_width": "108",
+                    "img_height": "108",
+                    "link": link,
+                    "desc": title,
+                    "title": title
+                }, function(res) {
+                    callback(res);
+                });
+                return false;
+            });
+        });
+    }
+
+    function configMessage(title, message, img, link, callback) {
+        onBridgeReady.push(function() {
+            WeixinJSBridge.on('menu:share:appmessage', function() {
+                var ret = WeixinJSBridge.invoke('sendAppMessage', {
+                    "appid": "",
+                    "img_url": img,
+                    "img_width": "108",
+                    "img_height": "108",
+                    "link": link,
+                    "desc": message,
+                    "title": title
+                }, function(res) {
+                    callback(res);
+                });
+                return false;
+            });
+        });
+    }
+
+    function onBridgeReady() {
+        onBridgeReady.callback = onBridgeReady.callback || [];
+        onBridgeReady.callback.forEach(function(func) {
+            func && func();
+        });
+    }
+    onBridgeReady.push = function(func) {
+        if (typeof func !== 'function') {
+            return;
+        }
+        if (typeof WeixinJSBridge !== "undefined") {
+            func();
+        }
+        onBridgeReady.callback = onBridgeReady.callback || [];
+        onBridgeReady.callback.push(func);
+    }
+    if (typeof WeixinJSBridge == "undefined") {
+        if (document.addEventListener) {
+            document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+        } else if (document.attachEvent) {
+            document.attachEvent('WeixinJSBridgeReady', onBridgeReady);
+            document.attachEvent('onWeixinJSBridgeReady', onBridgeReady);
+        }
+    } else {
+        onBridgeReady();
+    }
+    </script>
+    <script type="text/javascript">
+    var commonSNSObj = function() {
+        var baseUrl = 'http://chong.qq.com/php/index.php?d=active&c=activeV5&dataType=json&t=' + (new Date()).valueOf();
+
+        var getQuery = function(name, url) {
+            var u = arguments[1] || window.location.search,
+                reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"),
+                r = u.substr(u.indexOf("\?") + 1).match(reg);
+            return r != null ? r[2] : "";
+        };
+
+        var packageId = getQuery('pkg') || '',
+            code = getQuery('code') || '';
+
+        if (window.pt == 'wx') {
+            baseUrl += '&virWx=1&lwxx=1&appId=wx47031447c8352579&code=' + code;
+        }
+
+        return {
+            getSharePackage: function(activityId, callback) {
+                $.ajax({
+                    url: baseUrl + '&m=getSharePackage_' + activityId,
+                    dataType: 'json',
+                    success: function(result) {
+                        callback && callback(result);
+                    }
+                });
+            },
+
+            drawGift: function(activityId, callback) {
+                $.ajax({
+                    url: baseUrl + '&m=drawGift_' + activityId,
+                    dataType: 'json',
+                    data: {
+                        pkg: packageId
+                    },
+                    success: function(result) {
+                        callback && callback(result);
+                    }
+                });
+            },
+
+            getPackageDrawList: function(activityId, packageId, callback) {
+                $.ajax({
+                    url: baseUrl + '&m=getSnsPackageDrawList_' + activityId + '&pkg=' + (packageId ? packageId : ''),
+                    dataType: 'json',
+                    success: function(result) {
+                        callback && callback(result);
+                    }
+                });
+            }
+        }
+    }();
+
+    function showDialog(titile, name, img, desc, confirmWord, cancel, confirmAction) {
+            var that = this;
+
+            if (!img) {
+                $('#awardImg').parent().addClass('hide');
+            } else {
+                $('#awardImg').parent().removeClass('hide');
+            }
+
+            if (!cancel) {
+                $('#awardCancel').addClass('hide');
+            } else {
+                $('#awardCancel').removeClass('hide');
+            }
+
+            $('#awardTitle').html(titile);
+            $('#awardName').html(name);
+            $('#awardImg').attr('src', img);
+            $('#awardDesc').html(desc);
+            $('#awardConfirm').html(confirmWord);
+            $('#awardCancel').html(cancel);
+
+            $('#awardCancel').on('click', function() {
+                hideDialog();
+            });
+
+            $('#awardConfirm').on('click', function() {
+                if (confirmAction) {
+                    confirmAction();
+                } else {
+                    hideDialog();
+                }
+            });
+
+            $('#dialog').removeClass('hide');
+            $('#mask').show();
+
+            function hideDialog() {
+                $('#dialog').addClass('hide');
+                $('#mask').hide();
+            }
+        }
+        /*  |xGv00|365c158a94432219bf0acfe7f1f6d144 */
+    </script>
+    <script type="text/javascript">
+    (function() {
+        var clicked = false;
+
+        $('.hb-img').on('touchend', function(e) {
+            e.preventDefault();
+
+            if (clicked || $(this).parent().attr('class').indexOf('teared') > -1) {
+                return;
+            }
+            clicked = true;
+
+            var that = $(this);
+
+            commonSNSObj.drawGift('21287_base', function(result) {
+                clicked = false;
+
+                if (result.errCode == 0) {
+                    var awardLink = result.awardLink && result.awardLink.split('@');
+
+                    var imgs = [
+                            'http://static.gtimg.com/vd/act/ggimg/201509/1434684fe07060ef5d14a501a4f1a69f.png',
+                            'http://static.gtimg.com/vd/act/ggimg/201509/22c7d8af4934541ee1089493b4f340d7.png',
+                            'http://static.gtimg.com/vd/act/ggimg/201509/22c7d8af4934541ee1089493b4f340d7.png',
+                            'http://static.gtimg.com/vd/act/ggimg/201509/b1031feb3abb42cab8d96b180688a5e1.png',
+                            'http://static.gtimg.com/vd/act/ggimg/201509/0a9c3f69bee0c86f75e5d0e939317664.png',
+                            'http://static.gtimg.com/vd/act/ggimg/201509/0a9c3f69bee0c86f75e5d0e939317664.png',
+                        ],
+                        descs = [
+                            '在【微信钱包-滴滴打车】或【滴滴打车】客户端中使用',
+                            '在【微信-我-钱包-火车票机票】中使用；有效期截止至12月6日。',
+                            '在【微信-我-钱包-火车票机票】中使用；领取后7天内有效',
+                            '在【微信-我-钱包-电影票】中使用；有效期截止领取后21天',
+                            '在【微信-我-钱包-话费充值】中使用',
+                            '在【微信-我-钱包-话费充值】中使用'
+                        ];
+
+                    var $tear = that.find('.tear'), // 拆字
+                        $hbItem = that.parent('.hb-list_item'); //礼包图
+                    $tear.addClass('tear_anit');
+                    $tear.on('webkitAnimationEnd', function() {
+                        var className = $hbItem.attr('class').substr(12) + '_teared';
+                        $hbItem.addClass(className);
+                        that.html('<i class="txt-01">' + result.nickName + '</i><i class="txt-02">获得礼包</i>');
+                    });
+                    setTimeout(function() {
+                        showDialog('恭喜你~', '获得' + result.awardName, imgs[result.awardLevel], descs[result.awardLevel], awardLink[1], '', function() {
+                            location.href = awardLink[0];
+                        });
+                    }, 2000);
+                } else if (result.errCode == 21) { //超过单个用户领取上限
+                    showDialog('每个用户最多领取2个礼包，不如自己来发礼包吧~', '', '', '', '确认', '', function() {
+                        location.href = 'http://chong.qq.com/promote/mobile/2015/kalends_10/wx_index.shtml?source=share';
+                    });
+                } else if (result.errCode == 6) { //礼包已领完
+                    showDialog('来晚了，与大奖擦肩而过', '', '', '', '确认', '', '');
+                } else if (result.errCode == 9) { //已经领取过该礼包
+                    showDialog('每个人只能拆一个礼包哦', '', '', '', '确认', '', '');
+                } else { //其它错误
+                    showDialog('系统繁忙，请稍后再试', '', '', '', '确认', '', '');
+                }
+            });
+        });
+
+        commonSNSObj.getPackageDrawList('21287_base', getQuery('pkg'), function(result) {
+            if (result.errCode == 0 && result.packageData.length > 0) {
+                var awardList = '';
+                var listTemplate = '<li class="reward_item">\
+                                    <div class="reward_view">\
+                                        <img src="{{picUrl}}" class="reward_view_img" />\
+                                    </div>\
+                                    <div class="reward_username">{{nickName}}</div>\
+                                    <div class="reward_info">\
+                                        <p>{{awardName}}</p>\
+                                        <p class="reward_info_date">{{dateTime}}</p>\
+                                    </div>\
+                                </li>'
+
+                result.packageData.forEach(function(el, ix) {
+                    if (ix >= 4) return;
+                    var hb = $($('#hbList').children()[ix]);
+                    hb.addClass('hb__0' + (ix + 1) + '_teared');
+                    $(hb.children('.hb-img')).html('<i class="txt-01">' + (el.nickName ? el.nickName : '手机充值用户') + '</i><i class="txt-02">获得礼包</i>');
+
+                    var li = listTemplate;
+                    ['picUrl', 'nickName', 'awardName', 'dateTime'].forEach(function(elem, index) {
+                        var tmp = el[elem];
+                        if (elem == 'dateTime') {
+                            var date = new Date(el[elem] * 1000);
+                            tmp = (date.getMonth() + 1) + '月' + (date.getDate()) + '日 ' + (date.getHours() > 9 ? date.getHours() : '0' + date.getHours()) + ':' + (date.getMinutes() > 9 ? date.getMinutes() : '0' + date.getMinutes()) + ':' + (date.getSeconds() > 9 ? date.getSeconds() : '0' + date.getSeconds());
+                        } else if (elem == 'picUrl' && !tmp) {
+                            tmp = 'http://static.gtimg.com/vd/act/ggimg/201510/a8a3be1959ffca174ae02ecd98ef394b.png';
+                        } else if (elem == 'nickName' && !tmp) {
+                            tmp = '手机充值用户';
+                        } else if (elem == 'awardName') {
+                            tmp = tmp.replace(/红包/, '礼包');
+                        }
+                        li = li.replace('{{' + elem + '}}', tmp);
+                    });
+
+                    awardList += li;
+                });
+                $('#giftDrawList').html(awardList);
+                $('#giftDrawList').parent().show();
+
+                if (result.packageData.length >= 4) {
+                    showDialog('来晚一步，礼包全部被抢完啦</br>充任意话费就有机会给好友发礼包哦', '', '', '', '充话费 100%有奖', '', function() {
+                        location.href = 'http://chong.qq.com/promote/mobile/2015/kalends_10/wx_index.shtml?source=share';
+                    });
+                }
+            }
+
+            if (result.errCode == 0) {
+                var link = 'http://chong.qq.com/promote/mobile/2015/kalends_10/wx_hb.shtml?pkg=' + getQuery('pkg'),
+                    img = 'http://static.gtimg.com/vd/act/ggimg/201509/89ac775e51f6b8a5ea2c35d54119781f.jpg',
+                    titile = result.packageDetail.nickName + '分享了4个礼包，点击免费领取',
+                    message = '我在微信充话费获得了4个超值礼包，大奖花落谁家？快快点击一试手气！';
+                configMessage(titile, message, img, link);
+                configTimeline(titile, img, link);
+            }
+        });
+
+        $('#showRule').click(function() {
+            $('#rule').removeClass('hide');
+            $('#mask').show();
+        });
+        $('.act-dialog_closer').click(function(event) {
+            ['dialog', 'rule'].forEach(function(el) {
+                $('#' + el).addClass('hide');
+            });
+            $('#mask').hide();
+        });
+    })();
+    </script>
+    <script language="javascript" src="http://pingjs.qq.com/tcss.ping.js"></script>
+    <script language="javascript">
+    if (typeof(pgvMain) == 'function') {
+        pgvMain({
+            repeatApplay: "true"
+        });
+    }
+
+
+    var link = 'http://chong.qq.com/promote/mobile/2015/kalends_10/wx_index.shtml',
+        img = 'http://static.gtimg.com/vd/act/ggimg/201509/f2b413b9b7654e77aafa2f9054182df3.jpg',
+        titile = '充话费100%中大奖，一起嗨爆11月！'
+    message = '充话费扔骰子，海量大奖等你来拿哦~';
+    configMessage(titile, message, img, link);
+    configTimeline(titile, img, link);
+    </script>
+
+
+    <!--[if !IE]>|xGv00|068d6bb5dbce740346a698b5e9224915<![endif]-->
+</body>
+<iframe id="__WeixinJSBridgeIframe_SetResult" style="display: none;"></iframe>
+<iframe id="__WeixinJSBridgeIframe" style="display: none;"></iframe>
+
+</html>

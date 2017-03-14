@@ -1,0 +1,404 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>龙蛋运输计划-火舞游戏</title>
+    <meta name="x-id" content="1651">
+    <meta name="x-share-desc" content="把龙蛋送回家，全靠充满爱心的你啦！" data-custom="#龙蛋运输计划#我通过了{l}关，一定将恐龙宝贝送回家！">
+    <meta name="x-share-icon" content="http://i5.wanh5.com/item/1509/22/5600d9c12b97a_wx.jpg">
+    <meta name="x-key" content="03115ce8a83700e700afc6883f331869">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1, IE=9">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="robots" content="noindex,nofollow">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Phaser App">
+    <meta id="viewport" name="viewport" content="width=device-width, user-scalable=no, maximum-scale=1.01">
+    <meta name="full-screen" content="yes">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="360-fullscreen" content="true">
+    <script src="./gameapi.js?v2"></script>
+    <script src="6112a388-2bcc-4ce6-9ad9-40c907838b79.js?v2?_location=http%3A%2F%2Fg.51h5.com%2Fwj%2Fdragons%2F"></script>
+    <script type="text/javascript" async="" charset="utf-8" src="http://c.cnzz.com/core.php?web_id=1253472040&amp;t=q"></script>
+    <script src="//w.cnzz.com/q_stat.php?id=1253472040"></script>
+    <script src="//hm.baidu.com/hm.js?0c906e9f94713174584881c774a94212"></script>
+    <script src="./gameapi/v1.js?v2&amp;e=http%3A%2F%2Fg.51h5.com%2Fwj%2Fdragons%2F"></script>
+    <script src="//api.51h5.com/open/sdk.php"></script>
+    <script src="http://static.51h5.com/js/api.js?v=195"></script>
+    <script charset="utf-8" defer="" async="" src="http://api.51h5.com/open/sdk.php?t=tb"></script>
+    <style type="text/css">
+    #hw_splashscreen {
+        font-size: 4vw;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 9947483646;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        color: #fff;
+        text-shadow: none;
+        font-family: 'Microsoft Yahei', Arial, 'Helvetica Neue', sans-serif;
+        -webkit-font-smoothing: antialiased;
+    }
+    
+    #hw_splashscreen .inner {
+        display: none;
+        position: relative;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        padding-top: 14vw;
+        pointer-events: none;
+        background: #fff;
+    }
+    
+    #hw_splashscreen .inner[data-ui~=ad] {
+        padding-top: 2px;
+    }
+    
+    #hw_splashscreen .inner[data-ui~=day] {
+        background: #167de6;
+    }
+    
+    #hw_splashscreen .inner[data-ui~=night] {
+        background: #2c2a2a;
+    }
+    
+    #hw_splashscreen .inner[data-ui~=alone] {
+        padding-top: 2px;
+    }
+    
+    #hw_splashscreen .inner[data-ui~=alone] img {
+        width: auto;
+        height: auto;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        margin: -100px auto auto -130px;
+    }
+    
+    #hw_splashscreen .ft-close {
+        position: absolute;
+        z-index: 9999999;
+        top: -20px;
+        left: 50%;
+        margin-left: -15px;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        color: #fff;
+        border: 1px solid #fff;
+        border-radius: 15px;
+        font-weight: bold;
+        cursor: pointer;
+        box-shadow: 1px 2px 4px #000;
+        -webkit-box-shadow: 1px 2px 4px #000;
+    }
+    
+    #hw_splashscreen .ft-close[data-ui~="day"] {
+        background: #167de6;
+    }
+    
+    #hw_splashscreen .ft-close[data-ui~="night"] {
+        background: #2c2a2a;
+    }
+    
+    #hw_splashscreen .ft {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: auto;
+        text-align: center;
+        background: #fff;
+    }
+    
+    #hw_splashscreen img {
+        display: block;
+        margin: 2vw auto 5vw;
+        height: 14vw;
+        width: auto;
+    }
+    
+    #hw_splashscreen p {
+        font-size: 4vw;
+        line-height: 4vw;
+        text-align: center;
+        margin: 2vw auto;
+        padding: 0 2vw;
+    }
+    
+    #hw_splashscreen .hw_info {
+        font-size: 3.2vw;
+        color: rgba(255, 255, 255, .7);
+    }
+    
+    #hw_splashscreen .progress {
+        height: 4vw;
+        overflow: hidden;
+        margin: 1vw 2vw;
+        background-color: #f5f5f5;
+        border-radius: 4px;
+        box-sizing: border-box;
+        box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+        -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+    }
+    
+    #hw_splashscreen .progress .bar {
+        float: left;
+        min-width: 7vw;
+        height: 100%;
+        line-height: 4vw;
+        font-size: 2.8px;
+        text-align: center;
+        color: #fff;
+        box-sizing: border-box;
+        background-color: #428bca;
+        box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15);
+        -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15);
+        transition: width .6s ease;
+        -webkit-transition: width .6s ease;
+        -o-transition: width .6s ease;
+    }
+    </style>
+    <style type="text/css">
+    #hwtb-root {
+        position: static;
+        -webkit-font-smoothing: antialiased;
+        text-align: center;
+        font-size: 4vw;
+        color: #fff;
+        background: #f2f2f2;
+        zoom: 1
+    }
+    
+    #hwtb-root div {
+        position: static
+    }
+    
+    #hwtb-root a {
+        text-decoration: none;
+        color: #fff;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        touch-callout: none;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+    }
+    
+    #hwtb-root a:active,
+    #hwtb-root a:focus {
+        outline: 0
+    }
+    
+    #hwtb-root img {
+        touch-action-delay: none;
+        -ms-touch-action: none;
+        touch-action: none;
+        -webkit-touch-callout: none
+    }
+    
+    #hwtb-root[data-ui~=open] [data-role~=trigger] {
+        display: none
+    }
+    
+    #hwtb-root[data-ui~=open] [data-role~=masker],
+    #hwtb-root[data-ui~=open] [data-role~=panel] {
+        display: block
+    }
+    
+    #hwtb-root [data-role~=trigger] {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9996;
+        width: 100%;
+        color: transparent;
+        font: 0/0 a;
+        text-shadow: none
+    }
+    
+    #hwtb-root [data-role~=trigger] img {
+        width: 15vw;
+    }
+    
+    #hwtb-root [data-role~=masker] {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9996;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none
+    }
+    
+    #hwtb-root [data-role~=panel] {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9997;
+        width: 100%;
+        padding: 4vw 0 0 0;
+        background: #3d3d3d
+    }
+    
+    #hwtb-root [data-role~=panel]>p {
+        margin: 6px auto;
+        font-size: 90%
+    }
+    
+    #hwtb-root [data-role~=tip] {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        z-index: 9998;
+        width: 100%
+    }
+    
+    #hwtb-root [data-role~=tip][data-ui~=show] {
+        top: 10%
+    }
+    
+    #hwtb-root [data-role~=tip-inner] {
+        display: inline-block;
+        margin: 0 auto;
+        padding: 6px 20px;
+        border-radius: 6px;
+        background: #242222
+    }
+    
+    #hwtb-root [data-role~=tip-inner] img {
+        width: 40px
+    }
+    
+    #hwtb-root [data-role~=tip-inner] p {
+        margin: 4px 0;
+        padding: 0
+    }
+    
+    #hwtb-root [data-role~=menus] {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        width: 90%;
+        margin: 0 auto;
+        padding: 3vw 0
+    }
+    
+    #hwtb-root [data-role~=menus] [data-role~=menu] {
+        display: block;
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1
+    }
+    
+    #hwtb-root [data-role~=menus] [data-role~=menu]>a {
+        display: block;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        margin: 0 auto;
+        padding: 0;
+        width: 12vw;
+    }
+    
+    #hwtb-root [data-role~=menus] [data-role~=menu]>a:active,
+    #hwtb-root [data-role~=menus] [data-role~=menu]>a:focus {
+        background: #5f5e5e
+    }
+    
+    #hwtb-root [data-role~=menus] [data-role~=menu] img {
+        width: 100%
+    }
+    
+    #hwtb-root [data-role~=title] {
+        margin: 10px auto;
+        width: 70%;
+        line-height: 1px;
+        border-bottom: 1px solid #666
+    }
+    
+    #hwtb-root [data-role~=title]>span {
+        background: #3d3d3d;
+        padding: 0 2vw
+    }
+    
+    #hwtb-root [data-role~=cancel] {
+        display: block;
+        padding: 1vw 0;
+        text-align: center;
+        border-top: 1px solid #666;
+        color: transparent;
+        font: 0/0 a;
+        text-shadow: none
+    }
+    
+    #hwtb-root [data-role~=cancel] img {
+        width: 6vw
+    }
+    </style>
+    <link rel="stylesheet" type="text/css" href="./play.css">
+    <link rel="canonical" href="http://play.famobi.com/dragons-trail/A1202-1?_ga=1.30390079.1476858303.1425005198">
+</head>
+
+<body style="padding: 0px; margin: 0px; background: rgb(28, 28, 28);" data-feedly-mini="yes">
+    <div id="fg-root" class="fg-root fg-orientation-portrait">
+        <div id="fg-overlay" style="top: 60px;">undefined
+            <nav id="fg-navigation" style="position: relative;">undefined</nav>
+            <iframe id="fg-com-iframe" name="fg-com-iframe" src=""></iframe>
+        </div>
+        <div class="fg-spinner" style="visibility: hidden; left: -80px; opacity: 0;">
+            <div class="fg-dot1"></div>
+            <div class="fg-dot2"></div>
+            <div class="fg-dot3"></div>
+            <div class="fg-dot4"></div>
+            <div class="fg-dot5"></div>
+            <div class="fg-dot6"></div>
+            <div class="fg-dot7"></div>
+        </div>
+        <div id="fg-notifications">
+            <div class="fg-close-notifications" style="display: none;"></div>
+        </div>
+        <div id="fg-landscape-overlay"><img src="./gameapi/v1/images/RotateToLandscape.png" class="fg-orientation-icon" alt="switch to landscape"></div>
+        <div id="fg-portrait-overlay"><img src="./gameapi/v1/images/RotateToPortrait.png" class="fg-orientation-icon" alt="switch to portrait"></div>
+    </div><img id="wxsicon" src="http://i5.wanh5.com/item/1509/22/5600d9c12b97a_wx.jpg" width="0" height="0" style="position:absolute">
+    <link href="res/css/styles.css" media="screen" rel="stylesheet" type="text/css">
+    <script>
+    // Package-ID
+    window.famobi_gameID = "dragons-trail";
+    window.famobi_gameJS = [
+        //"src/FamobiAPIDebug.js",
+        "src/game.min.js",
+        "src/gameConfig.js",
+        function() {
+            window.famobi_start();
+        }
+    ];
+
+    (function(document, url, fgJS, firstJS) {
+        fgJS = document.createElement('script');
+        firstJS = document.getElementsByTagName('script')[0];
+        fgJS.src = url + encodeURIComponent(document.location.href);
+        firstJS.parentNode.insertBefore(fgJS, firstJS);
+    })(document, './gameapi/v1.js?v2&e=');
+    </script>
+    <div id="gameContainer"></div>
+    <script type="text/javascript" src="src/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="src/underscore.min.js"></script>
+    <script src="src/game.min.js"></script>
+    <script src="src/gameConfig.js"></script>
+    <canvas width="414" height="736" style="display: block; touch-action: none; -webkit-user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); cursor: inherit;"></canvas>
+</body>
+
+</html>

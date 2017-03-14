@@ -1,0 +1,160 @@
+{
+  "ID": "e34e1263-8722-4b8c-b4f8-eaf9a5c184af",
+  "Version": "2.3.1.1",
+  "Name": "Score",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Children": [
+          {
+            "LabelText": "011111",
+            "LabelBMFontFile_CNB": {
+              "Type": "Normal",
+              "Path": "all2_0.fnt",
+              "Plist": ""
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": -49.9987,
+              "Y": 27.0006
+            },
+            "Scale": {
+              "ScaleX": 0.4866,
+              "ScaleY": 0.9821
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": -132.4987,
+            "RightMargin": -32.5013,
+            "TopMargin": -43.0006,
+            "BottomMargin": 11.0006,
+            "Tag": 58,
+            "ActionTag": 375095827,
+            "Size": {
+              "X": 165.0,
+              "Y": 32.0
+            },
+            "Name": "Text_score",
+            "ctype": "TextBMFontObjectData"
+          },
+          {
+            "LabelText": "00",
+            "LabelBMFontFile_CNB": {
+              "Type": "Normal",
+              "Path": "all5_0.fnt",
+              "Plist": ""
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 48.9997,
+              "Y": 25.3975
+            },
+            "Scale": {
+              "ScaleX": 0.5144,
+              "ScaleY": 0.9708
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": 11.0015,
+            "RightMargin": -87.0015,
+            "TopMargin": -49.3975,
+            "BottomMargin": 1.3975,
+            "Tag": 7,
+            "ActionTag": -883697085,
+            "Size": {
+              "X": 76.0,
+              "Y": 48.0
+            },
+            "Name": "Text_Peishu",
+            "ctype": "TextBMFontObjectData"
+          },
+          {
+            "LabelText": "X",
+            "LabelBMFontFile_CNB": {
+              "Type": "Normal",
+              "Path": "all5_0.fnt",
+              "Plist": ""
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 9.9995,
+              "Y": -1.0002
+            },
+            "Scale": {
+              "ScaleX": 2.5463,
+              "ScaleY": 1.5278
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": 1.9995,
+            "RightMargin": -17.9995,
+            "TopMargin": -22.9998,
+            "BottomMargin": -25.0002,
+            "Tag": 8,
+            "ActionTag": 886041398,
+            "Size": {
+              "X": 16.0,
+              "Y": 48.0
+            },
+            "Name": "BitmapFontLabel_2",
+            "ctype": "TextBMFontObjectData"
+          }
+        ],
+        "Size": {
+          "X": 0.0,
+          "Y": 0.0
+        },
+        "Name": "Node",
+        "ctype": "SingleNodeObjectData"
+      },
+      "UsedResources": [
+        "all2_0.fnt",
+        "all2_0.png",
+        "all5_0.fnt",
+        "all5_0.png"
+      ],
+      "ctype": "GameProjectData"
+    }
+  },
+  "Type": "Node"
+}

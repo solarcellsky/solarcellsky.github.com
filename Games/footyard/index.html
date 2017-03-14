@@ -1,0 +1,90 @@
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>龙鲤足球</title>
+    <link rel="shortcut icon" href="icon.png">
+    <link rel="icon" href="icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <style>
+        * {
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+
+        html {
+            overflow: hidden;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            background-color: #333333;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        #gamediv {
+            margin: 0;
+            padding: 0;
+            height: 960px;
+            min-height: 960px;
+            width: 100%;
+            display: block;
+        }
+
+        #canvas {
+            background-color: #64B5DF;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -172px;
+            margin-left: -160px;
+            z-index: 1;
+        }
+    </style>
+    <script>
+        var FACEBOOK_APP_SITE_NAME = "#";
+        var FACEBOOK_LIKE_URL = "#";
+        var GAME_PAGE_URL = "#";
+        var TWITTER_SHARE_URL = "# " + GAME_PAGE_URL;
+        var isFacebookReady = false;
+
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '277562482420834', status: false, cookie: true,
+                xfbml: false
+            });
+            isFacebookReady = true;
+        };
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.id = id;
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <script type="text/javascript" src="game.min.js"></script>
+</head>
+
+<body>
+<div id="gamediv"></div>
+<canvas id="canvas" width="320" height="356"></canvas>
+<div id="fb-root"></div>
+<script type="text/javascript">
+    MyGame.init();
+</script>
+</body>
+</html>

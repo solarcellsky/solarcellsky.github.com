@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head lang="ch">
+    <meta charset="UTF-8">
+    <title>你踢不了欧洲杯，至少能赢欧洲杯大奖啊！</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <script src="Public/Home/js/jquery-1.12.0.min.js"></script>
+    <script src="Public/Home/js/jquery.imgpreload.min.js"></script>
+    <script>
+    $(function(){
+    	var shujus = ["a", "b", "c", "d", "e", "f"];
+    for (var i = 0, html = ""; i < shujus.length; i++) {
+        html += '<ul value="0"><li><img class="a" src="Public/Home/imgs/' + shujus[i] + '1.png"/><img style="display: none" class="a1" src="Public/Home/imgs/' + shujus[i] + '11.png"/><input name="numone[]" type="hidden"></li>'
+                + '<li><img class="a" src="Public/Home/imgs/' + shujus[i] + '2.png"/><img style="display: none" class="a1" src="Public/Home/imgs/' + shujus[i] + '22.png"/><input name="numone[]" type="hidden"></li>'
+                + '<li><img class="a" src="Public/Home/imgs/' + shujus[i] + '3.png"/><img style="display: none" class="a1" src="Public/Home/imgs/' + shujus[i] + '33.png"/><input name="numone[]" type="hidden"></li>'
+                + '<li><img class="a" src="Public/Home/imgs/' + shujus[i] + '4.png"/><img style="display: none" class="a1" src="Public/Home/imgs/' + shujus[i] + '44.png"/><input name="numone[]" type="hidden"></li></ul>'
+    }
+    $("#no1").append(html);
+    var a=0;
+    $(".a").bind("touchstart",function () {
+        if (a ==0) {
+            var dizhi = $(this).attr("src");
+            $(this).hide().next("img").show().next("input").attr("value", dizhi);
+            a++;
+            console.log(a);
+        } else {
+            alert("冠军队只能选一队")
+        }
+    })
+    $(".a1").bind("touchstart",function () {
+        a--;
+        $(this).hide().prev("img").show().siblings("input").removeAttr("value");
+    })
+    $(".img75").click(function (event) {
+        if (a==1) {
+        } else {
+            alert("冠军队必须选一队")
+            event.preventDefault()
+        }
+    })
+    $(".img76").click(function (event) {
+        a=0;
+        $(".a").show().next().hide();
+        $("input").removeAttr("value");
+    })
+    })
+    
+</script>
+    <link rel="stylesheet" href="Public/Home/css/common.css">
+    <link rel="stylesheet" href="Public/Home/css/app.css">
+    <div style="display: none">
+        <img src="Public/Home/imgs/toutu2.png" alt="">
+    </div>
+</head>
+<body>
+<div style="display: block" id="start7">
+    <div class="content">
+        <img class="img71" src="Public/Home/imgs/bank.png" alt="">
+        <img class="img72" src="Public/Home/imgs/2logo.png" alt="">
+        <img class="img73" src="Public/Home/imgs/wenti3.png" alt="">
+        <img class="img74" src="Public/Home/imgs/textbg.png" alt="">
+        <img class="img77" src="Public/Home/imgs/yingwen.png" alt="">
+
+        <form id="no1" name="1p" method="post">
+        	
+            <button>
+                <img class="img75" src="Public/Home/imgs/ycwb.png" alt="">
+            </button>
+            <img class="img76" src="Public/Home/imgs/cxyc.png" alt="">
+        </form>
+    </div>
+</div>
+<div id="start11" style="display: none">
+    <h1>竖屏效果更佳</h1>
+</div>
+<script>
+    window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", function() {
+        if (window.orientation === 180 || window.orientation === 0) {
+           $("#start11").hide()
+        }
+        if (window.orientation === 90 || window.orientation === -90 ){
+            $("#start11").show()
+        }
+    }, false);
+    window.history.forward(1);
+</script>
+<!--<script type="text/javascript">
+    // 对浏览器的UserAgent进行正则匹配，不含有微信独有标识的则为其他浏览器
+    var useragent = navigator.userAgent;
+    if (useragent.match(/MicroMessenger/i) != 'MicroMessenger') {
+        // 这里警告框会阻塞当前页面继续加载
+        alert('已禁止本次访问：您必须使用微信内置浏览器访问本页面！');
+        // 以下代码是用javascript强行关闭当前页面
+        var opened = window.open('about:blank', '_self');
+        opened.opener = null;
+        opened.close();
+    }
+</script>-->
+</body>
+</html>

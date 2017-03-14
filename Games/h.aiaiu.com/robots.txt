@@ -1,0 +1,4 @@
+User-agent: * 
+Disallow: /list.html?catid=*&page=*
+Disallow: /list.html?catid=*
+Disallow: /list.html?page=*

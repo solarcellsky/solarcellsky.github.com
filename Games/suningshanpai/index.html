@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <title>苏宁闪拍触屏版</title>
+    <link rel="stylesheet" type="text/css" href="css/reset-min.css?v=20151201061547">
+    <meta name="keywords" content="苏宁闪拍,低价,闪拍,闪购,活动,苏宁闪拍触屏版" />
+    <meta name="description" content="苏宁闪拍触屏版是手机网上拍卖商城,在线超低价抢拍家用电器,手机数码,电脑,家居百货,服饰,母婴等商品,超低价格秒杀抢购,尽在苏宁闪拍！" />
+    <link rel="stylesheet" type="text/css" href="css/css.css?v=20151201061547" />
+    <link rel="canonical" href="http://pai.suning.com" />
+    <script type="text/javascript" src="common/script/android/sneapp.js?v=20151201061547"></script>
+    <script type="text/javascript">
+    //全局变量
+    var sn = sn || {
+        "context": "/emall",
+        "domain": "www.suning.com",
+        "storeId": "10052",
+        "catalogId": "10051",
+        "memberDomain": "member.suning.com",
+        "online": "online.suning.com",
+        "cookieDomain": ".suning.com",
+        "categoryId": "10051",
+        "searchDomain": "http://search.suning.com/emall/",
+        "scriptDomainDir": "http://script.suning.cn"
+    };
+    //单点登录配置,需要调用ajaxInSameDomain方法
+    var passport_config = {
+        base: "./",
+        loginTheme: "wap_new"
+    };
+    </script>
+</head>
+
+<body>
+    <input type="hidden" id="rootPath" name="rootPath" value="." />
+    <input type="hidden" id="contextPath" name="contextPath" value="." />
+    <script type="text/javascript" src="ids/js/passport.min.js?v=20151201061547"></script>
+    <script type="text/javascript" src="js/base/script2.js?v=20151201061547"></script>
+    <header id="validateAppHeader" style="display:none;">
+        <a href="javascript:void(history.go(-1));" class="backbtn"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAhBAMAAADJzI1ZAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAYUExURQAAAP///////////////////////////yN+nV8AAAAIdFJOUwD+J4TbtE4N/iBGmwAAAEhJREFUGNNjYAADNkFBAwiLQVFQFMpichR0hzJLBEUUoMxAQSEoi1lQMAHKNBQUZqCLSUiakEWR1CKZgGwuskYkNyC5jNbmAQBxMg63NlMAMAAAAABJRU5ErkJggg==" /></a>
+        <h2 id="jsForwapTitleName" style="font-weight: normal;font-size:100%;"></h2>
+        <a href="javascript:;" class="morebtn"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAkBAMAAABGT2b1AAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAVUExURQAAAP///////////////////////0jPbQQAAAAGdFJOUwDxrSclKES3l9wAAAAtSURBVAjXY2BRFHJgMExLE2ZQS0tLYhBLS0uEEGBuYFqaKAOzopABA35AV1MAvA4Y6MhVTuMAAAAASUVORK5CYII=" /></a>
+        <div class="header-float">
+            <ul>
+                <li><a href="javascript:;" name="index_function_fanhuishouye" onclick="toIndex()">首页</a></li>
+                <li><a href="javascript:;" name="index_function_shuaxin" onclick="indexOnload()">刷新</a></li>
+            </ul>
+        </div>
+    </header>
+    <input type="hidden" id="defaultCate" value="2376" />
+    <input type="hidden" id="resourceType" value="wap" />
+    <div class="clearfix" style="position:relative;" id="topImg">
+        <section class="sc-floor-row index-slide clearfix">
+            <div class="bg-wrap">
+                <div class="swiper-container" id="scrollImg">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a name="index_focus_picture_1" href="http://m.pai.suning.com/shanpai/detail/46783_1.html">
+                                <img src="temp/144912295840836162.jpg?v=0.6369208512611598" width="100%" />
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a name="index_focus_picture_2" href="http://m.pai.suning.com/shanpai/detail/47082_1.html">
+                                <img src="temp/144945318475777343.jpg?v=0.3106786124308629" width="100%" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <section class="index-tab">
+        <div id="flashId" style="width:16rem;overflow:hidden;">
+            <div class="clearfix" style="width:32rem;position: relative;background-color: #000;" id="flashIdshow">
+                <div class="new_player fix_new">新手专场</div>
+                <div class="timeline">
+                    <div class="clearfix  swiper-container" style="position: relative;height:2.2rem;" id="todayNow">
+                        <div class="timeaxis" id="todayWrap">
+                            <div class="swiper-wrapper clearfix todayInfo" id="todayInfo">
+                                <div class="swiper-slide timesquare" cateId="2377">
+                                    <a href="javascript:;" name="index_today_tab_1">
+                                        <p class="time">10:00</p>
+                                        <h2 style="font-weight: normal;">
+													潮流馆
+						                        </h2>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide timesquare" cateId="2376">
+                                    <a href="javascript:;" name="index_today_tab_2">
+                                        <p class="time">11:00</p>
+                                        <h2 style="font-weight: normal;">
+													精品馆
+						                        </h2>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide timesquare" cateId="2375">
+                                    <a href="javascript:;" name="index_today_tab_3">
+                                        <p class="time">15:00</p>
+                                        <h2 style="font-weight: normal;">
+													休闲馆
+						                        </h2>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide timesquare" cateId="2411">
+                                    <a href="javascript:;" name="index_today_tab_4">
+                                        <p class="time">16:00</p>
+                                        <h2 style="font-weight: normal;">
+													生活馆
+						                        </h2>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide timesquare" cateId="2412">
+                                    <a href="javascript:;" name="index_today_tab_5">
+                                        <p class="time">19:00</p>
+                                        <h2 style="font-weight: normal;">
+													爱妻馆
+						                        </h2>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide timesquare" cateId="2389">
+                                    <a href="javascript:;" name="index_today_tab_6">
+                                        <p class="time">20:00</p>
+                                        <h2 style="font-weight: normal;">
+													宜家馆
+						                        </h2>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timesquare today-style">
+                            <h2>
+			                <a href="javascript:;" name="public_switch_mingriyure" id="moveTommorrow"> <p class="tomorrow">明日</p>
+			                <p class="tomorrow">预热</p></a>
+			            </h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="tomorrowtimeline" style="display:block;">
+                    <div class="clearfix  swiper-container" style="position: relative;height:2.2rem;" id="tomorrowNow">
+                        <div class="timesquare tomorrow-style">
+                            <h2>
+			                <a href="javascript:;" name="public_switch_fanhuijinri"><p class="tomorrow">返回</p>
+			                <p class="tomorrow">今日</p></a>
+			            </h2>
+                        </div>
+                        <div class="timeaxis" style="position: absolute;" id="tomorrowWrap">
+                            <div class="swiper-wrapper clearfix " id="tomorrowInfo" style="left:-3.2rem;">
+                                <div class="swiper-slide timesquare" tomorrowCateId="2413">
+                                    <a href="javascript:;" name="index_tomorrowPre_tab_1">
+                                        <p class="time">10:00</p>
+                                        <h2 style="font-weight: normal;">
+					                        	新手场
+					                        </h2>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide timesquare" tomorrowCateId="2400">
+                                    <a href="javascript:;" name="index_tomorrowPre_tab_2">
+                                        <p class="time">10:00</p>
+                                        <h2 style="font-weight: normal;">
+					                        	潮流馆
+					                        </h2>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide timesquare" tomorrowCateId="2390">
+                                    <a href="javascript:;" name="index_tomorrowPre_tab_3">
+                                        <p class="time">11:00</p>
+                                        <h2 style="font-weight: normal;">
+					                        	精品馆
+					                        </h2>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide timesquare" tomorrowCateId="2414">
+                                    <a href="javascript:;" name="index_tomorrowPre_tab_4">
+                                        <p class="time">15:00</p>
+                                        <h2 style="font-weight: normal;">
+					                        	休闲馆
+					                        </h2>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide timesquare" tomorrowCateId="2415">
+                                    <a href="javascript:;" name="index_tomorrowPre_tab_5">
+                                        <p class="time">16:00</p>
+                                        <h2 style="font-weight: normal;">
+					                        	生活馆
+					                        </h2>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide timesquare" tomorrowCateId="2417">
+                                    <a href="javascript:;" name="index_tomorrowPre_tab_6">
+                                        <p class="time">20:00</p>
+                                        <h2 style="font-weight: normal;">
+					                        	宜家馆
+					                        </h2>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="newplayerTip" style="display:none;">
+        <p>本场专供未体验过中标滋味的新手！</p>
+    </div>
+    <section class="item-wrap clearfix" id="productList">
+        <a href="http://m.pai.suning.com:80/shanpai/detail/46898_1.html">
+            <div class="item">
+                <div class="shadow">
+                    <div class="backtime">
+                        <i class="hot"></i>
+                        <span class="countDown fl">
+			                	<p>
+										<span>
+											<strong class="listsetinterval l-font-18 font-700">00</strong> <span class="time-i">:</span>
+                        <strong class="listsetinterval l-font-18 font-700">00</strong> <span class="time-i">:</span>
+                        <strong class="listsetinterval l-font-18 font-700">00</strong>
+                        <strong class="listsetinterval-tiny"></strong>
+                        </span>
+                        </p>
+                        </span>
+                        <em class="fl"></em>
+                    </div>
+                    <div class="bg"></div>
+                </div>
+                <i class="itemimg"><img alt="戴尔Ins13WR-4508TS 13英寸笔记本电脑(i5-5200U 4G 500G)" title="戴尔Ins13WR-4508TS 13英寸笔记本电脑(i5-5200U 4G 500G)" data-src="http://image1.suning.cn/b2c/catentries/000000000128227887_1_200x200.jpg" class="err-product"/></i>
+                <div class="itemtitle"><i title="戴尔Ins13WR-4508TS 13英寸笔记本电脑(i5-5200U 4G 500G)">戴尔Ins13WR-4508TS 13英寸笔记本电脑(i5-5200U 4G 500G)</i></div>
+                <div class="curprice"><span>起拍价：</span><i>￥0</i></div>
+                <div class="prepricewrap">
+                    <div class="preprice">参考价：
+                        <del>￥5699</del>
+                    </div>
+                    <div class="collect"><i>0</i></div>
+                </div>
+            </div>
+        </a>
+        <a href="http://m.pai.suning.com:80/shanpai/detail/46965_1.html">
+            <div class="item">
+                <div class="shadow">
+                    <div class="backtime">
+                        <i class="hot"></i>
+                        <span class="countDown fl">
+			                	<p>
+										<span>
+											<strong class="listsetinterval l-font-18 font-700">00</strong> <span class="time-i">:</span>
+                        <strong class="listsetinterval l-font-18 font-700">00</strong> <span class="time-i">:</span>
+                        <strong class="listsetinterval l-font-18 font-700">00</strong>
+                        <strong class="listsetinterval-tiny"></strong>
+                        </span>
+                        </p>
+                        </span>
+                        <em class="fl"></em>
+                    </div>
+                    <div class="bg"></div>
+                </div>
+                <i class="itemimg"><img alt="天梭 Couturier库图系列自动机械商务男表" title="天梭 Couturier库图系列自动机械商务男表" data-src="http://image3.suning.cn/b2c/catentries/000000000106428698_1_200x200.jpg" class="err-product"/></i>
+                <div class="itemtitle"><i title="天梭 Couturier库图系列自动机械商务男表">天梭 Couturier库图系列自动机械商务男表</i></div>
+                <div class="curprice"><span>起拍价：</span><i>￥0</i></div>
+                <div class="prepricewrap">
+                    <div class="preprice">参考价：
+                        <del>￥3390</del>
+                    </div>
+                    <div class="collect"><i>0</i></div>
+                </div>
+            </div>
+        </a>
+        <a href="http://m.pai.suning.com:80/shanpai/detail/46783_1.html">
+            <div class="item">
+                <div class="shadow">
+                    <div class="backtime">
+                        <i class="hot"></i>
+                        <span class="countDown fl">
+			                	<p>
+										<span>
+											<strong class="listsetinterval l-font-18 font-700">00</strong> <span class="time-i">:</span>
+                        <strong class="listsetinterval l-font-18 font-700">00</strong> <span class="time-i">:</span>
+                        <strong class="listsetinterval l-font-18 font-700">00</strong>
+                        <strong class="listsetinterval-tiny"></strong>
+                        </span>
+                        </p>
+                        </span>
+                        <em class="fl"></em>
+                    </div>
+                    <div class="bg"></div>
+                </div>
+                <i class="itemimg"><img alt="【1元封顶】高甜度 口感细腻 水分饱满 绿色生态 正宗蜜桔唯此一家" title="【1元封顶】高甜度 口感细腻 水分饱满 绿色生态 正宗蜜桔唯此一家" data-src="http://image5.suning.cn/b2c/catentries/000000000139237699_1_200x200.jpg" class="err-product"/></i>
+                <div class="itemtitle"><i title="【1元封顶】高甜度 口感细腻 水分饱满 绿色生态 正宗蜜桔唯此一家">【1元封顶】高甜度 口感细腻 水分饱满 绿色生态 正宗蜜桔唯此一家</i></div>
+                <div class="curprice"><span>起拍价：</span><i>￥0</i></div>
+                <div class="prepricewrap">
+                    <div class="preprice">参考价：
+                        <del>￥40</del>
+                    </div>
+                    <div class="collect"><i>0</i></div>
+                </div>
+            </div>
+        </a>
+        <a href="http://m.pai.suning.com:80/shanpai/detail/46966_1.html">
+            <div class="item">
+                <div class="shadow">
+                    <div class="backtime">
+                        <i class="hot"></i>
+                        <span class="countDown fl">
+			                	<p>
+										<span>
+											<strong class="listsetinterval l-font-18 font-700">00</strong> <span class="time-i">:</span>
+                        <strong class="listsetinterval l-font-18 font-700">00</strong> <span class="time-i">:</span>
+                        <strong class="listsetinterval l-font-18 font-700">00</strong>
+                        <strong class="listsetinterval-tiny"></strong>
+                        </span>
+                        </p>
+                        </span>
+                        <em class="fl"></em>
+                    </div>
+                    <div class="bg"></div>
+                </div>
+                <i class="itemimg"><img alt="阳江十八子作不锈钢厨房菜刀套装组合S1221雅悦七件套刀具砍" title="阳江十八子作不锈钢厨房菜刀套装组合S1221雅悦七件套刀具砍" data-src="http://image1.suning.cn/b2c/catentries/000000000123030406_1_200x200.jpg" class="err-product"/></i>
+                <div class="itemtitle"><i title="阳江十八子作不锈钢厨房菜刀套装组合S1221雅悦七件套刀具砍">阳江十八子作不锈钢厨房菜刀套装组合S1221雅悦七件套刀具砍</i></div>
+                <div class="curprice"><span>起拍价：</span><i>￥0</i></div>
+                <div class="prepricewrap">
+                    <div class="preprice">参考价：
+                        <del>￥168</del>
+                    </div>
+                    <div class="collect"><i>0</i></div>
+                </div>
+            </div>
+        </a>
+        <a href="http://m.pai.suning.com:80/shanpai/detail/46967_1.html">
+            <div class="item">
+                <div class="shadow">
+                    <div class="backtime">
+                        <i class="hot"></i>
+                        <span class="countDown fl">
+			                	<p>
+										<span>
+											<strong class="listsetinterval l-font-18 font-700">00</strong> <span class="time-i">:</span>
+                        <strong class="listsetinterval l-font-18 font-700">00</strong> <span class="time-i">:</span>
+                        <strong class="listsetinterval l-font-18 font-700">00</strong>
+                        <strong class="listsetinterval-tiny"></strong>
+                        </span>
+                        </p>
+                        </span>
+                        <em class="fl"></em>
+                    </div>
+                    <div class="bg"></div>
+                </div>
+                <i class="itemimg"><img alt="高级陶瓷水龙头净水器套装" title="高级陶瓷水龙头净水器套装" data-src="http://image3.suning.cn/b2c/catentries/000000000139801352_1_200x200.jpg" class="err-product"/></i>
+                <div class="itemtitle"><i title="高级陶瓷水龙头净水器套装">高级陶瓷水龙头净水器套装</i></div>
+                <div class="curprice"><span>起拍价：</span><i>￥0</i></div>
+                <div class="prepricewrap">
+                    <div class="preprice">参考价：
+                        <del>￥199</del>
+                    </div>
+                    <div class="collect"><i>0</i></div>
+                </div>
+            </div>
+        </a>
+        <a href="http://m.pai.suning.com:80/shanpai/detail/46964_1.html">
+            <div class="item">
+                <div class="shadow">
+                    <div class="backtime">
+                        <i class="hot"></i>
+                        <span class="countDown fl">
+			                	<p>
+										<span>
+											<strong class="listsetinterval l-font-18 font-700">00</strong> <span class="time-i">:</span>
+                        <strong class="listsetinterval l-font-18 font-700">00</strong> <span class="time-i">:</span>
+                        <strong class="listsetinterval l-font-18 font-700">00</strong>
+                        <strong class="listsetinterval-tiny"></strong>
+                        </span>
+                        </p>
+                        </span>
+                        <em class="fl"></em>
+                    </div>
+                    <div class="bg"></div>
+                </div>
+                <i class="itemimg"><img alt="凯驰SC3蒸汽清洁机蒸汽拖把" title="凯驰SC3蒸汽清洁机蒸汽拖把" data-src="http://image3.suning.cn/b2c/catentries/000000000138080529_1_200x200.jpg" class="err-product"/></i>
+                <div class="itemtitle"><i title="凯驰SC3蒸汽清洁机蒸汽拖把">凯驰SC3蒸汽清洁机蒸汽拖把</i></div>
+                <div class="curprice"><span>起拍价：</span><i>￥0</i></div>
+                <div class="prepricewrap">
+                    <div class="preprice">参考价：
+                        <del>￥2599</del>
+                    </div>
+                    <div class="collect"><i>0</i></div>
+                </div>
+            </div>
+        </a>
+        <a href="http://m.pai.suning.com:80/shanpai/detail/46968_1.html">
+            <div class="item">
+                <div class="shadow">
+                    <div class="backtime">
+                        <i class="hot"></i>
+                        <span class="countDown fl">
+			                	<p>
+										<span>
+											<strong class="listsetinterval l-font-18 font-700">00</strong> <span class="time-i">:</span>
+                        <strong class="listsetinterval l-font-18 font-700">00</strong> <span class="time-i">:</span>
+                        <strong class="listsetinterval l-font-18 font-700">00</strong>
+                        <strong class="listsetinterval-tiny"></strong>
+                        </span>
+                        </p>
+                        </span>
+                        <em class="fl"></em>
+                    </div>
+                    <div class="bg"></div>
+                </div>
+                <i class="itemimg"><img alt="爱耳目（iermu）HDMB 小黑 智能网络摄像机 监控安防" title="爱耳目（iermu）HDMB 小黑 智能网络摄像机 监控安防" data-src="http://image1.suning.cn/b2c/catentries/000000000135956424_1_200x200.jpg" class="err-product"/></i>
+                <div class="itemtitle"><i title="爱耳目（iermu）HDMB 小黑 智能网络摄像机 监控安防">爱耳目（iermu）HDMB 小黑 智能网络摄像机 监控安防</i></div>
+                <div class="curprice"><span>起拍价：</span><i>￥0</i></div>
+                <div class="prepricewrap">
+                    <div class="preprice">参考价：
+                        <del>￥259</del>
+                    </div>
+                    <div class="collect"><i>0</i></div>
+                </div>
+            </div>
+        </a>
+        <a href="http://m.pai.suning.com:80/shanpai/detail/46567_1.html">
+            <div class="item">
+                <div class="shadow">
+                    <div class="backtime">
+                        <i class="hot"></i>
+                        <span class="countDown fl">
+			                	<p>
+										<span>
+											<strong class="listsetinterval l-font-18 font-700">00</strong> <span class="time-i">:</span>
+                        <strong class="listsetinterval l-font-18 font-700">00</strong> <span class="time-i">:</span>
+                        <strong class="listsetinterval l-font-18 font-700">00</strong>
+                        <strong class="listsetinterval-tiny"></strong>
+                        </span>
+                        </p>
+                        </span>
+                        <em class="fl"></em>
+                    </div>
+                    <div class="bg"></div>
+                </div>
+                <i class="itemimg"><img alt="光环 士官长合集" title="光环 士官长合集" data-src="http://image4.suning.cn/b2c/catentries/000000000131309720_1_200x200.jpg" class="err-product"/></i>
+                <div class="itemtitle"><i title="光环 士官长合集">光环 士官长合集</i></div>
+                <div class="curprice"><span>起拍价：</span><i>￥0</i></div>
+                <div class="prepricewrap">
+                    <div class="preprice">参考价：
+                        <del>￥239</del>
+                    </div>
+                    <div class="collect"><i>0</i></div>
+                </div>
+            </div>
+        </a>
+    </section>
+    <div class="float-scroll" id="goToTop" onclick="scrolltopAn();"></div>
+    <div style="display:none;" class="addDesk" id="addToDesktopBtn" onclick="createShortCut('苏宁闪拍',
+	'images/desktop_icon180x180.png',
+	'#')">+至
+        <br/>桌面</div>
+    <div class="order-main changeImg zindex500" id="orderFloatOne">
+        <div class="order-scroll-circle" id="orderCircleOne" onclick="showCircle();">
+            <div class="order-scroll-arrow"></div>
+        </div>
+    </div>
+    <div class="order-main zindex400 " id="orderFloatTwo">
+        <div class="order-scroll-image order-scroll ">
+            <a href="javascript:;" name="public_top_navigation_homepage" onclick="toIndex()" class="order-scroll-link-one"></a>
+            <a href="javascript:;" name="public_top_navigation_mypai" onclick="toJumpToBid()" class="order-scroll-link-two"></a>
+            <a href="javascript:;" name="public_top_navigation_help" onclick="toJumpToHelp()" class="order-scroll-link-three"></a>
+        </div>
+        <div class="showNum"><span id="showNum"></span>
+            <div id="appendNum" class="appendNum"></div>
+        </div>
+    </div>
+    <div class="shooting-time" style="display:none" id="newRemindTips">
+        <div class="bid-alert clearfix">
+            <i class="close-bid" id="closeMe"></i>
+            <h3>恭喜您中标<span id="bidTipItemNameWap"></span></h3>
+            <p>请尽快付款，逾期不支付，保证金会被罚没的哦~</p>
+            <div class="bid-button">
+                <a onclick="toJumpToBid()" href="javascript:;">去付款</a>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/page/front/script3.js?v=20151201061547"></script>
+    <div id="today" style="display: none">
+        {{#auctItemDetailDTOList}}
+        <input type="hidden" id="pageStatus_{{itemId}}" value="{{itemPageStatus}}" />
+        <input type="hidden" itemkey="{{itemId}}" auctkey="{{auctId}}" />
+        <input type="hidden" id="upsetPrice_{{itemId}}" value="{{upsetPrice}}" />
+        <input type="hidden" id="productId_{{itemId}}" value="{{productId}}" />
+        <input type="hidden" id="merchantCode_{{itemId}}" value="{{merchantCode}}" />
+        <input type="hidden" id="startTime_{{itemId}}" value="{{auctStartDate}}" />
+        <input type="hidden" id="endTime_{{itemId}}" value="{{auctEndDate}}" />
+        <input type="hidden" id="auctId_{{itemId}}" value="{{auctId}}" />
+        <input type="hidden" id="itemId_{{itemId}}" value="{{itemId}}" />
+        <input id="nextSaleTemp_{{itemId}}" type="hidden" value="0" />
+        <input type="hidden" id="status_{{itemId}}" value="{{status}}" />
+        <input id="isTurn_{{itemId}}" type="hidden" value="0" />
+        <input type="hidden" id="itemStartTime_{{itemId}}" value="{{itemStartDate}}" />
+        <input type="hidden" id="round_{{itemId}}" value="{{round}}" />
+        <input type="hidden" id="chujiacishu_{{itemId}}" value="{{priceNum}}" />
+        <input type="hidden" id="productPrice_{{itemId}}" value="{{productPrice}}" /> {{#buryFlag}}
+        <a name="index_{{itemId}}_newfield_list" href="http://m.pai.suning.com:80/shanpai/detail/{{itemId}}_1.html">
+			{{/buryFlag}}
+			{{^buryFlag}}
+		    	<a name="index_{{itemId}}_today_list" href="http://m.pai.suning.com:80/shanpai/detail/{{itemId}}_1.html">	
+			{{/buryFlag}}
+			    <div class="item">
+			        <div class="shadow">
+			            <div class="backtime">
+			                <i id="imgIcon_{{itemId}}" class=""></i>
+			                <span class="countDown fl">
+			                	<p id="timeDiv_{{itemId}}">
+									<span id="timeControlDiv_{{itemId}}" style="display:none;">
+										<strong class="listsetinterval l-font-18 font-700"
+											id="countdown_h_{{itemId}}"></strong> <span class="time-i">:</span>
+										<strong class="listsetinterval l-font-18 font-700"
+											id="countdown_m_{{itemId}}"></strong> <span class="time-i">:</span>
+										<strong class="listsetinterval l-font-18 font-700"
+											id="countdown_s_{{itemId}}"></strong> 
+										<strong class="listsetinterval-tiny"
+											id="countdown_s_tiny_{{itemId}}"></strong>
+									</span>
+									<span id="timeControlEnd_{{itemId}}" style="display:none;">已结束</span>
+								</p>
+			                </span>
+			                <em class="fl"></em>
+						</div>
+			
+			            <div class="bg"></div>
+			        </div>
+			        <i id="img_detailUrl_{{itemId}}" class="itemimg"><img alt="{{itemName}}" title="{{itemName}}" id="itemPicUrl_{{itemId}}" data-src="" class="err-product"/></i>
+			        <div class="itemtitle"><i id="name_detailUrl_{{itemId}}" title="{{itemName}}">{{itemName}}</i></div>
+			        <div class="curprice"><span id="dangqianjiaLable_{{itemId}}">当前价：</span><i id="dangqianjia_{{itemId}}">￥{{upsetPrice}}</i></div>
+			        <div class="prepricewrap">
+			            <div class="preprice">参考价：
+			                <del id="cankaojia_{{itemId}}"></del>
+			            </div>
+			            <div class="collect" id="watchNum_div_{{itemId}}"><i id="watchNum_{{itemId}}"></i></div>
+			        </div>
+			    </div>
+		    </a> {{/auctItemDetailDTOList}}
+        <script type="text/javascript" src="js/page/front/pai_today-min.js?v=20151201061547"></script>
+    </div>
+    <div style="display: none" id="tomorrow">
+        {{#auctItemDetailDTOList}}
+        <input type="hidden" itemkey="{{itemId}}" auctkey="{{auctId}}" />
+        <input type="hidden" id="tomorrowProductId_{{itemId}}" value="{{productId}}" />
+        <input type="hidden" id="tomorrowMerchantCode_{{itemId}}" value="{{merchantCode}}" />
+        <input type="hidden" id="tomorrowStartTime_{{itemId}}" value="{{auctStartDate}}" />
+        <input type="hidden" id="tomorrowAuctId_{{itemId}}" value="{{auctId}}" />
+        <input type="hidden" id="tomorrowItemId_{{itemId}}" value="{{itemId}}" />
+        <input type="hidden" id="tomorrowProductPrice_{{itemId}}" value="{{productPrice}}" />
+        <a name="index_{{itemId}}_tomorrowPre_list" href="http://m.pai.suning.com:80/shanpai/detail/{{itemId}}_1.html">
+            <div class="item">
+                <div class="shadow">
+                    <div class="backtime"><span id="tomorrowAuctTime_{{itemId}}"></span>开拍</div>
+                    <div class="bg"></div>
+                </div>
+                <i class="itemimg"><img  id="tomorrowItemPicUrl_{{itemId}}" title="{{itemName}}" alt="{{itemName}}" data-src="" class="err-product"/></i>
+                <div class="itemtitle"><i id="tomorrowName_detailUrl_{{itemId}}" title="{{itemName}}">{{itemName}}</i></div>
+                <div class="curprice"><span>起拍价：</span><i id="tomorrowUpsetPrice_{{itemId}}">￥{{upsetPrice}}</i></div>
+                <div class="prepricewrap">
+                    <div class="preprice">参考价：
+                        <del id="tomorrowCankaojia_{{itemId}}"></del>
+                    </div>
+                    <div class="collect" id="tomorrowWatchNum_div_{{itemId}}"><i id="tomorrowWatchNum_{{itemId}}">0</i></div>
+                </div>
+            </div>
+        </a>
+        {{/auctItemDetailDTOList}}
+        <script type="text/javascript" src="js/page/front/pai_tomorrow-min.js?v=20151201061547"></script>
+    </div>
+    <div id="loadmore" class="loading" style="display:none;">加载中</div>
+    <div id="failLoad" class="failload" style="display:none;">
+        <div class="fail-text">很抱歉，加载失败了</div>
+        <a href="javascript:void(0)" class="fail-btn" onclick="window.location.reload();">重新加载</a>
+    </div>
+    <script type="text/javascript" src="js/common/script1.js"></script>
+</body>.
+
+</html>

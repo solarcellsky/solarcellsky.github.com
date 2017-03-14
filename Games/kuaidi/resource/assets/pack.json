@@ -1,0 +1,15 @@
+{"file":"pack.png","frames":{
+"game_start_label_png":{"x":717,"y":0,"w":300,"h":70,"offX":0,"offY":2,"sourceW":300,"sourceH":70},
+"game_rule_label_png":{"x":717,"y":73,"w":300,"h":70,"offX":0,"offY":2,"sourceW":300,"sourceH":70},
+"game_start_tip_png":{"x":1,"y":404,"w":459,"h":265,"offX":1,"offY":0,"sourceW":463,"sourceH":266},
+"icon_arrows_png":{"x":953,"y":672,"w":38,"h":55,"offX":0,"offY":0,"sourceW":38,"sourceH":55},
+"icon_arrows2_png":{"x":819,"y":404,"w":139,"h":112,"offX":0,"offY":0,"sourceW":139,"sourceH":112},
+"line_png":{"x":1,"y":747,"w":612,"h":9,"offX":0,"offY":0,"sourceW":614,"sourceH":13},
+"pack_png":{"x":953,"y":729,"w":55,"h":23,"offX":0,"offY":0,"sourceW":55,"sourceH":23},
+"score_bar_png":{"x":819,"y":518,"w":160,"h":87,"offX":1,"offY":0,"sourceW":161,"sourceH":87},
+"share_label_png":{"x":462,"y":404,"w":355,"h":215,"offX":2,"offY":0,"sourceW":357,"sourceH":216},
+"btn_replay_png":{"x":1,"y":671,"w":193,"h":69,"offX":2,"offY":1,"sourceW":196,"sourceH":71},
+"btn_share_png":{"x":196,"y":671,"w":193,"h":68,"offX":2,"offY":1,"sourceW":196,"sourceH":69},
+"game_over_label_png":{"x":1,"y":1,"w":612,"h":401,"offX":0,"offY":0,"sourceW":614,"sourceH":405},
+"music_open_png":{"x":391,"y":671,"w":63,"h":63,"offX":4,"offY":3,"sourceW":70,"sourceH":70},
+"music_close_png":{"x":953,"y":607,"w":63,"h":63,"offX":4,"offY":3,"sourceW":70,"sourceH":70}}}

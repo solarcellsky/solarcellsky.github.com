@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>选择撕</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <!-- S zoom -->
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <style type="text/css" id="_zoom">
+    .zoom {
+        zoom: 0.806640625;
+        -webkit-text-size-adjust: auto!important;
+    }
+    </style>
+    <script>
+    var _w, _zoom, _hd, _orientationChange, _doc = document,
+        __style = _doc.getElementById("_zoom");
+    __style || (_hd = _doc.getElementsByTagName("head")[0], __style = _doc.createElement("style"), _hd.appendCHild(_style)),
+        _orientationChange = function() {
+            _w = _doc.documentElement.clientHeight || _doc.body.clientHeight,
+                _zoom = _w / 1024,
+                __style.innerHTML = ".zoom {zoom:" + _zoom + ";-webkit-text-size-adjust:auto!important;}"
+        },
+        _orientationChange(),
+        window.addEventListener("resize", _orientationChange, !1);
+    </script>
+    <!-- E zoom -->
+
+
+
+    <link rel="stylesheet" href="css/index.min.css?v=20150423001">
+
+    <style>
+    html,
+    body,
+    .zoom,
+    .wx_wrap,
+    .view {
+        height: 100%;
+    }
+    body {
+        background-color: #ffd401;
+    }
+    .bg {
+        height: 100%;
+        width: auto;
+    }
+    .start_inner {
+        width: 640px;
+        margin: 0 auto;
+        position: relative;
+    }
+    .ui-swipeslide,
+    .ui-swipeslide-reel,
+    .ui-swipeslide-slide,
+    .ui-swipeslide-slide img {
+        display: block;
+    }
+    .ui-swipeslide {
+        position: relative;
+        overflow: hidden;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-user-select: none;
+        height: 100%;
+    }
+    .ui-swipeslide-reel {
+        -webkit-transform: translate3d(0, 0, 0);
+        overflow: hidden;
+        display: -webkit-box;
+        display: -moz-box;
+        display: box;
+        -webkit-box-orient: horizontal;
+        -moz-box-orient: horizontal;
+        box-orient: horizontal;
+    }
+    .ui-swipeslide-vertical .ui-swipeslide-reel {
+        -webkit-box-orient: vertical;
+        -moz-box-orient: vertical;
+        box-orient: vertical;
+    }
+    .ui-swipeslide-slide {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    /* 3d */
+    
+    .ui-swipeslide-3d {
+        -webkit-perspective: 1000;
+        position: relative;
+        overflow: visible;
+    }
+    .ui-swipeslide-3d .ui-swipeslide-reel {
+        -webkit-transform-style: preserve-3d;
+        position: relatve;
+        display: block;
+        width: 100%;
+        height: 100%;
+        overflow: visible;
+    }
+    .ui-swipeslide-3d .ui-swipeslide-slide {
+        position: absolute;
+    }
+    /* end not editable styles */
+    </style>
+</head>
+
+<body class="">
+    <div class="zoom">
+
+
+        <div id="J_loading" class="mp_loading" style="display: none;">
+            <div class="mp_loading_clip">
+                <div class="mp_loading_bar"></div>
+            </div>
+            <div id="J_precent" class="mp_loading_txt">100%</div>
+        </div>
+        <style type="text/css">
+        @-webkit-keyframes loading {
+            0% {
+                -webkit-transform: rotate(0deg);
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+        @-moz-keyframes loading {
+            0% {
+                -moz-transform: rotate(0deg);
+            }
+            100% {
+                -moz-transform: rotate(360deg);
+            }
+        }
+        @-o-keyframes loading {
+            0% {
+                -o-transform: rotate(0deg);
+            }
+            100% {
+                -o-transform: rotate(360deg);
+            }
+        }
+        @-ms-keyframes loading {
+            0% {
+                -ms-transform: rotate(0deg);
+            }
+            100% {
+                -ms-transform: rotate(360deg);
+            }
+        }
+        @keyframes loading {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        .mp_loading {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: black;
+            left: 0;
+            top: 0;
+            -webkit-transform-style: preserve-3d;
+            z-index: 1;
+        }
+        .mp_loading_clip {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 60px;
+            height: 60px;
+            margin: -30px 0 0 -30px;
+            overflow: hidden;
+            -webkit-animation: loading 1.2s linear infinite;
+            -moz-animation: loading 1.2s linear infinite;
+            -o-animation: loading 1.2s linear infinite;
+            -ms-animation: loading 1.2s linear infinite;
+            animation: loading 1.2s linear infinite;
+        }
+        .mp_loading_bar {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 54px;
+            height: 54px;
+            border-radius: 50px;
+            overflow: hidden;
+            clip: rect(0px, 36px, 70px, 0);
+            background: rgba(0, 0, 0, 0);
+            border: 3px solid #fff367;
+            -webkit-mask: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(255, 255, 255, 1)), to(rgba(255, 255, 255, 0)));
+        }
+        .mp_loading_txt {
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -50px;
+            margin-top: -15px;
+            text-align: center;
+            color: #fff;
+        }
+        </style>
+        <style>
+        .bao_sharetips .inner:before {
+            background: url(http://m.weizujian.com/apps/crazyit/image/v2/share.png?v=3) no-repeat 0 0;
+        }
+        </style>
+        <script type="text/javascript">
+        function loadedPercent(num) {
+            if (parseInt(document.getElementById("J_precent").innerHTML) < num) {
+                document.getElementById("J_precent").innerHTML = num + "%";
+            }
+            if (num == 100) {
+                document.getElementById("J_loading").style.display = "none";
+            }
+        }
+        </script>
+        <div class="dialog" style="display: none;" id="dialog">
+            <div class="inner">
+                <p class="txt_1"></p>
+                <a href="javascript:;" tag="close" class="btn">确定</a>
+            </div>
+            <div class="mask"></div>
+        </div>
+        <script type="text/html" id="js_crazygame_description">
+            撕掉大战开始啦~
+            <br/>
+            <br/>活动时间：2015年9月23日-2015年9月25日
+            <br/>
+            <br/>规则：每个用户每天可与系统对战次数3次（好友间对战次数不限）
+            <br/>
+            <br/>首次参与获得初始100金币
+            <br/>
+            <br/>关注微组件额外赠送的200金币
+            <br/>
+            <br/>好友间pk每次输/赢 50金币
+            <br/>
+            <br/>与系统国民女神/铃铛使者pk，则每次输/赢 20金币
+            <br/>
+            <br/>全民撕名牌，中秋赢好礼！快来参与
+        </script>
+        <script type="text/javascript">
+        window.crazyId = "8823b46ebba24a4aa373c91da0cf8373";
+        window.shareConfig = {
+            title: "撕名牌赢大奖",
+            desc: document.getElementById("js_crazygame_description").innerHTML,
+            img_url: "http://m.weizujian.com/apps/crazyit/image/v3/share_cover.jpg",
+            img_width: 80,
+            img_heigth: 80,
+            success_callback: function() {
+                $(".bao_sharetips").hide();
+                shared_callback();
+            }
+        };
+        window.self = {
+            "bind": 0,
+            "city": "",
+            "country": "",
+            "headimgurl": "http://wx.qlogo.cn/mmopen/Q3auHgzwzM4ReuxQRw5TnMRFKGswhI880ibic3LBL5UEfw6rkiaYjsWCvrPxicicSrLUPdR9zVWPtv46RN6BVduMfRA/0",
+            "nickname": "老任",
+            "openid": "oWSSPuMXOk4jdDYQzL5zUgQVVivY",
+            "privilege": "",
+            "province": "",
+            "sex": 1,
+            "subscribe": 0
+        };
+
+        window.my = {
+            "head": "http://wx.qlogo.cn/mmopen/Q3auHgzwzM4ReuxQRw5TnMRFKGswhI880ibic3LBL5UEfw6rkiaYjsWCvrPxicicSrLUPdR9zVWPtv46RN6BVduMfRA/0",
+            "shareStatus": "1",
+            "pkTotal": "3",
+            "balance": "200",
+            "pkNPCTotal": "0",
+            "pointname": ""
+        };
+        </script>
+        <script type="text/javascript">
+        var now = new Date();
+        now.setTime(1446540359940);
+
+        function ShowCountDown() {
+            now.setTime(now.getTime() + 1000);
+            var startDate = new Date(2015, 2, 19, 11, 0);
+            var leftTime = startDate.getTime() - now.getTime();
+            var leftsecond = parseInt(leftTime / 1000);
+            var day1 = Math.floor(leftsecond / (60 * 60 * 24));
+            var hour1 = Math.floor((leftsecond - day1 * 24 * 60 * 60) / 3600);
+            var hour = Math.floor((leftsecond - 60 * 60) / 3600);
+            //如果小时为负数 显示0 
+            if (hour < 0) {
+                hour = 0;
+            }
+            if (day1 < 0) {
+                hour = hour1;
+            }
+            var minute = Math.floor((leftsecond - day1 * 24 * 60 * 60 - hour1 * 3600) / 60);
+            var second = Math.floor(leftsecond - day1 * 24 * 60 * 60 - hour1 * 3600 - minute * 60);
+            var text = "";
+            //如果结束时间为负数 就显示0 
+            if (leftTime > 0) {
+                text = day1 + "天" + hour1 + "小时" + minute + "分" + second + "秒";
+                $(".btn_timeout").html(text);
+            } else {
+                $(".btn_timeout").attr("class", "btn_red btn btn_exchange").text("立即兑换");
+            }
+        }
+
+        // 关注公众号处理
+        function checkSubscribe() {
+            var submitData = {
+                action: "checksubscribeaward",
+                crazyId: window.crazyId
+            };
+            $.ajax({
+                type: "POST",
+                url: "/m/crazyit/crazy",
+                data: submitData,
+                dataType: "json",
+                contentType: "application/x-www-form-urlencoded; charset=utf-8",
+                success: function(data) {
+                    if (data.success == 1) {
+                        showDialog("恭喜！您已获得关注奖励！");
+                        $(".goldcoin strong").html(data.balance);
+                        return;
+                    } else if (data.success == 2) {
+                        showDialog("您已经获得过关注奖励了。");
+                        return;
+                    } else {
+                        location.href = "http://mp.weixin.qq.com/s?__biz=MzA5NjM4ODY5Nw==&mid=207561955&idx=1&sn=3eb32b11176e670c6cabeae608f5ac01&scene=0#rd";
+                    }
+                },
+                error: function() {
+                    showDialog("网络不稳定，请稍后再试");
+                }
+            });
+        }
+        </script>
+
+        <div class="toplogo"><img src="http://wx.qlogo.cn/mmopen/XcxejFndRITKmQREnjp8uyudPajibJCdTEes2qZJNACxLjez4vhibic4UibqFQHg0u1hialCmPwJGw74RPBcQpR8u5ibviackyaJj0r/0">
+        </div>
+        <div class="wx_wrap" id="container">
+            <div class="view" id="welcome_panel" isusing="yes" style="opacity: 1;">
+                <div id="bgimage" class="swipe ui-swipeslide ui-swipeslide-horizontal" style="visibility: visible;">
+                    <div class="swipe-wrap ui-swipeslide-reel" data-id="0" style="width: 938px; -webkit-transform: translate3d(0px, 0px, 0px); -webkit-transition: -webkit-transform 0.6s ease-out; transition: -webkit-transform 0.6s ease-out;">
+                        <div class="swipe-item ui-swipeslide-slide" style="width: 938px;">
+                            <div class="start_inner">
+                                <img class="bg" src="images/bg_start.jpg">
+                                <div class="start_vs_cont">
+                                    <a data-href="game.html" class="link_1" href="javascript:;" tag="gotoPk"></a>
+                                    <a data-href="game.html" class="link_2" href="javascript:;" tag="gotoPk"></a>
+                                </div>
+                                <a href="javascript:;" class="btn_red btn link link-rule">活动规则</a>
+                                <img class="arrow_tips start_arrow_l" src="images/start_arrow.png" data-pos="0" style="opacity: 1; left: 59px; -webkit-transition: opacity 0.4s linear, left; transition: opacity 0.4s linear, left;">
+                                <img class="arrow_tips start_arrow_r" src="images/start_arrow.png" data-pos="0" style="opacity: 1; right: 69px; -webkit-transition: opacity 0.4s linear, right; transition: opacity 0.4s linear, right;">
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="ui-swipeslide-bullets">
+                        <li data-index="0" class="active">1</li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+            <div class="view" id="rule_panel" style="opacity: 1; display: none;">
+                <div style="height: 74px;"></div>
+                <div class="bargain_info">
+                    <p class="header_title">活动介绍</p>
+                    <span class="close" tag="close">关闭</span>
+                    <img src="images/rule_head_img.png" style="display: block;margin: 0 auto;">
+                    <div tag="mq" class="content">
+                        <h3 style="text-align:center; padding:10px 0;">“撕名牌赢大奖”活动规则</h3>
+                        <div>
+                            <p style="font-size:1.7rem">撕掉大战开始啦~
+                                <br>
+                                <br>活动时间：2015年9月23日-2015年9月25日
+                                <br>
+                                <br>规则：每个用户每天可与系统对战次数3次（好友间对战次数不限）
+                                <br>
+                                <br>首次参与获得初始100金币
+                                <br>
+                                <br>关注微组件额外赠送的200金币
+                                <br>
+                                <br>好友间pk每次输/赢 50金币
+                                <br>
+                                <br>与系统国民女神/铃铛使者pk，则每次输/赢 20金币
+                                <br>
+                                <br>全民撕名牌，中秋赢好礼！快来参与 </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- S 分享弹出层 -->
+        <div class="bao_sharetips sharelimit_tips" style="display: none;">
+            <div class="inner">
+                <p class="txt_1">撕3次还不够吗？自己玩不如一起玩</p>
+                <p class="txt_3">约上好友再来玩吧！</p>
+            </div>
+            <div class="mask"></div>
+        </div>
+    </div>
+    <script>
+    window.js_start_time = new Date();
+    window.accountappid = "4a8e33e4e5dd4714a456e555a7e9e4d1";
+    </script>
+    <script type="text/javascript">
+    loadedPercent(20)
+    </script>
+
+
+
+
+    <script type="text/javascript" src="js/zepto.min.js?v=20150423001"></script>
+    <script type="text/javascript" src="js/index.js?v=20150423001"></script>
+    <script type="text/javascript" src="js/html-helper.js?v=20150423001"></script>
+    <script type="text/javascript" src="js/jweixin-1.0.0.js?v=20150423001"></script>
+    <script type="text/javascript" src="js/share.js?v=20150423001"></script>
+
+
+    <script type="text/javascript" src="js/swipeslide.js?v=null"></script>
+    <script type="text/javascript">
+    var tipArrowAnimate = function() {
+        if ($(".arrow_tips").attr("data-pos") == "0") {
+            $(".start_arrow_l").animate({
+                "opacity": "0.5",
+                "left": "40px"
+            });
+            $(".start_arrow_r").animate({
+                "opacity": "0.5",
+                "right": "50px"
+            });
+            $(".arrow_tips").attr("data-pos", "1");
+        } else {
+            $(".start_arrow_l").animate({
+                "opacity": "1",
+                "left": "59px"
+            });
+            $(".start_arrow_r").animate({
+                "opacity": "1",
+                "right": "69px"
+            });
+            $(".arrow_tips").attr("data-pos", "0");
+        }
+    };
+    $(function() {
+        $('#bgimage').swipeSlide({
+            autoPlay: 5,
+            delay: 0.6
+        });
+        $(".arrow_tips").attr("data-pos", "0");
+        setInterval(function() {
+            tipArrowAnimate();
+        }, 300);
+    });
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        WeixinJSBridge.call('showOptionMenu');
+    });
+    </script>
+    <script type="text/javascript">
+    window['initShareInfo'](shareConfig.title, shareConfig.desc, shareConfig.img_url, null, shareConfig.success_callback);
+    </script>
+</body>
+<iframe id="__WeixinJSBridgeIframe_SetResult" style="display: none;"></iframe>
+<iframe id="__WeixinJSBridgeIframe" style="display: none;"></iframe>
+
+</html>

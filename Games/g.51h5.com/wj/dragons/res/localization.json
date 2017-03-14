@@ -1,0 +1,26 @@
+{
+  "en": {
+    "reset"   : "Reset Data",
+    "credits" : "Credits",
+    "back"    : "Back",
+    "developed" : "Developed by:",
+    "reset_confirmation" : "Sure you want to\nclear the progress?",
+    "settings" : "Settings",
+    "level" : "LEVEL",
+    "moves" : "MOVES",
+    "move_the_block" : "Move the block",
+    "level_completed" : "LEVEL COMPLETED!"
+  },
+  "es": {
+    "reset"   : "Borrar Datos",
+    "credits" : "Creditos",
+    "back"    : "Volver",
+    "developed" : "Desarrollado por:",
+    "reset_confirmation" : "¿Estás seguro que\ndeseas borrar el progreso?",
+    "settings" : "Opciones",
+    "level" : "NIVEL",
+    "moves" : "MOVIM.",
+    "move_the_block" : "Mueve el bloque",
+    "level_completed" : "¡NIVEL COMPLETADO!"
+  }
+}

@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>幸运树</title>
+    <style type="text/css">
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    
+    body {
+        background-image: url(images/bg.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-color: #baafaf;
+    }
+    
+    canvas {
+        display: block;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        position: fixed;
+    }
+    
+    canvas.flare {
+        opacity: 0.1;
+    }
+    
+    .bottoman {
+        position: absolute;
+        width: 30%;
+        top: 80%;
+        left: 35%;
+    }
+    
+    .jiangpin {
+        position: absolute;
+        top: 60%;
+        width: 54%;
+        left: 23%;
+    }
+    
+    .ziti {
+        display: block;
+        text-align: center;
+        font-size: 1em;
+    }
+    
+    .img1 {
+        position: absolute;
+        width: 20%;
+        -webkit-animation-name: mymove1;
+        -webkit-animation-duration: 1.5s;
+        -webkit-animation-delay: 0.2s;
+        -webkit-animation-iteration-count: infinite;
+    }
+    
+    .img2 {
+        position: absolute;
+        width: 20%;
+        -webkit-animation-name: mymove2;
+        -webkit-animation-duration: 1.5s;
+        -webkit-animation-delay: 0.4s;
+        -webkit-animation-iteration-count: infinite;
+    }
+    
+    .img3 {
+        position: absolute;
+        width: 20%;
+        -webkit-animation-name: mymove3;
+        -webkit-animation-duration: 1.5s;
+        -webkit-animation-delay: 0.8s;
+        -webkit-animation-iteration-count: infinite;
+    }
+    
+    .img4 {
+        position: absolute;
+        width: 20%;
+        -webkit-animation-name: mymove4;
+        -webkit-animation-duration: 1.5s;
+        -webkit-animation-delay: 0;
+        -webkit-animation-iteration-count: infinite;
+    }
+    
+    .img5 {
+        position: absolute;
+        width: 20%;
+        -webkit-animation-name: mymove5;
+        -webkit-animation-duration: 1s;
+        -webkit-animation-delay: 0.7s;
+        -webkit-animation-iteration-count: infinite;
+    }
+    
+    .img6 {
+        position: absolute;
+        width: 20%;
+        -webkit-animation-name: mymove6;
+        -webkit-animation-duration: 1s;
+        -webkit-animation-delay: 0.1s;
+        -webkit-animation-iteration-count: infinite;
+    }
+    
+    .img7 {
+        position: absolute;
+        width: 20%;
+        -webkit-animation-name: mymove7;
+        -webkit-animation-duration: 1s;
+        -webkit-animation-delay: 0;
+        -webkit-animation-iteration-count: infinite;
+    }
+    
+    .img8 {
+        position: absolute;
+        width: 20%;
+        -webkit-animation-name: mymove8;
+        -webkit-animation-duration: 1s;
+        -webkit-animation-delay: 0.5s;
+        -webkit-animation-iteration-count: infinite;
+    }
+    
+    .img9 {
+        position: absolute;
+        width: 20%;
+        -webkit-animation-name: mymove8;
+        -webkit-animation-duration: 1s;
+        -webkit-animation-delay: 0.5s;
+        -webkit-animation-iteration-count: infinite;
+        display: none;
+    }
+    
+    @-webkit-keyframes mymove1
+    /*Safari and Chrome*/
+    
+    {
+        0% {
+            top: 5%;
+            left: 0;
+        }
+        80% {
+            opacity: 1;
+        }
+        100% {
+            left: 0;
+            top: 85%;
+            opacity: 0;
+        }
+    }
+    
+    @-webkit-keyframes mymove2
+    /*Safari and Chrome*/
+    
+    {
+        0% {
+            top: 8%;
+            left: 10px;
+        }
+        80% {
+            opacity: 1;
+        }
+        100% {
+            left: 10px;
+            top: 85%;
+            opacity: 0;
+        }
+    }
+    
+    @-webkit-keyframes mymove3
+    /*Safari and Chrome*/
+    
+    {
+        0% {
+            top: 20%;
+            left: 30px;
+        }
+        80% {
+            opacity: 1;
+        }
+        100% {
+            left: 30px;
+            top: 85%;
+            opacity: 0;
+        }
+    }
+    
+    @-webkit-keyframes mymove4
+    /*Safari and Chrome*/
+    
+    {
+        0% {
+            top: 18%;
+            left: 25px;
+        }
+        80% {
+            opacity: 1;
+        }
+        100% {
+            left: 25px;
+            top: 85%;
+            opacity: 0;
+        }
+    }
+    
+    @-webkit-keyframes mymove5
+    /*Safari and Chrome*/
+    
+    {
+        0% {
+            top: 2%;
+            left: 70px;
+        }
+        80% {
+            opacity: 1;
+        }
+        100% {
+            left: 70px;
+            top: 85%;
+            opacity: 0;
+        }
+    }
+    
+    @-webkit-keyframes mymove6
+    /*Safari and Chrome*/
+    
+    {
+        0% {
+            top: 25%;
+            left: 90px;
+        }
+        80% {
+            opacity: 1;
+        }
+        100% {
+            left: 90px;
+            top: 85%;
+            opacity: 0;
+        }
+    }
+    
+    @-webkit-keyframes mymove7
+    /*Safari and Chrome*/
+    
+    {
+        0% {
+            top: 13%;
+            left: 110px;
+        }
+        80% {
+            opacity: 1;
+        }
+        100% {
+            left: 110px;
+            top: 85%;
+            opacity: 0;
+        }
+    }
+    
+    @-webkit-keyframes mymove8
+    /*Safari and Chrome*/
+    
+    {
+        0% {
+            top: 20%;
+            left: 130px;
+        }
+        80% {
+            opacity: 1;
+        }
+        100% {
+            left: 130px;
+            top: 85%;
+            opacity: 0;
+        }
+    }
+    
+    @-webkit-keyframes mymove9
+    /*Safari and Chrome*/
+    
+    {
+        0% {
+            top: 15%;
+            left: 150px;
+        }
+        80% {
+            opacity: 1;
+        }
+        100% {
+            left: 150px;
+            top: 85%;
+            opacity: 0;
+        }
+    }
+    
+    @media all and (max-height:480px) {
+        .ziti {
+            display: block;
+            text-align: center;
+            font-size: 0.8em;
+        }
+        .jiangpin {
+            top: 75%;
+            width: 50%;
+            left: 25%;
+        }
+        .bottoman {
+            top: 100%;
+        }
+    }
+    </style>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.let_it_snow.js"></script>
+    <script src="js/jweixin-1.0.0.js"></script>
+    <script src="js/layer.m.js"></script>
+    <link href="css/layer.css" type="text/css" rel="styleSheet" id="layermcss">
+    <script type="text/javascript">
+    $(function() {
+        init();
+        $("canvas.snow").let_it_snow({
+            windPower: 3,
+            speed: 0,
+            count: 220,
+            size: 0
+        });
+
+        $("canvas.flake").let_it_snow({
+            windPower: -3,
+            speed: 0,
+            count: 22,
+            size: 6,
+            image: "images/white-snowflake.png"
+        });
+
+        $("#qiyuan").click(function() {
+            $("#qiyuan").hide();
+            $.post("/2015/12/sjjh/home/index/getinfo.html", function(data) {
+                if (data.status == '1') {
+                    if (data.data == 20) {
+                        $("#dido").hide();
+                        $("#xingfu").show();
+                    } else if (data.data == 21) {
+                        $("#dido").hide();
+                        $("#pingan").show();
+                    } else if (data.data == 22) {
+                        $("#dido").hide();
+                        $("#jiankang").show();
+                    } else if (data.data == 23) {
+                        $("#dido").hide();
+                        $("#yinyuan").show();
+                    } else if (data.data == 24) {
+                        $("#dido").hide();
+                        $("#shiye").show();
+                    } else if (data.data == 25) {
+                        $("#dido").hide();
+                        $("#youyi").show();
+                    } else {
+                        $("#dido").hide();
+                        var valuejp = data.data;
+                        $("#jjpp").text(valuejp);
+                        $("#zhongj").show();
+                    }
+                } else if (data.status == '2') {
+                    $("#weifx").show();
+                } else if (data.status == '3') {
+                    $("#yifx").show();
+                } else {
+                    layer.open({
+                        content: data.info,
+                        time: 2
+                    });
+                    i = 0;
+                }
+                return false;
+            }, 'JSON');
+
+        });
+
+        $("#yxan,#yxgzs").click(function() {
+            $("#yxgzs").toggle();
+
+        });
+
+        $("#weifx").click(function() {
+            $("#weifx").toggle();
+            i = 0;
+
+        });
+        $("#yifx").click(function() {
+            $("#yifx").toggle();
+            i = 0;
+        });
+
+    });
+
+
+    wx.config({
+        debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+        appId: "wxc1c54a45fafdc327", // 必填，公众号的唯一标识
+        timestamp: "1451537369", // 必填，生成签名的时间戳
+        nonceStr: "6BjQEq5poU8L0DE4", // 必填，生成签名的随机串
+        signature: "b6638df879f56fb93287e3f79a707858e7591c3b", // 必填，签名，见附录1
+        jsApiList: [
+                'onMenuShareTimeline',
+                'onMenuShareAppMessage'
+            ] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+    });
+
+    wx.ready(function() {
+
+        var share = {
+            title: '送你一个新年福袋哦，点开有惊喜！！！', // 分享标题
+            desc: '这个福袋能预言藏着你关于2016年的小秘密……', // 分享描述
+            link: 'http://www.029weixin.cn/2015/12/sjjh/', // 分享链接
+            imgUrl: 'http://www.029weixin.cnimages/fx.png', // 分享图标
+            type: 'link', // 分享类型,music、video或link，不填默认为link
+            dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+            success: function() {
+                // 用户确认分享后执行的回调函数
+                $.post("/2015/12/sjjh/home/index/setshare.html", function(data) {
+                    if (data.status == 1) {
+                        window.location.href = "/2015/12/sjjh/home/index/indexts.html";
+                    }
+                    return false;
+                });
+            },
+            cancel: function() {
+                // 用户取消分享后执行的回调函数
+            }
+        }
+
+        //“分享到朋友圈”按钮点击状态及自定义分享内容接口
+        wx.onMenuShareTimeline(share);
+
+        //“分享给朋友”按钮点击状态及自定义分享内容接口
+        wx.onMenuShareAppMessage(share);
+
+    });
+
+    wx.error(function(res) {
+        //alert(res.errMsg);
+    });
+    var i = 0;
+
+    var SHAKE_THRESHOLD = 1000;
+    var last_update = 0;
+    var x = y = z = last_x = last_y = last_z = 0;
+
+    function init() {
+
+        if (window.DeviceMotionEvent) {
+            window.addEventListener('devicemotion', deviceMotionHandler, false);
+        } else {
+            alert('not support mobile event');
+        }
+    }
+
+    function deviceMotionHandler(eventData) {
+        var acceleration = eventData.accelerationIncludingGravity;
+        var curTime = new Date().getTime();
+        if ((curTime - last_update) > 100) {
+            var diffTime = curTime - last_update;
+            last_update = curTime;
+            x = acceleration.x;
+            y = acceleration.y;
+            z = acceleration.z;
+            var speed = Math.abs(x + y + z - last_x - last_y - last_z) / diffTime * 10000;
+            if (speed > SHAKE_THRESHOLD) {
+                ++i;
+                if (i == 2) {
+                    document.getElementById("audiodd").play();
+                    $("#xianshi").show();
+                    setTimeout(function() {
+                        $("#xianshi").hide();
+                        $("#qiyuan").show();
+                    }, 3000);
+                }
+            }
+            last_x = x;
+            last_y = y;
+            last_z = z;
+        }
+    }
+    </script>
+</head>
+<iframe id="__WeixinJSBridgeIframe_SetResult" style="display: none;"></iframe>
+<iframe id="__WeixinJSBridgeIframe" style="display: none;"></iframe>
+
+<body>
+	<img src="images/white-snowflake.png" style="display: none" id="lis_flake">
+    <canvas width="757" height="826" class="snow"></canvas>
+    <canvas width="757" height="826" class="flake"></canvas>
+    <audio id="audio" autoplay="autoplay" loop="loop" width="0" height="0">
+        <source src="images/music.mp3">
+    </audio>
+    <audio id="audiodd" width="0" height="0">
+        <source src="images/449.mp3">
+    </audio>
+    <!--大树-->
+    <div><img src="images/1-tree.gif" style="position:absolute;top:0;left:0;width:100%;z-index:-1;" id="piaoshu"></div>
+    <!--didoo-->
+    <div id="dido"><img src="images/y-1.gif" style="margin-top:92%;width:20%;margin-left:23%;"><img src="images/1_03.png" style="margin-top:-15%;width:100%;margin-left:0;"></div>
+    <!--祈愿-->
+    <div><img src="images/2-1.png" style="position:absolute;top:0;left:0;width:100%;display:none;" id="qiyuan"></div>
+    <!--红包掉落动效-->
+    <div style="display:none;" id="xianshi">
+        <img src="images/1-fd_01.png" class="img1">
+        <img src="images/1-fd_02.png" class="img2">
+        <img src="images/1-fd_04.png" class="img3">
+        <img src="images/1-fd_05.png" class="img4">
+        <img src="images/1-fd_07.png" class="img5">
+        <img src="images/1-fd_09.png" class="img6">
+        <img src="images/1-fd_10.png" class="img7">
+        <img src="images/1-fd_14.png" class="img8">
+        <img src="images/1-fd_17.png" class="img9">
+    </div>
+    <!--中奖页面-->
+    <div style="display:none;" id="zhongj">
+        <img src="images/4-2.png" style="position:absolute;width:100%;top:0;left:0;">
+        <div class="jiangpin">
+            <span style="display:block;width:100%;text-align:center;font-size:1.2em;"><b>恭喜获得</b></span>
+            <span class="ziti" id="jjpp"></span>
+        </div>
+        <a href="http://mp.weixin.qq.com/s?__biz=MzA4MTI5NzkwMg==&amp;mid=401432927&amp;idx=7&amp;sn=700723278851c5eca70fe757a71d0201#rd"><img src="images/4-1_03.png" class="bottoman"></a>
+    </div>
+    <!--未中奖 幸福-->
+    <div style="display:none;" id="xingfu">
+        <img src="images/xingfu.png" style="position:absolute;width:100%;top:0;left:0;">
+        <a href="/2015/12/sjjh/home/index/indexts.html"><img src="images/3-2_03.png" class="bottoman"></a>
+    </div>
+    <!--未中奖 平安-->
+    <div style="display:none;" id="pingan">
+        <img src="images/pingan.png" style="position:absolute;width:100%;top:0;left:0;">
+        <a href="/2015/12/sjjh/home/index/indexts.html"><img src="images/3-2_03.png" class="bottoman"></a>
+    </div>
+    <!--未中奖 健康-->
+    <div style="display:none;" id="jiankang">
+        <img src="images/jiankang.png" style="position:absolute;width:100%;top:0;left:0;">
+        <a href="/2015/12/sjjh/home/index/indexts.html"><img src="images/3-2_03.png" class="bottoman"></a>
+    </div>
+    <!--未中奖 事业-->
+    <div style="display:none;" id="shiye">
+        <img src="images/shiye.png" style="position:absolute;width:100%;top:0;left:0;">
+        <a href="/2015/12/sjjh/home/index/indexts.html"><img src="images/3-2_03.png" class="bottoman"></a>
+    </div>
+    <!--未中奖 友谊-->
+    <div style="display:none;" id="youyi">
+        <img src="images/youyi.png" style="position:absolute;width:100%;top:0;left:0;">
+        <a href="/2015/12/sjjh/home/index/indexts.html"><img src="images/3-2_03.png" class="bottoman"></a>
+    </div>
+    <!--未中奖 姻缘-->
+    <div style="display:none;" id="yinyuan">
+        <img src="images/yinyuan.png" style="position:absolute;width:100%;top:0;left:0;">
+        <a href="/2015/12/sjjh/home/index/indexts.html"><img src="images/3-2_03.png" class="bottoman"></a>
+    </div>
+    <!--未分享次数已用完-->
+    <div><img src="images/5_03.png" style="position:absolute;width:90%;top:30%;left:5%;display:none;" id="weifx"></div>
+    <!--已分享次数已用完-->
+    <div><img src="images/6_03.png" style="position:absolute;width:90%;top:30%;left:5%;display:none;" id="yifx"></div>
+</body>
+
+</html>

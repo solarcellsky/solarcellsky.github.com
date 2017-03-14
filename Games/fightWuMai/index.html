@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>击退雾霾</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <style>
+    body,
+    html {
+        height: 100%;
+    }
+    
+    body,
+    canvas,
+    div {
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        -khtml-user-select: none;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+    </style>
+    // <script src="js/wxhelper-1.0.0.js"></script>
+    <script>
+    function setShare(str) {
+        window['wxHelper'].update({
+            title: '击退雾霾',
+            desc: "" + str,
+            img: 'res/ICON.png',
+            link: window.location.href
+        });
+    }
+    setShare('苍茫的蓝天是我的爱，雾霾雾霾你快走开！');
+    </script>
+</head>
+
+<body style="padding:0; margin: 0; background: #000;"><img id="wxsicon" src="http://i2.wanh5.com/item/1512/03/565fb67f3e1ff_wx.jpg" width="0" height="0" style="position:absolute">
+    <canvas id="gameCanvas" width="800" height="450"></canvas>
+    <!--<script cocos src="game.min.js"></script>-->
+    <script cocos src="game.min.js?v2"></script>
+</body>
+
+</html>

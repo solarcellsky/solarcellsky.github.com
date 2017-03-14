@@ -1,0 +1,88 @@
+.c-singleimage {
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    overflow: hidden;
+    position: absolute;
+    background-clip: padding-box;
+    -webkit-background-clip: padding-box;
+}
+.c-singleimage.c-c-container {
+
+}
+
+.c-singleimage img{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.page .c-singleimage img{
+	transform: scale(1) !important;
+	-webkit-transform: scale(1) !important;
+	-moz-transform: scale(1) !important;	
+}
+.c-singleaudio{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 1;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;	
+}
+
+.c-singleaudio.content{
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-box-pack: center;
+	-webkit-box-align: center;
+	display: -moz-box;
+	-moz-box-pack: center;
+	-moz-box-align: center;		
+}
+
+.m-editor .c-singleaudio.content[playertype="hideSelect"] {
+  opacity: 0.1 !important;
+  display: block !important;
+}
+
+.c-singleaudio .audio-icon{
+	width: 80%; 
+	height: 80%;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: contain;
+	display: -moz-box;
+	-moz-box-pack: center;
+	-moz-box-align: center;	
+}
+
+.c-singleaudio-scale{
+	width: 100%; 
+	height: 100%;
+	position: absolute;	 
+	left: 0; 
+	top: 0; 
+	z-index: 0;	
+	opacity: 0; 
+	background-color: #000;
+	border-radius: 50%;
+	-webkit-animation: audio-anim 1s linear infinite; 
+	-moz-animation: audio-anim 1s linear infinite;	
+}
+
+@-webkit-keyframes audio-anim{
+	0%{-webkit-transform: scale(1); opacity: 1;}
+	100%{-webkit-transform: scale(1.3); opacity: 0;}
+}
+
+@-moz-keyframes audio-anim{
+	0%{-moz-transform: scale(1); opacity: 1;}
+	100%{-moz-transform: scale(1.3); opacity: 0;}
+}
+
+.c-singleaudio .singleAudioPlayerTag{
+	display: none;
+}

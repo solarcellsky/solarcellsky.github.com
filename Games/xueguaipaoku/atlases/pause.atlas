@@ -1,0 +1,41 @@
+
+pause.png
+size: 2048,2048
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+back
+  rotate: false
+  xy: 4, 380
+  size: 1247, 1573
+  orig: 1247, 1573
+  offset: 0, 0
+  index: -1
+close
+  rotate: false
+  xy: 4, 24
+  size: 341, 348
+  orig: 341, 348
+  offset: 0, 0
+  index: -1
+fade
+  rotate: false
+  xy: 4, 4
+  size: 12, 12
+  orig: 12, 12
+  offset: 0, 0
+  index: -1
+menu
+  rotate: false
+  xy: 1259, 1712
+  size: 241, 241
+  orig: 241, 241
+  offset: 0, 0
+  index: -1
+restart
+  rotate: false
+  xy: 353, 131
+  size: 241, 241
+  orig: 241, 241
+  offset: 0, 0
+  index: -1

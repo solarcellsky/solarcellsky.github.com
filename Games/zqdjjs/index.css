@@ -1,0 +1,118 @@
+body {
+	background-color:#ffffff;
+	margin: 0px;
+	padding: 0px;
+}
+
+.container {
+	background-color:#000000;
+	position:relative;
+}
+
+#container {
+	overflow:hidden;
+}
+
+.alert_cls{
+    display:none;
+}
+.alert_cls .alert_disp{
+    background-color: RGBA(0,0,0,0.75);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: -webkit-box;
+    -webkit-box-align: start;
+    -webkit-box-pack: center;
+}
+.alert_cls .alert_disp .text{
+    margin-top: 100px;
+    padding: 10px;
+    background-color: RGBA(100,100,100,0.5);
+    -webkit-border-radius: 10px;
+    color: #FFF;
+    font-size: 20px;
+    text-align: center;
+    line-height: 1.2em;
+}
+
+.browser_alert_cls{
+    display:none;
+}
+.browser_alert_cls .alert_disp{
+    background-color: RGBA(0,0,0,0.75);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: -webkit-box;
+    -webkit-box-align: start;
+    -webkit-box-pack: center;
+}
+.browser_alert_cls .alert_disp .text{
+    margin-top: 100px;
+    padding: 10px;
+    background-color: RGBA(100,100,100,0.5);
+    -webkit-border-radius: 10px;
+    color: #FFF;
+    font-size: 20px;
+    text-align: center;
+    line-height: 1.2em;
+}
+
+.error_cls{
+    display:none;
+}
+.error_cls .alert_disp{
+    background-color: RGBA(0,0,0,0.75);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: -webkit-box;
+    -webkit-box-align: start;
+    -webkit-box-pack: center;
+}
+.error_cls .alert_disp .text{
+    margin-top: 100px;
+    padding: 10px;
+    background-color: RGBA(100,100,100,0.5);
+    -webkit-border-radius: 10px;
+    color: #FFF;
+    font-size: 20px;
+    text-align: center;
+    line-height: 1.2em;
+}
+
+/*一键登录*/
+.pengpengDownloadBox{width: 100%;-webkit-user-select: none;}
+.pengpengDownload{position:relative; background: #FFFFFF;border-radius: 5px;padding: 0 0 20px 0;margin: 0 10px;}
+.pengpengDownloadTitle{height: 40px;line-height: 40px;position: relative;padding: 15px 10px 10px 58px;color: #555555;font-weight: bold;border-bottom: 1px solid #E5E5E5;background: #e6e6e6;border-top-left-radius: 5px;}
+.pengpengDownloadTitle img{height: 40px;line-height: 40px;position: absolute;left: 10px;top: 15px;}
+.pengpengDownloadstep{height: 30px;line-height: 30px;margin-top: 8px;text-align: center;color: #CCCCCC;font-size: 17px;font-weight: bold;}
+.pengpengDownloadDESC{height: 20px;line-height: 20px;color: #999999;padding: 0 0 10px 10px;}
+.pengpengDownloadDESCIcon{height: 21px;width: 31px;display: inline-block;vertical-align: -webkit-baseline-middle;background: url("http://f.qcloudcos.com/1000401/game/html5/images/pengpengDownloadDESCIcon.png") 0 0 no-repeat;background-size: 100% 100%;}
+.pengpengDownloadToken{background: #404040;padding: 15px 30px;margin: 0 10px;border-radius: 5px;word-break:break-all;word-wrap:break-word;color: #757575;font-size: 16px;font-weight: bold;-webkit-user-select: auto;}
+.pengpengDownloadBut{margin: 0 10px 10px 10px;height: 36px;line-height: 36px;text-align: center;color: #FFFFFF;background: #F57418;border-radius: 5px;}
+.pengpengDownloadButOn{background: #1A1A1A;color: #757575;}
+.pengpengDownloadPrompt{height: 22px;line-height: 22px;text-align: center;font-size: 15px;color: #999999;}
+.pop_w{position:fixed; left:0; top:0; background-color:rgba(0, 0, 0, 0.7);width: 100%;height: 100%; display: -webkit-box; -webkit-box-align: center; -webkit-box-pack: center;-webkit-user-select: none; z-index:5;}
+.pop_w .close{position:absolute; right:-10px; top:-10px; width:27px; height:27px; background:url('img/onebtnloginclose.png') no-repeat; background-size:27px 27px;}
+
+/*topbanner*/
+.topbanner{
+	position: absolute;
+	left : 0px;
+	z-index:4;
+	top : 0px;
+}
+.newPengpengDesc{position: absolute;bottom: 0;left: 15%;color: #999;font-size: 15px;height: 24px;line-height: 24px;}
+.newPengpengNo{color: #eb6100;}
+

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>2 Ways</title>
+    <link rel="stylesheet" href="src/styles.css" type="text/css" charset="utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="screen-orientation" content="portrait">
+</head>
+
+<body>
+    <div id="orientation"></div>
+    <div id="gameRule">
+        <h1>规则及玩法</h1>
+    </div>
+    <div id="testForm">
+        <div id="formwapper">
+            <div id="form-box">
+                <img src="./res/med/yuyue.png" alt="预约试驾">
+                <div class="form-control">姓　名<input type="text" class="input" id="name" placeholder="请输入您的姓名"></div>
+                <div class="form-control">手机号 <input type="tel" class="input" id="mobile" placeholder="请输入正确的手机号码"></div>
+                <div class="form-control btn-group"><button type="submit">提交</button><button type="button" id="cancel">取消</button></div>
+            </div>
+        </div>
+    </div>
+    <canvas id="gameCanvas"></canvas>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/play68_sdk.js"></script>
+    <script type="text/javascript" src="js/play68.js"></script>
+    <script type="text/javascript">
+    (function() {
+        updateShare(0);
+    })();
+    var shareUrl = ""
+    Play68.set_share_url(shareUrl)
+    window.gameLangs = ['en', 'de', 'es', 'fr', 'it', 'pt', 'ru', 'tr', 'th'];
+    window.gameJS = ['softgames_game.js'];
+    window.gameOnLoadScript = "initSoftgames()";
+    window.onload = updateShare(0);
+    </script>
+    <script type="text/javascript" src="./assets/softgames-1.1.js"></script>
+    <script type="text/javascript" src="./assets/sg.hooks.js"></script>
+</body>
+
+</html>

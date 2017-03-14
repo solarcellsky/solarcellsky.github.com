@@ -1,0 +1,662 @@
+body,
+div,
+ol,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+th,
+td,
+dl,
+dd,
+form,
+iframe,
+input,
+textarea,
+select,
+label,
+article,
+aside,
+footer,
+header,
+menu,
+nav,
+section,
+time,
+audio,
+video {
+    margin: 0;
+    padding: 0
+}
+
+article,
+aside,
+footer,
+header,
+hgroup,
+nav,
+section,
+audio,
+canvas,
+video {
+    display: block
+}
+
+body {
+    font-size: 100%;
+    font-family: Helvetica, STHeiti, Droid\ Sans\ Fallback;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+}
+
+textarea {
+    resize: none
+}
+
+iframe,
+img {
+    border: 0
+}
+
+ul,
+ol,
+ul li {
+    list-style: none
+}
+
+input,
+select,
+textarea {
+    outline: 0;
+    -webkit-user-modify: read-write-plaintext-only
+}
+
+input {
+    -webkit-appearance: none
+}
+
+a {
+    text-decoration: none
+}
+
+.cf:after {
+    content: "";
+    display: table;
+    clear: both
+}
+
+.cf {
+    *zoom: 1
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 100
+}
+
+i {
+    font-style: normal
+}
+
+body,
+html {
+    background: #362e2b;
+    overflow: hidden;
+    color: #fff
+}
+
+.global {
+    clip: rect(100px, 100px, 100px, 100%);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    -webkit-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: all 1.0s ease-in-out;
+    z-index: 2
+}
+
+.screen {
+    -webkit-transform-style: preserve-3d;
+    position: absolute;
+    left: 0;
+    top: 0
+}
+
+.loadPage,
+.layout {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(imgs/bg.jpg) no-repeat;
+    background-size: cover
+}
+
+.load {
+    position: relative;
+    width: 90%;
+    height: 50%;
+    top: 25%;
+    margin: 0 auto
+}
+
+.load-icon {
+    position: relative;
+    width: 100%;
+    margin: 0 auto 6%;
+    -webkit-animation: circle 1s linear infinite
+}
+
+.load-icon img {
+    width: 100%;
+    height: auto
+}
+
+.loadbox {
+    position: relative;
+    width: 76%;
+    height: 28px;
+    margin: 0 auto;
+    background: url(imgs/process_box.png);
+    background-size: 100% 100%
+}
+
+.loadbar {
+    position: relative;
+    left: -1%;
+    top: 1px;
+    height: 26px;
+    width: 1%;
+    background: url(imgs/process.png) no-repeat scroll right top;
+    background-size: auto 120%;
+    border-radius: 20px
+}
+
+.tencent {
+    position: absolute;
+    bottom: 22%;
+    left: 0;
+    width: 100%;
+    text-align: center
+}
+
+.tencent img {
+    width: 100%;
+    height: auto
+}
+
+.layout {
+    display: none
+}
+
+.inner {
+    text-align: center;
+    color: #000
+}
+
+.layout.animate {
+    display: block;
+    -webkit-animation: fadeIn 1s ease both
+}
+
+.fm {
+    position: relative;
+    top: 11%;
+    width: 100%;
+    height: 72%;
+    background: url(imgs/dn.png) no-repeat scroll center top;
+    background-size: auto 100%
+}
+
+.fm .logo,
+.fm .blind,
+.fm .text {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%
+}
+
+.fm .logo {
+    background: url(imgs/logo.png) no-repeat scroll center top;
+    background-size: auto 51.5%;
+    top: -2%
+}
+
+.fm .blind {
+    background: url(imgs/b.png) no-repeat scroll center top;
+    background-size: auto 100%
+}
+
+.fm .text {
+    background: url(imgs/text.png) no-repeat scroll center top;
+    background-size: auto 24.5%;
+    top: 57%
+}
+
+.animate .fm .logo {
+    -webkit-animation: bounceIn .6s ease both
+}
+
+.animate .fm .text {
+    -webkit-animation: fadeIn .6s .6s ease both
+}
+
+.animate .blind {
+    -webkit-animation: flash 1s ease both
+}
+
+.sm,
+.sm .blind {
+    position: relative;
+    top: 11%;
+    height: 57%;
+    width: 100%;
+    background: url(imgs/sm.png) no-repeat scroll center top;
+    background-size: auto 100%
+}
+
+.sm .blind {
+    top: 0;
+    background-image: url(imgs/sm_b.png);
+    height: 100%
+}
+
+.btn.start {
+    position: absolute;
+    bottom: 16%;
+    left: 0;
+    width: 100%;
+    height: 12%;
+    background: url(imgs/btn_zn.png) no-repeat scroll center top;
+    background-size: auto 100%
+}
+
+.btn.start.down {
+    background-image: url(imgs/btn_zn_d.png)
+}
+
+.topicWrap {
+    position: relative;
+    display: inline-block;
+    top: 11%;
+    height: 70%
+}
+
+.topicWrap .topicBg {
+    height: 100%;
+    width: auto;
+    display: block
+}
+
+.topicWrap .time {
+    position: absolute;
+    left: 21%;
+    top: 9%;
+    font-size: 1.2em;
+    width: 8%;
+    text-align: center;
+    color: #000
+}
+
+.topicWrap .reflash {
+    position: absolute;
+    top: 6%;
+    height: 11.5%;
+    background: url(imgs/btn_refresh.png) no-repeat scroll right top;
+    background-size: auto 100%;
+    width: 14%;
+    display: block;
+    z-index: 99;
+    right: 6%
+}
+
+.topicWrap .reflash.down {
+    background-image: url(imgs/btn_refresh_d.png)
+}
+
+.processWrap {
+    width: 39.5%;
+    height: 4%;
+    position: absolute;
+    text-align: center;
+    left: 37%;
+    top: 9.5%
+}
+
+.processWrap .processBox {
+    height: 100%;
+    width: 100%;
+    background: url(imgs/topic_proBox.png) no-repeat scroll center top;
+    background-size: 100% 100%;
+    border-radius: 16px;
+    overflow: hidden
+}
+
+.processWrap .process {
+    width: 0;
+    height: 100%;
+    background: url(imgs/topic_pro.png) no-repeat scroll left top;
+    display: block;
+    background-size: 100% 100%
+}
+
+.processWrap .proportion {
+    padding-top: 1%;
+    font-size: .825em
+}
+
+.topics {
+    position: absolute;
+    top: 19%;
+    height: 74%;
+    width: 90%;
+    left: 6%;
+    overflow: hidden
+}
+
+.topics h2 {
+    font-size: .825em;
+    height: 6%;
+    line-height: 1em;
+    overflow: hidden
+}
+
+.topics .bd {
+    height: 90%;
+    display: block;
+    overflow: hidden
+}
+
+.piclist {
+    position: relative;
+    height: 100%
+}
+
+.piclist li {
+    width: 33%;
+    height: 33%;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius: 0 0 20%;
+    float: left;
+    text-align: center
+}
+
+.six .piclist li {
+    height: 50%
+}
+
+.piclist li img {
+    width: auto;
+    height: 98%;
+    display: inline-block;
+    border: 2px solid #000;
+    border-radius: 0 0 20% 0;
+    top: 0
+}
+
+.piclist li.select:before,
+.piclist li.right:after,
+.piclist li.wrong:after,
+.piclist li.miss:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: no-repeat scroll center center;
+    background-size: auto 60%;
+    content: " "
+}
+
+.piclist li.select:before {
+    background: rgba(0, 0, 0, .5)
+}
+
+.piclist li.right:after {
+    background-image: url(imgs/r.png)
+}
+
+.piclist li.wrong:after {
+    background-image: url(imgs/w.png)
+}
+
+.piclist li.miss:after {
+    background-image: url(imgs/m.png)
+}
+
+.piclist li.miss:after {
+    -webkit-animation: flash 1s ease both
+}
+
+.submit {
+    background: url(imgs/btn_submit.png) no-repeat scroll center top;
+    height: 13%;
+    display: block;
+    background-size: auto 100%;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 93%
+}
+
+.submit.down {
+    background-image: url(imgs/btn_submit_d.png)
+}
+
+.resultwrap {
+    height: 75%;
+    position: relative;
+    top: 10%;
+    width: 100%;
+    text-align: center
+}
+
+.result {
+    height: 100%;
+    width: auto;
+    display: inline-block;
+    position: relative
+}
+
+.result .pass {
+    height: 39%;
+    width: auto;
+    display: inline-block;
+    position: relative
+}
+
+.result .pass img {
+    height: 100%;
+    width: auto
+}
+
+.result .passNum,
+.result .passPer {
+    position: absolute;
+    left: 5%;
+    display: table;
+    text-align: center
+}
+
+.result .passNum {
+    top: 41%;
+    font-size: 2em;
+    line-height: 1em;
+    width: 17%;
+    height: 25%
+}
+
+.result .passPer {
+    top: 70%;
+    width: 27%;
+    font-size: .825em;
+    line-height: 1em;
+    height: 24%
+}
+
+.result .passNum p,
+.result .passPer p {
+    display: table-cell;
+    vertical-align: middle
+}
+
+.result .info {
+    background: url(imgs/piao.png) no-repeat scroll left top;
+    background-size: auto 100%;
+    height: 48%;
+    width: 100%;
+    display: table;
+    position: absolute;
+    top: 38%;
+    left: 0
+}
+
+.result .info p {
+    padding: 0 18% 14% 7%;
+    text-align: left;
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 1em
+}
+
+.btnWrap {
+    height: 13%;
+    width: 100%;
+    position: absolute;
+    bottom: 0
+}
+
+.reStart {
+    background: url(imgs/btn_restart.png) no-repeat scroll left top;
+    height: 100%;
+    background-size: auto 100%;
+    width: 50%;
+    display: inline-block;
+    left: 5%
+}
+
+.reStart.down {
+    background-image: url(imgs/btn_restart_d.png)
+}
+
+.share_btn {
+    background: url(imgs/btn_share.png) no-repeat scroll right top;
+    height: 100%;
+    background-size: auto 100%;
+    width: 50%;
+    display: inline-block
+}
+
+.share_btn.down {
+    background-image: url(imgs/btn_share_d.png)
+}
+
+.producer {
+    bottom: 6%;
+    position: absolute;
+    text-align: center;
+    color: #d2d2d2;
+    font-size: 1em;
+    width: 100%
+}
+
+.producer span {
+    padding-right: 10px;
+    font-size: .825em
+}
+
+.time_layout {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url(imgs/sxsm.png) no-repeat scroll top center;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-size: auto 100%;
+    display: none
+}
+
+.weixin_layout {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url(imgs/wx_share.png) no-repeat;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-size: cover;
+    display: none
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes flash {
+    0%,
+    50%,
+    100% {
+        opacity: 1
+    }
+    25%,
+    75% {
+        opacity: 0
+    }
+}
+
+@-webkit-keyframes bounceIn {
+    0%,
+    20%,
+    40%,
+    60%,
+    80%,
+    100% {
+        -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000)
+    }
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(.3, .3, .3);
+        transform: scale3d(.3, .3, .3)
+    }
+    20% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1);
+        transform: scale3d(1.1, 1.1, 1.1)
+    }
+    40% {
+        -webkit-transform: scale3d(.9, .9, .9);
+        transform: scale3d(.9, .9, .9)
+    }
+    60% {
+        opacity: 1;
+        -webkit-transform: scale3d(1.03, 1.03, 1.03);
+        transform: scale3d(1.03, 1.03, 1.03)
+    }
+    80% {
+        -webkit-transform: scale3d(.97, .97, .97);
+        transform: scale3d(.97, .97, .97)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1)
+    }
+}

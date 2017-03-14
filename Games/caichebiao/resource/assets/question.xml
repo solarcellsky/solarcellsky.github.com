@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+	<easy>
+		<item pic="e1" answer='1'>
+			<option>奥迪</option>
+			<option>奔驰</option>
+			<option>奥迪双冠</option>
+		</item>
+		<item pic="e2" answer='2'>
+			<option>别摸我</option>
+			<option>宝马</option>
+			<option>大众</option>
+		</item>
+		<item pic="e3" answer='3'>
+			<option>宾尼</option>
+			<option>劳斯莱斯</option>
+			<option>宾利</option>
+		</item>
+		<item pic="e4" answer='2'>
+			<option>帕萨特</option>
+			<option>大众</option>
+			<option>桑塔纳</option>
+		</item>
+		<item pic="e5" answer='1'>
+			<option>法拉利</option>
+			<option>迈巴赫</option>
+			<option>兰博基尼</option>
+		</item>
+		<item pic="e6" answer='1'>
+			<option>劳斯莱斯</option>
+			<option>法拉利</option>
+			<option>宾利</option>
+		</item>
+		<item pic="e7" answer='2'>
+			<option>红牛</option>
+			<option>玛莎拉蒂</option>
+			<option>阿斯顿马丁</option>
+		</item>
+		<item pic="e8" answer='3'>
+			<option>斯巴鲁</option>
+			<option>阿斯顿马丁</option>
+			<option>英菲尼迪</option>
+		</item>
+		<item pic="e9" answer='3'>
+			<option>斯巴鲁</option>
+			<option>雪佛兰</option>
+			<option>菲亚特</option>
+		</item>
+		<item pic="e10" answer='2'>
+			<option>福德</option>
+			<option>福特</option>
+			<option>福克斯</option>
+		</item>
+		<item pic="e11" answer='1'>
+			<option>捷豹</option>
+			<option>捷虎</option>
+			<option>捷狮</option>
+		</item>
+		<item pic="e12" answer='3'>
+			<option>斯巴酷</option>
+			<option>斯巴达</option>
+			<option>斯巴鲁</option>
+		</item>
+		<item pic="e13" answer='2'>
+			<option>东风</option>
+			<option>雪佛兰</option>
+			<option>福特</option>
+		</item>
+		<item pic="e14" answer='1'>
+			<option>斯柯达</option>
+			<option>大众</option>
+			<option>斯巴鲁</option>
+		</item>
+		<item pic="e15" answer='2'>
+			<option>本田</option>
+			<option>丰田</option>
+			<option>现代</option>
+		</item>
+		<item pic="e16" answer='3'>
+			<option>兰博基尼</option>
+			<option>玛莎拉蒂</option>
+			<option>凯迪拉克</option>
+		</item>
+		<item pic="e17" answer='1'>
+			<option>雷克萨斯</option>
+			<option>福特</option>
+			<option>克莱斯勒</option>
+		</item>
+		<item pic="e18" answer='2'>
+			<option>雷克萨斯</option>
+			<option>克莱斯勒</option>
+			<option>劳斯莱斯</option>
+		</item>
+		<item pic="e19" answer='3'>
+			<option>特威尔</option>
+			<option>菲亚特</option>
+			<option>特斯拉</option>
+		</item>
+		<item pic="e20" answer='3'>
+			<option>丰田</option>
+			<option>本田</option>
+			<option>别克</option>
+		</item>
+		<item pic="e21" answer='1'>
+			<option>三菱</option>
+			<option>本田</option>
+			<option>大众</option>
+		</item>
+		<item pic="e22" answer='2'>
+			<option>现代</option>
+			<option>雪铁龙</option>
+			<option>标致</option>
+		</item>
+		<item pic="e23" answer='3'>
+			<option>雪佛兰</option>
+			<option>雪铁龙</option>
+			<option>标致</option>
+		</item>
+		<item pic="e24" answer='1'>
+			<option>马自达</option>
+			<option>标致</option>
+			<option>讴歌</option>
+		</item>
+		<item pic="e25" answer='2'>
+			<option>宾利</option>
+			<option>林肯</option>
+			<option>凯迪拉克</option>
+		</item>
+		<item pic='e26' answer='2'>
+			<option>凤凰</option>
+			<option>永久</option>
+			<option>飞鸽</option>
+		</item>
+	</easy>
+	<hard>
+		<item pic="h1" answer='3'>
+			<option>奥古斯特·霍希</option>
+			<option>阿斯顿马丁</option>
+			<option>阿尔法·罗密欧</option>
+		</item>
+		<item pic="h2" answer='1'>
+			<option>阿斯顿马丁</option>
+			<option>奥古斯特·霍希</option>
+			<option>迈巴赫</option>
+		</item>
+		<item pic="h3" answer='2'>
+			<option>玛莎拉蒂</option>
+			<option>奥古斯特·霍希</option>
+			<option>兰博基尼</option>
+		</item>
+		<item pic="h4" answer='2'>
+			<option>兰博基尼</option>
+			<option>布加迪威龙</option>
+			<option>英菲尼迪</option>
+		</item>
+		<item pic="h5" answer='3'>
+			<option>帕加尼</option>
+			<option>斯巴鲁</option>
+			<option>克尔维特</option>
+		</item>
+		<item pic="h6" answer='1'>
+			<option>兰博基尼</option>
+			<option>玛莎拉蒂</option>
+			<option>布加迪威龙</option>
+		</item>
+		<item pic="h7" answer='1'>
+			<option>莲花</option>
+			<option>福特</option>
+			<option>世爵</option>
+		</item>
+		<item pic="h8" answer='2'>
+			<option>菲亚特</option>
+			<option>迈巴赫</option>
+			<option>斯巴鲁</option>
+		</item>
+		<item pic="h9" answer='3'>
+			<option>特威尔</option>
+			<option>威丝曼</option>
+			<option>帕加尼</option>
+		</item>
+		<item pic="h10" answer='1'>
+			<option>世爵</option>
+			<option>莲花</option>
+			<option>西贝尔</option>
+		</item>
+		<item pic="h11" answer='2'>
+			<option>布加迪威龙</option>
+			<option>特威尔</option>
+			<option>威丝曼</option>
+		</item>
+		<item pic="h12" answer='2'>
+			<option>阿尔法·罗密欧</option>
+			<option>威丝曼</option>
+			<option>阿斯顿马丁</option>
+		</item>
+		<item pic="h13" answer='3'>
+			<option>帕加尼</option>
+			<option>威丝曼</option>
+			<option>西贝尔</option>
+		</item>
+		<item pic="h14" answer='1'>
+			<option>科尼塞克</option>
+			<option>阿尔法·罗密欧</option>
+			<option>布加迪威龙</option>
+		</item>
+		<item pic="h15" answer='3'>
+			<option>捷豹</option>
+			<option>悍马</option>
+			<option>道奇</option>
+		</item>
+		<item pic="h16" answer='2'>
+			<option>奥古斯特·霍希</option>
+			<option>梅尔库斯</option>
+			<option>威丝曼</option>
+		</item>
+		<item pic="h17" answer='2'>
+			<option>英菲尼迪</option>
+			<option>讴歌</option>
+			<option>斯巴鲁</option>
+		</item>
+		<item pic="h18" answer='3'>
+			<option>迈巴赫</option>
+			<option>阿斯顿马丁</option>
+			<option>迈凯伦</option>
+		</item>
+		<item pic="h19" answer='1'>
+			<option>雷诺</option>
+			<option>捷豹</option>
+			<option>世爵</option>
+		</item>
+		<item pic="h20" answer='3'>
+			<option>甲壳虫</option>
+			<option>MINI</option>
+			<option>Smart</option>
+		</item>
+
+	</hard>
+</list>

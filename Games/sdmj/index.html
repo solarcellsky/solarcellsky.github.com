@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta name="x-key" content="4d8806e1e3367ddc4946d37d32ae0ddf">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0" />
+    <title>圣诞母鸡</title>
+    <script type="text/javascript" src="js/play68.js"></script>
+    <link type="text/css" href="css/common.css" rel="stylesheet" />
+    <link href="css/gamef.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="css/rank.css" />
+    <link rel="stylesheet" href="css/game.css" />
+    <script src="js/pupuxing.watercover.min.js?v=1"></script>
+    <script src="js/gamef.js?v=1"></script>
+    <style>
+    body,
+    html {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        -webkit-tap-highlight-color: transparent;
+    }
+    
+    body {
+        background: rgb(255, 247, 26);
+        /*background-image: url(images/14.png);*/
+        /*background-repeat: repeat-x;*/
+        /*background-size: 100% 100%;*/
+    }
+    
+    canvas {
+        width: 100%;
+        height: 100%;
+    }
+    
+    #container {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <canvas id="canvas"></canvas>
+    </div>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="js/createjs-2013.12.12.min.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/gamef.js?v=1"></script>
+    <script type="text/javascript" src="js/index.js?v=2"></script>
+    <script src="js/jqMethod.js"></script>
+    <script type="text/javascript">
+    $(function() {
+
+        window.gamef = new GameF();
+        window.bodyHeight, window.bodyWidth;
+        window.divheight, window.divwidth;
+        window.onload = function() {
+            // alert("gameid:"+gamef.gameid+"\nkey:"+gamef.key+"\nopen_id:"+gamef.open_id+"\nmyKey:"+gamef.myKey);
+            window.divwidth = $("#main-mask").width();
+            window.divheight = $("#main-mask").height();
+            window.bodyWidth = document.body.clientWidth;
+            window.bodyHeight = document.body.clientHeight;
+        };
+        window.onresize = function() {
+            if (window.bodyHeight > document.body.clientHeight) {
+                $('#main-mask').css({
+                    marginTop: "-30%"
+                });
+            } else {
+                $('#main-mask').css({
+                    marginTop: "0"
+                });
+            }
+        }
+
+        Main.initStage();
+        btGame.resizeArea($("#gl-con"), Main.width, Main.height, "100%", "center");
+        btGame.resizeArea($("#prize-con"), Main.width, Main.height, "100%", "center");
+        btGame.resizeArea($("#main-mask"), Main.width, Main.height, "0%", "center");
+        btGame.resizeArea($("prize-mask"), Main.width, Main.height, "0%", "center");
+
+        $("#container").bind("click", function(event) {
+            event.preventDefault();
+            event.stopPropagation();
+        });
+        $("#canvas").bind("click", function(event) {
+            event.preventDefault();
+            event.stopPropagation();
+        });
+        $("#main-mask").bind("click", function(event) {
+            event.preventDefault();
+            event.stopPropagation();
+        });
+
+        $("#a_btn_share").unbind('click').bind('click', function(event) {
+            JQMethod.messageBox_close();
+            gamef.share();
+            event.stopPropagation();
+        });
+
+        $(".btn_a_close,.btn_a_close_1").unbind('click').bind('click', function(event) {
+            JQMethod.messageBox_close();
+            event.stopPropagation();
+        });
+    });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+﻿<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>小学生数学题，看看你能答对几题</title>
+    <meta name="x-id" content="982">
+    <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="full-screen" content="true" />
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-fullscreen" content="true" />
+    <meta name="360-fullscreen" content="true" />
+    <style>
+    body {
+        text-align: center;
+        background: #000000;
+        padding: 0;
+        border: 0;
+        margin: 0;
+        height: 100%;
+    }
+    
+    html {
+        -ms-touch-action: none;
+        /* Direct all pointer events to JavaScript code. */
+        overflow: hidden;
+    }
+    
+    canvas {
+        display: block;
+        position: absolute;
+        margin: 0 auto;
+        padding: 0;
+        border: 0;
+    }
+    </style>
+    <script type="text/javascript">
+    var haveShare = 1;
+    var haveGamelist = 1;
+
+    function cb_start() {
+
+    }
+
+    function cb_gameover(score) {
+        dp_submitScore(score);
+    }
+
+    function cb_finishload() {
+
+    }
+
+    function cb_restart() {
+
+    }
+
+    function cb_share() {
+        dp_share();
+    }
+
+    function cb_more() {
+        clickMore();
+    }
+    </script>
+</head>
+
+<body>
+    <div id='wx_pic' style='margin:0 auto;display:none;'>
+        <img src='300.png' />
+    </div>
+    <script src="meiriq_loading.js"></script>
+    <div style="position:relative;" id="gameDiv"></div>
+    <script>
+    var document_class = "Main";
+    </script>
+    <script src="launcher/egret_require.js"></script>
+    <script src="launcher/egret_loader.js"></script>
+    <script src="launcher/encode.js"></script>
+    <script src="launcher/game-min.js?v1.0"></script>
+    <script>
+    var support = [].map && document.createElement("canvas").getContext;
+    egret_h5.startGame();
+
+    function start() {
+        window["shit"].call(window["context"]);
+    }
+
+    function pause() {
+        allPause();
+    }
+
+    function resume() {
+        allResume();
+    }
+    </script>
+    <script language=javascript>
+    function goHome() {
+        window.location = game9g.homeurl;
+    }
+
+    function clickMore() {
+        window.location = "#"
+    }
+
+    function dp_share() {
+        showmask()
+    }
+
+    function dp_Ranking() {
+        window.location = game9g.homeurl;
+    }
+
+    function showAd() {}
+
+    function hideAd() {}
+
+    function dp_submitScore(score) {
+        if (score > 0) {;
+            shareti("简单到爆的小学数学题，我答对了" + score + "题，你能答对几题？？？");
+        }
+    }
+    </script>
+    <script src="http://js.nblec.com/tj0.js"></script> 
+</body>
+
+</html>

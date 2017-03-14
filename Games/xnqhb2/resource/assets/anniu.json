@@ -1,0 +1,20 @@
+﻿{
+"res":{
+	"down0000": {"x":20,"y":20,"w":284,"h":254},
+	"up0000": {"x":20,"y":294,"w":284,"h":254}
+},
+"frames": {
+	"down": {
+		"totalFrame": 1,
+		"childrenFrame": [
+			{"res":"down0000","x":-142,"y":-127}
+		]
+	},
+	"up": {
+		"totalFrame": 1,
+		"childrenFrame": [
+			{"res":"up0000","x":-142,"y":-127}
+		]
+	}
+}
+}

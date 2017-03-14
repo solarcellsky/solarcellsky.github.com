@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1,user-scalable=no"/>
+    <meta content="true" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta name="HandheldFriendly" content="true" />
+    <title>女王，再打我一次</title>
+	<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+	<script type="text/javascript" src="js/jweixin-1.0.0.js"></script>
+	<script type="text/javascript" src="js/util.js"></script>
+	<script type="text/javascript" src="js/weixin.js"></script>
+    <script src="js/easeljs-0.8.1.min.js"></script>
+    <script src="js/tweenjs-0.6.1.min.js"></script>
+    <script src="js/movieclip-0.8.1.min.js"></script>
+    <script src="js/preloadjs-0.6.1.min.js"></script>
+    <script src="js/soundjs-0.6.1.min.js"></script>
+
+    <script src="js/loading.js"></script>
+    <script src="js/sDev.js"></script>
+
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+        .img{
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .ewm{
+            position: absolute;
+            top: 250px;
+            padding-top: 200px;
+            padding-left: 170px;
+        }
+
+        .warp{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 640px;
+            height: 1030px;
+            background-color: rgba(0,0,0,0.6);
+        }
+
+        .warp2{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 640px;
+            height: 1030px;
+            background-color: rgba(0,0,0,0.6);
+        }
+
+        .fzkl{
+            position: relative;
+            width: 560px;
+            height: 250px;
+            top: 390px;
+            left: 40px;
+            background-color: #fff;
+            color: #000;
+        }
+        .fzkl p{
+            text-align: center;
+            font-size: 26px;
+            line-height: 36px;
+            padding: 40px 20px;
+        }
+        .close{
+            position: absolute;
+            top: 660px;
+            left: 241.5px;
+        }
+    </style>
+
+</head>
+<body onload="init();" style="background-color:#784512">
+
+<script type="text/javascript">
+    function set_meta(){
+        var body_width = document.documentElement.clientWidth;
+        var get_scale = (body_width)/640;
+        console.log(get_scale);
+        var get_content = "width=device-width, initial-scale="+get_scale+", minimum-scale="+get_scale+", maximum-scale="+get_scale + ", user-scalable=no";
+        document.getElementById("viewport").setAttribute('content',get_content);
+    }
+    set_meta();
+</script>
+
+<div class="warp" style="display: none">
+    <img src="images/close.png" class="close">
+    <div class="fzkl">
+        <p>使用￥三月女王节50元现金优惠券￥抢先预览（长按复制整段文案，打开手机淘宝即可进入活动内容）</p>
+    </div>
+</div>
+
+<div class="warp2" style="display: none">
+    <img src="images/close.png" class="close">
+    <div class="fzkl">
+        <p>使用￥奖品付邮领取￥抢先预览（长按复制整段文案，打开手机淘宝即可进入活动内容）</p>
+    </div>
+</div>
+
+<div id="soundDiv">
+    <audio src="sounds/bg.mp3" id="audio" autoplay loop ></audio>
+</div>
+
+
+<img src="images/s1.png" class="img" id="tb">
+<!-- <img src="images/ewm.png" class="ewm" id="ewm"> -->
+<script src="js/zepto.min.js"></script>
+<script>
+    $(".img").on("click",function(){
+        if(audio.paused){
+            $(".img").attr("src","images/s1.png");
+            audio.play();
+            isSound = true;
+            return;
+        }
+        isSound = false;
+        audio.pause();
+        $(".img").attr("src","images/s2.png");
+    })
+
+    document.getElementById("soundDiv").style.display = "none";
+
+
+    function shareTxt(score)
+    {
+        try{
+            descContent = "我已成功调教"+ score +"名男人荣升三月女王，打败了全国" + Math.floor((score/130)*100)  + "%的人，你呢？";
+        }catch(e){}
+
+        //alert("shareTxt");
+    }
+
+    function showCmd(){
+        $(".warp").show();
+    }
+
+    function showCmd2(){
+        $(".warp2").show();
+    }
+
+    $(".close").on("click",function(){
+        window.scrollTo(0,0);
+        $(".warp").hide();
+        $(".warp2").hide();
+    });
+
+   // alert(runInit);
+
+    setTimeout(function(){
+        if(runInit == false || runInit == undefined || runInit == null)
+        {
+            init();
+        }},1000)
+</script>
+<canvas id="canvas" width="640" height="1030" style="background-color:#ffd18f"></canvas>
+
+</body>
+</html>

@@ -1,0 +1,1 @@
+define("assets/js/loader",["require","./pixi"],function(require){var t=require("./pixi"),e=t.loader;return e.add("bg","assets/img/bg.jpg"),e.load(),e});

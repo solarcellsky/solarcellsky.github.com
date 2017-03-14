@@ -1,0 +1,19 @@
+{
+    "debugMode"     : 1,
+    "frameRate"     : 60,
+    "id"            : "gameCanvas",
+    "renderMode"    : 1,
+    "showFPS"       : false,
+    "jsList"        : [
+        "src/Utility.js",
+        "src/Resources.js",
+        "src/Globals.js",
+        "src/MyLoaderScene.js",
+        "src/Classes/BasketBall.js",
+        "src/Classes/Net.js",
+        "src/Classes/GameManage.js",
+        "src/IndexScene.js",
+        "src/GameScene.js",
+        "src/GameOver.js"
+    ]
+}

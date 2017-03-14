@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<font>
+  <info face="Cartwheel" size="128" bold="0" italic="0" charset="" unicode="1" stretchH="100" smooth="1" aa="1" padding="0,0,0,0" spacing="1,1" outline="8"/>
+  <common lineHeight="128" base="112" scaleW="512" scaleH="512" pages="1" packed="0" alphaChnl="1" redChnl="0" greenChnl="0" blueChnl="0"/>
+  <pages>
+    <page id="0" file="Cartwheel-numbers-squared_0.png" />
+  </pages>
+  <chars count="14">
+    <char id="32" x="448" y="145" width="54" height="144" xoffset="-8" yoffset="-8" xadvance="38" page="0" chnl="15" />
+    <char id="48" x="0" y="0" width="84" height="144" xoffset="-8" yoffset="-8" xadvance="68" page="0" chnl="15" />
+    <char id="49" x="389" y="145" width="58" height="144" xoffset="-8" yoffset="-8" xadvance="42" page="0" chnl="15" />
+    <char id="50" x="255" y="0" width="81" height="144" xoffset="-8" yoffset="-8" xadvance="65" page="0" chnl="15" />
+    <char id="51" x="314" y="145" width="74" height="144" xoffset="-8" yoffset="-8" xadvance="58" page="0" chnl="15" />
+    <char id="52" x="337" y="0" width="80" height="144" xoffset="-8" yoffset="-8" xadvance="64" page="0" chnl="15" />
+    <char id="53" x="85" y="0" width="84" height="144" xoffset="-8" yoffset="-8" xadvance="68" page="0" chnl="15" />
+    <char id="54" x="418" y="0" width="80" height="144" xoffset="-8" yoffset="-8" xadvance="64" page="0" chnl="15" />
+    <char id="55" x="160" y="145" width="76" height="144" xoffset="-8" yoffset="-8" xadvance="60" page="0" chnl="15" />
+    <char id="56" x="81" y="145" width="78" height="144" xoffset="-8" yoffset="-8" xadvance="62" page="0" chnl="15" />
+    <char id="57" x="0" y="145" width="80" height="144" xoffset="-8" yoffset="-8" xadvance="64" page="0" chnl="15" />
+    <char id="58" x="0" y="290" width="38" height="144" xoffset="-8" yoffset="-8" xadvance="22" page="0" chnl="15" />
+    <char id="8211" x="237" y="145" width="76" height="144" xoffset="-8" yoffset="-8" xadvance="60" page="0" chnl="15" />
+    <char id="8212" x="170" y="0" width="84" height="144" xoffset="-8" yoffset="-8" xadvance="68" page="0" chnl="15" />
+  </chars>
+  <kernings count="4">
+    <kerning first="51" second="54" amount="3" />
+    <kerning first="57" second="48" amount="1" />
+    <kerning first="48" second="55" amount="-3" />
+    <kerning first="48" second="54" amount="1" />
+  </kernings>
+</font>

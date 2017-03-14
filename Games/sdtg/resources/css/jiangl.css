@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* CSS Document */
+body{ font-family:"Arial, Helvetica, "Microsoft Yahei", "微软雅黑", STXihei, "华文细黑", sans-serif;";  }
+
+.jiangl{ position:relative; width:100%; top:0px;background-color:rgba(0,0,0,0.75);}
+.jiangl1{ position:fixed;width:100%;  top:0;  background:#F00;  min-width:320px; z-index:99999; top:0px; background-color:rgba(0,0,0,0.75); z-index:9999;}
+.jiangl1_a{ width:100%; position:relative;margin:auto; max-width:640px; height:auto; -webkit-border-radius:21px; z-index:999; text-align:center; padding:1% 0;font-size:20pt; color:#c7c7c7; font-family:"微软雅黑";    } 
+.jiangl1_a span{ color:#fab509;}
+@media screen and (min-width:641px) {
+body{background:#3a3e4a;}
+	}
+@media screen and (max-width:600px) {
+	.jiangl1_a{ font-size:19pt}
+	}
+	
+@media screen and (max-width:570px) {
+	.jiangl1_a{ font-size:18pt}
+   
+	}
+	
+@media screen and (max-width:550px) {
+	.jiangl1_a{ font-size:17pt}
+	
+	}
+	
+@media screen and (max-width:480px) {
+	.jiangl1_a{ font-size:16pt}
+	 }
+	 
+@media screen and (max-width:450px) {
+	.jiangl1_a{ font-size:15pt}
+	 }
+	 
+	 
+@media screen and (max-width:430px) {
+	.jiangl1_a{ font-size:14pt}
+	 }
+		
+ @media screen and (max-width:380px) {
+	.jiangl1_a{ font-size:13pt}
+	 }
+	 
+ @media screen and (max-width:350px) {
+	.jiangl1_a{ font-size:12pt}
+	 }
+	 
+ @media screen and (max-width:330px) {
+	.jiangl1_a{ font-size:11pt}
+	
+	 }

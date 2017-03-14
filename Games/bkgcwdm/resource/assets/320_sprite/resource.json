@@ -1,0 +1,18 @@
+{
+"resources":
+	[
+        {"name":"description","type":"json","url":"config/description.json"},
+	    {"name":"prop","type":"sheet","url":"assets/weisuo.json"},
+	    {"name":"animate","type":"json","url":"assets/animate.json"},
+	    {"name":"animation","type":"image","url":"assets/animate.png"},
+	    {"name":"scoreNumber_fnt","type":"font","url":"assets/scoreNumber.fnt"},
+	    {"name":"over_number_fnt","type":"font","url":"assets/over_number.fnt"},
+	    {"name":"introduction","type":"image","url":"assets/introduction.png"},
+	    {"name":"hand","type":"image","url":"assets/hand.png"}
+	],
+
+"groups":
+	[
+        {"name":"preload","keys":"prop,animate,animation,scoreNumber_fnt,over_number_fnt,introduction,hand"}
+	]
+}

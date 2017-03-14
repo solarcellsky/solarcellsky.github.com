@@ -1,0 +1,419 @@
+
+models.png
+size: 4096,4096
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+Bochka01
+  rotate: false
+  xy: 2397, 1795
+  size: 400, 400
+  orig: 400, 400
+  offset: 0, 0
+  index: -1
+Car01
+  rotate: false
+  xy: 2857, 2690
+  size: 579, 306
+  orig: 579, 306
+  offset: 0, 0
+  index: -1
+Car02
+  rotate: false
+  xy: 3444, 2690
+  size: 579, 306
+  orig: 579, 306
+  offset: 0, 0
+  index: -1
+Car03
+  rotate: false
+  xy: 1889, 1204
+  size: 579, 306
+  orig: 579, 306
+  offset: 0, 0
+  index: -1
+EJ01
+  rotate: false
+  xy: 2333, 796
+  size: 400, 400
+  orig: 400, 400
+  offset: 0, 0
+  index: -1
+El
+  rotate: false
+  xy: 2406, 388
+  size: 400, 400
+  orig: 400, 400
+  offset: 0, 0
+  index: -1
+Fonar
+  rotate: false
+  xy: 3833, 2432
+  size: 250, 250
+  orig: 250, 250
+  offset: 0, 0
+  index: -1
+House01
+  rotate: false
+  xy: 2852, 3612
+  size: 900, 471
+  orig: 900, 471
+  offset: 0, 0
+  index: -1
+Ice02
+  rotate: false
+  xy: 2814, 600
+  size: 300, 300
+  orig: 300, 300
+  offset: 0, 0
+  index: -1
+Kamera
+  rotate: false
+  xy: 2817, 2182
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+Kapkan
+  rotate: false
+  xy: 2406, 30
+  size: 350, 350
+  orig: 350, 350
+  offset: 0, 0
+  index: -1
+Kub01
+  rotate: false
+  xy: 1420, 1306
+  size: 461, 600
+  orig: 461, 600
+  offset: 0, 0
+  index: -1
+Kub0234
+  rotate: false
+  xy: 3465, 3004
+  size: 462, 600
+  orig: 462, 600
+  offset: 0, 0
+  index: -1
+Kub023401
+  rotate: false
+  xy: 926, 698
+  size: 462, 600
+  orig: 462, 600
+  offset: 0, 0
+  index: -1
+Kub023402
+  rotate: false
+  xy: 1396, 698
+  size: 461, 600
+  orig: 461, 600
+  offset: 0, 0
+  index: -1
+LedKub
+  rotate: false
+  xy: 2804, 1316
+  size: 400, 400
+  orig: 400, 400
+  offset: 0, 0
+  index: -1
+Magnit01
+  rotate: false
+  xy: 1844, 2026
+  size: 400, 202
+  orig: 400, 202
+  offset: 0, 0
+  index: -1
+Malina
+  rotate: false
+  xy: 3760, 3763
+  size: 320, 320
+  orig: 320, 320
+  offset: 0, 0
+  index: -1
+MalinaBig
+  rotate: false
+  xy: 3721, 1854
+  size: 320, 320
+  orig: 320, 320
+  offset: 0, 0
+  index: -1
+Mnoj01
+  rotate: false
+  xy: 3122, 600
+  size: 300, 300
+  orig: 300, 300
+  offset: 0, 0
+  index: -1
+Most02
+  rotate: false
+  xy: 912, 2151
+  size: 900, 443
+  orig: 900, 443
+  offset: 0, 0
+  index: -1
+Pesch01
+  rotate: false
+  xy: 4, 3183
+  size: 900, 900
+  orig: 900, 900
+  offset: 0, 0
+  index: -1
+PeschTile
+  rotate: false
+  xy: 4, 2275
+  size: 900, 900
+  orig: 900, 900
+  offset: 0, 0
+  index: -1
+Raketa
+  rotate: false
+  xy: 3212, 1316
+  size: 400, 400
+  orig: 400, 400
+  offset: 0, 0
+  index: -1
+Relsy
+  rotate: false
+  xy: 2340, 2203
+  size: 469, 600
+  orig: 469, 600
+  offset: 0, 0
+  index: -1
+RelsyEnd
+  rotate: false
+  xy: 449, 698
+  size: 469, 600
+  orig: 469, 600
+  offset: 0, 0
+  index: -1
+Road01
+  rotate: false
+  xy: 512, 90
+  size: 454, 600
+  orig: 454, 600
+  offset: 0, 0
+  index: -1
+Road02
+  rotate: false
+  xy: 974, 90
+  size: 454, 600
+  orig: 454, 600
+  offset: 0, 0
+  index: -1
+RoadEnd
+  rotate: false
+  xy: 1436, 90
+  size: 454, 600
+  orig: 454, 600
+  offset: 0, 0
+  index: -1
+RoadOgr01
+  rotate: false
+  xy: 4, 57
+  size: 500, 370
+  orig: 500, 370
+  offset: 0, 0
+  index: -1
+RoadOgr02
+  rotate: false
+  xy: 3325, 2182
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+Rock01
+  rotate: false
+  xy: 2805, 1724
+  size: 450, 450
+  orig: 450, 450
+  offset: 0, 0
+  index: -1
+Rock02
+  rotate: false
+  xy: 3263, 1724
+  size: 450, 450
+  orig: 450, 450
+  offset: 0, 0
+  index: -1
+Sapog01
+  rotate: false
+  xy: 3721, 1526
+  size: 320, 320
+  orig: 320, 320
+  offset: 0, 0
+  index: -1
+Shahta01
+  rotate: false
+  xy: 812, 1914
+  size: 1024, 229
+  orig: 1024, 229
+  offset: 0, 0
+  index: -1
+Shlem00
+  rotate: false
+  xy: 2814, 292
+  size: 300, 300
+  orig: 300, 300
+  offset: 0, 0
+  index: -1
+Side01
+  rotate: false
+  xy: 4, 1467
+  size: 800, 800
+  orig: 800, 800
+  offset: 0, 0
+  index: -1
+Snegovik01
+  rotate: false
+  xy: 812, 1306
+  size: 600, 600
+  orig: 600, 600
+  offset: 0, 0
+  index: -1
+Snowball
+  rotate: false
+  xy: 2249, 2811
+  size: 600, 600
+  orig: 600, 600
+  offset: 0, 0
+  index: -1
+Star01
+  rotate: false
+  xy: 2397, 1738
+  size: 400, 49
+  orig: 400, 49
+  offset: 0, 0
+  index: -1
+Stolb
+  rotate: false
+  xy: 4, 435
+  size: 437, 1024
+  orig: 437, 1024
+  offset: 0, 0
+  index: -1
+Telejka01
+  rotate: false
+  xy: 1889, 1518
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+Yeti01
+  rotate: false
+  xy: 2857, 3004
+  size: 600, 600
+  orig: 600, 600
+  offset: 0, 0
+  index: -1
+Znak01
+  rotate: false
+  xy: 3833, 2224
+  size: 200, 200
+  orig: 200, 200
+  offset: 0, 0
+  index: -1
+Znak02
+  rotate: false
+  xy: 3052, 84
+  size: 200, 200
+  orig: 200, 200
+  offset: 0, 0
+  index: -1
+Znak03
+  rotate: false
+  xy: 3430, 392
+  size: 200, 200
+  orig: 200, 200
+  offset: 0, 0
+  index: -1
+brevno01
+  rotate: false
+  xy: 912, 3410
+  size: 1024, 673
+  orig: 1024, 673
+  offset: 0, 0
+  index: -1
+brevno02
+  rotate: false
+  xy: 1720, 2756
+  size: 521, 646
+  orig: 521, 646
+  offset: 0, 0
+  index: -1
+jip01
+  rotate: false
+  xy: 1944, 3419
+  size: 900, 664
+  orig: 900, 664
+  offset: 0, 0
+  index: -1
+molot01
+  rotate: false
+  xy: 2741, 908
+  size: 400, 400
+  orig: 400, 400
+  offset: 0, 0
+  index: -1
+naplechn00
+  rotate: false
+  xy: 3122, 292
+  size: 300, 300
+  orig: 300, 300
+  offset: 0, 0
+  index: -1
+pen
+  rotate: false
+  xy: 3149, 908
+  size: 400, 400
+  orig: 400, 400
+  offset: 0, 0
+  index: -1
+podguza01
+  rotate: false
+  xy: 2476, 1410
+  size: 320, 320
+  orig: 320, 320
+  offset: 0, 0
+  index: -1
+station01
+  rotate: false
+  xy: 912, 2602
+  size: 800, 800
+  orig: 800, 800
+  offset: 0, 0
+  index: -1
+svet01
+  rotate: false
+  xy: 1898, 228
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+trampl01
+  rotate: false
+  xy: 2764, 4
+  size: 280, 280
+  orig: 280, 280
+  offset: 0, 0
+  index: -1
+water01
+  rotate: false
+  xy: 3430, 600
+  size: 300, 300
+  orig: 300, 300
+  offset: 0, 0
+  index: -1
+yaschik01
+  rotate: false
+  xy: 1865, 736
+  size: 460, 460
+  orig: 460, 460
+  offset: 0, 0
+  index: -1
+yaschik02
+  rotate: false
+  xy: 1820, 2236
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1

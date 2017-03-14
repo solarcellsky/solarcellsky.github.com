@@ -1,0 +1,298 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+body {
+    margin: 0;
+    height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 0;
+    font-weight: normal;
+}
+
+div,
+p,
+img,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+table,
+th,
+td,
+form {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    border: 0;
+    vertical-align: top;
+}
+
+ul li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+
+/*---------------- 页面部分 ----------------*/
+
+body {
+    font: 12px/18px simsun, Arial, Helvetica, sans-serif;
+}
+
+.wrap {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.box01 {
+    background: url(../images/bg.jpg);
+    background-size: 100% auto;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 3;
+}
+
+.box01 .cont {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+
+.box01 .font {
+    background-size: 100% auto;
+    height: 159px;
+    width: 159px;
+    margin: 10px auto 0;
+    line-height: 159px;
+    text-align: center;
+}
+
+.box01 .text {
+    margin: 0 auto;
+    width: 270px;
+}
+
+.box01 .t01 {
+    font-size: 1.6em;
+    font-family: "微软雅黑";
+    line-height: 1.6em;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.box01 .t02 {
+    color: #693810;
+    font-size: 1.3em;
+    font-family: "微软雅黑";
+    line-height: 1.4em;
+    margin: 5px auto 0;
+    text-align: center;
+    width: 200px;
+}
+
+.box01 .btn {
+    background: url(../images/btn01.png) no-repeat;
+    background-size: 100% auto;
+    height: 116px;
+    width: 116px;
+    margin: 15px auto 0;
+}
+
+.box02 {
+    background: url(../images/bg.jpg);
+    background-size: 100% auto;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.box02 .font {
+    background: url(../images/i02.jpg) no-repeat;
+    background-size: 100% auto;
+    height: 160px;
+    width: 159px;
+    margin: 10px auto 0;
+    font-size: 8em;
+    line-height: 159px;
+    text-align: center;
+}
+
+.box02 .time {
+    padding: 0 25px;
+    text-align: center;
+    font-size: 1.2em;
+    font-family: "微软雅黑";
+    height: 50px;
+    line-height: 50px;
+    overflow: hidden;
+}
+
+.box02 .time span {
+    color: #d8271c;
+    font-size: 1.8em;
+}
+
+.box02 .flist {
+    margin: 0 auto;
+    width: 306px;
+}
+
+.box02 .flist li {
+    background: url(../images/b01.png) no-repeat;
+    background-size: 100% auto;
+    height: 82px;
+    width: 82px;
+    font-size: 4em;
+    float: left;
+    line-height: 82px;
+    text-align: center;
+    margin: 5px 10px;
+}
+
+.box02 .flist li.cor {
+    background: url(../images/b02.png) no-repeat;
+    background-size: 100% auto;
+    color: #FFF;
+}
+
+.box02 .flist li.err {
+    background: url(../images/b03.png) no-repeat;
+    background-size: 100% auto;
+    color: #FFF;
+}
+
+.box03 {
+    background: url(../images/bg.jpg);
+    background-size: 100% auto;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+}
+
+.box03 .cont {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+
+.box03 .win .pic {
+    background: url(../images/win.jpg) no-repeat;
+    background-size: 100% auto;
+    height: 167px;
+    width: 185px;
+    margin: 15px auto 0;
+}
+
+.box03 .win .text {
+    font-size: 1.6em;
+    font-family: "微软雅黑";
+    line-height: 1.4em;
+    margin: 10px auto 0;
+    width: 268px;
+}
+
+.box03 .win .text span {
+    color: #cc3333;
+    font-size: 1.4em;
+    font-family: "微软雅黑";
+}
+
+.box03 .win .txt {
+    color: #693810;
+    font-size: 1.3em;
+    font-family: "微软雅黑";
+    line-height: 1.8em;
+    width: 268px;
+    margin: 0 auto;
+}
+
+.box03 .win .txt a {
+    color: #cc3333;
+}
+
+.box03 .lose .pic {
+    background: url(../images/lose.jpg) no-repeat;
+    background-size: 100% auto;
+    height: 145px;
+    width: 185px;
+    margin: 15px auto 0;
+}
+
+.box03 .lose .text {
+    font-size: 1.6em;
+    font-family: "微软雅黑";
+    line-height: 1.4em;
+    margin: 10px auto 0;
+    width: 268px;
+}
+
+.box03 .lose .text span {
+    color: #cc3333;
+    font-size: 1.4em;
+    font-family: "微软雅黑";
+}
+
+.box03 .lose .txt {
+    color: #693810;
+    font-size: 1.3em;
+    font-family: "微软雅黑";
+    line-height: 1.8em;
+    width: 268px;
+    margin: 0 auto;
+}
+
+.box03 .bcot {
+    text-align: center;
+    color: #FFF;
+    font-size: 1.4em;
+    font-family: "微软雅黑";
+    line-height: 40px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.box03 .bcot .btn01 {
+    background: url(../images/btn02.jpg) no-repeat;
+    background-size: 100% auto;
+    height: 40px;
+    width: 118px;
+    display: inline-block;
+    margin: 0 16px;
+}
+
+.box03 .bcot .btn02 {
+    background: url(../images/btn03.jpg) no-repeat;
+    background-size: 100% auto;
+    height: 40px;
+    width: 118px;
+    display: inline-block;
+    margin: 0 16px;
+}

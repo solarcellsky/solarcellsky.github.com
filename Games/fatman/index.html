@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>你这么胖，考虑过鹊桥的感受吗？</title>
+    <script src="assets/js/core_b861b813.js"></script>
+    <script>
+    var fontSize = document.documentElement.clientWidth / 20;
+    fontSize = fontSize > 18 ? 18 : fontSize;
+    document.documentElement.style.fontSize = fontSize + 'px';
+    var hideHeader = true;
+
+    var csrfToken = '';
+    require.config({
+        waitSeconds: 30,
+        baseUrl: 'assets/js'
+    });
+
+    var subChannel = 'nuomi_focus_wap_new_820';
+    if (subChannel.length > 0) {
+        window.name = subChannel;
+    }
+
+    window._MOVIE = {
+        sfrom: 'newnuomi',
+        sfromFun: 'newnuomi',
+        sfromUrl: 'newnuomi',
+        client: 'webapp',
+        channel: 'nuomi',
+        module: '',
+        from: 'webapp',
+        kehuduan: '1',
+        subChannel: subChannel,
+        c: '' || '340',
+        cc: '',
+        city: '深圳市',
+        crt: 'm',
+        lat: '',
+        lng: '',
+        cuid: '',
+        anchor: false ? '#groupon' : '#showing',
+        source: '',
+        isNuomiWap: false,
+        statParam: {
+            da_src: (false ? 'nuomi_wap_' : '') + '',
+            da_abtest: '',
+            da_thirdpar: 'newnuomi' || window.name
+        }
+    };
+
+
+    function replaceUrl(url, level) {
+        var prefix = url.split('?');
+        var query = prefix[1];
+        var hash = '';
+        if (query && query.indexOf('#') !== -1) {
+            var param = query.split('#');
+            query = param[0];
+            hash = '#' + param[1];
+        }
+
+        prefix = prefix[0];
+
+        var qsStringify = function(obj) {
+            if (!obj) {
+                return '';
+            }
+
+            var pairs = [];
+            for (var key in obj) {
+                if (obj.hasOwnProperty(key)) {
+                    pairs.push(encodeURIComponent(key) + '=' + encodeURIComponent(obj[key]));
+                }
+            }
+
+            return pairs.join('&');
+        };
+        var qsParse = function(query) {
+            if (!query) {
+                return {};
+            }
+
+            var obj = {};
+
+            query = query.split('&');
+            for (var i = 0; i < query.length; i++) {
+                var p = query[i].split('=', 2);
+                if (p.length == 1) {
+                    obj[p[0]] = "";
+                } else {
+                    obj[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
+                }
+            }
+            return obj;
+        }
+
+        var urlParams = query ? qsParse(query) : {};
+
+        var _MOVIE = window._MOVIE;
+
+        // 跳转去糯米主站的，URL统一处理一下
+        // 说是统一处理，实际上还是有些逻辑分散在各处，改的时候要注意
+        // 例如controller/cinema.js之类的
+        if (level === 'nuomi') {
+            if (hideHeader === true) {
+                urlParams.customui = 7;
+            } else {
+                urlParams.customui = 0;
+            }
+            if (_MOVIE.subChannel === 'wallet' || _MOVIE.subChannel === 'baifubao') {
+                urlParams.from = 'qbsdktj';
+            }
+            url = prefix + '?' + qsStringify(urlParams) + hash;
+            return url;
+        }
+
+        var appendFrom = true;
+        var appendLocation = true;
+        if (level === 'from') {
+            appendFrom = false;
+        } else if (level === 'location') {
+            appendLocation = false;
+        }
+
+        if (appendFrom) {
+            urlParams.sfrom = _MOVIE.sfrom || 'wise_shoubai';
+            urlParams.from = _MOVIE.from || 'webapp';
+            urlParams.sub_channel = urlParams.sub_channel || _MOVIE.subChannel || '';
+            urlParams.source = _MOVIE.source || '';
+        }
+
+        if (appendLocation) {
+            urlParams.c = urlParams.c || _MOVIE.c || '';
+            urlParams.cc = urlParams.cc || _MOVIE.cc || '';
+            // urlParams.crt = urlParams.crt || _MOVIE.crt || 'm';
+            // if (urlParams.lng === '0' || urlParams.lat === '0') {
+            //     urlParams.lng = '';
+            //     urlParams.lat = '';
+            // }
+            // urlParams.lng = urlParams.lng || _MOVIE.lng || 0;
+            // urlParams.lat = urlParams.lat || _MOVIE.lat || 0;
+        }
+
+        // 地图需要透传cuid参数
+        if (window._MOVIE.sfromFun === 'map') {
+            urlParams.cuid = urlParams.cuid || _MOVIE.cuid || '';
+        }
+
+        urlParams.kehuduan = urlParams.kehuduan || _MOVIE.kehuduan || '';
+
+        url = prefix + '?' + qsStringify(urlParams) + hash;
+        return url;
+    }
+
+    (function() {
+        var open = window.open;
+        window.open = function(url, noappend) {
+            url = replaceUrl(url, noappend);
+            window.location.href = url;
+        };
+    })();
+
+    function handler(event) {
+        var $target = $(event.target);
+        if ($target[0].tagName !== 'A') {
+            $target = $target.parents('a');
+        }
+        if ($target.length === 0) {
+            return;
+        }
+
+        var href = $target.attr('href') || $target.attr('data-href');
+
+        if (!href || href.indexOf('#') === 0 || href.indexOf('javascript') === 0 || href.indexOf('tel') === 0) {
+            return;
+        }
+        var noappend = $target.data('noappend');
+        if (noappend === 'all') {
+            return;
+        }
+
+        href = replaceUrl(href, noappend);
+
+        $target.attr('href', href);
+        $target.attr('data-href', href);
+
+    }
+
+    function onClick(e) {
+        var ele = e.target;
+        var href;
+
+        while (ele !== document.body) {
+            if (!ele) {
+                return;
+            }
+            if (ele.nodeType !== 1) {
+                ele = ele.parentNode;
+                continue;
+            }
+            href = ele.getAttribute('data-href') || ele.getAttribute('href');
+            if (href) {
+                var noappend = ele.getAttribute('data-noappend');
+                if (noappend !== 'all' && href.indexOf('#') !== 0 && href.indexOf('javascript') !== 0 && href.indexOf('tel') !== 0) {
+                    href = replaceUrl(href, noappend);
+                }
+
+                e.preventDefault();
+                window.location.href = href;
+
+                return;
+            }
+
+            ele = ele.parentNode;
+        }
+    }
+    $(function() {
+        document.body.addEventListener('click', onClick);
+        document.body.addEventListener('touchstart', handler, true);
+
+        // fast click
+        FastClick.attach(document.body);
+    });
+    </script>
+    <script>
+    // 覆盖之前计算的fontSize
+    var fontSize = document.documentElement.clientWidth / 20;
+    document.documentElement.style.fontSize = fontSize + 'px';
+    </script>
+    <link rel="stylesheet" type="text/css" href="assets/shake.css" />
+</head>
+
+<body>
+    <img id="log-img" style="display:none">
+    <div id="wa-shakeevent-wx-logo" style="display:none;"><img src="assets/img/faticon.jpg"></div>
+    <audio class="loop-audio" src="assets/img/loop.mp3" loop="true"></audio>
+    <div id="view" class="content"></div>
+    <script src="assets/js/aio.js"></script>
+    <script src="assets/js/md5.js"></script>
+    <script>
+        var gift = 4456490522916742;
+        require(['index'], function (page) {
+            // page.init($.extend({"page":"valentine-shake"}, {
+            //     shouBaiShareImg: 'http://bs.baidu.com/weigou-baidu-com/activity/20150810/fat.jpg',
+            //     NAShareImg: 'http://bs.baidu.com/weigou-baidu-com/activity/20150810/fat.jpg',
+            //     NAShareContent: '胖怎么啦，我有钱呀！【百度糯米电影】',
+            //     shouBaiShareContent: '胖怎么啦，我有钱呀！【百度糯米电影】'
+            // }));
+        });
+    </script>
+</body>
+
+</html>

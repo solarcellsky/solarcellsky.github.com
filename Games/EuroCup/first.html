@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="ch">
+    <meta charset="UTF-8">
+    <title>你踢不了欧洲杯，至少能赢欧洲杯大奖啊！</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <script src="Public/Home/js/jquery-1.12.0.min.js"></script>
+    <script src="Public/Home/js/jquery.imgpreload.min.js"></script>
+    <script src="Public/Home/js/app.js"></script>
+    <link rel="stylesheet" href="Public/Home/css/common.css">
+    <link rel="stylesheet" href="Public/Home/css/app.css">
+    <div style="display: none">
+        <img src="Public/Home/imgs/toutu2.png" alt="">
+    </div>
+</head>
+<body>
+<div style="display: block" id="start5">
+    <div class="content">
+        <img class="img51" src="Public/Home/imgs/bank.png" alt="">
+        <img class="img52" src="Public/Home/imgs/2logo.png" alt="">
+        <img class="img53" src="Public/Home/imgs/wenti1.png" alt="">
+        <img class="img54" src="Public/Home/imgs/textbg.png" alt="">
+        <img class="img57" src="Public/Home/imgs/yingwen.png" alt="">
+
+        <form id="biaoyi" name="1p" method="post">
+        	<input type="hidden" name="uid" id="uid" value="1465785139" />
+            <button>
+                <img class="img55" src="Public/Home/imgs/ycwb.png" alt="">
+            </button>
+            <a href="">
+            <img class="img56" src="Public/Home/imgs/cxyc.png" alt="">
+            </a>
+        </form>
+    </div>
+</div>
+<div id="start11" style="display: none">
+    <h1>竖屏效果更佳</h1>
+</div>
+<script>
+    window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", function() {
+        if (window.orientation === 180 || window.orientation === 0) {
+           $("#start11").hide()
+        }
+        if (window.orientation === 90 || window.orientation === -90 ){
+            $("#start11").show()
+        }
+    }, false);
+</script>
+<script>
+	 //像一页面添加数据
+    var shujus = ["a", "b", "c", "d", "e", "f"];
+    for (var i = 0, html = ""; i < shujus.length; i++) {
+        html += '<ul class="ul" value="0"><li><img class="' + shujus[i] + '" src="Public/Home/imgs/' + shujus[i] + '1.png"/><img style="display: none" class="' + shujus[i] + '1" src="Public/Home/imgs/' + shujus[i] + '11.png"/><input name="' + shujus[i] + '1" type="hidden"></li>'
+            + '<li><img class="' + shujus[i] + '" src="Public/Home/imgs/' + shujus[i] + '2.png"/><img style="display: none" class="' + shujus[i] + '1" src="Public/Home/imgs/' + shujus[i] + '22.png"/><input name="' + shujus[i] + '2" type="hidden"></li>'
+            + '<li><img class="' + shujus[i] + '" src="Public/Home/imgs/' + shujus[i] + '3.png"/><img style="display: none" class="' + shujus[i] + '1" src="Public/Home/imgs/' + shujus[i] + '33.png"/><input name="' + shujus[i] + '3" type="hidden"></li>'
+            + '<li><img class="' + shujus[i] + '" src="Public/Home/imgs/' + shujus[i] + '4.png"/><img style="display: none" class="' + shujus[i] + '1" src="Public/Home/imgs/' + shujus[i] + '44.png"/><input name="' + shujus[i] + '4" type="hidden"></li></ul>'
+    }
+    $("#biaoyi").append(html);
+    window.history.forward(1);
+</script>
+<!--<script type="text/javascript">
+    // 对浏览器的UserAgent进行正则匹配，不含有微信独有标识的则为其他浏览器
+    var useragent = navigator.userAgent;
+    if (useragent.match(/MicroMessenger/i) != 'MicroMessenger') {
+        // 这里警告框会阻塞当前页面继续加载
+        alert('已禁止本次访问：您必须使用微信内置浏览器访问本页面！');
+        // 以下代码是用javascript强行关闭当前页面
+        var opened = window.open('about:blank', '_self');
+        opened.opener = null;
+        opened.close();
+    }
+</script>-->
+</body>
+</html>

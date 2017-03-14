@@ -1,0 +1,325 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta name="robots" content="none" />
+    <meta name="viewport" id="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>谁是我的知己？- 情感大考验</title>
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+    <style type="text/css">
+    .wrap {
+        padding-bottom: 62px;
+    }
+    
+    .float_a_d {
+        position: fixed;
+        z-index: 102;
+        width: 45px;
+        right: 20px;
+        top: 238px;
+    }
+    
+    .float_a_d img {
+        width: 100%;
+    }
+    
+    .a_d {
+        position: fixed;
+        bottom: 0;
+        z-index: 100;
+        width: 100%;
+        height: 50px;
+        background: rgba(0, 0, 0, .8);
+    }
+    
+    .a_d_box {
+        overflow: hidden;
+    }
+    
+    .a_d_pic {
+        width: 28px;
+        height: auto;
+        float: left;
+        margin-top: 8px;
+        margin-left: 10px;
+    }
+    
+    .a_d_link {
+        float: right;
+        color: #fff;
+        padding: 0 14px;
+        line-height: 26px;
+        text-align: center;
+        background: #ff3333;
+        display: block;
+        margin-top: 12px;
+        margin-right: 10px;
+        border-radius: 4px;
+    }
+    
+    .a_d_txt {
+        color: #fff;
+        line-height: 50px;
+        margin: 0 50px 0 46px;
+        letter-spacing: 0.5px;
+    }
+    </style>
+    <script src="http://f.shiyi11.com/ui/js/common/jquery-1.8.3.min.js"></script>
+</head>
+
+<body>
+    <div class="wrap rel">
+        <img src="http://wx.qlogo.cn/mmopen/ajNVdqHZLLCjT7Wu4jBJWTBrAkeJ5ZrGQVhCictekQxXMia4siaicMDHZLd3qrQYJ9wCalCCdQFyOvARjpXibaUlpBw/0" style="left:-3000px;position: absolute;">
+        <img src="assets/share_logo.jpg" style="left:-3000px;position: absolute;">
+        <div class="progress_warp mcenter rel">
+            <div class="progress_line_bg abscenter">
+                <div class="progress"></div>
+            </div>
+            <div class="progress_label rel dbox">
+                <span><em class="on">1</em></span>
+                <span><em>2</em></span>
+                <span><em>3</em></span>
+                <span><em>4</em></span>
+                <span><em>5</em></span>
+                <span><em>6</em></span>
+                <span><em>7</em></span>
+                <span><em>8</em></span>
+                <span><em>9</em></span>
+                <span><em>10</em></span>
+            </div>
+        </div>
+        <div class="question_wrap mcenter rel">
+            <div class="question_pic rel">
+                <img src="http://f.shiyi11.com/ui/img/web/dot.gif">
+                <div class="skip abs">换一题</div>
+            </div>
+            <p class="question"></p>
+        </div>
+        <div class="answer mcenter">
+            <ul></ul>
+        </div>
+        <div style="display:none">
+            <form id="submitForm" name="submitForm" action="http://sh67.weileiba.cn/topic/wx20160112.html?step=2" method="post">
+                <div style="display:none">
+                    <input type="hidden" value="ZWE5NzljMzYyMDgwYzIzMzc4MjMwNDAyNDYzNDIzYzQyZmVkNzExNA==" name="_sh_token_" />
+                </div>
+                <input type="hidden" id="qa_content" name="qa_content">
+            </form>
+        </div>
+        <script type="text/javascript">
+        var questions = [{
+            'id': '1',
+            'title': '我最喜欢的相处模式是？',
+            'answers': ["时刻粘在一起求抱抱型", "高冷傲娇状，有事联系，没事别bb"]
+        }, {
+            'id': '2',
+            'title': '平常约会我一般什么时候出门？',
+            'answers': ["比计划的再提前半小时出门", "正常出门，避免迟到", "临近约定的时间才准备出门"]
+        }, {
+            'id': '3',
+            'title': '以下哪种活动内容是我周末约会首选？',
+            'answers': ["常规看电影，逛街，吃饭", "两个人找家咖啡馆泡上一天", "逛超市买食材，亲自下厨做一桌美味佳肴", "寻找当地很隐蔽的特色美食", "以上都没有"]
+        }, {
+            'id': '4',
+            'title': '找理想型时我最看重的是？',
+            'answers': ["外貌协会，只要脸好看其他都好商量", "经济条件能满足我的物质需求", "两个人一定要兴趣相投，有相同的喜好和话题", "没太多要求，能凑合一起过就可以"]
+        }, {
+            'id': '5',
+            'title': '被朋友或恋人背叛时我的态度是？',
+            'answers': ["被伤透了心难以原谅", "不管是什么事情都不会介意", "刚开始无法接受，但过一段时间会放下"]
+        }, {
+            'id': '6',
+            'title': '如果恋人有红颜／蓝颜知己，我的态度是？',
+            'answers': ["嘴上说着没关系，心里已经问候 ta全家", "坚决不让恋人再和ta联系，必须断联除后患", "只要他们真的只是朋友，就不会在意这些"]
+        }, {
+            'id': '7',
+            'title': '如果和恋人逛街时偶遇前任，我的反应是？',
+            'answers': ["装没看见", "大大方方的打个招呼", "不打招呼但会让ta看见我，让他知道我现在过的很好"]
+        }, {
+            'id': '8',
+            'title': '以下哪种出轨形式是我最不能忍的？',
+            'answers': ["精神出轨", "肉体出轨", "以上都不能忍", "以上都能忍（这都不分手？）"]
+        }, {
+            'id': '9',
+            'title': '下面哪句话是我最想送给前任的',
+            'answers': ["你若不举，便是晴天", "你一定不要过得比我好，这样我才会好过", "你不会再遇到一个人，像我这样爱你", "再见，再也不见", "啥也不想说，就静静的做陌生人吧"]
+        }, {
+            'id': '10',
+            'title': '我对现任最不满意的一点是？',
+            'answers': ["和异性走太近", "特别喜欢自拍", "太粘人，分分钟都离不开我", "开起玩笑来总是把握不好分寸"]
+        }, {
+            'id': '11',
+            'title': '如果现任跟我提出分手，我的反应是？',
+            'answers': ["哦，好的", "让他去死", "我要去死", "为什么，一定给老子列出十条理由说服我"]
+        }, {
+            'id': '12',
+            'title': '关于暧昧我的看法是？',
+            'answers': ["都说暧昧是恋爱中最好的时光，我也很享受这段时光", "如果跟我玩暧昧，我立马走人，谈恋爱就应该确定关系好好在一起"]
+        }, {
+            'id': '13',
+            'title': '对于婚姻我的看法是？',
+            'answers': ["在外面的人想进来，在里面的人想出去", "婚姻就是爱情的坟墓", "从恋人变成家人，婚姻是把爱情变成亲情的桥梁", "持中立态度，对婚姻不喜不厌"]
+        }, {
+            'id': '14',
+            'title': '结婚后我会不会立刻就要小孩？',
+            'answers': ["结婚后会马上就要小孩", "先享受几年二人世界，经济和其他条件成熟后再要", "目前没有要小孩的想法，并且在婚后很长一段时间都不考虑"]
+        }, {
+            'id': '15',
+            'title': '我会选择哪种形式庆祝生日？',
+            'answers': ["叫上一堆朋友吃饭唱k切蛋糕", "和家人坐在一起好好的聚个餐", "和恋人单独庆祝", "像往常一样没有特殊安排"]
+        }, {
+            'id': '16',
+            'title': '我吃辣吗？',
+            'answers': ["会吃一点辣", "坚决不吃辣党", "没有辣椒会死星人，可以辣椒拌一切"]
+        }, {
+            'id': '17',
+            'title': '我喜欢听哪个类型的歌曲？',
+            'answers': ["摇滚乐", "民谣", "流行歌曲", "怀旧老歌", "没有特别喜好，哪种都会听"]
+        }, {
+            'id': '18',
+            'title': '我喜欢哪种类型的颜色？',
+            'answers': ["性冷淡裸色系", "火辣热情的亮丽系", "简洁黑灰白", "统统都喜欢"]
+        }, {
+            'id': '19',
+            'title': '我最好的朋友和我在一个城市吗？',
+            'answers': ["在一个城市而且会经常见面", "不在一个城市，但会经常联系", "寂寞如雪的我没有最好的朋友啊"]
+        }, {
+            'id': '20',
+            'title': '我喜欢看电影吗?',
+            'answers': ["喜欢", "不喜欢", "看什么电影才是重点", "跟谁一起看才是重点"]
+        }, {
+            'id': '21',
+            'title': '我冬天会长冻疮吗?',
+            'answers': ["会,年年如此", "不会", "偶尔会长"]
+        }, {
+            'id': '22',
+            'title': '我爱吃西餐吗?',
+            'answers': ["爱吃", "不爱吃"]
+        }, {
+            'id': '23',
+            'title': '我爱吃日本料理吗?',
+            'answers': ["爱吃", "不爱吃"]
+        }, {
+            'id': '24',
+            'title': '我爱吃火锅吗?',
+            'answers': ["不爱吃", "爱吃"]
+        }, {
+            'id': '25',
+            'title': '周末我喜欢干什么',
+            'answers': ["在家睡懒觉", "出去逛街", "约会", "看电影"]
+        }, {
+            'id': '26',
+            'title': '我喜欢喝什么口味的豆浆?',
+            'answers': ["咸豆浆", "甜豆浆", "无所谓,都喜欢喝", "我不喝豆浆呢"]
+        }, {
+            'id': '27',
+            'title': '我喝咖啡加不加糖?',
+            'answers': ["加", "不加", "不喝咖啡"]
+        }, ];
+
+        var userAnswers = [];
+        var answeredQuestionId = null;
+        var randomId;
+        var dNum = 0;
+        var flag = 0;
+
+        $(function() { //入口函数开始     
+
+            //获取随机题目
+            function getRandomQuestion() {
+                if (answeredQuestionId != null) {
+                    questions.splice(answeredQuestionId, 1);
+                    answeredQuestionId = null;
+                }
+
+                //获取随机id
+                randomId = getRandomId(randomId);
+                return questions[randomId];
+            }
+
+            function getRandomId(newRandomId) {
+                //获取随机id
+                var rid = parseInt(Math.random() * (questions.length));
+                if (newRandomId == rid) return getRandomId(rid);
+
+                return rid;
+            }
+
+            function genarateQuestionHtml(currentQuestion) {
+                $('.question_pic img').attr('src', 'assets/' + currentQuestion.id + '.jpg');
+                $('.question').html(currentQuestion.title);
+
+                var answersHtml = '';
+                $.each(currentQuestion.answers, function(id, answer) {
+                    answersHtml += '<li data-qid="' + currentQuestion.id + '" data-aid="' + id + '" id="be-wxgame1222-tm' + currentQuestion.id + '">' + answer + '</li>';
+                });
+                $('.answer ul').html(answersHtml);
+                $('.answer li').bind('click', function() {
+                    $('.answer li').unbind();
+                    nextFn(this);
+                    //_hmt.push(['_trackEvent', 'nav', 'click', 'literature']);
+                });
+            }
+
+            function changeFn() { //换一题随机封装函数开始
+                var currentQuestion = getRandomQuestion();
+                $('.wrap').fadeOut(300);
+                var timer = null;
+                clearTimeout(timer);
+                timer = setTimeout(function() {
+                    genarateQuestionHtml(currentQuestion);
+                }, 300);
+                $('.wrap').fadeIn(300);
+            }
+
+            function nextFn(_this) { //下一题封装函数开始
+                var qid = parseInt($(_this).attr('data-qid'));
+                var aid = parseInt($(_this).attr('data-aid'));
+                userAnswers.push(qid + '_' + aid);
+                $(_this).addClass('on');
+
+                dNum++;
+                var myWidth = 11 * dNum;
+
+                //console.log(userAnswers.join("|"));
+
+                if (dNum >= 10) {
+                    $(_this).removeClass('on');
+                    //submit userAnswers
+                    $("#qa_content").val(userAnswers.join("|"));
+                    $("#submitForm").submit();
+                } else {
+                    setTimeout(function() {
+                        $('.progress_label em').eq(dNum).addClass('on');
+                        $('.progress').css('width', myWidth + '%');
+                    }, 300)
+
+                    //change question
+                    answeredQuestionId = randomId;
+                    changeFn();
+                }
+            }
+
+            //init question
+            $('.skip').click(function() {
+                if (flag == 0) {
+                    flag = 1;
+                    changeFn();
+                    setTimeout(function() {
+                        flag = 0;
+                    }, 600)
+                }
+            })
+
+            var currentQuestion = getRandomQuestion();
+            genarateQuestionHtml(currentQuestion);
+        });
+        </script>
+    </div>
+</body>
+
+</html>

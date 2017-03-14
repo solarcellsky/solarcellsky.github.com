@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+
+<head>
+    <meta charset="utf-8" />
+    <title>看谁摇的猛</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="tip" style="font-size:20px;margin:10px;line-height:35px;display:none;">
+        亲，么么哒，如果您看到了我，说明您现在还不能摇，不是说您没有资格用我，而是：</br>
+        1、如果您使用PC机的浏览器，那可就不对了，我只爱手机浏览器；</br>
+        2、如果您是Android手机，那不好意思告诉你，android自带的浏览器抛弃了我，您可以用UCWeb、chrome等第三方浏览器；</br>
+        3、如果您都不属于以上两种情况，那我只有告诉您：您改换手机啦！！！</br>
+    </div>
+    <div class="view">
+        <img src="./img/wechat.jpg" style="display:none;">
+        <img src="./img/bg.jpg" class="w100">
+        <div class="head-img"><img src="./img/msbh.jpg" class="w100"></div>
+        <div id="shake-part">
+            <div class="hand"><img src="./img/hand.png" class="w100"></div>
+            <div class="score">000</div>
+            <div class="time">5秒倒计时：<span class="s">5</span>.<span class="ms">00</span></div>
+        </div>
+        <div id="score-part" class="hide">
+            <div class="result-num"><span>0</span>次！</div>
+            <div class="info">你右手弱爆了，送张券安慰下你</div>
+            <div class="ad"><img src="./img/ad.png" class="w100"></div>
+            <div class="btn-quan">
+                <a href="javascript:;" id="get-button"><img src="./img/quan.png" class="w100"></a>
+            </div>
+            <div class="btn-replay">
+                <a href="javascript:;" id="btnOK"><img src="./img/replay.png" class="w100"></a>
+            </div>
+        </div>
+    </div>
+    <!--倒计时的模态框-->
+    <div class="model">
+        <div class="num">
+            <img src="./img/3.png" class="w100">
+        </div>
+    </div>
+    <!--分享的模态框-->
+    <div class="model2 hide">
+        <div class="share">
+            <img src="./img/share.png" class="w100">
+        </div>
+    </div>
+    <!--裂变的模态框-->
+    <div class="model3 hide">
+        <div class="tofriend">
+            <img src="./img/tofriend.png" class="w100">
+        </div>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/shake.js"></script>
+    <script>
+    $(document).ready(function() {
+        setTimeout('$(".num img").attr("src","./img/2.png")', 1000);
+        setTimeout('$(".num img").attr("src","./img/1.png")', 2000);
+        setTimeout('$(".num img").attr("src","./img/start.png")', 3000);
+        setTimeout('$(".model").hide();daojishi();init();', 4000);
+        $(".btn-replay").click(function() {
+            window.location.href = "./index.html";
+        });
+    })
+    </script>
+    
+</body>
+
+</html>

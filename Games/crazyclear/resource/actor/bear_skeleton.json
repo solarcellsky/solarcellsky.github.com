@@ -1,0 +1,3904 @@
+{"frameRate": 60, "name": "bear", "armature": [
+    {
+        "bone": [
+            {
+                "name": "bengdaitou",
+                "transform": {
+                    "scY": 1,
+                    "skY": 0,
+                    "x": -18.5,
+                    "scX": 1,
+                    "y": -222.5,
+                    "skX": 0
+                }
+            },
+            {
+                "name": "bengdaigebo",
+                "transform": {
+                    "scY": 1,
+                    "skY": 0,
+                    "x": 109.5,
+                    "scX": 1,
+                    "y": -135.3,
+                    "skX": 0
+                }
+            },
+            {
+                "name": "bengdaishenti",
+                "transform": {
+                    "scY": 1,
+                    "skY": 0,
+                    "x": 10.5,
+                    "scX": 1,
+                    "y": -71.5,
+                    "skX": 0
+                }
+            },
+            {
+                "name": "xiong_yanlei08",
+                "transform": {
+                    "scY": 1,
+                    "skY": 0,
+                    "x": 95,
+                    "scX": 1,
+                    "y": -224.55,
+                    "skX": 0
+                }
+            },
+            {
+                "name": "xiong_yanlei07",
+                "transform": {
+                    "scY": 1,
+                    "skY": 0,
+                    "x": 94.1,
+                    "scX": 1,
+                    "y": -223.55,
+                    "skX": 0
+                }
+            },
+            {
+                "name": "xiong_yanlei06",
+                "transform": {
+                    "scY": 1,
+                    "skY": 0,
+                    "x": 98.05,
+                    "scX": 1,
+                    "y": -222.05,
+                    "skX": 0
+                }
+            },
+            {
+                "name": "xiong_yanlei05",
+                "transform": {
+                    "scY": 1,
+                    "skY": 0,
+                    "x": 96.45,
+                    "scX": 1,
+                    "y": -223.8,
+                    "skX": 0
+                }
+            },
+            {
+                "name": "xiong_yanlei04",
+                "transform": {
+                    "scY": 1,
+                    "skY": 0,
+                    "x": 75,
+                    "scX": 1,
+                    "y": -226.65,
+                    "skX": 0
+                }
+            },
+            {
+                "name": "xiong_yanlei03",
+                "transform": {
+                    "scY": 1,
+                    "skY": 0,
+                    "x": 62.8,
+                    "scX": 1,
+                    "y": -217.05,
+                    "skX": 0
+                }
+            },
+            {
+                "name": "xiong_yanlei02",
+                "transform": {
+                    "scY": 1,
+                    "skY": 0,
+                    "x": 58.55,
+                    "scX": 1,
+                    "y": -216.6,
+                    "skX": 0
+                }
+            },
+            {
+                "name": "xiong_yanlei01",
+                "transform": {
+                    "scY": 1,
+                    "skY": 0,
+                    "x": 55.2,
+                    "scX": 1,
+                    "y": -213.9,
+                    "skX": 0
+                }
+            },
+            {
+                "name": "xiong_yanjing2",
+                "transform": {
+                    "scY": 1,
+                    "skY": 0,
+                    "x": -99.5,
+                    "scX": 1,
+                    "y": -239.7,
+                    "skX": 0
+                }
+            },
+            {
+                "name": "xiong_biaoqing3",
+                "transform": {
+                    "scY": 1,
+                    "skY": 0,
+                    "x": -42,
+                    "scX": 1,
+                    "y": -179.5,
+                    "skX": 0
+                }
+            },
+            {
+                "name": "xiong_bengdaierduo",
+                "transform": {
+                    "scY": 1,
+                    "skY": 0,
+                    "x": 42,
+                    "scX": 1,
+                    "y": -275.4,
+                    "skX": 0
+                }
+            },
+            {
+                "name": "xiong_weibo2",
+                "transform": {
+                    "scY": 1,
+                    "skY": 0,
+                    "x": 37.65,
+                    "scX": 1,
+                    "y": -81.15,
+                    "skX": 0
+                }
+            },
+            {
+                "name": "xiongyanlei",
+                "transform": {
+                    "scY": 1,
+                    "skY": 0,
+                    "x": 10,
+                    "scX": 1,
+                    "y": -218.9,
+                    "skX": 0
+                }
+            },
+            {
+                "name": "xiong_biaoqing2",
+                "transform": {
+                    "scY": 1,
+                    "skY": 0,
+                    "x": -49,
+                    "scX": 1,
+                    "y": -232,
+                    "skX": 0
+                }
+            },
+            {
+                "name": "xiongyanijng",
+                "transform": {
+                    "scY": 1,
+                    "skY": 0,
+                    "x": -52.9,
+                    "scX": 1,
+                    "y": -233.75,
+                    "skX": 0
+                }
+            },
+            {
+                "name": "xiong_biaoqing1",
+                "transform": {
+                    "scY": 1,
+                    "skY": 0,
+                    "x": -52,
+                    "scX": 1,
+                    "y": -165.25,
+                    "skX": 0
+                }
+            },
+            {
+                "name": "xiong_youerduo",
+                "transform": {
+                    "scY": 1,
+                    "skY": 0,
+                    "x": 54.5,
+                    "scX": 1,
+                    "y": -285.45,
+                    "skX": 0
+                }
+            },
+            {
+                "name": "xiong_naodai",
+                "transform": {
+                    "scY": 1,
+                    "skY": 0,
+                    "x": -9,
+                    "scX": 1,
+                    "y": -158,
+                    "skX": 0
+                }
+            },
+            {
+                "name": "xiong_zuoerduo",
+                "transform": {
+                    "scY": 1,
+                    "skY": 0,
+                    "x": -105,
+                    "scX": 1,
+                    "y": -270.95,
+                    "skX": 0
+                }
+            },
+            {
+                "name": "xiong_weibo",
+                "transform": {
+                    "scY": 1,
+                    "skY": 0,
+                    "x": -15.45,
+                    "scX": 1,
+                    "y": -90.95,
+                    "skX": 0
+                }
+            },
+            {
+                "name": "xiong_yougebo",
+                "transform": {
+                    "scY": 1,
+                    "skY": 0,
+                    "x": 104,
+                    "scX": 1,
+                    "y": -132.95,
+                    "skX": 0
+                }
+            },
+            {
+                "name": "xiong_shenti2",
+                "transform": {
+                    "scY": 1,
+                    "skY": 0,
+                    "x": -49.45,
+                    "scX": 1,
+                    "y": -1.5,
+                    "skX": 0
+                }
+            },
+            {
+                "name": "xiong_zuogebo",
+                "transform": {
+                    "scY": 1,
+                    "skY": 0,
+                    "x": -120.5,
+                    "scX": 1,
+                    "y": -110,
+                    "skX": 0
+                }
+            }
+        ],
+        "name": "bear",
+        "animation": [
+            {
+                "name": "play01",
+                "fadeInTime": 0,
+                "scale": 5,
+                "duration": 25,
+                "loop": 0,
+                "tweenEasing": null,
+                "timeline": [
+                    {
+                        "frame": [
+                            {
+                                "duration": 11,
+                                "z": 0,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -120.5,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -110,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "duration": 1,
+                                "z": 0,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -120.5,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -110,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "duration": 1,
+                                "z": 0,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -120.5,
+                                    "scX": 1,
+                                    "pX": -0.05,
+                                    "skY": -3.72,
+                                    "pY": 0,
+                                    "y": -110,
+                                    "skX": -3.72
+                                }
+                            },
+                            {
+                                "duration": 7,
+                                "z": 0,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -120.5,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -110,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "duration": 1,
+                                "z": 0,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -120.5,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -110,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "duration": 1,
+                                "z": 0,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -120.5,
+                                    "scX": 1,
+                                    "pX": -0.05,
+                                    "skY": -3.72,
+                                    "pY": 0,
+                                    "y": -110,
+                                    "skX": -3.72
+                                }
+                            },
+                            {
+                                "duration": 1,
+                                "z": 0,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -120.5,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -110,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "duration": 1,
+                                "z": 0,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -120.5,
+                                    "scX": 1,
+                                    "pX": -0.05,
+                                    "skY": -3.72,
+                                    "pY": 0,
+                                    "y": -110,
+                                    "skX": -3.72
+                                }
+                            },
+                            {
+                                "duration": 1,
+                                "z": 0,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -120.5,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -110,
+                                    "skX": 0
+                                }
+                            }
+                        ],
+                        "name": "xiong_zuogebo",
+                        "offset": 0,
+                        "scale": 1
+                    },
+                    {
+                        "frame": [
+                            {
+                                "duration": 19,
+                                "z": 1,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -49.45,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -1.5,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "duration": 2,
+                                "z": 1,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -49.45,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -1.5,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "duration": 4,
+                                "z": 1,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -49.45,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -1.5,
+                                    "skX": 0
+                                }
+                            }
+                        ],
+                        "name": "xiong_shenti2",
+                        "offset": 0,
+                        "scale": 1
+                    },
+                    {
+                        "frame": [
+                            {
+                                "duration": 11,
+                                "z": 3,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 104,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -132.95,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "duration": 1,
+                                "z": 3,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 104,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -132.95,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "duration": 1,
+                                "z": 3,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 104,
+                                    "scX": 1,
+                                    "pX": 0.05,
+                                    "skY": 2.97,
+                                    "pY": -0.05,
+                                    "y": -132.95,
+                                    "skX": 2.97
+                                }
+                            },
+                            {
+                                "duration": 7,
+                                "z": 3,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 104,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -132.95,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "duration": 1,
+                                "z": 3,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 104,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -132.95,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "duration": 1,
+                                "z": 3,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 104,
+                                    "scX": 1,
+                                    "pX": 0.05,
+                                    "skY": 2.97,
+                                    "pY": -0.05,
+                                    "y": -132.95,
+                                    "skX": 2.97
+                                }
+                            },
+                            {
+                                "duration": 1,
+                                "z": 3,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 104,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -132.95,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "duration": 1,
+                                "z": 3,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 104,
+                                    "scX": 1,
+                                    "pX": 0.05,
+                                    "skY": 2.97,
+                                    "pY": -0.05,
+                                    "y": -132.95,
+                                    "skX": 2.97
+                                }
+                            },
+                            {
+                                "duration": 1,
+                                "z": 3,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 104,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -132.95,
+                                    "skX": 0
+                                }
+                            }
+                        ],
+                        "name": "xiong_yougebo",
+                        "offset": 0,
+                        "scale": 1
+                    },
+                    {
+                        "frame": [
+                            {
+                                "duration": 19,
+                                "z": 5,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -15.45,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -90.95,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "duration": 2,
+                                "z": 5,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -15.45,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -90.95,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "duration": 4,
+                                "z": 5,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -15.45,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -90.95,
+                                    "skX": 0
+                                }
+                            }
+                        ],
+                        "name": "xiong_weibo",
+                        "offset": 0,
+                        "scale": 1
+                    },
+                    {
+                        "frame": [
+                            {
+                                "duration": 10,
+                                "z": 6,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -105,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -270.95,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "duration": 1,
+                                "z": 6,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -105,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -270.95,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "duration": 1,
+                                "z": 6,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -105,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 3.21,
+                                    "pY": -0.1,
+                                    "y": -271.45,
+                                    "skX": 3.21
+                                }
+                            },
+                            {
+                                "duration": 7,
+                                "z": 6,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -105,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -270.95,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "duration": 1,
+                                "z": 6,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -105,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -270.95,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "duration": 1,
+                                "z": 6,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -105,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 3.21,
+                                    "pY": -0.1,
+                                    "y": -271.45,
+                                    "skX": 3.21
+                                }
+                            },
+                            {
+                                "duration": 1,
+                                "z": 6,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -105,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -270.95,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "duration": 1,
+                                "z": 6,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -105,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 3.21,
+                                    "pY": -0.1,
+                                    "y": -271.45,
+                                    "skX": 3.21
+                                }
+                            },
+                            {
+                                "duration": 2,
+                                "z": 6,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -105,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -270.95,
+                                    "skX": 0
+                                }
+                            }
+                        ],
+                        "name": "xiong_zuoerduo",
+                        "offset": 0,
+                        "scale": 1
+                    },
+                    {
+                        "frame": [
+                            {
+                                "duration": 19,
+                                "z": 7,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -9,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -158,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "duration": 2,
+                                "z": 7,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -9,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -158,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "duration": 4,
+                                "z": 7,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -9,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -158,
+                                    "skX": 0
+                                }
+                            }
+                        ],
+                        "name": "xiong_naodai",
+                        "offset": 0,
+                        "scale": 1
+                    },
+                    {
+                        "frame": [
+                            {
+                                "duration": 10,
+                                "z": 9,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 54.5,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -285.45,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "duration": 1,
+                                "z": 9,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 54.5,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -285.45,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "duration": 1,
+                                "z": 9,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 54.5,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": -2.92,
+                                    "pY": 0.05,
+                                    "y": -285.95,
+                                    "skX": -2.92
+                                }
+                            },
+                            {
+                                "duration": 7,
+                                "z": 9,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 54.5,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -285.45,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "duration": 1,
+                                "z": 9,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 54.5,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -285.45,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "duration": 1,
+                                "z": 9,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 54.5,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": -2.92,
+                                    "pY": 0.05,
+                                    "y": -285.95,
+                                    "skX": -2.92
+                                }
+                            },
+                            {
+                                "duration": 1,
+                                "z": 9,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 54.5,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -285.45,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "duration": 1,
+                                "z": 9,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 54.5,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": -2.92,
+                                    "pY": 0.05,
+                                    "y": -285.95,
+                                    "skX": -2.92
+                                }
+                            },
+                            {
+                                "duration": 2,
+                                "z": 9,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 54.5,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -285.45,
+                                    "skX": 0
+                                }
+                            }
+                        ],
+                        "name": "xiong_youerduo",
+                        "offset": 0,
+                        "scale": 1
+                    },
+                    {
+                        "frame": [
+                            {
+                                "duration": 10,
+                                "z": 25,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -52,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -165.25,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "duration": 1,
+                                "z": 25,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -52,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -165.25,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "duration": 1,
+                                "z": 25,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 0.97,
+                                    "x": -52,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -166.25,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "duration": 7,
+                                "z": 25,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -52,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -165.25,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "duration": 1,
+                                "z": 25,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -52,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -165.25,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "duration": 1,
+                                "z": 25,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 0.97,
+                                    "x": -52,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -166.25,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "duration": 1,
+                                "z": 25,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -52,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -165.25,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "duration": 1,
+                                "z": 25,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 0.97,
+                                    "x": -52,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -166.25,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "duration": 2,
+                                "z": 25,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -52,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -165.25,
+                                    "skX": 0
+                                }
+                            }
+                        ],
+                        "name": "xiong_biaoqing1",
+                        "offset": 0,
+                        "scale": 1
+                    },
+                    {
+                        "frame": [
+                            {
+                                "duration": 10,
+                                "z": 26,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -52.9,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -233.75,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "duration": 1,
+                                "z": 26,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -52.9,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -233.75,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "duration": 1,
+                                "z": 26,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -52.9,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -231.75,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "duration": 7,
+                                "z": 26,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -52.9,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -233.75,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "duration": 1,
+                                "z": 26,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -52.9,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -233.75,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "duration": 1,
+                                "z": 26,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -52.9,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -231.75,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "duration": 1,
+                                "z": 26,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -52.9,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -233.75,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "duration": 1,
+                                "z": 26,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -52.9,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -231.75,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "duration": 2,
+                                "z": 26,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -52.9,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -233.75,
+                                    "skX": 0
+                                }
+                            }
+                        ],
+                        "name": "xiongyanijng",
+                        "offset": 0,
+                        "scale": 1
+                    }
+                ]
+            },
+            {
+                "name": "play02",
+                "fadeInTime": 0,
+                "scale": 6,
+                "duration": 17,
+                "loop": 0,
+                "tweenEasing": null,
+                "timeline": [
+                    {
+                        "frame": [
+                            {
+                                "duration": 9,
+                                "z": 0,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -120.5,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -110,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "duration": 7,
+                                "z": 0,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -120.5,
+                                    "scX": 1,
+                                    "pX": -0.05,
+                                    "skY": -1.76,
+                                    "pY": 0,
+                                    "y": -110,
+                                    "skX": -1.76
+                                }
+                            },
+                            {
+                                "duration": 1,
+                                "z": 0,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -120.5,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -110,
+                                    "skX": 0
+                                }
+                            }
+                        ],
+                        "name": "xiong_zuogebo",
+                        "offset": 0,
+                        "scale": 1
+                    },
+                    {
+                        "frame": [
+                            {
+                                "duration": 9,
+                                "z": 1,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -49.45,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -1.5,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "duration": 7,
+                                "z": 1,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -49.45,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -1.5,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "duration": 1,
+                                "z": 1,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -49.45,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -1.5,
+                                    "skX": 0
+                                }
+                            }
+                        ],
+                        "name": "xiong_shenti2",
+                        "offset": 0,
+                        "scale": 1
+                    },
+                    {
+                        "frame": [
+                            {
+                                "duration": 9,
+                                "z": 3,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 104,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -132.95,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "duration": 7,
+                                "z": 3,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 104,
+                                    "scX": 1,
+                                    "pX": 0.05,
+                                    "skY": 2.26,
+                                    "pY": -0.05,
+                                    "y": -132.95,
+                                    "skX": 2.26
+                                }
+                            },
+                            {
+                                "duration": 1,
+                                "z": 3,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 104,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -132.95,
+                                    "skX": 0
+                                }
+                            }
+                        ],
+                        "name": "xiong_yougebo",
+                        "offset": 0,
+                        "scale": 1
+                    },
+                    {
+                        "frame": [
+                            {
+                                "duration": 9,
+                                "z": 5,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -15.45,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -90.95,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "duration": 7,
+                                "z": 5,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -15.45,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -89.95,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "duration": 1,
+                                "z": 5,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -15.45,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -90.95,
+                                    "skX": 0
+                                }
+                            }
+                        ],
+                        "name": "xiong_weibo",
+                        "offset": 0,
+                        "scale": 1
+                    },
+                    {
+                        "frame": [
+                            {
+                                "duration": 9,
+                                "z": 6,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -105,
+                                    "scX": 1,
+                                    "pX": -0.05,
+                                    "skY": -15,
+                                    "pY": 0,
+                                    "y": -270.95,
+                                    "skX": -15
+                                }
+                            },
+                            {
+                                "duration": 7,
+                                "z": 6,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -105,
+                                    "scX": 1,
+                                    "pX": -0.05,
+                                    "skY": -15,
+                                    "pY": 0,
+                                    "y": -268.95,
+                                    "skX": -15
+                                }
+                            },
+                            {
+                                "duration": 1,
+                                "z": 6,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -105,
+                                    "scX": 1,
+                                    "pX": -0.05,
+                                    "skY": -15,
+                                    "pY": 0,
+                                    "y": -270.95,
+                                    "skX": -15
+                                }
+                            }
+                        ],
+                        "name": "xiong_zuoerduo",
+                        "offset": 0,
+                        "scale": 1
+                    },
+                    {
+                        "frame": [
+                            {
+                                "duration": 9,
+                                "z": 7,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -9,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -158,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "duration": 7,
+                                "z": 7,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -9,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -156,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "duration": 1,
+                                "z": 7,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -9,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -158,
+                                    "skX": 0
+                                }
+                            }
+                        ],
+                        "name": "xiong_naodai",
+                        "offset": 0,
+                        "scale": 1
+                    },
+                    {
+                        "frame": [
+                            {
+                                "duration": 9,
+                                "z": 9,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 54.5,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 15,
+                                    "pY": -0.05,
+                                    "y": -285.45,
+                                    "skX": 15
+                                }
+                            },
+                            {
+                                "duration": 7,
+                                "z": 9,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 54.5,
+                                    "scX": 1,
+                                    "pX": -0.05,
+                                    "skY": 15,
+                                    "pY": -0.05,
+                                    "y": -283.45,
+                                    "skX": 15
+                                }
+                            },
+                            {
+                                "duration": 1,
+                                "z": 9,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 54.5,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 15,
+                                    "pY": -0.05,
+                                    "y": -285.45,
+                                    "skX": 15
+                                }
+                            }
+                        ],
+                        "name": "xiong_youerduo",
+                        "offset": 0,
+                        "scale": 1
+                    },
+                    {
+                        "frame": [
+                            {
+                                "duration": 9,
+                                "z": 23,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -49,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -232,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "duration": 7,
+                                "z": 23,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -49,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -230,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "duration": 1,
+                                "z": 23,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -49,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -232,
+                                    "skX": 0
+                                }
+                            }
+                        ],
+                        "name": "xiong_biaoqing2",
+                        "offset": 0,
+                        "scale": 1
+                    },
+                    {
+                        "frame": [
+                            {
+                                "duration": 9,
+                                "z": 24,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 10,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -218.9,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "duration": 7,
+                                "z": 24,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 10,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 15,
+                                    "pY": 0.05,
+                                    "y": -217.9,
+                                    "skX": 15
+                                }
+                            },
+                            {
+                                "duration": 1,
+                                "z": 24,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 10,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -218.9,
+                                    "skX": 0
+                                }
+                            }
+                        ],
+                        "name": "xiongyanlei",
+                        "offset": 0,
+                        "scale": 1
+                    }
+                ]
+            },
+            {
+                "name": "play03",
+                "fadeInTime": 0,
+                "scale": 5,
+                "duration": 16,
+                "loop": 0,
+                "tweenEasing": null,
+                "timeline": [
+                    {
+                        "frame": [
+                            {
+                                "duration": 9,
+                                "z": 0,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -120.5,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -110,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "duration": 6,
+                                "z": 0,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -120.45,
+                                    "scX": 1,
+                                    "pX": -0.1,
+                                    "skY": -1,
+                                    "pY": 0.05,
+                                    "y": -110,
+                                    "skX": -1
+                                }
+                            },
+                            {
+                                "duration": 1,
+                                "z": 0,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -120.5,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -110,
+                                    "skX": 0
+                                }
+                            }
+                        ],
+                        "name": "xiong_zuogebo",
+                        "offset": 0,
+                        "scale": 1
+                    },
+                    {
+                        "frame": [
+                            {
+                                "duration": 16,
+                                "z": 1,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -49.45,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -1.5,
+                                    "skX": 0
+                                }
+                            }
+                        ],
+                        "name": "xiong_shenti2",
+                        "offset": 0,
+                        "scale": 1
+                    },
+                    {
+                        "frame": [
+                            {
+                                "duration": 9,
+                                "z": 3,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 104,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -132.95,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "duration": 6,
+                                "z": 3,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 104,
+                                    "scX": 1,
+                                    "pX": 0.1,
+                                    "skY": 1,
+                                    "pY": 0,
+                                    "y": -132.95,
+                                    "skX": 1
+                                }
+                            },
+                            {
+                                "duration": 1,
+                                "z": 3,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 104,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -132.95,
+                                    "skX": 0
+                                }
+                            }
+                        ],
+                        "name": "xiong_yougebo",
+                        "offset": 0,
+                        "scale": 1
+                    },
+                    {
+                        "frame": [
+                            {
+                                "duration": 16,
+                                "z": 5,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -15.45,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -90.95,
+                                    "skX": 0
+                                }
+                            }
+                        ],
+                        "name": "xiong_weibo",
+                        "offset": 0,
+                        "scale": 1
+                    },
+                    {
+                        "frame": [
+                            {
+                                "duration": 16,
+                                "z": 6,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -105,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -270.95,
+                                    "skX": 0
+                                }
+                            }
+                        ],
+                        "name": "xiong_zuoerduo",
+                        "offset": 0,
+                        "scale": 1
+                    },
+                    {
+                        "frame": [
+                            {
+                                "duration": 16,
+                                "z": 7,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -9,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -158,
+                                    "skX": 0
+                                }
+                            }
+                        ],
+                        "name": "xiong_naodai",
+                        "offset": 0,
+                        "scale": 1
+                    },
+                    {
+                        "frame": [
+                            {
+                                "duration": 9,
+                                "z": 9,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 54.5,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -285.45,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "duration": 1,
+                                "z": 9,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 54.5,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -285.45,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "duration": 1,
+                                "z": 9,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 54.6,
+                                    "scX": 1,
+                                    "pX": 0.1,
+                                    "skY": 1.07,
+                                    "pY": 0.05,
+                                    "y": -285.25,
+                                    "skX": 1.07
+                                }
+                            },
+                            {
+                                "duration": 5,
+                                "z": 9,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 54.5,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -285.45,
+                                    "skX": 0
+                                }
+                            }
+                        ],
+                        "name": "xiong_youerduo",
+                        "offset": 0,
+                        "scale": 1
+                    },
+                    {
+                        "frame": [
+                            {
+                                "duration": 16,
+                                "z": 10,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 37.65,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -81.15,
+                                    "skX": 0
+                                }
+                            }
+                        ],
+                        "name": "xiong_weibo2",
+                        "offset": 0,
+                        "scale": 1
+                    },
+                    {
+                        "frame": [
+                            {
+                                "duration": 9,
+                                "z": 11,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 42,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -275.4,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "duration": 1,
+                                "z": 11,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 42,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -275.4,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "duration": 1,
+                                "z": 11,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 42,
+                                    "scX": 1,
+                                    "pX": -0.05,
+                                    "skY": 1.07,
+                                    "pY": 0,
+                                    "y": -275.4,
+                                    "skX": 1.07
+                                }
+                            },
+                            {
+                                "duration": 5,
+                                "z": 11,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 42,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -275.4,
+                                    "skX": 0
+                                }
+                            }
+                        ],
+                        "name": "xiong_bengdaierduo",
+                        "offset": 0,
+                        "scale": 1
+                    },
+                    {
+                        "frame": [
+                            {
+                                "duration": 16,
+                                "z": 12,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -42,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -179.5,
+                                    "skX": 0
+                                }
+                            }
+                        ],
+                        "name": "xiong_biaoqing3",
+                        "offset": 0,
+                        "scale": 1
+                    },
+                    {
+                        "frame": [
+                            {
+                                "duration": 1,
+                                "z": 14,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -99.5,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -239.7,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "duration": 1,
+                                "z": 14,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -99.5,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -238.7,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "duration": 14,
+                                "z": 14,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -99.5,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -239.7,
+                                    "skX": 0
+                                }
+                            }
+                        ],
+                        "name": "xiong_yanjing2",
+                        "offset": 0,
+                        "scale": 1
+                    },
+                    {
+                        "frame": [
+                            {
+                                "duration": 1,
+                                "z": 15,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 55.2,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -213.9,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "displayIndex": -1,
+                                "duration": 7
+                            },
+                            {
+                                "duration": 1,
+                                "z": 15,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 55.2,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -213.9,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "displayIndex": -1,
+                                "duration": 7
+                            }
+                        ],
+                        "name": "xiong_yanlei01",
+                        "offset": 0,
+                        "scale": 1
+                    },
+                    {
+                        "frame": [
+                            {
+                                "displayIndex": -1,
+                                "duration": 1
+                            },
+                            {
+                                "duration": 1,
+                                "z": 16,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 58.55,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -216.6,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "displayIndex": -1,
+                                "duration": 7
+                            },
+                            {
+                                "duration": 1,
+                                "z": 16,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 58.55,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -216.6,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "displayIndex": -1,
+                                "duration": 6
+                            }
+                        ],
+                        "name": "xiong_yanlei02",
+                        "offset": 0,
+                        "scale": 1
+                    },
+                    {
+                        "frame": [
+                            {
+                                "displayIndex": -1,
+                                "duration": 2
+                            },
+                            {
+                                "duration": 1,
+                                "z": 17,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 62.8,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -217.05,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "displayIndex": -1,
+                                "duration": 7
+                            },
+                            {
+                                "duration": 1,
+                                "z": 17,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 62.8,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -217.05,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "displayIndex": -1,
+                                "duration": 5
+                            }
+                        ],
+                        "name": "xiong_yanlei03",
+                        "offset": 0,
+                        "scale": 1
+                    },
+                    {
+                        "frame": [
+                            {
+                                "displayIndex": -1,
+                                "duration": 3
+                            },
+                            {
+                                "duration": 1,
+                                "z": 18,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 75,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -226.65,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "displayIndex": -1,
+                                "duration": 7
+                            },
+                            {
+                                "duration": 1,
+                                "z": 18,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 75,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -226.65,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "displayIndex": -1,
+                                "duration": 4
+                            }
+                        ],
+                        "name": "xiong_yanlei04",
+                        "offset": 0,
+                        "scale": 1
+                    },
+                    {
+                        "frame": [
+                            {
+                                "displayIndex": -1,
+                                "duration": 4
+                            },
+                            {
+                                "duration": 1,
+                                "z": 19,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 96.45,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -223.8,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "displayIndex": -1,
+                                "duration": 7
+                            },
+                            {
+                                "duration": 1,
+                                "z": 19,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 96.45,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -223.8,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "displayIndex": -1,
+                                "duration": 3
+                            }
+                        ],
+                        "name": "xiong_yanlei05",
+                        "offset": 0,
+                        "scale": 1
+                    },
+                    {
+                        "frame": [
+                            {
+                                "displayIndex": -1,
+                                "duration": 5
+                            },
+                            {
+                                "duration": 1,
+                                "z": 20,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 98.05,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -222.05,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "displayIndex": -1,
+                                "duration": 7
+                            },
+                            {
+                                "duration": 1,
+                                "z": 20,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 98.05,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -222.05,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "displayIndex": -1,
+                                "duration": 2
+                            }
+                        ],
+                        "name": "xiong_yanlei06",
+                        "offset": 0,
+                        "scale": 1
+                    },
+                    {
+                        "frame": [
+                            {
+                                "displayIndex": -1,
+                                "duration": 6
+                            },
+                            {
+                                "duration": 1,
+                                "z": 21,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 94.1,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -223.55,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "displayIndex": -1,
+                                "duration": 7
+                            },
+                            {
+                                "duration": 1,
+                                "z": 21,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 94.1,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -223.55,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "displayIndex": -1,
+                                "duration": 1
+                            }
+                        ],
+                        "name": "xiong_yanlei07",
+                        "offset": 0,
+                        "scale": 1
+                    },
+                    {
+                        "frame": [
+                            {
+                                "displayIndex": -1,
+                                "duration": 7
+                            },
+                            {
+                                "duration": 1,
+                                "z": 22,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 95,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -224.55,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "displayIndex": -1,
+                                "duration": 7
+                            },
+                            {
+                                "duration": 1,
+                                "z": 22,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 95,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -224.55,
+                                    "skX": 0
+                                }
+                            }
+                        ],
+                        "name": "xiong_yanlei08",
+                        "offset": 0,
+                        "scale": 1
+                    }
+                ]
+            },
+            {
+                "name": "play04",
+                "fadeInTime": 0,
+                "scale": 5,
+                "duration": 16,
+                "loop": 0,
+                "tweenEasing": null,
+                "timeline": [
+                    {
+                        "frame": [
+                            {
+                                "duration": 9,
+                                "z": 0,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -120.5,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -110,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "duration": 6,
+                                "z": 0,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -120.45,
+                                    "scX": 1,
+                                    "pX": -0.1,
+                                    "skY": -1,
+                                    "pY": 0.05,
+                                    "y": -110,
+                                    "skX": -1
+                                }
+                            },
+                            {
+                                "duration": 1,
+                                "z": 0,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -120.5,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -110,
+                                    "skX": 0
+                                }
+                            }
+                        ],
+                        "name": "xiong_zuogebo",
+                        "offset": 0,
+                        "scale": 1
+                    },
+                    {
+                        "frame": [
+                            {
+                                "duration": 16,
+                                "z": 2,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 10.5,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -71.5,
+                                    "skX": 0
+                                }
+                            }
+                        ],
+                        "name": "bengdaishenti",
+                        "offset": 0,
+                        "scale": 1
+                    },
+                    {
+                        "frame": [
+                            {
+                                "duration": 9,
+                                "z": 4,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 109.5,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -135.3,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "duration": 6,
+                                "z": 4,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 109.5,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 1.23,
+                                    "pY": -0.1,
+                                    "y": -135.3,
+                                    "skX": 1.23
+                                }
+                            },
+                            {
+                                "duration": 1,
+                                "z": 4,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 109.5,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -135.3,
+                                    "skX": 0
+                                }
+                            }
+                        ],
+                        "name": "bengdaigebo",
+                        "offset": 0,
+                        "scale": 1
+                    },
+                    {
+                        "frame": [
+                            {
+                                "duration": 16,
+                                "z": 5,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -15.45,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -90.95,
+                                    "skX": 0
+                                }
+                            }
+                        ],
+                        "name": "xiong_weibo",
+                        "offset": 0,
+                        "scale": 1
+                    },
+                    {
+                        "frame": [
+                            {
+                                "duration": 16,
+                                "z": 6,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -105,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -270.95,
+                                    "skX": 0
+                                }
+                            }
+                        ],
+                        "name": "xiong_zuoerduo",
+                        "offset": 0,
+                        "scale": 1
+                    },
+                    {
+                        "frame": [
+                            {
+                                "duration": 16,
+                                "z": 7,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -9,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -158,
+                                    "skX": 0
+                                }
+                            }
+                        ],
+                        "name": "xiong_naodai",
+                        "offset": 0,
+                        "scale": 1
+                    },
+                    {
+                        "frame": [
+                            {
+                                "duration": 16,
+                                "z": 8,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -18.5,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -222.5,
+                                    "skX": 0
+                                }
+                            }
+                        ],
+                        "name": "bengdaitou",
+                        "offset": 0,
+                        "scale": 1
+                    },
+                    {
+                        "frame": [
+                            {
+                                "duration": 16,
+                                "z": 10,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 37.65,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -81.15,
+                                    "skX": 0
+                                }
+                            }
+                        ],
+                        "name": "xiong_weibo2",
+                        "offset": 0,
+                        "scale": 1
+                    },
+                    {
+                        "frame": [
+                            {
+                                "duration": 9,
+                                "z": 11,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 42,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -275.4,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "duration": 1,
+                                "z": 11,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 42,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -275.4,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "duration": 1,
+                                "z": 11,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 42.05,
+                                    "scX": 1,
+                                    "pX": -0.1,
+                                    "skY": 1.07,
+                                    "pY": 0,
+                                    "y": -275.4,
+                                    "skX": 1.07
+                                }
+                            },
+                            {
+                                "duration": 5,
+                                "z": 11,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 42,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -275.4,
+                                    "skX": 0
+                                }
+                            }
+                        ],
+                        "name": "xiong_bengdaierduo",
+                        "offset": 0,
+                        "scale": 1
+                    },
+                    {
+                        "frame": [
+                            {
+                                "duration": 16,
+                                "z": 13,
+                                "displayIndex": 1,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -42,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -179.5,
+                                    "skX": 0
+                                }
+                            }
+                        ],
+                        "name": "xiong_biaoqing3",
+                        "offset": 0,
+                        "scale": 1
+                    },
+                    {
+                        "frame": [
+                            {
+                                "duration": 1,
+                                "z": 14,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -99.5,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -239.7,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "duration": 1,
+                                "z": 14,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -99.5,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -238.7,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "duration": 14,
+                                "z": 14,
+                                "tweenEasing": 0,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -99.5,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -239.7,
+                                    "skX": 0
+                                }
+                            }
+                        ],
+                        "name": "xiong_yanjing2",
+                        "offset": 0,
+                        "scale": 1
+                    },
+                    {
+                        "frame": [
+                            {
+                                "duration": 1,
+                                "z": 15,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 55.2,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -213.9,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "displayIndex": -1,
+                                "duration": 7
+                            },
+                            {
+                                "duration": 1,
+                                "z": 15,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 55.2,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -213.9,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "displayIndex": -1,
+                                "duration": 7
+                            }
+                        ],
+                        "name": "xiong_yanlei01",
+                        "offset": 0,
+                        "scale": 1
+                    },
+                    {
+                        "frame": [
+                            {
+                                "displayIndex": -1,
+                                "duration": 1
+                            },
+                            {
+                                "duration": 1,
+                                "z": 16,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 58.55,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -216.6,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "displayIndex": -1,
+                                "duration": 7
+                            },
+                            {
+                                "duration": 1,
+                                "z": 16,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 58.55,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -216.6,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "displayIndex": -1,
+                                "duration": 6
+                            }
+                        ],
+                        "name": "xiong_yanlei02",
+                        "offset": 0,
+                        "scale": 1
+                    },
+                    {
+                        "frame": [
+                            {
+                                "displayIndex": -1,
+                                "duration": 2
+                            },
+                            {
+                                "duration": 1,
+                                "z": 17,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 62.8,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -217.05,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "displayIndex": -1,
+                                "duration": 7
+                            },
+                            {
+                                "duration": 1,
+                                "z": 17,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 62.8,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -217.05,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "displayIndex": -1,
+                                "duration": 5
+                            }
+                        ],
+                        "name": "xiong_yanlei03",
+                        "offset": 0,
+                        "scale": 1
+                    },
+                    {
+                        "frame": [
+                            {
+                                "displayIndex": -1,
+                                "duration": 3
+                            },
+                            {
+                                "duration": 1,
+                                "z": 18,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 75,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -226.65,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "displayIndex": -1,
+                                "duration": 7
+                            },
+                            {
+                                "duration": 1,
+                                "z": 18,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 75,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -226.65,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "displayIndex": -1,
+                                "duration": 4
+                            }
+                        ],
+                        "name": "xiong_yanlei04",
+                        "offset": 0,
+                        "scale": 1
+                    },
+                    {
+                        "frame": [
+                            {
+                                "displayIndex": -1,
+                                "duration": 4
+                            },
+                            {
+                                "duration": 1,
+                                "z": 19,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 96.45,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -223.8,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "displayIndex": -1,
+                                "duration": 7
+                            },
+                            {
+                                "duration": 1,
+                                "z": 19,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 96.45,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -223.8,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "displayIndex": -1,
+                                "duration": 3
+                            }
+                        ],
+                        "name": "xiong_yanlei05",
+                        "offset": 0,
+                        "scale": 1
+                    },
+                    {
+                        "frame": [
+                            {
+                                "displayIndex": -1,
+                                "duration": 5
+                            },
+                            {
+                                "duration": 1,
+                                "z": 20,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 98.05,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -222.05,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "displayIndex": -1,
+                                "duration": 7
+                            },
+                            {
+                                "duration": 1,
+                                "z": 20,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 98.05,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -222.05,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "displayIndex": -1,
+                                "duration": 2
+                            }
+                        ],
+                        "name": "xiong_yanlei06",
+                        "offset": 0,
+                        "scale": 1
+                    },
+                    {
+                        "frame": [
+                            {
+                                "displayIndex": -1,
+                                "duration": 6
+                            },
+                            {
+                                "duration": 1,
+                                "z": 21,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 94.1,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -223.55,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "displayIndex": -1,
+                                "duration": 7
+                            },
+                            {
+                                "duration": 1,
+                                "z": 21,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 94.1,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -223.55,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "displayIndex": -1,
+                                "duration": 1
+                            }
+                        ],
+                        "name": "xiong_yanlei07",
+                        "offset": 0,
+                        "scale": 1
+                    },
+                    {
+                        "frame": [
+                            {
+                                "displayIndex": -1,
+                                "duration": 7
+                            },
+                            {
+                                "duration": 1,
+                                "z": 22,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 95,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -224.55,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "displayIndex": -1,
+                                "duration": 7
+                            },
+                            {
+                                "duration": 1,
+                                "z": 22,
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 95,
+                                    "scX": 1,
+                                    "pX": 0,
+                                    "skY": 0,
+                                    "pY": 0,
+                                    "y": -224.55,
+                                    "skX": 0
+                                }
+                            }
+                        ],
+                        "name": "xiong_yanlei08",
+                        "offset": 0,
+                        "scale": 1
+                    }
+                ]
+            }
+        ],
+        "skin": [
+            {
+                "slot": [
+                    {
+                        "name": "xiong_zuogebo",
+                        "z": 0,
+                        "display": [
+                            {
+                                "type": "image",
+                                "name": "xiong_zuogebo",
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -33,
+                                    "scX": 1,
+                                    "pX": 77,
+                                    "skY": 0,
+                                    "pY": 67,
+                                    "y": 42.999,
+                                    "skX": 0
+                                }
+                            }
+                        ],
+                        "parent": "xiong_zuogebo"
+                    },
+                    {
+                        "name": "xiong_shenti2",
+                        "z": 1,
+                        "display": [
+                            {
+                                "type": "image",
+                                "name": "xiong_shenti2",
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 59.999,
+                                    "scX": 1,
+                                    "pX": 195.5,
+                                    "skY": 0,
+                                    "pY": 71.5,
+                                    "y": -70,
+                                    "skX": 0
+                                }
+                            }
+                        ],
+                        "parent": "xiong_shenti2"
+                    },
+                    {
+                        "name": "xiong_yougebo",
+                        "z": 3,
+                        "display": [
+                            {
+                                "type": "image",
+                                "name": "xiong_yougebo",
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 41.999,
+                                    "scX": 1,
+                                    "pX": 84.5,
+                                    "skY": 0,
+                                    "pY": 82,
+                                    "y": 47.999,
+                                    "skX": 0
+                                }
+                            }
+                        ],
+                        "parent": "xiong_yougebo"
+                    },
+                    {
+                        "name": "xiong_weibo",
+                        "z": 5,
+                        "display": [
+                            {
+                                "type": "image",
+                                "name": "xiong_weibo",
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 22.999,
+                                    "scX": 1,
+                                    "pX": 187.5,
+                                    "skY": 0,
+                                    "pY": 84,
+                                    "y": -50,
+                                    "skX": 0
+                                }
+                            }
+                        ],
+                        "parent": "xiong_weibo"
+                    },
+                    {
+                        "name": "xiong_zuoerduo",
+                        "z": 6,
+                        "display": [
+                            {
+                                "type": "image",
+                                "name": "xiong_zuoerduo",
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -24,
+                                    "scX": 1,
+                                    "pX": 41,
+                                    "skY": 0,
+                                    "pY": 43,
+                                    "y": -22,
+                                    "skX": 0
+                                }
+                            }
+                        ],
+                        "parent": "xiong_zuoerduo"
+                    },
+                    {
+                        "name": "xiong_naodai",
+                        "z": 7,
+                        "display": [
+                            {
+                                "type": "image",
+                                "name": "xiong_naodai",
+                                "transform": {
+                                    "scY": 1,
+                                    "x": -10,
+                                    "scX": 1,
+                                    "pX": 154,
+                                    "skY": 0,
+                                    "pY": 127,
+                                    "y": -65,
+                                    "skX": 0
+                                }
+                            }
+                        ],
+                        "parent": "xiong_naodai"
+                    },
+                    {
+                        "name": "xiong_youerduo",
+                        "z": 9,
+                        "display": [
+                            {
+                                "type": "image",
+                                "name": "xiong_youerduo",
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 12.999,
+                                    "scX": 1,
+                                    "pX": 50.5,
+                                    "skY": 0,
+                                    "pY": 44.5,
+                                    "y": -13,
+                                    "skX": 0
+                                }
+                            }
+                        ],
+                        "parent": "xiong_youerduo"
+                    },
+                    {
+                        "name": "xiong_biaoqing1",
+                        "z": 25,
+                        "display": [
+                            {
+                                "type": "image",
+                                "name": "xiong_zui1",
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 0,
+                                    "scX": 1,
+                                    "pX": 77.5,
+                                    "skY": 0,
+                                    "pY": 62.25,
+                                    "y": 0.049,
+                                    "skX": 0
+                                }
+                            }
+                        ],
+                        "parent": "xiong_biaoqing1"
+                    },
+                    {
+                        "name": "xiongyanijng",
+                        "z": 26,
+                        "display": [
+                            {
+                                "type": "image",
+                                "name": "xiong_yanjing1",
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 0.049,
+                                    "scX": 1,
+                                    "pX": 78.4,
+                                    "skY": 0,
+                                    "pY": 31.3,
+                                    "y": 0.049,
+                                    "skX": 0
+                                }
+                            }
+                        ],
+                        "parent": "xiongyanijng"
+                    },
+                    {
+                        "name": "xiong_biaoqing2",
+                        "z": 23,
+                        "display": [
+                            {
+                                "type": "image",
+                                "name": "xiong_biaoqing2",
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 0,
+                                    "scX": 1,
+                                    "pX": 85,
+                                    "skY": 0,
+                                    "pY": 253,
+                                    "y": 126.499,
+                                    "skX": 0
+                                }
+                            }
+                        ],
+                        "parent": "xiong_biaoqing2"
+                    },
+                    {
+                        "name": "xiongyanlei",
+                        "z": 24,
+                        "display": [
+                            {
+                                "type": "image",
+                                "name": "xiong_yanlei",
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 8.899,
+                                    "scX": 1,
+                                    "pX": 17.1,
+                                    "skY": 0,
+                                    "pY": 28.9,
+                                    "y": 23.399,
+                                    "skX": 0
+                                }
+                            }
+                        ],
+                        "parent": "xiongyanlei"
+                    },
+                    {
+                        "name": "xiong_weibo2",
+                        "z": 10,
+                        "display": [
+                            {
+                                "type": "image",
+                                "name": "xiong_weibo2",
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 55.999,
+                                    "scX": 1,
+                                    "pX": 142.85,
+                                    "skY": 0,
+                                    "pY": 61.65,
+                                    "y": -26,
+                                    "skX": 0
+                                }
+                            }
+                        ],
+                        "parent": "xiong_weibo2"
+                    },
+                    {
+                        "name": "xiong_bengdaierduo",
+                        "z": 11,
+                        "display": [
+                            {
+                                "type": "image",
+                                "name": "xiong_bengdaierduo",
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 26.999,
+                                    "scX": 1,
+                                    "pX": 55.5,
+                                    "skY": 0,
+                                    "pY": 47,
+                                    "y": -23,
+                                    "skX": 0
+                                }
+                            }
+                        ],
+                        "parent": "xiong_bengdaierduo"
+                    },
+                    {
+                        "name": "xiong_biaoqing3",
+                        "z": 12,
+                        "display": [
+                            {
+                                "type": "image",
+                                "name": "xiong_biaoqing3",
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 93.999,
+                                    "scX": 1,
+                                    "pX": 185.5,
+                                    "skY": 0,
+                                    "pY": 81.9,
+                                    "y": -16,
+                                    "skX": 0
+                                }
+                            },
+                            {
+                                "type": "image",
+                                "name": "xiong_biaoqing31",
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 93.999,
+                                    "scX": 1,
+                                    "pX": 185.5,
+                                    "skY": 0,
+                                    "pY": 81.9,
+                                    "y": -16,
+                                    "skX": 0
+                                }
+                            }
+                        ],
+                        "parent": "xiong_biaoqing3"
+                    },
+                    {
+                        "name": "xiong_yanjing2",
+                        "z": 14,
+                        "display": [
+                            {
+                                "type": "image",
+                                "name": "xiong_yanjing2",
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 0,
+                                    "scX": 1,
+                                    "pX": 33,
+                                    "skY": 0,
+                                    "pY": 38.2,
+                                    "y": 0,
+                                    "skX": 0
+                                }
+                            }
+                        ],
+                        "parent": "xiong_yanjing2"
+                    },
+                    {
+                        "name": "xiong_yanlei01",
+                        "z": 15,
+                        "display": [
+                            {
+                                "type": "image",
+                                "name": "xiong_yanlei01",
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 0,
+                                    "scX": 1,
+                                    "pX": 69.75,
+                                    "skY": 0,
+                                    "pY": 10.95,
+                                    "y": 0,
+                                    "skX": 0
+                                }
+                            }
+                        ],
+                        "parent": "xiong_yanlei01"
+                    },
+                    {
+                        "name": "xiong_yanlei02",
+                        "z": 16,
+                        "display": [
+                            {
+                                "type": "image",
+                                "name": "xiong_yanlei02",
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 0,
+                                    "scX": 1,
+                                    "pX": 72.25,
+                                    "skY": 0,
+                                    "pY": 12.2,
+                                    "y": 0.049,
+                                    "skX": 0
+                                }
+                            }
+                        ],
+                        "parent": "xiong_yanlei02"
+                    },
+                    {
+                        "name": "xiong_yanlei03",
+                        "z": 17,
+                        "display": [
+                            {
+                                "type": "image",
+                                "name": "xiong_yanlei03",
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 0,
+                                    "scX": 1,
+                                    "pX": 77.15,
+                                    "skY": 0,
+                                    "pY": 26.1,
+                                    "y": 0.049,
+                                    "skX": 0
+                                }
+                            }
+                        ],
+                        "parent": "xiong_yanlei03"
+                    },
+                    {
+                        "name": "xiong_yanlei04",
+                        "z": 18,
+                        "display": [
+                            {
+                                "type": "image",
+                                "name": "xiong_yanlei04",
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 0,
+                                    "scX": 1,
+                                    "pX": 90.55,
+                                    "skY": 0,
+                                    "pY": 23.85,
+                                    "y": 0.049,
+                                    "skX": 0
+                                }
+                            }
+                        ],
+                        "parent": "xiong_yanlei04"
+                    },
+                    {
+                        "name": "xiong_yanlei05",
+                        "z": 19,
+                        "display": [
+                            {
+                                "type": "image",
+                                "name": "xiong_yanlei05",
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 0,
+                                    "scX": 1,
+                                    "pX": 107.55,
+                                    "skY": 0,
+                                    "pY": 21.45,
+                                    "y": 0,
+                                    "skX": 0
+                                }
+                            }
+                        ],
+                        "parent": "xiong_yanlei05"
+                    },
+                    {
+                        "name": "xiong_yanlei06",
+                        "z": 20,
+                        "display": [
+                            {
+                                "type": "image",
+                                "name": "xiong_yanlei06",
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 0,
+                                    "scX": 1,
+                                    "pX": 107.15,
+                                    "skY": 0,
+                                    "pY": 22.65,
+                                    "y": 0,
+                                    "skX": 0
+                                }
+                            }
+                        ],
+                        "parent": "xiong_yanlei06"
+                    },
+                    {
+                        "name": "xiong_yanlei07",
+                        "z": 21,
+                        "display": [
+                            {
+                                "type": "image",
+                                "name": "xiong_yanlei07",
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 0,
+                                    "scX": 1,
+                                    "pX": 114.35,
+                                    "skY": 0,
+                                    "pY": 27.4,
+                                    "y": 0,
+                                    "skX": 0
+                                }
+                            }
+                        ],
+                        "parent": "xiong_yanlei07"
+                    },
+                    {
+                        "name": "xiong_yanlei08",
+                        "z": 22,
+                        "display": [
+                            {
+                                "type": "image",
+                                "name": "xiong_yanlei08",
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 0,
+                                    "scX": 1,
+                                    "pX": 115.75,
+                                    "skY": 0,
+                                    "pY": 26.3,
+                                    "y": 0,
+                                    "skX": 0
+                                }
+                            }
+                        ],
+                        "parent": "xiong_yanlei08"
+                    },
+                    {
+                        "name": "bengdaishenti",
+                        "z": 2,
+                        "display": [
+                            {
+                                "type": "image",
+                                "name": "bengdaishenti",
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 0,
+                                    "scX": 1,
+                                    "pX": 195.5,
+                                    "skY": 0,
+                                    "pY": 71.5,
+                                    "y": 0,
+                                    "skX": 0
+                                }
+                            }
+                        ],
+                        "parent": "bengdaishenti"
+                    },
+                    {
+                        "name": "bengdaigebo",
+                        "z": 4,
+                        "display": [
+                            {
+                                "type": "image",
+                                "name": "bengdaiyougebo",
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 35.999,
+                                    "scX": 1,
+                                    "pX": 85.5,
+                                    "skY": 0,
+                                    "pY": 83.5,
+                                    "y": 49.999,
+                                    "skX": 0
+                                }
+                            }
+                        ],
+                        "parent": "bengdaigebo"
+                    },
+                    {
+                        "name": "bengdaitou",
+                        "z": 8,
+                        "display": [
+                            {
+                                "type": "image",
+                                "name": "bengdaitou",
+                                "transform": {
+                                    "scY": 1,
+                                    "x": 0,
+                                    "scX": 1,
+                                    "pX": 154.5,
+                                    "skY": 0,
+                                    "pY": 127.5,
+                                    "y": 0,
+                                    "skX": 0
+                                }
+                            }
+                        ],
+                        "parent": "bengdaitou"
+                    }
+                ],
+                "name": 0
+            }
+        ]
+    }
+], "version": 2.3}

@@ -1,0 +1,11 @@
+{"file":"myFont.png","frames":{
+"0":{"x":732,"y":0,"w":181,"h":151,"offX":0,"offY":0,"sourceW":181,"sourceH":151},
+"1":{"x":732,"y":153,"w":91,"h":151,"offX":0,"offY":0,"sourceW":91,"sourceH":151},
+"2":{"x":549,"y":0,"w":181,"h":151,"offX":0,"offY":0,"sourceW":181,"sourceH":151},
+"3":{"x":183,"y":0,"w":181,"h":151,"offX":0,"offY":0,"sourceW":181,"sourceH":151},
+"4":{"x":0,"y":153,"w":181,"h":151,"offX":0,"offY":0,"sourceW":181,"sourceH":151},
+"5":{"x":366,"y":0,"w":181,"h":151,"offX":0,"offY":0,"sourceW":181,"sourceH":151},
+"6":{"x":0,"y":0,"w":181,"h":151,"offX":0,"offY":0,"sourceW":181,"sourceH":151},
+"7":{"x":549,"y":153,"w":181,"h":151,"offX":0,"offY":0,"sourceW":181,"sourceH":151},
+"8":{"x":366,"y":153,"w":181,"h":151,"offX":0,"offY":0,"sourceW":181,"sourceH":151},
+"9":{"x":183,"y":153,"w":181,"h":151,"offX":0,"offY":0,"sourceW":181,"sourceH":151}}}

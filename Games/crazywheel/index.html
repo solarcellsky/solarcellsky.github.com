@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html style="font-size: 46.25px;">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
+    <title>疯狂大转盘</title>
+    <link rel="stylesheet" type="text/css" href="./static/css/zhiwo_base.css?v1.6.7">
+    <link rel="stylesheet" type="text/css" href="./static/css/zhiwo_common.css?v1.8.8">
+    <link rel="stylesheet" type="text/css" href="./static/css/zhiwo_reset.css?v1.3.0">
+    <link rel="stylesheet" type="text/css" href="./static/css/active_game.css?v1.0.4">
+    <script type="text/javascript" src="./static/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="./static/js/jquery.lazyload.min.js"></script>
+    <script type="text/javascript" src="./static/js/jquery.mobile.events.min.js"></script>
+    <script type="text/javascript" src="./static/js/jquery.event.strollbottom.js?v1.9"></script>
+    <script type="text/javascript" src="./static/js/spin.js"></script>
+</head>
+
+<body>
+    <script type="text/javascript">
+    var defaultMaxExchangeTimes = 10; // 每天最大可兑换次数
+    var defaultExchangeFlowNum = 5; // 兑换一次需要的流量
+    var usableTimes = 0; // 当天可用的抽奖次数
+    var usedTimes = 0; // 会员当天已抽奖的次数
+    var exchangedTimes = 0; // 当天已兑换次数
+    var presentTimes = 0; // 每天赠送的抽奖次数
+    var isCloseDrawTimesBox = true;
+    var isExchangeDrawTimes = false;
+    var isIncreaseDrawTimes = false;
+    var isReduceDrawTimes = false;
+
+    // 更新抽奖次数
+    function loadDrawTimes() {
+        var url = "./ajax/drawtimes.json?v=" + new Date().getTime();
+        jQuery.getJSON(url, {}, function(data) {
+            if (data.errno == 0) {
+                usableTimes = data.usable; // 会员当天可用的抽奖的次数
+                usedTimes = data.used; // 会员当天已抽奖的次数
+                exchangedTimes = data.exchanged; // 会员当天已用流量包兑换抽奖的次数
+                presentTimes = data.present; // 每天赠送的抽奖次数
+
+                $("#draw_times_fish_total").text(usableTimes);
+
+                if (usableTimes > 5) {
+                    $("#draw_times_fish_total").show();
+                } else {
+                    $("#draw_times_fish_total").hide();
+                }
+
+                $(".lifeadd").removeClass("lifeunable").addClass("lifeable");
+
+                var nFish = usableTimes < 5 ? usableTimes : 5;
+                for (var i = 0; i < nFish; i++) {
+                    $("#draw_times_fish_" + i).removeClass("lifeend").addClass("life");
+                }
+
+                for (var i = nFish; i < 5; i++) {
+                    $("#draw_times_fish_" + i).removeClass("life").addClass("lifeend");
+                }
+            }
+        });
+    }
+
+    // 刷新兑换抽奖按钮
+    function refreshDrawTimesBtns(initExchangeDrawTimes) {
+        var flowNum = parseInt($("#usable_flownum").attr("flownum")); // 可用于兑换的流量
+        $("#usable_flownum").text(flowNum + "M");
+
+        var maxExchangeDrawTimes = Math.floor(flowNum / defaultExchangeFlowNum);
+        if (maxExchangeDrawTimes > (defaultMaxExchangeTimes - exchangedTimes)) {
+            maxExchangeDrawTimes = defaultMaxExchangeTimes - exchangedTimes;
+        }
+
+        if (initExchangeDrawTimes) {
+            $(":text[name='exchange_draw_times']").val(maxExchangeDrawTimes);
+        }
+
+        var exchangeTimes = parseInt($(":text[name='exchange_draw_times']").val());
+
+        if (exchangeTimes <= 0) {
+            $(":button[name='exchange_btn']").removeClass("gshdow_lifesubbtn").addClass("gshdow_lifeunablesub");
+            isReduceDrawTimes = false;
+            isExchangeDrawTimes = false;
+        } else {
+            $(":button[name='exchange_btn']").removeClass("gshdow_lifeunablesub").addClass("gshdow_lifesubbtn");
+            isReduceDrawTimes = true;
+            isExchangeDrawTimes = true;
+        }
+
+        if (exchangeTimes < maxExchangeDrawTimes) {
+            isIncreaseDrawTimes = true;
+        } else {
+            isIncreaseDrawTimes = false;
+        }
+    }
+
+    function exchangeDrawTimesInput() {
+        isCloseDrawTimesBox = false;
+    }
+
+    // 增加抽奖次数
+    function increaseDrawTimes() {
+        isCloseDrawTimesBox = false;
+
+        if (isIncreaseDrawTimes) {
+            var eTimes = parseInt($(":text[name='exchange_draw_times']").val());
+            $(":text[name='exchange_draw_times']").val(eTimes + 1);
+        }
+
+        refreshDrawTimesBtns(false);
+    }
+
+    // 减少抽奖次数
+    function reduceDrawTimes() {
+        isCloseDrawTimesBox = false;
+
+        if (isReduceDrawTimes) {
+            var eTimes = parseInt($(":text[name='exchange_draw_times']").val());
+            $(":text[name='exchange_draw_times']").val(eTimes - 1);
+        }
+
+        refreshDrawTimesBtns(false);
+    }
+
+    // 兑换抽奖次数
+    function exchangeDrawTimes() {
+        if (isExchangeDrawTimes) {
+            var eTimes = parseInt($(":text[name='exchange_draw_times']").val());
+            var url = "./ajax/exchangedtimes?" + new Date().getTime();
+            jQuery.getJSON(url, {
+                exchange_times: eTimes
+            }, function(data) {
+                if (data.errno == 0) {
+                    $("#usable_flownum").attr("flownum", data.usable_flownum);
+                    exchangedTimes = data.exchanged_times;
+
+                    loadDrawTimes();
+                    refreshDrawTimesBtns(true);
+
+                    var exchangeTimes = parseInt($(":text[name='exchange_draw_times']").val());
+                    if (exchangeTimes <= 0) {
+                        $(".lifeadd").removeClass("lifeable").addClass("lifeunable");
+                    }
+                    alert("兑换成功");
+                } else {
+                    alert(data.errmsg);
+                }
+            });
+        }
+
+        refreshDrawTimesBtns();
+        isCloseDrawTimesBox = false;
+    }
+
+    // 打开兑换抽奖页面
+    function openDrawTimesBox() {
+        var url = "/lottery/ajax/usableflow?" + new Date().getTime();
+        jQuery.getJSON(url, {}, function(data) {
+            if (data.errno == 0) {
+                $("#usable_flownum").attr("flownum", data.usable);
+                refreshDrawTimesBtns(true);
+                $('.game_shadow').show();
+                $('.gshadow_life').show().siblings().hide();
+            }
+        });
+    }
+
+    function openDrawTimesBoxByDrawOver() {
+        $('.game_shadow').show();
+        openDrawTimesBox();
+    }
+
+    $(function() {
+        loadDrawTimes();
+    });
+    </script>
+    <div class="game_wrapper">
+        <section class="game_bubble">
+            <div class="game_bubble_list game_bubble1"><img src="./static/images/wechat_game_bubble.png"></div>
+            <div class="game_bubble_list game_bubble2"><img src="./static/images/wechat_game_bubble.png"></div>
+            <div class="game_bubble_list game_bubble3"><img src="./static/images/wechat_game_bubble.png"></div>
+        </section>
+        <section class="game_rule">
+            <p class="grule_title"><img src="./static/images/wechat_game_headimg.png"></p>
+            <p class="grule_btn"></p>
+        </section>
+        <section class="game_content">
+            <div id="gcont_lottery" class="gcont_lottery">
+                <div class="lottery_content">
+                    <div class="prize_item_list prize_1 " id="draw_badge_1" num="0" name="领取免费礼品" rule="免费礼品不定期更换，以当日礼品为准" desc="免费礼品徽章，集齐相应徽章数量，即可领取1件免费礼品">
+                        <div class="prize_item">
+                            <div class="active_item"></div>
+                            <img src="./static/images/wechat_game_prizefree.png">
+                        </div>
+                        <div class="prize_item_info"><i></i><span>领取免费礼品</span></div>
+                    </div>
+                    <div class="prize_item_list prize_2 show" id="draw_badge_4" num="1" name="100元微信红包" rule="100元微信红包兑换以微信红包的形式发放到个人账户微信零钱包" desc="集齐15枚100元微信红包徽章，即可兑换100元现金红包">
+                        <div class="prize_item">
+                            <div class="active_item"></div>
+                            <img src="./static/images/wechat_game_prize100money.png">
+                        </div>
+                        <div class="prize_item_info"><i></i><span>100元微信红包</span></div>
+                    </div>
+                    <div class="prize_item_list prize_3 " id="draw_badge_2" num="2" name="10M手机流量包" rule="流量包可给任何手机充值流量或兑换转盘抽奖" desc="10M手机流量包徽章可兑换手机流量包，集齐5枚即可兑换">
+                        <div class="prize_item">
+                            <div class="active_item"></div>
+                            <img src="./static/images/wechat_game_prize10m.png">
+                        </div>
+                        <div class="prize_item_info"><i></i><span>10M手机流量包</span></div>
+                    </div>
+                    <div class="prize_item_list prize_4 " id="draw_badge_3" num="3" name="1元知我商城红包" rule="知我商城红包可用于商城中购物使用，单张订单可累加使用3个" desc="知我商城红包徽章可兑换商城红包，集齐2枚即可兑换1个">
+                        <div class="prize_item">
+                            <div class="active_item"></div>
+                            <img src="./static/images/wechat_game_prize1redbag.png">
+                        </div>
+                        <div class="prize_item_info"><i></i><span>1元知我商城红包</span></div>
+                    </div>
+                    <div class="prize_item_list prize_5 " id="draw_badge_5" num="4" name="100元知我现金券" rule="集齐2枚徽章，即可兑换100元优惠券" desc="100元优惠券徽章，可用于兑换面值100元的优惠券。">
+                        <div class="prize_item">
+                            <div class="active_item"></div>
+                            <img src="./static/images/wechat_game_p100coupon.png">
+                        </div>
+                        <div class="prize_item_info"><i></i><span>100元知我现金券</span></div>
+                    </div>
+                    <div class="prize_item_list prize_6 " id="draw_badge_6" num="5" name="50M手机流量包" rule="流量包可给任何手机充值流量或兑换转盘抽奖" desc="50M手机流量包徽章可兑换手机流量包，集齐10枚即可兑换">
+                        <div class="prize_item">
+                            <div class="active_item"></div>
+                            <img src="./static/images/wechat_game_prize50m.png">
+                        </div>
+                        <div class="prize_item_info"><i></i><span>50M手机流量包</span></div>
+                    </div>
+                    <div class="prize_item_list prize_7 " id="draw_badge_8" num="6" name="10元知我代金券" rule="知我代金券可用于商城中购物使用，可与红包叠加使用" desc="知我代金券徽章可兑换商城代金券，集齐2枚即可兑换1个">
+                        <div class="prize_item">
+                            <div class="active_item"></div>
+                            <img src="./static/images/wechat_game_prize10coupon.png">
+                        </div>
+                        <div class="prize_item_info"><i></i><span>10元知我代金券</span></div>
+                    </div>
+                    <div class="prize_item_list prize_8 " id="draw_badge_7" num="7" name="1元微信红包" rule="1元微信红包兑换以微信红包的形式发放到个人账户微信零钱包" desc="集齐5枚1元微信红包徽章，即可兑换1元现金红包">
+                        <div class="prize_item">
+                            <div class="active_item"></div>
+                            <img src="./static/images/wechat_game_prize1money.png">
+                        </div>
+                        <div class="prize_item_info"><i></i><span>1元微信红包</span></div>
+                    </div>
+                    <div class="prize_item_list prize_9 " id="draw_badge_10" num="8" name="50元知我优惠券" rule="知我代金券可用于商城中购物使用，可与红包叠加使用" desc="知我代金券徽章可兑换商城代金券，集齐5枚即可兑换1个">
+                        <div class="prize_item">
+                            <div class="active_item"></div>
+                            <img src="./static/images/wechat_game_prize50coupon.png">
+                        </div>
+                        <div class="prize_item_info"><i></i><span>50元知我优惠券</span></div>
+                    </div>
+                    <div class="prize_item_list prize_10 " id="draw_badge_9" num="9" name="100M手机流量包" rule="流量包可给任何手机充值流量或兑换转盘抽奖" desc="100M手机流量包徽章可兑换手机流量包，集齐15枚即可兑换">
+                        <div class="prize_item">
+                            <div class="active_item"></div>
+                            <img src="./static/images/wechat_game_prize100m.png">
+                        </div>
+                        <div class="prize_item_info"><i></i><span>100M手机流量包</span></div>
+                    </div>
+                    <div class="prize_item_list prize_11 " id="draw_badge_11" num="10" name="10元微信红包" rule="10元微信红包兑换以微信红包的形式发放到个人微信账户零钱包" desc="集齐10枚10元微信红包徽章，即可兑换10元现金红包">
+                        <div class="prize_item">
+                            <div class="active_item"></div>
+                            <img src="./static/images/wechat_game_prize10money.png">
+                        </div>
+                        <div class="prize_item_info"><i></i><span>10元微信红包</span></div>
+                    </div>
+                    <div class="prize_item_list prize_12" id="draw_badge_0" num="11" name="运气不佳" rule="" desc="">
+                        <div class="prize_item">
+                            <div class="active_item"></div>
+                            <img src="./static/images/wechat_game_prizefaile.png">
+                        </div>
+                        <div class="prize_item_info"><i></i><span>运气不佳</span></div>
+                    </div>
+                    <div class="gcont_btn">
+                        <p class="gcont_tip"><img src="./static/images/wechat_game_tip.png"></p>
+                        <p class="gcont_gobtn"><img src="./static/images/wechat_game_play.png"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="game_life">
+            <ul class="glife_amount">
+                <li class="lifeone life" id="draw_times_fish_0"></li>
+                <li class="lifetwo life" id="draw_times_fish_1"></li>
+                <li class="lifeend lifethree" id="draw_times_fish_2"></li>
+                <li class="lifeend lifefour" id="draw_times_fish_3"></li>
+                <li class="lifeend lifefive" id="draw_times_fish_4">
+                    <span class="liftall_amount2" id="draw_times_fish_total" style="display: none;">2</span>
+                </li>
+            </ul>
+            <div class="lifeadd lifeable"></div>
+        </section>
+        <section class="game_result">
+            <div class="gresult_prizebox">
+                <a href="/lottery/prize"><img src="./static/images/wechat_game_prizebox.png"></a>
+            </div>
+            <div class="gresult_prizelist" id="gresult_prizelist">
+                <ul style="margin-top: -1.0968129077069rem;">
+                    <li class="ell"><span>ki**</span>中了50元知我优惠券</li>
+                    <li class="ell"><span>娜娜</span>中了1元微信红包</li>
+                    <li class="ell"><span>走</span>中了1元知我商城红包</li>
+                    <li class="ell"><span>臭了**</span>中了1元知我商城红包</li>
+                    <li class="ell"><span>妍妍</span>中了10元知我代金券</li>
+                    <li class="ell"><span>西湖</span>中了1元知我商城红包</li>
+                    <li class="ell"><span>欠欠</span>中了10元知我代金券</li>
+                </ul>
+            </div>
+        </section>
+        <section class="game_shadow" style="display:none">
+            <div class="gshadow_rule" style="display:none">
+                <p class="gshadow_rule_close"></p>
+                <h2><img src="./static/images/wechat_game_ruletitle.png" alt="游戏规则"></h2>
+                <div class="gshadow_rule_cont">
+                    <p>1.每个用户，系统每天赠送3次抽奖机会，当日有效，未使用次日不累加。</p>
+                    <p>2.流量包可用于兑换抽奖次数，5M流量兑换一次抽奖，每个用户每天最多兑换10次抽奖。</p>
+                    <p>3.在线支付订单可获得一次额外抽奖机会。在线支付订单抽奖当日有效，过期无效。</p>
+                    <p>4.每个奖项集齐对应徽章数量即可兑换。</p>
+                    <p>5.未集齐的奖项徽章1个月（30天）有效，以获得徽章之日起计算。</p>
+                    <p>6.徽章可赠送他人，也可向他人索取</p>
+                    <p>7.奖项设置：</p>
+                    <p class="gshadow_rulecont_item">· 现金红包——以微信红包形式进行发放</p>
+                    <p class="gshadow_rulecont_item">· 流量包——支持移动、联通、电信充值，也可兑换转盘抽奖次数</p>
+                    <p class="gshadow_rulecont_item">· 现金券——可用于知我药妆微信商城购物消费使用</p>
+                    <p class="gshadow_rulecont_item">· 免费礼品——不同礼品所需数量不同，集齐等量徽章后，即可领取</p>
+                </div>
+            </div>
+            <div class="gshadow_life" style="display:none">
+                <h2><img src="./static/images/wechat_game_lifetitle.png" alt="兑换抽奖次数"></h2>
+                <div class="gshadow_life_cont">
+                    <p class="gshdow_lifecont_tip">每人每天赠送3次抽奖机会，当日有效，未使用次日不累加。</p>
+                    <p class="gshdow_lifecont_tip">可用流量包兑换转盘抽奖次数，5M流量兑换一次，每个用户每天最多兑换10次，当日有效。</p>
+                    <p class="gshdow_lifeall">可用流量：<span id="usable_flownum" flownum="0">0M</span></p>
+                    <div class="gshdow_lifeform" onclick="return exchangeDrawTimesInput();">
+                        <p class="gshdow_lifemount clearfix">
+                            <input class="gshdow_lifedownbtn" type="button" name="increase_draw_times" onclick="return reduceDrawTimes();">
+                            <input class="gshdow_lifetxt" type="text" name="exchange_draw_times" value="0" readonly="readonly">
+                            <input class="gshdow_lifeupbtn" type="button" name="reduce_draw_times" onclick="return increaseDrawTimes();">
+                        </p>
+                        <p class="gshdow_lifesub">
+                            <input class="gshdow_lifeunablesub" type="button" name="exchange_btn" onclick="return exchangeDrawTimes();" value="立即兑换">
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="gshadow_login" style="display:none">
+                <h2><img src="./static/images/wechat_game_logintitle.png" alt="连续登录奖励"></h2>
+                <div class="gshadow_login_cont">
+                    <p class="gshadow_logincont_status">连续登录<span id="lpmobileflow_days"></span>天</p>
+                    <p class="gshadow_logincont_status">恭喜获得日奖励：<span id="lpmobileflow_present"></span>M流量</p>
+                    <p class="gshadow_logincont_btn"><a href="javascript: void();">确定</a></p>
+                    <p class="gshadow_logincont_tip">每天登陆奖励1M手机流量</p>
+                    <p class="gshadow_logincont_tip">连续登陆1周（7天）奖励10M流量</p>
+                </div>
+                <div class="gshadow_active_notice" style="display:none">
+                    <h3>活动通知</h3>
+                    <p></p>
+                </div>
+            </div>
+            <div class="gshadow_prize" style="display:none">
+                <div class="gshadow_prizeimg"></div>
+                <div class="gspimg_box">
+                    <div class="gspimg_boxbg"></div>
+                    <img id="draw_badge_box_img" src="./static/images/wechat_game_prize10m.png">
+                </div>
+                <p class="gshadow_przietxt" id="draw_badge_box_name" num="0"></p>
+                <p class="gshadow_explaintxt" id="draw_badge_box_desc"></p>
+                <p class="gshadow_explainamount" id="draw_badge_box_rule"></p>
+            </div>
+            <div class="gshadow_prizefail" style="display:none">
+                <p class="gspimgfail_box"><img src="./static/images/wechat_game_fail.png"></p>
+                <p class="gshadow_explainfailtxt">手气不佳，下次再接再励哟！</p>
+            </div>
+            <div class="gshadow_timeout" style="display:none">
+                <h2><img src="./static/images/wechat_game_sorryt.png" alt="很遗憾"></h2>
+                <p class="gshadow_timeout_tip">您今日的抽奖次数已用光，
+                    <br>现在先去看看有什么好的护肤品吧</p>
+                <p class="gshadow_timeout_btn"><a href="/seckill/show">现在就去</a></p>
+                <p class="gshadow_timeout_tip1">您的账户当前有<span id="gshadow_timeout_flownum"></span>手机流量</p>
+                <p class="gshadow_timeout_tip1">还可以兑换抽奖次数</p>
+                <p class="gsg_flow_operabtn gshadow_timeout_new"><a href="javascript: openDrawTimesBoxByDrawOver();">兑换抽奖次数</a></p>
+            </div>
+            <div class="gshadow_help" style="display: none">
+                <p class="gshadow_rule_close"></p>
+                <h2><img src="./static/images/wechat_game_thelp.png" alt="抽奖小姿势"></h2>
+                <div class="gshadow_help_cont">
+                    <ul>
+                        <li>
+                            <div class="gshadow_help_question">
+                                <p class="gshadow_help_questionbtn"><span class="gshadow_help_upico"></span></p>
+                                <p class="gshadow_help_questiontxt">1、每天登录都有奖励？</p>
+                            </div>
+                            <div class="gshadow_help_answer" style="display: block;">
+                                <p class="gshadow_help_answertxt1">每天登录奖励1M手机流量，连续登录7天额外再奖励10M喔！</p>
+                                <p class="gshadow_help_answerimg"><img src="./static/images/wechat_game_h1.png"></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="gshadow_help_question">
+                                <p class="gshadow_help_questionbtn"><span class="gshadow_help_downico"></span></p>
+                                <p class="gshadow_help_questiontxt">2、如何抽奖？</p>
+                            </div>
+                            <div class="gshadow_help_answer">
+                                <p class="gshadow_help_answertxt1">每位用户每天有3次免费抽奖的机会，另外，还可以用流量包进行兑换抽奖次数，5M即可兑换1次抽奖机会。</p>
+                                <div class="gshadow_help_answershowimg">
+                                    <ul class="clearfix">
+                                        <li class="gshadow_help_animgfl">
+                                            <p class="gshadow_help_animg2"><img src="./static/images/wechat_game_h2.png"></p>
+                                            <p class="gshadow_help_antip">点击“+”图标</p>
+                                        </li>
+                                        <li class="gshadow_help_animgfr">
+                                            <p class="gshadow_help_animg2"><img src="./static/images/wechat_game_h3.png"></p>
+                                            <p class="gshadow_help_antip">选择要兑换的次数，
+                                                <br>点击“立即兑换”</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="gshadow_help_question">
+                                <p class="gshadow_help_questionbtn"><span class="gshadow_help_downico"></span></p>
+                                <p class="gshadow_help_questiontxt">3、如何兑现奖品？</p>
+                            </div>
+                            <div class="gshadow_help_answer">
+                                <p class="gshadow_help_answertxt1">所有抽奖都以徽章形式兑换，不同奖项会有不同的徽章种类及数量要求，当集够相应的徽章后，即可兑换。</p>
+                                <div class="gshadow_help_answershowimg">
+                                    <ul class="clearfix">
+                                        <li class="gshadow_help_animgfl">
+                                            <p class="gshadow_help_animg2"><img src="./static/images/wechat_game_h4.png"></p>
+                                            <p class="gshadow_help_antip">首先点击宝箱，进入礼包页</p>
+                                        </li>
+                                        <li class="gshadow_help_animgfr">
+                                            <p class="gshadow_help_animg2"><img src="./static/images/wechat_game_h5.png"></p>
+                                            <p class="gshadow_help_antip">点击对应奖项徽章</p>
+                                        </li>
+                                        <li class="gshadow_help_animgfl">
+                                            <p class="gshadow_help_animg2"><img src="./static/images/wechat_game_h6.png"></p>
+                                            <p class="gshadow_help_antip">点击立即领取即可兑换</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="gshadow_help_question">
+                                <p class="gshadow_help_questionbtn"><span class="gshadow_help_downico"></span></p>
+                                <p class="gshadow_help_questiontxt">4、徽章不够，如何兑换奖品？</p>
+                            </div>
+                            <div class="gshadow_help_answer">
+                                <p class="gshadow_help_answertxt1">告诉您一个小秘密，比如100元现金红包，需要15枚徽章，假如您已集5枚徽章，那在找几个小伙伴凑够15枚，那就可以获得100元现金啦，然后小伙伴一起去happy，一般人我不告诉</p>
+                                <div class="gshadow_help_answershowimg">
+                                    <ul class="clearfix">
+                                        <li class="gshadow_help_animgfl">
+                                            <p class="gshadow_help_animg2"><img src="./static/images/wechat_game_h7.png"></p>
+                                            <p class="gshadow_help_antip">进入相应徽章页
+                                                <br>点击“+”按钮</p>
+                                        </li>
+                                        <li class="gshadow_help_animgfr">
+                                            <p class="gshadow_help_animg2"><img src="./static/images/wechat_game_h8.png"></p>
+                                            <p class="gshadow_help_antip">您可以通过手机截屏将系统生成的二维码发给小伙伴吧</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="gshadow_help_question">
+                                <p class="gshadow_help_questionbtn"><span class="gshadow_help_downico"></span></p>
+                                <p class="gshadow_help_questiontxt">5、有多余的徽章，如何送给小伙伴？</p>
+                            </div>
+                            <div class="gshadow_help_answer">
+                                <p class="gshadow_help_answertxt1">当您中得徽章时，您可以自己兑换奖品，当然也可以分享给小伙伴了。</p>
+                                <div class="gshadow_help_answershowimg">
+                                    <ul class="clearfix">
+                                        <li class="gshadow_help_animgfl">
+                                            <p class="gshadow_help_animg2"><img src="./static/images/wechat_game_h9.png"></p>
+                                            <p class="gshadow_help_antip">在礼包页点击徽章赠予并选择要赠予的徽章</p>
+                                        </li>
+                                        <li class="gshadow_help_animgfr">
+                                            <p class="gshadow_help_animg2"><img src="./static/images/wechat_game_h10.png"></p>
+                                            <p class="gshadow_help_antip">您可以通过手机截屏将系统生成的二维码发给小伙伴</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="gshadow_help_question">
+                                <p class="gshadow_help_questionbtn"><span class="gshadow_help_downico"></span></p>
+                                <p class="gshadow_help_questiontxt">6、流量包如何充到手机中？</p>
+                            </div>
+                            <div class="gshadow_help_answer">
+                                <p class="gshadow_help_answertxt1">流量包是指手机上网流量包，根据不同运营商，可充值的面额有所不同，输入手机号后，即可选择相应的面额，流量包可以给自己充，也可以给小伙伴充喔，好东西要分享的喔！</p>
+                                <div class="gshadow_help_answershowimg">
+                                    <ul class="clearfix">
+                                        <li class="gshadow_help_animgfl">
+                                            <p class="gshadow_help_animg2"><img src="./static/images/wechat_game_h11.png"></p>
+                                            <p class="gshadow_help_antip">首先点击任意一个流量包徽章</p>
+                                        </li>
+                                        <li class="gshadow_help_animgfr">
+                                            <p class="gshadow_help_animg2"><img src="./static/images/wechat_game_h12.png"></p>
+                                            <p class="gshadow_help_antip">进入流量包兑换页后，可以看到当前账户手机流量，点击“手机流量充值”</p>
+                                        </li>
+                                        <li class="gshadow_help_animgfl">
+                                            <p class="gshadow_help_animg2"><img src="./static/images/wechat_game_h13.png"></p>
+                                            <p class="gshadow_help_antip">输入要充值的手机号并选择充值流量，即可充值</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <p class="gshadow_lottery_help"><a href="javascript: void();">游戏规则</a></p>
+            </div>
+        </section>
+    </div>
+    <script type="text/javascript">
+    var url = "./ajax/lpmobileflow.json?v=" + new Date().getTime();
+    jQuery.getJSON(url, {}, function(data) {
+        if (data.errno == 0) {
+            $("#lpmobileflow_days").text(data.days);
+            $("#lpmobileflow_present").text(data.present);
+            $("#usable_flownum").attr("flownum", data.usable_flownum);
+            $(".gshadow_login").show();
+            $(".game_shadow").show();
+        }
+    });
+    </script>
+    <script>
+    (function(doc, win) {
+        var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function() {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) return;
+                docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+            };
+
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+
+    $(function() {
+        //游戏帮助
+        $('.grule_btn').bind('click', function() {
+            $('.game_shadow').show();
+            $('.gshadow_help').show().siblings().hide();
+        })
+        $('.gshadow_help_answer').eq(0).show();
+        $('.gshadow_help_question').bind('click', function() {
+            if ($(this).find('.gshadow_help_downico').length == 0) {
+                $(this).next().slideUp(600);
+                $(this).find('span').addClass('gshadow_help_downico').removeClass('gshadow_help_upico');
+
+            } else {
+                $('.gshadow_help_answer').slideUp(600);
+                $('.gshadow_help_questionbtn').find('span').addClass('gshadow_help_downico').removeClass('gshadow_help_upico');
+                $(this).next().slideDown(600);
+                $(this).find('span').addClass('gshadow_help_upico').removeClass('gshadow_help_downico');
+            }
+        })
+        $('.gshadow_help').find('.gshadow_rule_close').bind('click', function() {
+            $('.game_shadow').hide();
+        })
+        $('.gshadow_lottery_help').bind('click', function() {
+                $('.gshadow_rule').show();
+                $('.gshadow_lottery_help').hide();
+            })
+            //游戏规则
+        $('.gshadow_rule').find('.gshadow_rule_close').bind('click', function() {
+            $('.game_shadow').hide();
+        })
+
+        //游戏规则
+        //$('.grule_btn').bind('click', function() {
+        //   $('.game_shadow').show();
+        //    $('.gshadow_rule').show().siblings().hide();
+        //})
+        //$('.gshadow_rule').bind('click', function() {
+        // $(this).parent().hide();
+        //})
+
+        //play
+        $('.game_shadow').click(function() {
+            if ($(".gshadow_help").attr("style").indexOf("block") > 0) {
+                return;
+            }
+
+            if ($(".gshadow_life").attr("style").indexOf("none") > 0 || isCloseDrawTimesBox) {
+                $(this).children().hide();
+                $(this).hide();
+            }
+
+            isCloseDrawTimesBox = true;
+        })
+
+        //兑换抽奖生命
+        $('.lifeadd').click(function() {
+            if ($(this).hasClass("lifeunable")) {
+                return;
+            }
+
+            openDrawTimesBox();
+        })
+        $('.gshdow_lifesub').click(function() {
+            // $(this).parents('.game_shadow').hide();
+        })
+
+        //连续登录奖励
+        $('.gshadow_logincont_btn').bind('click', function() {
+            // $(this).parents('.game_shadow').hide();
+        })
+        setInterval(function() {
+            $('#gresult_prizelist').find("ul:first").animate({
+                marginTop: "-1.3rem"
+            }, 800, function() {
+                $(this).css({
+                    marginTop: "0px"
+                }).find("li:first").appendTo(this);
+            });
+        }, 3000);
+        var str = '';
+        $('.gresult_prizelist li span').each(function() {
+            var sNameTxt = $(this).text();
+            var sNameLen = sNameTxt.length;
+
+            if (sNameLen > 2) {
+                str = $(this).text().slice(0, 2) + "**";
+                $(this).text(str);
+            }
+        })
+
+        $('.prize_item_list').on('click', function() {
+            $(this).toggleClass('show').siblings().removeClass('show');
+        })
+
+    })
+    $(function() {
+        var lastTimes = 0;
+        var isDrawDisabled = false;
+
+        ;
+        (function() {
+            //抽奖活动
+            var moveStatus = false;
+            var prize_item_len = $('.prize_item_list').length;
+            // 获得当前中奖位置的索引值
+            var activeIndex = function() {
+                var len = $('.active').length;
+                var index = 0;
+                if (len == 0) {
+                    index = 0;
+                } else {
+                    index = $('.active').index();
+                }
+                return index;
+            };
+            // 当前中奖位置，并给当前中奖位置添加active类
+            var activeShow = function(index) {
+                $('.prize_item_list').removeClass('active');
+                $('.prize_item_list').eq(index).addClass('active');
+            };
+            // 当前中奖位置的下一个位置
+            var activeShowNext = function() {
+                var index = activeIndex() + 1;
+                if (index >= prize_item_len) {
+                    index = 0;
+                    activeShow(index);
+                } else {
+                    activeShow(index);
+                }
+            };
+            // 中奖位置的移动
+            var move = function(speed, times, stopIndex) {
+                var i = 0;
+                var timer = setInterval(function() {
+                    i++;
+                    if (i > times) {
+                        clearInterval(timer);
+                        stopMove(stopIndex);
+
+                        // setTimeout(fn,2000);
+                    } else {
+                        activeShowNext();
+                    }
+                }, speed);
+            };
+            // 设置最终中奖位置
+            var stopMove = function(stopIndex) {
+                var curr = activeIndex();
+                var times = 0;
+
+                if (curr == stopIndex) {
+                    return false;
+                } else if (stopIndex > curr) {
+                    times = stopIndex - curr;
+                    move(200, times);
+                } else if (stopIndex < curr) {
+                    times = prize_item_len - curr + stopIndex;
+                    move(200, times);
+                }
+                moveStatus = false;
+            };
+            // 点击抽奖按钮
+            $('.gcont_gobtn').click(function() {
+                //if(!moveStatus){
+                prizego();
+                //    moveStatus = true;
+                //}
+
+            });
+            $('.glife_amount li').bind('click', function() {
+                if ($(this).hasClass('life')) {
+                    //if(!moveStatus){
+                    /*
+                    var index = $('.life').length-1;
+                    $('.life').eq(index).removeClass('life').addClass('lifeend');
+                    $('.life').eq(index).unbind('click',prizego);
+                    */
+                    prizego();
+                    //    moveStatus = true;
+                    //}
+                }
+            })
+
+            function prizego() {
+                if (usableTimes <= 0) {
+                    // alert("今天抽奖机会已全部用完");
+
+                    var url = "/lottery/ajax/usableflow?" + new Date().getTime();
+                    jQuery.getJSON(url, {}, function(data) {
+                        if (data.errno == 0) {
+                            $("#usable_flownum").attr("flownum", data.usable);
+                            $("#gshadow_timeout_flownum").text($("#usable_flownum").attr("flownum") + "M");
+
+                            $(".gshadow_timeout").show().siblings().hide();
+                            $(".game_shadow").show();
+                        }
+                    });
+
+                    return;
+                }
+
+                if (isDrawDisabled) {
+                    alert("您手太快了，休息一会再继续吧");
+                    setTimeout(function() {
+                        isDrawDisabled = false;
+                    }, 10000);
+                    return;
+                }
+
+                isDrawDisabled = true;
+
+                var url = "./ajax/drawbadge.json?v=" + new Date().getTime();
+                jQuery.getJSON(url, {}, function(data) {
+                    console.log(data.badge_id);
+                    if (data.errno == 0) {
+                        var drawBadgeId = "draw_badge_" + data.badge_id;
+                        var obj = $("#" + drawBadgeId);
+
+                        var nNum = parseInt(obj.attr("num"));
+                        if (nNum >= 0 && nNum < 12) {
+                            var sName = obj.attr("name");
+                            var sRule = obj.attr("rule");
+                            var sDesc = obj.attr("desc");
+                            var sSrc = obj.find("img").attr("src");
+
+                            $("#draw_badge_box_name").attr("num", nNum);
+                            $("#draw_badge_box_img").attr("src", sSrc);
+                            if (nNum != 11) {
+                                $("#draw_badge_box_name").text("恭喜中得" + sName + "徽章");
+                            } else {
+                                $("#draw_badge_box_name").text(sName);
+                            }
+
+                            $("#draw_badge_box_rule").text(sRule);
+                            $("#draw_badge_box_desc").text(sDesc);
+
+                            loadDrawTimes();
+
+                            var times1 = 0;
+                            while (true) {
+                                times1 = Math.floor(Math.random() * 12 + 24);
+                                if (times1 != lastTimes) {
+                                    break;
+                                }
+                            }
+                            lastTimes = times1;
+
+                            move(170, times1, nNum);
+                            var speed = times1 < 26 ? 6800 : (times1 < 30 ? 7400 : (times1 < 34 ? 7800 : 8000));
+
+                            setTimeout(function() {
+                                if ($("#draw_badge_box_name").attr("num") != 11) {
+                                    $('.game_shadow').show();
+                                    $('.gshadow_prize').show().siblings().hide();
+                                } else {
+                                    $('.game_shadow').show();
+                                    $('.gshadow_prizefail').show().siblings().hide();
+                                }
+                            }, speed);
+                        } else {
+                            alert("系统繁忙");
+                        }
+                    } else if (data.errno == -3) {
+                        alert(data.errmsg);
+                    } else {
+                        alert("系统繁忙");
+                    }
+                });
+            }
+        })()
+    })
+    </script>
+    <script type="text/javascript">
+    function getMenuShareParams() {
+        var link = gWebsite;
+        var title = desc = imgUrl = "";
+        var success = function() {};
+        var cancel = function() {};
+
+        if (RUN_CONTROL == "Group" && RUN_ACTION == "show") {} else if (RUN_CONTROL == "Group" && RUN_ACTION == "view") {
+            link += "/group/" + goods_id;
+            title = goods_name;
+            imgUrl = small_image_link;
+        } else if (RUN_CONTROL == "Market" && RUN_ACTION == "view") {
+            link += "/market/" + goods_id;
+            title = goods_name;
+            imgUrl = small_image_link;
+        } else if (RUN_CONTROL == "Seckill" && RUN_ACTION == "view") {
+            var oSekillInfo = $("#info_" + seckillCurrPage);
+
+            if (oSekillInfo.hasClass("exchange")) {
+                link = gWebsite + "/seckill/present";
+                title = "快帮我免费领化妆品啊(⊙v⊙):" + oSekillInfo.find(".goods_name").text();
+                imgUrl = "http://images.zhiwo.com/product/2014/1021/wslogo_132.jpg";
+            } else {
+                link += "/seckill/show/" + oSekillInfo.find(":hidden[name='goods_id']").val();
+
+                title = "";
+                title += oSekillInfo.find(".goods_name").text() + "，";
+                title += oSekillInfo.find(".goods_price").text() + "，";
+                title += "全网最低价的" + oSekillInfo.find(".lowest_discount1").text() + "." + oSekillInfo.find(".lowest_discount2").text() + "折";
+
+                var sSekillImgUrl = $.trim(oSekillInfo.attr("name"));
+                if (sSekillImgUrl != "") {
+                    imgUrl = sSekillImgUrl;
+                }
+            }
+        } else if (RUN_CONTROL == "Seckill" && RUN_ACTION == "intro") {
+            if (is_exchange == "1") {
+                link = gWebsite + "/seckill/present";
+                title = "快帮我免费领化妆品啊(⊙v⊙):" + goods_name;
+                imgUrl = "http://images.zhiwo.com/product/2014/1021/wslogo_132.jpg";
+            } else {
+                link += "/seckill/show/" + goods_id;
+                title = goods_name + "，￥" + goods_price + "，全网最低价的" + lowest_discount1 + "." + lowest_discount2 + "折";
+                if (sekill_img_url != "") {
+                    imgUrl = sekill_img_url;
+                }
+            }
+        } else if (RUN_CONTROL == "Seckill" && RUN_ACTION == "present") {
+            link = gWebsite + "/seckill/present";
+            title = "快帮我免费领化妆品啊(⊙v⊙):" + goods_name;
+            imgUrl = "http://images.zhiwo.com/product/2014/1021/wslogo_132.jpg";
+        } else if (RUN_CONTROL == "Activity" && RUN_ACTION == "getcottonpads") {
+            link = gWebsite + "/activity/getcottonpads";
+            title = "领取知我药妆化妆棉";
+            desc = "领取知我药妆化妆棉，一次消费，终身免费";
+        } else if (RUN_CONTROL == "Activity" && RUN_ACTION == "tehui") {
+            link = gWebsite + "/tehui";
+            title = "知我药妆美妆特惠专场";
+            desc = "知我药妆美妆特惠专场";
+        } else if (RUN_CONTROL == "Activity" && RUN_ACTION == "seckillcash") {
+            link = gWebsite + "/activity/seckillcash";
+            title = "知我药妆秒杀返现金";
+            desc = "知我药妆秒杀返现金";
+        } else if (RUN_CONTROL == "Activity" && RUN_ACTION == "thanks2015") {
+            link = gWebsite + "/activity/thanks2015";
+            title = "知我药妆感恩节秒杀满99返100元，真情回馈";
+            desc = "知我药妆感恩节秒杀满99返100元，真情回馈";
+        }
+        if (RUN_CONTROL == 'Activity' && RUN_ACTION.indexOf('wechathb') === 0) {
+
+            link = gWebsite + '/activity/wechathb';
+            imgUrl = gWebsite + '/static/images/ico/bshare.jpg';
+            title = '双11我们不打折！不促销！我们全场免单！';
+        } else if (RUN_CONTROL == 'Activity' && RUN_ACTION.indexOf('wechat2015d12') === 0) {
+
+            link = gWebsite + '/activity/wechat2015d12';
+            imgUrl = gWebsite + '/static/images/ico/bshare.jpg';
+            title = '【双12】正品低价，精选大牌第二件半价更实惠';
+        } else if (RUN_CONTROL == "Brands" && RUN_ACTION == "view") {
+            link = gWebsite + "/brand/" + channel_key;
+            title = share_title;
+            desc = share_desc;
+            imgUrl = share_logo;
+        } else if (RUN_CONTROL == "Brands" && RUN_ACTION == "show") {
+            link = gWebsite + "/brand/show";
+            title = "知我药妆品牌特卖";
+            desc = "知我药妆品牌特卖";
+        } else if (RUN_CONTROL == "Redpack" && RUN_ACTION == "send") {
+            link = actShareLink;
+            title = actShareTitle;
+            desc = actShareDesc;
+            imgUrl = "http://images.zhiwo.com/product/2015/0212/logo.jpg";
+        } else if (RUN_CONTROL == "Vdian" && (RUN_ACTION == "index" || RUN_ACTION == "view" || RUN_ACTION == "allowance")) {
+            link = vdShareLink;
+            title = "我的微信护肤小店，每天10:00秒杀，快来捧个场吧！";
+            desc = "亲，这里是我的微信护肤小店，欢迎光临，在这里每天可以秒杀，天天上新，还有专业肌肤顾问为你服务喔！";
+            imgUrl = vdShareImgUrl;
+        } else if (RUN_CONTROL == "Vdian" && (RUN_ACTION == "guide" || RUN_ACTION == "allowanceguide" || RUN_ACTION == "reg" || RUN_ACTION == "tplimg" || RUN_ACTION == "columns")) {
+            link = gWebsite + "/vdian/guide";
+            title = "知我药妆微店，让你实现躺着赚钱的梦想，快来加入吧";
+            desc = "知我药妆微店是一款强大的微店工具，让你实现躺着赚钱的梦想，快来加入吧";
+        } else if (RUN_CONTROL == "Lottery" && (RUN_ACTION == "show" || RUN_ACTION == "prize")) {
+            link = gWebsite + "/lottery/show";
+            title = "知我药妆疯狂大转盘，百元现金、百兆流量等你来拿";
+            desc = "知我药妆疯狂大转盘，百元现金、百兆流量等你来拿";
+            imgUrl = "http://images.zhiwo.com/product/2015/0909/wlottery.jpg";
+        }
+
+        link += "/sharer_id/" + zhiwoUID + "/share_time/" + RUN_SERVER_TIME;
+
+
+        if (RUN_CONTROL == 'Activity' && RUN_ACTION.indexOf('wechathb') === 0) {
+
+            if (RUN_ACTION != 'wechathb') {
+
+                var child = RUN_ACTION.replace('wechathb', '').toLowerCase();
+
+                link += '?category=' + child + '&child=' + child;
+            }
+        } else if (RUN_CONTROL == 'Activity' && RUN_ACTION.indexOf('wechat2015d12') === 0) {
+
+            if (RUN_ACTION != 'wechat2015d12') {
+
+                var child = RUN_ACTION.replace('wechat2015d12', '').toLowerCase();
+
+                link += '?category=' + child + '&child=' + child;
+            }
+        }
+
+        if (RUN_CONTROL == "Wshare" && (RUN_ACTION == "viewgain" || RUN_ACTION == "share")) {
+            link = actShareLink;
+            title = actShareTitle;
+            desc = actDesc;
+            imgUrl = "http://images.zhiwo.com/product/2015/0212/logo.jpg";
+            success = function() {
+                $.post("/wshare/logshareTimes", {
+                    "sharer_id": actSharerId,
+                    "act_id": actActId
+                });
+            };
+        } else if (RUN_CONTROL == "Zt" && RUN_ACTION == "shareqrj") {
+            link = gWebsite + "/zt/outputqrj/" + smember_id;
+            title = "我要在2月14日对我的Ta表白！你会来支持我吗？";
+            desc = "我要在2月14日对我的Ta表白！你会来支持我吗？";
+            imgUrl = "http://images.zhiwo.com/product/2015/0211/qingrenjie-logo.jpg";
+        } else if (RUN_CONTROL == "Zt" && RUN_ACTION == "outputqrj") {
+            link = gWebsite + "/zt/outputqrj/" + smember_id;
+            title = "我要在2月14日对我的Ta表白！你会来支持我吗？";
+            desc = "我要在2月14日对我的Ta表白！你会来支持我吗？";
+            imgUrl = "http://images.zhiwo.com/product/2015/0211/qingrenjie-logo.jpg";
+        }
+
+        return {
+            "link": link,
+            "title": title,
+            "desc": desc,
+            "imgUrl": imgUrl,
+            "success": success,
+            "cancel": cancel
+        };
+    }
+    </script>
+</body>
+
+</html>

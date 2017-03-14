@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html data-seajs-base="./res/js/">
+<head>
+<title>春运之抢票大战</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/javascript">
+        var titleArr = ['嘘！我就来秀一下抢到火车票后的气质~','再一次与上亿人的争抢中宝宝轻易胜出，请羡慕！','宝宝回家还没抢到票？不要轻易狗带,看这里!','英雄，闯过这三关，春节就能回家了!','闯过这三关，你就是春运抢票小英雄！'];
+</script>
+</head>
+<script type="text/javascript">
+    document.ccConfig = {
+        "debugMode"     : 1,
+        "frameRate"     : 60,
+        "id"            : "gameCanvas",
+        "renderMode"    : 1,
+        "jsList"        : []
+    };
+</script>
+<script type="text/template" name="wx">
+    imgUrl="./res/share.jpg";
+    lineLink="#";
+    descContent="";
+    shareTitle="";
+    imgWidth=200;
+    imgHeight=200;
+    appid=;
+    shareClick=;
+    allow=1
+</script>
+<body style="background-color:#fff;margin:0px;padding:0px;">
+<canvas id="gameCanvas" width="640" height="1008"></canvas>
+<audio id="au">
+<source src="" type="audio/mp3">
+</audio>
+<audio id="au1">
+<source src="" type="audio/mp3">
+</audio>
+<audio id="au2">
+<source src="" type="audio/mp3">
+</audio>
+<audio id="au3">
+<source src="" type="audio/mp3">
+</audio>
+<script type="text/javascript" src="js/cocos2d.js" charset="UTF-8"></script>
+<script src="js/z.mix.js"></script>
+<script type="text/javascript">
+        var g_resources = [];
+        // "/res/img/logic/qiangpiao/res/
+        var g_host_preifx = ".";
+        var res = {
+            loadingpage: g_host_preifx + "/res/img/logic/qiangpiao/res/loadingpage.a83a9930cfbd5b45551110141741922ee2375057.jpg",
+            loading: g_host_preifx + "/res/img/logic/qiangpiao/res/loading.28d4c612b3d078955e2fee156cb097961ce55d03.png",
+
+            beginBg: g_host_preifx + "/res/img/logic/qiangpiao/res/beginBg.c2152dcd56721ca9ac1e7f81babccfee196d03ff.jpg",
+            beginBtn: g_host_preifx + "/res/img/logic/qiangpiao/res/beginBtn.b44da6c79388eccfcf1b406c889dc1655f4e49c9.png",
+
+            guize: g_host_preifx + "/res/img/logic/qiangpiao/res/guize.2503692edd5a527014eba75bd3aecf16448b0411.png",
+
+            begin: g_host_preifx + "/res/img/logic/qiangpiao/res/begin.7bfd7b0c6a4f3d2b26f7dc60bc9ce185c8bec86f.jpg",
+
+            endBg1: g_host_preifx + "/res/img/logic/qiangpiao/res/endBg1.5df699442c7aec873a370f3248e6c705cd4428e7.jpg",
+            endBg2: g_host_preifx + "/res/img/logic/qiangpiao/res/endBg2.cd051a27ad5b6649133bd1306e3bf9fbf17b442b.jpg",
+            // endBg3: g_host_preifx + "/res/img/logic/qiangpiao/res/endBg3.7bbfecaa79ce850a352c8ce0bd73e0184f8b578d.jpg",
+
+            tip1: g_host_preifx + "/res/img/logic/qiangpiao/res/1/1.b16d4892502b3ec68df295ee90f2fca020686929.png",
+            tip2: g_host_preifx + "/res/img/logic/qiangpiao/res/1/2.ab9e9015f4ce4961ac0914ee03f790da83bbe818.png",
+            tip3: g_host_preifx + "/res/img/logic/qiangpiao/res/1/3.0fd7bf84669892f4b38d4565356e70dedbeeb5e2.png",
+            tip4: g_host_preifx + "/res/img/logic/qiangpiao/res/1/4.5297f8580240f9ba6c0e80fe53de151f251c797f.png",
+            tip5: g_host_preifx + "/res/img/logic/qiangpiao/res/1/5.fff408c6d740efc181b52cf34c434076a69e17e5.png",
+            tip6: g_host_preifx + "/res/img/logic/qiangpiao/res/1/6.0f5f77bd2439a9ff74b6718e58298a12be617a00.png",
+
+            tip7: g_host_preifx + "/res/img/logic/qiangpiao/res/2/1.9643d9304d063d0b4c78cd905b7171819790afa7.png",
+            tip8: g_host_preifx + "/res/img/logic/qiangpiao/res/2/2.c13bed66ba751f8161afbdb20573fc8ff35bd04c.png",
+            tip9: g_host_preifx + "/res/img/logic/qiangpiao/res/2/3.9a597adbc4a5b55ee93e2871d5a2796accac8746.png",
+
+            main2: g_host_preifx + "/res/img/logic/qiangpiao/res/main2.5386583d2b3b11eba7081a7e2d7f695baafbea14.jpg",
+            ani1: g_host_preifx + "/res/img/logic/qiangpiao/res/ani1.d864ca76ed9a03841def2254bafdad3343a3ae7f.png",
+            ani2: g_host_preifx + "/res/img/logic/qiangpiao/res/ani2.9b2df643c5d31d4a6877df4c40ac9011a4ddf1ed.png",
+
+            left: g_host_preifx + "/res/img/logic/qiangpiao/res/left.4a2ed618b89b23b872ca45322f8a580b94fb705e.png",
+            right: g_host_preifx + "/res/img/logic/qiangpiao/res/right.d4c49d95118f44769190d977a63d44fdcb627ed5.png",
+            move_left: g_host_preifx + "/res/img/logic/qiangpiao/res/move_left.5d7cce6cc6d3d5d2fc6f481d8eebd4467f1bc3d5.png",
+            move_right: g_host_preifx + "/res/img/logic/qiangpiao/res/move_right.1c718a2076f8675b7aedd63b4d57868a33dac866.png",
+            hit_left: g_host_preifx + "/res/img/logic/qiangpiao/res/hit_left.933c103386ae368c5873cf1d7a6af97bd4d79697.png",
+            hit_right: g_host_preifx + "/res/img/logic/qiangpiao/res/hit_right.bd0fb54a9764bb31331475253bad48047afad0fa.png",
+
+            
+            main1: g_host_preifx + "/res/img/logic/qiangpiao/res/main1.8019cb28e00dbb4eb9f1335c0918f6347fedad9c.jpg",
+            timeloading: g_host_preifx + "/res/img/logic/qiangpiao/res/timeloading.fead505d92329f39349f9e3b6d3120fe3caa63b8.png",
+            hole: g_host_preifx + "/res/img/logic/qiangpiao/res/hole.138e9c7f30ff3a10184f7a46c758291990ce2182.png",
+            spr1: g_host_preifx + "/res/img/logic/qiangpiao/res/spr1.55e97dd4501a15c34c32ce0c8a82fbb96078e0c4.png",
+            spr11: g_host_preifx + "/res/img/logic/qiangpiao/res/spr11.a6185614767d1ca8972e24196744f0d3d491995f.png",
+            spr2: g_host_preifx + "/res/img/logic/qiangpiao/res/spr2.0f840c04ad98f48dada7035d764ba2f5f18391f2.png",
+            spr22: g_host_preifx + "/res/img/logic/qiangpiao/res/spr22.35e9b74c2d8c7700bd324dd533688b882872f246.png",
+
+            up: g_host_preifx + "/res/img/logic/qiangpiao/res/up.95b6fe3852a40c45e7d917f383816b89a3b785aa.png",
+            down: g_host_preifx + "/res/img/logic/qiangpiao/res/down.3b64369f3d8d6055ed060fdef42762fb9afd9cdd.png",
+            down1: g_host_preifx + "/res/img/logic/qiangpiao/res/down1.1580bc26248d21810db041eb1ea47093a5250a4f.png",
+            main3: g_host_preifx + "/res/img/logic/qiangpiao/res/main3.1f270d1cf247cdcdb5e3a15fccff7565ad7a88fe.jpg",
+            card: g_host_preifx + "/res/img/logic/qiangpiao/res/card.f177b89b28a398e4bad5bb324915607af3b69cef.png",
+            upTip: g_host_preifx + "/res/img/logic/qiangpiao/res/upTip.7cb4ad6c4f0faa4dbf56efe91728b806f37ff55b.png",
+            downTip: g_host_preifx + "/res/img/logic/qiangpiao/res/downTip.c34c6974d4841b2a18d6835ef59907a33b2e426c.png",
+            moveDown: g_host_preifx + "/res/img/logic/qiangpiao/res/moveDown.e04c8ca9e2b631c97abbe7c3a20ba8cfd5daaac8.png",
+            normal: g_host_preifx + "/res/img/logic/qiangpiao/res/normal.c83fca3fa3f5e883ff2a4a1d9fad09b169efa1fc.png",
+
+            wenzi1: g_host_preifx + "/res/img/logic/qiangpiao/res/wenzi1.b392e1fe57b501887a0857e9fb64cdb26b6d75ca.png",
+            wz_tip1: g_host_preifx + "/res/img/logic/qiangpiao/res/wz_tip1.32fc3536c4e36090a08072af59125730187067b8.png",
+            wz_tip2: g_host_preifx + "/res/img/logic/qiangpiao/res/wz_tip2.ef9672cbe74233aac8424800d3275f6f82982d07.png",
+            endTip1: g_host_preifx + "/res/img/logic/qiangpiao/res/endTip1.c2556feb3143d0f32be1c85c9c13c0a592cdacd0.png",
+            endTip2: g_host_preifx + "/res/img/logic/qiangpiao/res/endTip2.4de1107140d7d3607059607451bfcfcd09361bc5.png",
+            endTip3: g_host_preifx + "/res/img/logic/qiangpiao/res/endTip3.f8655eb0a116e2c54d208c5fb77917a8ddeb9b75.png",
+
+            GO: g_host_preifx + "/res/img/logic/qiangpiao/res/GO.fefb7719faf5987e6d057ebd8ee6d60d208dc0ee.png",
+            GO3: g_host_preifx + "/res/img/logic/qiangpiao/res/3.02c295987ffffac7c477f85eed4723670fd61a82.png",
+            GO2: g_host_preifx + "/res/img/logic/qiangpiao/res/2.e30f71456d4d7aaaf80f46248b73a929a74a08b0.png",
+            GO1: g_host_preifx + "/res/img/logic/qiangpiao/res/1.bc98d4a583f2819c17b0ed73495c4346df00bed8.png",
+            GO0: g_host_preifx + "/res/img/logic/qiangpiao/res/0.54310c2208c26144f561b6c9d66852528b417f42.png",
+
+            endBg31: g_host_preifx + "/res/img/logic/qiangpiao/res/endBg31.7582848db95d07dd2dae083656951cd50b85fede.jpg"
+        };
+        for (var i in res) {
+            if(res.hasOwnProperty(i))
+                g_resources.push(res[i]);
+        }
+
+        var g_link = "http://m.baidu.com/static/searchbox/activity/2016chunyun/index.html?from=media&qq-pf-to=pcqq.discussion";
+        var _au = document.getElementById('au');
+        _au.src = g_host_preifx + '/res/vo/qiangpiao/bg.mp3';
+        _au.loop = true;
+
+        var _au1 = document.getElementById('au1');
+        _au1.src = g_host_preifx + "/res/vo/qiangpiao/effect1.mp3";
+
+        var _au2 = document.getElementById('au2');
+        _au2.src = g_host_preifx + "/res/vo/qiangpiao/effect2.mp3";
+
+        var _au3 = document.getElementById('au3');
+        _au3.src = g_host_preifx + "/res/vo/qiangpiao/effect3.mp3";
+
+        seajs.use("logic/qiangpiao/main1", function(logic1){
+            logic1.setResource(g_resources);
+        });
+    </script>
+</body>
+</html>

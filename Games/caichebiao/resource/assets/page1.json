@@ -1,0 +1,7 @@
+{"file":"page1.png","frames":{
+"img_bg":{"x":1,"y":1,"w":640,"h":1029,"offX":0,"offY":0,"sourceW":640,"sourceH":1029},
+"img_blabox":{"x":505,"y":1477,"w":640,"h":319,"offX":0,"offY":0,"sourceW":640,"sourceH":319},
+"img_btn":{"x":1,"y":1740,"w":428,"h":90,"offX":0,"offY":0,"sourceW":428,"sourceH":90},
+"img_car":{"x":505,"y":1032,"w":640,"h":443,"offX":0,"offY":0,"sourceW":640,"sourceH":443},
+"img_light1":{"x":1147,"y":1032,"w":437,"h":647,"offX":0,"offY":0,"sourceW":437,"sourceH":647},
+"img_light2":{"x":1,"y":1032,"w":502,"h":706,"offX":0,"offY":0,"sourceW":502,"sourceH":706}}}

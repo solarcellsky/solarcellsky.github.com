@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-cn" class="no-js">
+
+<head>
+    <meta http-equiv="Content-Type">
+    <meta content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <title id="pagetitle"></title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
+    <link type="text/css" rel="stylesheet" href="css/index.css?v=201512061330" />
+    <link type="text/css" rel="stylesheet" href="css/dialog_pt.css?v=20150701" />
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script type="text/javascript" src="js/weixin.js?v=2015"></script>
+    <script type="text/javascript">
+    var origin = "newspaper";
+    if (isWeixin()) {
+        getWeixinShareData();
+    }
+    </script>
+</head>
+
+<body>
+    <div class="newspaper">
+        <div class="imgs">
+            <img class="title_logo" src="" />
+            <img src="images/ns_mid.jpg" />
+        </div>
+        <img src="images/ns_btn_go.png" class="btn-1" />
+    </div>
+    <div class="newspaper-mask"></div>
+    <div class="newspaper-alert">
+        <img src="images/btn_close.png" class="btn btn-close" />
+        <img src="images/ns_bg_alert.png" class="img ns-bg-alert" />
+        <img src="images/ns_pic_get.jpg" class="pic-get" />
+        <p class="ns-title">恭喜您获得</p>
+        <div class="input-con">
+            <img src="images/bg_tel.png" class="img" />
+            <input type="tel" class="v_tel" value="请输入真实手机号" id="mobile" maxlength="11">
+        </div>
+        <img src="images/btn_go.png" class="img btn-go" />
+        <p class="ns-intro"></p>
+        <!-- 券 -->
+        <img src="images/ns_pic_quan.png" class="img quan" />
+        <p class="get-word">专车券已放入:<span class="tel-num" id="phone"></span>账户中</p>
+        <!-- 按钮 -->
+        <div class="btns">
+            <img src="images/btn_dld.png" class="img btn btn-dld xiazai" />
+            <img src="images/btn_wx.png" class="img btn btn-share" />
+        </div>
+    </div>
+    <div class="newspaper-share">
+        <img src="images/pic_share_ns.png" class="img" />
+    </div>
+    <script type="text/javascript" src="js/core.js?v=2015"></script>
+    <script type="text/javascript" src="js/dcs_tag_M1024.js"></script>
+    <script type="text/javascript" src="js/webtrends.js?v=2015"></script>
+    <script type="text/javascript" src="js/app_launcher.js"></script>
+    <script src="js/mobile_validate.js"></script>
+    <script src="js/get.js?v=20151206"></script>
+    <script type="text/javascript">
+    $(function() {
+        mDcsMultiTrack();
+        var flag = ucar.uitls.getUrlParam("paperfrom");
+        if (flag == "ctdsb") { //楚天都市报 
+            $("#pagetitle").html('楚天都市报头条出“大事”了');
+            $(".ns-intro").html("仅限武汉地区使用");
+            $(".title_logo").attr("src", "images/ns_head_ctdsb.jpg");
+        } else if (flag == "whwb") { //武汉晚报 
+            $("#pagetitle").html('武汉晚报头条出“大事”了');
+            $(".ns-intro").html("仅限武汉地区使用");
+            $(".title_logo").attr("src", "images/ns_head_whwb.jpg");
+        } else if (flag == "cjsb") { //长江商报 
+            $("#pagetitle").html('长江商报头条出“大事”了');
+            $(".ns-intro").html("仅限武汉地区使用");
+            $(".title_logo").attr("src", "images/ns_head_cjsb.jpg");
+        } else if (flag == "yzwb") { //扬子晚报 
+            $("#pagetitle").html('扬子晚报头条出“大事”了');
+            $(".ns-intro").html("仅限南京/苏州/无锡/常州/昆山/扬州/南通地区使用");
+            $(".title_logo").attr("src", "images/ns_head_yzwb.jpg");
+        } else if (flag == "njcb") { //南京晨报 
+            $("#pagetitle").html('南京晨报今日特别福利在这里');
+            $(".ns-intro").html("仅限南京/苏州/无锡/常州/昆山/扬州/南通地区使用");
+            $(".title_logo").attr("src", "images/ns_head_njcb.jpg");
+        } else if (flag == "jlwb") { //金陵晚报 
+            $("#pagetitle").html('每人500元券！今日特别福利在这里！');
+            $(".ns-intro").html("仅限南京/苏州/无锡/常州/昆山/扬州/南通地区使用");
+            $(".title_logo").attr("src", "images/ns_head_jlwb.jpg");
+        } else if (flag == "dhb") { //大河报 
+            $("#pagetitle").html('每人500元券！今日特别福利在这里！');
+            $(".ns-intro").html("仅限郑州/洛阳地区使用");
+            $(".title_logo").attr("src", "images/ns_head_dhb.jpg");
+        } else if (flag == "zzwb") { //郑州晚报 
+            $("#pagetitle").html('每人500元券！今日特别福利在这里！');
+            $(".ns-intro").html("仅限郑州/洛阳地区使用");
+            $(".title_logo").attr("src", "images/ns_head_zzwb.jpg");
+        } else if (flag == "dfjb") { //东方今报 
+            $("#pagetitle").html('每人500元券！今日特别福利在这里！');
+            $(".ns-intro").html("仅限郑州/洛阳地区使用");
+            $(".title_logo").attr("src", "images/ns_head_dfjb.jpg");
+        } else if (flag == "szwb") { //深圳晚报 
+            $("#pagetitle").html('深圳晚报头条出“大事”了');
+            $(".ns-intro").html("仅限广州/深圳/东莞/佛山/中山/珠海/惠州地区使用");
+            $(".title_logo").attr("src", "images/ns_head_szwb.jpg");
+        } else if (flag == "nd") { //南都 
+            $("#pagetitle").html('南方都市报头条出“大事”了');
+            $(".ns-intro").html("仅限广州/深圳/东莞/佛山/中山/珠海/惠州地区使用");
+            $(".title_logo").attr("src", "images/ns_head_nfdsb.jpg");
+        } else if (flag == "ycwb") { //羊城晚报 
+            $("#pagetitle").html('羊城晚报头条出“大事”了');
+            $(".ns-intro").html("仅限广州/深圳/东莞/佛山/中山/珠海/惠州地区使用");
+            $(".title_logo").attr("src", "images/ns_head_ycwb.jpg");
+        } else if (flag == "szdsb") { //深圳都市报 
+            $("#pagetitle").html('深圳都市报头条出“大事”了');
+            $(".ns-intro").html("仅限广州/深圳/东莞/佛山/中山/珠海/惠州地区使用");
+            $(".title_logo").attr("src", "images/ns_head_szdsb.jpg");
+        } else {
+            $("#pagetitle").html('楚天都市报头条出“大事”了');
+            $(".ns-intro").html("仅限武汉地区使用");
+            $(".title_logo").attr("src", "images/ns_head_ctdsb.jpg");
+        }
+
+        $('.btn-1').click(function() {
+            $('.newspaper-alert').show();
+        })
+        $(".input-con .v_tel").focus(function() {
+            var txt_value = $(this).val();
+            if (txt_value == this.defaultValue) {
+                $(this).val("");
+            }
+        }).blur(function() {
+            var txt_value = $(this).val();
+            if (!txt_value) {
+                $(this).val(this.defaultValue);
+            }
+        }).keydown(function() {
+            var txt_value = $(this).val();
+        });
+        $('.btn-close').click(function() {
+            $('.newspaper-alert').hide();
+        });
+        $('.btn-share').click(function() {
+            $('.newspaper-mask').show();
+            $('.newspaper-share').show();
+        });
+        $('.newspaper-share').click(function() {
+            $('.newspaper-mask').hide();
+            $('.newspaper-share').hide();
+        });
+    })
+    </script>
+</body>
+
+</html>

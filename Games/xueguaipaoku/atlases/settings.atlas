@@ -1,0 +1,69 @@
+
+settings.png
+size: 2048,2048
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+back
+  rotate: false
+  xy: 4, 44
+  size: 1413, 1884
+  orig: 1413, 1884
+  offset: 0, 0
+  index: -1
+close
+  rotate: false
+  xy: 1425, 827
+  size: 241, 241
+  orig: 241, 241
+  offset: 0, 0
+  index: -1
+fade
+  rotate: false
+  xy: 4, 4
+  size: 32, 32
+  orig: 32, 32
+  offset: 0, 0
+  index: -1
+logo1
+  rotate: false
+  xy: 1425, 1477
+  size: 604, 451
+  orig: 604, 451
+  offset: 0, 0
+  index: -1
+logo2
+  rotate: false
+  xy: 1425, 1076
+  size: 276, 276
+  orig: 276, 276
+  offset: 0, 0
+  index: -1
+logo3
+  rotate: false
+  xy: 1425, 1360
+  size: 619, 109
+  orig: 619, 109
+  offset: 0, 0
+  index: -1
+logo4
+  rotate: false
+  xy: 1425, 329
+  size: 162, 241
+  orig: 162, 241
+  offset: 0, 0
+  index: -1
+sound_off
+  rotate: false
+  xy: 1709, 1111
+  size: 241, 241
+  orig: 241, 241
+  offset: 0, 0
+  index: -1
+sound_on
+  rotate: false
+  xy: 1425, 578
+  size: 241, 241
+  orig: 241, 241
+  offset: 0, 0
+  index: -1

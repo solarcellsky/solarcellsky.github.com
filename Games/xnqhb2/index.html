@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>过年红包大放送</title>
+    <meta name="x-id" content="752">
+    <meta name="x-share-icon" content="http://i5.wanh5.com/item/1502/13/54dde576b1886_wx.jpg">
+    <meta name="x-share" content="http://2000052190.zhan.qq.com/mobile/text212.html">
+    <meta name="x-author" content="HW0001">
+    <meta name="x-key" content="e980c7c1f2d119d30d0a341e99aa333c">
+    <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no,target-densitydpi=device-dpi" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="full-screen" content="true" />
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-fullscreen" content="true" />
+    <meta name="360-fullscreen" content="true" />
+    <style>
+    body {
+        text-align: center;
+        background: #a10c12;
+        padding: 0;
+        border: 0;
+        margin: 0;
+        height: 100%;
+    }
+    
+    html {
+        -ms-touch-action: none;
+        /* Direct all pointer events to JavaScript code. */
+        overflow: hidden;
+    }
+    
+    div,
+    canvas {
+        display: block;
+        position: absolute;
+        margin: 0 auto;
+        padding: 0;
+        border: 0;
+    }
+    </style>
+</head>
+
+<body>
+    <div style="position:relative;" id="gameDiv"></div>
+    <script>
+    var document_class = "Main";
+    </script>
+    <script src="launcher/egret_require.js"></script>
+    <script src="launcher/egret_loader.js"></script>
+    <script src="launcher/game-min.js"></script>
+    <script>
+    var support = [].map && document.createElement("canvas").getContext;
+    if (support) {
+        setTimeout(egret_h5.startGame, 800);
+    } else {
+        alert("Egret 不支持您当前的浏览器")
+    }
+    </script>
+</body>
+
+</html>

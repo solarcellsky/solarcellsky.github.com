@@ -1,0 +1,27 @@
+@charset "utf-8";*,*:after,*:before{margin:0 auto;padding:0}body{background-color:#020202}#loading{position:absolute;left:0;top:0;width:640px;height:100%;background:#020202;font-size:25px;z-index:2}#loading img{position:absolute}.stage-wrap{position:absolute;width:640px;height:100%;-webkit-transform-style:flat;overflow:hidden}.threed-stage-wrap{transform-style:preserve-3d;-webkit-transform-style:preserve-3d;-webkit-perspective:742px}.stage-wrap div{background-size:cover;overflow:hidden}.big{position:absolute;top:0;left:0;opacity:0;animation:.8s big_ ease-in-out forwards;-webkit-animation:.8s big_ ease-in-out forwards}.big1{position:absolute;top:80%;left:50%;margin-left:-246px;opacity:0;animation:.8s big_ ease-in-out forwards;-webkit-animation:.8s big_ ease-in-out forwards}@keyframes big_ {
+	0%{transform: translateZ(-2000px)}
+	40%{transform: translateZ(200px);opacity: 0.5}
+	50%{transform: translateZ(-200px);opacity: 0.8}
+	60%{transform: translateZ(100px);opacity: 1}
+	70%{transform: translateZ(-100px);opacity: 1}
+	100%{transform: translateZ(0px);opacity: 1}
+}@-webkit-keyframes big_ {
+	0%{-webkit-transform: translateZ(-2000px)}
+	40%{-webkit-transform: translateZ(200px);opacity: 0.5}
+	50%{-webkit-transform: translateZ(-200px);opacity: 0.8}
+	60%{-webkit-transform: translateZ(100px);opacity: 1}
+	70%{-webkit-transform: translateZ(-100px);opacity: 1}
+	100%{-webkit-transform: translateZ(0px);opacity: 1}
+}.rotate_{position:absolute;top:0;left:0;opacity:0;animation:1s rotate_ ease-in-out forwards;-webkit-animation:1s rotate_ ease-in-out forwards}@keyframes rotate_ {
+	0%{transform: translateZ(-2000px)}
+	100%{transform: translateZ(0px) rotateZ(720deg);opacity: 1}
+}@-webkit-keyframes rotate_ {
+	0%{-webkit-transform:  translateZ(-2000px)}
+	100%{-webkit-transform: translateZ(0px) rotateZ(720deg);opacity: 1}
+}#opc{width:640px;height:1008px;position:absolute;top:0;left:0;opacity:0;animation:1s big_ ease-in-out forwards;-webkit-animation:1s big_ ease-in-out forwards}@keyframes opc {
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}@-webkit-keyframes opc {
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}

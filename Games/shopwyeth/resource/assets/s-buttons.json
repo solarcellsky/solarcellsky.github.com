@@ -1,0 +1,7 @@
+{"file":"s-buttons.png","frames":{
+"button_blue":{"x":1,"y":415,"w":306,"h":117,"offX":0,"offY":0,"sourceW":306,"sourceH":117},
+"button_orange":{"x":1,"y":293,"w":302,"h":120,"offX":0,"offY":0,"sourceW":302,"sourceH":120},
+"button_red":{"x":1,"y":534,"w":306,"h":117,"offX":0,"offY":0,"sourceW":306,"sourceH":117},
+"lbutton_blue":{"x":1,"y":1,"w":377,"h":144,"offX":0,"offY":0,"sourceW":377,"sourceH":144},
+"lbutton_orange":{"x":1,"y":147,"w":377,"h":144,"offX":0,"offY":0,"sourceW":377,"sourceH":144},
+"rbutton_red":{"x":305,"y":293,"w":169,"h":61,"offX":0,"offY":0,"sourceW":169,"sourceH":61}}}

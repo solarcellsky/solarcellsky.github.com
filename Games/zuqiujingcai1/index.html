@@ -1,0 +1,1471 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="initial-scale=1, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0, width=device-width">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<title>欧洲杯(混合竞猜)，一起来狂欢竞猜！~</title>
+<script src="wh_jingcai/Public/Js/jquery-1.9.1.min.js" type="text/javascript"></script> 
+<link href="wh_jingcai/Public/Css/jingcai/style.css" rel="stylesheet" type="text/css">
+<link href="wh_jingcai/Public/Css/jingcai/weui.css" rel="stylesheet" type="text/css">
+<!-- <script src="http://www.pupuxing.com/PPXGameTest/assets/layout/script/common/pupuxing.gameloading.min.js"></script> -->
+<style type="text/css">
+*{padding:0; margin:0}
+.layer{background:#000; opacity:0.5; width:100%; height:100%; position:absolute; display:none; z-index:992}
+.notice,.reg,.gamedone{background:rgba(0,0,0,.7); width:90%; height:490px; position:absolute; z-index:993; left:4%; top:28%; line-height:22px; font-size:15px;  color:#CB7B03;display:none}
+
+.notice a,.reg a{ float:right; margin-top:-5px;}
+
+.content{ position:absolute;bottom:10%; width:100%; padding:5%,5%;  text-align:center}
+.content img{ height:40px;}
+.reg{ height:200px; }
+.reg input{ width:94%; height:30px; line-height:30px; font-size:14px; margin-top:10px;padding-left: 3%}
+.submit, .txtbtn{ width:100%; height:40px; line-height:40px; border-radius:5px; background:#BA0F1A; color:#FFF; margin-top:20px; text-align:center; font-size:16px; font-weight:bolder;letter-spacing:5px}
+</style>
+<style type="text/css">
+#musicbg {
+	position: absolute;z-index:993;right:25px;top:25px;width:35px;height: 35px;display: block;
+	animation: 9.5s linear 0s normal none infinite rotate;
+    -webkit-animation:9.5s linear 0s normal none infinite rotate;
+}
+.music-on {
+	background: url(wh_jingcai/Public/Images/jingcai/music_ico.png) 0 0 no-repeat;background-size:cover;
+}
+.music-off {
+	background: url(wh_jingcai/Public/Images/jingcai/music_ico.png) 0 -35px no-repeat;background-size:cover;
+}
+</style>
+<style type="text/css">
+/* rankmain */
+#rankmain {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.7);
+	display: none;
+	z-index: 999992;
+}
+#rankmain .box02 {
+ background-color: rgba(0,0,0,.7);
+  padding: 20px;
+  font-size: 12px;
+  line-height: 20px;
+  position: fixed;
+  left: 20px;
+  right: 20px;
+  top: 20px;
+  bottom: 55px;
+  overflow: auto;
+  overflow-x: hidden;
+  color:white;
+
+}
+#rankmain b {
+	cursor: pointer;
+position: absolute;
+display: block;
+background: rgba(0, 0, 0, 0.6);
+border-radius: 100%;
+width: 26px;
+height: 26px;
+text-indent: 50px;
+transform: none;
+top: 10px;
+right: 10px;
+z-index: 20000;
+}
+#rankmain b:after {
+	position: absolute;
+	content: '.';
+	display: block;
+	width: 18px;
+	height: 2px;
+	background: #fff;
+	-webkit-transform: rotate(-45deg);
+	top: 12px;
+	left: 4px;
+}
+#rankmain b:before {
+	position: absolute;
+	content: '.';
+	display: block;
+	width: 18px;
+	height: 2px;
+	background: #fff;
+	-webkit-transform: rotate(45deg);
+	top: 12px;
+	left: 4px;
+}
+#rankmain .box02 h1 {
+	font-size: 16px;
+	text-align: center;
+	line-height: 25px;
+	margin-bottom: 15px;
+}
+#rankmain .headimg{
+	width:35px;
+	border-radius:35px;
+	height:35px;
+}
+#phb {
+width:96%;
+  margin: auto;
+}
+#phb .num{
+	width:20%;text-align:center;
+}
+#phb .head{
+	width:20%;text-align:center;
+}
+#phb .name{
+	width:30%;text-align:center;
+}
+#phb .score{
+	width:30%;
+	text-align:center;
+}
+
+</style>
+<script type="text/javascript">
+var cfg_game_finish = '';
+var need_login = '0';
+var cfg_require_reg = '1';
+var cfg_guess_mode = '2';
+var allguess = ''; // 用户所有竞猜的比赛列表
+var guessList = !!'' ? JSON.parse('') : ""; // 用户所有竞猜的比赛的json数组
+</script>
+<script type="text/javascript">
+var bgsound;
+function initBgSound() {
+	bgsound = document.getElementById('bgsound');
+	if (bgsound.paused) {
+		bgsound.play();
+		$('#musicbg').addClass("music-on").removeClass("music-off");
+	} else {
+		bgsound.pause();
+		$('#musicbg').addClass("music-off").removeClass("music-on");
+	}
+}
+
+function showMsg(str) {
+	// 首先需要关闭确认框
+	hideConfirm();
+	$('.weui_dialog_alert .weui_dialog_bd').html(str);
+	$('.weui_dialog_alert').show();
+}
+
+function showLoading(str) {
+	$('.weui_toast_content').html(str);
+	$('#loadingToast').show();
+}
+
+function hideLoading() {
+	$('#loadingToast').hide();
+}
+
+function showConfirm(msg, okfn) {
+	$('.weui_dialog_confirm .weui_dialog_bd').html(msg);
+	$('.weui_dialog_confirm').show();
+}
+
+function reg() {
+	//$('.layer').show();
+	$(".reg").css("display","block");
+}
+
+function notice() {
+   //$('.layer').hide();
+   $(".notice").css("display","none");
+   $(".reg").css("display","none");
+}
+
+function showRule() {
+	$('#rulemain').show();
+}
+
+function checkPlay() {
+	/* if (!!cfg_game_finish) { // 活动结束判断不该放此处
+		showMsg(cfg_game_finish);
+	} else  */if (need_login == '1' && cfg_require_reg == '1') { // debug
+		reg();
+	} else {
+		//showMsg('可以开始');
+		$('#guesspage').show();
+	}
+	
+}
+
+function doSave()
+{
+	//这边最好做ajax判断
+
+	var tel = $("#phone").val();
+    var name = $("#name").val();
+	
+	
+
+	var err_msg = "";
+	var reg_tel=new RegExp("^1[3,5,4,7,8]{1}[0-9]{9}$");
+	
+	if (name == '') {
+	 	showMsg("姓名不能为空!");
+		$("#name").focus();
+		return;
+    }
+	
+	if (tel == '') {
+		showMsg("手机不能为空!");
+		$("#phone").focus();
+	 	return;
+    } else if(!reg_tel.test(tel)){
+		showMsg("请输入正确的手机号码!");
+		$("#phone").focus();
+		return;
+	}
+	
+
+	$.ajax({
+		url : './doSavePhone',
+		data : {
+				username : name,
+				userphone : tel
+			},
+		type : 'post',
+		dataType : "json",
+		error : function(ret, error) {
+			showMsg(ret.responseText);
+		},
+		beforeSend:function() {
+			showLoading('数据提交中');
+		},
+		success : function(ret) {
+			
+			if(ret.status=='ok') {
+				need_login = 0;
+				notice();
+				//window.location.href = "/wh_jingcai/index.php/Index/index.html?f=1";
+			}else{
+				showMsg(ret.msg);
+			}
+			hideLoading();
+			
+		}
+	});
+
+	
+
+}
+
+function procTypeLi() { // 处理比赛类别的li的宽度
+	var len = $('#typeUl').children().length;
+	if (parseInt(len) % 2 != 0) {
+		$('#typeUl').children().eq(len - 1).addClass('long');
+	}
+}
+
+function disabledBtn(obj, btnSay) {
+	obj.removeAttr('onclick');
+	obj.addClass('gray');
+	// 同步也隐藏输入或者选择
+	$p = obj.parent();
+	$p.find('.selresult').hide();
+	$p.find('.inputresult').hide();
+	// 同步也隐藏输入或者选择 end
+	if (!!btnSay) {
+		obj.html(btnSay);
+	}
+}
+
+function doVote(obj, id) {
+	//alert('id=' + id);
+	$this = $(obj);
+	// disabledBtn($this);
+	var aresult = '';
+	var bresult = '';
+	var selresult = '';
+	$inputLi = $this.parent();
+	selresult = $inputLi.find('.radioresult:checked').val();
+	aresult = $inputLi.find('.aresult').val();
+	bresult = $inputLi.find('.bresult').val();
+	if (cfg_guess_mode == '0') { // 单输赢模式
+		//alert('selresult=' + selresult);
+		if (!selresult && selresult != '0') {
+			showMsg('请选择竞猜结果！~');
+			return false;
+		}
+		
+	} else if (cfg_guess_mode == '1') { // 单比分模式
+		var re = new RegExp("^[0-9]*$");
+		if (aresult == '' || bresult == '') {
+			showMsg('请填写对阵球队的比分！~');
+			return false;
+		} else if (!re.test(aresult) || !re.test(bresult)) {
+			showMsg('对阵球队比分必须为数字哦！~');
+			return false;
+		}
+	} else {
+		var re = new RegExp("^[0-9]*$");
+		//alert('selresult=' + selresult);
+		if (!selresult && selresult != '0') {
+			showMsg('请选择竞猜结果！~');
+			return false;
+		} else if (aresult == '' || bresult == '') {
+			showMsg('请填写对阵球队的比分！~');
+			return false;
+		} else if (!re.test(aresult) || !re.test(bresult)) {
+			showMsg('对阵球队比分必须为数字哦！~');
+			return false;
+		}
+	}
+	
+	// 提交
+	$.ajax({
+		url : "/wh_jingcai/index.php/Index/doVote",
+		data : {'mode': cfg_guess_mode, 'id': id, 'aresult': aresult, 'bresult': bresult, 'selresult': selresult},
+		dataType : "json",
+		type : "post",
+		beforeSend: function() {
+			hideConfirm();
+			showLoading('数据处理中');
+		},
+		success : function(data) {
+			if (data.status == 'ok') {
+				disabledBtn($this, '您已经竞猜'); // 禁用按钮
+				showMsg(data.msg);
+			} else {
+				showMsg(data.msg);
+			}
+			hideLoading();
+			
+		}
+		
+	});
+	
+	
+}
+
+function voteMatch(obj, id) {
+	if (!!cfg_game_finish) { // 活动已经结束
+		showMsg(cfg_game_finish);
+		return false;
+	}
+	showConfirm('是否需要提交竞猜？');
+	$('.weui_dialog_confirm .okbtn').unbind();
+	$('.weui_dialog_confirm .okbtn').bind('click', function() {
+		doVote(obj, id);
+	});
+	
+}
+function hideConfirm() {
+	$('.weui_dialog_confirm').hide();
+}
+
+function procDjsAndInitBtn() {
+	setTimeout("show_date_time_0()", 100); // 所有开始倒计时
+	// 用户已经竞猜过的比赛列表，按钮直接置灰
+	$items = $('#matchWrap').children("ul");
+	$items.each(function(i, item) {
+		$this = $(item);
+		if ((allguess + ",").indexOf($this.attr('mid') + ",") != -1) {
+			var tmpStr = guessList[$this.attr('mid')];
+			var tmpArr = tmpStr.split("|");
+			var tmpSay = '';
+			if (cfg_guess_mode == '0' || cfg_guess_mode == '2') {
+				if (parseInt(tmpArr[0]) > parseInt(tmpArr[1])) {
+					tmpSay = $this.attr('aname') +  '胜';
+				} else if (parseInt(tmpArr[0]) < parseInt(tmpArr[1])) {
+					tmpSay = $this.attr('bname') +  '胜';
+				} else {
+					tmpSay = '双方平局';
+				}
+				
+			} else if (cfg_guess_mode == '1') { // 单比分模式
+				tmpSay = '比分' + tmpArr[3] + ' : ' + tmpArr[4];
+			}
+			
+			if (cfg_guess_mode == '2') {
+				tmpSay = tmpSay + '，比分' + tmpArr[3] + ' : ' + tmpArr[4];
+			}
+			
+			tmpSay = "您" + tmpArr[2] + "竞猜" + tmpSay;
+			disabledBtn($this.find('.dovote'), tmpSay);
+		}
+	});
+	
+}
+
+function showMatch(obj, type) {
+	if (!!cfg_game_finish) { // 活动已经结束
+		showMsg(cfg_game_finish);
+		return false;
+	}
+	$this = $(obj);
+	var isstart = $this.attr('isstart');
+	if (!!isstart && isstart != 'started') {
+		showMsg('该赛程的竞猜尚未开始！~');
+		return false;
+	}
+	
+
+	
+var data = {"status":"1","data":[{"id":"43","matchtime":"2017-06-07 15:30:00","voteend":"2017-06-07 15:20:00","isend":"0","ascore":"0","bscore":"0","aname":"\u963f\u5c14\u5df4\u5c3c\u4e9a","bname":"\u5317\u7231\u5c14\u5170","alogo":"574d090521d12.gif","blogo":"574d09711e009.jpg","matchtimeShow":"06\u670807\u65e5 15:30"},{"id":"44","matchtime":"2017-06-08 02:34:00","voteend":"2017-06-08 02:24:00","isend":"0","ascore":"0","bscore":"0","aname":"\u6cd5\u56fd\u6d4b\u8bd5","bname":"\u7f57\u9a6c\u5c3c\u4e9a\u6d4b\u8bd5","alogo":"574ee06802183.png","blogo":"574ee082bcee5.png","matchtimeShow":"06\u670808\u65e5 02:34"},{"id":"42","matchtime":"2017-06-11 11:30:00","voteend":"2017-06-11 11:20:00","isend":"0","ascore":"0","bscore":"0","aname":"\u6cd5\u56fd","bname":"\u7f57\u9a6c\u5c3c\u4e9a","alogo":"574d086757390.gif","blogo":"574d089194420.gif","matchtimeShow":"06\u670811\u65e5 11:30"}],"typename":"\u5c0f\u7ec4\u8d5b","allguess":"43","guessList":"{\"43\":\"1|0|06-10 11:21|2|1\"}"}
+
+			if (data.status == '1') {
+				$this.attr('isstart', 'started');
+				$('.saicheng').html('<img src="wh_jingcai/Public/Images/jingcai/car.png" style="display:block;margin:0 auto;">' + data.typename + '赛程');
+				allguess = data.allguess; // 刷新用户的竞猜的比赛列表
+				guessList = !!data.guessList ? JSON.parse(data.guessList) : "";  // 刷新用户所有竞猜的比赛的json数组
+				if (cfg_guess_mode == '0') {
+					$('.matchlist .note').html('1、下拉选择竞猜结果，<br/>2、点击提交确认您的选择。');
+				} else {
+					$('.matchlist .note').html('1、选择填写对阵球队的比分，<br/>2、点击提交确认您的填写。');
+				}
+				var html = '';
+				var arr = data.data;
+				// 重置倒计时数组
+				target = []; // 重置
+				time_id = []; // 重置
+				// 重置倒计时数组 end
+				for (var i = 0; i < arr.length; i++) {
+					var inputStr = '', rowsel = '', rowinput = '';
+					rowsel = '<div class="selresult" style="margin-top:5%;margin-bottom:5%"></div>';
+					rowinput = '<div class="inputresult" style="display:none;"><span><input type="tel" value="" class="aresult input" maxlength="2" placeholder="输入比分"/></span><span class="maohao">:</span><span><input type="tel" value="" class="bresult input" maxlength="2" placeholder="输入比分"/></span></div>';
+					if (cfg_guess_mode == '0') { // 单输赢模式
+						inputStr = rowsel;
+					} else if (cfg_guess_mode == '1') { // 单比分模式
+						inputStr = rowinput;
+					} else {
+						inputStr = rowsel + rowinput;
+					}
+					html += '<ul mid="' + arr[i].id + '" aname="' + arr[i].aname + '" bname="' + arr[i].bname + '" isend="' + arr[i].isend + '" ascore="' + arr[i].ascore + '" bscore="' + arr[i].bscore + '"><li class="note1"><div>竞猜倒计时：<span id="djs_' + i + '"><font color=yellow>15</font>天&nbsp;<font color=yellow>08</font>时&nbsp;<font color=yellow>26</font>分&nbsp;<font color=yellow>31</font>秒</span></div></li><li><table cellpadding="0" cellspacing="0" border="0"><tr><td class="teamname"><img src="wh_jingcai/Public/Uploads/' + arr[i].alogo + '" class="guoji"/>' + arr[i].aname + '<label class="result"><input type="radio" name="radioresult" class="radioresult" value="a"/>胜<br>WIN</label></td><td rowspan="2" class="vs"><div class="vs">VS</div><div class="matchdate">' + arr[i].matchtimeShow + '</div><label class="result"><input type="radio" name="radioresult" class="radioresult" value="0"/>平<br>DRAW</label></td><td class="teamname"><img src="wh_jingcai/Public/Uploads/' + arr[i].blogo + '" class="guoji"/>' + arr[i].bname + '<label class="result"><input type="radio" name="radioresult" class="radioresult" value="b"/>胜<br>WIN</label></td></tr></table></li><li class="input">' + inputStr + '<span class="dovote" onclick="voteMatch(this, \'' + arr[i].id + '\')">提交</span></li></ul>';
+					// 加入倒计时列表
+					var timearr = arr[i].voteend.split(" ");
+					var datearr = timearr[0].split("-");
+					var harr = timearr[1].split(":");
+					target[target.length] = new Date(datearr[0],parseInt(datearr[1]) - 1, datearr[2], harr[0], harr[1], harr[2]).getTime(); //new Date(年,月-1,日,时,分,秒).getTime() 2016-06-11 03:00:00
+					time_id[time_id.length] = "djs_" + i;
+					// 加入倒计时列表 end
+				}
+				//alert(html);
+				$('#matchWrap').html(html);
+				$('#matchpage').show();
+				$('.result').on('click', function() {
+					$(this).parent('td').siblings().find('.result').removeClass('check')
+					$(this).addClass('check');
+				})
+				// 开启倒计时
+				procDjsAndInitBtn();
+				// 开启倒计时end
+				
+			} else {
+				$this.attr('isstart', 'notStarted');
+				showMsg('该赛程的竞猜尚未开始！~');
+			}
+/*
+	$.ajax({
+		url : "http://wx1.wayhu.com/wh_jingcai/index.php/Index/showMatch",
+		data : {'type': type},
+		dataType : "json",
+		type : "post",
+		beforeSend: function() {
+			showLoading('数据加载中');
+		},
+		success : function(data) {
+
+var data = {"status":"1","data":[{"id":"43","matchtime":"2017-06-07 15:30:00","voteend":"2017-06-07 15:20:00","isend":"0","ascore":"0","bscore":"0","aname":"\u963f\u5c14\u5df4\u5c3c\u4e9a","bname":"\u5317\u7231\u5c14\u5170","alogo":"574d090521d12.gif","blogo":"574d09711e009.jpg","matchtimeShow":"06\u670807\u65e5 15:30"},{"id":"44","matchtime":"2017-06-08 02:34:00","voteend":"2017-06-08 02:24:00","isend":"0","ascore":"0","bscore":"0","aname":"\u6cd5\u56fd\u6d4b\u8bd5","bname":"\u7f57\u9a6c\u5c3c\u4e9a\u6d4b\u8bd5","alogo":"574ee06802183.png","blogo":"574ee082bcee5.png","matchtimeShow":"06\u670808\u65e5 02:34"},{"id":"42","matchtime":"2017-06-11 11:30:00","voteend":"2017-06-11 11:20:00","isend":"0","ascore":"0","bscore":"0","aname":"\u6cd5\u56fd","bname":"\u7f57\u9a6c\u5c3c\u4e9a","alogo":"574d086757390.gif","blogo":"574d089194420.gif","matchtimeShow":"06\u670811\u65e5 11:30"}],"typename":"\u5c0f\u7ec4\u8d5b","allguess":"43","guessList":"{\"43\":\"1|0|06-10 11:21|2|1\"}"}
+
+			if (data.status == '1') {
+				$this.attr('isstart', 'started');
+				$('.saicheng').html(data.typename + '赛程');
+				allguess = data.allguess; // 刷新用户的竞猜的比赛列表
+				guessList = !!data.guessList ? JSON.parse(data.guessList) : "";  // 刷新用户所有竞猜的比赛的json数组
+				if (cfg_guess_mode == '0') {
+					$('.matchlist .note').html('1、下拉选择竞猜结果，<br/>2、点击提交确认您的选择。');
+				} else {
+					$('.matchlist .note').html('1、选择填写对阵球队的比分，<br/>2、点击提交确认您的填写。');
+				}
+				var html = '';
+				var arr = data.data;
+				// 重置倒计时数组
+				target = []; // 重置
+				time_id = []; // 重置
+				// 重置倒计时数组 end
+				for (var i = 0; i < arr.length; i++) {
+					var inputStr = '', rowsel = '', rowinput = '';
+					rowsel = '<div class="selresult" style="margin-top:5%;margin-bottom:5%"><label><input type="radio" name="radioresult" class="radioresult" value="a"/>' + arr[i].aname + '胜</label><label><input type="radio" name="radioresult" class="radioresult" value="0"/>平</label><label><input type="radio" name="radioresult" class="radioresult" value="b"/>' + arr[i].bname + '胜</label></div>';
+					rowinput = '<div class="inputresult"><span><input type="tel" value="" class="aresult input" maxlength="2" placeholder="输入比分"/></span><span class="maohao">:</span><span><input type="tel" value="" class="bresult input" maxlength="2" placeholder="输入比分"/></span></div>';
+					if (cfg_guess_mode == '0') { // 单输赢模式
+						inputStr = rowsel;
+					} else if (cfg_guess_mode == '1') { // 单比分模式
+						inputStr = rowinput;
+					} else {
+						inputStr = rowsel + rowinput;
+					}
+					html += '<ul mid="' + arr[i].id + '" aname="' + arr[i].aname + '" bname="' + arr[i].bname + '" isend="' + arr[i].isend + '" ascore="' + arr[i].ascore + '" bscore="' + arr[i].bscore + '"><li class="note1"><div>比赛日期：' + arr[i].matchtimeShow + '</div><div>竞猜倒计时：<span id="djs_' + i + '"><font color=yellow>15</font>天&nbsp;<font color=yellow>08</font>时&nbsp;<font color=yellow>26</font>分&nbsp;<font color=yellow>31</font>秒</span></div></li><li><table cellpadding="0" cellspacing="0" border="0"><tr><td class="teamname">' + arr[i].aname + '</td><td rowspan="2" class="vs"><div class="vs">VS</div></td><td class="teamname">' + arr[i].bname + '</td></tr><tr><td class="teamlogo"><img src="wh_jingcai/Public/Uploads/' + arr[i].alogo + '" class="guoji"/></td><td class="teamlogo"><img src="wh_jingcai/Public/Uploads/' + arr[i].blogo + '" class="guoji"/></td></tr></table></li><li class="input">' + inputStr + '<span class="dovote" onclick="voteMatch(this, \'' + arr[i].id + '\')">提交</span></li></ul>';
+					// 加入倒计时列表
+					var timearr = arr[i].voteend.split(" ");
+					var datearr = timearr[0].split("-");
+					var harr = timearr[1].split(":");
+					target[target.length] = new Date(datearr[0],parseInt(datearr[1]) - 1, datearr[2], harr[0], harr[1], harr[2]).getTime(); //new Date(年,月-1,日,时,分,秒).getTime() 2016-06-11 03:00:00
+					time_id[time_id.length] = "djs_" + i;
+					// 加入倒计时列表 end
+				}
+				//alert(html);
+				$('#matchWrap').html(html);
+				$('#matchpage').show();
+				// 开启倒计时
+				procDjsAndInitBtn();
+				// 开启倒计时end
+				
+			} else {
+				$this.attr('isstart', 'notStarted');
+				showMsg('该赛程的竞猜尚未开始！~');
+			}
+			hideLoading(); -->
+			
+			
+		}
+		
+	});
+*/
+}
+
+//
+function showTopN() {
+	showLoading('数据加载中');
+var ret = {"status":"ok","data":"[{\"id\":\"3\",\"username\":\"\\u4eca\\u65e5\\u5934\\u6761\\u6c7d\\u8f66\\u70df\\u53f0\\u7ad9--\\u8001\\u9648\",\"headimgurl\":\"http:\\\/\\\/wx.qlogo.cn\\\/mmopen\\\/u3ElK4Tg35CgarmKZ8zy44ibYrTicT6QDic1IyoYmIibexde0wyHE7zNGGOYU6AFES83QvX02nWBBvUHzOd2KwyWP0X1nTDocA3a\\\/0\",\"realname\":\"\\u4e00\\u4e2a\\u4eba\",\"userphone\":\" 15853577776\",\"score\":\"20\",\"rank\":\"1\"},{\"id\":\"15\",\"username\":\"\\u8fbe\\u8fbe\\u5154\",\"headimgurl\":\"http:\\\/\\\/wx.qlogo.cn\\\/mmopen\\\/PiajxSqBRaEID5hRYmY9GBw32XCzc3mY1M4bH6IBj1TVHBKGTyQLXv9uUPgLeq3ztCmDyS0Ihiawo5oD7lr2Scjw\\\/0\",\"realname\":\"trgfff\",\"userphone\":\" 13550556666\",\"score\":\"10\",\"rank\":2},{\"id\":\"19\",\"username\":\"\\u9992\\u5934\",\"headimgurl\":\"http:\\\/\\\/wx.qlogo.cn\\\/mmopen\\\/ajNVdqHZLLAqVtb3k9IZ8Hf9iasTNUeDjZ5C50fHbzqQ7XOrqNLVP1ZiaZmBmCoS3LQqubICuNFfwWE9HpiavbDxw\\\/0\",\"realname\":\"\",\"userphone\":\" none\",\"score\":\"10\",\"rank\":\"\\u5e76\\u52172\"},{\"id\":\"20\",\"username\":\"\\u5c0f\\u9b54\\u517d\",\"headimgurl\":\"http:\\\/\\\/wx.qlogo.cn\\\/mmopen\\\/0hBOWJTKHgVLVDLWQJg5g0LGo1gA0TibwpMF0u78swmCqrkkKV0sWz2D1v6QumSHhsTUkeFOuuNPFjEWD1QlzhIgR0r1lDPvN\\\/0\",\"realname\":\"\\u6768\\u5c0f\\u519b\",\"userphone\":\" 15928068535\",\"score\":\"10\",\"rank\":\"\\u5e76\\u52172\"},{\"id\":\"26\",\"username\":\"Kevin\\u2b50\\u6251\\u6251\\u661f\\u2b50\",\"headimgurl\":\"http:\\\/\\\/wx.qlogo.cn\\\/mmopen\\\/ajNVdqHZLLBt3haXs7t6jsbGxDtPA41VWx9F6CcaNn5mZ4tViauBsmlUzr6oEEFRdyeeGEafAFGNMia4yruw6GT78qMsNXxx6bcibRHpISniaLk\\\/0\",\"realname\":\"\\u7406\\u89e3\",\"userphone\":\" 18629121212\",\"score\":\"10\",\"rank\":\"\\u5e76\\u52172\"},{\"id\":\"1\",\"username\":\"\\u660e\\u5929\\u66f4\\u8f1d\\u714c\",\"headimgurl\":\"http:\\\/\\\/wx.qlogo.cn\\\/mmopen\\\/Z2G6D9bV0RAFSZ1zz3GIxBQtb0OXMsRASiaEQRItTkQibwMWuzgzNtOSvdicib8BAfyFrpUFU93twHVysNF5n6nBYBVRUI1vQNGC\\\/0\",\"realname\":\"\",\"userphone\":\" none\",\"score\":\"0\",\"rank\":3},{\"id\":\"2\",\"username\":\"Smo\",\"headimgurl\":\"http:\\\/\\\/wx.qlogo.cn\\\/mmopen\\\/Z2G6D9bV0RAFSZ1zz3GIxGHpQiam4MdFFNaibp6E0vZHicqhaDDLibQ8YGL3XK3CaTsiceLqn31zCqW6q2XmfqUuFib2cicR19G0pBE\\\/0\",\"realname\":\"\",\"userphone\":\" none\",\"score\":\"0\",\"rank\":\"\\u5e76\\u52173\"},{\"id\":\"4\",\"username\":\"\\u5218\\u6653\\u9f99\",\"headimgurl\":\"http:\\\/\\\/wx.qlogo.cn\\\/mmopen\\\/PiajxSqBRaEItSDsDICfLVAYulksibtBNgy4kQBibiazibYPZKVWsMxgZsicEGBd9AiaZia9Yad4YuuZz25lGv720rY6QA\\\/0\",\"realname\":\"\",\"userphone\":\" none\",\"score\":\"0\",\"rank\":\"\\u5e76\\u52173\"},{\"id\":\"5\",\"username\":\"\\u6e05\\u59d0\",\"headimgurl\":\"http:\\\/\\\/wx.qlogo.cn\\\/mmopen\\\/u3ElK4Tg35Dq28C92mTaaXxLywJgib4Cy8NibaIDkA5HhXhAZdys5icR5AVgXEF0INqZjmueCBEiaNmuyZahvUslMw8kicb3z4xRA\\\/0\",\"realname\":\"\\u6d4b\",\"userphone\":\" 13556688001\",\"score\":\"0\",\"rank\":\"\\u5e76\\u52173\"},{\"id\":\"6\",\"username\":\"Danis\\u5148\\u751f\",\"headimgurl\":\"http:\\\/\\\/wx.qlogo.cn\\\/mmopen\\\/Z2G6D9bV0RAFSZ1zz3GIxMuAwDmBlCWTskcsDvlkjMvGStFx1bBCAuIIx32olxQAQhSbx8WREehDsoJ76EJibaFtzicCPs5LxX\\\/0\",\"realname\":\"\\u5c0f\\u738b\",\"userphone\":\" 13599532246\",\"score\":\"0\",\"rank\":\"\\u5e76\\u52173\"},{\"id\":\"7\",\"username\":\"\\u5343\\u7956\\u7ffc\",\"headimgurl\":\"http:\\\/\\\/wx.qlogo.cn\\\/mmopen\\\/u3ElK4Tg35CGYibsmiaYtKPiatH9miappDicA5mTxN1A3ElZYF2xM7xkBJicTT2JpFxYO2RMX2EtYa7AEHzH0zicJYAXkI7Kgjh8YDC\\\/0\",\"realname\":\"\\u4e9a\\u6d32\\u53a8\\u536b\\u57ce\",\"userphone\":\" 18888888888\",\"score\":\"0\",\"rank\":\"\\u5e76\\u52173\"},{\"id\":\"8\",\"username\":\"Eva\",\"headimgurl\":\"http:\\\/\\\/wx.qlogo.cn\\\/mmopen\\\/dH8QVxmk2IWkYzMRAWoyl6WZa4WQ0OPY4GZt7Wu7wqICVJLE0MkHtYA0vQ7cmlcOnwbGsksejdIGDOHpic3qYfA\\\/0\",\"realname\":\"\",\"userphone\":\" none\",\"score\":\"0\",\"rank\":\"\\u5e76\\u52173\"},{\"id\":\"9\",\"username\":\"\\u9648\\u6ce2\",\"headimgurl\":\"http:\\\/\\\/wx.qlogo.cn\\\/mmopen\\\/hrmfFB9lIgNH7O1x1rOM7KjNUEznIibq428vBmGCToYPb0YGsBaFfzCLxBGEiccpPT91aA4Zribic2FgeZ4WlribdXdEMkTe7icJE0\\\/0\",\"realname\":\"\\u9648\\u6ce2\",\"userphone\":\" 18725652182\",\"score\":\"0\",\"rank\":\"\\u5e76\\u52173\"},{\"id\":\"10\",\"username\":\"\\u611a\\u516c\\u4e5d\\u60a6\",\"headimgurl\":\"http:\\\/\\\/wx.qlogo.cn\\\/mmopen\\\/Z2G6D9bV0RBxUFwuZpEeHXBdW0Wicia5R8gH8dFE1gibmpWgx3yFvnuu6sd3dze5FPsscm62VSvSib2btcziaB3VsqQ\\\/0\",\"realname\":\"\",\"userphone\":\" none\",\"score\":\"0\",\"rank\":\"\\u5e76\\u52173\"},{\"id\":\"11\",\"username\":\"\\u54c1\\u7f8e \\u529e\\u516c\\u5bb6\\u5177 \\u5f90\\u98de\",\"headimgurl\":\"http:\\\/\\\/wx.qlogo.cn\\\/mmopen\\\/dH8QVxmk2IWliclgabns82acKq4BoHdghicaMSaJovoJZs78RfRRFScIIibzkuNKtFjF7CGwSXdHkHib55aaaO8Kplvy63E39cGib\\\/0\",\"realname\":\"\",\"userphone\":\" none\",\"score\":\"0\",\"rank\":\"\\u5e76\\u52173\"},{\"id\":\"12\",\"username\":\"A01\\u5fae\\u7b11\\u4e16\\u754c\",\"headimgurl\":\"http:\\\/\\\/wx.qlogo.cn\\\/mmopen\\\/0hBOWJTKHgXjoVx0fFlicwKldtOpjiaDXJEwknvmA2ZibZMkMLD9icvAauHFrH5B4dDXLvuicQat6QHic5HPwSlGDOKGssHdG7pa9k\\\/0\",\"realname\":\"\\u6d4b\\u8bd5\",\"userphone\":\" 13062628886\",\"score\":\"0\",\"rank\":\"\\u5e76\\u52173\"},{\"id\":\"13\",\"username\":\"LULU\\u2728\",\"headimgurl\":\"http:\\\/\\\/wx.qlogo.cn\\\/mmopen\\\/0hBOWJTKHgVejPHduzeAbmu81djnkIfpA8Ix842zs8TswGPvz8ctfUnhlnNwrBruT05xKEIJWibw2yJDuGOMDmA\\\/0\",\"realname\":\"\",\"userphone\":\" none\",\"score\":\"0\",\"rank\":\"\\u5e76\\u52173\"},{\"id\":\"14\",\"username\":\"\\u5a03\\u5a03\\u5934\",\"headimgurl\":\"http:\\\/\\\/wx.qlogo.cn\\\/mmopen\\\/0hBOWJTKHgVzUVRibag6JZ59jqibsjUK5htjsqAhDw1EYtdH9BGic1SaFbwAuDj2icmviaXQQNjjlEnNqvQkeeZv8L5r5kic8aianKw\\\/0\",\"realname\":\"\\u5218\\u661f\",\"userphone\":\" 13569431247\",\"score\":\"0\",\"rank\":\"\\u5e76\\u52173\"},{\"id\":\"16\",\"username\":\"Zelda\",\"headimgurl\":\"http:\\\/\\\/wx.qlogo.cn\\\/mmopen\\\/u3ElK4Tg35A8chdgsy2dhE8TvbVSonA4Gib4DRPJnaibYHZpHT5XnQP4GWhPMskwHBZPEsLs2TrcteHDWdNbawXKsojfNVRFUO\\\/0\",\"realname\":\"dfa\",\"userphone\":\" 15099999999\",\"score\":\"0\",\"rank\":\"\\u5e76\\u52173\"},{\"id\":\"17\",\"username\":\"\\u8c37\\u6d2a\\u5f6c \\u4f50\\u9014\\u79d1\\u6280\",\"headimgurl\":\"http:\\\/\\\/wx.qlogo.cn\\\/mmopen\\\/PiajxSqBRaEKWrnSPSoFMoibia6VRW97WEic8R3AHlzFOK3rbz0lrhsLkZW9TAUYmxtdPE8PobKJ8lBvzUtE9C2bfg\\\/0\",\"realname\":\"\\u8c37\\u5b50\",\"userphone\":\" 18833377373\",\"score\":\"0\",\"rank\":\"\\u5e76\\u52173\"},{\"id\":\"18\",\"username\":\" \\u516b\\u6212...\",\"headimgurl\":\"http:\\\/\\\/wx.qlogo.cn\\\/mmopen\\\/PiajxSqBRaELic9WVX0AHuSgmBf092Yia0PfCR9LSaW4pKkAU89UJpX1ZEHIszBsWLgEtDTVAZsiaxL70fvsEK6oMw\\\/0\",\"realname\":\"\\u9648\\u5929\\u534e\",\"userphone\":\" 13599166200\",\"score\":\"0\",\"rank\":\"\\u5e76\\u52173\"},{\"id\":\"21\",\"username\":\"\\u5fb7\\u62c9\",\"headimgurl\":\"http:\\\/\\\/wx.qlogo.cn\\\/mmopen\\\/hrmfFB9lIgNH7O1x1rOM7O7E5P34P8A58DCvLSUwQwfc1HaZEmibC7ibyO6CV8j5o8ML6AxuECqS5DSKKKdzXqhoibbputJIjpic\\\/0\",\"realname\":\"\",\"userphone\":\" none\",\"score\":\"0\",\"rank\":\"\\u5e76\\u52173\"},{\"id\":\"22\",\"username\":\"E ER  \\ue513\",\"headimgurl\":\"http:\\\/\\\/wx.qlogo.cn\\\/mmopen\\\/dH8QVxmk2IVlEdIIZcUybu1eABwZnzA5UxVdqKVjDlws5RFUa5zfjXwXt9J6ib3Pem1uBYn03aF4vMY2N8t2ZXQ\\\/0\",\"realname\":\"\\u738b\\u7405\",\"userphone\":\" 13541609159\",\"score\":\"0\",\"rank\":\"\\u5e76\\u52173\"},{\"id\":\"23\",\"username\":\"\\u5efa\\u884c\\u65f6\\u6751\\u8425\",\"headimgurl\":\"http:\\\/\\\/wx.qlogo.cn\\\/mmopen\\\/0hBOWJTKHgXjoVx0fFlicwLaLcCdWjYuYab1koOicGtOq9k3UsohOjvuWCUwHMeOIm4jhJQQLe1gHUZiaicw9HYJibNhy0ef12ib2E\\\/0\",\"realname\":\"\",\"userphone\":\" none\",\"score\":\"0\",\"rank\":\"\\u5e76\\u52173\"},{\"id\":\"24\",\"username\":\"\\u9ad8\\u7ea7\\u6ce5\\u6c34\\u4f6c\",\"headimgurl\":\"http:\\\/\\\/wx.qlogo.cn\\\/mmopen\\\/Z2G6D9bV0RDiaLcx6icWOAiaI09yLPOwH1nDv0dBG5BkdHP4WKlx9hdsNzn5cibffSpzv6ILOtjUo3E5qw85dBibY3A0NjHh1eepn\\\/0\",\"realname\":\"\\u5f20\\u4e1c\\u5065\",\"userphone\":\" 13652251233\",\"score\":\"0\",\"rank\":\"\\u5e76\\u52173\"},{\"id\":\"25\",\"username\":\"\\u6728\\u6708\\u4e5d\",\"headimgurl\":\"http:\\\/\\\/wx.qlogo.cn\\\/mmopen\\\/ajNVdqHZLLAHduoS2gTdEEVoYh5mMBxNGJhBlw9FMe8HCSZYgXnsPJ4ia4rCFuqfCzcVf1fbTsvatzXMeG9QXDw\\\/0\",\"realname\":\"\\u6797\\u660e\\u65ed\",\"userphone\":\" 13515055113\",\"score\":\"0\",\"rank\":\"\\u5e76\\u52173\"},{\"id\":\"27\",\"username\":\"\\u738b\\u8087\\u4e2d\",\"headimgurl\":\"http:\\\/\\\/wx.qlogo.cn\\\/mmopen\\\/ajNVdqHZLLBDMiaRkEbm5c5Im0BmzRd0zeqZkW6CDAx2ZIS7uKIdzGvWZPruiaeItnyjkYNeIS9oexcvNT82F2IQ\\\/0\",\"realname\":\"ryggf\",\"userphone\":\" 18954123658\",\"score\":\"0\",\"rank\":\"\\u5e76\\u52173\"},{\"id\":\"28\",\"username\":\"\\u5434\\u6850\",\"headimgurl\":\"http:\\\/\\\/wx.qlogo.cn\\\/mmopen\\\/u3ElK4Tg35BqxAsHlEgunaf7ib1IYYbuFaWOpT4CKQdjKEcoBxEFxWIszbB2ZPXoVicWTQM9jFO7GvI8phrISz1ic3WtTQ8xdRib\\\/0\",\"realname\":\"\",\"userphone\":\" none\",\"score\":\"0\",\"rank\":\"\\u5e76\\u52173\"},{\"id\":\"29\",\"username\":\"\\u5408\\u8f89\\u7b56\\u5212\\u592b\",\"headimgurl\":\"http:\\\/\\\/wx.qlogo.cn\\\/mmopen\\\/Z2G6D9bV0RAFSZ1zz3GIxFOzRn9TiaR2FcyZOGCze2mt4DYqNmUKAXt3x8OAxzxMDW8evwPJdicSMpwyLJNOZLKrnSibxrLpOla\\\/0\",\"realname\":\"\",\"userphone\":\" none\",\"score\":\"0\",\"rank\":\"\\u5e76\\u52173\"}]","mypos":"\u5e76\u52172","myscore":"10"};
+
+
+ 			if(ret.status=='ok'){
+				var html = '';
+				if (!!ret.data) {
+				
+				
+					var data = eval('(' + ret.data + ')');
+					var tipStr = '';
+					//alert('ret.mypos=' + ret.mypos);
+					if (ret.mypos != '0') {
+						tipStr = '您当前：<font color="red">' + ret.myscore + '</font>积分，暂列第<font color="red">' + ret.mypos + '</font>名。';
+					} else {
+						tipStr = '<span>您当前暂无排名，赶快加入竞猜吧！~</span>';
+					}
+					$('.titdiv').html(tipStr);
+					
+					for (var i = 0; i < data.length; i++) {
+						var imgurl;
+						if (data[i].headimgurl !='' && data[i].headimgurl !='/0') {
+							imgurl = data[i].headimgurl;
+						} else {
+							imgurl = '/wh_jingcai/Public/Images/jingcai/person.gif';
+						}
+						
+						var username = data[i].username;
+						
+						html += '<tr style="height:56px"><td class="num">' + data[i].rank + '</td><td class="head"><img src="' + imgurl + '" class="headimg"></td><td class="name">' + username + '</td><td class="score">' + data[i].score + '</td></tr>';
+						
+						
+					}
+					
+				} else {
+					
+					html += '<tr><td style="text-align:center;color:#f00;" colspan="4">暂无竞猜排行！</td></tr>';
+				}
+				
+				
+				
+				//alert(html);
+				
+				//$('.topnWrap .tit').html('我的当前排名：' + ret.mypos);
+				$('#phb-body').html(html);
+			} else {
+				
+				//$('.topnWrap .tit').html('暂无排名信息！');
+				//$('.topnList').hide();
+				var html = '<tr><td style="text-align:center;color:#f00;" colspan="4">暂无竞猜排行！</td></tr>';
+				$('#phb-body').html(html);
+			}
+			
+			$("#rankmain").css("display", "block");
+			hideLoading();
+
+			/*
+  	 $.ajax({
+		url : '/wh_jingcai/index.php/Index/topN',
+		data : {},
+		type : 'post',
+		dataType:"json",
+		error : function(ret, error) {
+			showMsg('topN返回：' + ret.responseText);
+		},
+		success : function(ret) {
+			if(ret.status=='ok'){
+				var html = '';
+				if (!!ret.data) {
+				
+				
+					var data = eval('(' + ret.data + ')');
+					var tipStr = '';
+					//alert('ret.mypos=' + ret.mypos);
+					if (ret.mypos != '0') {
+						tipStr = '您当前：<font color="red">' + ret.myscore + '</font>积分，暂列第<font color="red">' + ret.mypos + '</font>名。';
+					} else {
+						tipStr = '<span>您当前暂无排名，赶快加入竞猜吧！~</span>';
+					}
+					$('.titdiv').html(tipStr);
+					
+					for (var i = 0; i < data.length; i++) {
+						var imgurl;
+						if (data[i].headimgurl !='' && data[i].headimgurl !='/0') {
+							imgurl = data[i].headimgurl;
+						} else {
+							imgurl = '/wh_jingcai/Public/Images/jingcai/person.gif';
+						}
+						
+						var username = data[i].username;
+						
+						html += '<tr style="height:56px"><td class="num">' + data[i].rank + '</td><td class="head"><img src="' + imgurl + '" class="headimg"></td><td class="name">' + username + '</td><td class="score">' + data[i].score + '</td></tr>';
+						
+						
+					}
+					
+				} else {
+					
+					html += '<tr><td style="text-align:center;color:#f00;" colspan="4">暂无竞猜排行！</td></tr>';
+				}
+				
+				
+				
+				//alert(html);
+				
+				//$('.topnWrap .tit').html('我的当前排名：' + ret.mypos);
+				$('#phb-body').html(html);
+			} else {
+				
+				//$('.topnWrap .tit').html('暂无排名信息！');
+				//$('.topnList').hide();
+				var html = '<tr><td style="text-align:center;color:#f00;" colspan="4">暂无竞猜排行！</td></tr>';
+				$('#phb-body').html(html);
+			}
+			
+			$("#rankmain").css("display", "block");
+			hideLoading();
+			
+		}
+	});
+	   */
+}
+
+$(function() {
+	initBgSound(); // 背景音乐
+	$('#musicbg').click(function() {
+		initBgSound();
+	});
+	
+	procTypeLi();
+	
+	$('#matchpage .back').click(function() {
+		$('#matchpage').hide();
+	});
+	
+	$('#shareBtn').click(function() {
+		$('.weixin-share').show();
+	});
+	
+	$('.weixin-share').click(function() {
+		$(this).hide();
+	});
+	
+	$('#rankBtn').click(function() {
+		showTopN();
+	});
+	
+});
+</script>
+<script type="text/javascript">
+function checkIsVoteEnd(time, obj) {
+	time = time.replace("-", "/");
+	time = time.replace("-", "/");
+    var EndTime= new Date(time); // 格式：'2016/05/29 18:00:00'
+    var NowTime = new Date();
+    var t =EndTime.getTime() - NowTime.getTime();
+
+    var d=Math.floor(t/1000/60/60/24);
+    var h=Math.floor(t/1000/60/60%24);
+    var m=Math.floor(t/1000/60%60);
+    var s=Math.floor(t/1000%60);
+    if (d <= 0 && h <= 0 && m <= 0 && s <= 0) {
+    	return true;
+    }
+    return false;
+}
+
+var target=[];
+var time_id=[];
+function show_date_time_0(){ 
+    setTimeout("show_date_time_0()", 1000); 
+for (var i=0,j=target.length;i<j;i++){ 
+    today=new Date(); 
+    timeold=target[i]-today.getTime(); 
+    sectimeold=timeold/1000; 
+    secondsold=Math.floor(sectimeold); 
+    msPerDay=24*60*60*1000; 
+    e_daysold=timeold/msPerDay; 
+    daysold=Math.floor(e_daysold); 
+    e_hrsold=(e_daysold-daysold)*24; 
+    hrsold=Math.floor(e_hrsold); 
+    e_minsold=(e_hrsold-hrsold)*60; 
+    minsold=Math.floor((e_hrsold-hrsold)*60); 
+    seconds=Math.floor((e_minsold-minsold)*60); 
+    if (daysold<0) { 
+    	// add on 20160601
+    	var tmpSay = '已截止竞猜'; // 默认
+    	var $ul = $('#' + time_id[i]).parent().parent().parent();
+    	var isend = $ul.attr('isend');
+    	if (isend == '1') {
+    		var ascore = $ul.attr('ascore');
+        	var bscore = $ul.attr('bscore');
+        	if (parseInt(ascore) > parseInt(bscore)) {
+    			tmpSay = $ul.attr('aname') + '胜';
+    		} else if (parseInt(ascore) < parseInt(bscore)) {
+    			tmpSay = $ul.attr('bname') + '胜';
+    		} else {
+    			tmpSay = '双方平局';
+    		}
+        	
+        	if (cfg_guess_mode == '0') {
+        		tmpSay = '比赛已结束，' + tmpSay;
+        	} else {
+        		tmpSay = '比赛已结束，比分' + ascore + ' : ' + bscore + '，' + tmpSay;
+        	}
+    		
+    	}
+    	
+    	// add on 20160601 end
+        document.getElementById(time_id[i]).innerHTML="<font color=red style='font-size:12px;'>" + tmpSay + "</font>";
+        disabledBtn($ul.find('.dovote'));// 禁用并置灰按钮
+    }  
+    else {  
+        if (hrsold<10) {hrsold="0"+hrsold} 
+        if (minsold<10) {minsold="0"+minsold} 
+        if (seconds<10) {seconds="0"+seconds} 
+        document.getElementById(time_id[i]).innerHTML="<font color=red>"+daysold+"</font>天&nbsp;<font color=red>"+hrsold+"</font>小时&nbsp;<font color=red>"+minsold+"</font>分&nbsp;<font color=red>"+seconds+"</font>秒";  
+        
+    } 
+} 
+} 
+//setTimeout("show_date_time_0()", 100); 
+
+$(function() {
+	/* alert('guessList_str=');
+	alert(JSON.stringify(guessList)); */
+	
+});
+</script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript">
+function setShareCount(flag) {
+	$.ajax({
+		url : "/wh_jingcai/index.php/Index/setShareCount",
+		data : {'flag': flag},
+		dataType : "json",
+		type : "post",
+		success : function(data) {
+			//showMsg(data.msg);
+			$('.weixin-share').hide();
+			if (data.status == '1') {
+				showMsg(data.msg);
+			}
+			
+		}
+		
+	});
+	
+}
+
+
+wx.config({
+    debug: false,
+    appId: 'wx651c6c17d91e6181',
+    timestamp: '1465524982',
+    nonceStr: '1jVwIl1MfoPsu1rs',
+    signature: '2d6849a53a2a79636a2d820e70873709c7423fe9',
+      jsApiList: [
+		'onMenuShareTimeline',
+		'onMenuShareAppMessage',
+		'hideMenuItems'
+		]
+  });
+  wx.ready(function () {
+	  
+	  //
+	  wx.hideMenuItems({
+	      menuList: [
+	        'menuItem:copyUrl',
+	        'menuItem:openWithQQBrowser',
+	        'menuItem:share:email',
+	        'menuItem:openWithSafari',
+			"menuItem:share:qq"
+	      ],
+	      success: function (res) {
+	      },
+	      fail: function (res) {
+	      }
+	    });
+	  //
+	  
+	  
+    // 在这里调用 API
+	
+	shareFn();
+	
+  });
+  
+  wx.error(function (res) {
+	
+	showMsg(res.errMsg);
+});
+
+function shareFn() {
+		wx.onMenuShareAppMessage({
+      title: document.getElementById("wx_share_title").value,
+      desc: document.getElementById("wx_share_desc").value,
+       link: document.getElementById("wx_share_url").value,
+      imgUrl: document.getElementById("wx_share_pic").value,
+      trigger: function (res) {
+		//showMsg(document.getElementById("wx_share_desc").value);
+		//$("#wx_share_desc").val(ret.wx_share_msg);
+       // showMsg('用户点击发送给朋友');
+      },
+      success: function (res) {
+       // showMsg('已分享');
+    	  setShareCount(1);
+      },
+      cancel: function (res) {
+       // showMsg('已取消');
+      },
+      fail: function (res) {
+       // showMsg(JSON.stringify(res));
+      }
+    });
+	
+	wx.onMenuShareTimeline({
+     title: document.getElementById("wx_share_desc").value,
+      link: document.getElementById("wx_share_url").value,
+      imgUrl: document.getElementById("wx_share_pic").value,
+	  
+      trigger: function (res) {
+       // showMsg('用户点击分享到朋友圈');
+      },
+      success: function (res) {
+       // showMsg('已分享');
+    	  setShareCount(1);
+      },
+      cancel: function (res) {
+       // showMsg('已取消');
+      },
+      fail: function (res) {
+        //showMsg(JSON.stringify(res));
+      }
+    });
+		
+	}	
+		
+</script>
+<style type="text/css">
+html,body {
+	height: 100%;
+}
+body {
+	background:url(wh_jingcai/Public/Images/jingcai/home.jpg) no-repeat center center !important;background-size:100% 100% !important;
+}
+.btn {
+	width:169px;height:46px;display:block;
+}
+/*.back {
+	position: absolute;top: 10px;right: 8px;width:30px;height:30px;background:url(wh_jingcai/Public/Images/jingcai/close.png) no-repeat;background-size:cover;
+}*/
+.weixin-share {
+	left:0;
+	top:0;
+	background: rgba(0,0,0,0.85) url(wh_jingcai/Public/Images/jingcai/bg_share.png) no-repeat;
+	background-size: 100% 100%;
+	display: none;
+	height: 100%;
+	position: fixed;
+	width: 100%;
+	z-index: 999999;
+}
+/* homepage */
+#homepage {
+	position:absolute;z-index:90;left:0;top:75%;width:100%;text-align:center; 
+}
+@media only screen and (min-width:320px) {
+#homepage {
+	position:absolute;z-index:90;left:0;top:78%;width:100%;text-align:center; 
+}
+	
+}
+#homepage #ruleBtn {
+	background:url(wh_jingcai/Public/Images/jingcai/rule_btn.png) no-repeat;background-size:100% 100%;margin:0 auto 18px;
+}
+#homepage #startBtn {
+	background:url(wh_jingcai/Public/Images/jingcai/start_btn.png) no-repeat;background-size:100% 100%;margin:0 auto;
+}
+
+
+
+#reg #submitBtn {
+	background:url(wh_jingcai/Public/Images/jingcai/submit_btn.png) no-repeat;background-size:100% 100%;margin:0 auto;
+}
+
+/* rulemain */
+#rulemain {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.7);
+	display: none;
+	z-index: 994;
+}
+#rulemain .box01 {
+  background-color: rgba(0,0,0,.7);
+  font-size: 12px;
+  line-height: 20px;
+  position: fixed;
+  left: 20px;
+  right: 20px;
+  top:10%;
+  bottom: 55px;
+  overflow: auto;
+  overflow-x: hidden;
+  padding:0 5px;
+  color: white
+}
+#rulemain b,#reg b ,.back{
+	cursor: pointer;
+position: absolute;
+display: block;
+background: rgba(0, 0, 0, 0.6);
+border-radius: 100%;
+width: 26px;
+height: 26px;
+text-indent: 50px;
+transform: none;
+top: 0px;
+right: 0px;
+z-index: 991;
+}
+#rulemain b:after ,#reg b:after,.back:after{
+	position: absolute;
+	content: '.';
+	display: block;
+	width: 18px;
+	height: 2px;
+	background: #fff;
+	-webkit-transform: rotate(-45deg);
+	top: 12px;
+	left: 4px;
+}
+#rulemain b:before ,#reg b:before ,.back:before{
+	position: absolute;
+	content: '.';
+	display: block;
+	width: 18px;
+	height: 2px;
+	background: #fff;
+	-webkit-transform: rotate(45deg);
+	top: 12px;
+	left: 4px;
+}
+#rulemain .box01 h1 {
+	font-size: 16px;
+	text-align: center;
+	line-height: 25px;
+	margin-bottom: 15px;
+	margin-top:20px;
+}
+.box01 table {
+	width: 100%;
+	font-size: 14px;
+}
+.box01 table tr {
+	border-radius: 5px;
+}
+.box01 table tr th {
+	background-color: #FC6;
+	line-height: 30px;
+	border-bottom: 2px #fff solid;
+	width:25%;
+	border-right: 2px #fff solid;
+	
+}
+.box01 table tr td {
+	background-color: #fafafa;
+	border-bottom: 2px #fff solid;
+	text-align: center;
+	color:#000;
+	width:25%;
+	vertical-align: middle;
+	font-size:12px;
+	border-right: 2px #fff solid;
+}
+
+/* guesspage */
+#guesspage {
+	position:absolute;z-index:993;left:0;top:0;width:100%;height:100%;background:url(wh_jingcai/Public/Images/jingcai/jingcai_bg.jpg) no-repeat;background-size:cover;
+}
+#guesspage .gamename {
+	width:85%;margin:12px auto 0;text-align:center;color:#f39800;font-size:20px;font-weight:bolder;letter-spacing: 2px;
+}
+#guesspage .banner {
+	width:100%;margin:12px auto 0;text-align:center;
+}
+#guesspage .banner img {
+	width:100%;height:100%;
+}
+#guesspage .typelist {
+	border:0px #f00 solid;text-align:center;
+}
+#guesspage .typelist ul li {
+	display:inline-block;width:40%;margin: 0% 3% 0;
+}
+#guesspage .typelist ul li.long {
+	display:inline-block;width:88.5%;margin: 0% 3% 0;
+}
+#guesspage .typelist ul li img, #guesspage .typelist ul li.long img {
+	width:100%;height:100%;
+}
+#guesspage .typelist li span {
+	display:block;margin:2px auto;
+}
+@media only screen and (min-width:360px) {
+#guesspage .typelist ul li {
+	display:inline-block;width:40%;margin: 0.5% 3% 0;
+}
+#guesspage .typelist ul li.long {
+	display:inline-block;width:88.5%;margin: 0.5% 3% 0;
+}
+#guesspage .typelist li span {
+	display:block;margin:5px auto;
+}
+	
+}
+@media only screen and (min-width:375px) {
+#guesspage .typelist ul li {
+	display:inline-block;width:40%;margin: 0.5% 3% 0;
+}
+#guesspage .typelist ul li.long {
+	display:inline-block;width:88.5%;margin: 0.5% 3% 0;
+}
+#guesspage .typelist li span {
+	display:block;margin:5px auto;
+}
+	
+}
+
+@media only screen and (min-width:414px) {
+#guesspage .typelist ul li {
+	display:inline-block;width:40%;margin: 0.5% 3% 0;
+}
+#guesspage .typelist ul li.long {
+	display:inline-block;width:88.5%;margin: 0.5% 3% 0;
+}
+#guesspage .typelist li span {
+	display:block;margin:6px auto;
+}
+	
+}
+
+#guesspage .guessBtns {
+	margin:0 auto 3px;text-align:center;
+}
+#guesspage .guessBtns #ruleBtn2 {
+	width:130px;height:44px;background:url(wh_jingcai/Public/Images/jingcai/rule_btn.png) no-repeat;background-size:100% 100%;margin:0 auto;display:block; 
+}
+#guesspage .guessBtns #rankBtn {
+	width:130px;height:44px;background:url(wh_jingcai/Public/Images/jingcai/rank_btn.png) no-repeat;background-size:100% 100%;margin:0 5px;display:inline-block; 
+}
+#guesspage .guessBtns #shareBtn {
+	width:130px;height:44px;background:url(wh_jingcai/Public/Images/jingcai/share_btn.png) no-repeat;background-size:100% 100%;margin:0 5px;display:inline-block;
+}
+
+/* matchpage */
+#matchpage {
+	position:absolute;z-index:994;left:0;top:0;width:100%;min-height:100%;background:#224c85;overflow:hidden;
+}
+#matchpage:after{content:'';position:fixed;z-index:-1;left:0px;top:0px;width:100%;height:100%;background:url(wh_jingcai/Public/Images/jingcai/jingcai_bg.jpg) no-repeat center bottom;background-size:cover;}
+#matchpage .lastDayResult {
+	padding: 25px 10px 0;
+	color: #fff;
+	line-height: 18px;
+	font-size: 12px;
+}
+#matchpage .lastDayResult span {
+	display: inline-block;
+	border-right: 1px solid #fff;
+	padding: 0 5px 0 5px;
+}
+#matchpage .lastDayResult img {
+	width: auto;
+	height: 18px;
+	border-radius: 3px;
+	margin: 0 3px;
+	vertical-align: middle;
+}
+#matchpage .gamename {
+	width:100%;margin:0 auto;text-align:center;color:#fff;font-size:30px;font-weight:700;letter-spacing: 2px;
+}
+#matchpage .saicheng {
+	width:100%;margin:0 auto 0;text-align:center;color:#fff;font-size:14px;
+}
+#matchpage .matchlist {
+	width:98%;/*height:80%;*/margin: 3% auto 3%;font-size:12px;/*overflow: auto;background: #fff;border: 1px solid #fff;border-radius: 5px;*/
+}
+#matchpage .note {
+	display:none; margin:8px 5px;text-align:left;color:#f39800;
+}
+#matchpage img.guoji {
+	width:50px;height:33px;
+}
+#matchpage table {
+	width:89%;margin:0 auto;border:none;border-collapse: collapse;border-spacing:0;
+}
+#matchpage td {
+	text-align:center;border:none;border-collapse: collapse;border-spacing:0;
+}
+#matchpage li.note1 {
+	margin: 0 auto 8px;border-bottom:1px solid rgba(255, 255, 255, 0.32);font-size:14px;
+}
+#matchpage li.note1 div {
+	text-align:center;width:85%;margin: 0 auto;color:#fff;
+}
+#matchpage .vs {
+	color:#fff;font-weight:bolder;font-size:22px;vertical-align:bottom;
+}
+#matchpage td.vs {
+	border-left: 1px solid #fff;
+	border-right: 1px solid #fff;
+	width: 33.33%;
+}
+#matchpage td label {
+	display: block;
+	border-radius: 5px;
+	margin: 5px 10px;
+	background: #597c9a;
+	text-align: center;
+	color: #fff;
+	font-size: 16px;
+	line-height: 1.2;
+	padding: 5px 0;
+}
+#matchpage td label.check {
+	background: #0d4070;
+}
+#matchpage td label input {
+	display: none;
+}
+#matchpage .teamlogo {
+	/*background: #d9e9f9;padding-top:5px;*/
+}
+#matchpage .teamname img {
+	display: block;
+	border-radius: 5px;
+	margin: 5px auto;
+	max-width: 90%;
+}
+#matchpage .teamname {
+	/*background: #d9e9f9;padding-bottom:5px;*/color:#fff;font-weight:bolder;width: 33.33%;
+}
+#matchpage .matchdate {
+	font-size: 10px;
+}
+#matchpage #matchWrap ul {
+	border: 1px #000 solid;margin: 0 auto 10px;width:98%;text-align: center;padding: 10px 0;/*background: #224c85;*/background:rgba(0,0,0,.7);
+}
+#matchpage li.input {
+	width: 90%; margin: 3% auto;
+}
+#matchpage .selresult label {
+	display:inline-block;margin-right:12px;color:#f39800;font-size:14px;vertical-align:middle;
+}
+#matchpage .selresult .radioresult {
+	vertical-align:middle;
+}
+#matchpage li.input select {
+	width:100%;height:32px;border-radius:5px;margin:5px auto;
+}
+#matchpage .maohao {
+	font-size:22px;color:#fff;width:10%;display: inline-block;
+}
+#matchpage input.input {
+	width:28%;height:32px;border-radius:5px;margin:5px auto;text-align: center;font-size:16px;
+}
+#matchpage .dovote {
+	display: inline-block;width:92%;height:35px;line-height: 35px;border-radius:5px; background:#cc3333; color:#FFF; margin-top: 3%; text-align:center; font-size:16px; font-weight:bolder;letter-spacing:5px;
+}
+.gray {
+	background:#ddd !important;color: #f39800 !important;margin-top:5px !important;letter-spacing:0px !important;font-weight:normal !important;font-size:14px  !important;
+}
+span.day, span.hour, span.min, span.sec {
+	color:red;
+}
+
+#i-rule{position:absolute;top:10%;right:10px;border:1px solid #ff0;color:#ff0;padding:3px 5px;border-radius:5px;font-size:12px;z-index: 999991;}
+</style>
+<script type="text/javascript">
+$(function() {
+	//alert(allguess);
+});
+</script>
+</head>
+
+<body>
+<!-- homepage -->
+<div id="homepage">
+<div class="homeBtns">
+  <span class="btn" id="ruleBtn" onclick="showRule()"></span>
+  <span class="btn" id="startBtn" onclick="checkPlay()"></span>
+</div>
+</div>
+<!-- homepage end -->
+
+<!-- guesspage -->
+
+<div id="guesspage" style="display: none;">
+<!-- <div class="gamename">2016年欧洲杯<span style="color:#fff;">竞猜平台</span></div> -->
+<!-- <div class="banner"><a href="http://www.qq.com"><img src="wh_jingcai/Public/Images/jingcai/top_ad.jpg"/></a></div> -->
+<div class="typelist" style="padding:100px 0 0;">
+  <ul id="typeUl">
+    <!-- <li>
+      <span>小组赛</span>
+      <span>【点击竞猜】</span>
+    </li>
+    <li>
+      <span>1/8决赛</span>
+      <span>【点击竞猜】</span>
+    </li>
+    <li>
+      <span>1/4决赛</span>
+      <span>【点击竞猜】</span>
+    </li>
+    <li>
+      <span>1/8决赛</span>
+      <span>【点击竞猜】</span>
+    </li>
+    <li class="long">
+      <span>1/4决赛</span>
+      <span>【点击竞猜】</span>
+    </li> -->
+    <!--  -->
+    <li onclick="showMatch(this, '1')" isstart=""><img src="wh_jingcai/Public/Images/jingcai/xiaozusai_btn.png"/></li>
+    <li onclick="showMatch(this, '2')" isstart=""><img src="wh_jingcai/Public/Images/jingcai/bafenyi_btn.png"/></li>
+    <li onclick="showMatch(this, '3')" isstart=""><img src="wh_jingcai/Public/Images/jingcai/sifenyi_btn.png"/></li>
+    <li onclick="showMatch(this, '4')" isstart=""><img src="wh_jingcai/Public/Images/jingcai/banjuesai_Btn.png"/></li>
+    <li onclick="showMatch(this, '5')" isstart=""><img src="wh_jingcai/Public/Images/jingcai/juesai_btn.png"/></li>
+    
+  </ul>
+</div>
+<div class="guessBtns">
+ <!--  <span class="btn" id="ruleBtn2" onclick="showRule()" style="display: none;"></span> -->
+  <span class="btn" id="rankBtn"></span>
+  <span class="btn" id="shareBtn"></span>
+</div>
+</div>
+<!-- guesspage end -->
+
+<!-- matchpage -->
+<div id="matchpage" style="display: none;">
+<div class="lastDayResult">昨日赛事结果<span>胜</span><img src="wh_jingcai/Public/Uploads/574d090521d12.gif"><img src="wh_jingcai/Public/Uploads/574d089194420.gif"><span>胜</span><img src="wh_jingcai/Public/Uploads/574d090521d12.gif"><img src="wh_jingcai/Public/Uploads/574d089194420.gif"><span>胜</span><img src="wh_jingcai/Public/Uploads/574d090521d12.gif"><img src="wh_jingcai/Public/Uploads/574d089194420.gif"></div>
+<div class="gamename">2016法国欧洲杯</div>
+<div class="saicheng">2016法国欧洲杯</div>
+<span class="back" style="position:fixed"></span>
+<div class="matchlist">
+  <span class="note">1、下拉选择竞猜结果，<br/>2、点击提交确认您的选择。</span>
+  <div id="matchWrap">
+    <ul mid="" aname="" bname="" isend="">
+      <li class="note1">
+        <div>竞猜倒计时：<span id="djs_0"><font color=red>15</font>天&nbsp;<font color=red>08</font>时&nbsp;<font color=red>26</font>分&nbsp;<font color=red>31</font>秒</span></div>
+      </li>
+      <li>
+        <table cellpadding="0" cellspacing="0" border="0">
+          <tr>
+            <td class="teamname"><img src="wh_jingcai/Public/Images/jingcai/guoji.png" class="guoji"/>法国<label class="result"><input type="radio" name="radioresult" class="radioresult" value="a" checked="checked"/>法国胜</label></td>
+            <td rowspan="2" class="vs"><div class="vs">VS</div><div class="matchdate">6月27日 02：30</div><label class="result"><input type="radio" name="radioresult" class="radioresult" value="0"/>平</label></td>
+            <td class="teamname"><img src="wh_jingcai/Public/Images/jingcai/guoji.png" class="guoji"/>罗马尼亚<label class="result"><input type="radio" name="radioresult" class="radioresult" value="b"/>罗马尼亚胜</label></td>
+          </tr>
+        </table>
+      </li>
+      <li class="input">
+        <span class="dovote">提交</span>
+      </li>
+    </ul>
+    
+    
+    
+    
+  </div>
+</div>
+</div>
+
+<!-- matchpage end -->
+
+<!-- rulemain -->
+<div id="rulemain">
+<div class="box01">
+	<b onclick="document.getElementById('rulemain').style.display='none';"></b>
+	<h1 style="border-bottom:1px solid">
+		竞猜规则
+	</h1>
+	<div id="rule">1、活动时间：XXXX年XX月XX日~XXXX年XX月XX日</br></br>2、竞猜前需要先提交姓名和电话号码，以便后期领取奖品</br></br>3、按照比赛的场次，选择竞猜的比赛，提交竞猜结果，比赛开始前10分钟停止竞猜。</br></br>4、比赛结束后，管理员会更新比赛结果，所有猜对的用户将获得积分奖励</br></br>5、活动期间每天分享朋友圈或者朋友，可以获得10个积分。</br></br>6、游戏排名：</br></br>①计分规则：按照猜对胜负得5分，猜中比分得10分，猜错得0分的逻辑计分数。</br></br>②排名规则：等欧洲杯结束后按照累加的总分数，分享分进行排名。</br></br></div>
+</div>
+</div>
+<!-- rulemain end -->
+
+<!-- bgsound -->
+<audio src="wh_jingcai/Public/Images/jingcai/bjyy.mp3" id="bgsound" loop="loop" preload="load"></audio>
+<div id="musicbg" class="music-on"></div>
+<!-- bgsound end -->
+<!-- reg -->
+<!-- reg -->
+<div class="reg" id="reg" style="display: none;">
+	<b onclick="document.getElementById('reg').style.display='none';" style="background:none;"></b>
+<div style="padding:10px;">
+ <!-- <span>为确保顺利领奖,请填写真实信息</span> -->
+	<input type="text" id="name" placeholder="请输入您的姓名" maxlength="11" style="margin-top:6%"/>
+    <input type="tel" id="phone" placeholder="请输入您的手机号码" maxlength="11"/>
+    <span style="color:#f39800;font-size:12px;margin-left:2%">*为了让工作人员给您兑奖，请正确填写资料</span>
+    
+    <div class="btn" id="submitBtn" onclick="doSave()" style="margin-top:4%;"></div>
+   <!-- <div class="txtbtn" style="width:40%;float:left;margin-bottom:5px;margin-left:6%" onclick="doSave()">确定</div>
+   <div class="txtbtn" style="width:40%;float:left;margin-bottom:5px;margin-left:6%" onclick="notice()">关闭</div> -->
+</div>
+</div>
+<!-- <div class="layer"></div> -->
+<!-- reg end -->
+
+
+<!-- loading -->
+<div id="loadingToast" class="weui_loading_toast" style="display:none;z-index: 9999999;">
+    <div class="weui_mask_transparent"></div>
+    <div class="weui_toast">
+        <div class="weui_loading">
+            <!-- :) -->
+            <div class="weui_loading_leaf weui_loading_leaf_0"></div>
+            <div class="weui_loading_leaf weui_loading_leaf_1"></div>
+            <div class="weui_loading_leaf weui_loading_leaf_2"></div>
+            <div class="weui_loading_leaf weui_loading_leaf_3"></div>
+            <div class="weui_loading_leaf weui_loading_leaf_4"></div>
+            <div class="weui_loading_leaf weui_loading_leaf_5"></div>
+            <div class="weui_loading_leaf weui_loading_leaf_6"></div>
+            <div class="weui_loading_leaf weui_loading_leaf_7"></div>
+            <div class="weui_loading_leaf weui_loading_leaf_8"></div>
+            <div class="weui_loading_leaf weui_loading_leaf_9"></div>
+            <div class="weui_loading_leaf weui_loading_leaf_10"></div>
+            <div class="weui_loading_leaf weui_loading_leaf_11"></div>
+        </div>
+        <p class="weui_toast_content">数据加载中</p>
+    </div>
+</div>
+<!-- loading end -->	
+<!-- weui alert -->
+<div class="weui_dialog_alert" style="display: none;z-index: 99999999;">
+    <div class="weui_mask"></div>
+    <div class="weui_dialog">
+        <div class="weui_dialog_hd"><strong class="weui_dialog_title">消息提示</strong></div>
+        <div class="weui_dialog_bd"></div>
+        <div class="weui_dialog_ft" onclick="$('.weui_dialog_alert').hide();">
+            <a href="javascript:;" class="weui_btn_dialog primary">确定</a>
+        </div>
+    </div>
+</div>
+<!-- weui alert end -->
+<!-- dialog1 -->
+<div class="weui_dialog_confirm" id="dialog1" style="display: none;z-index: 999998;">
+    <div class="weui_mask"></div>
+    <div class="weui_dialog">
+        <div class="weui_dialog_hd"><strong class="weui_dialog_title">消息提示</strong></div>
+        <div class="weui_dialog_bd">自定义弹窗内容，居左对齐显示，告知需要确认的信息等</div>
+        <div class="weui_dialog_ft">
+            <a href="javascript:;" class="weui_btn_dialog default" onclick="$('.weui_dialog_confirm').hide()">取消</a>
+            <a href="javascript:;" class="weui_btn_dialog primary okbtn" onclick="">确定</a>
+        </div>
+    </div>
+</div>
+<!-- dialog1 end -->
+
+<!-- rankmain -->
+<div id="rankmain" style="display: none;">
+<b onclick="document.getElementById('rankmain').style.display='none';"></b>
+	<div class="box02">
+		<h1 sytle="border-bottom:1px solid">
+			积分总排行
+		</h1>
+		<div class="titdiv" style="width:95%;margin: 0 auto;text-align: center;">您当前：<font color="red">5</font>积分，暂列第<font color="red">2</font>名。</div>
+		<div id="phb"><table border="0" style="width:99%;">
+		<thead>
+		    <tr>
+				<th class="num">
+					排行
+				</th>
+				<th class="head">
+					头像
+				</th>
+				<th class="name">
+					昵称
+				</th>
+				<th class="score">
+					总得分
+				</th>
+			</tr>
+		</thead>
+		<tbody id="phb-body">
+			<tr>
+				<td class="num">
+					1
+				</td>
+				<td class="head">
+					<img src="http://wx.qlogo.cn/mmopen/pL0MxiaHhaOneevaU0W313syxDKcPktqibnyicfD0ovQIofDthST1MnialGE0iasvAHdBJSXHertRUs0h2DVsMsibbj98OPnibm0vyT/0" class="headimg">
+				</td>
+				<td class="name">
+					熊宝宝
+				</td>
+				<td class="score">
+					56个
+				</td>
+			</tr>
+		
+			<tr>
+				<td class="num">
+					2
+				</td>
+				<td class="head">
+					<img src="" class="headimg">
+				</td>
+				<td class="name">
+					
+				</td>
+				<td class="score">
+					824个
+				</td>
+			</tr>
+		
+		</tbody>
+		</table>
+      </div>
+	</div>
+</div>
+
+<div class="weixin-share"></div>
+<input type="hidden" id="wx_share_title" value="欧洲杯，一起来狂欢竞猜！~">
+<input type="hidden" id="wx_share_desc" value="欧洲杯，一起来狂欢竞猜！~哇哈">
+<input type="hidden" id="wx_share_pic" value="http://wx1.wayhu.com/wh_jingcai/Public/Images/jingcai/icon.jpg">
+<input type="hidden" id="wx_share_url" value="http://wx1.wayhu.com/wh_jingcai/index.php/Index/index.html">
+</body>
+</html>

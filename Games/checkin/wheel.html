@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>签到</title>
+    <link rel="stylesheet" type="text/css" href="css/base.css?t=1452915014036">
+    <link rel="stylesheet" type="text/css" href="css/wheel.css?t=1452915014036">
+    <link rel="stylesheet" type="text/css" href="css/qrcode-box.css?t=1452915014036">
+    <script>
+    var _hook = {
+        domain: "133490",
+        id: 3543
+    };
+    </script>
+</head>
+<body style="zoom: 1;">
+    <div id="sheet" class="show">
+        <div id="follow">
+            <a href="http://133490.weixin.drip.im/score/index">
+                <img src="http://wx.qlogo.cn/mmopen/ZAyAP3esrh9xcLJA3iaRzAjrib5bGoln2qGWkDtNFunoQ5ZJPCusvJlKxU6gicxO4lNcJwXYS7hNlyLibzDCXemAafBacE4kuo80/0" class="avatar" height="48" width="48">
+            </a>
+            <span class="nick">扑扑星互动</span>
+        </div>
+        <div id="main">
+            <div class="decorate">
+                <img src="images/decorate.png?t=1452915014036">
+            </div>
+            <div id="wheel" style="height: 544px;">
+                <div class="round">
+                    <ul class="slices">
+                        <!-- 1 -->
+                        <li class="slice" data-level="1" style="height: 301px; -webkit-transform: rotate(-60deg) skew(30deg); transform: rotate(-60deg) skew(30deg);">
+                            <span class="prize" style="-webkit-transform: rotate(0deg) skew(-30deg); transform: rotate(0deg) skew(-30deg); left: -86.6025403784439px;"><em style="-webkit-transform: rotate(30deg); transform: rotate(30deg); left: 104.269458615646px; top: 60.2px;">一等奖</em></span>
+                        </li>
+                        <!-- 2 -->
+                        <li class="slice" data-level="-1" style="height: 301px; -webkit-transform: rotate(-120deg) skew(30deg); transform: rotate(-120deg) skew(30deg);">
+                            <span class="prize" style="-webkit-transform: rotate(0deg) skew(-30deg); transform: rotate(0deg) skew(-30deg); left: -86.6025403784439px;"><em style="-webkit-transform: rotate(30deg); transform: rotate(30deg); left: 91.2357762886906px; top: 52.675px;">谢谢参与</em></span>
+                        </li>
+                        <!-- 3 -->
+                        <li class="slice" data-level="2" style="height: 301px; -webkit-transform: rotate(-180deg) skew(30deg); transform: rotate(-180deg) skew(30deg);">
+                            <span class="prize" style="-webkit-transform: rotate(0deg) skew(-30deg); transform: rotate(0deg) skew(-30deg); left: -86.6025403784439px;"><em style="-webkit-transform: rotate(30deg); transform: rotate(30deg); left: 104.269458615646px; top: 60.2px;">二等奖</em></span>
+                        </li>
+                        <!-- 4 -->
+                        <li class="slice" data-level="-1" style="height: 301px; -webkit-transform: rotate(-240deg) skew(30deg); transform: rotate(-240deg) skew(30deg);">
+                            <span class="prize" style="-webkit-transform: rotate(0deg) skew(-30deg); transform: rotate(0deg) skew(-30deg); left: -86.6025403784439px;"><em style="-webkit-transform: rotate(30deg); transform: rotate(30deg); left: 91.2357762886906px; top: 52.675px;">谢谢参与</em></span>
+                        </li>
+                        <!-- 5 -->
+                        <li class="slice" data-level="1" style="height: 301px; -webkit-transform: rotate(-300deg) skew(30deg); transform: rotate(-300deg) skew(30deg);">
+                            <span class="prize" style="-webkit-transform: rotate(0deg) skew(-30deg); transform: rotate(0deg) skew(-30deg); left: -86.6025403784439px;"><em style="-webkit-transform: rotate(30deg); transform: rotate(30deg); left: 104.269458615646px; top: 60.2px;">一等奖</em></span>
+                        </li>
+                        <!-- 6 -->
+                        <li class="slice" data-level="-1" style="height: 301px; -webkit-transform: rotate(-360deg) skew(30deg); transform: rotate(-360deg) skew(30deg);">
+                            <span class="prize" style="-webkit-transform: rotate(0deg) skew(-30deg); transform: rotate(0deg) skew(-30deg); left: -86.6025403784439px;"><em style="-webkit-transform: rotate(30deg); transform: rotate(30deg); left: 91.2357762886906px; top: 52.675px;">谢谢参与</em></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class=" start-button" data-is-score="1" data-score="7" data-score-valid="1" data-score-cost="2" style="height: 152.32px; width: 152.32px; margin-left: -76.16px; margin-top: -348.16px;">
+                <div class="round-small score">
+                    <em>积分<br>抽奖</em>
+                </div>
+            </div>
+            <div class="shadow">
+                <img src="images/wheel-shadow.png?t=1452915014036">
+            </div>
+            <div id="detail">
+                <div class="top-cover"></div>
+                <script type="text/template" id="redpack-pop-tpl">
+                    <form action="/wheel/acquire-redpack" method="get">
+                        <div class="lucky-money-pop receive-box no-info">
+                            <img src="images/flower.png?t=1452915014036" class="flower" />
+                            <div class="weixin-luck-money">
+                                <h1 class="luck-money-title">
+                                  获得一个微信红包
+                                </h1>
+                                <h2 class="luck-money-amount">
+                                  <span class="amount-text"></span>
+                                  <span>元</span>
+                                </h2>
+                                <input type="hidden" name="joinIds" id="join-ids-input" />
+                                <input type="hidden" name="wheelId" value="3543" />
+                                <input type="hidden" name="special" value="133490" />
+                                <div class="luck-money-field">
+                                    <a href="javascript:void(0)" class="receive-button receive-redpack-trigger">领取</a>
+                                </div>
+                                <div class="tip">领取后系统自动发放微信红包</div>
+                            </div>
+                        </div>
+                    </form>
+                </script>
+                <div id="prize-box">
+                    <div class="box-hd">
+                        <h3>活动奖品</h3>
+                    </div>
+                    <div class="box-bd">
+                        <div class="prizes">
+                            <ul>
+                                <li class="fn-clear">
+                                    <div class="image-aside fn-left">
+                                        <img src="images/test.jpg">
+                                    </div>
+                                    <dl class="prize-info fn-left">
+                                        <dt>
+                                            一等奖
+                                        </dt>
+                                        <dd>test</dd>
+                                    </dl>
+                                    <div class="prize-count fn-right">
+                                        剩余：3
+                                    </div>
+                                </li>
+                                <li class="fn-clear">
+                                    <div class="image-aside fn-left">
+                                        <img src="images/test.jpg">
+                                    </div>
+                                    <dl class="prize-info fn-left">
+                                        <dt>
+                                            二等奖
+                                        </dt>
+                                        <dd>test2</dd>
+                                    </dl>
+                                    <div class="prize-count fn-right">
+                                        剩余：0
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer">
+                        <p>活动由「扑扑星互动」发起并享有最终解释权</p>
+                        <p>&copy; 扑扑星互动 版权所有</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="lucky-result">
+            <div class="pity">
+                <img src="images/pity-animate.png?t=1452915014036">
+                <a href="javascript:void(0);" class="continue-judge">继续参与</a>
+            </div>
+            <div class="lucky">
+                <img src="images/lucky-animate.png?t=1452915014036">
+                <dl class="prize-info">
+                    <dd><img src=""></dd>
+                    <dt></dt>
+                </dl>
+                <a href="#" class="view-lucky">查看详情</a>
+            </div>
+        </div>
+        <div class="result with-prize hidden">
+            <div class="pop">
+                <div class="pop-title">
+                    <h3>我的奖品</h3>
+                    <a href="javascript:void(0);" class="close"></a>
+                </div>
+                <div class="pop-body">
+                    <div class="body-wrap">
+                        <p class="congrtl">恭喜您，获得以下奖品：</p>
+                        <ul class="prize-list">
+                        </ul>
+                    </div>
+                    <div class="award-box success  hidden ">
+                        <div class="icon"><img src="images/award-success.png?t=1452915014036"></div>
+                        <p>已成功兑奖</p>
+                    </div>
+                    <div class="detail-box  hidden ">
+                        <p><strong>兑奖地点：</strong>dizhi</p>
+                        <p><strong>兑奖时间：</strong>shijian</p>
+                    </div>
+                    <div class="award-box ops  hidden ">
+                        <div class="qrcode">
+                            <img src="#" width="230">
+                        </div>
+                        <div class="word-award">
+                            <p>兑奖时请出示此二维码</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="result empty hidden">
+            <div class="pop">
+                <div class="pop-title">
+                    <h3>我的奖品</h3>
+                    <a href="javascript:void(0);" class="close"></a>
+                </div>
+                <div class="pop-body">
+                    <div class="body-wrap">
+                        <div class="icon">
+                            <img src="images/empty-prize-icon.png?t=1452915014036">
+                        </div>
+                        <p class="pity">当前还没有获奖，加油哦～</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="alert-popup hidden">
+            <div class="alert-info">
+                <h3>抽奖机会已用完，明天再来吧！</h3>
+            </div>
+            <div class="alert-act">
+                <a href="javascript:void(0);" onclick="alertPopConfirm()">好的</a>
+            </div>
+            <div class="score-cancel-act hidden">
+                <a href="javascript:void(0);" onclick="alertPopConfirm()">关闭</a>
+            </div>
+            <div class="score-confirm-act fn-clear hidden">
+                <a href="javascript:void(0);" onclick="alertPopConfirm()">取消</a>
+                <a href="javascript:void(0);" onclick="confirmJudgeWithScore()">确定抽取</a>
+            </div>
+        </div>
+        <div class="pop-cover dark hidden"></div>
+    </div>
+    <div class="alert-pop">
+        <div class="alert-cover"></div>
+        <div class="alert-box">
+            <div class="container">
+                <div class="title">关注公众号</div>
+                <div class="pop-content">
+                    <h3>请搜索微信号来添加关注</h3>
+                    <div class="weixin-name">
+                        <input class="weixin-nick" value="dripower">
+                        <span class="input-trigger">dripower</span>
+                    </div>
+                    <div class="copy">
+                        <em><img src="images/page-hand.png?t=1452915014036" alt=""></em>
+                        <span>点击即可拷贝</span>
+                    </div>
+                </div>
+            </div>
+            <div class="close">
+                <a href="javascript:void(0)">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="score-qrcode" class="hidden">
+        <div class="box">
+            <div class="wrap">
+                <div class="qrcode-inner">
+                    <img src="http://133490.weixin.drip.im/score/qrcode?openid=oBG0juLQ-D2EBPKr9BbZEiFq1tP8" class="qrcode">
+                </div>
+                <p>扫描二维码来给我积分</p>
+            </div>
+        </div>
+    </div>
+    <script src="js/core/sea.js?t=1452915014036"></script>
+    <script>
+    seajs.use("./js/app.js?t=1452915014036", function(app) {
+        app.init('./wheel');
+    });
+    </script>
+
+</body>
+
+</html>

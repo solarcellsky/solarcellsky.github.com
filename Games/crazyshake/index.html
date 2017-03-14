@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+
+<head>
+    <meta charset="utf-8" />
+    <title>看谁摇的猛</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="step1">
+        <div class="view">
+            <img src="./img/wechat.jpg" style="display:none;">
+            <img src="./img/bg1.jpg" class="w100">
+            <div class="head-img"><img id="headimg" src="./img/msbh.jpg" class="w100"></div>
+            <div class="say-hi">全民摇一摇</div>
+            <div class="result">当前冠军：<span>35</span>次/5秒</div>
+            <div class="btn-start">
+                <img src="./img/btn-start.png" class="w100">
+            </div>
+            <div class="btn-share"><img src="./img/btn-share.png" class="w100"></div>
+        </div>
+    </div>
+    <div id="step2" style="display:none;">
+        <div class="view">
+            <img src="./img/bg.jpg" class="w100">
+            <div class="head-img"><img src="./img/msbh.jpg" class="w100"></div>
+            <div id="shake-part">
+                <div class="hand"><img src="./img/hand.png" class="w100"></div>
+                <div class="score">000</div>
+                <div class="time">5秒倒计时：<span class="s">5</span>.<span class="ms">00</span></div>
+            </div>
+            <div id="score-part" class="hide">
+                <div class="result-num"><span>0</span>次！</div>
+                <div class="info">你右手弱爆了，送张券安慰下你</div>
+                <div class="ad"><img src="./img/ad.png" class="w100"></div>
+                <div class="btn-quan">
+                    <a href="javascript:;" id="get-button"><img src="./img/quan.png" class="w100"></a>
+                </div>
+                <div class="btn-replay">
+                    <a href="javascript:;" id="btnOK"><img src="./img/replay.png" class="w100"></a>
+                </div>
+            </div>
+        </div>
+        <!--倒计时的模态框-->
+        <div class="model">
+            <div class="num">
+                <img src="./img/3.png" class="w100">
+            </div>
+        </div>
+        <!--分享的模态框-->
+        <div class="model2 hide">
+            <div class="share">
+                <img src="./img/share.png" class="w100">
+            </div>
+        </div>
+    </div>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/shake.js"></script>
+    <script>
+        var startShake = function () {
+            setTimeout('$(".num img").attr("src","./img/2.png")', 1000);
+            setTimeout('$(".num img").attr("src","./img/1.png")', 2000);
+            setTimeout('$(".num img").attr("src","./img/start.png")', 3000);
+            setTimeout('$(".model").hide();daojishi();init();', 4000);
+            $(".btn-replay").on('click', function () {
+                $('#step1').show();
+                $('#step2').hide();
+            });
+        };
+        $(document).ready(function () {
+            $(".btn-start").on('click', function () {
+                $('#step1').hide();
+                $('#step2').show();
+                startShake();
+            });
+        })
+    </script>
+    <script src="./js/jquery.js"></script>
+    <script>
+    $(function() {
+        $(".details").click(function() {
+            $(".model-top").removeClass("hide");
+        });
+        $(".close").click(function() {
+            $(".model-top").addClass("hide");
+        });
+    })
+    </script>
+</body>
+
+</html>

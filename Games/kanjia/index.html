@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>砍价</title>
+    <meta name="keywords" content="优惠券、抵金券、代金券、购车券、买车优惠、惠买车、底价买车">
+    <meta name="description" content="惠买车“全民齐砍价活动”，发起任一品牌砍价活动，即可召集好友为自己增加砍价金额，直抵车款哦~">
+    <link type="text/css" rel="stylesheet" href="css/common.css?v=201509291001">
+    <link type="text/css" rel="stylesheet" href="css/bargain.css?v=201509291001">
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+</head>
+<iframe id="__WeixinJSBridgeIframe_SetResult" style="display: none;"></iframe>
+<iframe id="__WeixinJSBridgeIframe" style="display: none;"></iframe>
+
+<body>
+    <!--页眉-->
+
+    <a href="http://m.huimaiche.com">
+        <h1 class="simple-theme">惠买车</h1>
+    </a>
+    <div class="bargain-bg">
+        <div class="bargain-master">
+            <img src="http://wx.qlogo.cn/mmopen/ajNVdqHZLLCgPcARlBfw02QvQ5HTOgFP7pIeXXic7EicoJkdBygqhEpMoPkiakrYHBqib20d5RBMIricCSoGBria85UA/46" alt="头像" class="head">
+            <strong>
+                lucas</strong>
+            <p>
+                车已相中，即将出手，就等你帮我砍价！
+            </p>
+            <div class="brand">
+                <p>
+                    <img src="http://img1.bitauto.com/bt/car/default/images/carimage/m_18_b.jpg" alt="">
+                </p>
+                长安马自达
+            </div>
+        </div>
+        <div class="bargain">
+            <div class="bargain-l">
+            </div>
+            <div class="bargain-r">
+            </div>
+            <div class="bargain-cot">
+                <div class="bargain-top">
+                </div>
+                <div class="car-bargain">
+                    <div class="car-info">
+                        <img src="http://img1.bitautoimg.com/autoalbum/files/20140428/901/1127549014_6.jpg" alt="昂克赛拉三厢">
+                        <p>
+                            昂克赛拉三厢</p>
+                    </div>
+                    <div class="bargain-info">
+                        <p>
+                            已经砍出优惠券：<strong id="couponAmount">306</strong><span>元</span>
+                        </p>
+                        <p id="p_cd">
+                            砍价剩余时间：<em data-endtime="1446045945560">08时30分27秒</em>
+                        </p>
+                    </div>
+
+                    <a href="javascript:void(0)" class="bargained"><span>已帮忙砍出4元！</span></a>
+
+                </div>
+                <div class="bargain-bottom">
+                </div>
+            </div>
+            <div class="bargain-total">
+                <p>
+                    目前已有<em id="suppCnt">66</em>个朋友为TA砍价！</p>
+                <span><strong id="amount2">
+                    306</strong>元</span>
+            </div>
+        </div>
+    </div>
+    <div class="bargain-list">
+        <div class="bargain-list-arrow">
+        </div>
+        <ul id="ulSopport">
+            <li> <img src="http://img.huimaiche.cn/uimg/hd/hmclogo.png" alt="惠买车">
+                <div class="bargain-txt"> <strong>惠买车</strong> <span>2015/10/28 11:25:46</span>
+                    <p>千里送鹅毛，礼轻情意重！</p>
+                </div>
+                <div class="bargain-list-price">100元</div>
+            </li>
+            <li> <img src="http://wx.qlogo.cn/mmopen/Q3auHgzwzM61j3cB9UibzXyXpEtgztrJP1BwkS9Sy4Hsf57R1D6PLMHG7XQVUWlZWKD3K1IibEu7gwdtRznicxFlA/46" alt="老任">
+                <div class="bargain-txt"> <strong>老任</strong> <span>2015/10/28 14:47:58</span>
+                    <p>那些年砍过的青春</p>
+                </div>
+                <div class="bargain-list-price">4元</div>
+            </li>
+            <li> <img src="http://wx.qlogo.cn/mmopen/MO5d9lwnWOLR42M32dUD86ac5L1ibIf4aIH6hLpicsJr1vnFoZdiaocWNQqaaiczFXADHviaicic6SJVN8Ps5fia2utIR4ibwMkrpqeqk/46" alt="石头">
+                <div class="bargain-txt"> <strong>石头</strong> <span>2015/10/28 14:33:03</span>
+                    <p>不谢！车到手了记得借我两天开开！</p>
+                </div>
+                <div class="bargain-list-price">2元</div>
+            </li>
+            <li> <img src="http://wx.qlogo.cn/mmopen/SeUzcksBGg6SgaznQFo737NTW13yK2AKzbNBgiaA8nxicGWr7DdUa6fmfQASFaseic5EiayqHibibOQfamrHTpRhVbQEbkVSqKURH9/46" alt="麦斯威尔">
+                <div class="bargain-txt"> <strong>麦斯威尔</strong> <span>2015/10/28 14:25:31</span>
+                    <p>永远相信美好的事情即将发生！</p>
+                </div>
+                <div class="bargain-list-price">1元</div>
+            </li>
+            <li> <img src="http://wx.qlogo.cn/mmopen/fpsvWDOjgSUiafRwOdg97oiaPn0WD9XdXsDEHXgeKicGoWCy0734CqRNwDLVdX75DGtg7eDug7Q46aEUjMp2D92vDOKv7r9xrnT/46" alt="李拨号">
+                <div class="bargain-txt"> <strong>李拨号</strong> <span>2015/10/28 14:21:16</span>
+                    <p>听说像我这样的砍手只有一位</p>
+                </div>
+                <div class="bargain-list-price">0元</div>
+            </li>
+            <li> <img src="http://wx.qlogo.cn/mmopen/MO5d9lwnWOI6h9icSCanZWhQNb6uhuphCqdMB0SkiaUsWdg0MATicH6ibHZV1BkUmY3MXJX4qIRKSicyM49DT4SrPgRE4vhahOe21/46" alt="Han.x">
+                <div class="bargain-txt"> <strong>Han.x</strong> <span>2015/10/28 14:18:35</span>
+                    <p>Just do it! 使劲砍！</p>
+                </div>
+                <div class="bargain-list-price">4元</div>
+            </li>
+            <li> <img src="http://wx.qlogo.cn/mmopen/JYiaKEz5Ha7ibLXtcgnl5P0iaibVrNZj3Lf8n3x29XPS3gUu79I0PZcxXFupKvicsZ5m2pFNuRrB83niaXMnVE9RUmNAD9EhzC3yj3/46" alt="Lily wang（糖小妞mami）">
+                <div class="bargain-txt"> <strong>Lily wang（糖小妞mami）</strong> <span>2015/10/28 14:18:14</span>
+                    <p>轻轻地我来了！不谢！</p>
+                </div>
+                <div class="bargain-list-price">4元</div>
+            </li>
+            <li> <img src="http://wx.qlogo.cn/mmopen/SeUzcksBGg6aY6gOUXf0I0znIfLznqRW2WYOSKs5mCSK7fwReUibanNkt7fmbYqPdMQSdc58POsgAvFUVib0iauw6Ysmt6bTm4H/46" alt="Siriwu">
+                <div class="bargain-txt"> <strong>Siriwu</strong> <span>2015/10/28 14:10:18</span>
+                    <p>十步来一“砍”，千里不留行！</p>
+                </div>
+                <div class="bargain-list-price">4元</div>
+            </li>
+            <li> <img src="http://wx.qlogo.cn/mmopen/t2LmD1WTXlrO0dalD7hpKZg5z3BcZRcmkmtzcNmribUTPxqpoAI1yI0T6uoTiaibYtiakicGNvoa1kHzx0F55NCzyGhxeC658jqTq/46" alt="　penny.">
+                <div class="bargain-txt"> <strong>　penny.</strong> <span>2015/10/28 14:06:56</span>
+                    <p>黄金错刀白玉装，“砍”穿窗扉出光芒。</p>
+                </div>
+                <div class="bargain-list-price">5元</div>
+            </li>
+            <li> <img src="http://wx.qlogo.cn/mmopen/JYiaKEz5Ha7ibLXtcgnl5P0jcXBSDcp2QzU1SshYQcRP70y52DZ6nXz9hTVq4j7RpibHwTFaiaZTCpzib8gr6Rnq2tU9nR8MlW2mic/46" alt="votre  elle.">
+                <div class="bargain-txt"> <strong>votre  elle.</strong> <span>2015/10/28 13:49:49</span>
+                    <p>本宫一出手，天地为之动容！</p>
+                </div>
+                <div class="bargain-list-price">2元</div>
+            </li>
+            <li> <img src="http://wx.qlogo.cn/mmopen/MO5d9lwnWOKSXaYbiaTZgwTphZUICkLmsvU1ZnKNQtFMUqrswhq57adYhVPcFibxUbv9zb07ZlGib2IAuQQHh2uNdiaAbHmibMwRG/46" alt="平凡">
+                <div class="bargain-txt"> <strong>平凡</strong> <span>2015/10/28 13:49:32</span>
+                    <p>人生不易，且行且砍！</p>
+                </div>
+                <div class="bargain-list-price">4元</div>
+            </li>
+            <li> <img src="http://wx.qlogo.cn/mmopen/SeUzcksBGg6aY6gOUXf0I2oibZ3iaJ6RhnkoJBuS7HbrPVIjmWxC1yzZVMFLibRic1KZmaebaPjtCibC0jVFNbf1MhETJw19MPkkn/46" alt="L .">
+                <div class="bargain-txt"> <strong>L .</strong> <span>2015/10/28 13:39:53</span>
+                    <p>砍得一手好价！</p>
+                </div>
+                <div class="bargain-list-price">4元</div>
+            </li>
+            <li> <img src="http://img.huimaiche.cn/uimg/hd/default.png" alt="">
+                <div class="bargain-txt"> <strong></strong> <span>2015/10/28 13:37:22</span>
+                    <p>不用约了，直接开车来接就行！</p>
+                </div>
+                <div class="bargain-list-price">6元</div>
+            </li>
+            <li> <img src="http://wx.qlogo.cn/mmopen/Q3auHgzwzM5Kiaju4et62DaIl0j0nxO9MCgh7zqhQ7zoAlHQRhmh4gqnia5iaoX6pzMuGuLDuicXibBvGDHDj8iatY6d8WnrGe6h64hk46kzE1HVw/46" alt="? H°Chao，">
+                <div class="bargain-txt"> <strong>? H°Chao，</strong> <span>2015/10/28 13:35:52</span>
+                    <p>你的刀是棉花糖做的吗亲~</p>
+                </div>
+                <div class="bargain-list-price">0元</div>
+            </li>
+            <li> <img src="http://img.huimaiche.cn/uimg/hd/default.png" alt="">
+                <div class="bargain-txt"> <strong></strong> <span>2015/10/28 13:35:52</span>
+                    <p>轻轻地我来了！不谢！</p>
+                </div>
+                <div class="bargain-list-price">2元</div>
+            </li>
+            <li> <img src="http://wx.qlogo.cn/mmopen/MO5d9lwnWOKSXaYbiaTZgwQ81ONdocxCFYrtzccUe3f7b8pibh14L2qqt1mZZCxHeffibyNKG1Z9kVm8oJDhtXY5ZoEMDLEHLqV/46" alt="迷途盅">
+                <div class="bargain-txt"> <strong>迷途盅</strong> <span>2015/10/28 13:33:24</span>
+                    <p>技不如人，还需努力啊~</p>
+                </div>
+                <div class="bargain-list-price">0元</div>
+            </li>
+            <li> <img src="http://wx.qlogo.cn/mmopen/0yOibuhvkGF95PhmcfbqmpiacZHzfjnicpDer8ZV6SPvTCdPygfnvuibIabOpTb08aR1n4hlZUdic8B2EibD9H357Aa3pKv9p4W0o3/46" alt="刚子">
+                <div class="bargain-txt"> <strong>刚子</strong> <span>2015/10/28 13:28:35</span>
+                    <p>床前明月光，为君来一刀！</p>
+                </div>
+                <div class="bargain-list-price">2元</div>
+            </li>
+            <li> <img src="http://wx.qlogo.cn/mmopen/SeUzcksBGg6aY6gOUXf0IicDxicvbbc5Xprg6SUaYQYnOQTribln7ibxFb8n2IGAibFnB50QxhObe1yf81G356z4PrPoqRZ3yXPDy/46" alt="Tel—JTL —s">
+                <div class="bargain-txt"> <strong>Tel—JTL —s</strong> <span>2015/10/28 13:27:02</span>
+                    <p>也是蛮拼的！</p>
+                </div>
+                <div class="bargain-list-price">2元</div>
+            </li>
+            <li> <img src="http://wx.qlogo.cn/mmopen/ajNVdqHZLLDGjp5oEvQJ3dnObMoanU1bDYLgQQ0g0CBQ8jfQFRphrdB2hU8rE3Tk3j9ib0oBzRE4cw2uSSwpdDczPWsQ9TyuyJnu10O1k08s/46" alt="小破孩的忧伤">
+                <div class="bargain-txt"> <strong>小破孩的忧伤</strong> <span>2015/10/28 13:25:08</span>
+                    <p>砍砍更健康！</p>
+                </div>
+                <div class="bargain-list-price">2元</div>
+            </li>
+            <li> <img src="http://wx.qlogo.cn/mmopen/PiajxSqBRaEKWKdvgPDmgu6JnsRRNX98wpnSkDhmNdRePqyWjE4QO9t5USXVwLtm8j6AB1p0ZiciaSFNxzknxJTZQ/46" alt="羽舒">
+                <div class="bargain-txt"> <strong>羽舒</strong> <span>2015/10/28 13:22:16</span>
+                    <p>砍出一条康庄大道！</p>
+                </div>
+                <div class="bargain-list-price">5元</div>
+            </li>
+            <li> <img src="http://wx.qlogo.cn/mmopen/PiajxSqBRaEL3AZWJyYicHcJrrCxtu7DSGvQ2f5MCPVQwPXAePgRUTe7QGozLbF6XpHjzm43dibiabXm2F8oSWXlFg/46" alt="居泰隆～小卢">
+                <div class="bargain-txt"> <strong>居泰隆～小卢</strong> <span>2015/10/28 13:21:49</span>
+                    <p>记得带我一起兜风！</p>
+                </div>
+                <div class="bargain-list-price">3元</div>
+            </li>
+            <li> <img src="http://wx.qlogo.cn/mmopen/MO5d9lwnWOIdJicAHa8RTUfZ3icJeTHHdksOKfaVaibxzcu2JePpSicdrO1QnZibhs18cVicEiauyqozg3rqLawOOAW0CshXEcbLG9P/46" alt="Astro。??">
+                <div class="bargain-txt"> <strong>Astro。??</strong> <span>2015/10/28 13:17:57</span>
+                    <p>100块？那都不是事儿~</p>
+                </div>
+                <div class="bargain-list-price">10元</div>
+            </li>
+            <li> <img src="http://wx.qlogo.cn/mmopen/SeUzcksBGg6aY6gOUXf0IwOZxn6DUXR9bo9flcTNiapvicia4h0A95Aia8SZNgdnTichTickwOmTndqh8gJ2guHS4bwIJEBHgnYN43/46" alt="宋贤君">
+                <div class="bargain-txt"> <strong>宋贤君</strong> <span>2015/10/28 13:12:38</span>
+                    <p>砍得浮生半日闲</p>
+                </div>
+                <div class="bargain-list-price">3元</div>
+            </li>
+            <li> <img src="http://wx.qlogo.cn/mmopen/JYiaKEz5Ha78IepldZC4bjgj37oHEg8LwlzSj9nJaPUyGEPobGAwnsgFnO5MZHgDKFrRFMSu4G28vvIC9Gr2sLAZiaCX1AHL1r/46" alt="不经意间">
+                <div class="bargain-txt"> <strong>不经意间</strong> <span>2015/10/28 13:09:53</span>
+                    <p>本宫一出手，天地为之动容！</p>
+                </div>
+                <div class="bargain-list-price">3元</div>
+            </li>
+            <li> <img src="http://wx.qlogo.cn/mmopen/SeUzcksBGg6aY6gOUXf0IyyYiaYJWWC1SbF9AsTt0kCA00CJr1YcAjwyiaicOMHluM9TO2ygQNfgxAiamMyAhxz6YJfDiaqjsooPo/46" alt="遍地演員 ℡">
+                <div class="bargain-txt"> <strong>遍地演員 ℡</strong> <span>2015/10/28 13:08:17</span>
+                    <p>哟哟切克闹，青龙宝刀来一道！</p>
+                </div>
+                <div class="bargain-list-price">2元</div>
+            </li>
+            <li> <img src="http://wx.qlogo.cn/mmopen/t61GoOzPfjibU2HFMVBo0NuDbibrMbnYbogThmVjWZc4x3XcxE13G1ro8nYV6dwZAmFU4IJD8XzTMXsP8olgkuDHprxPtmaYSL/46" alt="那时花开">
+                <div class="bargain-txt"> <strong>那时花开</strong> <span>2015/10/28 13:07:04</span>
+                    <p>古刀寒锋青槭槭，少年交结平陵客</p>
+                </div>
+                <div class="bargain-list-price">1元</div>
+            </li>
+            <li> <img src="http://wx.qlogo.cn/mmopen/SeUzcksBGg4BmeecT6fOq5yAT0Flcrjic2NdqoevMKLr4pWy9ViaTG6jyhiciayNq7RLTAGZaNZIe6oHibRDo7PzIXce0f14xlb2ia/46" alt="flower">
+                <div class="bargain-txt"> <strong>flower</strong> <span>2015/10/28 13:06:23</span>
+                    <p>骚年，你这是逗我吗？</p>
+                </div>
+                <div class="bargain-list-price">0元</div>
+            </li>
+            <li> <img src="http://img.huimaiche.cn/uimg/hd/default.png" alt="">
+                <div class="bargain-txt"> <strong></strong> <span>2015/10/28 12:58:47</span>
+                    <p>手抖，让各位贱笑了~</p>
+                </div>
+                <div class="bargain-list-price">0元</div>
+            </li>
+            <li> <img src="http://img.huimaiche.cn/uimg/hd/default.png" alt="">
+                <div class="bargain-txt"> <strong></strong> <span>2015/10/28 12:55:10</span>
+                    <p>人在江湖飘，哪能不带刀！</p>
+                </div>
+                <div class="bargain-list-price">7元</div>
+            </li>
+            <li> <img src="http://wx.qlogo.cn/mmopen/0yOibuhvkGF95Phmcfbqmplm7t0qpcSciaic8uy4M8dvUDTxDtv0yFkw0t445xvYm05kaaVHzic0JLa4tb3XNlf0umsg8dwfhayv/46" alt="五岳归来">
+                <div class="bargain-txt"> <strong>五岳归来</strong> <span>2015/10/28 12:47:01</span>
+                    <p>请叫我小砍砍！</p>
+                </div>
+                <div class="bargain-list-price">1元</div>
+            </li>
+            <li> <img src="http://wx.qlogo.cn/mmopen/SeUzcksBGg5GrFJlziaibbLKBy5JriccynicOibBqYdF7mv2B1Nic9jtHfHKl6qVuFdicToicFUvkmoDeoMib5Mibo2oL3oF0ibA0VAughH/46" alt="阳光雨露">
+                <div class="bargain-txt"> <strong>阳光雨露</strong> <span>2015/10/28 12:44:53</span>
+                    <p>让哥帮你实现有车的梦想！</p>
+                </div>
+                <div class="bargain-list-price">1元</div>
+            </li>
+            <li> <img src="http://img.huimaiche.cn/uimg/hd/default.png" alt="">
+                <div class="bargain-txt"> <strong></strong> <span>2015/10/28 12:29:03</span>
+                    <p>记得带我一起兜风！</p>
+                </div>
+                <div class="bargain-list-price">6元</div>
+            </li>
+            <li> <img src="http://wx.qlogo.cn/mmopen/PiajxSqBRaEI3ia7ia5WgT9ErKzLc1gpMSL85ysrMJt470ibkYfklnw6y4jmAfRY7144iaRpJXVRBO58tthQ4re9bmQ/46" alt="天放z??">
+                <div class="bargain-txt"> <strong>天放z??</strong> <span>2015/10/28 12:25:27</span>
+                    <p>注意啦，我要动手了！</p>
+                </div>
+                <div class="bargain-list-price">6元</div>
+            </li>
+            <li> <img src="http://wx.qlogo.cn/mmopen/0yOibuhvkGFicwlVc0ftqpuJRJKWicia6THGTLkuIWSGbCVD1Igl8ZHkH5vZjwFHkvRWuVD7FJGMQekooN2ZY2H2Dg/46" alt="月透水华">
+                <div class="bargain-txt"> <strong>月透水华</strong> <span>2015/10/28 12:23:13</span>
+                    <p>北斗七星高，哥舒夜带刀。</p>
+                </div>
+                <div class="bargain-list-price">1元</div>
+            </li>
+            <li> <img src="http://wx.qlogo.cn/mmopen/MO5d9lwnWOKiaBsH2j2sdtdqWjdAuhUHN3wcRa9mWO72hM5yIbuHWDMr4Uyyksfyl4ngL5CmkNLnF6N8D6FhrNavMWPrUxVez/46" alt="Y">
+                <div class="bargain-txt"> <strong>Y</strong> <span>2015/10/28 12:20:03</span>
+                    <p>永远相信美好的事情即将发生！</p>
+                </div>
+                <div class="bargain-list-price">4元</div>
+            </li>
+            <li> <img src="http://wx.qlogo.cn/mmopen/0yOibuhvkGF95PhmcfbqmpjYQLAVYTX0hvDZ75IL8MptewFu5FGl0ezPZtoNqIYS8icDecibN6SOl1SWn3XZwRK6azf7aygBSy6/46" alt="??桃心??">
+                <div class="bargain-txt"> <strong>??桃心??</strong> <span>2015/10/28 12:12:12</span>
+                    <p>路见不平拔刀相助！</p>
+                </div>
+                <div class="bargain-list-price">1元</div>
+            </li>
+            <li> <img src="http://wx.qlogo.cn/mmopen/JYiaKEz5Ha78yVl7XP3v3NRxBlkOz4CsASYZlb9nWH3DFXGrwX5jtkZBhNW10eXJuk88QycAVAv0IqTpsgicH3YePzoNsB43WK/46" alt="温可资">
+                <div class="bargain-txt"> <strong>温可资</strong> <span>2015/10/28 12:09:13</span>
+                    <p>兄弟，我只能帮你到这了！</p>
+                </div>
+                <div class="bargain-list-price">1元</div>
+            </li>
+            <li> <img src="http://wx.qlogo.cn/mmopen/SeUzcksBGg6aY6gOUXf0I17ribc9MSH91xKCFwjkEehIZ3O9XfcQB1h6Ia6lmpR8T9PicxO1Michic9hUK2Esy4BMRCLMtS7kZcic/46" alt="虾米学姐">
+                <div class="bargain-txt"> <strong>虾米学姐</strong> <span>2015/10/28 12:03:13</span>
+                    <p>底价？臣妾做得到！</p>
+                </div>
+                <div class="bargain-list-price">3元</div>
+            </li>
+            <li> <img src="http://wx.qlogo.cn/mmopen/fpsvWDOjgSUiafRwOdg97onf31HPWwg4KyQcIkvicIcMVWwFicZ55FLPb7f28daFD0ibVDYibWI6ibdeKQSd5Ha3l1d0pM2cnbzDKr/46" alt="D.C.">
+                <div class="bargain-txt"> <strong>D.C.</strong> <span>2015/10/28 12:02:46</span>
+                    <p>砍砍更健康！</p>
+                </div>
+                <div class="bargain-list-price">2元</div>
+            </li>
+            <li> <img src="http://wx.qlogo.cn/mmopen/ajNVdqHZLLBRbGuqzAMHzrCThib75Uib4sRq8OvChyoEUZrYO32wWGxwFpfV3KTn2ycicyrjkudB6SeKhgxMWmibIw/46" alt="活着">
+                <div class="bargain-txt"> <strong>活着</strong> <span>2015/10/28 12:00:07</span>
+                    <p>都让开，让我砍！</p>
+                </div>
+                <div class="bargain-list-price">2元</div>
+            </li>
+            <li> <img src="http://wx.qlogo.cn/mmopen/JYiaKEz5Ha7ibJiaIjsmamCtpujIE30qdAEnsWn67TUZBl4Hu3GEoMaVTlicT6icGq60fq6NLEG47VUz331ehXyJSlZKU41IQbibNs/46" alt="金马翔">
+                <div class="bargain-txt"> <strong>金马翔</strong> <span>2015/10/28 11:58:22</span>
+                    <p>都闪开，让我来！</p>
+                </div>
+                <div class="bargain-list-price">2元</div>
+            </li>
+            <li> <img src="http://wx.qlogo.cn/mmopen/SeUzcksBGg6cMUVJribh90NXU8vzj5D3O4GLhJXGibDG5z21aZkV5E94z7MI6S1mNL7qDtViaLAicYSHhUZOBK1mDw/46" alt="草字头的莉草字头的莎">
+                <div class="bargain-txt"> <strong>草字头的莉草字头的莎</strong> <span>2015/10/28 11:54:20</span>
+                    <p>多少人曾羡慕我挥得一手好刀！</p>
+                </div>
+                <div class="bargain-list-price">2元</div>
+            </li>
+            <li> <img src="http://wx.qlogo.cn/mmopen/ajNVdqHZLLCDRh8hxvTA3AWI2XwgibtbBW4icbsGlic91KwUqGhpXvLjkW6RbuKPTKF77u1quOZg38IE6NwjWPrEw/46" alt="家有两宝">
+                <div class="bargain-txt"> <strong>家有两宝</strong> <span>2015/10/28 11:54:19</span>
+                    <p>天行健，君子挥刀不息</p>
+                </div>
+                <div class="bargain-list-price">1元</div>
+            </li>
+            <li> <img src="http://wx.qlogo.cn/mmopen/qhhC5wwNqZcuFuGLt6Nff6JzsRDMJaicIAkv3Eg7iaX4P4uAqLCbicpUjNozJiaTt4u9DibsPSfv7WWbdJSqnv4iclBicDwNNz0updP/46" alt="小沙弥">
+                <div class="bargain-txt"> <strong>小沙弥</strong> <span>2015/10/28 11:53:31</span>
+                    <p>人在江湖飘，哪能不带刀！</p>
+                </div>
+                <div class="bargain-list-price">3元</div>
+            </li>
+            <li> <img src="http://wx.qlogo.cn/mmopen/SeUzcksBGg7tQ4LNaozJwqPRW7UnV9nU6Z2HhiavpGgK6XiacJ8tO5lZLveiaRogXl66TDb5FIqRC5b76LMibIIBnQ/46" alt="小 妖 ??">
+                <div class="bargain-txt"> <strong>小 妖 ??</strong> <span>2015/10/28 11:51:42</span>
+                    <p>技不如人，还需努力啊~</p>
+                </div>
+                <div class="bargain-list-price">0元</div>
+            </li>
+            <li> <img src="http://wx.qlogo.cn/mmopen/JYiaKEz5Ha7ice7Gvc2jpVcRJ3OyV2RicQDClZS7jLvZzR757UqynHZRV9ibPHD8y6TewPKMPBMqe7Gp6Nx1ItichtHcdJ14srgX0/46" alt="老睡">
+                <div class="bargain-txt"> <strong>老睡</strong> <span>2015/10/28 11:47:56</span>
+                    <p>Just do it! 使劲砍！</p>
+                </div>
+                <div class="bargain-list-price">12元</div>
+            </li>
+            <li> <img src="http://wx.qlogo.cn/mmopen/PiajxSqBRaELxSC158yIhVb0ZfzgQ4Spq9LzZAaWtd4h2VqDUXuCmtmlP82TDYa4HLlGyibSd1KbTCKCqfsYNNGg/46" alt="pi">
+                <div class="bargain-txt"> <strong>pi</strong> <span>2015/10/28 11:46:56</span>
+                    <p>砍砍更健康！</p>
+                </div>
+                <div class="bargain-list-price">4元</div>
+            </li>
+            <li> <img src="http://wx.qlogo.cn/mmopen/MO5d9lwnWOKSXaYbiaTZgwQ9o3JC1sNWWphnm1WHBOceZDqznzfv0XzH93Io6VbPicFXrswiaTnftHo6uHaqmQNFOholegiaCFEf/46" alt="Kate">
+                <div class="bargain-txt"> <strong>Kate</strong> <span>2015/10/28 11:46:21</span>
+                    <p>万万没想到，我竟然是传说中的刀神！</p>
+                </div>
+                <div class="bargain-list-price">4元</div>
+            </li>
+            <li> <img src="http://wx.qlogo.cn/mmopen/MO5d9lwnWOJXlsupxLbIllQQAuvtwHBflTxjGozJpcw8SGaRpMAWx3ultf1MQkicmMhlBuEQOIxF8p3gicNlGyNVKR4iahzGq03/46" alt="康康">
+                <div class="bargain-txt"> <strong>康康</strong> <span>2015/10/28 11:41:42</span>
+                    <p>其实，我是一个好人！</p>
+                </div>
+                <div class="bargain-list-price">8元</div>
+            </li>
+            <li> <img src="http://wx.qlogo.cn/mmopen/Q3auHgzwzM7MZASoCEib3WzA9FoQSYSD7THd58W32cYCwYjaIUkfIEiaRpAIpGfCjnpp3VjF3QsAZIibMaWTxoXFZ2lGXJ8Af4N9Lx6ZV1Bxuo/46" alt="春天">
+                <div class="bargain-txt"> <strong>春天</strong> <span>2015/10/28 11:40:19</span>
+                    <p>红包拿去，哥就是这么壕！</p>
+                </div>
+                <div class="bargain-list-price">3元</div>
+            </li>
+            <li> <img src="http://wx.qlogo.cn/mmopen/fpsvWDOjgSUiafRwOdg97oqCMRgsxq45TvYzic4GZ58xgg1xdWcZibrzMUiaPN5MXwHjTF6kcpBXd4ZkicYVlibY8o7z5DWyM23Nbia/46" alt="娇">
+                <div class="bargain-txt"> <strong>娇</strong> <span>2015/10/28 11:39:25</span>
+                    <p>不为前尘往事，只为砍价之约</p>
+                </div>
+                <div class="bargain-list-price">2元</div>
+            </li>
+            <li> <img src="http://wx.qlogo.cn/mmopen/ajNVdqHZLLDmAPxflaumHetthD3he7OOm6DwGKhayhIR9sIvDqOILNkxibENLtQmLgtibIaV2gjSX2MkAia9zrbYw/46" alt="哈怂">
+                <div class="bargain-txt"> <strong>哈怂</strong> <span>2015/10/28 11:38:23</span>
+                    <p>人生不易，且行且砍！</p>
+                </div>
+                <div class="bargain-list-price">6元</div>
+            </li>
+            <li> <img src="http://wx.qlogo.cn/mmopen/JYiaKEz5Ha7ibLXtcgnl5P0moXLKXzxJykwAic6yza0MWo6Pakop2yg0zsuibqTpicdAxQPA8ANMwq4PfttribtzqTaG4Vyklmuq5D/46" alt="麦小文">
+                <div class="bargain-txt"> <strong>麦小文</strong> <span>2015/10/28 11:37:54</span>
+                    <p>挥刀砍价心切切，不负如来不负卿！</p>
+                </div>
+                <div class="bargain-list-price">6元</div>
+            </li>
+            <li> <img src="http://wx.qlogo.cn/mmopen/SeUzcksBGg6gkOnOSpg2DjBjFERCSvrK0M1ZvmtIDyMsFdzicG41bJ3GicG5LQCWD38ISV9w2BgdkAUxBcGkH5hOwZbyAIg4pc/46" alt="c小月">
+                <div class="bargain-txt"> <strong>c小月</strong> <span>2015/10/28 11:36:45</span>
+                    <p>我要让全世界知道这辆车被你承包了！</p>
+                </div>
+                <div class="bargain-list-price">3元</div>
+            </li>
+            <li> <img src="http://wx.qlogo.cn/mmopen/JYiaKEz5Ha7ibLXtcgnl5P0tuYlhoQAnZrrNeVxkF3NibbwSzJYbIu9z0SzzKjAgmId8O2jDR4UU36mGNJxmBNhD34JqianoPsTO/46" alt="达文尔 ??">
+                <div class="bargain-txt"> <strong>达文尔 ??</strong> <span>2015/10/28 11:36:08</span>
+                    <p>让哥帮你实现有车的梦想！</p>
+                </div>
+                <div class="bargain-list-price">4元</div>
+            </li>
+            <li> <img src="http://wx.qlogo.cn/mmopen/SeUzcksBGg6aY6gOUXf0I9U2h8rkP6abhUd7bxb9r2XvE5jde2xyhtvLqdnYa3gudhk3KibjW4yianL4qnkVaNxwMWvXHUw87v/46" alt="火ba">
+                <div class="bargain-txt"> <strong>火ba</strong> <span>2015/10/28 11:35:00</span>
+                    <p>永远相信美好的事情即将发生！</p>
+                </div>
+                <div class="bargain-list-price">2元</div>
+            </li>
+            <li> <img src="http://wx.qlogo.cn/mmopen/MO5d9lwnWOI6h9icSCanZWs33iaAuF9QcwmibXQFkrfoI6KaXDHcA2fiaQeqJticfCwMrtjBlDTo4qsJJwZ6CHew5iaKRL5a4CUgYt/46" alt="?? 搪昂昂昂瓷 ??">
+                <div class="bargain-txt"> <strong>?? 搪昂昂昂瓷 ??</strong> <span>2015/10/28 11:33:25</span>
+                    <p>黄金错刀白玉装，“砍”穿窗扉出光芒。</p>
+                </div>
+                <div class="bargain-list-price">2元</div>
+            </li>
+            <li> <img src="http://wx.qlogo.cn/mmopen/PiajxSqBRaEIg8pv6zmUUuIAgdocGHSGfTnKd6ezdc8TNicp7PB7Q8MbSGg00pNViaGXiaBzrQ8jyvMXeGLMbb0Jqw/46" alt="BoomshakaLaka__????">
+                <div class="bargain-txt"> <strong>BoomshakaLaka__????</strong> <span>2015/10/28 11:32:56</span>
+                    <p>这是一种人格力量的升华，只为你砍！</p>
+                </div>
+                <div class="bargain-list-price">2元</div>
+            </li>
+            <li> <img src="http://wx.qlogo.cn/mmopen/SeUzcksBGg5xzWicV5ewMXp68IPK3EbGrjHVL9NXibJAXBzdsBEBlbWPztDFS24D8Gic41bpj5EiaYdACx1mkwjQiaT0lzYShNlkic/46" alt="三先生">
+                <div class="bargain-txt"> <strong>三先生</strong> <span>2015/10/28 11:32:45</span>
+                    <p>让哥帮你实现有车的梦想！</p>
+                </div>
+                <div class="bargain-list-price">3元</div>
+            </li>
+            <li> <img src="http://wx.qlogo.cn/mmopen/Q3auHgzwzM7J2tKRfYthRGwPmzvnyoeH6ISbnwtadAntZWVeyaOicJJ1wkic271FJib6DnBLTGlKBKfyVeYmcAJiaA/46" alt="菜菜家的翟三金">
+                <div class="bargain-txt"> <strong>菜菜家的翟三金</strong> <span>2015/10/28 11:32:22</span>
+                    <p>底价？臣妾做得到！</p>
+                </div>
+                <div class="bargain-list-price">2元</div>
+            </li>
+            <li> <img src="http://wx.qlogo.cn/mmopen/SeUzcksBGg6aY6gOUXf0I6DpsBSov25OA6br1KvP20Bwy8K5CjlBJ1zmeSeB4KTpayQn246jRYbicALtf8qjXEbPv5iapPMEue/46" alt="愛麗絲">
+                <div class="bargain-txt"> <strong>愛麗絲</strong> <span>2015/10/28 11:32:02</span>
+                    <p>学小沈阳吗？刀砍偏了呵~</p>
+                </div>
+                <div class="bargain-list-price">0元</div>
+            </li>
+            <li> <img src="http://wx.qlogo.cn/mmopen/0yOibuhvkGFicnkfEd2nyy9kj5xA7VoStlJ1cibyJZuhsX1Dic6excyvWstJGOrv4QX1yzFNnLCdZuI43XowNFuzzg/46" alt="如是">
+                <div class="bargain-txt"> <strong>如是</strong> <span>2015/10/28 11:31:44</span>
+                    <p>轻轻地我来了！不谢！</p>
+                </div>
+                <div class="bargain-list-price">2元</div>
+            </li>
+            <li> <img src="http://img.huimaiche.cn/uimg/hd/default.png" alt="">
+                <div class="bargain-txt"> <strong></strong> <span>2015/10/28 11:30:54</span>
+                    <p>不用约了，直接开车来接就行！</p>
+                </div>
+                <div class="bargain-list-price">4元</div>
+            </li>
+            <li> <img src="http://wx.qlogo.cn/mmopen/SeUzcksBGg6aY6gOUXf0IicTIHhA5qQrguH2xNxyFicKFsNGwoww93WHicvnM3qXVPQVvyoQMWiaia0s0icXhrAmKdEs75MLlqPiaFd/46" alt="纪阿耀">
+                <div class="bargain-txt"> <strong>纪阿耀</strong> <span>2015/10/28 11:29:25</span>
+                    <p>100块？那都不是事儿~</p>
+                </div>
+                <div class="bargain-list-price">4元</div>
+            </li>
+            <li> <img src="http://wx.qlogo.cn/mmopen/PiajxSqBRaELZ5njJQ9j0bY07ibOrkE5qAI15nULJb5fCnaLy9e06BMaibVvlicW8fV370bzAIOibL5VzDoobIxeMY0BwCr5YQVCFW4NowlQicibgw/46" alt="外脚背">
+                <div class="bargain-txt"> <strong>外脚背</strong> <span>2015/10/28 11:28:10</span>
+                    <p>就靠这一刀混了！</p>
+                </div>
+                <div class="bargain-list-price">9元</div>
+            </li>
+            <li> <img src="http://wx.qlogo.cn/mmopen/SeUzcksBGg6aY6gOUXf0IwtpFftAyQnuYq9aFJJJXribZOHrCNzNlqzCVunCwkub0oUNkR8ibtkfibCP9Eibm87V8gwic9B5lvRNV/46" alt="mxy">
+                <div class="bargain-txt"> <strong>mxy</strong> <span>2015/10/28 11:26:25</span>
+                    <p>十年磨一剑，今日为君砍！</p>
+                </div>
+                <div class="bargain-list-price">6元</div>
+            </li>
+        </ul>
+    </div>
+    <div class="bargain-tool">
+        <a href="/kanjia?cp=weixin_fx" class="activehome" data-hmclog="{pageid:33, eventid: 139}">
+            活动首页</a> <a href="http://i.m.huimaiche.com/coupon/couponlist.aspx" class="mybargain" data-hmclog="{pageid:33, eventid: 138}">
+                优惠券</a>
+    </div>
+    <!--页脚-->
+
+
+    <div class="footer" id="footer">
+
+        <div class="fl">
+            <a href="http://m.huimaiche.com/login?re=http%3a%2f%2fm.huimaiche.com%2ftransfer%3fre%3dhttp%253a%252f%252fm.hd.huimaiche.com%252fkanjia%252fta%252f10104%253fcp%253dweixin_fx%2526from%253dgroupmessage%2526isappinstalled%253d0">登录</a>
+            <a href="http://www.huimaiche.com/app">下载APP</a>
+        </div>
+
+        <div class="fr"><a href="http://m.huimaiche.com">进入惠买车</a>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+    function signOut() {
+        $.ajax({
+            type: 'post',
+            dateType: 'json',
+            url: '/kanjia/ajax.ashx',
+            data: {
+                action: 'out'
+            },
+            success: function() {
+                setCookie("formvalue", "");
+                window.location.reload();
+            }
+        });
+    }
+
+    function setCookie(name, value) {
+        var expdate = new Date();
+        var argv = setCookie.arguments;
+        var argc = setCookie.arguments.length;
+        var expires = (argc > 2) ? argv[2] : null;
+        var path = (argc > 3) ? argv[3] : "/";
+        var domain = (argc > 4) ? argv[4] : getDomain();
+        var secure = (argc > 5) ? argv[5] : false;
+        if (expires != null) expdate.setTime(expdate.getTime() + (expires * 1000));
+        document.cookie = name + "=" + value + ((expires == null) ? "" : ("; expires=" + expdate.toGMTString())) + ((path == null) ? "" : ("; path=" + path)) + ((domain == null) ? "" : ("; domain=" + domain)) + ((secure == true) ? "; secure" : "");
+    }
+
+    function getDomain() {
+        var arr_dps = document.domain.split(".");
+        var str_domain = ".";
+        if (arr_dps.length >= 2) {
+            str_domain += arr_dps[arr_dps.length - 2] + "." + arr_dps[arr_dps.length - 1];
+        }
+        return str_domain;
+    }
+    </script>
+
+
+    <script type="text/javascript" src="/kanjia/js/countdown.js"></script>
+    <script type="text/javascript" src="/kanjia/js/dialog.js?v=201510100945"></script>
+    <script type="text/javascript">
+    var hmc_client_id = '';
+    var tracker_id = '';
+
+    var userCAID = '10104';
+    var clientId = '1b2b8394-e05e-448b-be29-c74d2c93530e';
+    var logined = '0';
+    var loginUrl = 'http://m.huimaiche.com/login?re=http%3a%2f%2fm.huimaiche.com%2ftransfer%3fre%3dhttp%253a%252f%252fm.hd.huimaiche.com%252fkanjia%252fta2%252f10104%253fcp%253dweixin_fx';
+
+    $(function() {
+        if (typeof HMCWEBLOG_ID !== 'undefined') {
+            hmc_client_id = HMCWEBLOG_ID;
+        }
+        try {
+            tracker_id = HMC_LOG.GetTracker() || '';
+        } catch (e) {
+            tracker_id = '';
+        }
+
+        bindSupport(userCAID);
+
+        var serverTime = '1446015315231';
+        var $em = $('#p_cd').find('em');
+        var endTime = $em.data('endtime');
+        var cd = new Countdown();
+        cd.start(serverTime, endTime,
+            function(d, h, m, s) {
+                $em.text(h + '时' + m + '分' + s + '秒');
+            },
+            function() {
+                $em.text('00时00分00秒');
+                $('.car-info').append('<div class="activeend">砍价活动结束</div>');
+                $('#aSupport').remove();
+            }
+        );
+
+        $('#aSupport').one('click', function() {
+            supporting($(this));
+        });
+    });
+    var supporting = function(aSupport) {
+        $.ajax({
+            type: 'post',
+            dataType: 'json',
+            url: '/kanjia/ajax.ashx',
+            data: {
+                action: 'supoorting',
+                userCAID: userCAID,
+                clientId: clientId,
+                tracker_id: tracker_id, //统计相关
+                hmc_client_id: hmc_client_id //统计相关
+            },
+            success: function(ret) {
+                //成功返回ID,-1已支持,-2砍价次数超限,-3事务失败,-10活动不存在,-11活动已结束,-12获取砍价配置失败,-20代金券Api失败
+                if (ret.code > 0) {
+                    var $parent = aSupport.parent();
+                    aSupport.remove();
+                    $parent.append('<a href="javascript:void(0)" class="bargained"><span>已帮忙砍出' + ret.amount + '元！</span></a>');
+                    var suppCnt = parseInt($('#suppCnt').text());
+                    $('#suppCnt').text(suppCnt + 1);
+                    var couponAmount = parseInt($('#couponAmount').text());
+                    $('#couponAmount').text(couponAmount + ret.amount);
+                    $('#amount2').text(couponAmount + ret.amount);
+                    dialog.showSucc(logined, ret.amount, loginUrl, '', ret.fixedCouponId);
+                } else if (ret.code == -1) {
+                    alert('您已砍过价了!');
+                    window.location.reload();
+                } else if (ret.code == -2) {
+                    dialog.showMax3();
+                } else if (ret.code == -10) {
+                    alert('活动不存在!')
+                } else if (ret.code == -11) {
+                    alert('活动已结束!')
+                } else if (ret.code == -20) {
+                    //好友使用优惠券中无法砍价
+                    dialog.showYicheApiFail();
+                } else if (ret.code == -500) {
+                    alert('服务器忙,请稍候重试!');
+                } else {
+                    //alert('砍偏了，刀不够锋利！');
+                    dialog.showAmount0();
+                    console.log(ret.code);
+                }
+                bindSupport(userCAID);
+            },
+            complete: function() {
+                aSupport.one('click', function() {
+                    supporting(aSupport);
+                });
+            }
+        });
+    }
+
+    var bindSupport = function(userCAID) {
+        $.ajax({
+            type: 'post',
+            dataType: 'json',
+            url: '/kanjia/ajax.ashx',
+            data: {
+                action: 'supportlist',
+                userCAID: userCAID
+            },
+            success: function(ret) {
+                if (ret.code == 0) {
+                    var html = '';
+                    for (var i = 0; i < ret.data.length; i++) {
+                        html += '<li>';
+                        html += '    <img src="' + ret.data[i].headImgUrl + '" alt="' + ret.data[i].nickname + '">';
+                        html += '    <div class="bargain-txt">';
+                        html += '        <strong>' + ret.data[i].nickname + '</strong>';
+                        html += '        <span>' + ret.data[i].createTime + '</span>';
+                        html += '        <p>' + ret.data[i].message + '</p>';
+                        html += '    </div>';
+                        html += '    <div class="bargain-list-price">' + ret.data[i].amount + '元</div>';
+                        html += '</li>';
+                    }
+                    $('#suppCnt').text(ret.data.length);
+                    $('#ulSopport').html(html);
+                } else {
+                    alert(ret.message);
+                }
+            }
+        });
+    }
+    </script>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script type="text/javascript" src="/kanjia/js/weixinshare.js?v=201510100945"></script>
+    <script type="text/javascript">
+    var serialShowName = '长安马自达-昂克赛拉三厢';
+    var title = '请为我的好友lucas来砍价！';
+    var desc = '惠买车“全民齐砍价活动”，发起任一品牌砍价活动，即可召集好友为自己增加砍价金额，直抵车款哦~';
+    var link = 'http://m.hd.huimaiche.com/kanjia/ta/10104?cp=weixin_fx';
+
+    function getYiChe_HMC_ShareInfo() {
+        var jsonStr = '';
+        jsonStr += '{';
+        jsonStr += '"IconURL":"http://img.huimaiche.cn/uimg/hd/ad20150826.png",';
+        jsonStr += '"LinkURL":"' + link + '",';
+        jsonStr += '"Title":"' + title + '",';
+        jsonStr += '"Content":"' + desc + '"';
+        jsonStr += '}';
+        return jsonStr;
+    }
+    </script>
+    <script type="text/javascript">
+    var configUrl = 'http://weixin.api.huimaiche.com/jsapi/config';
+    WeiXinShare.init(configUrl, {
+        title: title,
+        link: link,
+        imgUrl: 'http://img.huimaiche.cn/uimg/hd/ad20150826.png',
+        desc: desc
+    });
+    </script>
+
+    <script type="text/javascript">
+    $(function() {
+        $(document).on("click", "[data-hmclog]", function() {
+            if (typeof HMC_LOG !== "undefined" && typeof HMC_LOG.SentClickStat === "function") {
+                try {
+                    HMC_LOG.SentClickStat(this);
+                } catch (e) {}
+            }
+        });
+    });
+    </script>
+
+
+
+</body>
+
+</html>

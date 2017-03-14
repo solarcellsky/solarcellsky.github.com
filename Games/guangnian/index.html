@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html style="font-size: 23.125px;">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="apple-touch-fullscreen" content="YES">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" name="viewport">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="pragram" content="no-cache">
+    <title>千百光年以外有什么？</title>
+    <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="js/main.js?834524"></script>
+    <script type="text/javascript" src="js/swiper.min.js"></script>
+    <script type="text/javascript" src="js/xingkec.js"></script>
+    <script type="text/javascript" src="js/fastclick.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/style.css?564840">
+    <link rel="stylesheet" href="css/swiper.min.css">
+</head>
+<body>
+    <!-----加载页---------->
+    <div class="loading" style="position: fixed; width: 100%; height: 100%; z-index: 10000; display: none; background: rgb(3, 6, 20);">
+        <div class="deng"><img src="images/loading.gif"></div>
+    </div>
+    <!--首页-->
+    <div class="shouye ">
+        <div class="page_bg"><img src="images/shouye.jpg"></div>
+        <div class="qiu1"><img src="images/qiu1.png" id="qiu1" style="-webkit-transform: rotate(0deg) rotate3d(1, 0, 0, -10deg);"></div>
+        <div class="qiu2"><img src="images/qiu2.png" id="qiu2" style="-webkit-transform: rotate(0deg) rotate3d(1, 0, 0, -10deg);"></div>
+        <div class="diqiu_box">
+            <div><img src="images/diqiu.png"></div>
+            <div class="guiji rotate"><img src="images/guiji.png"></div>
+            <div class="xingqiu_txt1 shake"><img src="images/xingqiu_txt1.png"></div>
+            <div class="xingqiu_txt2 shake2"><img src="images/xingqiu_txt2.png"></div>
+            <div class="xingqiu_txt3 shake3"><img src="images/xingqiu_txt3.png"></div>
+            <div class="xingqiu_txt4 shake"><img src="images/xingqiu_txt4.png"></div>
+            <div class="xingqiu_txt5 shake2"><img src="images/xingqiu_txt5.png"></div>
+            <div class="xingqiu_txt6 shake3"><img src="images/xingqiu_txt6.png"></div>
+        </div>
+        <div class="sliwu manbu"><img src="images/sliwu.png"></div>
+        <div class="rule_btn"><img src="images/rule_btn.png"></div>
+        <div class="start_btn"><img src="images/start_btn.png"></div>
+    </div>
+    <!--活动规则-->
+    <div class="rule hide" style="display: none;">
+        <div class="rule_out">
+            <div class="rule_box">
+                <div class="rule_bg"><img src="images/rule_bg.png"></div>
+                <div class="rule_con">
+                    <p>型科一周岁啦！快登上飞船，跟我们领取生日大礼吧！
+                        <br> 1.游戏时间：2015/12/30—2016/2/29.
+                        <br> 2.游戏方式: 点击屏幕上的飞船,储蓄能量令飞船发射,飞的距离越远,得到的奖励越丰富.
+                        <br> 3.根据游戏成绩可获得奖励分别为:
+                        <br> 一等奖:时尚数码产品小米手环(1个);
+                        <br> 二等奖:1个月免费运营体验券;
+                        <br> 三等奖:Html5游戏开发3000元优惠券.
+                        <br> 用户中奖后填写姓名和手机号码,每个用户只能领取一次.
+                        <br> *最终解释权归我广州型科信息科技有限公司所有。
+                    </p>
+                </div>
+            </div>
+            <div class="rule_tit"><img src="images/rule_tit.png"></div>
+            <div class="close_btn"><img src="images/close_btn.png"></div>
+        </div>
+    </div>
+    <!--开始游戏-->
+    <div class="game hide">
+        <div class="beijing ">
+            <div><img src="images/beijing.jpg"></div>
+            <div class="yanwu shake"><img src="images/yanwu.png"></div>
+        </div>
+        <div class="tiao_box">
+            <div class="tiao_bg"><img src="images/tiao_bg.png"></div>
+            <div class="tiao_con"></div>
+            <div class="tiao_out"><img src="images/tiao_out.png"></div>
+        </div>
+        <div class="dianji_tips">
+            <div class="dianji_in bounceIn2"></div>
+            <img src="images/dianji_tips.png"></div>
+        <div class="dianji_txt hide"><img src="images/dianji_txt.png"></div>
+        <div class="daoji ">
+            <div class="jishi1 hide"><img src="images/jishi1.png"></div>
+            <div class="jishi2 hide"><img src="images/jishi2.png"></div>
+            <div class="jishi2 hide"><img src="images/jishi2.png"></div>
+            <div class="jishi3 hide"><img src="images/jishi3.png"></div>
+            <div class="jishi_go hide"><img src="images/jishi_go.png"></div>
+        </div>
+        <div class="huojian1 huojianNew fasheqi" style="display: block;"><img src="images/fei1.png"></div>
+        <div class="huojian2 huojianNew fasheqi" style="display: none;"><img src="images/fei2.png"></div>
+        <div class="fasheqi2_box hide">
+            <div class="fasheqi2_txt">火箭已推进</div>
+            <div class="fasheqi2_txt2"><span>1000</span>光年</div>
+            <div class="huo shake"><img src="images/huo.png"></div>
+            <div class="fasheqi2"><img src="images/fasheqi.png"></div>
+        </div>
+    </div>
+    <!--中奖-->
+    <div class="jiang_wap hide">
+        <div class="jiang_con">
+            <p class="jiang_tit1">已飞行<span class="juli">1000</span>光年</p>
+            <p class="jiang_tit2">登陆到<span class="xing_name"></span></p>
+            <div class="jiang_box">
+                <div class="jiang_bg"><img src="images/jiang_bg.png"></div>
+                <div class="jiang1 hide">
+                    <img class="jiang1_tit tit" src="images/jiang1_tit.png">
+                    <img class="jiang1_txt txt" src="images/jiang1_txt.png">
+                </div>
+                <!--一等奖-->
+                <div class="jiang2 hide">
+                    <img class="jiang2_tit tit" src="images/jiang2_tit.png">
+                    <img class="jiang2_txt txt" src="images/jiang2_txt.png">
+                </div>
+                <!--二等奖-->
+                <div class="jiang3 hide">
+                    <img class="jiang3_tit tit" src="images/jiang3_tit.png">
+                    <img class="jiang3_txt txt" src="images/jiang3_txt.png">
+                </div>
+                <!--三等奖-->
+                <div class="tkren"><img src="images/tkren.png"></div>
+                <div class="huojian"><img src="images/huojian.png"></div>
+            </div>
+        </div>
+        <!--<div class="jiang_close"><img src="images/close_btn.png"/></div>-->
+        <div class="again_btn"><img src="images/again_btn.png"></div>
+        <div class="share_btn"><img src="images/share_btn.png"></div>
+        <div class="about_btn"><img src="images/about_btn.png"></div>
+        <div class="libao_btn"><img src="images/libao_btn.png"></div>
+    </div>
+    <!--填写信息-->
+    <div class="mess_wap hide">
+        <div class="page_bg"><img src="images/mess_page.png"></div>
+        <div class="tian_tit"><img src="images/tian_tit.png"></div>
+        <div class="mess_box">
+            <div class="mess_bg"><img src="images/mess_bg.png"></div>
+            <div class="user_name">
+                <input type="text" id="name" placeholder="姓名">
+            </div>
+            <div class="tel">
+                <input type="text" id="tel" placeholder="手机号码">
+            </div>
+            <div class="comm">
+                <input type="text" id="comm" placeholder="公司名称">
+            </div>
+            <div class="tkren"><img src="images/tkren.png"></div>
+            <div class="huojian"><img src="images/huojian.png"></div>
+        </div>
+        <div class="mess_close"><img src="images/close_btn.png"></div>
+        <div class="confirm_btn"><img src="images/confirm_btn.png"></div>
+    </div>
+    <!--中的奖-->
+    <div class="libao_wap hide">
+        <div class="libao_tit"><img src="images/libao_tit.png"></div>
+        <div class="libao_box">
+            <div class="libao_bg"><img src="images/libao_bg.png"></div>
+            <div class="libao1 hide"><img src="images/libao1.png"></div>
+            <!--一等奖-->
+            <div class="libao2 hide"><img src="images/libao2.png"></div>
+            <!--二等奖-->
+            <div class="libao3 hide"><img src="images/libao3.png"></div>
+            <!--三等奖-->
+            <div class="libao_time"><img src="images/libao_time.png"></div>
+            <div class="lingqu_btn "><img src="images/lingqu_btn.png"></div>
+            <div class="ylq_btn hide"><img src="images/yilingqu_btn.png"></div>
+        </div>
+        <div class="libao_close"><img src="images/close_btn.png"></div>
+    </div>
+    <!--领取后显示中奖页面-->
+    <div class="ling_Over hide">
+        <div class="libao_tit"><img src="images/libao_tit.png"></div>
+        <div class="libao_box">
+            <div class="libao_bg"><img src="images/ling_overbg.png"></div>
+            <div class="libao1 hide" id="libao1"><img src="images/libao1.png"></div>
+            <!--一等奖-->
+            <div class="libao2 hide"><img src="images/libao2.png"></div>
+            <!--二等奖-->
+            <div class="libao3 hide"><img src="images/libao3.png"></div>
+            <!--三等奖-->
+            <div class="gz_tips"><img src="images/gz_tips.png"></div>
+            <div class="gz_btn">
+                <a href="http://mp.weixin.qq.com/s?__biz=MjM5NjcwMzIxOA==&amp;mid=400451841&amp;idx=1&amp;sn=4eec8d04016c3db32424e7ace0e5c3d6#rd"><img src="images/gz_btn.png"></a>
+            </div>
+        </div>
+        <div class="ling_close"><img src="images/close_btn.png"></div>
+    </div>
+    <!--分享遮罩-->
+    <div class="share hide"><img src="images/share.png"></div>
+    <!-- Swiper -->
+    <div class="swiper-container swiper-container-vertical">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide swiper-slide-active">
+                <div class="page_bg"><img src="images/page1_bg.jpg"></div>
+                <div class="logobox">
+                    <div class="logo_red"><img src="images/logo_red.png"></div>
+                    <div class="logo_yel"><img src="images/logo_yel.png"></div>
+                </div>
+                <div class="logo_txt"><img src="images/logo_txt.png"></div>
+                <div class="page1txt_out">
+                    <div><img src="images/page1_txtbor.png"></div>
+                    <div class="page1_txt pulse"><img src="images/page1_txt.png"></div>
+                </div>
+                <div class="arrow"><img src="images/arrow.png"></div>
+            </div>
+            <div class="swiper-slide">
+                <div class="page_bg"><img src="images/page1_bg.jpg"></div>
+                <div class="logo_left"><img src="images/logo_left.png"></div>
+                <div class="xian"><img src="images/xian.png"></div>
+                <div class="about_txt"><img src="images/about_txt.png"></div>
+                <div class="arrow"><img src="images/arrow.png"></div>
+            </div>
+            <div class="swiper-slide">
+                <div class="page_bg"><img src="images/page3_bg.jpg"></div>
+                <div class="logo_right"><img src="images/logo_right.png"></div>
+                <div class="about_txt2"><img src="images/about_txt2.png"></div>
+                <div class="arrow"><img src="images/arrow.png"></div>
+            </div>
+            <div class="swiper-slide">
+                <div class="page_bg"><img src="images/page4_bg.jpg"></div>
+                <div class="develop0">
+                    <div><img src="images/develop0.png"></div>
+                    <div class="develop0_time hide"><img src="images/develop0_time.png"></div>
+                </div>
+                <div class="develop1">
+                    <div><img src="images/develop1.png"></div>
+                    <div class="develop1_time hide"><img src="images/develop1_time.png"></div>
+                </div>
+                <div class="develop2">
+                    <div><img src="images/develop2.png"></div>
+                    <div class="develop2_time hide"><img src="images/develop2_time.png"></div>
+                </div>
+                <div class="develop3">
+                    <div><img src="images/develop3.png"></div>
+                    <div class="develop3_time hide"><img src="images/develop3_time.png"></div>
+                </div>
+                <div class="arrow"><img src="images/arrow.png"></div>
+            </div>
+            <div class="swiper-slide">
+                <div class="page_bg"><img src="images/page5_bg.jpg"></div>
+                <div class="develop4">
+                    <div><img src="images/develop4.png"></div>
+                </div>
+                <div class="develop5">
+                    <div><img src="images/develop5.png"></div>
+                    <div class="develop5_time hide"><img src="images/develop5_time.png"></div>
+                </div>
+                <div class="develop6">
+                    <div><img src="images/develop6.png"></div>
+                    <div class="develop6_time hide"><img src="images/develop6_time.png"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="logo_ex hide">
+        <div class="page_bg"><img src="images/page1_bg.jpg"></div>
+        <div class="logobox">
+            <div class="logo_red "><img src="images/logo_red.png"></div>
+            <div class="logo_yel"><img src="images/logo_yel.png"></div>
+        </div>
+    </div>
+    <div class="return_btn hide"><img src="images/return_btn.png"></div>
+    <script>
+    window.addEventListener('load', function() {
+        FastClick.attach(document.body);
+    }, false);
+
+    function deviceMotionHandler(eventData) {
+        // 
+        var acceleration = eventData.accelerationIncludingGravity;
+        var facingUp = -1;
+        if (acceleration.z > 0) {
+            facingUp = +1;
+        }
+        var tiltLR = Math.round(((acceleration.x) / 9.81) * -30);
+        var tiltFB = Math.round(((acceleration.y + 9.81) / 9.81) * 10 * facingUp);
+
+        var rotation = "rotate(" + tiltLR + "deg) rotate3d(1,0,0, " + (tiltFB) + "deg)";
+        document.getElementById("qiu1").style.webkitTransform = rotation;
+        document.getElementById("qiu2").style.webkitTransform = rotation;
+    }
+    // 
+    if (window.DeviceMotionEvent) {
+        window.addEventListener('devicemotion', deviceMotionHandler, false);
+    } else {
+        alert('亲，你的浏览器不支持DeviceMotionEvent哦~');
+    }
+    </script>
+    <script>
+    var mySwiper = new Swiper('.swiper-container', {
+        paginationClickable: true,
+        direction: 'vertical',
+        onSlideChangeStart: function(swiper) {
+            if (mySwiper.activeIndex == 1) {
+                $('.logo_ex').show();
+                setTimeout(function() {
+                    $('.logo_ex').hide();
+                }, 1000)
+            } else {
+                $('.logo_left').removeClass('logoLeft');
+            }
+            if (mySwiper.activeIndex == 2) {
+                /* $('.logo_ex').show();
+                $('.logobox').css('background','rgba(255,255,255,0)');
+                $('.logo_red').addClass('fadeOutLeft2');
+                $('.logo_yel').addClass('fadeOutRight2'); */
+                //setTimeout(function(){
+                $('.logo_ex').hide();
+                $('.logo_right').addClass('logoRight');
+                //$('.logo_red').removeClass('fadeOutLeft2');
+                //$('.logo_yel').removeClass('fadeOutRight2');
+                //},1000)
+            } else {
+                $('.logo_right').removeClass('logoRight');
+            }
+            if (mySwiper.activeIndex == 3) {
+                setTimeout(function() {
+                    $('.develop0_time,.develop1_time,.develop2_time,.develop3_time').show();
+                    $('.develop0_time,.develop1_time,.develop2_time,.develop3_time').addClass('swing');
+                }, 500)
+
+            } else {
+                $('.develop0_time,.develop1_time,.develop2_time,.develop3_time').hide();
+                $('.develop0_time,.develop1_time,.develop2_time,.develop3_time').removeClass('swing');
+            }
+            if (mySwiper.activeIndex == 4) {
+                setTimeout(function() {
+                    $('.develop5_time,.develop6_time').show();
+                    $('.develop5_time,.develop6_time').addClass('swing');
+                    $('.return_btn').show();
+                }, 500)
+
+            } else {
+                $('.return_btn').hide();
+                $('.develop5_time,.develop6_time').hide();
+                $('.develop5_time,.develop6_time').removeClass('swing');
+            }
+        }
+    });
+    </script>
+    <script type="text/javascript">
+    document.onreadystatechange = loading;
+    var cc;
+
+    function loading() {
+        if (document.readyState == "complete") {
+
+            $(".loading").hide();
+            cc = setInterval("huanTu()", 150);
+            $('.swiper-container').hide();
+            //alert(bheight);
+            //ip4样式	 
+            var iheight = window.screen.height;
+            if (iheight == 480) {
+
+            } else if (iheight == 667 || iheight == 736) { //ip6样式	
+                $('.mess_wap').css('height', '100%');
+                $('.page_bg img').css('height', '100%');
+
+
+            };
+
+        }
+    }
+    </script>
+</body>
+
+</html>

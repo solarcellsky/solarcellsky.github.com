@@ -1,0 +1,172 @@
+#ls_hmtl{
+    width: 640px;
+    height: 960px;
+    overflow: hidden;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -320px;
+    margin-top: -480px;
+    z-index: 2;
+    pointer-events: none;
+
+}
+
+#ls_hmtl>div{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+   display: none;
+}
+#r_list,
+#ls_share,
+#GameDescription{
+    background-color: rgba(0, 0, 0, 0.7);
+    pointer-events: auto;
+}
+#ls_share{
+    background-image: url('../png/home/ls_share.png');
+}
+.GameDescription>#GameDescription,
+.r_list>#r_list,
+.ls_share>#ls_share{
+    display: block;
+}
+
+.r_listText{
+    width: 609px;
+    height: 768px;
+    background-image: url('../png/home/board_rank.png');
+    display: inline-table;
+    margin-top: 63px;
+    margin-left: 12px;
+}
+
+
+.game_d{
+    width: 522px;
+    height: 530px;
+    background-image: url('../png/home/board_ex.png');
+    display: inline-table;
+    margin-top: 200px;
+}
+.r_listText>.close,
+.game_d>div{
+    width: 70px;
+    height: 80px;
+    float: right;
+}
+#r_lt2{
+    white-space: nowrap;
+    overflow: hidden;
+    float: left;
+    width: 580px;
+    height: 560px;
+    margin-top: 60px;
+}
+.ls_scroll{
+    width: 100%;
+}
+
+.ls_audioDiv{
+    width: 50px;
+    height: 50px;
+    top: 80px;
+    right: 22px;
+    pointer-events: auto;
+}
+.r_list>div{
+    pointer-events: auto;
+}
+.ls_audioDiv>img{
+     width: 100%;
+     height: 100%;
+ }
+.user_text{
+    float: left;
+    width: 490px;
+    height: 90px;
+    margin-top: 20px;
+    margin-left: 45px;
+    background-color: #FCFABD;
+    border-radius: 30px;
+}
+.user_text>span,
+.user_text>img{
+    float: left;
+}
+
+
+.id_text{
+
+    height: 90px;
+    text-align: center;
+    width: 80px;
+    line-height: 90px;
+    font-size: 46px;
+    font-family: "微软雅黑";
+    font-weight: bold;
+    overflow: hidden;
+}
+
+.icon{
+    width: 66px;
+    height: 66px;
+    margin-top: 10px;
+    border-radius: 20px;
+    border: 3px solid #EBC103;
+}
+.name_text{
+    height: 90px;
+    text-align: center;
+    width: 150px;
+    line-height: 90px;
+    font-size: 25px;
+    font-family: "微软雅黑";
+    font-weight: bold;
+    margin-left: 5px;
+    color: #DC6F00;
+    overflow: hidden;
+}
+
+.textC_1{
+    color:#FD5100 ;
+}
+.textC_2{
+    color:#0DA797 ;
+}
+.textC_3{
+    color: #DC6E00;
+}
+.textC_s{
+    color:#8B5129 ;
+}
+.score_text{
+    height: 90px;
+    text-align: center;
+    width: 168px;
+    line-height: 90px;
+    font-size: 25px;
+    font-family: "微软雅黑";
+    font-weight: bold;
+    color: #DC6F00;
+    overflow: hidden;
+}
+.ls_p{
+    position: absolute;
+}
+
+.R_anims2{
+    -webkit-animation: R_anims2_anim 7s linear infinite ;
+}
+
+@-webkit-keyframes R_anims2_anim {
+    0%{
+        -webkit-transform:  rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform:  rotate(360deg);
+    }
+}

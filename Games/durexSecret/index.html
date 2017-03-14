@@ -1,0 +1,978 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, minimal-ui"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="blank"/>
+    <meta name="format-detection"content="telephone=no, email=no"/>
+    <title>杜杜的神秘花园</title>
+    <script type="text/javascript" src="js/lufylegend-1.9.9.simple.min.js"></script>
+    <script type="text/javascript" src="js/lufylegend.LoadingSample4-0.1.0.min.js"></script>
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script type="text/javascript">
+         var _smq = _smq || [];
+         _smq.push(['_setAccount', '2f37f79', new Date()]);
+         _smq.push(['pageview']);
+
+         (function () {
+             var sm = document.createElement('script'); sm.type = 'text/javascript'; sm.async = true;
+             sm.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdnmaster.com/sitemaster/collect.js';
+             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sm, s);
+         })();
+</script>
+</head>
+<body style="margin: 0px 0px 0px 0px; background-color: #f7f3eb;"> 
+    <div id="legend" style="font-size: 0px;"></div>
+    <div id="maskDiv" style="background:rgba(0,0,0,0.7);top:0;left:0; width: 100%; height: 100%; position: fixed; z-index: 100; display: none; text-align: center;">
+        <span id="tips" style="color: #fff; line-height: 500px; font-size: 16px;"></span>
+    </div>
+</body>
+</html>
+<script>
+    var wxtitle = "杜蕾斯的秘密花园！嘘！";
+    var wxdesc = "据说手活儿好的人运气都不会差";
+    var wxlink = "http://mobi.durex.com.cn/secret/m/index.aspx";
+    var wximgUrl = "http://mobi.durex.com.cn/secret/m/images/share.jpg";
+    window.addEventListener('load', onloadFun, false);
+
+    function onloadFun() {
+        $.ajax({
+            async: false,
+            url: 'http://mobi.durex.com.cn/WXApi/m/GetWXJsApiByAjax.aspx?urlStr=' + encodeURIComponent(window.location.href),
+            type: "GET",
+            dataType: 'jsonp',
+            jsonp: 'callback',
+            timeout: 5000,
+            beforeSend: function () {
+            },
+            success: function (json) {
+                wx.config({
+                    debug: false,
+                    appId: json["appId"],
+                    timestamp: json["timestamp"],
+                    nonceStr: json["nonceStr"],
+                    signature: json["signature"],
+                    jsApiList: [
+                            'checkJsApi',
+                            'onMenuShareTimeline',
+                            'onMenuShareAppMessage'
+                          ]
+                });
+
+                wx.ready(function () {
+                    reLoadWX();
+                });
+            },
+            complete: function (XMLHttpRequest, textStatus) {
+            },
+            error: function (xhr) {
+            }
+        });
+    }
+
+    function reLoadWX() {
+        wx.onMenuShareAppMessage({
+            title: wxtitle,
+            desc: wxdesc,
+            link: wxlink,
+            imgUrl: wximgUrl,
+            trigger: function (res) {
+            },
+            success: function (res) {
+            },
+            cancel: function (res) {
+            },
+            fail: function (res) {
+            }
+        });
+
+        wx.onMenuShareTimeline({
+            title: wxtitle + wxdesc,
+            link: wxlink,
+            imgUrl: wximgUrl,
+            trigger: function (res) {
+            },
+            success: function (res) {
+            },
+            cancel: function (res) {
+            },
+            fail: function (res) {
+            }
+        });
+    }
+    var imgData = [
+        { name: "bg", path: "./img/bg.jpg" },
+        { name: "bg2", path: "./img/bg2.jpg" },
+        { name: "bg3", path: "./img/bg3.jpg" },
+        { name: "p1_btn", path: "./img/p1_btn.png" },
+        { name: "p2_btn", path: "./img/p2_btn.png" },
+        { name: "p1_pen", path: "./img/p1_pen.png" },
+        { name: "p1_window", path: "./img/p1_window.png" },
+        { name: "theone", path: "./img/theone.png" },
+        { name: "line", path: "./img/line.png" },
+        { name: "share", path: "./img/share.png" },
+        { name: "p2_prev", path: "./img/p2_prev.png" },
+        { name: "p2_next", path: "./img/p2_next.png" },
+        { name: "thetwo", path: "./img/thetwo.png" },
+    ];
+    LGlobal.preventDefault = false;
+    var loadingLayer, backLayer, middleLayer, topLayer, ctrlzSprite, colorbox, tempLayer,page7,page8;
+    var nowColor = "#ff0033";
+    var rubber = false;
+    var historyarray = [];        //历史数组
+    var ownhistory = [];          //当前目标历史记录
+    var check;                  //是否涂过
+    var picnum=1;               //第几张图片索引
+
+    init(20, "legend", 640, 1136, main);
+    function main() {
+        if (LGlobal.mobile) {
+            if (window.innerHeight / window.innerWidth > 1.6) {
+                LGlobal.width = 640;
+                LGlobal.height = 640 * window.innerHeight / window.innerWidth;
+                LGlobal.canvasObj.width = LGlobal.width;
+                LGlobal.canvasObj.height = LGlobal.height;
+            }
+        }
+        LGlobal.align = LStageAlign.TOP_MIDDLE;
+        LGlobal.stageScale = LStageScaleMode.SHOW_ALL;
+        LSystem.screen(LStage.FULL_SCREEN);
+
+        loadingLayer = new LoadingSample4(LGlobal.height / 2, "#f8f3ec", "#4b401f");
+        addChild(loadingLayer);
+        LLoadManage.load(imgData,function (progress) {
+            loadingLayer.setProgress(progress);
+        }, gameInit);
+    }
+    function gameInit(result) {
+        imglist = result;
+        removeChild(loadingLayer);
+        loadingLayer = null;
+
+        backLayer = new LSprite();
+        addChild(backLayer);
+
+        lastLayer = new LSprite();
+        addChild(lastLayer);
+
+        tempLayer = new LSprite();
+        addChild(tempLayer);
+
+        bgLayer = new LSprite();
+        addChild(bgLayer);
+
+        middleLayer = new LSprite();
+        addChild(middleLayer);
+
+        secondLayer = new LSprite();
+        addChild(secondLayer);
+
+        topLayer = new LSprite();
+        addChild(topLayer);
+
+        page8 = new LSprite();
+
+        page7 = new LSprite();
+
+
+        //addChild(new FPS());
+
+        var page2 = new LSprite();
+        topLayer.addChild(page2);
+
+        var page1 = new LSprite();
+        topLayer.addChild(page1);
+
+
+        // ----------------------------首页---------------------------------------------------------------
+
+    var bgLBitmap = new LBitmap(new LBitmapData(imglist["bg"]));
+    bgLBitmap.x = 0;
+    bgLBitmap.y = 0;
+    bgLBitmap.width =LGlobal.width;
+    bgLBitmap.height =LGlobal.height;
+    page1.addChild(bgLBitmap);
+
+    var p1_penLBitmap = new LBitmap(new LBitmapData(imglist["p1_pen"]));
+    p1_penLBitmap.x = 0;
+    p1_penLBitmap.y = 817;
+    p1_penLBitmap.alpha=0;
+    page1.addChild(p1_penLBitmap);
+
+    var p1_windowLBitmap = new MiddleBitmap(new LBitmapData(imglist["p1_window"]));
+    p1_windowLBitmap.x = 320;
+    p1_windowLBitmap.y = 525;
+    p1_windowLBitmap.alpha = 0;
+    p1_windowLBitmap.scaleX = 0;
+    p1_windowLBitmap.scaleY = 0;
+    page1.addChild(p1_windowLBitmap);
+
+    var p1_btnSprite = new LSprite();
+    p1_btnSprite.addChild(new LBitmap(new LBitmapData(imglist["p1_btn"])));
+    p1_btnSprite.x = 223; //85
+    p1_btnSprite.y = 814;
+    p1_btnSprite.alpha = 0;
+    page1.addChild(p1_btnSprite);
+
+    LTweenLite.to(p1_windowLBitmap, 1.2, { 
+        scaleX: 1.1,
+        scaleY: 1.1,
+        alpha: 1, 
+        ease: LEasing.Strong.easeInOut
+    }).to(p1_windowLBitmap,0.2,{
+        scaleX: 1,
+        scaleY: 1,
+        alpha: 1,
+        ease: LEasing.None.easeOut
+    }).to(p1_btnSprite,0.7,{
+        delay:0.7,
+        alpha:1,
+        onComplete:function(){
+            p1_btnSprite.addEventListener(LMouseEvent.MOUSE_UP, function () {
+                setTimeout(function(){
+                    s2();
+                },200)
+                        
+                LTweenLite.to(page1,0.3,{
+                    alpha:0,
+                    onComplete:function(){
+                        _smq.push(['custom','秘密花园','涂鸦页','PV']);
+                        page1.removeAllChild();
+                    }
+                })
+            });
+        }
+    })
+    LTweenLite.to(p1_penLBitmap,0.7,{
+        delay:1.5,
+        alpha:1,
+    })
+        // // ------------------------------------第二页----------------------------------------------------
+        var bg2LBitmap = new LBitmap(new LBitmapData(imglist["bg2"]));
+        bg2LBitmap.x = 0;
+        bg2LBitmap.y = 0;
+        bg2LBitmap.width = LGlobal.width;
+        bg2LBitmap.height = LGlobal.height;
+        backLayer.addChild(bg2LBitmap);
+
+        var theone = new LSprite();
+        theone.addChild(new LBitmap(new LBitmapData(imglist["theone"])));
+        theone.x = 51;
+        theone.y = 129;
+
+        var thetwo = new LSprite();
+        thetwo.addChild(new LBitmap(new LBitmapData(imglist["thetwo"])));
+        thetwo.x = 51;
+        thetwo.y = 129;
+
+        // var page5 = new LSprite();
+        // middleLayer.addChild(page5);
+
+        var page4 = new LSprite();
+
+        var page3 = new LSprite();
+
+
+    // --------------first point area----------------------------------------------------------------------
+function s1(){
+    var sharp1 = new shapeSprite();
+    sharp1.vvl = [[113,231],[131,235],[165,230],[192,222],[208,208],[211,184],[200,157],[179,170],[155,188],[133,206]];
+    sharp1.graphics.drawVertices(0, "#ff0000", sharp1.vvl);
+    page3.addChild(sharp1);
+    sharp1.name = "asharp1"
+    
+    var sharp2 = new shapeSprite();
+    sharp2.vvl = [[191,222],[208,208],[211,184],[200,157],[228,145],[265,135],[298,129],[288,162],[276,186],[262,201],[250,212],[234,224],[214,231],[211,233],[194,233]]
+    sharp2.graphics.drawVertices(0, "#ff0000", sharp2.vvl);
+    page3.addChild(sharp2);
+    sharp2.name = "asharp2"
+    
+    var sharp3 = new shapeSprite();
+    sharp3.vvl = [[192,222],[192,228],[194,231],[199,242],[194,254],[183,272],[170,285],[156,297],[139,305],[102,318],[66,319],[76,288],[94,257],[113,229],[146,232],[177,229]]
+    sharp3.graphics.drawVertices(0, "#ff0000", sharp3.vvl);
+    page3.addChild(sharp3);
+    sharp3.name = "asharp3"
+    
+    var sharp4 = new shapeSprite();
+    sharp4.vvl = [[199,242],[194,254],[183,272],[170,285],[156,297],[139,305],[102,318],[66,319],[57,348],[53,376],[54,412],[58,440],[62,466],[73,502],[98,496],[115,494],[131,493],[140,487],[149,468],[150,450],[148,445],[165,439],[182,424],[193,405],[198,378],[198,358],[209,343],[217,331],[219,314],[218,284]]
+    sharp4.graphics.drawVertices(0, "#ff0000", sharp4.vvl);
+    page3.addChild(sharp4);
+    sharp4.name = "asharp4"
+    
+    var sharp5 = new shapeSprite();
+    sharp5.vvl = [[192,232],[221,230],[244,218],[264,200],[278,179],[288,162],[295,140],[297,132],[327,130],[365,135],[377,150],[386,160],[379,171],[363,198],[340,233],[322,233],[303,237],[281,246],[258,270],[250,280],[237,281],[215,275]]
+    sharp5.graphics.drawVertices(0, "#ff0000", sharp5.vvl);
+    page3.addChild(sharp5);
+    sharp5.name = "asharp5"
+    
+    var sharp6 = new shapeSprite();
+    sharp6.vvl = [[73,502],[98,496],[115,494],[131,493],[140,487],[149,468],[150,450],[148,445],[165,439],[182,424],[193,405],[198,378],[198,358],[209,343],[217,333],[234,322],[253,313],[270,311],[258,319],[252,327],[245,342],[239,358],[236,378],[239,394],[245,411],[248,418],[251,439],[249,463],[243,477],[235,489],[220,500],[200,507],[197,517],[192,526],[184,534],[175,537],[161,540],[150,549],[136,554],[122,557],[106,556]]
+    sharp6.graphics.drawVertices(0, "#ff0000", sharp6.vvl);
+    page3.addChild(sharp6);
+    sharp6.name = "asharp6"
+    
+    var sharp7 = new shapeSprite();
+    sharp7.vvl = [[219,276],[217,333],[234,322],[249,313],[250,297],[257,278],[239,279]]
+    sharp7.graphics.drawVertices(0, "#ff0000", sharp7.vvl);
+    page3.addChild(sharp7);
+    sharp7.name = "asharp7"
+    
+    var sharp21 = new shapeSprite();
+    sharp21.vvl = [[140,591],[167,612],[183,610],[209,604],[230,595],[248,586],[263,577],[278,563],[296,539],[313,512],[324,487],[331,468],[313,459],[295,449],[275,432],[250,420],[251,439],[249,463],[243,477],[235,489],[220,500],[200,507],[197,517],[192,526],[184,534],[175,537],[161,540],[150,549],[136,554],[122,557],[106,556]]
+    sharp21.graphics.drawVertices(0, "#ff0000", sharp21.vvl);
+    page3.addChild(sharp21);
+    sharp21.name = "asharp21"
+
+    var sharp20 = new shapeSprite();
+    sharp20.vvl = [[575,479],[567,503],[546,534],[535,551],[517,579],[516,579],[494,568],[466,573],[444,584],[444,565],[445,548],[447,532],[445,516],[444,508],[474,494],[472,476],[484,461],[490,454],[495,449],[495,444],[510,435],[531,433],[542,441],[558,451],[562,461],[572,477]];
+    sharp20.graphics.drawVertices(0, "#ff0000", sharp20.vvl);
+    page3.addChild(sharp20);
+    sharp20.name = "asharp20"
+
+    var sharp19 = new shapeSprite();
+        sharp19.vvl = [[408,527],[409,501],[414,480],[424,464],[418,457],[447,431],[470,399],[527,400],[552,407],[567,420],[580,441],[577,472],[572,477],[562,461],[558,451],[542,441],[531,433],[510,435],[495,444],[495,449],[490,454],[484,461],[472,476],[474,494],[444,508]];
+        sharp19.graphics.drawVertices(0, "#ff0000", sharp19.vvl);
+        page3.addChild(sharp19);
+        sharp19.name = "asharp19"
+
+    var sharp18 = new shapeSprite();
+        sharp18.vvl = [[470,399],[527,400],[552,407],[567,420],[580,441],[588,393],[585,358],[576,323],[566,290],[551,260],[535,236],[514,247],[511,276],[507,308],[500,337],[490,363],[481,380],[470,399]];
+        sharp18.graphics.drawVertices(0, "#ff0000", sharp18.vvl);
+        page3.addChild(sharp18);
+        sharp18.name = "asharp18"
+        
+    var sharp17 = new shapeSprite();
+        sharp17.vvl = [[535,236],[514,247],[511,276],[507,308],[500,337],[490,363],[481,380],[470,399],[470,399],[444,430],[433,400],[426,377],[426,345],[428,330],[439,324],[440,305],[456,296],[455,288],[469,276],[480,257],[477,231],[498,221],[498,197],[515,213],[525,224]];
+        sharp17.graphics.drawVertices(0, "#ff0000", sharp17.vvl);
+        page3.addChild(sharp17);
+        sharp17.name = "asharp17"
+        
+    var sharp16 = new shapeSprite();
+        sharp16.vvl = [[477,231],[498,221],[498,197],[475,179],[458,167],[430,152],[397,139],[368,134],[380,156],[400,170],[433,181],[450,192],[465,214],[470,229]];
+        sharp16.graphics.drawVertices(0, "#ff0000", sharp16.vvl);
+        page3.addChild(sharp16);
+        sharp16.name = "asharp16"
+            
+    var sharp15 = new shapeSprite();
+        sharp15.vvl = [[380,156],[390,170],[430,177],[450,192],[465,214],[470,229],[477,231],[480,256],[470,276],[455,287],[455,287],[454,299],[439,306],[424,292],[398,302],[387,285],[367,275],[344,271],[325,276],[315,282],[289,302],[250,309],[253,292],[256,274],[269,255],[288,238],[304,233],[324,229],[341,228],[341,228],[361,207],[372,190],[379,173],[388,156]];
+        sharp15.graphics.drawVertices(0, "#ff0000", sharp15.vvl);
+        page3.addChild(sharp15);
+        sharp15.name = "asharp15"
+
+    var sharp14 = new shapeSprite();
+        sharp14.vvl = [[380,156],[400,170],[430,177],[450,192],[465,214],[470,229],[477,231],[480,256],[470,276],[455,287],[455,287],[454,299],[439,306],[414,298],[398,308],[385,290],[367,278],[344,278],[325,278],[315,285],[289,305],[250,315],[250,298],[256,277],[269,258],[288,238],[304,233],[324,229],[341,228],[341,228],[361,207],[372,190],[379,173],[388,156]];
+        sharp14.graphics.drawVertices(0, "#ff0000", sharp14.vvl);
+        page3.addChild(sharp14);
+        sharp14.name = "asharp14"
+        
+    var sharp13 = new shapeSprite();
+        sharp13.vvl = [[439,306],[414,298],[398,308],[385,290],[367,278],[344,278],[325,278],[315,285],[289,305],[305,306],[321,315],[340,342],[340,363],[355,358],[360,367],[355,381],[354,382],[362,385],[370,397],[362,405],[383,400],[384,412],[393,402],[397,394],[402,383],[405,370],[408,352],[407,338],[429,334],[438,327],[440,319],[438,307]];
+        sharp13.graphics.drawVertices(0, "#ff0000", sharp13.vvl);
+        page3.addChild(sharp13);
+        sharp13.name = "asharp13"
+
+    var sharp12 = new shapeSprite();
+        sharp12.vvl = [[289,305],[305,306],[321,315],[340,342],[340,363],[355,358],[360,367],[355,381],[354,382],[362,385],[370,397],[362,405],[383,400],[384,412],[376,421],[352,431],[357,416],[357,404],[347,403],[348,388],[340,385],[335,379],[330,367],[306,369],[290,358],[280,344],[280,325],[291,303]];
+        sharp12.graphics.drawVertices(0, "#ff0000", sharp12.vvl);
+        page3.addChild(sharp12);
+        sharp12.name = "asharp12"
+
+    var sharp11 = new shapeSprite();
+        sharp11.vvl = [[352,431],[357,416],[357,404],[347,403],[348,388],[340,385],[335,379],[330,367],[306,369],[290,358],[280,344],[280,325],[291,303],[267,311],[253,321],[245.336],[238,353],[238,382],[240,405],[249,420],[272,429],[303,435],[326,435],[351,431]];
+        sharp11.graphics.drawVertices(0, "#ff0000", sharp11.vvl);
+        page3.addChild(sharp11);
+        sharp11.name = "asharp11"
+
+    var sharp10 = new shapeSprite();
+        sharp10.vvl = [[444,430],[433,400],[426,377],[426,345],[428,330],
+    [408,338],[425,334],[407,338],[404,352],[405,370],[402,383],[397,394],[393,402],[384,412],[373,424],[351,431],[326,435],[303,435],[272,429],[297,450],[316,460],[332,466],[353,470],[367,470],[386,469],[404,465],[423,454],[434,444]];
+        sharp10.graphics.drawVertices(0, "#ff0000", sharp10.vvl);
+        page3.addChild(sharp10);
+        sharp10.name = "asharp10"
+
+    var sharp9 = new shapeSprite();
+        sharp9.vvl = [[517,579],[516,579],[494,568],[466,573],[444,584],[444,565],[445,548],[447,532],[445,516],[444,508],[410,525],[374,547],[353,571],[345,585],
+    [345,602],[352,620],[365,634],[380,647],[391,653],[410,646],[425,642],[443,633],[463,622]];
+        sharp9.graphics.drawVertices(0, "#ff0000", sharp9.vvl);
+        page3.addChild(sharp9);
+        sharp9.name = "asharp9"
+
+
+    var sharp8 = new shapeSprite();
+        sharp8.vvl = [[410,525],[374,547],[353,571],[345,585],
+    [345,602],[352,620],[365,634],[380,647],[391,653],[371,658],[344,661],[322,662],[281,659],[250,653],[220,642],[192,630],[167,612],[195,607],[216,601],[236,594],[249,586],[263,576],[275,565],[294,544],[307,524],[316,500],[322,488],[330,466],[362,471],[381,470],[420,457],[429,464],[415,459],[421,465],[410,486]];
+        sharp8.graphics.drawVertices(0, "#ff0000", sharp8.vvl);
+        page3.addChild(sharp8);
+        sharp8.name = "asharp8"
+    bgLayer.addChild(theone)
+    middleLayer.addChild(page3)
+    tempLayer.addChild(page7)
+}
+// s1()
+// ------------------------------------------------------------------------------------
+// second point area----------------------------------------------------------------------
+function s2(){
+    var sharps1 = new shapeSprites();
+    sharps1.vvl = [[166,211],[183,210],[227,220],[251,229],[266,238],[267,245],[259,270],[250,281],[245,283],[235,282],[186,270],[160,262],[152,257],[143,243],[142,233],[153,217]];
+    sharps1.graphics.drawVertices(0, "#ff0000", sharps1.vvl);
+    page4.addChild(sharps1);
+    sharps1.name = "asharps1";
+    
+    var sharps2 = new shapeSprites();
+    sharps2.vvl = [[225,191],[229,190],[231,193],[264,171],[294,156],[305,157],[308,169],[307,171],[287,180],[231,193],[233,197],[228,201],[222,196]];
+    sharps2.graphics.drawVertices(0, "#ff0000", sharps2.vvl);
+    page4.addChild(sharps2);
+    sharps2.name = "asharps2";
+    
+    var sharps3 = new shapeSprites();
+    sharps3.vvl = [[280,210],[297,210],[307,203],[319,200],[329,184],[339,178],[357,175],[370,175],[394,181],[400,172],[388,173],[378,164],[371,158],[387,154],[398,158],[400,172],[400,167],[412,165],[421,168],[431,175],[421,174],[410,180],[405,177],[400,172],[397,184],[415,187],[436,197],[449,207],[453,217],[448,230],[453,247],[461,263],[450,259],[442,250],[443,268],[426,255],[415,246],[411,262],[397,254],[396,244],[387,244],[381,259],[373,254],[372,241],[369,237],[356,241],[339,254],[339,238],[343,230],[327,229],[316,234],[306,237],[316,219],[312,216],[291,220],[275,210]];
+    sharps3.graphics.drawVertices(0, "#ff0000", sharps3.vvl);
+    page4.addChild(sharps3);
+    sharps3.name = "asharps3";
+    
+    var sharps4 = new shapeSprites();
+    sharps4.vvl = [[307,273],[322,273],[322,278],[330,278],[331,282],[347,279],[349,276],[365,276],[365,279],[373,279],[374,282],[376,281],[379,277],[404,278],[404,274],[414,274],[414,278],[418,276],[418,272],[428,272],[431,287],[428,287],[428,294],[424,294],[424,302],[427,302],[427,306],[424,306],[424,319],[421,322],[422,332],[410,331],[412,317],[411,310],[395,314],[382,315],[382,318],[365,318],[365,313],[361,318],[353,318],[353,314],[350,314],[350,318],[337,318],[334,316],[323,316],[323,323],[313,323],[310,304],[308,304],[308,293],[310,293]];
+    sharps4.graphics.drawVertices(0, "#ff0000", sharps4.vvl);
+    page4.addChild(sharps4);
+    sharps4.name = "asharps4";
+    
+    var sharps5 = new shapeSprites();
+    sharps5.vvl = [[217,298],[264,300],[293,306],[291,322],[281,320],[269,327],[262,341],[248,339],[246,327],[241,321],[218,310]];
+    sharps5.graphics.drawVertices(0, "#ff0000", sharps5.vvl);
+    page4.addChild(sharps5);
+    sharps5.name = "asharps5";
+    
+    var sharps6 = new shapeSprites();
+    sharps6.vvl = [[173,316],[184,315],[194,329],[204,321],[216,321],[222,335],[212,344],[200,342],[194,329],[184,339],[168,335],[164,326]];
+    sharps6.graphics.drawVertices(0, "#ff0000", sharps6.vvl);
+    page4.addChild(sharps6);
+    sharps6.name = "asharps6";
+    
+    var sharps7 = new shapeSprites();
+    sharps7.vvl = [[112,344],[133,348],[151,397],[168,398],[199,362],[226,367],[240,424],[228,434],[169,428],[166,410],[145,410],[135,421],[77,412],[70,388]];
+    sharps7.graphics.drawVertices(0, "#ff0000", sharps7.vvl);
+    page4.addChild(sharps7);
+    sharps7.name = "asharps7";
+    
+    var sharps8 = new shapeSprites();
+    sharps8.vvl = [[259,379],[266,376],[281,391],[290,390],[292,378],[297,376],[306,368],[300,351],[308,341],[319,348],[317,356],[306,368],[297,376],[311,383],[323,389],[329,395],[357,445],[362,450],[363,455],[360,459],[336,472],[320,477],[303,471],[308,465],[305,453],[287,410],[290,390],[281,391],[263,387]];
+    sharps8.graphics.drawVertices(0, "#ff0000", sharps8.vvl);
+    page4.addChild(sharps8);
+    sharps8.name = "asharps8";
+    
+    var sharps9 = new shapeSprites();
+    sharps9.vvl = [[178,558],[192,540],[214,531],[251,530],[293,540],[355,566],[361,573],[348,621],[334,635],[318,638],[265,625],[200,607],[183,589],[176,580],[174,564]];
+    sharps9.graphics.drawVertices(0, "#ff0000", sharps9.vvl);
+    page4.addChild(sharps9);
+    sharps9.name = "asharps9";
+    
+    var sharps10 = new shapeSprites();
+    sharps10.vvl = [[383,467],[403,467],[429,476],[463,500],[457,528],[433,529],[420,509],[402,496],[390,491],[380,480],[381,467]];
+    sharps10.graphics.drawVertices(0, "#ff0000", sharps10.vvl);
+    page4.addChild(sharps10);
+    sharps10.name = "asharps10";
+    
+    var sharps11 = new shapeSprites();
+    sharps11.vvl = [[457,318],[475,355],[476,370],[493,372],[492,357],[496,339],[505,325],[528,344],[534,374],[514,382],[499,379],[493,372],[476,370],[465,380],[440,380],[427,369],[425,352],[438,335]];
+    sharps11.graphics.drawVertices(0, "#ff0000", sharps11.vvl);
+    page4.addChild(sharps11);
+    sharps11.name = "asharps11";
+    
+    var sharps12 = new shapeSprites();
+    sharps12.vvl = [[404,395],[422,395],[424,403],[443,397],[455,403],[460,400],[466,405],[476,402],[476,397],[484,395],[485,420],[488,426],[494,422],[495,397],[501,398],[502,421],[496,436],[486,435],[478,427],[475,406],[476,402],[466,405],[467,414],[450,432],[436,416],[432,405],[443,397],[424,403],[420,403],[417,419],[419,436],[425,441],[423,443],[411,443],[408,443],[412,435],[411,404],[402,401]];
+    sharps12.graphics.drawVertices(0, "#ff0000", sharps12.vvl);
+    page4.addChild(sharps12);
+    sharps12.name = "asharps12";
+    
+    var sharps13 = new shapeSprites();
+    sharps13.vvl = [[541,383],[562,407],[561,423],[553,423],[563,428],[564,442],[563,442],[559,489],[548,493],[532,489],[533,443],[528,443],[529,432],[534,425],[531,414],[535,407],[542,396]];
+    sharps13.graphics.drawVertices(0, "#ff0000", sharps13.vvl);
+    page4.addChild(sharps13);
+    sharps13.name = "asharps13";
+    
+    var sharps14 = new shapeSprites();
+    sharps14.vvl = [[158,479],[177,452],[202,470],[194,473],[186,467],[183,485],[196,491],[199,499],[196,510],[179,513],[168,505],[169,493],[175,488],[172,467],[164,478]];
+    sharps14.graphics.drawVertices(0, "#ff0000", sharps14.vvl);
+    page4.addChild(sharps14);
+    sharps14.name = "asharps14";
+    
+    var sharps15 = new shapeSprites();
+    sharps15.vvl = [[322,509],[335,505],[339,510],[344,494],[354,484],[365,487],[373,511],[371,515],[357,519],[346,520],[348,528],[336,536],[332,529],[316,543],[309,527],[328,517]];
+    sharps15.graphics.drawVertices(0, "#ff0000", sharps15.vvl);
+    page4.addChild(sharps15);
+    sharps15.name = "asharps15";
+    
+    var sharps16 = new shapeSpritess();
+    sharps16.vvl = [[148,194],[170,177],[190,164],[235,143],[282,133],[328,130],[380,137],[429,154],[471,179],[511,211],[540,247],[567,300],[578,338],[585,388],[583,430],[571,481],[552,524],[532,556],[506,587],[459,623],[421,643],[384,655],[339,661],[282,659],[230,646],[190,628],[153,603],[117,567],[94,535],[76,504],[65,473],[53,424],[54,372],[62,330],[86,269],[121,221]];
+    sharps16.graphics.drawVertices(0, "#ff0000", sharps16.vvl);
+    sharps16.name = "asharps16";
+    
+    var sharps17 = new shapeSprites();
+    sharps17.vvl = [[463,500],[479,500],[496,511],[506,530],[512,550],[511,564],[500,544],[484,530],[492,553],[493,581],[492,585],[473,589],[468,584],[462,564],[451,546],[451,568],[459,595],[456,602],[441,594],[427,573],[422,553],[433,529],[457,528]];
+    sharps17.graphics.drawVertices(0, "#ff0000", sharps17.vvl);
+    page4.addChild(sharps17);
+    sharps17.name = "asharps17";
+
+    bgLayer.addChild(thetwo)
+    middleLayer.addChild(page4)
+    tempLayer.addChild(page8)
+    bgLayer.addChild(sharps16);
+}
+// ------------------------------------------------------------------------------------------
+        // 上一页
+        var p2_prevSprite = new LSprite();
+        p2_prevSprite.addChild(new LBitmap(new LBitmapData(imglist["p2_prev"])));
+        p2_prevSprite.x = 10;
+        p2_prevSprite.y = 233;
+        p2_prevSprite.scaleX = 1.8;
+        p2_prevSprite.scaleY = 1.8;
+        page2.addChild(p2_prevSprite)
+        // p2_prevSprite.graphics.drawRect(1, "#000", [0, -500, 30, 100]);
+        p2_prevSprite.addEventListener(LMouseEvent.MOUSE_DOWN, function () {
+            picnum--;
+            if(picnum<0){picnum=1;};
+            lastLayer.removeAllChild();
+            bgLayer.removeAllChild();
+            tempLayer.removeAllChild()
+            middleLayer.removeAllChild()
+            historyarray = [];
+            ctrlzSprite.alpha = 0.4;
+            if(picnum===0){
+                s1()
+            }else if(picnum===1){
+                s2()
+            }
+        })
+
+        // 下一页
+        var p2_nextSprite = new LSprite();
+        p2_nextSprite.addChild(new LBitmap(new LBitmapData(imglist["p2_next"])));
+        p2_nextSprite.x = 565;
+        p2_nextSprite.y = 233;
+        p2_nextSprite.scaleX = 1.8;
+        p2_nextSprite.scaleY = 1.8;
+        page2.addChild(p2_nextSprite)
+        p2_nextSprite.addEventListener(LMouseEvent.MOUSE_DOWN, function () {
+            picnum++;
+            if(picnum>1){picnum=0;};
+            lastLayer.removeAllChild();
+            bgLayer.removeAllChild();
+            tempLayer.removeAllChild()
+            middleLayer.removeAllChild()
+            historyarray = [];
+            ctrlzSprite.alpha = 0.4;
+            if(picnum===0){
+                s1()
+            }else if(picnum===1){
+                s2()
+            }
+        })
+
+        LTweenLite.to(p2_prevSprite, 0.7, {
+            alpha: 1,
+            loop: true
+        }).to(p2_prevSprite, 0.7, {
+            alpha: 0.2,
+            loop: true
+        });
+
+        LTweenLite.to(p2_nextSprite, 0.7, {
+            alpha: 1,
+            loop: true
+        }).to(p2_nextSprite, 0.7, {
+            alpha: 0.2,
+            loop: true
+        });
+
+        // 橡皮擦
+        var rubberSprite = new LSprite();
+        rubberSprite.x = 0;
+        rubberSprite.y = 543;
+        rubberSprite.graphics.drawRect(0, "#000", [0, 0, 92, 92]);
+        page2.addChild(rubberSprite)
+        rubberSprite.addEventListener(LMouseEvent.MOUSE_DOWN, function () {
+            rubber = true;
+            for (var i = 0; i < 12; i++) {
+                colorbox.childList[i].childList[0].alpha = 0;
+            }
+        })
+
+        // 撤销
+        ctrlzSprite = new LSprite();
+        ctrlzSprite.addChild(new LBitmap(new LBitmapData(imglist["p2_btn"])));
+        ctrlzSprite.x = 548;
+        ctrlzSprite.y = 543;
+        ctrlzSprite.alpha = 0.4;
+        page2.addChild(ctrlzSprite)
+        ctrlzSprite.addEventListener(LMouseEvent.MOUSE_DOWN, function () {
+            if (historyarray.length) {
+                var deleteone = historyarray[historyarray.length - 1];
+                deleteone.self.backSharp.graphics.clear();
+                historyarray.pop()
+                if (historyarray.length === 0) {
+                    ctrlzSprite.alpha = 0.4;
+                }
+                for (var i = historyarray.length - 1; i >= 0; i--) {
+                    if (historyarray[i].arrname.indexOf(deleteone.arrname) != -1) {
+                        var historyColor = historyarray[i].nowColor;
+                        historyarray[i].self.backSharp.graphics.drawVertices(0, "#ff0000", historyarray[i].self.vvl, true, historyColor);
+                        break;
+                    }
+                }
+            }
+        });
+        // // ------------------------------------颜料版------------------------------------------------------
+        colorbox = new LSprite();
+        page2.addChild(colorbox)
+
+        var redSprite = new colorSprite();
+        redSprite.x = 5;
+        redSprite.y = 663;
+        redSprite.tcolor = "#ff0033";
+        redSprite.graphics.drawRect(0, "#000", [0, 0, 100, 100]);
+        colorbox.addChild(redSprite);
+        var line = new LBitmap(new LBitmapData(imglist["line"]));
+        line.alpha = 1;
+        redSprite.addChild(line);
+
+        var pinkSprite = new colorSprite();
+        pinkSprite.x = 112;
+        pinkSprite.y = 663;
+        pinkSprite.tcolor = "#eb6276";
+        pinkSprite.graphics.drawRect(0, "#000", [0, 0, 100, 100]);
+        colorbox.addChild(pinkSprite);
+
+        var blueSprite = new colorSprite();
+        blueSprite.x = 221;
+        blueSprite.y = 663;
+        blueSprite.tcolor = "#6371b4";
+        blueSprite.graphics.drawRect(0, "#000", [0, 0, 100, 100]);
+        colorbox.addChild(blueSprite);
+
+        var brownSprite = new colorSprite();
+        brownSprite.x = 327;
+        brownSprite.y = 663;
+        brownSprite.tcolor = "#e95515";
+        brownSprite.graphics.drawRect(0, "#000", [0, 0, 100, 100]);
+        colorbox.addChild(brownSprite);
+
+        var heSprite = new colorSprite();
+        heSprite.x = 430;
+        heSprite.y = 663;
+        heSprite.tcolor = "#9fb1d9";
+        heSprite.graphics.drawRect(0, "#000", [0, 0, 100, 100]);
+        colorbox.addChild(heSprite);
+
+        var shitSprite = new colorSprite();
+        shitSprite.x = 536;
+        shitSprite.y = 663;
+        shitSprite.tcolor = "#663300";
+        shitSprite.graphics.drawRect(0, "#000", [0, 0, 100, 100]);
+        colorbox.addChild(shitSprite);
+
+        var whiteSprite = new colorSprite();
+        whiteSprite.x = 5;
+        whiteSprite.y = 765;
+        whiteSprite.tcolor = "#fffef1";
+        whiteSprite.graphics.drawRect(0, "#000", [0, 0, 100, 100]);
+        colorbox.addChild(whiteSprite);
+
+        var blackSprite = new colorSprite();
+        blackSprite.x = 112;
+        blackSprite.y = 765;
+        blackSprite.tcolor = "#000";
+        blackSprite.graphics.drawRect(0, "#000", [0, 0, 100, 100]);
+        colorbox.addChild(blackSprite);
+
+        var skySprite = new colorSprite();
+        skySprite.x = 221;
+        skySprite.y = 765;
+        skySprite.tcolor = "#5fc2d0";
+        skySprite.graphics.drawRect(0, "#000", [0, 0, 100, 100]);
+        colorbox.addChild(skySprite);
+
+        var greenSprite = new colorSprite();
+        greenSprite.x = 327;
+        greenSprite.y = 765;
+        greenSprite.tcolor = "#5e8550";
+        greenSprite.graphics.drawRect(0, "#000", [0, 0, 100, 100]);
+        colorbox.addChild(greenSprite);
+
+        var yellowSprite = new colorSprite();
+        yellowSprite.x = 430;
+        yellowSprite.y = 765;
+        yellowSprite.tcolor = "#f9eb07";
+        yellowSprite.graphics.drawRect(0, "#000", [0, 0, 100, 100]);
+        colorbox.addChild(yellowSprite);
+
+        var purpleSprite = new colorSprite();
+        purpleSprite.x = 536;
+        purpleSprite.y = 765;
+        purpleSprite.tcolor = "#de3f7d";
+        purpleSprite.graphics.drawRect(0, "#000", [0, 0, 100, 100]);
+        colorbox.addChild(purpleSprite);
+
+        var p2_doneSprite = new LSprite();
+        p2_doneSprite.x = 59;
+        p2_doneSprite.y = 919;
+        p2_doneSprite.tcolor = "#ff66cc";
+        p2_doneSprite.graphics.drawRect(0, "#000", [0, 0, 100, 50]);
+        secondLayer.addChild(p2_doneSprite);
+        p2_doneSprite.addEventListener(LMouseEvent.MOUSE_DOWN, function () {
+             $("#tips").html("玩命上传中,请稍候...");
+             $("#maskDiv").show();
+             var image = LGlobal.canvasObj.toDataURL("image/png");
+             $.post('Ajax.aspx?action=SaveImage&t=' + Math.random(),
+             {
+                 imgdata: image
+             },
+             function (data) {
+                 isok = true;
+                 if (data == "-1") {
+                     alert("生成失败，请重试");
+                     $("#maskDiv").hide();
+                 }
+                 else {
+                    var loader = new LLoader();
+                    loader.load("./pic/" + data, "bitmapData");
+                    loader.addEventListener(LEvent.COMPLETE, showResult);
+
+                    wxtitle = "据说我色感特别好！不信你看！";
+                    wxdesc = "杜杜的秘密花园，嘘！";
+                    wxlink = "http://mobi.durex.com.cn/secret/m/share.aspx?pic=" + data;
+                    wximgUrl = "http://mobi.durex.com.cn/secret/m/pic/" + data;
+                    reLoadWX();
+                 }
+             });
+        });
+
+        var p2_replaySprite = new LSprite();
+        p2_replaySprite.x = 514;
+        p2_replaySprite.y = 941;
+        p2_replaySprite.tcolor = "#ff66cc";
+        p2_replaySprite.graphics.drawRect(0, "#000", [0, 0, 100, 50]);
+        secondLayer.addChild(p2_replaySprite);
+        p2_replaySprite.addEventListener(LMouseEvent.MOUSE_DOWN, function () {
+            for (var i = 0; i < tempLayer.childList[0].childList.length; i++) {
+                tempLayer.childList[0].childList[i].graphics.clear();
+            }
+            // console.log(lastLayer)
+            if(lastLayer.childList.length){
+                lastLayer.childList[0].graphics.clear();
+            }
+            historyarray = [];
+            ctrlzSprite.alpha = 0.4;
+        })
+
+        var p2_othersSprite = new LSprite();
+        p2_othersSprite.x = 255;
+        p2_othersSprite.y = 995;
+        p2_othersSprite.graphics.drawRect(0, "#000", [0, 0, 130, 50]);
+        secondLayer.addChild(p2_othersSprite);
+        p2_othersSprite.addEventListener(LMouseEvent.MOUSE_DOWN,function(){
+            window.location.href="MorePics.html"
+        })
+
+        var buySprite = new LSprite();
+        buySprite.x = 189;
+        buySprite.y = 883;
+        buySprite.graphics.drawRect(0, "#000", [0, 0, 270, 100]);
+        secondLayer.addChild(buySprite);
+        buySprite.addEventListener(LMouseEvent.MOUSE_DOWN,function(){
+            window.location.href="http://wap.koudaitong.com/v2/goods/ed8t1uvq"
+        })
+    }
+
+    // ------------------------------------------------------------------------------------------
+
+    function colorSprite() {
+        base(this, LSprite, []);
+        var self = this;
+        var line = new LBitmap(new LBitmapData(imglist["line"]));
+        line.alpha = 0;
+        self.addChild(line);
+
+        self.tcolor = "";
+        n = 0;
+        self.addEventListener(LMouseEvent.MOUSE_DOWN, function () {
+            n++;
+            if (n === 1) {
+                colorbox.childList[0].childList.pop()
+            }
+            rubber = false;
+            nowColor = self.tcolor;
+            for (var i = 0; i < 12; i++) {
+                colorbox.childList[i].childList[0].alpha = 0;
+            }
+            self.childList[0].alpha = 1;
+
+        });
+    }
+    function shapeSprite() {
+        base(this, LSprite, []);
+        var self = this;
+        self.vvl = [];
+        self.name = "";
+        var ashape = new LShape();
+        page7.addChild(ashape);
+        self.backSharp = ashape;
+
+        touchEvent(self)
+    }
+    function shapeSprites() {
+        base(this, LSprite, []);
+        var self = this;
+        self.vvl = [];
+        self.name = "";
+        var ashape = new LShape();
+        page8.addChild(ashape);
+        self.backSharp = ashape;
+
+        touchEvent(self)
+    }
+    function shapeSpritess() {
+        base(this, LSprite, []);
+        var self = this;
+        self.vvl = [];
+        self.name = "";
+        var ashape = new LShape();
+        lastLayer.addChild(ashape);
+        self.backSharp = ashape;
+
+        touchEvent(self)
+    }
+    function touchEvent(obj){
+        obj.addEventListener(LMouseEvent.MOUSE_DOWN, function (event) {
+            startX=event.offsetX;
+            startY=event.offsetY;
+            obj.addEventListener(LMouseEvent.MOUSE_UP,function(event){
+                nowX=event.offsetX;
+                nowY=event.offsetY;
+                disX=Math.abs(nowX- startX);
+                disY=Math.abs(nowY- startY);
+                dis=disX+disY;
+                if(dis===0){
+                    var objsharp = obj.backSharp;
+                    var arrname = obj.name;
+                    if (historyarray.length) {
+                        if (historyarray[historyarray.length - 1].arrname === obj.name && historyarray[historyarray.length - 1].nowColor === nowColor) {
+
+                        } else {
+                            historyarray.push({
+                                "self": obj,
+                                "nowColor": nowColor,
+                                "arrname": arrname
+                            })
+                            if (historyarray.length > 50) {
+                                historyarray.shift()
+                            }
+                        }
+                    } else {
+                        historyarray.push({
+                            "self": obj,
+                            "nowColor": nowColor,
+                            "arrname": arrname
+                        })
+                    }
+                    if (historyarray.length) {
+                        ctrlzSprite.alpha = 1;
+                    }
+                    obj.backSharp.graphics.clear();
+                    if (!rubber) {
+                        obj.backSharp.graphics.drawVertices(0, "#ff0000", obj.vvl, true, nowColor);
+                    }
+                }
+
+            })
+        });        
+    }
+    function showResult(event) {
+        _smq.push(['custom','秘密花园','完成页','PV']);
+        $("#maskDiv").hide();
+        middleLayer.removeAllChild();
+        tempLayer.graphics.clear();
+        tempLayer.removeAllChild();
+        backLayer.removeAllChild();
+        topLayer.removeAllChild();
+        secondLayer.removeAllChild();
+        bgLayer.removeAllChild();
+        lastLayer.removeAllChild();
+
+        var imageCodeBitmap = new LBitmap(new LBitmapData(event.target));
+        imageCodeBitmap.x = 51;
+        imageCodeBitmap.y = 229;
+        topLayer.addChild(imageCodeBitmap);
+
+        var bg2LBitmap = new LBitmap(new LBitmapData(imglist["bg3"]));
+        bg2LBitmap.x = 0;
+        bg2LBitmap.y = 0;
+        bg2LBitmap.width = LGlobal.width;
+        bg2LBitmap.height = LGlobal.height;
+        backLayer.addChild(bg2LBitmap);
+
+
+        var p3_shareSprite = new LSprite();
+        p3_shareSprite.x = 489;
+        p3_shareSprite.y = 803;
+        p3_shareSprite.graphics.drawRect(0, "#000", [0, 0, 100, 50]);
+        topLayer.addChild(p3_shareSprite)
+        p3_shareSprite.addEventListener(LMouseEvent.MOUSE_DOWN, function () {
+            _smq.push(['custom','秘密花园','分享页','PV']);
+            var shareLBitmap = new LSprite()
+            shareLBitmap.addChild(new LBitmap(new LBitmapData(imglist["share"])));
+            shareLBitmap.x = 0;
+            shareLBitmap.y = 0;
+            // shareLBitmap.alpha = 0;
+            shareLBitmap.width = LGlobal.width;
+            shareLBitmap.height = LGlobal.height;
+            topLayer.addChild(shareLBitmap);
+            shareLBitmap.addEventListener(LMouseEvent.MOUSE_DOWN, function () {
+                topLayer.removeChild(shareLBitmap)
+            })
+        })
+        var p3_othersSprite = new LSprite();
+        p3_othersSprite.x = 49;
+        p3_othersSprite.y = 803;
+        p3_othersSprite.graphics.drawRect(0, "#000", [0, 0, 200, 50]);
+        topLayer.addChild(p3_othersSprite)
+        p3_othersSprite.addEventListener(LMouseEvent.MOUSE_DOWN,function(){
+            window.location.href="MorePics.aspx"
+        })
+        var p3_buySprite = new LSprite();
+        p3_buySprite.x = 189;
+        p3_buySprite.y = 878;
+        p3_buySprite.graphics.drawRect(0, "#000", [0, 0, 300, 100]);
+        topLayer.addChild(p3_buySprite)
+        p3_buySprite.addEventListener(LMouseEvent.MOUSE_DOWN,function(){
+            window.location.href="http://wap.koudaitong.com/v2/goods/ed8t1uvq"
+        })
+        var p3_backSprite = new LSprite();
+        p3_backSprite.x = 309;
+        p3_backSprite.y = 803;
+        p3_backSprite.graphics.drawRect(0, "#000", [0, 0, 150, 50]);
+        topLayer.addChild(p3_backSprite)
+        p3_backSprite.addEventListener(LMouseEvent.MOUSE_DOWN,function(){
+            location.reload()
+        })
+        
+    }
+
+    function MiddleBitmap(bitmapData) {
+        var self = this;
+        base(self, LSprite, []);
+        self.bitmapTitle = new LBitmap(bitmapData);
+        self.bitmapTitle.x = -self.bitmapTitle.getWidth() * 0.5;
+        self.bitmapTitle.y = -self.bitmapTitle.getHeight() * 0.5;
+        self.addChild(self.bitmapTitle);
+    }
+    function BottomBitmap(bitmapData) {
+        var self = this;
+        base(self, LSprite, []);
+        self.bitmapTitle = new LBitmap(bitmapData);
+        self.bitmapTitle.x = 0;
+        self.bitmapTitle.y = -self.bitmapTitle.getHeight();
+        self.addChild(self.bitmapTitle);
+    }
+</script>

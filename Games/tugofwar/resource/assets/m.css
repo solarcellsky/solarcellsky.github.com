@@ -1,0 +1,51 @@
+html, body {
+    -ms-touch-action: none;
+    background: #629a65;
+    padding: 0;
+    border: 0;
+    margin: 0;
+    height: 100%;
+}
+body{
+	background-image: url(mbg.png);
+	background-repeat: no-repeat;
+	-webkit-background-size: 100% auto;
+	background-size: 100% auto;
+	position: relative;
+}
+img{
+	display: block;
+	width: 100%;
+}
+
+#logo{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 330px;
+	text-align: center;
+	font-size: 22px;
+	margin: auto;
+	width: 205px;
+	height: 105px;
+}
+#team{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 190px;
+	margin: auto;
+	width: 275px;
+	height: 145px;
+}
+
+#phone{
+	display: none;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	width: 185px;
+	height: 240px;
+}

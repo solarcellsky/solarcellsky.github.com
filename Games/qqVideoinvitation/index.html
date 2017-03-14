@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>有福利！扑扑星好奇心之旅</title>
+<base href="./">
+<meta name="x5-fullscreen" content="false"/>
+<meta name="x5-orientation" content="portrait" />
+<script>
+	eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('p(e.a.u().l(/m/i)=="m"){c.7(\'<8 9="6" b="2=j-2,k-3=1,h-3=1">\')}n p(/f/.r(e.a)&&q(e.a.l(/f\\s(\\d|\\.)+/g)[0].t(\'f \',\'\'))<4){c.7(\'<8 9="6" b="2=o,k-3=0.5,h-3=0.5">\')}n{c.7(\'<8 9="6" b="v-w=j-x,2=o,y-z=A">\')}',37,37,'||width|scale|||viewport|write|meta|name|userAgent|content|document||navigator|Android||minimum||device|maximum|match|ipad|else|640|if|parseFloat|test||replace|toLowerCase|target|densitydpi|dpi|user|scalable|no'.split('|'),0,{})); 
+</script>
+<link rel="stylesheet" href="css/swiper.min.css">
+<!-- <link rel="stylesheet" href="css/animate.min.css"> -->
+<link rel="stylesheet" href="css/style.css?v=3">
+</head>
+
+<body ontouchmove="event.preventDefault()">
+<div class="container main">
+<!-- main start -->
+<div class="section def s1">
+	<div class="sview" data-w="640" data-h="1138"> 
+		<!-- data-w="640" data-h="1138" -->
+		<img class="poster" src="images/640/640h5_00000.jpg" alt="">
+
+		<div class="load">
+			<div class="inner"></div>
+			<!-- <span class="txt">0%</span> -->
+		</div> 
+		<div class="mask"></div>
+		<div class="play btn">
+			<div class="inner">
+				<span class="sta sta2">
+					<img src="images/intro/finger.png" alt="">
+				</span>
+				<span class="light"></span>
+				<span class="sta sta1"></span>
+				<div class="smask"></div>
+			</div>
+			<div class="txt">保持长按</div>
+			<div class="tip"><span class="arrow Ani Ani-updown infi alte"></span></div>
+		</div>
+	</div>
+</div>
+<div class="section s2">
+</div>
+<!-- main end -->
+</div>
+
+<script src="js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="js/plugin.js?v=3"></script>
+<script src="js/i.js?v=3"></script>
+<script type="text/template" id="tpl_s2">
+	<div class="sview" data-w="640" data-h="1029">
+		<img src="images/end/bg.jpg" alt="">
+		<div class="mask"></div>
+	</div>
+	<div class="logo o"><img src="images/end/logo.png?v=3" alt=""></div>
+	<div class="t cta o">
+		<div class="cont qrcode">
+			<img class="qr" src="images/end/qrcode.png?v=3" alt="">
+		</div>
+		<div class="cont addr">
+			<div class="imgs">
+				<div class="img cur def"><img src="images/end/addr3.png" alt=""></div>
+				<div class="img"><img src="images/end/addr2.png" alt=""></div>
+				<div class="img"><img src="images/end/addr1.png" alt=""></div>
+			</div>
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+					</div>
+					<div class="swiper-slide">
+					</div>
+					<div class="swiper-slide">
+					</div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+		</div>
+	</div>
+	<div class="t btns o">
+		<a href="javascript:void(0);" class="btn share"></a>
+	</div>
+</script>
+<script type="text/template" id="tpl_share">
+<div class="pop pop-share none">
+	<div class="mask"></div>
+	<div class="tip"></div>
+</div>
+</script>
+<script>
+	window.config = {
+		link: 'http://www.pupuxing.com/PPXGame/StaticFiles/ppx_curiosity/index.html',
+		imgUrl: 'http://www.pupuxing.com/PPXGame/StaticFiles/ppx_curiosity/images/icon.jpg',
+		img_url: 'http://www.pupuxing.com/PPXGame/StaticFiles/ppx_curiosity/images/icon.jpg',
+		title: '有福利！扑扑星好奇心之旅',
+		desc: '有福利！有福利！有福利！重说三。'
+	};
+	window.timelineconfig = {
+		link: 'http://www.pupuxing.com/PPXGame/StaticFiles/ppx_curiosity/index.html',
+		imgUrl: 'http://www.pupuxing.com/PPXGame/StaticFiles/ppx_curiosity/images/icon.jpg',
+		img_url: 'http://www.pupuxing.com/PPXGame/StaticFiles/ppx_curiosity/images/icon.jpg',
+		title: '有福利！扑扑星好奇心之旅'
+	};
+</script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script>
+var postData = {
+    "currentUrl": location.href.split('#')[0]
+}
+jQuery.post("http://www.pupuxing.com/PPXGame/WeixinAPI/JsApiConfigScriptJson", postData, function (wxConfig) {
+
+    if (typeof (wxConfig) === "string") {
+        wxConfig = JSON.parse(wxConfig);
+    }
+    wx.config(wxConfig);
+
+    wx.ready(function () {
+
+        var config = window.config;
+        var timelineconfig = window.timelineconfig ? window.timelineconfig : window.config;
+
+      
+
+        wx.onMenuShareAppMessage(config);
+        wx.onMenuShareTimeline(timelineconfig);
+        wx.onMenuShareQQ(config);
+        wx.onMenuShareWeibo(config);
+    });
+
+    wx.error(function (res) {
+
+        // config信息验证失败会执行error函数，如签名过期导致验证失败，具体错误信息可以打开config的debug模式查看，也可以在返回的res参数中查看，对于SPA可以在这里更新签名。
+
+    });
+});
+</script>
+
+</body>
+</html>

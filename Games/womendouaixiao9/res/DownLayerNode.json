@@ -1,0 +1,244 @@
+{
+  "ID": "301d182c-1447-4289-92e0-d6e7b3f1fd59",
+  "Version": "2.3.1.1",
+  "Name": "DownLayerNode",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 16,
+        "Children": [
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "downKuang.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {},
+            "Position": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "RightMargin": -640.0,
+            "TopMargin": -87.0,
+            "Tag": 17,
+            "Children": [
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "feverball.png",
+                  "Plist": ""
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {},
+                "Position": {
+                  "X": 20.3247,
+                  "Y": 18
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0318,
+                  "Y": 0.0821
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": 20.3247,
+                "RightMargin": 555.6753,
+                "TopMargin": 15.8587,
+                "BottomMargin": 7.1413,
+                "Tag": 18,
+                "ActionTag": 2122541648,
+                "Size": {
+                  "X": 64.0,
+                  "Y": 64.0
+                },
+                "Name": "feverball_11",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "yuanjiao2.png",
+                  "Plist": ""
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {},
+                "Position": {
+                  "X": 107.5291,
+                  "Y": 30
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.168,
+                  "Y": 0.1638
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": 107.5291,
+                "RightMargin": 24.4709,
+                "TopMargin": 24.7487,
+                "BottomMargin": 14.2513,
+                "Tag": 19,
+                "ActionTag": -1248200589,
+                "Size": {
+                  "X": 508.0,
+                  "Y": 48.0
+                },
+                "Name": "feverdikuang_12",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "ProgressInfo": 100,
+                "ImageFileData": {
+                  "Type": "Normal",
+                  "Path": "gm_fever_bar.png",
+                  "Plist": ""
+                },
+                "AnchorPoint": {},
+                "Position": {
+                  "X": 111.1975,
+                  "Y": 32
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.1737,
+                  "Y": 0.203
+                },
+                "PreSize": {
+                  "X": 0.7813,
+                  "Y": 0.0417
+                },
+                "LeftMargin": 111.1975,
+                "RightMargin": 28.8025,
+                "TopMargin": 29.3384,
+                "BottomMargin": 17.6616,
+                "Tag": 20,
+                "ActionTag": -1959814676,
+                "Size": {
+                  "X": 500.0,
+                  "Y": 40.0
+                },
+                "Name": "LoadingBar_Fever",
+                "ctype": "LoadingBarObjectData"
+              },
+              {
+                "LabelText": "Fever",
+                "LabelBMFontFile_CNB": {
+                  "Type": "Normal",
+                  "Path": "all_0.fnt",
+                  "Plist": ""
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 339.409,
+                  "Y": 50
+                },
+                "Scale": {
+                  "ScaleX": 0.8654,
+                  "ScaleY": 0.9904
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.5303,
+                  "Y": 0.3937
+                },
+                "PreSize": {
+                  "X": 0.1922,
+                  "Y": 0.0583
+                },
+                "LeftMargin": 277.909,
+                "RightMargin": 239.091,
+                "TopMargin": 24.7483,
+                "BottomMargin": 6.2517,
+                "Tag": 21,
+                "ActionTag": -189675914,
+                "Size": {
+                  "X": 123.0,
+                  "Y": 56.0
+                },
+                "Name": "FeverLabel",
+                "ctype": "TextBMFontObjectData"
+              }
+            ],
+            "ActionTag": 1105244291,
+            "Size": {
+              "X": 640.0,
+              "Y": 87.0
+            },
+            "Name": "downKuang_7",
+            "ctype": "SpriteObjectData"
+          }
+        ],
+        "Size": {
+          "X": 0.0,
+          "Y": 0.0
+        },
+        "Name": "Node",
+        "ctype": "SingleNodeObjectData"
+      },
+      "UsedResources": [
+        "all_0.fnt",
+        "all_0.png",
+        "downKuang.png",
+        "feverball.png",
+        "gm_fever_bar.png",
+        "yuanjiao2.png"
+      ],
+      "ctype": "GameProjectData"
+    }
+  },
+  "Type": "Node"
+}

@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>开撕</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,user-scalable=no,maximum-scale=1,initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <script type="text/javascript" src="js/zepto.min.js?v=null"></script>
+    <link rel="stylesheet" href="css/play.css?v=201502131604">
+    <script type="text/javascript">
+    function showDialog(value, callback, timeout) {
+        $("#dialog p").html(value);
+        $("#dialog").show();
+        $("#dialog [tag='close']").off().on("click", function() {
+            $("#dialog").hide();
+            callback && callback();
+        });
+        if (timeout) {
+            setTimeout(function() {
+                $("#dialog").hide();
+                callback && callback();
+            }, 1000);
+        }
+    }
+    </script>
+</head>
+<iframe id="__WeixinJSBridgeIframe_SetResult" style="display: none;"></iframe>
+<iframe id="__WeixinJSBridgeIframe" style="display: none;"></iframe>
+
+<body>
+
+
+    <div id="J_loading" class="mp_loading" style="display: none;">
+        <div class="mp_loading_clip">
+            <div class="mp_loading_bar"></div>
+        </div>
+        <div id="J_precent" class="mp_loading_txt">100%</div>
+    </div>
+    <style type="text/css">
+    @-webkit-keyframes loading {
+        0% {
+            -webkit-transform: rotate(0deg);
+        }
+        100% {
+            -webkit-transform: rotate(360deg);
+        }
+    }
+    @-moz-keyframes loading {
+        0% {
+            -moz-transform: rotate(0deg);
+        }
+        100% {
+            -moz-transform: rotate(360deg);
+        }
+    }
+    @-o-keyframes loading {
+        0% {
+            -o-transform: rotate(0deg);
+        }
+        100% {
+            -o-transform: rotate(360deg);
+        }
+    }
+    @-ms-keyframes loading {
+        0% {
+            -ms-transform: rotate(0deg);
+        }
+        100% {
+            -ms-transform: rotate(360deg);
+        }
+    }
+    @keyframes loading {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+    .mp_loading {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background-color: black;
+        left: 0;
+        top: 0;
+        -webkit-transform-style: preserve-3d;
+        z-index: 1;
+    }
+    .mp_loading_clip {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 60px;
+        height: 60px;
+        margin: -30px 0 0 -30px;
+        overflow: hidden;
+        -webkit-animation: loading 1.2s linear infinite;
+        -moz-animation: loading 1.2s linear infinite;
+        -o-animation: loading 1.2s linear infinite;
+        -ms-animation: loading 1.2s linear infinite;
+        animation: loading 1.2s linear infinite;
+    }
+    .mp_loading_bar {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 54px;
+        height: 54px;
+        border-radius: 50px;
+        overflow: hidden;
+        clip: rect(0px, 36px, 70px, 0);
+        background: rgba(0, 0, 0, 0);
+        border: 3px solid #fff367;
+        -webkit-mask: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(255, 255, 255, 1)), to(rgba(255, 255, 255, 0)));
+    }
+    .mp_loading_txt {
+        width: 100px;
+        height: 30px;
+        line-height: 30px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -50px;
+        margin-top: -15px;
+        text-align: center;
+        color: #fff;
+    }
+    </style>
+    <style>
+    .bao_sharetips .inner:before {
+        background: url(images/v2/share.png?v=3) no-repeat 0 0;
+    }
+    </style>
+    <script type="text/javascript">
+    function loadedPercent(num) {
+        if (parseInt(document.getElementById("J_precent").innerHTML) < num) {
+            document.getElementById("J_precent").innerHTML = num + "%";
+        }
+        if (num == 100) {
+            document.getElementById("J_loading").style.display = "none";
+        }
+    }
+    </script>
+    <div class="dialog" style="display: none;" id="dialog">
+        <div class="inner">
+            <p class="txt_1"></p>
+            <a href="javascript:;" tag="close" class="btn">确定</a>
+        </div>
+        <div class="mask"></div>
+    </div>
+    <div id="t_loading" style="position: fixed; left: 0px; top: 0px; right: 0px; bottom: 0px; z-index: 9; display: none; background-color: transparent;">
+        <div style="position: fixed; width: 100px; height: 100px; border-top-left-radius: 2px; border-top-right-radius: 2px; border-bottom-right-radius: 2px; border-bottom-left-radius: 2px; color: rgba(255, 255, 255, 0.8); margin: -50px 0px 0px -50px; left: 50%; top: 50%; background-color: rgba(0, 0, 0, 0.498039);">
+            <div style="position: absolute; width: 46px; height: 46px; left: 50%; top: 50%; margin: -35px 0px 0px -23px; -webkit-animation: loading 1.2s linear infinite;">
+                <div style="width: 40px; height: 40px; border: 3px solid rgba(255, 255, 255, 0.8); border-top-left-radius: 23px; border-top-right-radius: 23px; border-bottom-right-radius: 23px; border-bottom-left-radius: 23px; clip: rect(0px 23px 46px 0px); position: absolute; left: 0px; top: 0px; -webkit-transform-origin: 50% 50%; -webkit-background-origin: border-box; -webkit-background-clip: border-box; -webkit-mask: -webkit-gradient(linear, 0 0, 0 100%, from(rgb(255, 255, 255)), to(rgba(255, 255, 255, 0)));"></div>
+            </div>
+            <p style="margin: 0px 0px 0px -40px; padding: 0px; text-align: center; width: 80px; position: absolute; bottom: 10px; left: 50%; line-height: 18px; white-space: nowrap;">加载中</p>
+        </div>
+    </div>
+    <script type="text/html" id="js_crazygame_description">
+        撕掉大战开始啦~
+        <br/>
+        <br/>活动时间：2015年9月23日-2015年9月25日
+        <br/>
+        <br/>规则：每个用户每天可与系统对战次数3次（好友间对战次数不限）
+        <br/>
+        <br/>首次参与获得初始100金币
+        <br/>
+        <br/>关注微组件额外赠送的200金币
+        <br/>
+        <br/>好友间pk每次输/赢 50金币
+        <br/>
+        <br/>与系统国民女神/铃铛使者pk，则每次输/赢 20金币
+        <br/>
+        <br/>全民撕名牌，中秋赢好礼！快来参与
+    </script>
+    <script type="text/javascript">
+    window.crazyId = "8823b46ebba24a4aa373c91da0cf8373";
+    window.shareConfig = {
+        title: "撕名牌赢大奖",
+        desc: document.getElementById("js_crazygame_description").innerHTML,
+        img_url: "http://m.weizujian.com/apps/crazyit/image/v3/share_cover.jpg",
+        img_width: 80,
+        img_heigth: 80,
+        success_callback: function() {
+            $(".bao_sharetips").hide();
+            shared_callback();
+        }
+    };
+    window.self = {
+        "bind": 0,
+        "city": "",
+        "country": "",
+        "headimgurl": "http://wx.qlogo.cn/mmopen/Q3auHgzwzM4ReuxQRw5TnMRFKGswhI880ibic3LBL5UEfw6rkiaYjsWCvrPxicicSrLUPdR9zVWPtv46RN6BVduMfRA/0",
+        "nickname": "老任",
+        "openid": "oWSSPuMXOk4jdDYQzL5zUgQVVivY",
+        "privilege": "",
+        "province": "",
+        "sex": 1,
+        "subscribe": 0
+    };
+
+    window.my = {
+        "head": "http://wx.qlogo.cn/mmopen/Q3auHgzwzM4ReuxQRw5TnMRFKGswhI880ibic3LBL5UEfw6rkiaYjsWCvrPxicicSrLUPdR9zVWPtv46RN6BVduMfRA/0",
+        "shareStatus": "1",
+        "pkTotal": "3",
+        "balance": "200",
+        "pkNPCTotal": "0",
+        "pointname": ""
+    };
+    </script>
+    <script type="text/javascript">
+    var now = new Date();
+    now.setTime(1446537736037);
+
+    function ShowCountDown() {
+        now.setTime(now.getTime() + 1000);
+        var startDate = new Date(2015, 2, 19, 11, 0);
+        var leftTime = startDate.getTime() - now.getTime();
+        var leftsecond = parseInt(leftTime / 1000);
+        var day1 = Math.floor(leftsecond / (60 * 60 * 24));
+        var hour1 = Math.floor((leftsecond - day1 * 24 * 60 * 60) / 3600);
+        var hour = Math.floor((leftsecond - 60 * 60) / 3600);
+        //如果小时为负数 显示0 
+        if (hour < 0) {
+            hour = 0;
+        }
+        if (day1 < 0) {
+            hour = hour1;
+        }
+        var minute = Math.floor((leftsecond - day1 * 24 * 60 * 60 - hour1 * 3600) / 60);
+        var second = Math.floor(leftsecond - day1 * 24 * 60 * 60 - hour1 * 3600 - minute * 60);
+        var text = "";
+        //如果结束时间为负数 就显示0 
+        if (leftTime > 0) {
+            text = day1 + "天" + hour1 + "小时" + minute + "分" + second + "秒";
+            $(".btn_timeout").html(text);
+        } else {
+            $(".btn_timeout").attr("class", "btn_red btn btn_exchange").text("立即兑换");
+        }
+    }
+
+    // 关注公众号处理
+    function checkSubscribe() {
+        var submitData = {
+            action: "checksubscribeaward",
+            crazyId: window.crazyId
+        };
+        $.ajax({
+            type: "POST",
+            url: "/m/crazyit/crazy",
+            data: submitData,
+            dataType: "json",
+            contentType: "application/x-www-form-urlencoded; charset=utf-8",
+            success: function(data) {
+                if (data.success == 1) {
+                    showDialog("恭喜！您已获得关注奖励！");
+                    $(".goldcoin strong").html(data.balance);
+                    return;
+                } else if (data.success == 2) {
+                    showDialog("您已经获得过关注奖励了。");
+                    return;
+                } else {
+                    location.href = "http://mp.weixin.qq.com/s?__biz=MzA5NjM4ODY5Nw==&mid=207561955&idx=1&sn=3eb32b11176e670c6cabeae608f5ac01&scene=0#rd";
+                }
+            },
+            error: function() {
+                showDialog("网络不稳定，请稍后再试");
+            }
+        });
+    }
+    </script>
+
+    <div class="toplogo"><img src="http://wx.qlogo.cn/mmopen/XcxejFndRITKmQREnjp8uyudPajibJCdTEes2qZJNACxLjez4vhibic4UibqFQHg0u1hialCmPwJGw74RPBcQpR8u5ibviackyaJj0r/0">
+    </div>
+    <div class="game-frame" isusing="yes" style="opacity: 1;">
+        <img class="start_tip" src="images/starttip.png" data-pos="0" style="bottom: 36%; opacity: 0; -webkit-transition: bottom 0.5s ease-in-out, opacity; transition: bottom 0.5s ease-in-out, opacity;">
+        <div class="talker_cont">
+            <div class="head_img">
+                <img src="http://wx.qlogo.cn/mmopen/GHAUeibRia1Ph6OYwiaLzafDiax34HqEDGnDElOlcicPdTM0XKp3uAjgM4WMAaYwNo5GSuxLfN8zSxOR4Ric042Vp8ZJhqKSakE3Sf/0">
+                <span class="nickname" style="display: none;">Kevin</span>
+            </div>
+            <div class="progress_bar_wrapper">
+                <div class="progress_bar_bg">
+                    <img src="images/brand_bg.png">
+                </div>
+                <div class="progress_bar_brand">
+                    <div class="tips_txt">@Kevin</div>
+                </div>
+                <div class="progress_bar_part"></div>
+            </div>
+        </div>
+        <canvas id="gameCanvas" style="display: block; margin: 0px auto; width: 410px; height: 823px;" width="640" height="1000">
+            Your browser not support for html5, please change one.
+        </canvas>
+
+        <div id="staticRes"><img src="images/res_v3/bg_min.jpg?v=null" id="splash" crossorigin="Anonymous"><img src="images/res_v3/bg_min.jpg?v=null" id="bg" crossorigin="Anonymous"><img src="images/res_v3/starttip.png?v=null" id="starttip" crossorigin="Anonymous"><img src="images/res_v3/splash_hongbao.png?v=null" id="splash_hongbao" crossorigin="Anonymous"><img src="images/res_v3/splashtitle.png?v=null" id="splashtitle" crossorigin="Anonymous"><img src="images/res_v3/mb_hongbao.jpg?v=null" id="mb0" crossorigin="Anonymous"><img src="images/res_v3/sheep.png?v=null" id="d0" crossorigin="Anonymous"><img src="images/res_v3/m_hongbao.png?v=null" id="m0" crossorigin="Anonymous"><img src="images/res_v3/mb_hongbao.jpg?v=null" id="mb1" crossorigin="Anonymous"><img src="images/res_v3/sheep.png?v=null" id="d1" crossorigin="Anonymous"><img src="images/res_v3/m_hongbao.png?v=null" id="m1" crossorigin="Anonymous"><img src="images/res_v3/mb_hongbao.jpg?v=null" id="mb2" crossorigin="Anonymous"><img src="images/res_v3/sheep.png?v=null" id="d2" crossorigin="Anonymous"><img src="images/res_v3/m_hongbao.png?v=null" id="m2" crossorigin="Anonymous"><img src="images/res_v3/mb_hongbao.jpg?v=null" id="mb3" crossorigin="Anonymous"><img src="images/res_v3/sheep.png?v=null" id="d3" crossorigin="Anonymous"><img src="images/res_v3/m_hongbao.png?v=null" id="m3" crossorigin="Anonymous">
+        </div>
+
+        <!--提示页面-->
+        <div id="tooltipFrame" class="popup-frame">
+            <div class="popup-wrap">
+                <h1 class="frame-title-text" id="J_TipTitle"></h1>
+                <div class="bottom-btn">
+                    <div class="btn-wrap">
+                        <button id="J_TipYes" class="btn" type="button">我知道了</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--加载提示-->
+        <div id="J_Loading" class="ajax-loading"><span>加载中...</span>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+    loadedPercent(40)
+    </script>
+    <script type="text/javascript">
+    /* 游戏配置 */
+    var APP = {
+        customer: "微组件", // 商家名称
+        userCount: 10000, // 参加活动的用户数
+        IIMEOUT: 10, // 游戏时间(s)
+        uid: '1', // 用户ID
+        opponentOpenId: 'oWSSPuFUV8yavvr4E9u9sGaOXiqQ',
+        opponentScope: '1293',
+        opponentBalance: '-40',
+        remainDayTimes: 5, // 用户的剩余当天次数
+        remainAllTimes: 5, // 用户的剩余总次数
+        followed: true,
+        mustFollow: true,
+        end: false, // 活动结束标记
+        REG_FIRST: false, // 填写用户个人信息规则: true--游戏开始前填写，false--游戏结束后填写
+        MAX_SUM: 0, // 最大金额
+        //currency: [{"p":"0.0","v":"0.1"},{"p":"0.0","v":"0.2"},{"p":"0.0","v":"0.5"},{"p":"0.0","v":"1"},{"p":"0.0","v":"5"},{"p":"25.0","v":"10"},{"p":"25.0","v":"20"},{"p":"25.0","v":"50"},{"p":"25.0","v":"100"}],// 金额比例, i为货币图标名称的下标，p为货币百分比, v为货币面额
+        currency: [{
+            "p": "25.0",
+            "v": "10"
+        }, {
+            "p": "25.0",
+            "v": "20"
+        }, {
+            "p": "25.0",
+            "v": "50"
+        }, {
+            "p": "25.0",
+            "v": "100"
+        }], // 金额比例, i为货币图标名称的下标，p为货币百分比, v为货币面额
+        URL_RANK: '/m/crazyit/crazy?action=getRankList&crazyId=8823b46ebba24a4aa373c91da0cf8373&talker=oWSSPuMXOk4jdDYQzL5zUgQVVivY', // 富豪榜
+        URL_USER: '/m/crazyit/crazy?action=setUserInfo&crazyId=8823b46ebba24a4aa373c91da0cf8373&talker=oWSSPuMXOk4jdDYQzL5zUgQVVivY', // 用户
+        URL_SCORE: '/m/crazyit/crazy?action=getScore&crazyId=8823b46ebba24a4aa373c91da0cf8373&talker=oWSSPuMXOk4jdDYQzL5zUgQVVivY', // 分数
+        URL_RESULT: '/apps/crazyit/result.jsp?crazyId=8823b46ebba24a4aa373c91da0cf8373&player1=oWSSPuMXOk4jdDYQzL5zUgQVVivY&player2=oWSSPuFUV8yavvr4E9u9sGaOXiqQ', // PK结果页面
+        URL_PK: '/m/crazyit/crazy?action=pk&crazyId=8823b46ebba24a4aa373c91da0cf8373&talker=oWSSPuMXOk4jdDYQzL5zUgQVVivY', // 分数
+        URL_INCRCOUNT: '/m/crazyit/crazy?action=incrCount&crazyId=8823b46ebba24a4aa373c91da0cf8373&talker=oWSSPuMXOk4jdDYQzL5zUgQVVivY', // 分数
+        URL_DETAIL: '/apps/crazyit/detail.jsp?crazyId=8823b46ebba24a4aa373c91da0cf8373',
+
+        // SHATE_CALLBACK: '/m/crazyit/crazy?action=addShareCount&crazyId=8823b46ebba24a4aa373c91da0cf8373&talker=oWSSPuMXOk4jdDYQzL5zUgQVVivY',//分享回调
+        // ICON_CURR_LOGO: 'http://m.weizujian.com/apps/crazyit/image/v3/curr_logo.png' // 货币图标logo
+        // SHARE_IMG: '/image/mobile/crazy/ico_large.jpg',//分享图片
+        // SHARE_URL: '/crazy/index.jsp?crazyId=8823b46ebba24a4aa373c91da0cf8373&talker=oWSSPuMXOk4jdDYQzL5zUgQVVivY',//分享链接地址
+    };
+    // 如果只有一个货币，复制一个，否则快速滑动时，无效果！
+    if (APP.currency.length == 1) {
+        APP.currency[0].p = 50;
+        APP.currency[1] = APP.currency[0];
+    }
+
+    // 按金额百分比降序
+    APP.currency.sort(function(a, b) {
+        return b.p - a.p;
+    });
+
+    /* 游戏初始化 */
+    var stage, loader, game;
+
+    $(function() {
+        init();
+    });
+
+    function init() {
+
+        var manifest = [
+            // 启动
+
+            {
+                src: "images/res_v3/bg_min.jpg?v=null",
+                id: "splash"
+            },
+
+            {
+                src: "images/res_v3/bg_min.jpg?v=null",
+                id: "bg"
+            }, {
+                src: "images/res_v3/starttip.png?v=null",
+                id: "starttip"
+            }, {
+                src: "images/res_v3/splash_hongbao.png?v=null",
+                id: "splash_hongbao"
+            }, {
+                src: "images/res_v3/splashtitle.png?v=null",
+                id: "splashtitle"
+            },
+        ];
+
+        var currArr = APP.currency || [],
+            curr;
+        // 动态加载货币
+        for (var i = 0, len = currArr.length; i < len; i++) {
+            curr = currArr[i];
+            if (curr) {
+                manifest.push({
+                    src: "images/res_v3/mb_hongbao.jpg?v=null",
+                    id: "mb" + i
+                });
+                manifest.push({
+                    src: "images/res_v3/sheep.png?v=null",
+                    id: "d" + i
+                });
+                manifest.push({
+                    src: "images/res_v3/m_hongbao.png?v=null",
+                    id: "m" + i
+                });
+            }
+        }
+
+        var oResWrap = document.getElementById("staticRes");
+        var aImgTag = [],
+            res;
+        for (i = 0, len = manifest.length; i < len; i++) {
+            res = manifest[i];
+            aImgTag.push('<img src="' + res.src + '" id="' + res.id + '" crossOrigin="Anonymous">');
+        }
+
+        oResWrap.innerHTML = aImgTag.join('');
+
+        loader = {};
+        for (i = 0, len = manifest.length; i < len; i++) {
+            res = manifest[i];
+            loader[res.id] = document.getElementById(res.id);
+        }
+    }
+    </script>
+    <script type="text/javascript" src="js/createjs.min.js?v=null"></script>
+    <script type="text/javascript" src="js/game.js?v=201502131604"></script>
+    <script type="text/javascript" src="js/game.base.js?v=201508200728"></script>
+    <script type="text/javascript">
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        WeixinJSBridge.call('hideOptionMenu');
+    });
+    </script>
+    <script type="text/javascript">
+    window.www_res_domain = "http://m.weizujian.com/apps/crazyit";
+
+    function finishLoading() {
+        $("#t_loading").hide();
+        document.body.scrollTop = 0;
+        setTimeout(function() {
+            $("[isusing=yes]").css("opacity", "0").show().animate({
+                opacity: 1
+            }, 300, 'ease-in-out');
+        }, 0);
+        loadedPercent(100);
+    }
+
+    function handleComplete() {
+        var queue = new createjs.LoadQueue(false);
+        queue.setMaxConnections(10);
+        queue.installPlugin(createjs.Sound);
+        queue.loadFile({
+            src: "images/count.mp3",
+            id: "count"
+        });
+
+        stage = new createjs.Stage("gameCanvas");
+        createjs.Touch.enable(stage, true);
+        createjs.Ticker.setFPS(60);
+
+        game = new lib.Game(stage, loader);
+        createjs.Ticker.on("tick", stage);
+        finishLoading();
+        var $tip = $(".start_tip");
+        $tip.css({
+            "bottom": "30%",
+            "opacity": "1"
+        });
+        tipTimer = setInterval(function() {
+            $tip.animate({
+                "bottom": "36%",
+                "opacity": "0"
+            }, 500, "ease-in-out", function() {
+                $tip.css({
+                    "bottom": "30%",
+                    "opacity": "1"
+                });
+            });
+        }, 800);
+    }
+    var tipTimer;
+    window.onload = handleComplete;
+    </script>
+</body>
+
+</html>

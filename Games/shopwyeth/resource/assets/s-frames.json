@@ -1,0 +1,6 @@
+{"file":"s-frames.png","frames":{
+"frame_lose":{"x":1235,"y":378,"w":584,"h":375,"offX":0,"offY":0,"sourceW":584,"sourceH":375},
+"frame_orange":{"x":584,"y":1,"w":578,"h":487,"offX":0,"offY":0,"sourceW":578,"sourceH":487},
+"frame_result":{"x":584,"y":490,"w":649,"h":391,"offX":0,"offY":0,"sourceW":649,"sourceH":391},
+"frame_win":{"x":1164,"y":1,"w":584,"h":375,"offX":0,"offY":0,"sourceW":584,"sourceH":375},
+"frame_blue":{"x":1,"y":1,"w":581,"h":907,"offX":0,"offY":0,"sourceW":581,"sourceH":907}}}

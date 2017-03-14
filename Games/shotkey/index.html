@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>买买买</title>
+    <script>
+    document.domain = 'code.dev';
+    </script>
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="src/cocos2d-js-v3.8-min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="src/jy.js" charset="utf-8"></script>
+    <script type="text/javascript" src="src/game.js" charset="utf-8"></script>
+    <script type="text/javascript" src="src/resource.js" charset="utf-8"></script>
+    <script type="text/javascript" src="src/object/BackGroundLayer.js" charset="utf-8"></script>
+    <script type="text/javascript" src="src/object/GameScene.js" charset="utf-8"></script>
+    <script type="text/javascript" src="src/object/OperationLayer.js" charset="utf-8"></script>
+    <script type="text/javascript" src="src/object/ResultLayer.js" charset="utf-8"></script>
+    <script type="text/javascript" src="src/object/PlayLayer.js" charset="utf-8"></script>
+    <script type="text/javascript" src="src/object/StartLayer.js" charset="utf-8"></script>
+</head>
+
+<body>
+    <canvas id="gameCanvas"></canvas>
+    <script type="text/javascript">
+    window.onload = function() {
+        cc.game.onStart = function() {
+            cc.view.adjustViewPort(true);
+            cc.view.setDesignResolutionSize(640, 960, cc.ResolutionPolicy.NO_BORDER);
+            cc.view.resizeWithBrowserSize(true);
+            //load resources
+            JY.LoaderScene.preload(g_resources, function() {
+                GAME.initGame();
+
+                GAME.width = cc.winSize.width;
+                GAME.height = cc.winSize.height;
+
+                var gameScene = new GameScene();
+                //
+                cc.director.runScene(gameScene);
+            }, this);
+        };
+        cc.game.run("gameCanvas");
+    };
+    </script>
+    <script language=javascript>
+    function goHome() {
+        try {
+            parent.moregame();
+        } catch (e) {}
+    }
+
+    function clickMore() {
+        try {
+            parent.moregame();
+        } catch (e) {}
+    }
+
+    function dp_share() {
+        try {
+            parent.moregame();
+        } catch (e) {}
+    }
+
+    function dp_Ranking() {
+        try {
+            parent.moregame();
+        } catch (e) {}
+    }
+
+    function showAd() {}
+
+    function hideAd() {}
+
+    function dp_submitScore(score, title) {
+
+    }
+    </script>
+</body>
+
+</html>

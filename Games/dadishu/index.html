@@ -1,0 +1,165 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="data-spm" content="a1z3i">
+    <title>未命名</title>
+    <link rel="stylesheet" type="text/css" href="css/index.min.css">
+    <script src="js/log.js" crossorigin></script>
+    <script>
+    __WPO.setConfig({
+        sample: 10
+    });
+    </script>
+    <script type="text/javascript">
+    if (!window.UA_Opt) {
+        var UA_Opt = new Object;
+        UA_Opt.SendMethod = 8;
+        UA_Opt.ExTarget = ['password'];
+        UA_Opt.LogVal = "ua";
+        window[UA_Opt.LogVal] = "";
+        UA_Opt.Token = new Date().getTime() + ":" + Math.random();
+        UA_Opt.MaxMCLog = 5;
+        UA_Opt.MaxKSLog = 5;
+        UA_Opt.MaxMPLog = 5;
+        UA_Opt.MaxTCLog = 5;
+        UA_Opt.MaxFocusLog = 5;
+        UA_Opt.Flag = 1670350;
+    }
+
+    function getUA() {
+        var tmp_ua = window[UA_Opt.LogVal];
+        UA_Opt.Token = new Date().getTime() + ":" + Math.random();
+        UA_Opt.reload && UA_Opt.reload();
+        return tmp_ua;
+    }
+    </script>
+</head>
+
+<body data-spm="m93xt87">
+    <div class="gameBody" id="J_game">
+        <div class="mask J_mask">
+            <div class="maskHead">
+                <div class="J_rule ruleBtn">
+                    <i class="icon-question iconfont"></i>
+                    <span>规则</span>
+                </div>
+            </div>
+            <div class="waveBtn"></div>
+            <div class="playBtn J_play"></div>
+            <div class="showDraw J_showDraw">
+                查看游戏奖品
+            </div>
+        </div>
+        <canvas id="J_draw" class="draw"></canvas>
+        <div class="panel" id="J_panel">
+            <div class="score">
+                分数:
+                <span class="J_score">0</span>
+            </div>
+            <div class="timePanel">
+                <div class="countTip">
+                    倒计时
+                </div>
+                <div class="baseLine">
+                    <div class="timeLine J_timeLine"></div>
+                    <div class="timeNum">
+                        <span class="J_timeNum">15</span>秒
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="_umfp" style="display:inline;width:1px;height:1px;overflow:hidden"></div>
+    <script type="text/javascript" charset="utf-8" src="js/um.js"></script>
+    <script type="text/javascript">
+    var container = document.getElementById('_umfp');
+    var UUID = 'mtop:' + (function() {
+        var d = new Date().getTime();
+        var uuid = 'xxxxxxxxxxxx4xxxyxxxxxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+            var r = (d + Math.random() * 16) % 16 | 0;
+            d = Math.floor(d / 16);
+            return (c == 'x' ? r : (r & 0x7 | 0x8)).toString(16);
+        });
+        return uuid;
+    })();
+    var _img = document.createElement('img');
+    _img.src = "//ynuf.alipay.com/service/clear.png?xt=" + UUID + "&xa=mtop";
+    container.appendChild(_img);
+    um.init({
+        timeout: 3000,
+        timestamp: new Date().getTime(),
+        token: UUID,
+        serviceUrl: 'https://ynuf.alipay.com/service/um.json',
+        appName: 'mtop',
+        containers: {
+            flash: container,
+            dcp: container
+        }
+    });
+    </script>
+    <script src="js/uab.js"></script>
+    <script>
+    (function() {
+        if (typeof(window.acjs) == 'undefined') {
+            var _script = document.createElement('script');
+            _script.src = 'js/uab.js';
+            document.body.appendChild(_script);
+        }
+    })();
+    </script>
+    <style type="text/css">
+    .tbc_share_wrap {
+        border-width: 0;
+        zoom: .8;
+    }
+    .tbc_share_head {
+        background-color: #ed103d;
+        color: #fff;
+        height: 55px;
+        line-height: 55px
+    }
+    .tbc_share_body {
+        overflow: hidden;
+    }
+    .tbc_share_sup-title {
+        font-size: 16px;
+        color: #fff;
+    }
+    .tbc_share_button_close {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+        background: url('//img.alicdn.com/tps/TB17.T9JVXXXXX2XpXXXXXXXXXX-1100-319.png') -630px 0 no-repeat;
+    }
+    .tbc_share_button_close:hover {
+        background-position: -630px 0;
+    }
+    a.tbc_share_button_submit-share {
+        background-image: none;
+        width: 155px;
+        height: 50px;
+        font-size: 16px;
+        line-height: 50px;
+        display: inline-block;
+        text-align: center;
+        border-radius: 4px;
+        background-color: #ee0a3b;
+        color: #fff;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    </style>
+    <script type="text/javascript" src="js/lib.js" crossorigin></script>
+    <script src="js/kissy.js" crossorigin></script>
+    <script type="text/javascript" src="js/mtb.js" crossorigin></script>
+    <script type="text/javascript" src="js/game.js" crossorigin></script>
+    <script src="js/mtb.js"></script>
+</body>
+
+</html>

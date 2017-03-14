@@ -1,0 +1,82 @@
+/*!
+ * @overview: 主样式
+ */
+html { color: #000; background-color: #000; -webkit-text-size-adjust: 100%; -webkit-touch-callout: none; -webkit-user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+html, body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td, img { margin: 0; padding: 0; }
+body, button, input, select, textarea { font: 14px/1.5 "Helvetica neue", Helvetica, Tahoma, Arial, "\5FAE\8F6F\96C5\9ED1", "\5B8B\4F53", sans-serif; }
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { margin: 0; padding: 0; display: block; }
+audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+img { border: 0 none; max-width: 100%; height: auto; }
+table { border-collapse: collapse; border-spacing: 0; }
+h1, h2, h3, h4, h5, h6 { font-size: 100%; }
+i, em { font-style: normal; }
+ul, ol { list-style: none; }
+button { cursor: pointer; border: 0 none; }
+a:link, a:visited { text-decoration: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+a:hover, a:active { text-decoration: none; }
+.hide { display: none; }
+.clearfix:before, .clearfix:after { content: ""; display: table }
+.clearfix:after { clear: both }
+.clearfix { zoom: 1 }
+
+html,body,#main,#game{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+#main{
+    background-color: #000;
+    width: 320px;
+}
+
+#game , #result{display: none;}
+
+#game img{
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 100px;
+}
+
+#result img{
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 200px;
+}
+
+#logo{
+    width: 310px;
+    height: auto;
+    top: 100px;
+}
+.center{
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+#waiting{
+    top:155px;
+    bottom: 0;
+    height: 20px;
+}
+
+#player{
+    display: none;
+    top: 0;
+    bottom: 0;
+    width: 30px;
+    border: 5px solid #fff;
+    padding: 10px;
+}
+
+#cp{
+    bottom: 10px;
+    width: 200px;
+}

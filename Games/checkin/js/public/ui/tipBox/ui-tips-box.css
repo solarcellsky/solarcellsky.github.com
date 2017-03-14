@@ -1,0 +1,202 @@
+/*
+	@名称: ui-tips
+	@功能: 提醒组件样式
+*/
+
+.ui-tips-box-white,.ui-tips-box-yellow {
+	padding:15px;
+	background-color:#fff;
+	display:inline-block;
+	font-size:12px;
+	line-height:1.5;
+	color:#666;
+	width:100px;
+	-webkit-box-shadow:0 0 10px #ddd;
+    -moz-box-shadow:0 0 10px #ddd;
+    box-shadow:0 0 10px #ddd;
+    position:absolute;
+	display:none;
+	word-break:break-all; 
+	z-index:999999999;
+	cursor:pointer;
+}
+
+.ui-tips-box-white p,.ui-tips-box-yellow p {
+	margin-bottom:5px;
+}
+
+.ui-tips-box-yellow {
+	border:1px solid #f3e176;
+	background-color:#fff6c3;
+}
+
+.ui-tips-box-white .tips-arrow,.ui-tips-box-yellow .tips-arrow {
+	background:url(tips-arrow.png) no-repeat;
+	width:15px;
+	height:8px;
+	display:block;
+	top:-8px;
+	left:15px;
+	position:absolute;
+
+}
+
+.ui-tips-box-white.ui-tips-right-down .tips-arrow,.ui-tips-box-white.ui-tips-right-up .tips-arrow {
+	background-position:0 0;
+}
+
+.ui-tips-box-white.ui-tips-down-right .tips-arrow,.ui-tips-box-white.ui-tips-down-left .tips-arrow {
+	background-position:0 -19px;
+}
+
+.ui-tips-box-white.ui-tips-left-down .tips-arrow,.ui-tips-box-white.ui-tips-left-up .tips-arrow {
+	background-position:-7px -19px;
+}
+
+.ui-tips-box-white.ui-tips-up-right .tips-arrow,.ui-tips-box-white.ui-tips-up-left .tips-arrow {
+	background-position:0 -9px;
+}
+
+.ui-tips-box-yellow.ui-tips-right-down .tips-arrow,.ui-tips-box-yellow.ui-tips-right-up .tips-arrow {
+	background-position:0 -43px;
+}
+
+.ui-tips-box-yellow.ui-tips-down-right .tips-arrow,.ui-tips-box-yellow.ui-tips-down-left .tips-arrow {
+	background-position:0 -62px;
+}
+
+.ui-tips-box-yellow.ui-tips-left-down .tips-arrow,.ui-tips-box-yellow.ui-tips-left-up .tips-arrow {
+	background-position:-8px -62px;
+}
+
+.ui-tips-box-yellow.ui-tips-up-right .tips-arrow,.ui-tips-box-yellow.ui-tips-up-left .tips-arrow {
+	background-position:0 -70px;
+}
+
+.ui-tips-right-down .tips-arrow {
+	left:-8px;
+	top:15px;
+	width:8px;
+	height:16px;
+}
+
+.ui-tips-right-up .tips-arrow {
+	left:-8px;
+	top:auto;
+	bottom:15px;
+	width:8px;
+	height:16px;
+}
+
+.ui-tips-down-right .tips-arrow {
+	left:15px;
+	top:-8px;
+	width:16px;
+	height:8px;
+}
+
+.ui-tips-down-left .tips-arrow {
+	left:auto;
+	right:15px;
+	top:-8px;
+	width:16px;
+	height:8px;
+}
+
+.ui-tips-left-down .tips-arrow {
+	left:auto;
+	right:-8px;
+	top:15px;
+	width:8px;
+	height:16px;
+}
+
+.ui-tips-left-up .tips-arrow {
+	left:auto;
+	right:-8px;
+	top:auto;
+	bottom:15px;
+	width:8px;
+	height:16px;
+}
+
+.ui-tips-up-right .tips-arrow {
+	left:15px;
+	top:auto;
+	bottom:-8px;
+	width:16px;
+	height:8px;
+}
+
+.ui-tips-up-left .tips-arrow {
+	left:auto;
+	right:15px;
+	top:auto;
+	bottom:-8px;
+	width:16px;
+	height:8px;
+}
+
+.ui-tips-right-down {
+	left:100%;
+	margin-left:10px;
+	top:-15px;
+}
+
+.ui-tips-right-up {
+	left:100%;
+	margin-left:10px;
+	top:auto;
+	bottom:-15px;
+}
+
+.ui-tips-down-right {
+	top:100%;
+	margin-top:10px;
+	left:-15px;
+}
+
+.ui-tips-down-left {
+	top:100%;
+	margin-top:10px;
+	left:auto;
+	right:-15px;
+}
+
+.ui-tips-left-down {
+	left:auto;
+	right:100%;
+	margin-left:auto;
+	margin-right:10px;
+	top:-15px;
+}
+
+.ui-tips-left-up {
+	left:auto;
+	right:100%;
+	margin-left:auto;
+	margin-right:10px;
+	top:auto;
+	bottom:-15px;
+}
+
+.ui-tips-up-right {
+	top:auto;
+	bottom:100%;
+	margin-top:auto;
+	margin-bottom:15px;
+	left:-15px;
+}
+
+.ui-tips-up-left {
+	top:auto;
+	bottom:100%;
+	margin-top:auto;
+	margin-bottom:15px;
+	left:auto;
+	right:-15px;
+}
+
+.single-row {
+	padding:8px !important;
+}

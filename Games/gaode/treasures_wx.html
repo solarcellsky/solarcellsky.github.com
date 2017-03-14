@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/common.min.css">
+    <link rel="stylesheet" href="css/treasures.min.css">
+</head>
+
+<body class="android">
+    <div class="error">
+        <div class="error-title">正在破译藏宝图,英雄请稍等</div>
+        <div class="error-face"></div>
+        <div class="error-btns">
+            <button class="error-btn-refresh">5s后可刷新页面</button>
+        </div>
+    </div>
+    <div id="body" style="display: block;">
+        <div class="bind-mobile" style="display: block;">绑定手机号，同步高德地图中挖到的宝贝<span>&gt;</span>
+        </div>
+        <h2 class="myPiece">我的Smart碎片：已获得0块</h2>
+        <p class="piece-intro" style="display: block;">世界那么大，你却一块Smart碎片都没有。</p>
+        <div class="car" id="car" style="visibility: visible;">
+            <canvas width="690" height="367"></canvas>
+            <div class="car-back" style="width: 137px; height: 91px;"></div>
+            <div class="car-back" style="width: 137px; height: 91px;"></div>
+            <div class="car-back" style="width: 137px; height: 91px;"></div>
+            <div class="car-back" style="width: 137px; height: 91px;"></div>
+            <div class="car-back" style="width: 137px; height: 91px;"></div>
+            <div class="car-back" style="width: 137px; height: 91px;"></div>
+            <div class="car-back" style="width: 137px; height: 91px;"></div>
+            <div class="car-back" style="width: 137px; height: 91px;"></div>
+            <div class="car-back" style="width: 137px; height: 91px;"></div>
+            <div class="car-back" style="width: 137px; height: 91px;"></div>
+            <div class="car-back" style="width: 137px; height: 91px;"></div>
+            <div class="car-back" style="width: 137px; height: 91px;"></div>
+            <div class="car-back" style="width: 137px; height: 91px;"></div>
+            <div class="car-back" style="width: 137px; height: 91px;"></div>
+            <div class="car-back" style="width: 137px; height: 91px;"></div>
+            <div class="car-back" style="width: 137px; height: 91px;"></div>
+            <div class="car-back" style="width: 137px; height: 91px;"></div>
+            <div class="car-back" style="width: 137px; height: 91px;"></div>
+            <div class="car-back" style="width: 137px; height: 91px;"></div>
+            <div class="car-back" style="width: 137px; height: 91px;"></div>
+        </div>
+        <div class="invite">
+            <button class="btn-invite sharetimeline">邀请小伙伴帮忙，提升<strong>50倍</strong>中奖率</button>
+        </div>
+        <div class="overdue" style="display: none;">
+            <button class="btn-activity-overdue">:( 活动已过期</button>
+        </div>
+        <div class="i-win">
+            <button class="btn-get-smart">领取我的Smart</button>
+            <button class="btn-flaunt sharetimeline">本大爷要炫耀一下</button>
+        </div>
+        <section class="award-part part-fuel" style="display: block;">
+            <div class="award-part-title">
+                <h3>油卡</h3>
+                <div class="total">已累计额度<span class="num fuel-sum">0元</span>
+                </div>
+            </div>
+            <div class="award-part-cont fuel">
+                <div class="icon icon-oil"></div>
+                <div class="info">
+                    <h4 class="fuel-can-exchange">30元油卡</h4>
+                    <p class="validity fuel-validity">有效期：</p>
+                    <p class="more fuel-more">继续挖宝还有：30元油卡、50元油卡、100元油卡</p>
+                    <div class="btn">
+                        <button class="btn-go btn-fuel btn-none btn-notyet" data-type="fuel" data-awardid="">领取</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="award-part part-flux" style="display: block;">
+            <div class="award-part-title">
+                <h3>流量包</h3>
+                <div class="total">已累计额度<span class="num flux-sum">0MB</span>
+                </div>
+            </div>
+            <div class="award-part-cont">
+                <div class="icon icon-flux"></div>
+                <div class="info">
+                    <h4 class="flux-can-exchange">100MB流量包</h4>
+                    <p class="validity flux-validity">有效期：</p>
+                    <p class="more flux-more">继续挖宝还有：100MB、200MB、500MB、1000MB</p>
+                    <div class="btn">
+                        <button class="btn-go btn-flux btn-none btn-notyet" data-type="flux">领取</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="award-part part-coupon" id="coupon" style="display: block;">
+            <div class="award-part-title">
+                <h3>卡券</h3>
+                <div class="total">共有<span class="num coupon-sum">0张</span>
+                </div>
+            </div>
+            <div class="award-part-cont no-coupon" style="display: block;">啊哦(⊙ˍ⊙)，啥也没有呢...宝还是要努力挖的，万一中了呢~</div>
+        </section>
+    </div>
+
+    <script src="js/plugins/jquery-1.8.2.min.js"></script>
+    <script src="js/plugins/createjs.min.js"></script>
+    <script src="js/lib_wx.min.js"></script>
+    <script src="js/gameplug_wx.min.js"></script>
+    <script src="js/gamepage_wx.min.js"></script>
+    <script src="js/plugins/soundjs.min.js"></script>
+    <script>
+    // if (God.os == 'ios') {
+    //     document.write('<script type="text/javascript" src="js/car.js"></scr' + 'ipt>');
+    // } else {
+    //     document.write('<script type="text/javascript" src="js/car_canvas.js"></scr' + 'ipt>');
+    // }
+    document.write('<script type="text/javascript" src="http://wb.amap.com/time.php?rn=' + God.random() + '"></scr' + 'ipt>');
+    </script>
+    <audio id="audioEngine" src="sound/engine.mp3" preload="auto"></audio>
+    <audio id="audioWholecar" src="sound/wholecar.mp3" preload="auto"></audio>
+    <script type="text/javascript" src="js/car_canvas.js"></script>
+    <script src="js/treasures_wx.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>绑定手机号码</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/common.min.css">
+    <link rel="stylesheet" href="css/bind.min.css">
+</head>
+
+<body>
+    <div class="bind">
+        <p class="bind-tip">请输入您的手机号领取奖励</p>
+        <div class="form-row">
+            <input type="tel" class="input input-mobile" id="inputMobile" name="mobile" placeholder="请输入11位手机号">
+        </div>
+        <div class="form-row" style="margin-top:5px;">
+            <input type="tel" class="input input-code" id="inputCode" name="code" placeholder="验证码">
+            <button type="submit" name="do" value="getCode" class="btn btn-get-code">获取验证码</button>
+        </div>
+        <button type="submit" name="do" value="bind" class="btn btn-bind">确定</button>
+        <div class="bind-notice">
+            <h2>注意事项：</h2>
+            <p>1.亲，手机号为兑奖唯一凭证，请务必填写<span class="alert">真实手机号码</span>，绑定手机号可同步您在高德地图客户端获得的奖品哦；</p>
+            <p>2.亲，请于10.1号当天登录高德地图领取宝贝，10.1之后所有宝贝将会失效哦，请您及时领取；</p>
+            <p>3.亲，由于您填写虚假、错误手机号码或未填写手机号码导致无法领取奖励高德概不负责。</p>
+        </div>
+    </div>
+    <div class="ok">
+        <div class="result">
+            <div class="icon"></div>
+            <div class="word">
+                <h2>手机号绑定成功</h2>
+                <p>请于10.1号登录高德地图领取宝贝</p>
+            </div>
+        </div>
+        <div class="flow">
+            <div class="flow-title">
+                <h3>兑奖流程</h3>
+            </div>
+            <div class="flow-conts">
+                <div class="flow-cont">
+                    <p class="flow-p0">用手机号</p>
+                    <p class="flow-p1">登录高德地图客户端</p>
+                </div>
+                <div class="flow-arr"></div>
+                <div class="flow-cont">
+                    <p class="flow-p2" style="margin-top:18px">进入</p>
+                    <p class="flow-p3">高德地图活动专区</p>
+                </div>
+                <div class="flow-arr"></div>
+                <div class="flow-cont">
+                    <p class="flow-p2">查看宝藏</p>
+                    <p class="flow-p3">领取奖励</p>
+                </div>
+            </div>
+        </div>
+        <div class="buttons"><a href="index_wx.html" class="btn-index">回活动首页</a> <a href="treasures_wx.html" class="btn-treasures">查看宝藏</a>
+        </div>
+        <div class="ad">
+            <h2>下载高德地图参与挖宝 赢取20倍奖励</h2>
+            <p>长按二维码下载高德地图</p>
+            <div class="img"><img src="img/binery.png" width="35%">
+            </div>
+            <p>或</p><a class="download-link" href="http://a.app.qq.com/o/simple.jsp?pkgname=com.autonavi.minimap&amp;g_f=992003">点此下载高德地图</a>
+        </div>
+    </div>
+    <script type="text/javascript" src="http://h1.amap.com/activity/digger/js/lib/God-90e3ab11.js"></script>
+    <script type="text/javascript" src="http://h1.amap.com/activity/digger/js/lib/common-c37bf4c9.js"></script>
+    <script type="text/javascript" src="http://h1.amap.com/activity/digger/js/lib/browser-e8e8f779.js"></script>
+    <script type="text/javascript" src="http://h1.amap.com/activity/digger/js/lib/Log-1917321a.js"></script>
+    <script type="text/javascript" src="http://h1.amap.com/activity/digger/js/bind-fb4229b0.js"></script>
+</body>
+<iframe id="__WeixinJSBridgeIframe_SetResult" style="display: none;"></iframe>
+<iframe id="__WeixinJSBridgeIframe" style="display: none;"></iframe>
+
+</html>

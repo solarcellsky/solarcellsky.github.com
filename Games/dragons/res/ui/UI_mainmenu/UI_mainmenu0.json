@@ -1,0 +1,60 @@
+{"frames": [
+
+{
+	"filename": "mm_button_play.png",
+	"frame": {"x":2,"y":233,"w":200,"h":200},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":200,"h":200},
+	"sourceSize": {"w":200,"h":200}
+},
+{
+	"filename": "mm_button_play_press.png",
+	"frame": {"x":204,"y":233,"w":200,"h":200},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":200,"h":200},
+	"sourceSize": {"w":200,"h":200}
+},
+{
+	"filename": "mm_button_settings.png",
+	"frame": {"x":406,"y":233,"w":100,"h":100},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":100},
+	"sourceSize": {"w":100,"h":100}
+},
+{
+	"filename": "mm_button_settings_press.png",
+	"frame": {"x":406,"y":335,"w":100,"h":100},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":100},
+	"sourceSize": {"w":100,"h":100}
+},
+{
+	"filename": "mm_licensing.png",
+	"frame": {"x":2,"y":435,"w":315,"h":60},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":315,"h":60},
+	"sourceSize": {"w":315,"h":60}
+},
+{
+	"filename": "mm_logo.png",
+	"frame": {"x":2,"y":2,"w":500,"h":229},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":500,"h":229},
+	"sourceSize": {"w":500,"h":229}
+}],
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "UI_mainmenu0.png",
+	"format": "RGBA8888",
+	"size": {"w":508,"h":497},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:65f547043fdf82e1dc47ce96fa98ab17:9cf61f55a44160c9abe323abeea43064:376790a73d151583a501284c637616c0$"
+}
+}

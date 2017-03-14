@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head lang="ch">
+    <meta charset="UTF-8">
+    <title>你踢不了欧洲杯，至少能赢欧洲杯大奖啊！</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <script src="Public/Home/js/jquery-1.12.0.min.js"></script>
+    <script src="Public/Home/js/jquery.imgpreload.min.js"></script>
+    <link rel="stylesheet" href="Public/Home/css/common.css">
+    <link rel="stylesheet" href="Public/Home/css/app.css">
+    <div style="display: none">
+        <img src="Public/Home/imgs/toutu2.png">
+    </div>
+</head>
+<body>
+<div style="display: block" id="start10">
+    <div class="content">
+        <form method="post">
+            <img class="img101" src="Public/Home/imgs/bank.png" alt="">
+            <img class="img102" src="Public/Home/imgs/2logo.png" alt="">
+            <img class="img104" src="Public/Home/imgs/sub_tbg.png" alt="">
+
+            <div class="textShow">
+                姓名：<input class="user" name="user" type="text"/>
+                <br><br>
+                手机：<input class="phone" name="phone" type="tel"/>
+            </div>
+            <button>
+                <img class="img107" src="Public/Home/imgs/sub_end.png" alt="">
+            </button>
+        </form>
+
+    </div>
+</div>
+	<script>
+       $(".img107").click( function () {
+			if (!(/^1[3|4|5|8][0-9]\d{4,8}$/.test($("form .phone").val()))||!(/^[\u4e00-\u9fa5]|[a-zA-Z]{1,20}$/.test($("form .user").val()))) {
+       	alert("不是完整的11位手机号或者姓名不符合规定");
+       	return false;
+   }
+});
+
+</script>
+
+<div id="start11" style="display: none">
+    <h1>竖屏效果更佳</h1>
+</div>
+<script>
+    window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", function() {
+        if (window.orientation === 180 || window.orientation === 0) {
+           $("#start11").hide()
+        }
+        if (window.orientation === 90 || window.orientation === -90 ){
+            $("#start11").show()
+        }
+    }, false);
+    window.history.forward(1);
+</script>
+<!--<script type="text/javascript">
+    // 对浏览器的UserAgent进行正则匹配，不含有微信独有标识的则为其他浏览器
+    var useragent = navigator.userAgent;
+    if (useragent.match(/MicroMessenger/i) != 'MicroMessenger') {
+        // 这里警告框会阻塞当前页面继续加载
+        alert('已禁止本次访问：您必须使用微信内置浏览器访问本页面！');
+        // 以下代码是用javascript强行关闭当前页面
+        var opened = window.open('about:blank', '_self');
+        opened.opener = null;
+        opened.close();
+    }
+</script>-->
+</body>
+</html>

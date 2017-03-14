@@ -1,0 +1,131 @@
+html,body{
+    height:100%;
+    overflow:hidden;
+    background:#000;
+}
+
+body, canvas, div {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -khtml-user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.hoowu_main{position:relative;height:100%;margin:0 auto;}
+
+.hoowu_home {
+    position: absolute;
+    margin-top: 0px;
+    margin-right: 0px;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #740200;
+    z-index:1001;
+}
+
+.hoowu_home_bottom {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    top:0;
+}
+
+.hoowu_rule_button {
+
+    cursor: pointer;
+}
+
+.hoowu_home_logo {
+    position: absolute;
+    width: 429px;
+    height: 133px;
+    background:url("./logo.png?t=20150914220110") no-repeat;
+    background-size:100%;
+    left: 50%;
+    top: 28%;
+    margin-left:-111px;
+    margin-top:-72px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.hoowu_home_button {
+    position:absolute;
+    left: 50%;
+    top: 65%;
+    width:102px;
+    height:102px;
+    margin:-51px;
+}
+
+@-webkit-keyframes hoowu_start_button_wave{
+    0%{-webkit-transform:scale(1) translateZ(0);opacity:1}
+    100%{-webkit-transform:scale(1.1) translateZ(0);opacity:.1}
+}
+
+@keyframes hoowu_start_button_wave{
+    0%{transform:scale(1) translateZ(0);opacity:1}
+    100%{-webkit-transform:scale(1.1) translateZ(0);opacity:.1}
+}
+
+.hoowu_start_button_wave{
+    position:absolute;
+    z-index:1;
+    width:136px;
+    height:136px;
+    top:-17px;
+    left:-17px;
+    background-image:url(button_wave.png?t=20150914220110);background-size:136px;-webkit-animation:hoowu_start_button_wave 1s infinite linear;animation:hoowu_start_button_wave 1s infinite linear
+}
+
+.hoowu_start_button {
+    position: absolute;
+    z-index:2;
+    width: 100%;
+    height: 100%;
+    left: 0%;
+    top: 0%;
+    color: #ffffff;
+    cursor: pointer;
+    background-image:url(start_button.png?t=20150914220110);
+    background-size:102px;
+}
+
+.hoowu_award_button {
+    position: absolute;
+    left: 0%;
+    top: 125%;
+    width:100%;
+    color: #ed093a;
+    cursor: pointer;
+    font-size:1.0em;
+    padding-bottom:4px;
+    text-align:center;
+    border-bottom:1px solid #ed093a;
+}
+
+@-webkit-keyframes circle{
+    0%{-webkit-transform:rotate(0deg) translateZ(0)}
+    100%{-webkit-transform:rotate(345deg) translateZ(0)}
+}
+@keyframes circle{
+    0%{transform:rotate(0deg) translateZ(0)}
+    100%{transform:rotate(345deg) translateZ(0)}
+}
+
+.loading{z-index:1100!important;height:100%;width:100%;display:block;opacity:.8;position:absolute;top:0;background-color:#3d3d3d}
+.circle{position:absolute;left:50%;top:65%;margin:-56px;width:112px;height:112px;-webkit-animation:circle 1s linear infinite;animation:circle 1s linear infinite;background-image:url(loading_button_rotate.png?t=20150914220110);background-size:100%;}
+.loadingImg{display:block;position:absolute;left:50%;top:65%;width:102px;height:102px;margin:-51px;background-image:url(loading_button.png?t=20150914220110);background-size:100%}
+
+.hoowu_logo{position:fixed;z-index:1002;left:50%;bottom:3%;margin-left:-75px;width:150px;height:27px;background:url('hoowu_logo.png?t=20150914220110') no-repeat;background-size:100%;}
+
+.Tida-enter-header{position:relative;z-index:2;}
+
+.hoowu_auth{display:none;}
+
+.gameCanvasBg{width:100%;height:100%;visibility:hidden;margin:0 auto;}
+.gameCanvas{margin:0 auto;}

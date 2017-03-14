@@ -1,0 +1,579 @@
+@charset "utf-8";
+/* CSS Document */
+* {-webkit-tap-highlight-color: rgba(255,0,0,0);}
+body,div,p,table,tr,th,td,form,input,textarea,fieldset,blockquote,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd{margin:0;padding:0;list-style-type:none;}
+html,body{padding:0px;margin:0px;width:100%;height:100%;font-size:1.2rem;font-family:"微软雅黑";}
+a,img{border:0;}
+
+/* ********加载页样式*******/
+.load{margin:200px auto 0;width:150px;text-align:center;}
+.load > div{width:30px;height:30px;background-color:#096;border-radius:100%;display:inline-block;-webkit-animation:scaledot 1.4s infinite ease-in-out;animation:scaledot 1.4s infinite ease-in-out;-webkit-animation-fill-mode:both;animation-fill-mode:both;}
+.load .bounce1{-webkit-animation-delay:-0.32s;animation-delay:-0.32s;}
+.load .bounce2{-webkit-animation-delay:-0.16s;animation-delay:-0.16s;}
+
+
+/* ********加载页动画*******/
+@-webkit-keyframes scaledot{
+	0%,80%,100%{-webkit-transform:scale(0.0)}
+	40%{-webkit-transform:scale(1.0)}
+}
+@keyframes scaledot{
+	0%,80%,100%{transform:scale(0.0);-webkit-transform:scale(0.0);}
+	40%{transform:scale(1.0);-webkit-transform:scale(1.0);}
+}
+img{width:100%;vertical-align:middle;}
+.hide{display:none;}
+.music{position:fixed;right:0;top:0;padding:3%;z-index:9;width:9%;}
+
+/**钱币飘落**/
+@keyframes mysnow{
+0%{
+bottom:100%;
+opacity:0;
+}
+50%{
+opacity:1;
+transform: rotate(108deg);
+}
+100%{
+transform: rotate(0deg);
+opacity: 0;
+bottom:30%;
+}
+}
+@-webkit-keyframes mysnow{
+0%{
+bottom:100%;
+opacity:0;
+}
+50%{
+opacity:1;
+transform: rotate(108deg);
+}
+100%{
+transform: rotate(0deg);
+opacity: 0;
+bottom:30%;
+}
+}
+@-moz-keyframes mysnow{
+0%{
+bottom:100%;
+opacity:0;
+}
+50%{
+opacity:1;
+transform: rotate(108deg);
+}
+100%{
+transform: rotate(0deg);
+opacity: 0;
+bottom:30%;
+}
+}
+.roll{
+position:absolute;
+opacity:0;
+animation: mysnow 4s ;
+-webkit-animation: mysnow 4s ;
+-moz-animation: mysnow 4s ;
+height:26px;
+width:26px;
+}
+.qian_luo{position:fixed;left:0;top:0;width:100%;z-index:999;}
+.div{
+position:absolute;
+}
+
+.shouye{width:100%;height:100%;position:relative;overflow:hidden;}
+.page_bg{width:100%;height:100%;}
+.logo{position:absolute;left:5%;top:0;width:19.5%;}
+.zhuti,.zhuti2{position:absolute;left:0;top:35%;}
+.shou_txt{position:absolute;left:0;top:59%;}
+.shou_txt2,.shou_txt3{position:absolute;left:0;top:59%;}
+.tishi{position:absolute;left:17%;top:2%;width:66%;text-align:center;color:#fff;font-size:1.5rem;font-weight:bold;line-height:3rem;}
+.start_btn,.TA_btn{position:absolute;left:16%;top:71%;width:68%;}
+.ta_txt, .tips{position:absolute;left:9%;top:67%;width:82%;text-align:center;font-size:1.2rem;color:#fff;}
+.share_btn{position:absolute;left:19%;top:75%;width:62%;}
+
+.phb_btn{position:absolute;left:4%;top:85%;width:26.5%;}
+.rule_btn{position:absolute;left:38%;top:85%;width:26.5%;}
+.caifu_btn{position:absolute;right:2%;top:85%;width:26.5%;}
+.suning_txt{position:absolute;left:0;bottom:0;}
+
+.yaoq_wap{width:100%;height:100%;position:absolute;left:0;top:0;overflow:hidden;}
+
+.rule_wap, .phb_wap{width:100%;height:100%;overflow:hidden;position:absolute;left:0;top:0;background:rgba(0,0,0,0.6);z-index:1000;}
+.rule{width:92%;margin:25% auto 0;position:relative;}
+.rule_txt{position:absolute;left:0;top:13%;}
+.close_btn,.wan_close{position:absolute;width:16%;right:-1%;top:-4%;}
+.rule_sbtn{position:absolute;width:60%;left:20%;bottom:3%;}
+.rule_tit{position:absolute;width:66%;left:17%;top:-7%;}
+
+.phb_box{width:90%;margin:15% auto 0;position:relative;}
+.phb_tit{position:absolute;left:15.5%;width:69%;top:-6%;}
+.jinbi_zong{width:84%;position:absolute;left:8%;top:7%;text-align:center;color:#ff6c00;font-size:1.4rem;font-weight:bold;border-bottom:1px solid #d2aa7e;padding-bottom:3%;}
+.phb_scroll{overflow-y:scroll;position:absolute;left:7%;width:90%;height:68%;top:16%;}
+.phb_con{width:95%;}
+.phb_num{display:inline-block;width:2rem;height:2rem;margin-right:1%;vertical-align:middle;font-size:1.2rem;font-weight:bold;color:#755429;text-align:center;}
+.touxiang{display:inline-block;width:4rem;height:4rem;vertical-align:middle;border-radius:50%;}
+.touxiang img{border-radius:50%;}
+.phb_con li{overflow:hidden;margin-bottom:4%;}
+.phb_left{width:64%;float:left;}
+.user_name{display:inline-block;vertical-align:middle;width:48%;font-size:1.2rem;margin-left:4%;}
+.phb_right{float:right;width:35%;line-height:4rem;text-align:right;font-size:1.3rem;color:#ff6600;}
+.phb_sbtn{position:absolute;width:60%;left:20%;bottom:2%;}
+.phb_close{position:absolute;width:17%;right:-2%;top:-4%;}
+
+/**游戏开始**/
+.game{width:100%;height:100%;overflow:hidden;position:absolute;left:0;top:0;background:#ffecbc;}
+.game_bot{position:absolute;left:0;bottom:0;}
+.pager,.pager_txt,.over_pager{position:absolute;left:0;bottom:0;}
+.jifen{width:58%;top:3%;position:absolute;left:21%;}
+.score_txt{font-size:1.4rem;color:#8c160e;position:absolute;left:29%;top:20%;font-weight:bold;width:40%;text-align:center;}
+.score{font-family:"Airal";}
+.time_txt{font-size:1.5rem;font-family:"Airal";font-weight:bold;color:#8c160e;position:absolute;left:31%;top:68%;text-align:center;width:37%;}
+.jbshu{position:absolute;left:25%;top:41%;width:50%;text-align:center;}
+.jbshu img{width:16px;height:24px;}
+.jinbi1{width:9%;position:absolute;left:5%;top:33%;}
+.jinbi2{width:9%;position:absolute;left:15%;top:33%;}
+.jinbi3{width:9%;position:absolute;left:20%;top:33%;}
+.jinbi4{width:9%;position:absolute;left:25%;top:33%;}
+.jinbi5{width:9%;position:absolute;left:30%;top:33%;}
+.jinbi6{width:9%;position:absolute;left:35%;top:33%;}
+.jinbi7{width:9%;position:absolute;left:45%;top:33%;}
+.jinbi8{width:9%;position:absolute;left:55%;top:33%;}
+.jinbi9{width:9%;position:absolute;left:65%;top:33%;}
+.jinbi10{width:9%;position:absolute;left:80%;top:33%;}
+
+
+.game_rule,.game_over{width:100%;height:100%;overflow:hidden;position:absolute;left:0;top:0;background:rgba(0,0,0,0.6);}
+.rule_txt2{position:absolute;left:0;top:18%;}
+.kaishi{position:absolute;left:30%;top:72%;width:40%;}
+.gameover_txt{position:absolute;left:0;top:22%;width:100%;text-align:center;}
+.gameover_txt1{font-size:2.2rem;color:#eeb403;font-weight:bold;line-height:4rem;}
+.gameover_txt2{font-size:1.6rem;color:#731700;font-weight:bold;line-height:3rem;}
+.gameover_txt2 span{font-size:2.3rem;color:#eeb403;}
+.queding{width:47%;position:absolute;left:26.5%;top:65%;}
+.again_btn{width:36%;position:absolute;left:11%;top:65%;}
+.tijiao{width:36%;position:absolute;right:11%;top:65%;}
+.ready_tips{width:58%;position:absolute;left:22%;top:30%;}
+.go_tips{width:58%;position:absolute;left:22%;top:39%;}
+
+/**我的财富*/
+.money_wap{background:url(../img/caifu_bg.png) repeat;width:100%;height:100%;overflow:hidden;position:absolute;left:0;top:0;}
+.money_tit{margin:2% auto 0;}
+.my_money{font-size:1.6rem;font-weight:bold;color:#ff6c00;text-align:center;margin-top:1%;}
+.duih_btn{width:33%;margin:1.5% auto 0;}
+.quan_box{width:92%;border:3px solid #c9ab7d;background:#c9ab7d;margin:4% auto 0;padding-bottom:3%;}
+.tab_h{font-size:1.2rem;color:#8f5805;padding-top:2%;line-height:2.2rem;}
+.jine_h,.jine_num{display:inline-block;width:30%;text-align:center;}
+.dhm_h,.dhm_num{display:inline-block;width:38%;margin-left:2%;text-align:center;}
+.quan_scroll{width:100%;overflow-y:scroll;font-size:1.5rem;color:#fff;height:17rem;}
+.quan_scroll li{margin-bottom:2%;line-height:3rem;}
+.shiyong_btn{width:23%;display:inline-block;margin-left:4%;}
+.return_shou{width:45%;margin:5% auto 0;}
+.com_mess{margin-top:2%;}
+
+/**兑换券**/
+.dhq_wap{background:url(../img/caifu_bg.png) repeat;width:100%;height:100%;overflow:hidden;position:absolute;left:0;top:0;}
+.quan_con{width:92%;margin-left:8%;overflow:hidden;margin-top:1%;}
+.quan_con li{float:left;width:46%;margin:0 4% 1% 0;}
+.quan_img{width:100%;}
+.quan_txt{width:100%;text-align:center;font-family:"微软雅黑";font-size:1.2rem;color:#272727;}
+.quan_txt span{color:#ff6c00;}
+.quan_con .last{float:none;width:46%;margin:0 0 0 23%;}
+.return{width:45%;margin:2% auto 0;}
+
+.tchuang{width:100%;height:100%;overflow:hidden;position:absolute;left:0;top:0;background:rgba(0,0,0,0.6);}
+.tc_box{width:82%;margin:30% auto 0;position:relative;}
+.tanc_tit{position:absolute;left:0;top:-11%;}
+.quan1_txt,.quan2_txt,.quan3_txt,.quan4_txt,.quan5_txt{position:absolute;left:0;top:24%;}
+.confirm_btn{position:absolute;left:10%;top:75%;width:36%;}
+.cancel_btn{position:absolute;right:10%;top:75%;width:36%;}
+.warm{font-size:1rem;position:absolute;left:5%;top:60%;text-align:center;width:90%;color:#ff1800;}
+.warm2{font-size:1rem;text-align:center;width:90%;margin:3% auto 0;color:#ff1800;}
+
+/**打完提示**/
+.wan_tips{width:100%;height:100%;overflow:hidden;position:absolute;left:0;top:0;background:rgba(0,0,0,0.6);}
+.wan_box{width:92%;margin:25% auto 0;position:relative;}
+.wan_txt{position:absolute;left:3%;top:15%;width:94%;}
+.wan_txt2{position:absolute;left:3%;top:24%;width:94%;}
+.code{position:absolute;left:32%;top:55%;width:36%;}
+.code_txt{position:absolute;left:3%;top:88%;width:94%;}
+
+/**游戏结束**/
+.gameOver{width:100%;height:100%;position:absolute;left:0;top:0;overflow:hidden;}
+.mymon_btn{width:27%;position:absolute;right:12%;top:4%;}
+.over_txt{position:absolute;left:0;top:55%;}
+.over_share{width:60%;position:absolute;left:20%;top:64%;}
+.code2{width:30%;position:absolute;left:34%;top:75%;}
+.code_txt2{position:absolute;left:0;top:95%;}
+.mine_btn{width:63%;left:18.5%;position:absolute;top:56%;}
+.wan_share{width:64%;left:18%;position:absolute;top:67%;}
+.result_txt{width:100%;text-align:center;position:absolute;left:0;top:10%;}
+.result_txt1{font-size:2.2rem;color:#ffe200;font-weight:bold;line-height:2.6rem;}
+.result_txt2{font-size:1.6rem;color:#fff;font-weight:bold;line-height:2.6rem;}
+.result_txt2 span{font-size:2.3rem;color:#ffe200;}
+
+.share_wap{position:absolute;width:100%;height:100%;left:0;top:0;overflow:hidden;z-index:1000;}
+.share_close{position:absolute;left:18%;bottom:8%;width:64%;}
+
+/**动画**/
+@-webkit-keyframes bounceIn {
+  0%, 20%, 40%, 60%, 80%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+            transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+            transform: scale3d(.3, .3, .3);
+  }
+
+  20% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+            transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  40% {
+    -webkit-transform: scale3d(.9, .9, .9);
+            transform: scale3d(.9, .9, .9);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03, 1.03, 1.03);
+            transform: scale3d(1.03, 1.03, 1.03);
+  }
+
+  80% {
+    -webkit-transform: scale3d(.97, .97, .97);
+            transform: scale3d(.97, .97, .97);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes bounceIn {
+  0%, 20%, 40%, 60%, 80%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+            transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+            transform: scale3d(.3, .3, .3);
+  }
+
+  20% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+            transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  40% {
+    -webkit-transform: scale3d(.9, .9, .9);
+            transform: scale3d(.9, .9, .9);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03, 1.03, 1.03);
+            transform: scale3d(1.03, 1.03, 1.03);
+  }
+
+  80% {
+    -webkit-transform: scale3d(.97, .97, .97);
+            transform: scale3d(.97, .97, .97);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+}
+
+.bounceIn {
+  -webkit-animation: bounceIn 0.8s normal;
+          animation: bounceIn 0.8s normal;
+}
+@-webkit-keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+            transform: translate3d(100%, 0, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+@-webkit-keyframes lightSpeedIn {
+  0% {
+    -webkit-transform: translate3d(100%, 0, 0) skewX(-30deg);
+            transform: translate3d(100%, 0, 0) skewX(-30deg);
+    opacity: 0;
+  }
+
+  60% {
+    -webkit-transform: skewX(20deg);
+            transform: skewX(20deg);
+    opacity: 1;
+  }
+
+  80% {
+    -webkit-transform: skewX(-5deg);
+            transform: skewX(-5deg);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 1;
+  }
+}
+
+@keyframes lightSpeedIn {
+  0% {
+    -webkit-transform: translate3d(100%, 0, 0) skewX(-30deg);
+            transform: translate3d(100%, 0, 0) skewX(-30deg);
+    opacity: 0;
+  }
+
+  60% {
+    -webkit-transform: skewX(20deg);
+            transform: skewX(20deg);
+    opacity: 1;
+  }
+
+  80% {
+    -webkit-transform: skewX(-5deg);
+            transform: skewX(-5deg);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: none;
+            transform: none;
+    opacity: 1;
+  }
+}
+
+.lightSpeedIn {
+  -webkit-animation: lightSpeedIn 0.5s ease-out;
+          animation: lightSpeedIn 0.5s ease-out;
+}
+
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+            transform: translate3d(100%, 0, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+.fadeInLeft {
+  -webkit-animation: fadeInLeft 0.5s ease;
+          animation: fadeInLeft 0.5s ease;
+}
+
+@-webkit-keyframes wobble {
+  0% {
+    -webkit-transform: none;
+            transform: none;
+  }
+
+  15% {
+    -webkit-transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -5deg);
+            transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -5deg);
+  }
+
+  30% {
+    -webkit-transform: translate3d(4%, 0, 0) rotate3d(0, 0, 1, 3deg);
+            transform: translate3d(4%, 0, 0) rotate3d(0, 0, 1, 3deg);
+  }
+
+  45% {
+    -webkit-transform: translate3d(-3%, 0, 0) rotate3d(0, 0, 1, -3deg);
+            transform: translate3d(-3%, 0, 0) rotate3d(0, 0, 1, -3deg);
+  }
+
+  60% {
+    -webkit-transform: translate3d(2%, 0, 0) rotate3d(0, 0, 1, 2deg);
+            transform: translate3d(2%, 0, 0) rotate3d(0, 0, 1, 2deg);
+  }
+
+  75% {
+    -webkit-transform: translate3d(-1%, 0, 0) rotate3d(0, 0, 1, -1deg);
+            transform: translate3d(-1%, 0, 0) rotate3d(0, 0, 1, -1deg);
+  }
+
+  100% {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes wobble {
+  0% {
+    -webkit-transform: none;
+            transform: none;
+  }
+
+  15% {
+    -webkit-transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -5deg);
+            transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -5deg);
+  }
+
+  30% {
+    -webkit-transform: translate3d(4%, 0, 0) rotate3d(0, 0, 1, 3deg);
+            transform: translate3d(4%, 0, 0) rotate3d(0, 0, 1, 3deg);
+  }
+
+  45% {
+    -webkit-transform: translate3d(-3%, 0, 0) rotate3d(0, 0, 1, -3deg);
+            transform: translate3d(-3%, 0, 0) rotate3d(0, 0, 1, -3deg);
+  }
+
+  60% {
+    -webkit-transform: translate3d(2%, 0, 0) rotate3d(0, 0, 1, 2deg);
+            transform: translate3d(2%, 0, 0) rotate3d(0, 0, 1, 2deg);
+  }
+
+  75% {
+    -webkit-transform: translate3d(-1%, 0, 0) rotate3d(0, 0, 1, -1deg);
+            transform: translate3d(-1%, 0, 0) rotate3d(0, 0, 1, -1deg);
+  }
+
+  100% {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+.wobble {
+  -webkit-animation-name: wobble;
+          animation-name: wobble;
+		 -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+            transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+            transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
+  }
+}
+
+.pulse {
+  -webkit-animation: pulse 0.8s infinite;
+          animation: pulse 0.8s infinite;
+}
+
+@-webkit-keyframes flash {
+  0%, 50%, 100% {
+    opacity: 1;
+  }
+
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
+@keyframes flash {
+  0%, 50%, 100% {
+    opacity: 1;
+  }
+
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
+.flash {
+  -webkit-animation: flash 2s infinite;
+          animation: flash 2s infinite;
+}
+
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0%, 0) scale3d(1, 1, 1);
+            transform: translate3d(0, 0%, 0) scale3d(1, 1, 1);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 500%, 0) scale3d(0.6, 0.6, 0.6);
+            transform: translate3d(0, 500%, 0) scale3d(0.6, 0.6, 0.6);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0%, 0) scale3d(1, 1, 1);
+            transform: translate3d(0, 0%, 0) scale3d(1, 1, 1);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 500%, 0) scale3d(0.6, 0.6, 0.6);
+            transform: translate3d(0, 500%, 0) scale3d(0.6, 0.6, 0.6);
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+          animation-name: fadeInUp;
+		    -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}

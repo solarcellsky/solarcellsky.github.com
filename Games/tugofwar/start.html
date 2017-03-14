@@ -1,0 +1,164 @@
+
+<!DOCTYPE HTML>
+<html manifest="app.appcache">
+<head>
+    <meta charset="utf-8">
+    <title>手机拔河</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="full-screen" content="true"/>
+    <meta name="screen-orientation" content="portrait"/>
+    <meta name="x5-fullscreen" content="true"/>
+    <meta name="360-fullscreen" content="true"/>
+    <style>
+        html, body {
+            -ms-touch-action: none;
+            background: #629a65;
+            padding: 0;
+            border: 0;
+            margin: 0;
+            height: 100%;
+            position: absolute;
+            width: 100%;
+        }
+        body{
+            background-repeat: no-repeat;
+            -webkit-background-size: 100% 100%;
+            background-size: 100% 100%;
+        }
+        canvas{
+            /*background: rgba(255,255,255,0.1);*/
+            /*border: 1px solid #333;*/
+        }
+
+        .qrcode{
+            position: absolute;
+            bottom: 20px;
+            right: 0;
+            left: 0;
+            margin: auto;
+            height: 300px;
+            width: 300px;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 10px;
+        }
+        .qrcode img{ display: block; }
+        #qrBlue{
+            right:40%;
+        }
+        #qrYellow{
+            left:40%;
+        }
+    </style>
+
+    <!--这个标签为通过egret提供的第三方库的方式生成的 javascript 文件-->
+    <!--modules_files_start-->
+	<script egret="lib" src="libs/modules/egret/egret.min.js"></script>
+	<script egret="lib" src="libs/modules/egret/egret.web.min.js"></script>
+	<script egret="lib" src="libs/modules/game/game.min.js"></script>
+	<script egret="lib" src="libs/modules/game/game.web.min.js"></script>
+	<script egret="lib" src="libs/modules/tween/tween.min.js"></script>
+	<script egret="lib" src="libs/modules/res/res.min.js"></script>
+	<script egret="lib" src="libs/modules/socket.io/socket.io.min.js"></script>
+	<!--modules_files_end-->
+
+    <!--这个标签为不通过egret提供的第三方库的方式使用的 javascript 文件，请将这些文件放在libs下，但不要放在modules下面。-->
+    <!--other_libs_files_start-->
+    <!--other_libs_files_end-->
+
+    <!--这个标签会被替换为项目中所有的 javascript 文件-->
+    <!--game_files_start-->
+	<script src="main.min.js"></script>
+	<!--game_files_end-->
+</head>
+<body id="_body">
+    <div style="margin: auto;width: 100%;height: 100%;" class="egret-player"
+         data-entry-class="Main"
+         data-orientation="auto"
+         data-scale-mode="showAll"
+         data-resolution-mode="retina"
+         data-frame-rate="30"
+         data-content-width="2300"
+         data-content-height="1300"
+         data-show-paint-rect="false"
+         data-multi-fingered="2"
+         data-show-fps="false" data-show-log="false"
+         data-log-filter="" data-show-fps-style="x:0,y:0,size:30">
+    </div>
+
+    <div class="qrcode" id="qrBlue"></div>
+    <div class="qrcode" id="qrYellow"></div>
+    
+    <script src="common/qrcode.js"></script>
+    <script src="common/config.js"></script>
+    <script>
+        {   
+            var winW = window.innerWidth;
+            var h = (winW*0.7* 257 /1842 ) -6;
+            h = 300;
+            var $qrBlue = document.getElementById('qrBlue');
+            var $qrYellow = document.getElementById('qrYellow');
+            $qrBlue.style.width = h+'px';
+            $qrYellow.style.width = h+'px';
+
+
+            window.showQRcode = function(data) {
+
+                console.log(data);
+                var url = _conf.uri+"rid="+data.rid+"&gid="+data.gid+"&team=";
+                console.log(url);
+                $qrBlue.innerHTML="";
+                $qrYellow.innerHTML="";
+                new QRCode($qrBlue, {
+                    width : h, 
+                    height : h,
+                    text:url+'blue'
+                });
+
+                new QRCode($qrYellow, {
+                    width : h, 
+                    height : h,
+                    text:url+"yellow"
+                });
+
+                $qrBlue.style.display = "block";
+                $qrYellow.style.display = "block";
+            };
+
+            window.hideQRcode = function() {
+                $qrBlue.style.display = "none";
+                $qrYellow.style.display = "none";
+            }
+
+            function GetQueryString(name) { 
+                var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)","i"); 
+                var r = window.location.search.substr(1).match(reg); 
+                if (r!=null) return (r[2]); return null; 
+            }
+
+            var cus = GetQueryString('cus');
+            var bg;
+
+            switch(cus){
+                // 万达
+                case 'wanda':
+                    bg =  'url(resource/assets/wanda.jpg)';
+                    break;
+                // 粉丝魔方
+                case 'fsmf':
+                    bg =  'url(resource/assets/fsmf.jpg)';
+                    break;
+                // 默认
+                default :
+                    bg =  'url(resource/assets/bg.png)';
+            }
+
+            document.getElementById('_body').style.backgroundImage = bg;
+        }
+
+        egret.runEgret();
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+
+<!doctype html>
+<!-- <html lang="en" manifest="cache/app.appcache"> -->
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>PINGPONG</title>
+    <meta name="viewport" content="width=device-width,user-scalable=0, initial-scale=1, minimum-scale=1, maximum-scale=1,minimal-ui">
+    <!-- css files start -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <!-- css files end -->
+  </head>
+  <body>
+    <div id="main" class="center">
+      <div id="index">
+        <img class="center" id="logo" src="assets/img/logo.png" alt="" />
+        <img src="assets/img/p1.png" class="center" id="player">
+        <img class="center" src="assets/img/waiting.png" alt="" id="waiting">
+      </div>
+      <div id="game">
+        <img src="assets/img/finger.png" alt="">
+      </div>
+      <div id="result">
+        <img id="resultImg" src="assets/img/win.png" alt="">
+      </div>
+    </div>
+    <img class="center" src="assets/img/cp.png" alt="" id="cp">
+  </body>
+</html>
+<script type="text/javascript">
+var userInfo = {
+name : 'kaiser',
+openid : 'nice',
+headimgurl : 'fdsafda'
+}
+var rid = "";
+</script>
+<!-- js files start -->
+<script src="assets/libs/jquery.js"></script>
+<script src="assets/libs/underscore.js"></script>
+<script src="assets/libs/socket.io.min.js"></script>
+<script src="assets/js/app.js"></script>
+<!-- js files end -->

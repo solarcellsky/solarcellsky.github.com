@@ -1,0 +1,386 @@
+#rotate{position:fixed;left:0;top:0;z-index:20000;width:100%;height:100%;background:#FFF;text-align:center;display:none;}
+.shareDiv{
+    width:100%;
+    height:100%;
+    background:url(../res/simpleMainBg.png) no-repeat;
+    background-size:100% 100%;
+    position: absolute;
+    z-index: 2000;
+    display: none;
+}
+.shareBox{
+    width:294px;
+    height:402px;
+    background:url(../res/shareBox.png) no-repeat;
+    background-size:100% 100%;
+    right: 10px;
+    top: 10px;
+    position: absolute;
+    z-index: 3000;
+}
+
+.priseDiv{
+    width:100%;
+    height:100%;
+    background: url(../res/loadingpage.jpg) no-repeat;
+    background-size:100% 100%;
+    position: absolute;
+    z-index: 2000;
+    display: none;
+}
+
+.priseDivTitle{
+    width: 295px;
+    height: 113.5px;
+    position: absolute;
+    background-image: url(../res/priseTitle.png);
+    background-size: 100% 100%;
+    left:50%;
+    margin-left: -147px;
+    z-index: -1;
+    top: 0px;
+}
+.prise1{
+    width: 302.5px;
+    height: 156.5px;
+    position: absolute;
+    background-image: url(../res/prise1.png);
+    background-size: 100% 100%;
+    left:50%;
+    top:110px;
+    margin-left: -151px;
+    z-index: 1000;
+}
+.prise2{
+    width: 302.5px;
+    height: 150px;
+    position: absolute;
+    top:280px;
+    background-image: url(../res/prise2.png);
+    background-size: 100% 100%;
+    left:50%;
+    margin-left: -151px;
+    z-index:1000;
+}
+.priseX{
+    width: 93.5px;
+    height: 52px;
+    position: absolute;
+    background-image: url(../res/backbut.png);
+    background-size: 100% 100%;
+    right:0px;
+    margin-left: -46.75px;
+    left:50%;
+    bottom:23px;
+    z-index:2100;
+}
+.prisebottomword{
+    width: 276.5px;
+    height: 10px;
+    position: absolute;
+    background-image: url(../res/prisebottomword.png);
+    background-size: 100% 100%;
+    left:50%;
+    bottom: 3px;
+    margin-left: -138px;
+    z-index:1000;
+}
+
+.main{
+    width:100%;
+    height:100%;
+    background-image: url(../res/simpleMainBg.png);
+    background-size:100% 100%;
+    position: absolute;
+    z-index: 1000;
+    display: none;
+}
+.mainBox{
+   // padding-top: 100px;
+    background: url(../res/endBox5.png) no-repeat;
+    background-size: 100% 100%;
+    width:320px;
+    height:361px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    color:#af1c1d;
+}
+.mainBox h2{
+   margin: 0;
+    margin-bottom: 1%;
+}
+.maibBoxTitle{
+    width: 100%;
+    height: 160px;
+}
+.mainScoreBox{
+    background-image: url(../res/scoreBox.png);
+    background-size:100% 100%;
+    width: 70%;
+    height: 16%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sabcde{
+    width:23%;
+    height:100%;
+    margin: 0;
+    background-size: 90% 90%
+}
+.mainScoreWordBox{
+    width:70%;
+    height:94%;
+    font-size: 3em;
+
+    float: right;
+    margin: .5% 0 0 0;
+    color: #FFF;
+}
+.mainScoreWordBox p{
+   margin: auto 0 auto 0;
+}
+.mainWordBox{
+    width:256px;
+    height: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight:bold
+}
+.mainWordBox p{
+    margin: 0;
+    font-size: large;
+}
+.mainWordBox p span{
+    margin: 0;
+    font-size: x-large;
+}
+.mainButBox{
+
+    width:90%;
+    height:6em;
+    left: 50%;
+    margin-left: -45%;
+    text-align: center;
+    position: absolute;
+    bottom: 1%;
+}
+.shareBut{
+    background-image: url(../res/shareBut.png);
+    background-size:64px 64px;
+    background-repeat: no-repeat;
+    width:64px;
+    height:96px;
+    float: left;
+}
+.replayBut{
+    background-image: url(../res/replayBut.png);
+    background-size:64px 64px;
+    background-repeat: no-repeat;
+    width:64px;
+    height:96px;
+    position: absolute;
+    left: 50%;
+    margin-left: -2em;
+}
+.rankingBut{
+    background-image: url(../res/rankingBut.png);
+    background-size:64px 64px;
+    background-repeat: no-repeat;
+    width:64px;
+    height:96px;
+    float: right;
+    margin: 0;
+}
+.mainButWordBox{
+   color: #fff;
+    text-align: center;
+    position: absolute;
+    margin-top: 64px;
+    font-size: xx-small;
+    width: 64px;
+
+}
+
+.rankmain{
+    width:100%;
+    height:100%;
+    background-image: url(../res/loadingpage.jpg);
+    background-size:100% 100%;
+    position: absolute;
+    z-index: 1000;
+    display: none;
+}
+.rankingMainBox{
+    margin-right: auto;
+    margin-left: auto;
+    width: 315px;
+    height: 419px;
+}
+.rankingMainBoxTitle{
+    width: 320px;
+    height: 91.5px;
+    background-image: url(../res/rankingBoxTile.png);
+    background-size: 100% 100%;
+    left:50%;
+    margin-left: -160px;
+    position: absolute;
+    z-index: 2000;
+    top: 0px;
+}
+.rankingNamesBoxMain{
+    width: 315px;
+    height: 374.5px;
+    background: url(../res/rankingBox5.png) no-repeat;
+    background-size: 100% 100%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 48px;
+}
+.rankingMsg{
+    width:10%;
+    height:80%;
+    float: left;
+    margin-top: 2%;
+    font-size:large ;
+    font-weight: bolder;
+    color: #9d0303;
+}
+
+.rankingNamesBox{
+    width:80%;
+    height:220px;
+    margin-top: 65px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow:auto; /*任何时候都强制显示滚动条*/
+    overflow-x:hidden; /*需要的时候会出现滚动条*/
+}
+.rankingName{
+    margin-top: 2px;
+     width:100%;
+     height:36px;
+     background-size: 100% 100%;
+    border-bottom: dotted 1px #9d0303;
+ }
+
+.loginMsg{
+    margin-top: 65px;
+    width:191.5px;
+    height:52px;
+    background: url(../res/loginmsg.png) no-repeat;
+    background-size: 100% 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.rankmainButBox{
+    margin-top:1em;
+    margin-left: -40%;
+    width:80%;
+    height:5em;
+    position:absolute;
+    left:50%;
+    bottom:1%;
+    text-align: center;
+}
+
+.priseBut{
+    background-image: url(../res/priseBut.png);
+    background-size:4em 4em;
+    background-repeat: no-repeat;
+    width:4em;
+    height: 5em;
+
+    float: right;
+}
+
+.loginMain{
+    width:100%;
+    height:100%;
+    background-image: url(../res/endloginbg.png);
+    background-size:cover;
+    background-position-y: -30px;
+    position: absolute;
+    z-index: 1000;
+    display: none;
+}
+
+.loginMsgBox{
+    width:246px;
+    height:260px;
+    margin-top:110px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url(../res/loginBox.png);
+    background-size:100% 100%;
+}
+
+.loginCenter{
+    margin-top: 1%;
+    width:147.5px;
+    height:52px;
+    background: url(../res/centerSubmit.png) no-repeat;
+    background-size: 100% 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.loginX{
+    position: absolute;
+    z-index: 3000;
+    width:32.5px;
+    height:32.5px;
+    right: 5%;
+    background: url(../res/X.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.inputBox{
+    margin-top: 39%;
+    margin-right: 6%;
+    float: right;
+    height: 60%;
+}
+.inputBox p{
+    margin: 7% 5% 0 0;
+}
+
+.inputBox p input{
+    height: 20px;
+    width: 150px;
+}
+
+.rankNameMsgBox{
+    float: left;
+    width: 90px;
+    margin-top: 1%;
+}
+.rankNameMsgBox p{
+    color:#9d0303;
+    margin: 0;
+    font-weight: 500;
+    font-size: x-small;
+}
+.rankNameSecond{
+    width:95.2px;
+    height:29.2px;
+    font-size:large;
+    margin: 1% 3% 0 0;
+    text-align: center;
+    background:url(../res/scoreitem.png) ;
+    background-size: 100% 100%;
+    float: right;
+    color: #FFF;
+}
+.rankNameSecond p{
+    margin: 5px 0 0 0;
+}
+
+.endWord{
+    margin-left: auto;
+    margin-right: auto;
+    width: 265px;
+    margin-top: 5px;
+}

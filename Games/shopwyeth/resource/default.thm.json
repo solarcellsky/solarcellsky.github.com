@@ -1,0 +1,11 @@
+{
+	"skins":
+	{
+		"egret.gui.Button":"skins.theme.ColorButtonSkin",
+		"egret.gui.List":"skins.theme.ListSkin",
+		"egret.gui.Scroller":"skins.theme.ScrollerSkin",
+		"egret.gui.TextInput":"skins.theme.TextInputSkin",
+		"egret.gui.TitleWindow":"skins.theme.TitleWindowSkin",
+		"egret.gui.VScrollBar":"skins.theme.VScrollBarSkin"
+	}
+}

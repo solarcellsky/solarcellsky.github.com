@@ -1,0 +1,44 @@
+{"frames": [
+
+{
+	"filename": "credits_bg.png",
+	"frame": {"x":2,"y":2,"w":500,"h":600},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":500,"h":600},
+	"sourceSize": {"w":500,"h":600}
+},
+{
+	"filename": "credits_button.png",
+	"frame": {"x":2,"y":604,"w":300,"h":100},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":300,"h":100},
+	"sourceSize": {"w":300,"h":100}
+},
+{
+	"filename": "credits_button_press.png",
+	"frame": {"x":2,"y":948,"w":300,"h":100},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":300,"h":100},
+	"sourceSize": {"w":300,"h":100}
+},
+{
+	"filename": "credits_logo.png",
+	"frame": {"x":2,"y":706,"w":240,"h":240},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":240,"h":240},
+	"sourceSize": {"w":240,"h":240}
+}],
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "UI_credits0.png",
+	"format": "RGBA8888",
+	"size": {"w":504,"h":1050},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:13264c687aed667a86c3d3ac3f1ce78f:00eb74056e6cd2385f1bb6a3f5cf1609:50d16c5a2d675d5e713b03143328deb9$"
+}
+}

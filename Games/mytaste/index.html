@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta name="robots" content="none">
+    <meta name="viewport" id="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>看看 Kevin 的口味到底有多变态</title>
+    <link rel="stylesheet" type="text/css" href="css/qa.css">
+    <script>
+    window.onload = function() {
+        function getfont() {
+            var html1 = document.documentElement;
+            var screen = html1.clientWidth;
+            html1.style.fontSize = 0.0625 * screen + 'px';
+        }
+
+        getfont();
+        window.onresize = function() {
+            getfont();
+        }
+    }
+    </script>
+    <script src="js/jquery-1.8.3.min.js"></script>
+</head>
+
+<body>
+    <div class="wrap" id="step-1">
+        <div class="logo">
+            <img src="images/logo_alpha.png">
+        </div>
+        <div class="dtStepTwo content por">
+            <div class="progressBar por">
+                <div class="progressBarLabels xcenter">
+                    <span class="current">1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>4</span>
+                    <span>5</span>
+                    <span>6</span>
+                    <span>7</span>
+                    <span>8</span>
+                    <span>9</span>
+                    <span>10</span>
+                </div>
+                <div class="progressBarBgValidShape ycenter"></div>
+                <div class="progressBarBgInvalidShape xycenter"></div>
+            </div>
+            <div class="question center">
+                <div class="pic center">
+                    <img src="images/stepPic4.jpg?v12080930">
+                </div>
+                <p>觉得自己的厨艺怎么样？</p>
+            </div>
+            <div class="answer center">
+                <ul>
+                    <li data-qid="4" data-aid="0" data-qacontent="4_0">只擅长吃</li>
+                    <li data-qid="4" data-aid="1" data-qacontent="4_0">会做一些家常菜</li>
+                    <li data-qid="4" data-aid="2" data-qacontent="4_0">吃过我做的菜，都会爱上我</li>
+                </ul>
+            </div>
+            <div style="display:none">
+                <form id="submitForm" name="submitForm" action="http://h5.shihuo.me/topic/wx20151022/tm1405494.html?step=2" method="post">
+                    <div style="display:none">
+                        <input type="hidden" value="ZmI4MTgwOWQxZTk0ODYxNjQ3OWJhYjZlYTFlNTAwMDRlOGQ3MmQ2YQ==" name="_sh_token_">
+                    </div>
+                    <input type="hidden" id="qa_content" name="qa_content">
+                </form>
+            </div>
+        </div>
+        <script type="text/javascript">
+        var questions = [{
+            'id': '4',
+            'title': '觉得自己的厨艺怎么样？',
+            'answers': ["只擅长吃", "会做一些家常菜", "吃过我做的菜，都会爱上我"],
+            'qa_content': '4_0'
+        }, {
+            'id': '5',
+            'title': '吃饭时我一般在什么时候喝汤？',
+            'answers': ["饭前喝汤，先暖一下胃", "饭后喝汤，漱漱口", "边吃饭边喝汤"],
+            'qa_content': '5_0'
+        }, {
+            'id': '7',
+            'title': '涮火锅时我喜欢的荤素搭配是？',
+            'answers': ["荤菜多蔬菜少", "蔬菜多荤菜少", "全荤", "全素", "各占一半"],
+            'qa_content': '7_0'
+        }, {
+            'id': '11',
+            'title': '喜欢在包里放什么零食？',
+            'answers': ["饼干", "糖果", "饮品", "不放零食"],
+            'qa_content': '11_1'
+        }, {
+            'id': '12',
+            'title': '冬天最爱喝什么？',
+            'answers': ["咖啡", "奶茶", "蜂蜜水", "茶", "开水"],
+            'qa_content': '12_0'
+        }, {
+            'id': '16',
+            'title': '我对吃狗肉的态度是？',
+            'answers': ["反对", "不反对"],
+            'qa_content': '16_0'
+        }, {
+            'id': '17',
+            'title': '我最喜欢吃哪国菜？',
+            'answers': ["中国菜", "日本料理", "泰国菜", "法国菜", "其他"],
+            'qa_content': '17_2'
+        }, {
+            'id': '18',
+            'title': '我最受不了什么味道？',
+            'answers': ["汽油味", "油漆味", "口臭味", "食物放坏的味道", "其他"],
+            'qa_content': '18_0'
+        }, {
+            'id': '19',
+            'title': '我喝酸奶舔不舔酸奶盖？',
+            'answers': ["每次都舔", "从来不舔"],
+            'qa_content': '19_0'
+        }, {
+            'id': '20',
+            'title': '会在冬天吃冰淇淋吗？',
+            'answers': ["会", "不会", "其他"],
+            'qa_content': '20_1'
+        }, ];
+
+        $(function() { //入口函数开始
+            var dNum = 0,
+                userAnswers = [];
+
+            function getOrderQuestion() { //获取顺序题目开始
+                return questions[dNum];
+            } //获取顺序题目结束
+
+            function genarateQuestionHtml(currentQuestion) { //产生相应内容开始
+                $('.question .pic img').attr('src', 'images/stepPic' + currentQuestion.id + '.jpg?v12080930');
+                $('.question p').html(currentQuestion.title);
+
+                var answersHtml = '';
+                $.each(currentQuestion.answers, function(id, answer) {
+                    answersHtml += '<li data-qid="' + currentQuestion.id + '" data-aid="' + id + '" data-qacontent="' + currentQuestion.qa_content + '">' + answer + '</li>';
+                });
+                $('.answer ul').html(answersHtml);
+                $('.answer li').bind('click', function() {
+                    nextFn(this);
+                });
+            } //产生相应内容结束
+
+            function nextFn(_this) {
+                var qid = parseInt($(_this).attr('data-qid'));
+                var aid = parseInt($(_this).attr('data-aid'));
+                var trueQaContent = $(_this).attr('data-qacontent');
+                var qaContent = qid + '_' + aid;
+                userAnswers.push(qaContent);
+
+                if (trueQaContent == qaContent) {
+                    $(_this).removeClass('errorCurrent');
+                    $(_this).addClass('current');
+                } else {
+                    $(_this).removeClass('current');
+                    $(_this).addClass('errorCurrent');
+                }
+
+                dNum++;
+                var myWidth = 1.5 * dNum;
+                if (dNum >= parseInt(questions.length)) {
+                    $(_this).removeClass('current');
+
+                    //submit userAnswers
+                    $("#qa_content").val(userAnswers.join("|"));
+                    $("#submitForm").submit();
+                } else {
+
+                    $('.wrap').fadeOut(500);
+                    var timer = null;
+                    clearTimeout(timer);
+                    timer = setTimeout(function() {
+                        $('.progressBarLabels span').eq(dNum).addClass('current');
+                        $('.progressBarBgValidShape').css('width', myWidth + 'rem');
+                        var currentQuestion = getOrderQuestion();
+                        genarateQuestionHtml(currentQuestion)
+                    }, 500);
+
+                    $('.wrap').fadeIn(500);
+                }
+            }
+
+            $('.answer li').click(function() {
+                nextFn(this);
+            });
+
+            //init question
+            var currentQuestion = getOrderQuestion();
+            genarateQuestionHtml(currentQuestion);
+        });
+        </script>
+    </div>
+</body>
+
+</html>

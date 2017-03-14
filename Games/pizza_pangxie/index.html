@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=yes" name="format-detection">
+<title>鱼籽蟹肉比萨</title>
+<link rel="stylesheet" href="css/reset.css" />
+<link rel="stylesheet" href="css/main.css" />
+<link rel="stylesheet" href="css/animite.css" />
+</head>
+<body>
+	<div class="load">
+    	<img src="img/loading_03.png">
+        <span><strong>30</strong>%</span>
+    </div>
+    <div class="cover" style="display:"></div>
+    <div class="music on">
+    	<img id="mu" src="img/mu0.png">
+    </div>	
+	<div class="bg firstPage" style="display:">
+    	<img src="img/kv.jpg">
+        <div class="in-img ab">
+        	<img src="img/kv_02.png">
+        </div>
+        <a href="javascript:;" class="star-buton ab">
+        	<img src="img/kv_03.png">
+        </a>
+    </div>
+	<div class="step" id="outer" style="display:none">
+	    <div id="middle">
+		    <div id="container" style="position:relative;margin:0 auto;">
+		    </div>
+	    </div>
+    </div>
+	<div class="timeCount" style="display:none;">
+		<div class="ms-box ab">
+			<img src="img/game_04.png">
+			<div class="ms ab gameCountDown">
+				时间：<b class="game-ms">30s</b>
+			</div>
+		</div>
+		<div class="scor-box ab">			
+        	<img src="img/game_09.png">
+            <div class="scor ab gameScore">
+            	得分：<b class="game-num">0</b>
+            </div>
+        </div>
+		
+	</div>
+	 <div class="bg steps daojishiMask" style="display:none;">
+    	<img src="img/game-sh.jpg">
+        <div class="shar-bg ab">
+        	<img src="img/game_01.png">
+            <div class="inter-img-1 ab pop" style="display:none;">
+            	<img src="img/game_14_03.png">
+                <a href="javascript:;" class="sure"></a>
+            </div>
+            <div class="inter-img-2 ab pop" style="display:none;">
+            	<img src="img/game_15.png">
+                <div class="inter-ms ab daojishi">
+                	3
+                </div>
+            </div>
+            <div class="inter-img-3 ab pop" style="display:none;">
+            	<img src="img/game_17.png">
+            </div>
+        </div>
+    </div>
+    <div class="bg pizzhut" style="display:none;">
+    	<img src="img/game-sh.jpg">
+        <div class="racb-6 ab">
+        	<img src="img/game_12.png">
+        </div>
+        <div class="arbor ab">
+        	<img src="img/tree.png">
+        </div>
+        <div class="make-img pizzh ab" style="display:none">
+        	<img src="img/game_13.png">
+        </div>
+    </div>
+	<div class="bg steps share-pop" style="display:none;">
+    	<img src="img/game_bg.jpg">
+        <div class="shar-bg ab">
+        	<img src="img/game_01.png">
+            <div class="share-img ab">
+            	<img src="img/share.png">
+            </div>
+        </div>
+    </div>
+    <div class="bg result" style="display:none;">
+    	<img src="img/game_bg.jpg">
+        <div class="point-box ab">
+        	<img src="img/game_03.png">
+            <div class="point ab">
+            	12
+            </div>
+        </div>
+        <a href="javascript:;" class="butt-1 ab">
+        	<img src="img/game_07.png">
+        </a>
+        <a href="javascript:;" class="butt-2 ab">
+        	<img src="img/game_08.png">
+        </a>
+    </div>
+    <div id="stu" style="display:none"></div>
+	<script src="js/jquery-1.10.2.min.js"></script>
+    <script src="http://static.veryweibo.com/js/weixin/jsticketapi-1.1.min.js"></script>
+	<script src="js/quark.base-1.0.0.js"></script>
+	<script src="src/Button.js"></script>
+	
+    
+    <script type="text/javascript">
+		$().ready(function(e) {
+		   var jsApiList = ['onMenuShareTimeline', 'onMenuShareAppMessage','hideMenuItems'];
+			var share_timeline_data = {
+				'title': '拼手速  烹美味  我是捕蟹达人 不服来战！',
+				'link': 'http://e.pizzahut.com.cn/bestpizzar/pizza/',
+				'img_url': 'http://e.pizzahut.com.cn/bestpizzar/pizza/img/share.jpg',
+				'callbackfunc': function(){
+					//alert("分享成功!" );
+					//_mz_evt('1001058', '100029231');
+				}
+			};
+			var share_app_data = {
+				'title': '鱼籽蟹肉比萨',
+				'desc': '拼手速  烹美味  我是捕蟹达人 不服来战！',
+				'link': 'http://e.pizzahut.com.cn/bestpizzar/pizza/',
+				'img_url': 'http://e.pizzahut.com.cn/bestpizzar/pizza/img/share.jpg',
+				'callbackfunc': function(){
+					//alert("分享成功!");
+					//_mz_evt('1001058', '100029231');
+				}
+			};
+			var hide_menu_list = [];
+			construct('wx6173eb6085accfec' , window.location, jsApiList, share_timeline_data, share_app_data,hide_menu_list); 
+	});
+	document.write("<scr"+"ipt type='text/javascript' src='js/sdc_bestpizzar_WAP.js"+"'><\/scr"+"ipt>");
+</script>
+<script src="src/main.js"></script>
+<script src="src/Fruit.js"></script>
+<script src="src/Boy.js"></script>
+<script src="src/Num.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

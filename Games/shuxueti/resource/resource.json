@@ -1,0 +1,24 @@
+{
+	"groups":[
+	{
+		"keys":"catMovie_json,catMovie_png,texture_json",
+		"name":"preload"
+	}],
+	"resources":[
+	{
+		"name":"catMovie_json",
+		"type":"json",
+		"url":"assets/catMovie.json"
+	},
+	{
+		"name":"catMovie_png",
+		"type":"image",
+		"url":"assets/catMovie.png"
+	},
+	{
+		"name":"texture_json",
+		"subkeys":"red,more,startBtn,cat,shareBtn,restartBtn,right,qizi,milk,title,shareHint,blue,black",
+		"type":"sheet",
+		"url":"assets/texture.json"
+	}]
+}

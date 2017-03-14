@@ -1,0 +1,41 @@
+
+menu.png
+size: 2048,1024
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+more
+  rotate: false
+  xy: 1029, 721
+  size: 241, 241
+  orig: 241, 241
+  offset: 0, 0
+  index: -1
+play
+  rotate: false
+  xy: 4, 4
+  size: 341, 348
+  orig: 341, 348
+  offset: 0, 0
+  index: -1
+settings
+  rotate: false
+  xy: 353, 111
+  size: 241, 241
+  orig: 241, 241
+  offset: 0, 0
+  index: -1
+shop
+  rotate: false
+  xy: 1029, 472
+  size: 241, 241
+  orig: 241, 241
+  offset: 0, 0
+  index: -1
+title
+  rotate: false
+  xy: 4, 360
+  size: 1017, 602
+  orig: 1017, 602
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=utf-8>
+    <title>欢乐套牛</title>
+    <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name=apple-mobile-web-app-capable content=yes>
+    <meta name=apple-mobile-web-app-status-bar-style content=black>
+    <meta name=format-detection content="telephone=no">
+    <meta http-equiv=cleartype content=on>
+    <link rel="shortcut icon" href=static/img/favicon.ico>
+    <link href=static/img/icon/Icon-76.png rel=apple-touch-icon sizes=76x76>
+    <link href=static/img/icon/Icon-120.png rel=apple-touch-icon sizes=120x120>
+    <link href=static/img/icon/Icon-152.png rel=apple-touch-icon sizes=152x152>
+    <link href=static/img/icon/Icon-180.png rel=apple-touch-icon sizes=180x180>
+    <link href=static/img/icon/Icon-192.png rel=icon sizes=192x192>
+    <link href=static/img/icon/Icon-128.png rel=icon sizes=128x128>
+    <script>
+    ! function(n, e) {
+        var t = n.documentElement,
+            i = "orientationchange" in window ? "orientationchange" : "resize",
+            d = function() {
+                var n = t.clientWidth;
+                if (n == 800) { //针对特定pc渠道特殊处理
+                    n = 320;
+                    var nod = document.createElement('style'),
+                        str = 'html{width:40%;margin:0 auto;}.roping-ft,.goback-btn,.topnavbar-fixed{width:40%;margin:0 auto;}';
+                    nod.type = 'text/css';
+                    nod.innerHTML = str;
+                    document.getElementsByTagName('head')[0].appendChild(nod);
+                }
+                n && (t.style.fontSize = 100 * (n / 375) + "px")
+            };
+        if (n.addEventListener) {
+            e.addEventListener(i, d, !1);
+            n.addEventListener("DOMContentLoaded", d, !1);
+            d()
+        }
+
+
+    }(document, window);
+    </script>
+    <link rel=stylesheet href="static/css/style.css?v=1487837812851672300">
+    <script>
+    (function() {
+        // BaseApiUrl
+        window.BaseApiUrl = 'http://tn.uxi.me/api.php';
+        var redirect_uri_base = 'http%3A%2F%2Ftna.uxi.me';
+        var appid = 'wx385715520f783d03';
+
+        //线下
+        //window.BaseApiUrl = 'http://c.damaiplus.com/tn/web/api.php';
+        //var redirect_uri_base = 'http%3A%2F%2Fc.damaiplus.com%2Ftn%2Fweb';
+        //var appid = 'wxc2748067aeb1700c';
+
+
+        function isWxEnable() {
+            var ua = navigator.userAgent.toLowerCase();
+            return ua.match(/MicroMessenger/i) == "micromessenger";
+        }
+        var storage = window.localStorage;
+        var json = window.JSON;
+
+        function get(key) {
+            var value = json.parse(storage.getItem(key));
+            if (null != value) {
+                return value;
+            }
+            return undefined;
+        }
+
+        try {
+            storage.setItem('first_in', json.stringify(true));
+        } catch (e) {}
+
+
+        function getQueryString(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return (r[2]);
+            return null;
+        }
+        if (isWxEnable()) {
+            var hash = location.hash;
+            var jumpPage = 'index';
+            if (hash.indexOf('userCenter') > -1) {
+                jumpPage = 'userCenter'
+            } else if (hash.indexOf('bindPhone') > -1) {
+                jumpPage = 'bindPhone'
+            } else if (hash.indexOf('friends') > -1) {
+                jumpPage = 'friends'
+            }
+            if (!getQueryString('token')) {
+                location.href = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=' + appid + '&redirect_uri=' + redirect_uri_base + '%2Fwx_login.php&response_type=code&scope=snsapi_userinfo&state=' + getQueryString('channel') + 'B' + jumpPage + '#wechat_redirect'
+                return false;
+            } else {
+                //当前链接带的token和上次登录的token不一样时移除登录状态，一样时不做处理（刷新操作）
+                if (get('wechatToken') != getQueryString('token')) storage.removeItem('token');
+
+            }
+
+
+        }
+
+        var userInfo = get('userInfo') || {};
+        var skinId = userInfo.skin || 0;
+        initSkin(skinId)
+
+        function initSkin(skinId) {
+            var skinList = {
+                0: "skin-none",
+                32: "skin-shengdan",
+                33: "skin-yuandan"
+            }
+            document.getElementsByTagName('html')[0].className = skinList[skinId];
+        }
+    })()
+    </script>
+</head>
+
+<body class=index-wrap>
+    <script>
+    (function() {
+        var hash = location.hash.split('?')[0].replace('#/', '');
+        if (hash.indexOf('/') > -1) hash = hash.split('/')[0]
+        var removeList = {
+            rule: true,
+            recharge: true,
+            recordList: true,
+            changeList: true,
+            changeRecord: true,
+            recordInfo: true,
+            address: true,
+            reg: true,
+            login: true,
+            change: true,
+            protocol: true,
+            problem: true,
+            paySucc: true,
+            userCenter: true,
+            friends: true,
+            userInfo: true,
+            modiNick: true,
+            bindPhone: true,
+            welfareCenter: true,
+            contact: true,
+            recharge_yxjb: true,
+            recharge_haiww: true,
+            recharge_ttwyx: true,
+            recharge_hxw: true,
+            recharge_open_url: true,
+            recharge_g60: true,
+            recharge_open_url1: true,
+            recharge_dayu: true,
+            recharge_tiantuan: true,
+            transferPage_tiantuan: true
+        }
+        if (removeList[hash]) {
+            document.body.classList.remove('index-wrap')
+        }
+    })()
+    </script>
+    <div id=app>
+        <router-view></router-view>
+    </div>
+    <script type=text/javascript src=static/js/manifest.92fc0db5316e53a69633.js></script>
+    <script type=text/javascript src=static/js/vendor.2f184d67f5df47716d6d.js></script>
+    <script type=text/javascript src=static/js/app.8cf2baedd880f139e580.js></script>
+</body>
+
+</html>

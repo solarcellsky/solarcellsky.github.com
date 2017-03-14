@@ -1,0 +1,175 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>快递到了！</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="full-screen" content="true" />
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-fullscreen" content="true" />
+    <meta name="360-fullscreen" content="true" />
+    <style>
+    * {-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box; -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0);-webkit-tap-highlight-color: rgba(255,255,255,0);}
+    html,
+    body {
+        -ms-touch-action: none;
+        background: #888888;
+        padding: 0;
+        border: 0;
+        margin: 0;
+        height: 100%;
+    }
+    #rule {
+        display: none;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,.75) url(resource/assets/rule.png) no-repeat center center;
+        background-size: 100% auto;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    #myphone {
+        display: none;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,.75);
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    .phoneinner {
+        width: 100%;
+        height: 100%;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-align-items: center;
+        align-items: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+    }
+    .ppp {
+        width: 70%;
+        margin: 0 auto;
+        padding: 0;
+        border-radius: 5px;
+        background: #fff;
+    }
+    .ppp h2 {
+        padding: 15px 0;
+        margin: 0;
+        text-align: center;
+        font-size: 18px;
+    }
+    .ppinput {
+        width: 80%;
+        margin: 0 auto;
+        padding: 0 0 15px;
+    }
+    .ppinput input {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #e0e0e0;
+        border-radius: 4px;
+    }
+    .ppinput p {
+        font-size: 12px;
+        color: #999;
+        text-align: justify;
+        line-height: 1.2;
+    }
+    .pp_ft {
+        position: relative;
+        line-height: 48px;
+        font-size: 18px;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        border-top: 1px solid #D5D5D6;
+    }
+    .pp_btn {
+        display: block;
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        flex: 1;
+        color: #3CC51F;
+        text-decoration: none;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        position: relative;
+        text-align: center;
+    }
+    </style>
+    <script>
+    String.prototype.format = function() {
+        var args = arguments;
+        return this.replace(/\{(\d+)\}/g, function(s, i) {
+            return args[i];
+        });
+    }
+
+    function GetRequest() {
+        var url = location.search; //获取url丿?"符后的字丿
+        var theRequest = new Object();
+        if (url.indexOf("?") != -1) {
+            var str = url.substr(1);
+            strs = str.split("&");
+            for (var i = 0; i < strs.length; i++) {
+                theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+            }
+        }
+        return theRequest;
+    }
+    var aGET = GetRequest();
+    window.game_config = {
+        share_nickname: aGET['share_nickname'],
+        share_openid: aGET['share_openid'],
+        this_openid: aGET['openid'],
+        channel: "huowu"
+    }
+    </script>
+    <link rel="stylesheet" type="text/css" href="sweetalert.css">
+    <script egret="lib" src="libs/modules/egret/egret.min.js"></script>
+    <script egret="lib" src="libs/modules/egret/egret.web.min.js"></script>
+    <script egret="lib" src="libs/modules/game/game.min.js"></script>
+    <script egret="lib" src="libs/modules/game/game.web.min.js"></script>
+    <script egret="lib" src="libs/modules/tween/tween.min.js"></script>
+    <script egret="lib" src="libs/modules/dragonbones/dragonbones.min.js"></script>
+    <script egret="lib" src="libs/modules/res/res.min.js"></script>
+    <script egret="lib" src="libs/modules/weixinapi/weixinapi.min.js"></script>
+    <script egret="lib" src="libs/modules/dcagent/dcagent.min.js"></script>
+    <script src="sweetalert.min.js"></script>
+    <script src="api3rd.js"></script>
+    <script src="main.min.js"></script>
+</head>
+
+<body>
+    <div style="margin: auto;width: 100%;height: 100%;" class="egret-player" data-entry-class="Main" data-orientation="auto" data-scale-mode="showAll" data-resolution-mode="retina" data-frame-rate="30" data-content-width="640" data-content-height="960" data-show-paint-rect="false" data-multi-fingered="2" data-show-fps="false" data-show-log="false" data-log-filter="" data-show-fps-style="x:0,y:0,size:30,textColor:0x00c200,bgAlpha:0.9"></div>
+    <script>
+    egret.runEgret();
+    </script>
+    <div id="rule">
+        
+    </div>
+    <div id="myphone">
+        <div class="phoneinner">
+            <div class="ppp">
+                <h2>请输入手机号</h2>
+                <div class="ppinput">
+                    <input type="text" name="">
+                    <p>请输入您常用的手机号，优惠券将自动绑定至该号码，下载大集到家 APP 后用该号码注册或登录后即可使用。</p>
+                </div>
+                <div class="pp_ft">
+                    <a href="javascript:;" class="pp_btn" id="cancel" style="border-right: 1px solid #D5D5D6;color:#666;">取消</a>
+                    <a href="javascript:;" class="pp_btn" id="sendPhone">提交</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

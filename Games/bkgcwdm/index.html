@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>避开广场舞大妈</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="full-screen" content="true" />
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-fullscreen" content="true" />
+    <meta name="360-fullscreen" content="true" />
+    <style>
+    body {
+        text-align: center;
+        background: #000000;
+        padding: 0;
+        border: 0;
+        margin: 0;
+        height: 100%;
+    }
+    
+    html {
+        -ms-touch-action: none;
+        /* Direct all pointer events to JavaScript code. */
+        overflow: hidden;
+    }
+    
+    canvas {
+        display: block;
+        position: absolute;
+        margin: 0 auto;
+        padding: 0;
+        border: 0;
+    }
+    #gameRules {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url(./resource/assets/rules.png) no-repeat center center;
+        background-size: 100% 100%;
+        z-index: 999;
+    }
+
+    #sound {
+        display: none;
+        background: url(./resource/assets/m1.png) no-repeat center center;
+        background-size: 100% auto;
+        width: 36px;
+        height: 36px;
+        position: absolute;
+        z-index: 99;
+        right: 20px;
+        top: 20px;
+    }
+
+    #sound.off {
+        background: url(./resource/assets/m2.png) no-repeat center center;
+        background-size: 100% auto;
+        -webkit-animation: none;
+        -moz-animation: none;
+        -o-animation: none;
+        animation: none;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="gameRules"></div>
+    <div id="sound"></div>
+    <div style="position:relative;" id="gameDiv"></div>
+    <script>
+    var document_class = "Main";
+    </script>
+    <script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="launcher/jquery.min.js"></script>
+    <script src="launcher/egret_require.js"></script>
+    <script src="launcher/egret_loader.js"></script>
+    <script src="launcher/game-min.js"></script>
+    <script src="launcher/games.js"></script>
+    <script>
+        var meiriq_game = new Meiriq_game("damingxiaoming", "score");
+        window["meiriq_game"].permitStart = 1; //这里需要自己修改参数测试一下 如果是1允许开始 0则不允许开始游戏
+    </script>
+    <script>
+    var support = [].map && document.createElement("canvas").getContext;
+    if (support) {
+        egret_h5.startGame();
+    } else {
+        alert("Egret 不支持您当前的浏览器")
+    }
+    </script>
+</body>
+
+</html>

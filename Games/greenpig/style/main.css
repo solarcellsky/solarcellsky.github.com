@@ -1,0 +1,408 @@
+* {
+	padding: 0;
+	margin: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.olight
+{
+	-webkit-animation: olight 2s infinite linear;
+	animation: olight 2s infinite linear;
+}
+@-webkit-keyframes olight
+{
+	0% { -webkit-transform: rotate(0deg) }
+	100% {  -webkit-transform: rotate(360deg) }
+}
+
+.main {
+	height: 1040px;
+	width: 640px;
+	overflow: hidden;
+}
+
+.box_info { overflow: auto; height: 320px; width: 300px; font-size: 18px; line-height: 1.6em; top: 389px;;left: 177px;}
+.box_info * { position: relative; }
+.box_info p { padding: 0; margin: 0 0 1em; }
+.box_info .txc { display: block; text-align: center; }
+
+input{
+	font-family: "微软雅黑";
+	font-size: 18px;
+	margin: 0px;
+	padding: 0px;
+	border: none;
+	color: #000000;
+	text-align: center;
+	background-color: transparent;
+	width: 300px;
+}
+
+.select {
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: top;
+    background-color: transparent;
+    height: 60px;
+    width: 260px;
+    top: 578px;
+    left: 192px;
+    font-size: 36px;
+    color: #7e2100;
+    font-weight: bold;
+    -webkit-appearance: none;
+    appearance: none;
+    border: transparent;
+}
+        	
+.select option {
+    background-color: #ffffff;
+}
+
+.loading
+{
+    position: absolute;
+    top: 400px;
+    left: 245px;
+    width: 108px;
+    height: 98px;
+    background-image: url("../img/load.png");
+    -webkit-animation: loading 3s steps(57) infinite;
+}
+@-webkit-keyframes loading
+{
+    0% { background-position: 0px 0; }
+    100% { background-position: -6156px 0; }
+}
+
+.bg_ground{
+	left: -300px;
+}
+
+.bg_tree {
+	left: -320px;
+}
+
+.bg_building {
+	left: -300px;
+	top: 380px;
+}
+
+.bg_hill {
+	top: 320px;
+	left: -335px;
+}
+
+.slogan {
+	left: 120px;
+	top: -250px;
+}
+
+@-webkit-keyframes slogan_ani {
+	100% {
+		-webkit-transform: scale(1);
+		opacity: 1;
+	}
+}
+
+@keyframes slogan_ani {
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+
+.pig_big {
+	top: 450px;
+	left: 190px;
+	opacity: 0;
+}
+
+.pig_small {
+	top: 600px;
+	left: 150px;
+	opacity: 0;
+}
+
+.pig_tips {
+	left: 100px;
+	top: 30px;
+	opacity: 0;
+}
+
+.pig_head {
+	left: 640px;
+	top: -30px;
+}
+
+.bird_head {
+	left: 640px;
+	top: -30px;
+}
+
+.bird_tips {
+	left: 100px;
+	top: 30px;
+	opacity: 0;
+}
+
+.bird_role {
+	top: 200px;
+	left: -180px;
+	opacity: 0;
+}
+
+.play_ani {
+	top: 448px;
+	left: 223px;
+	width: 180px;
+	height: 255px;
+	/*border: 2px solid;
+	border-radius: 30px;*/
+	background-image: url("../img/howtoplay/howtoplay.png");
+	-webkit-animation: bdplay 1300ms steps(32) forwards;
+	animation: bdplay 1300ms steps(32) forwards;
+}
+
+@-webkit-keyframes bdplay {
+	0% {
+		background-position: 0px 0;
+	}
+	100% {
+		background-position: -5940px 0;
+	}
+}
+
+@keyframes bdplay {
+	0% {
+		background-position: 0px 0;
+	}
+	100% {
+		background-position: -5940px 0;
+	}
+}
+
+.howtoplay {
+	top: 332px;
+	left: 132px;
+	transform: scale(3.5);
+	-webkit-transform: scale(3.5);
+	opacity: 0;
+}
+
+.howtoplay_bg_ani {
+	-webkit-animation: ani 1000ms forwards;
+	animation: ani 1000ms forwards;
+}
+
+@-webkit-keyframes ani {
+	100% {
+		-webkit-transform: scale(1);
+		opacity: 1;
+	}
+}
+
+@keyframes ani {
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+.howtoplay_bg_hide {
+	top: 332px;
+	left: 132px;
+	-webkit-animation: howtoplay_bg_hide 500ms forwards linear;
+	animation: howtoplay_bg_hide 500ms forwards linear;
+}
+
+@-webkit-keyframes howtoplay_bg_hide {
+	100% {
+		-webkit-transform: scale(3.5);
+	}
+}
+
+@keyframes howtoplay_bg_hide {
+	100% {
+		transform: scale(3.5);
+	}
+}
+
+.arrow {
+	top: 430px;
+	left: -25px;
+	opacity: 0;
+}
+
+.arrow_ani {
+	-webkit-animation: arrow_ani 1000ms forwards linear;
+	animation: arrow_ani 1000ms forwards linear;
+}
+
+@-webkit-keyframes arrow_ani {
+	50% {
+		top: 430px;
+		left: 250px;
+		opacity: 1;
+	}
+	60% {
+		top: 430px;
+		left: 250px;
+		opacity: 0;
+	}
+	70% {
+		top: 430px;
+		left: 250px;
+		opacity: 1;
+	}
+	80% {
+		top: 430px;
+		left: 250px;
+		opacity: 0;
+	}
+	90% {
+		top: 430px;
+		left: 250px;
+		opacity: 1;
+	}
+	100% {
+		top: 430px;
+		left: 250px;
+		opacity: 0;
+	}
+}
+
+@keyframes arrow_ani {
+	50% {
+		top: 430px;
+		left: 250px;
+		opacity: 1;
+	}
+	60% {
+		top: 430px;
+		left: 250px;
+		opacity: 0;
+	}
+	70% {
+		top: 430px;
+		left: 250px;
+		opacity: 1;
+	}
+	80% {
+		top: 430px;
+		left: 250px;
+		opacity: 0;
+	}
+	90% {
+		top: 430px;
+		left: 250px;
+		opacity: 1;
+	}
+	100% {
+		top: 430px;
+		left: 250px;
+		opacity: 0;
+	}
+}
+
+.pig {
+	top: 630px;
+	left: 437px;
+	opacity: 0;
+}
+
+.pig_ani {
+	-webkit-animation: pig_ani 1000ms forwards linear;
+	animation: pig_ani 1000ms forwards linear;
+}
+
+@-webkit-keyframes pig_ani {
+	40% {
+		top: 430px;
+		left: 250px;
+		opacity: 1;
+	}
+	55% {
+		top: 410px;
+		left: 230px;
+	}
+	70% {
+		top: 430px;
+		left: 250px;
+	}
+	85% {
+		top: 410px;
+		left: 230px;
+	}
+	100% {
+		top: 420px;
+		left: 250px;
+	}
+}
+
+@keyframes pig_ani {
+	40% {
+		top: 430px;
+		left: 250px;
+		opacity: 1;
+	}
+	55% {
+		top: 410px;
+		left: 230px;
+	}
+	70% {
+		top: 430px;
+		left: 250px;
+	}
+	85% {
+		top: 410px;
+		left: 230px;
+	}
+	100% {
+		top: 420px;
+		left: 250px;
+	}
+}
+
+.bird {
+	top: 560px;
+	left: 250px;
+}
+
+.bird_ani {
+	-webkit-animation: bird_ani 500ms forwards linear;
+	animation: bird_ani 500ms forwards linear;
+}
+
+@-webkit-keyframes bird_ani {
+	50% {
+		top: 380px;
+		-webkit-transform: scale(0.5);
+	}
+	100% {
+		top: 420px;
+		-webkit-transform: scale(0.4);
+		opacity: 0;
+	}
+}
+
+@keyframes bird_ani {
+	50% {
+		top: 380px;
+		-webkit-transform: scale(0.5);
+	}
+	100% {
+		top: 420px;
+		transform: scale(0.4);
+		opacity: 0;
+	}
+}
+
+.gray_img{
+	-webkit-filter: grayscale(1);/* Webkit */ 
+	filter:gray;/* IE6-9 */ 
+	filter: grayscale(1);/* W3C */ 
+}

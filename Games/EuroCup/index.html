@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head lang="ch">
+    <meta charset="UTF-8">
+    <title>你踢不了欧洲杯，至少能赢欧洲杯大奖啊！</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <script src="Public/Home/js/jquery-1.12.0.min.js"></script>
+    <script src="Public/Home/js/jquery.imgpreload.min.js"></script>
+    <script src="Public/Home/js/app.js"></script>
+    <link rel="stylesheet" href="Public/Home/css/common.css">
+    <link rel="stylesheet" href="Public/Home/css/app.css">
+    <div style="display: none">
+        <img src="Public/Home/imgs/toutu2.png" alt="">
+    </div>
+</head>
+<body>
+<div id="start1">
+    <div class="content">
+        <div id="jindu"><p id="jinduse"></p></div>
+        <img class="img13" src="Public/Home/imgs/qiu.png" alt="">
+        <img class="img14" src="Public/Home/imgs/logo.png" alt="">
+    </div>
+</div>
+<div id="start2">
+    <div class="content">
+        <img class="img21" src="Public/Home/imgs/bank.png" alt="">
+        <img class="img22" src="Public/Home/imgs/2logo.png" alt="">
+        <img class="img23" src="Public/Home/imgs/2line.png" alt="">
+        <img class="img24" src="Public/Home/imgs/2go.png" alt="">
+        <img class="img25" src="Public/Home/imgs/2btn.png" alt="">
+        <img class="img26" src="Public/Home/imgs/2btn2.png" alt="">
+
+        <div class="box">
+            <img class="img211" src="Public/Home/imgs/12bor.png" alt="">
+            <img class="img212" src="Public/Home/imgs/close.png" alt="">
+
+
+            <form name="name1" method="post">
+                <label>
+                    手机：
+                    <input name="tel" type="tel">
+                </label>
+                <button>
+                    <img class="img213" src="Public/Home/imgs/2btn.png" alt="">
+                </button>
+            </form>
+        </div>
+
+    </div>
+</div>
+<div id="start3">
+    <div class="content">
+        <img class="img31" src="Public/Home/imgs/bank.png" alt="">
+        <img class="img32" src="Public/Home/imgs/2logo.png" alt="">
+        <img class="img33" src="Public/Home/imgs/3man.png" alt="">
+        <img class="img34" src="Public/Home/imgs/3talk.png" alt="">
+        <img class="img35" src="Public/Home/imgs/3ball.png" alt="">
+        <img class="img36" src="Public/Home/imgs/3shoot.png" alt="">
+    </div>
+</div>
+<div id="start4">
+    <div class="content">
+        <img class="img41" src="Public/Home/imgs/bank.png" alt="">
+        <img class="img42" src="Public/Home/imgs/2logo.png" alt="">
+        <img class="img43" src="Public/Home/imgs/4man.png" alt="">
+        <img class="img44" src="Public/Home/imgs/4talk.png" alt="">
+        <img class="img431" src="Public/Home/imgs/4man.png" alt="">
+        <img class="img441" src="Public/Home/imgs/5talk.png" alt="">
+        <img class="img432" src="Public/Home/imgs/6man.png" alt="">
+        <img class="img442" src="Public/Home/imgs/6talk.png" alt="">
+        <img class="img45" src="Public/Home/imgs/3ball.png" alt="">
+    </div>
+</div>
+<div id="start12">
+	<div class="boxind">
+        <img src="Public/Home/imgs/zhi.png" alt="">
+    </div>
+    <img class="img121" src="Public/Home/imgs/bank.png" alt="">
+    <img class="img122" src="Public/Home/imgs/2logo.png" alt="">
+    <img class="img123" src="Public/Home/imgs/regular.png" alt="">
+    <img class="img124" src="Public/Home/imgs/regW.png" alt="">
+    <img class="img125" src="Public/Home/imgs/close.png" alt="">
+</div>
+<div id="start11" style="display: none">
+    <h1>竖屏效果更佳</h1>
+</div>
+<audio id="audio" loop>
+    <source src="Public/Home/mp3/mp3.mp3"/>
+</audio>
+<img style="display: none" class="zhuan" value="kaishi" id="yf" src="Public/Home/imgs/yinfu.png" alt="">
+<script>
+    window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", function() {
+        if (window.orientation === 180 || window.orientation === 0) {
+           $("#start11").hide()
+        }
+        if (window.orientation === 90 || window.orientation === -90 ){
+            $("#start11").show();
+        }
+    }, false);
+</script>
+<!--<script type="text/javascript">
+    // 对浏览器的UserAgent进行正则匹配，不含有微信独有标识的则为其他浏览器
+    var useragent = navigator.userAgent;
+    if (useragent.match(/MicroMessenger/i) != 'MicroMessenger') {
+        // 这里警告框会阻塞当前页面继续加载
+        alert('已禁止本次访问：您必须使用微信内置浏览器访问本页面！');
+        // 以下代码是用javascript强行关闭当前页面
+        var opened = window.open('about:blank', '_self');
+        opened.opener = null;
+        opened.close();
+    }
+</script>-->
+</body>
+</html>

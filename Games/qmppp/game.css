@@ -1,0 +1,72 @@
+/* Make sure the game screen stretches to "full screen" of the browser. */
+html, body, p {
+	/* previously had <div>, but it affected EVERYTHING so i removed it */
+	margin:0;
+	padding:0;
+	width: 100%;
+	height: 100%;
+}
+
+#khanvas {
+	width: 100%;
+	height: 100%;
+}
+
+#gp-ad-wrapper-1 {
+	position: absolute;
+    width: 100%;
+    height:50px; /* required to make the position:absolute work */
+    bottom: 0px;
+}
+
+#gp-ad-wrapper-2 {
+	position: absolute;
+	width: 100%;
+    height:0px; /* required to make the position:absolute work */
+    top: 2%;
+}
+
+#gp-ad-wrapper-3 {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	margin: 0px;
+	padding: 0px;
+}
+
+.gp-fs {
+	/* full screen */
+	position: absolute;
+	top: 0px;
+}
+
+.gp-ad {
+	background-color: #000000;
+    margin-left: auto;
+    margin-right: auto;
+    padding:2px;
+}
+
+.gp-ima-outermost {
+	position : absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.gp-ima-outer {
+	position : relative;
+	width: 100%;
+	height: 100%;
+}
+
+.gp-ima-inner {
+	margin : auto;
+	position : absolute;
+	left : 0;
+	top : 0;
+	right : 0;
+	bottom : 0;
+}

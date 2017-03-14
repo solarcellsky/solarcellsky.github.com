@@ -1,0 +1,12 @@
+{"level":[
+  {"direct":true,"speed":72,"bird":2,"key":12,"minGold":15,"maxGold":18,"buyStr":"烟钱","resultStr1":"只得到","resultStr2":"元，路边要饭的都比我有钱。"},
+  {"direct":true,"speed":72,"bird":3,"key":18,"minGold":45,"maxGold":50,"buyStr":"饭钱","resultStr1":"只得到","resultStr2":"元，玩我这么久，连100块都不给。"},
+  {"direct":true,"speed":72,"bird":4,"key":20,"minGold":85,"maxGold":95,"buyStr":"零花钱","resultStr1":"得到","resultStr2":"元，都不好意思去折扣店。"},
+  {"direct":true,"speed":72,"bird":5,"key":22,"minGold":190,"maxGold":210,"buyStr":"酒钱","resultStr1":"得到","resultStr2":"元，精打细算能买点小东西。"},
+  {"direct":false,"speed":72,"bird":6,"key":22,"minGold":290,"maxGold":310,"buyStr":"份子钱","resultStr1":"得到","resultStr2":"元，正好够买双鞋子。"},
+  {"direct":true,"speed":72,"bird":7,"key":22,"minGold":520,"maxGold":580,"buyStr":"私房钱","resultStr1":"得到","resultStr2":"元，可以换新衣服了！"},
+  {"direct":true,"speed":72,"bird":8,"key":23,"minGold":950,"maxGold":1050,"buyStr":"银行卡","resultStr1":"得到","resultStr2":"元，尽情的买买买吧！"},
+  {"direct":true,"speed":72,"bird":8,"key":24,"minGold":1900,"maxGold":2000,"buyStr":"信用卡","resultStr1":"得到","resultStr2":"元，再也不用担心要剁手啦！"},
+  {"direct":true,"speed":120,"bird":8,"key":24,"minGold":4000,"maxGold":4200,"buyStr":"传家宝","resultStr1":"得到","resultStr2":"元，网购哥男神试试！"}
+
+]}

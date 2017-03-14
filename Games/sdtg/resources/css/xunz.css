@@ -1,0 +1,80 @@
+@charset "utf-8";
+/* CSS Document */
+body{ font-family:"Arial, Helvetica, "Microsoft Yahei", "微软雅黑", STXihei, "华文细黑", sans-serif;"; }
+
+.xunz{ position:relative; width:100%; top:0px;background-color:rgba(0,0,0,0.75);}
+.xunz1{ position:fixed;width:100%;  top:0;  background:#F00;  min-width:320px; z-index:99999; top:0px; min-height:1000px; background-color:rgba(0,0,0,0.75); z-index:9999;}
+.xunz1_a{ width:91.25%; position:relative;margin:auto; margin-top:10%;  max-width:584px; height:auto; -webkit-border-radius:21px; z-index:999;    } 
+.xun_bg img{ width:100%; height:auto;}
+.xun_bg li{ width:6%; position:absolute; top:3%; right:3%;  }
+.lubo{ position:absolute; top:25%; left:2% ; width:96%;}
+/* 本例子css -------------------------------------- */
+	.focus{ width:100%; height:320px;  margin:0 auto; position:relative; overflow:hidden;   }
+	.focus .hd{ width:100%; height:15px;  position:absolute; z-index:99; margin-top:51%; ; text-align:center;  }
+	.focus .hd ul{
+	}
+	.focus .hd ul li{ display:inline-block; width:15px; height:15px; -webkit-border-radius:15px; -moz-border-radius:15px; border-radius:15px; background:#cbcbcb
+; margin:0% 5px;  vertical-align:top; overflow:hidden; z-index:9999999999; text-indent: -9999px;   }
+	.focus .hd ul .on{ background:#f2b454;  }
+
+	.focus .bd{ position:relative; z-index:0; }
+	.focus .bd li img{ width:50%;  height:140px; background:url(images/loading.gif) center center no-repeat;  }
+	.focus .bd li a{ -webkit-tap-highlight-color:rgba(0, 0, 0, 0); /* 取消链接高亮 */  }
+	.b{}
+    .b1{ width:50%; float:left;}
+	.b1_a{ width:38.5%; float:left;}
+	.b1_a img{ width:100%; height:auto;}
+	.b1_b{width:60%; float:right; }
+	.b1_b .mingc{padding-top:12%; padding-bottom:3%; font-size:17pt; color:#d76404;  }
+	.b1_b .pingl{ line-height:23px; line-height:23px; font-size:15pt; color:#6a5350;}
+@media screen and (min-width:641px) {
+	body{background:#3a3e4a;}
+	}
+@media screen and (max-width:600px) {
+	
+	}
+	
+@media screen and (max-width:570px) {
+	.b1_b .mingc{padding-top:12%; padding-bottom:3%; font-size:16pt;   }
+	.b1_b .pingl{ line-height:21px; line-height:21px; font-size:14pt; }
+   
+	}
+	
+@media screen and (max-width:550px) {
+	
+	
+	}
+	
+@media screen and (max-width:480px) {
+	.b1_b .mingc{padding-top:12%; padding-bottom:3%; font-size:15pt;   }
+	.b1_b .pingl{ line-height:20px; line-height:20px; font-size:13pt; }
+	 }
+	 
+@media screen and (max-width:450px) {
+	.b1_b .mingc{padding-top:12%; padding-bottom:3%; font-size:14pt;   }
+	.b1_b .pingl{ line-height:19px; line-height:19px; font-size:12pt; }
+	.focus .hd ul li{width:12px; height:12px; -webkit-border-radius:12px; -moz-border-radius:12px; border-radius:12px; background:#cbcbcb; overflow:hidden; z-index:9999999999; text-indent: -9999px;   }
+	 }
+	 
+	 
+@media screen and (max-width:430px) {
+	.b1_b .mingc{padding-top:12%; padding-bottom:3%; font-size:13pt;   }
+	.b1_b .pingl{ line-height:18px; line-height:18px; font-size:11pt; }
+	 }
+		
+ @media screen and (max-width:380px) {
+	.b1_b .mingc{padding-top:12%; padding-bottom:3%; font-size:11pt;   }
+	.b1_b .pingl{ line-height:17px; line-height:17px; font-size:10pt; }
+	.focus .hd ul li{width:10px; height:10px; -webkit-border-radius:10px; -moz-border-radius:10px; border-radius:10px; background:#cbcbcb; overflow:hidden; z-index:9999999999; text-indent: -9999px;   }
+	 }
+	 
+ @media screen and (max-width:350px) {
+	.b1_b .mingc{padding-top:12%; padding-bottom:3%; font-size:10pt;   }
+	.b1_b .pingl{ line-height:16px; line-height:16px; font-size:8pt; }
+	 }
+	 
+ @media screen and (max-width:330px) {
+	.b1_b .mingc{padding-top:12%; padding-bottom:3%; font-size:9pt;   }
+	.b1_b .pingl{ line-height:15px; line-height:15px; font-size:7pt; }
+	
+	 }

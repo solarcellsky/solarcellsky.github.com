@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>签到</title>
+    <link rel="stylesheet" type="text/css" href="css/base.css?t=1452915014036">
+    <link rel="stylesheet" type="text/css" href="css/index.css?t=1452915014036">
+    <link rel="stylesheet" type="text/css" href="css/qrcode-box.css?t=1452915014036">
+</head>
+
+<body style="zoom: 1;">
+    <header class="exchange">
+        <h2>礼品中心</h2>
+        <a href="home.html" class="touch-redirect back"><span class="icon iconfont arrow"></span>返回</a>
+    </header>
+    <div id="exchange-list">
+        <ul>
+            <li class="fn-clear">
+                <div class="img-aside fn-left">
+                    <img src="images/test.jpg">
+                </div>
+                <dl class="prize-info">
+                    <dt>test</dt>
+                    <dd>需要积分：<em class="score">5000</em></dd>
+                    <a href="javascript:void(0);" class="exchange-trigger" data-id="1" data-score="9">兑换</a>
+                </dl>
+                <span class="remain fn-right">
+            剩余：9
+          </span>
+                <div class="score-exchange-box hidden">
+                    <div class="box">
+                        <div class="box-hd">
+                            <h2>兑换</h2>
+                            <a href="javascript:void(0);" class="box-close"></a>
+                        </div>
+                        <div class="box-bd online">
+                            <div class="wrap">
+                                <div class="todo">
+                                    <div class="confirm-box">
+                                        使用 <em>5000</em> 积分兑换「test」
+                                    </div>
+                                    <div class="postage-box">
+                                        <h3>填写邮寄信息</h3>
+                                        <div class="postage-form">
+                                            <p>
+                                                <input type="text" name="name" placeholder="姓名">
+                                            </p>
+                                            <p>
+                                                <input type="tel" name="mobile" placeholder="手机">
+                                            </p>
+                                            <p>
+                                                <textarea name="address" placeholder="地址"></textarea>
+                                            </p>
+                                        </div>
+                                        <div class="action">
+                                            <a href="javascript:void(0);" class="button-gold confirm-exchange-trigger" data-id="1">确定兑换</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="done">
+                                    <p><img src="images/success-icon.png?t=1452915014036" class="success-icon"></p>
+                                    <p>兑奖成功，请等待邮寄处理。</p>
+                                    <!-- <p>当前积分余额 <em class="refresh-score">50</em></p> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div id="score-lack" class="alert-invalid hidden">
+        <div class="alert-inner">
+            <em><i></i></em>
+            <p>积分不足</p>
+        </div>
+    </div>
+    <script src="js/core/sea.js?t=1452915014036"></script>
+    <script>
+    seajs.use("./js/app.js?t=1452915014036", function(app) {
+        app.init('./init');
+    });
+    </script>
+</body>
+</html>

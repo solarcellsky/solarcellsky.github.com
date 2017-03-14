@@ -1,0 +1,385 @@
+body {
+    margin: 0;
+    padding: 0
+}
+
+.container {
+    position: absolute;
+    width: 100%;
+    height: 100%
+}
+
+.page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    overflow: hidden
+}
+
+.page-start,
+.page-parsing,
+.share {
+    display: none
+}
+
+.page .bg {
+    background-image: url(../img/bg.png);
+    background-repeat: no-repeat;
+    background-position: center -80px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%
+}
+
+.page-cover .behind-peoples {
+    background-image: url(../img/behind-peoples.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 50%;
+    margin-left: -250px;
+    top: 30px;
+    width: 520px;
+    height: 553px
+}
+
+.page-cover .peoples {
+    background-image: url(../img/peoples.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 50%;
+    margin-left: -260px;
+    top: 367px;
+    width: 520px;
+    height: 553px
+}
+
+.page-cover .before-peoples {
+    background-image: url(../img/before-peoples.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 50%;
+    margin-left: 145px;
+    top: 488px;
+    width: 89px;
+    height: 144px
+}
+
+.page-cover .title {
+    background-image: url(../img/title.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 26px;
+    left: 50%;
+    margin-left: -255px;
+    width: 560px;
+    height: 445px
+}
+
+.page-cover .btn-start {
+    background-image: url(../img/btn-start.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 50%;
+    margin-left: -192px;
+    top: 860px;
+    width: 384px;
+    height: 108px
+}
+
+.page-start .girl {
+    background-image: url(../img/girl.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 50%;
+    margin-left: -156px;
+    top: 204px;
+    width: 341px;
+    height: 787px
+}
+
+.page-start .slogan {
+    background-image: url(../img/slogan.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 50%;
+    margin-left: -271px;
+    top: 60px;
+    width: 570px;
+    height: 215px
+}
+
+.page-start .buttons {
+    position: absolute;
+    left: 0;
+    top: 840px;
+    width: 100%;
+    height: 108px
+}
+
+.page-start .btn-takephoto {
+    background-image: url(../img/btn-takephoto.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 50%;
+    margin-left: -295px;
+    width: 278px;
+    height: 108px
+}
+
+.page-start .btn-upload {
+    background-image: url(../img/btn-upload.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 50%;
+    margin-left: 15px;
+    width: 278px;
+    height: 108px
+}
+
+.page-parsing .photo-wrapper {
+    position: absolute;
+    top: 102px;
+    left: 50%;
+    margin-left: -179px;
+    width: 362px;
+    height: 334px;
+    background: #febd27;
+    overflow: hidden
+}
+
+.page-parsing .photo-frame {
+    background-image: url(../img/photo-frame.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    margin-left: -201px;
+    width: 403px;
+    height: 451px
+}
+
+.page-parsing .status,
+.page-parsing .tips {
+    position: absolute;
+    top: 530px;
+    left: 50%;
+    margin-left: -267px;
+    text-align: center;
+    color: #000;
+    font-size: 28px;
+    width: 534px;
+    font-weight: bold;
+    line-height: 36px
+}
+
+.page-parsing .tips {
+    top: 686px
+}
+
+.page-parsing.parsing .tips {
+    display: block
+}
+
+.page-parsing .scores {
+    background-image: url(../img/bg-score.png);
+    width: 100%;
+    height: 141px;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 380px;
+    background-position-x: center;
+    display: none;
+    text-align: center
+}
+
+.page-parsing .scores span {
+    line-height: 141px;
+    color: #fff;
+    font-size: 60px
+}
+
+.page-parsing .summry {
+    background-image: url(../img/summry.png);
+    width: 100%;
+    height: 100px;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 630px;
+    background-position-x: center;
+    display: none
+}
+
+.page-parsing .summry-0 {
+    background-position-y: 0
+}
+
+.page-parsing .summry-1 {
+    background-position-y: -120px
+}
+
+.page-parsing .summry-2 {
+    background-position-y: -240px
+}
+
+.page-parsing .summry-3 {
+    background-position-y: -360px
+}
+
+.page-parsing .summry-4 {
+    background-position-y: -480px
+}
+
+.page-parsing .summry-5 {
+    background-position-y: -600px
+}
+
+.page-parsing .summry-6 {
+    background-position-y: -720px
+}
+
+.page-parsing .summry-7 {
+    background-position-y: -840px
+}
+
+.page-parsing .summry-8 {
+    background-position-y: -960px
+}
+
+.page-parsing .summry-9 {
+    background-position-y: 1080px
+}
+
+.page-parsing .details {
+    position: absolute;
+    display: none;
+    top: 760px;
+    width: 560px;
+    left: 50%;
+    margin-left: -280px
+}
+
+.page-parsing .detail-item {
+    background-image: url(../img/detail-txt.png);
+    width: 100%;
+    height: 44px;
+    margin-bottom: 10px;
+    background-repeat: no-repeat;
+    background-position-x: left
+}
+
+.page-parsing .item-0 {
+    background-position-y: 6px
+}
+
+.page-parsing .item-1 {
+    background-position-y: -40px
+}
+
+.page-parsing .item-2 {
+    background-position-y: -88px
+}
+
+.page-parsing .item-3 {
+    background-position-y: -136px
+}
+
+.page-parsing .stars {
+    height: 100%;
+    margin-left: 110px;
+    background-image: url(../img/stars.png);
+    background-repeat: no-repeat;
+    width: 150px;
+    background-position-y: 4px;
+    background-position-x: 0
+}
+
+.page-parsing .stars-0 {
+    background-position-x: -150px
+}
+
+.page-parsing .stars-1 {
+    background-position-x: -120px
+}
+
+.page-parsing .stars-2 {
+    background-position-x: -90px
+}
+
+.page-parsing .stars-3 {
+    background-position-x: -60px
+}
+
+.page-parsing .stars-4 {
+    background-position-x: -30px
+}
+
+.page-parsing .stars-5 {
+    background-position-x: 0
+}
+
+.page-parsing .btn-pk {
+    background-image: url(../img/btn-pk.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 204px;
+    height: 205px;
+    margin-left: 80px;
+    top: 750px;
+    left: 50%;
+    display: none
+}
+
+.page-parsing.done .details,
+.page-parsing.done .btn-pk,
+.page-parsing.done .scores,
+.page-parsing.done .summry {
+    display: block
+}
+
+.page-parsing.done .tips {
+    display: none
+}
+
+.masker {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8)
+}
+
+.masker .line {
+    width: 147px;
+    height: 102px;
+    position: absolute;
+    right: 50px;
+    top: 26px;
+    background-image: url(../img/line.png);
+    background-repeat: no-repeat
+}
+
+.masker .boy {
+    width: 143px;
+    height: 184px;
+    position: absolute;
+    right: 50px;
+    top: 261px;
+    background-image: url(../img/flag.png);
+    background-repeat: no-repeat
+}
+
+.masker .words {
+    width: 345px;
+    height: 97px;
+    position: absolute;
+    right: 107px;
+    top: 148px;
+    background-image: url(../img/words.png);
+    background-repeat: no-repeat
+}

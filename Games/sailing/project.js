@@ -1,0 +1,1 @@
+var g_project = '{"showFPS": false, "frameRate": 30, "project_type": "javascript", "debugMode": 1, "renderMode": 1, "id": "gameCanvas"}';

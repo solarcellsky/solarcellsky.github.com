@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8" name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>找钻戒</title>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="js/TweenMax.js"></script>
+    <script src="js/jgestures.min.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/base.js"></script>
+    <script src="js/mc-mgr.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/manager.js"></script>
+    <!-- <script src="js/im20.WeixinApi.js"></script> -->
+    <script src="js/audio-mgr.js"></script>
+    <script src="js/three.min.js"></script>
+    <script src="js/CSS3DRenderer.js"></script>
+    <script src="js/DeviceOrientationController.js"></script>
+    <script>
+
+        function GetUrlRelativePath() {
+            var url = document.location.href.toString();
+            var arrUrl = url.split("/");
+
+            //console.log(arrUrl);
+            var text = arrUrl[0]+"//";
+            for (var i = 2;i<arrUrl.length-1;i++){
+                text += arrUrl[i]+"/"
+            }
+            return text;
+        }
+
+        function isAndroid(){
+            var u = navigator.userAgent;
+            if(u.indexOf('Android') > -1 || u.indexOf('Linux') > -1){
+                return true;
+            }else{
+                return false;
+            }
+        }
+
+        // var wxdata = {
+        //     title: "吴亦凡房间全景图.zip",
+        //     desc: "",
+        //     link: GetUrlRelativePath()+'index.html',
+        //     imgUrl: GetUrlRelativePath()+'img/icon3.jpg',
+        //     trigger: function (res) {
+        //         //alert('用户点击分享到QQ');
+        //     },
+        //     complete: function (res) {
+        //         //alert(JSON.stringify(res));
+        //     },
+        //     success: function(res) {
+        //         if (res.errMsg == 'sendAppMsg:ok'){
+
+        //         }else if (res.errMsg == 'shareTimeline:ok'){
+
+        //         }
+        //     },
+        //     cancel: function (res) {
+        //         //alert('已取消');
+        //     },
+        //     fail: function (res) {
+        //         //alert(JSON.stringify(res));
+        //     }
+        // };
+        // WeixinApi.init({
+        //     url: "http://www.wmy-ad.com/baidu/weixin/api.php?method=getSignPackage",
+        //     debug : false
+        // });
+        // WeixinApi.share(wxdata);
+    </script>
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div id="main">
+    <section class="page_0"></section>
+    <div class="video_0 video_full_common"><video id="video_0" x-webkit-airplay="true" webkit-playsinline="true" preload="auto" src="video/0.mp4"></video></div>
+    <section class="page_1"></section>
+    <section class="page_2"></section>
+    <div class="video_small_3 video_small_common"><video id="video_small_3" x-webkit-airplay="true" webkit-playsinline="true" preload="auto" src="video/small_3.mp4"></video></div>
+    <div class="video_small_0 video_small_common"><video id="video_small_0" x-webkit-airplay="true" webkit-playsinline="true" preload="auto" src="video/small_0.mp4"></video></div>
+    <div class="video_small_1 video_small_common"><video id="video_small_1" x-webkit-airplay="true" webkit-playsinline="true" preload="auto" src="video/small_1.mp4"></video></div>
+    <div class="video_small_2 video_small_common"><video id="video_small_2" x-webkit-airplay="true" webkit-playsinline="true" preload="auto" src="video/small_2.mp4"></video></div>
+    <section class="page_3"></section>
+</div>
+
+</body>
+</html>

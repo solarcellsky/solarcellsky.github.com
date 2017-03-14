@@ -1,0 +1,760 @@
+.ydb, body {
+    display: -webkit-box
+}
+.sec-index .sec-one .op, .sec-index .sec-three .op, .sec-index .sec-two {
+    opacity: 0
+}
+body, html {
+    height: auto;
+    overflow-y: visible
+}
+body {
+    display: box;
+    -webkit-box-orient: vertical;
+    box-orient: vertical
+}
+.text-overflow {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+.ydb {
+    display: box
+}
+.fn-jf, .yvm {
+    display: -webkit-box
+}
+.yvm {
+    display: box;
+    -webkit-box-align: center;
+    box-align: center
+}
+.yfx1 {
+    -webkit-box-flex: 1;
+    box-flex: 1
+}
+.fn-pa {
+    position: absolute
+}
+.tl {
+    -webkit-transform: translate3d(-50%, 0, 0);
+    transform: translate3d(-50%, 0, 0)
+}
+.fn-jf {
+    display: box;
+    -webkit-box-pack: justify;
+    box-pack: justify
+}
+.fn-jc, .fn-jcnew {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: justify;
+    box-pack: justify;
+    -webkit-justify-content: space-around;
+    justify-content: space-around
+}
+.ani-z {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1
+}
+.loading {
+    background-color: #fe5e74
+}
+.loading .shine {
+    width: 72%;
+    left: 12%;
+    top: 4.4rem;
+    -webkit-animation: shine 5s linear infinite;
+    animation: shine 5s linear infinite
+}
+.loading .person {
+    background-image: url(../img/ldp.png);
+    background-size: 200% 200%;
+    -webkit-animation: step-4 1s steps(1) infinite;
+    animation: step-4 1s steps(1) infinite
+}
+.loading .prog {
+    top: 18.5rem;
+    width: 100%;
+    font-size: 1.25rem;
+    text-align: center;
+    color: #fff
+}
+.sec-index {
+    top: 0;
+    height: 100%
+}
+.sec-index .sec-one {
+    top: 0;
+    height: 100%;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0)
+}
+.sec-index .sec-one .tit1 {
+    top: 2%;
+    left: 3%;
+    width: 72%
+}
+.sec-index .sec-one .ins-1 {
+    background-image: url(../img/ins1.png);
+    background-size: 200% 200%
+}
+.sec-index .sec-two .ins-2 {
+    background-image: url(../img/ins2.png);
+    background-size: 200% 200%
+}
+.sec-index .sec-three {
+    top: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0)
+}
+.sec-index .sec-three .insbg {
+    bottom: 0
+}
+.sec-index .sec-three .tit2 {
+    bottom: 22%;
+    right: 1%;
+    width: 73%
+}
+.sec-index .sec-three .ins-3 {
+    background-image: url(../img/ins3.png);
+    background-size: 200% 200%
+}
+.sec-index .sec-three .ins-3 .num {
+    position: absolute;
+    bottom: 31%;
+    left: 43%;
+    width: 4.6rem;
+    height: 1rem;
+    font-size: 0;
+    text-align: center
+}
+.sec-index .sec-three .ins-3 .num img {
+    height: 100%
+}
+.sec-index .sec-three .ins-3 .kan {
+    position: absolute;
+    bottom: 4%;
+    right: 4%;
+    width: 8.575rem;
+    height: 4.25rem;
+    background-image: url(../img/kan.png);
+    background-size: 100% 100%
+}
+.sec-index.on .sec-one {
+    -webkit-animation: simple-am 1s both;
+    animation: simple-am 1s both
+}
+.sec-index.on .sec-one .op {
+    -webkit-animation: opacity-t 1s .5s both;
+    animation: opacity-t 1s .5s both
+}
+.sec-index.on .sec-one .ins-1 {
+    -webkit-animation: step-4 1s steps(1) infinite;
+    animation: step-4 1s steps(1) infinite
+}
+.sec-index.on .sec-two {
+    -webkit-animation: opacity-t 1s 1.5s both;
+    animation: opacity-t 1s 1.5s both
+}
+.sec-index.on .sec-two .ins-2 {
+    -webkit-animation: step-3 1s 1.5s steps(1) both;
+    animation: step-3 1s 1.5s steps(1) both
+}
+.sec-index.on .sec-three {
+    -webkit-animation: simple-am 1s 2.5s both;
+    animation: simple-am 1s 2.5s both
+}
+.sec-index.on .sec-three .op {
+    -webkit-animation: opacity-t 1s 3s both;
+    animation: opacity-t 1s 3s both
+}
+.sec-index.on .sec-three .ins-3 {
+    -webkit-animation: step-4 .5s steps(1) infinite;
+    animation: step-4 .5s steps(1) infinite
+}
+.sec-index.on .sec-three .ins-3 .kan {
+    -webkit-animation: shake 3s linear infinite;
+    animation: shake 3s linear infinite
+}
+.roster {
+    overflow-y: hidden
+}
+.roster .roster-wrap {
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 3.9rem;
+    font-size: .5rem;
+    color: #fff;
+    font-weight: 700;
+    box-sizing: border-box
+}
+.roster .roster-wrap a {
+    color: #fff
+}
+.roster .roster-wrap .change {
+    display: block;
+    bottom: -1px;
+    right: 0;
+    width: 6.8rem;
+    height: 2.85rem;
+    background-image: url(../img/change.png);
+    background-size: 100%;
+    z-index: 2;
+    -webkit-animation: simple-m .3s infinite;
+    animation: simple-m .3s infinite
+}
+.roster .pro-list li {
+    width: 50%;
+    height: 8.8rem;
+    float: left;
+    padding: 0 1.2rem 0 1.5rem;
+    box-sizing: border-box
+}
+.roster .pro-list li:nth-of-type(2n) {
+    padding: 0 1.5rem 0 1.2rem
+}
+.roster .pro-list li:nth-of-type(1) .kan {
+    -webkit-animation-delay: .5s;
+    animation-delay: .5s
+}
+.roster .pro-list li:nth-of-type(2) .kan {
+    -webkit-animation-delay: .8s;
+    animation-delay: .8s
+}
+.roster .pro-list li:nth-of-type(3) .kan {
+    -webkit-animation-delay: .2s;
+    animation-delay: .2s
+}
+.roster .pro-list li:nth-of-type(4) .kan {
+    -webkit-animation-delay: .6s;
+    animation-delay: .6s
+}
+.roster .pro-list li .line-t {
+    text-decoration: line-through
+}
+.roster .pro-list .img-wrap {
+    height: 4.5rem;
+    padding: .7rem .8rem 0;
+    background: url(../img/flower-bg.png) no-repeat;
+    background-size: 100%
+}
+.roster .pro-list .img-wrap .pro-none {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background: url(../img/flower-bg-f.png) no-repeat;
+    background-size: 100%
+}
+.roster .pro-list .kan {
+    width: 4.725rem;
+    height: 1.9rem;
+    margin: .2rem auto 0;
+    background: url(../img/kant.png) no-repeat;
+    background-size: 100%;
+    -webkit-animation-name: shake;
+    -webkit-animation-duration: 4s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-name: shake;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite
+}
+.launch {
+    top: 0;
+    padding-top: .5rem;
+    width: 100%
+}
+.launch .logo {
+    top: .375rem;
+    left: .375rem;
+    width: 5rem
+}
+.launch .pro-img {
+    width: 43%
+}
+.launch .tips {
+    margin-top: .5rem;
+    font-size: .7rem;
+    color: #fe5e74;
+    text-align: center;
+    font-weight: 700
+}
+.launch .progress {
+    width: 88%;
+    margin-left: 1rem
+}
+.launch .progress .prog-bar {
+    position: absolute;
+    top: 15%;
+    width: 100%;
+    padding: 0 3.5%;
+    height: 68%;
+    box-sizing: border-box
+}
+.launch .progress .prog-bar .prog-v {
+    float: right;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/progressval.png);
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: 13.25rem 1.9rem
+}
+.launch .price>div {
+    position: absolute;
+    width: 4.3rem;
+    height: 2.15rem;
+    padding: .7rem 0 0 .7rem;
+    text-align: center;
+    font-size: 0;
+    box-sizing: border-box;
+    background-size: 100% 100%
+}
+.launch .price>div img {
+    height: 50%
+}
+.launch .price-b {
+    top: -.5rem;
+    left: 1rem;
+    background-image: url(../img/pr.png)
+}
+.launch .price-p {
+    top: -.5rem;
+    right: 3.5rem;
+    background-image: url(../img/cut.png)
+}
+.launch .phone-wrap {
+    width: 12.2rem;
+    margin: 4.2rem auto 0
+}
+.launch .phone-wrap input {
+    background-color: transparent;
+    border: none;
+    outline: 0;
+    height: 1.6rem;
+    color: #fff;
+    font-size: .85rem;
+    text-align: center
+}
+.launch .phone-wrap input::-webkit-input-placeholder {
+    color: #fff
+}
+.launch .phone-wrap .num {
+    width: 100%;
+    line-height: 1.6rem
+}
+.launch .phone-wrap .yzm {
+    height: 1.5rem;
+    margin-top: .7rem;
+    padding-left: .25rem
+}
+.launch .phone-wrap .yzm .yzm-num {
+    width: 6.7rem;
+    line-height: 1.5rem
+}
+.launch .phone-wrap .yzm img {
+    width: 4.5rem;
+    display: block
+}
+.launch .rute-wrap {
+    padding: 1.5rem 1rem 0
+}
+.launch .rute-wrap .rute {
+    display: block;
+    width: 4.825rem;
+    height: 3.4rem;
+    background-image: url(../img/rute.png);
+    background-size: 100% 100%
+}
+.launch .rute-wrap .kkan {
+    top: 1.5rem;
+    right: 1rem;
+    width: 7rem;
+    height: 3.475rem;
+    background-image: url(../img/kkan.png);
+    background-size: 100% 100%;
+    -webkit-animation: shake 3s linear infinite;
+    animation: shake 3s linear infinite
+}
+.dialog-bg {
+    position: fixed;
+    display: -webkit-box;
+    display: box;
+    -webkit-box-align: center;
+    box-align: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0 5.4%;
+    z-index: 999;
+    color: #fff;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, .8)
+}
+.dialog-bg .close-btn:after, .dialog-bg .close-btn:before {
+    position: absolute;
+    content: '';
+    background: #fff;
+    display: block
+}
+.dialog-bg .close-btn {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    right: 5.4%;
+    top: 30px
+}
+.dialog-bg .close-btn:after {
+    top: 24px;
+    width: 50px;
+    height: 1px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+.dialog-bg .close-btn:before {
+    left: 24px;
+    width: 1px;
+    height: 50px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+.dialog-bg h3 {
+    font-size: 15px;
+    margin-bottom: 20px
+}
+.dialog-bg .information li {
+    margin-bottom: 5px;
+    font-size: 12px
+}
+.loading .shine-b {
+    width: 90%;
+    left: 3%;
+    top: 3.4rem;
+    -webkit-animation: shine 5s linear infinite;
+    animation: shine 5s linear infinite
+}
+.loading .person-k {
+    background-image: url(../img/kj_ld.png);
+    background-size: 200% 200%;
+    -webkit-animation: step-4-once 1s .5s steps(1) both;
+    animation: step-4-once 1s .5s steps(1) both
+}
+.loading .ld {
+    width: 54%;
+    top: 13.5rem;
+    left: 48%
+}
+.share {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .7);
+    z-index: 10
+}
+.share .person-s {
+    background-image: url(../img/share.png);
+    background-size: 200% 200%;
+    -webkit-animation: step-5 3s steps(1) infinite;
+    animation: step-5 3s steps(1) infinite
+}
+.share .person-s img {
+    top: 8rem;
+    right: 1rem;
+    width: 50%;
+    -webkit-animation: shake 3s steps(1) infinite;
+    animation: shake 3s steps(1) infinite
+}
+.kan-list {
+    background-image: url(../img/kan-listbg.jpg);
+    background-size: 100% auto
+}
+.kan-list .launch {
+    padding-top: 2rem
+}
+.kan-list .launch .tips {
+    position: absolute;
+    width: 100%
+}
+.kan-list .launch .progress {
+    margin-top: 1.5rem
+}
+.kan-list .launch .price-b {
+    top: .2rem;
+    left: 1rem
+}
+.kan-list .launch .price-p {
+    top: .2rem;
+    right: 1rem
+}
+.kan-list .list-wrap {
+    margin-top: 4.5rem
+}
+.kan-list .list-wrap .person-h {
+    width: 2.7rem;
+    height: 2.7rem;
+    background: #fe5e74
+}
+.kan-list .list-wrap .person-say {
+    padding: 0 .8rem 0 2rem
+}
+.kan-list .list-wrap .person-say .person-t {
+    width: 10rem;
+    height: 2.65rem;
+    margin-top: -.5rem;
+    padding: .2rem .4rem 0 1rem;
+    background-image: url(../img/tips-box.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    box-sizing: border-box;
+    color: #fff;
+    font-weight: 700;
+    font-size: .5rem
+}
+.kan-list .list-wrap .system-t {
+    height: 2.7rem;
+    padding: 0 2rem;
+    color: #fff;
+    font-size: .7rem;
+    font-weight: 700;
+    text-align: center
+}
+.kan-list .list-wrap .rute-wrap {
+    padding: .5rem .5rem 0
+}
+.kan-list .list-wrap .rute-wrap .rute {
+    display: block;
+    width: 4.825rem;
+    height: 3.4rem;
+    background-image: url(../img/rute.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%
+}
+.kan-list .list-wrap .rute-wrap .kkan {
+    top: 1.5rem;
+    right: 1rem;
+    width: 7rem;
+    height: 3.475rem;
+    background-image: url(../img/kkan.png);
+    background-size: 100% 100%;
+    -webkit-animation: kan 4s linear infinite;
+    animation: kan 4s linear infinite
+}
+.kan-list .list-wrap .rute-wrap .btns {
+    padding-top: .7rem
+}
+.kan-list .list-wrap .rute-wrap .btns a {
+    display: block;
+    height: 1.9rem;
+    margin-left: .5rem
+}
+.kan-list .list-wrap .rute-wrap .btns a:first-child:last-child {
+    height: 2.1rem
+}
+.kan-list .list-wrap .rute-wrap .btns a:first-child:last-child img {
+    height: 2.1rem
+}
+.kan-list .list-wrap .rute-wrap .btns a img {
+    height: 1.9rem
+}
+.kan-list .list-wrap .list-bg {
+    margin-top: 3rem;
+    padding: 0 1rem 2rem;
+    background-image: url(../img/listrp.jpg);
+    background-size: 100% auto;
+    background-position: 0 -2px;
+    background-repeat: repeat
+}
+.kan-list .list-wrap .list-bg .cut-list {
+    -webkit-border-image: url(../img/border-img.png) 25 25 stretch;
+    border-image: url(../img/border-img.png) 25 25 stretch;
+    border-width: 25px;
+    box-sizing: border-box
+}
+.kan-list .list-wrap .list-bg .cut-list li {
+    padding: 1rem 0;
+    font-size: .6rem;
+    color: #010101;
+    border-bottom: 2px dotted grey;
+    background-color: #fff
+}
+.kan-list .list-wrap .list-bg .cut-list .fx1 {
+    padding-left: .5rem;
+    font-weight: 700
+}
+.kan-list .list-wrap .list-bg .cut-list .pink {
+    color: #f94082
+}
+.kan-list .list-wrap .list-bg .cut-list .cut-p {
+    font-size: 1rem;
+    color: #f94082
+}
+.kan-list .list-wrap .list-bg .cut-list .cut-p span {
+    font-size: 2rem
+}
+.d-ins {
+    padding: 0 .5rem 1rem;
+    font-size: .6rem;
+    color: #333
+}
+.d-ins .ins {
+    margin: 1rem 0 .5rem
+}
+.d-ins .ins span {
+    color: #cb2b25
+}
+.d-ins .red {
+    color: #c62650
+}
+.d-ins .strong {
+    font-weight: 700
+}
+.d-ins .d-btn {
+    display: block;
+    width: 8.45rem;
+    margin: 0 auto 1rem;
+    line-height: 1.5rem;
+    font-size: .6rem;
+    color: #333;
+    text-align: center;
+    border-radius: .2rem;
+    background-color: #fad91a
+}
+.d-ins .d-img {
+    padding: 0 1.25rem;
+    margin-bottom: 1rem
+}
+.notwx h3 {
+    margin: .75rem 0 2rem;
+    font-size: 1rem;
+    color: #919191;
+    text-align: center
+}
+.notwx p {
+    color: #303030;
+    margin-bottom: .15rem
+}
+.notwx img {
+    margin-bottom: 1.5rem
+}
+.notwx .hasp {
+    padding: 0 2rem
+}
+.music-block {
+    position: fixed;
+    top: .5rem;
+    right: .5rem;
+    width: 1.76rem;
+    height: 2rem;
+    background-size: 100% auto;
+    background-image: url(../img/m-play.png);
+    background-repeat: no-repeat;
+    z-index: 5
+}
+.music-block.m-stop {
+    background-position: center;
+    background-image: url(../img/m-stop.png)
+}
+@-webkit-keyframes step-3 {
+    20% {
+        background-position: 0 0
+    }
+    60% {
+        background-position: -100% 0
+    }
+    100%, 80% {
+        background-position: 0 -100%
+    }
+}
+@-webkit-keyframes step-4 {
+    40% {
+        background-position: -100% 0
+    }
+    60% {
+        background-position: 0 -100%
+    }
+    80% {
+        background-position: -100% -100%
+    }
+}
+@-webkit-keyframes step-5 {
+    10% {
+        background-position: -100% 0
+    }
+    20% {
+        background-position: 0 0
+    }
+    30% {
+        background-position: 0 -100%
+    }
+    100%, 35% {
+        background-position: -100% -100%
+    }
+}
+@-webkit-keyframes step-4-once {
+    40% {
+        background-position: -100% 0
+    }
+    60% {
+        background-position: 0 -100%
+    }
+    100%, 80% {
+        background-position: -100% -100%
+    }
+}
+@-webkit-keyframes shine {
+    25% {
+        -webkit-transform: rotate(90deg) scale(.9)
+    }
+    50% {
+        -webkit-transform: rotate(180deg) scale(1)
+    }
+    75% {
+        -webkit-transform: rotate(270deg) scale(1.1)
+    }
+    100% {
+        -webkit-transform: rotate(360deg) scale(1)
+    }
+}
+@-webkit-keyframes simple-am {
+    100% {
+        -webkit-transform: translate3d(0, 0, 0)
+    }
+}
+@-webkit-keyframes opacity-t {
+    100% {
+        opacity: 1
+    }
+}
+@-webkit-keyframes shake {
+    0%, 100% {
+        -webkit-transform: translateX(0)
+    }
+    10%, 30%, 50%, 70%, 90% {
+        -webkit-transform: translateX(-5px)
+    }
+    20%, 40%, 60%, 80% {
+        -webkit-transform: translateX(5px)
+    }
+}
+@-webkit-keyframes simple-m {
+    50% {
+        -webkit-transform: translateY(9px)
+    }
+    100% {
+        -webkit-transform: translateY(0)
+    }
+}

@@ -1,0 +1,511 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta name="robots" content="none">
+    <meta name="viewport" id="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>网络流行语等级考试</title>
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+    <style type="text/css">
+    body {
+        background-image: url(assets/bg.jpg);
+    }
+    
+    .ctn {
+        width: 60px;
+        top: 10px;
+        right: 20px;
+        position: fixed;
+    }
+    
+    .ctn img {
+        width: 100%;
+    }
+    
+    .gamedec .gamedec_btn {
+        margin-top: 46px;
+    }
+    
+    .wrap {
+        padding-bottom: 62px;
+    }
+    
+    .float_a_d {
+        position: fixed;
+        z-index: 102;
+        width: 45px;
+        right: 28px;
+        top: 170px;
+    }
+    
+    .float_a_d img {
+        width: 100%;
+    }
+    
+    .a_d {
+        position: fixed;
+        bottom: 0;
+        z-index: 100;
+        width: 100%;
+        height: 50px;
+        background: rgba(0, 0, 0, .8);
+    }
+    
+    .a_d_box {
+        overflow: hidden;
+    }
+    
+    .a_d_pic {
+        width: 28px;
+        height: auto;
+        float: left;
+        margin-top: 8px;
+        margin-left: 10px;
+    }
+    
+    .a_d_link {
+        float: right;
+        color: #fff;
+        padding: 0 14px;
+        line-height: 26px;
+        text-align: center;
+        background: #ff3333;
+        display: block;
+        margin-top: 12px;
+        margin-right: 10px;
+        border-radius: 4px;
+    }
+    
+    .a_d_txt {
+        color: #fff;
+        line-height: 50px;
+        margin: 0 50px 0 46px;
+        letter-spacing: 0.5px;
+    }
+    
+    .float_layer {
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0);
+        display: none;
+        position: fixed;
+    }
+    
+    .spinner {
+        width: 25px;
+        height: 25px;
+        top: 50%;
+    }
+    
+    .container1 > div,
+    .container2 > div,
+    .container3 > div {
+        width: 6px;
+        height: 6px;
+        background-color: #67CF22;
+        border-radius: 100%;
+        position: absolute;
+        -webkit-animation: bouncedelay 1.2s infinite ease-in-out;
+        animation: bouncedelay 1.2s infinite ease-in-out;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+    
+    .spinner .spinner-container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .container2 {
+        -webkit-transform: rotateZ(45deg);
+        transform: rotateZ(45deg);
+    }
+    
+    .container3 {
+        -webkit-transform: rotateZ(90deg);
+        transform: rotateZ(90deg);
+    }
+    
+    .circle1 {
+        top: 0;
+        left: 0;
+    }
+    
+    .circle2 {
+        top: 0;
+        right: 0;
+    }
+    
+    .circle3 {
+        right: 0;
+        bottom: 0;
+    }
+    
+    .circle4 {
+        left: 0;
+        bottom: 0;
+    }
+    
+    .container2 .circle1 {
+        -webkit-animation-delay: -1.1s;
+        animation-delay: -1.1s;
+    }
+    
+    .container3 .circle1 {
+        -webkit-animation-delay: -1.0s;
+        animation-delay: -1.0s;
+    }
+    
+    .container1 .circle2 {
+        -webkit-animation-delay: -0.9s;
+        animation-delay: -0.9s;
+    }
+    
+    .container2 .circle2 {
+        -webkit-animation-delay: -0.8s;
+        animation-delay: -0.8s;
+    }
+    
+    .container3 .circle2 {
+        -webkit-animation-delay: -0.7s;
+        animation-delay: -0.7s;
+    }
+    
+    .container1 .circle3 {
+        -webkit-animation-delay: -0.6s;
+        animation-delay: -0.6s;
+    }
+    
+    .container2 .circle3 {
+        -webkit-animation-delay: -0.5s;
+        animation-delay: -0.5s;
+    }
+    
+    .container3 .circle3 {
+        -webkit-animation-delay: -0.4s;
+        animation-delay: -0.4s;
+    }
+    
+    .container1 .circle4 {
+        -webkit-animation-delay: -0.3s;
+        animation-delay: -0.3s;
+    }
+    
+    .container2 .circle4 {
+        -webkit-animation-delay: -0.2s;
+        animation-delay: -0.2s;
+    }
+    
+    .container3 .circle4 {
+        -webkit-animation-delay: -0.1s;
+        animation-delay: -0.1s;
+    }
+    
+    @-webkit-keyframes bouncedelay {
+        0%,
+        80%,
+        100% {
+            -webkit-transform: scale(0.0)
+        }
+        40% {
+            -webkit-transform: scale(1.0)
+        }
+    }
+    
+    @keyframes bouncedelay {
+        0%,
+        80%,
+        100% {
+            transform: scale(0.0);
+            -webkit-transform: scale(0.0);
+        }
+        40% {
+            transform: scale(1.0);
+            -webkit-transform: scale(1.0);
+        }
+    }
+    </style>
+    <script src="http://f.shiyi11.com/ui/js/common/jquery-1.8.3.min.js"></script>
+</head>
+
+<body>
+    <div class="wrap rel">
+        <img src="http://wx.qlogo.cn/mmopen/ajNVdqHZLLCjT7Wu4jBJWTBrAkeJ5ZrGQVhCictekQxXMia4siaicMDHZLd3qrQYJ9wCalCCdQFyOvARjpXibaUlpBw/0" style="left:-3000px;position: absolute;">
+        <img src="assets/share_logo.png" style="left:-3000px;position: absolute;">
+        <div class="logo abs">
+            <img src="assets/logo_alpha.png">
+        </div>
+        <div class="progress_warp mcenter rel">
+            <div class="progress_line_bg abscenter">
+                <div class="progress"></div>
+            </div>
+            <div class="progress_label rel dbox">
+                <span><em class="on">1</em></span>
+                <span><em>2</em></span>
+                <span><em>3</em></span>
+                <span><em>4</em></span>
+                <span><em>5</em></span>
+                <span><em>6</em></span>
+                <span><em>7</em></span>
+                <span><em>8</em></span>
+                <span><em>9</em></span>
+                <span><em>10</em></span>
+            </div>
+        </div>
+        <div class="question_wrap mcenter rel">
+            <div class="question">
+                <p>小明在路上走着走着突然发现地上有张毛爷爷，脱口而出“卧槽”。</p>
+                <p>问：这里的卧槽应该怎么念？</p>
+            </div>
+        </div>
+        <div class="answer mcenter">
+            <ul>
+                <li data-qid="1" data-aid="0">wö cào</li>
+                <li data-qid="1" data-aid="1">wò cào</li>
+                <li data-qid="1" data-aid="2">wō cāo</li>
+                <li data-qid="1" data-aid="3">wö cáo</li>
+            </ul>
+        </div>
+        <div style="display:none">
+            <form id="submitForm" name="submitForm" action="http://sh33.weileiba.cn/topic/wl20160127.html?step=2" method="post">
+                <div style="display:none">
+                    <input type="hidden" value="NTE3ZDc0YWZmODRjMTVmMGMwMzU3MjY1ODBkMjc4NThkMjIzNDEzMw==" name="_sh_token_">
+                </div>
+                <input type="hidden" id="qa_content" name="qa_content">
+            </form>
+        </div>
+        <div class="float_layer abs">
+            <div class="spinner habscenter">
+                <div class="spinner-container container1">
+                    <div class="circle1"></div>
+                    <div class="circle2"></div>
+                    <div class="circle3"></div>
+                    <div class="circle4"></div>
+                </div>
+                <div class="spinner-container container2">
+                    <div class="circle1"></div>
+                    <div class="circle2"></div>
+                    <div class="circle3"></div>
+                    <div class="circle4"></div>
+                </div>
+                <div class="spinner-container container3">
+                    <div class="circle1"></div>
+                    <div class="circle2"></div>
+                    <div class="circle3"></div>
+                    <div class="circle4"></div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+        $(function() {
+            var questions = [{
+                'id': '1',
+                'title': ["小明在路上走着走着突然发现地上有张毛爷爷，脱口而出“卧槽”。", "问：这里的卧槽应该怎么念？"],
+                'answers': ["wö cào", "wò cào", "wō cāo", "wö cáo"]
+            }, {
+                'id': '2',
+                'title': ["小明捡完毛爷爷便继续走啊走，突然来了个光膀子大哥把毛爷爷抢走了，小明边喊“卧槽”边追光膀子大哥。", "问：此时的卧槽应该怎么念？"],
+                'answers': ["wö cào", "wò cào", "wō cāo", "wö cáo"]
+            }, {
+                'id': '3',
+                'title': ["就在小明将要放弃追赶心生绝念的时候，突然有个热心肠的姑娘三两下就把大汉撂倒，小明心想：卧槽，真牛x。", "问：小明心想的“卧槽”怎么念？"],
+                'answers': ["wö cào", "wò cào", "wō cāo", "wo cào"]
+            }, {
+                'id': '4',
+                'title': ["午休的时候广播里突然有个男生向并不喜欢他的女生告白。", "此时全校同学的心声更可能是？"],
+                'answers': ["哔了狗了", "你们城里人真会玩", "吓死宝宝了", "也是蛮拼的"]
+            }, {
+                'id': '5',
+                'title': ["今日传言隔壁漂亮女邻居小红找了对象，更有传言此男非富即贵。", "为什么大家会这么认为？"],
+                'answers': ["此男保时捷玛莎拉蒂换着开", "有人亲眼看见他喝酸奶不舔盖", "天天给小红送玫瑰"]
+            }, {
+                'id': '6',
+                'title': ["以下哪个男明星是猫系理科男？"],
+                'answers': ["胡彦斌", "张翰", "小鹿晗", "wuli滔", "李健"]
+            }, {
+                'id': '7',
+                'title': ["某小鲜肉想离职便写了一封辞职信。", "请问这封信上可能有以下哪句话？"],
+                'answers': ["信用卡还完了，我该寻找属于自己的人生", "世界那么大，我想去看看", "我需要一场说走就走的旅行", "老板娘长得太像前女友，每每看见心都会隐约作痛"]
+            }, {
+                'id': '8',
+                'title': ["在一个风和日丽的周末，小明和小伙伴们玩你追我赶的游戏。", "小明追上了小伙伴之后会怎么样？"],
+                'answers': ["小伙伴再去追小明", "嘿嘿嘿", "说明该局小明胜"]
+            }, {
+                'id': '9',
+                'title': ["刘大爷之前网购保健品被骗，报警后为了取得骗子信任套取信息帮助警察破案，大爷便再一次再两次再好多次陆续购买近7万元的保健品。", "对此行为你想说？"],
+                'answers': ["有钱就是任性", "这世界还是热心肠的好人多", "大爷保健品不能停啊"]
+            }, {
+                'id': '10',
+                'title': ["“给力”这个词出自以下那本名著？"],
+                'answers': ["《不给力啊，老湿》", "《这货不是宿敌》", "《西游记：旅程的终点》"]
+            }, {
+                'id': '11',
+                'title': ["中国最神秘的部门是哪个部门？"],
+                'answers': ["有关部门", "无关部门", "朝阳门"]
+            }, {
+                'id': '12',
+                'title': ["隔壁老王新婚不久，但是最近愁眉苦脸的一直念叨“且行且珍惜”。", "请问老王家出了什么事？"],
+                'answers': ["老王家有人去世了", "老王遇到感情危机", "老王炒股亏钱"]
+            }, {
+                'id': '13',
+                'title': ["“坑爹”是什么意思？"],
+                'answers': ["小坑他爹", "他爹姓坑", "骗人不太给力"]
+            }, {
+                'id': '14',
+                'title': ["开车撞到人，只要说什么就没事了？"],
+                'answers': ["我爸是李刚", "我女是彭帅", "对不起"]
+            }, {
+                'id': '15',
+                'title': ["李雷昨天打电话约韩梅梅晚上八点在村口鱼塘见面，请问李雷想干什么？"],
+                'answers': ["和韩梅梅告白", "炫富承包鱼塘", "约韩梅梅一起钓鱼"]
+            }, {
+                'id': '16',
+                'title': ["以下谁最需要领取住房补贴？"],
+                'answers': ["马化腾", "方舟子", "唐骏"]
+            }, {
+                'id': '17',
+                'title': ["奥特曼打完小怪兽为什么要点一下头？"],
+                'answers': ["示意小怪兽可以去领盒饭了", "示意导演这一集可以结束", "嗯，又升一级", "没有露馅"]
+            }, {
+                'id': '18',
+                'title': ["以下哪个东西跟鸡有关？"],
+                'answers': ["蛋疼", "蛋腚", "蛋汤"]
+            }, {
+                'id': '19',
+                'title': ["如果湖南卫视叫“芒果台”，江苏卫视叫？"],
+                'answers': ["大蒜台", "鸭梨台", "番茄台"]
+            }, {
+                'id': '20',
+                'title': ["“不给力”的英文怎么表达？"],
+                'answers': ["bugeili", "ungeili", "ungelivable"]
+            }, {
+                'id': '21',
+                'title': ["如果我们想表达一种蛋腚的人生观，视金钱、权利、美女为粪土，我们通常会说？"],
+                'answers': ["你知道的太多了", "神马都是浮云", "XX神马的最讨厌了"]
+            }, {
+                'id': '22',
+                'title': ["如果你是兰州人，最讨厌别人回神马？"],
+                'answers': ["兰州烧饼", "沙发", "围观"]
+            }, {
+                'id': '23',
+                'title': ["现在出国玩除了护照外还需准备什么？"],
+                'answers': ["钱", "我妈是我妈的相关证明", "攻略"]
+            }, {
+                'id': '24',
+                'title': ["生活在马勒戈壁的神兽是？"],
+                'answers': ["河蟹", "亚克蜥", "布鸣真象"]
+            }, {
+                'id': '25',
+                'title': ["小明在河边走着走着突然捡到远古时代的珍稀石头，小明此刻的心理活动是？"],
+                'answers': ["我要上交给国家", "老子将要走上人生巅峰", "小明并不认得这是宝贝，随手放回岸边，故事完"]
+            }, {
+                'id': '26',
+                'title': ["为什么爸爸的手大头儿小，儿子的头大手儿小"],
+                'answers': ["基因突变", "这得问围裙妈妈", "隔壁王叔叔有话要说", "都TM赖三"]
+            }, {
+                'id': '27',
+                'title': ["请问叶良辰是谁？"],
+                'answers': ["人大代表", "知名企业家", "段子手", "他可以让你有一百种死法"]
+            }, {
+                'id': '28',
+                'title': ["小明放学路上看见暗恋的女生小红和隔壁班二狗子手牵手回家，那么问题来了？"],
+                'answers': ["学挖掘机到底哪家强", "求小明心理阴影面积", "小明与小红的恋情该何去何从？"]
+            }, {
+                'id': '29',
+                'title': ["女神在朋友圈突然发了一张自拍，请问她会配什么文字？"],
+                'answers': ["一段鸡汤", "主要看气质", "人生箴言"]
+            }, {
+                'id': '30',
+                'title': ["以下你觉得无毒的东西是什么？"],
+                'answers': ["三鹿奶粉", "一滴香", "老鼠药"]
+            }, ];
+            var userAnswers = [];
+            var answeredQuestionId = null;
+            var randomId;
+            var dNum = 0;
+
+            function getRandomQuestion() {
+                if (answeredQuestionId != null) {
+                    questions.splice(answeredQuestionId, 1);
+                }
+                //获取随机id
+                randomId = getRandomId(randomId);
+                return questions[randomId];
+            }
+
+            function getRandomId(newRandomId) {
+                //获取随机id
+                var rid = parseInt(Math.random() * (questions.length - dNum));
+                if (newRandomId == rid) return getRandomId(rid);
+                return rid;
+            }
+
+            function genarateQuestionHtml(currentQuestion) {
+                //$('.question_pic img').attr('src',''assets/'+currentQuestion.id+'.jpg');
+                //$('.question').html(currentQuestion.title);
+                var questionHtml = '';
+                var answersHtml = '';
+                $.each(currentQuestion.title, function(id, question) {
+                    questionHtml += '<p>' + question + '</p>';
+                })
+                $.each(currentQuestion.answers, function(id, answer) {
+                    answersHtml += '<li data-qid="' + currentQuestion.id + '" data-aid="' + id + '">' + answer + '</li>';
+                });
+                $('.question').html(questionHtml);
+                $('.answer ul').html(answersHtml);
+                $('.answer li').bind('click', function() {
+                    nextFn(this);
+                    $('.answer li').unbind('click');
+                });
+            }
+
+            function changeFn() {
+                var currentQuestion = getRandomQuestion();
+                $('.wrap').fadeOut(300);
+                var timer = null;
+                clearTimeout(timer);
+                timer = setTimeout(function() {
+                    genarateQuestionHtml(currentQuestion);
+                }, 300);
+                $('.wrap').fadeIn(300);
+            }
+
+            function nextFn(_this) {
+                var qid = parseInt($(_this).attr('data-qid'));
+                var aid = parseInt($(_this).attr('data-aid'));
+                userAnswers.push(qid + '_' + aid);
+                $(_this).addClass('on');
+                dNum++;
+                var myWidth = 11 * dNum;
+                if (dNum >= 10) {
+                    $(_this).removeClass('on');
+                    //submit userAnswers
+                    $("#qa_content").val(userAnswers.join("|"));
+                    $("#submitForm").submit();
+                    $(".float_layer").show();
+                } else {
+                    setTimeout(function() {
+                        $('.progress_label em').eq(dNum).addClass('on');
+                        $('.progress').css('width', myWidth + '%');
+                    }, 300);
+
+                    //change question
+                    answeredQuestionId = randomId;
+                    changeFn();
+                }
+            }
+            //init question
+            var currentQuestion = getRandomQuestion();
+            genarateQuestionHtml(currentQuestion);
+        })
+        </script>
+    </div>
+</body>
+
+</html>

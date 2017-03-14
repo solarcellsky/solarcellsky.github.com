@@ -1,0 +1,1161 @@
+.game-steg, .load-chest {
+    width: 100%;
+    height: 100%
+}
+.game-rules-box .go-ani .slh, .loading-ani, .toast-ani, .toast-other-ani {
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-fill-mode: both
+}
+.guang, .proess, .resultpage, .resultpagebox .rbtn4 {
+    box-sizing: border-box
+}
+html {
+    font-size: 50px
+}
+.wrap, body {
+    overflow-x: hidden
+}
+.load-chest {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url(../img/game/loadchest-7ab6ed55.png);
+    background-size: cover;
+    z-index: 999;
+    display: none
+}
+.toast, .toast-other {
+    left: 50%;
+    z-index: 1000;
+    top: 1.3rem;
+    font-size: .28rem;
+    height: 1.08rem;
+    background: #ffe036;
+    color: #d5910f;
+    display: none;
+    position: absolute;
+    font-family: guanghui;
+    text-align: center
+}
+.toast {
+    margin-left: -1.25rem;
+    width: 2.85rem;
+    line-height: 1.08rem;
+    border-radius: .2rem;
+    border: .07rem solid #fb9b1f
+}
+.toast-ani {
+    -webkit-animation-name: toast;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-duration: 1.5s;
+    font-family: guanghui
+}
+.toast-other {
+    margin-left: -2rem;
+    width: 4rem;
+    line-height: .54rem;
+    border-radius: .2rem;
+    border: .07rem solid #fb9b1f
+}
+.start-game-djs, .wrap {
+    width: 100%;
+    height: 100%
+}
+.toast-other-ani {
+    -webkit-animation-name: toast-other;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-duration: 3s
+}
+@-webkit-keyframes toast {
+    0%, 50% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0
+    }
+}
+@-webkit-keyframes toast-other {
+    0%, 50% {
+        opacity: 1;
+        display: block
+    }
+    100% {
+        opacity: 0;
+        display: none
+    }
+}
+.game-rules-box, .game-steg, .wrap {
+    display: none
+}
+.start-game-djs {
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-align: center;
+    font-size: 2.7rem;
+    color: #ffcf29;
+    font-family: guanghui;
+    z-index: 999;
+    display: none;
+    background-color: rgba(0, 0, 0, .8)
+}
+.ios9 .start-game-djs {
+    font-family: Simsun
+}
+.car .car-banner-main {
+    background-color: #fedc3c
+}
+.car .car-banner-p0 {
+    font-size: 15px;
+    color: #a50016
+}
+.car .car-banner-p1 {
+    color: #a60016
+}
+.car .car-banner-after, .car .car-banner-before {
+    background-color: #eea321;
+    top: 8px
+}
+.car .car-banner-after:before, .car .car-banner-before:before {
+    border-color: #eea321 transparent
+}
+.game-first-box {
+    background: url(../img/gamepage/game-index-repeat-a1a75282.jpg) repeat-y;
+    background-size: 6.4rem 1px;
+    width: 6.4rem;
+    margin: 0 auto;
+    min-height: 100%
+}
+.game-first {
+    background: url(../img/gamepage/game-index-96d395f3.jpg) no-repeat;
+    background-size: 6.4rem;
+    width: 100%;
+    padding-bottom: .2rem
+}
+.game-first-box .tip {
+    background-color: #fedd3a;
+    font-weight: 700;
+    line-height: .65rem;
+    text-align: center;
+    background-size: 6.4rem .65rem;
+    width: 100%;
+    height: .65rem
+}
+.game-first-box .tip:before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    background: url(../img/gamepage/tip_gift-325bc789.png) center no-repeat;
+    background-size: .33rem .38rem;
+    width: .33rem;
+    height: .65rem;
+    margin-right: .2rem
+}
+.game-first .content {
+    padding-top: 2rem
+}
+.game-first-box .my-rank {
+    width: 4.9rem;
+    margin: 0 auto .2rem;
+    text-align: center
+}
+.game-first-box .myicon {
+    width: .52rem;
+    height: .52rem;
+    border-radius: .52rem;
+    border: 1px solid #a60016;
+    display: inline-block
+}
+.game-first-box .my-rank p {
+    height: .52rem;
+    line-height: .52rem;
+    display: inline-block;
+    color: #fff;
+    font-size: .5rem;
+    text-decoration: underline;
+    font-weight: 700;
+    vertical-align: top
+}
+.game-first-box .my-rank p.noneline {
+    text-decoration: none
+}
+.game-first-box .my-rank p #who {
+    height: .52rem;
+    line-height: .52rem;
+    overflow: hidden;
+    max-width: 2rem;
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-decoration: underline
+}
+.game-first-box .my-rank p.noneline #who {
+    text-decoration: none
+}
+.game-first-box .text {
+    margin: 0 auto .4rem;
+    min-height: .6rem;
+    text-align: center;
+    width: 5.1rem
+}
+.game-first-box .text p {
+    font-size: .28rem;
+    line-height: .3rem;
+    color: #fff
+}
+.game-first-box .text p span {
+    color: #fedc3b;
+    font-weight: 700
+}
+.game-first-box .first-error {
+    width: 4.9rem;
+    margin: .3rem auto;
+    font-size: .22rem;
+    color: #fff;
+    font-weight: 700;
+    text-align: center
+}
+.game-first-box .activeinfoline {
+    width: 4.9rem;
+    margin: .4rem auto;
+    font-size: .24rem;
+    color: #fff;
+    font-weight: 700;
+    text-align: right;
+    text-decoration: underline
+}
+.game-first-box .tologin {
+    color: #fedc3b;
+    font-size: .28rem;
+    width: 4.4rem;
+    text-align: center;
+    margin: .2rem auto;
+    display: none;
+    font-weight: 700;
+    text-decoration: underline
+}
+.game-first-box .text p:last-child {
+    font-size: .24rem
+}
+.game-first-box .car-tip {
+    width: 4.87rem;
+    height: .7rem;
+    background: url(../img/gamepage/car-tip-cae0ff35.jpg);
+    background-size: 4.87rem .7rem;
+    margin: 0 auto
+}
+.btn-long, .btnlist div, .btnlist-wx .btn1, .btnlist-wx .btn2 {
+    height: .76rem;
+    font-size: .28rem;
+    line-height: .76rem;
+    text-align: center;
+    font-weight: 700
+}
+.game-first-box .car {
+    margin: 0 auto
+}
+.btn-long {
+    width: 4.9rem;
+    background: url(../img/gamepage/btnwx1-ba0b1f06.png);
+    background-size: 4.9rem .76rem;
+    color: #a60016;
+    margin: .3rem auto .18rem
+}
+.btnlist, .btnlist-wx {
+    margin: .3rem auto;
+    width: 4.9rem
+}
+.btnlist-wx .btn1 {
+    width: 4.9rem;
+    background: url(../img/gamepage/btnwx1-ba0b1f06.png);
+    background-size: 4.9rem .76rem;
+    color: #a60016;
+    margin-bottom: .18rem
+}
+.btnlist-wx .btn2 {
+    width: 4.9rem;
+    background: url(../img/gamepage/btnwx2-22abea6d.png);
+    background-size: 4.9rem .76rem;
+    color: #fedc3b
+}
+.btnlist div {
+    width: 2.38rem;
+    background: url(../img/gamepage/btn-3a1b05be.png);
+    background-size: 2.38rem .76rem;
+    float: right;
+    color: #a60016
+}
+.btnlist div:first-child {
+    float: left
+}
+.btnlist .btn2 {
+    font-size: .22rem;
+    line-height: .24rem;
+    padding: .12rem 0;
+    height: .52rem
+}
+.btnlist.later .btn2 {
+    background: url(../img/gamepage/btn_hui-9bd5ca71.png);
+    background-size: 2.38rem .76rem;
+    color: #fff
+}
+.game-first-box .friend-rank {
+    width: 4.8rem;
+    margin: 0 auto
+}
+.resultpagebox .friend-rank {
+    width: 5.8rem;
+    margin: 0 auto
+}
+.friend-rank .friend-info {
+    position: relative;
+    color: #fff;
+    text-align: center
+}
+.friend-rank .friend-info:after, .friend-rank .friend-info:before {
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    height: .02rem;
+    width: 1.12rem;
+    top: 50%
+}
+.friend-rank .friend-info:before {
+    left: 0
+}
+.friend-rank .friend-info:after {
+    right: 0
+}
+.friend-rank .friend-info h3 {
+    font-size: .3rem;
+    font-weight: 700
+}
+.friend-rank .friend-info p {
+    padding-top: .03rem;
+    font-size: .22rem
+}
+.game-first-box .ranktitle {
+    background: url(../img/gamepage/ranktitle2-05347fb4.png) center top no-repeat;
+    width: 100%;
+    height: .27rem;
+    background-size: 4.9rem .27rem
+}
+.resultpagebox .rank-tip {
+    text-align: center;
+    font-size: .24rem;
+    color: #fff;
+    padding: .05rem 0
+}
+.resultpagebox .ranktitle {
+    background: url(../img/gamepage/resultrank-96947e72.png) center top no-repeat;
+    width: 100%;
+    height: .28rem;
+    background-size: 5.8rem .28rem
+}
+.game-first-box .rank, .resultpagebox .rank {
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto
+}
+.game-first-box .rank li, .resultpagebox .rank li {
+    width: 100%;
+    padding: .17rem 0;
+    color: #fff
+}
+.game-first-box .rank img, .resultpagebox .rank img {
+    width: .52rem;
+    height: .52rem;
+    float: left;
+    margin-right: .15rem;
+    border-radius: .52rem;
+    border: 1px solid #aa021a
+}
+.resultpagebox .rank img {
+    border: 1px solid #fff
+}
+.game-first-box .rank .rank-content, .resultpagebox .rank .content {
+    width: 2.8rem;
+    line-height: .26rem;
+    float: left;
+    font-size: .22rem
+}
+.resultpagebox .rank .content {
+    width: 3.8rem
+}
+.game-first-box .rank h4, .resultpagebox .rank h4 {
+    font-weight: 700
+}
+.game-first-box .rank .time, .resultpagebox .rank .time {
+    line-height: .52rem;
+    height: .52rem;
+    font-weight: 700;
+    text-align: right;
+    width: 1.2rem;
+    float: right
+}
+.game-first-box .mychest {
+    width: 5rem;
+    height: 1.3rem;
+    margin: .3rem auto;
+    background: url(../img/gamepage/mychest-dcdc91ac.png);
+    background-size: 5rem 1.3rem
+}
+.bottom-tip, .bottom-tip-wx, .startbtn, .startbtn-wx, .top-tip, .top-tip-wx {
+    display: none
+}
+.game-rules-box {
+    width: 100%;
+    height: 100%
+}
+.game-rules-content {
+    -webkit-transform-origin: 0 0;
+    width: 6.4rem
+}
+.game2 .game-rules-bg {
+    background: url(../img/gamepage/game-rules-bg2-428526fb.jpg) repeat-y;
+    width: 100%;
+    height: 100%;
+    position: relative
+}
+.game2 .game-rules-body {
+    width: 6.4rem;
+    height: 8.32rem;
+    background: url(../img/gamepage/game-rule2-062371f6.jpg);
+    background-size: 6.4rem 8.32rem;
+    position: relative
+}
+.game1 .game-rules-body {
+    width: 6.4rem;
+    height: 8.32rem;
+    background: url(../img/gamepage/game-rule1-c8ebce50.jpg);
+    background-size: 6.4rem 8.32rem;
+    position: relative
+}
+.game1 .game-rules-bg {
+    background: #302d1e;
+    width: 100%;
+    height: 100%;
+    position: relative
+}
+.rule-alert .close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: .62rem;
+    height: .62rem
+}
+.game1.rule-alert {
+    background-image: url(../img/gamepage/rule-alert-945b9485.png)
+}
+.game2.rule-alert {
+    background-image: url(../img/gamepage/rule-alert2-6f5c26c4.png)
+}
+.game2 .open-chest {
+    background-image: url(../img/gamepage/chestopen2-da7384e2.png)
+}
+.game1 .open-chest {
+    background-image: url(../img/gamepage/chestopen-6881cb0d.png)
+}
+.game1.rule-alert, .game2.rule-alert {
+    position: absolute;
+    background-size: 5.4rem 7.05rem;
+    top: 1.2rem;
+    left: .5rem;
+    width: 5.4rem;
+    height: 7.05rem;
+    z-index: 999;
+    display: none;
+    -webkit-transform-origin: 0 0
+}
+.game-rules-box .top-tip, .game-rules-box .top-tip-ta {
+    top: 1.59rem;
+    color: #ffcf29;
+    font-size: .45rem;
+    display: none;
+    position: absolute
+}
+.game-rules-box .top-tip {
+    left: .53rem;
+    width: 5.33rem;
+    height: 1.08rem;
+    background: url(../img/gamepage/top-tip-abc23f92.png);
+    background-size: 5.33rem 1.08rem
+}
+.game-rules-box .top-tip-ta {
+    left: .7rem;
+    width: 5rem;
+    height: 1.1rem;
+    background-size: 3.31rem 1.1rem;
+    text-align: center;
+    line-height: .5rem;
+    font-family: guanghui
+}
+.game-rules-box .top-tip-wx {
+    position: absolute;
+    top: 1.87rem;
+    left: .53rem;
+    width: 5.33rem;
+    height: .46rem;
+    background: url(../img/gamepage/toptipwx-7e47177a.png);
+    background-size: 5.33rem .46rem;
+    display: none
+}
+.game-rules-box .bottom-tip {
+    position: absolute;
+    top: 6.13rem;
+    left: .98rem;
+    width: 4.43rem;
+    height: .9rem;
+    background: url(../img/gamepage/bottom-tip-a586c1ef.png);
+    background-size: 4.43rem .9rem;
+    display: none
+}
+.game-rules-box .bottom-tip-wx {
+    position: absolute;
+    top: 6.28rem;
+    left: .31rem;
+    width: 5.78rem;
+    height: .63rem;
+    background: url(../img/gamepage/bottomtipwx-ec6815eb.png);
+    background-size: 5.78rem .63rem;
+    display: none
+}
+.game-rules-box .go-ani .slh1, .game-rules-box .go-ani .slh2, .game-rules-box .go-ani .slh3 {
+    top: .45rem;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-duration: 1s
+}
+.game-rules-box .startbtn {
+    position: absolute;
+    left: 1.25rem;
+    bottom: 0;
+    width: 3.89rem;
+    height: 1.08rem;
+    background: url(../img/gamepage/startbtn-8014abe5.png);
+    background-size: 3.89rem 1.08rem;
+    display: none
+}
+.game-rules-box .startbtn-wx {
+    position: absolute;
+    left: 1.83rem;
+    bottom: 0;
+    width: 2.74rem;
+    height: .76rem;
+    background: url(../img/gamepage/startwx-18f045ec.png);
+    background-size: 2.74rem .76rem;
+    display: none
+}
+.game-rules-box .startbtn1 {
+    background: url(../img/gamepage/startbtn1-14a19325.png);
+    background-size: 3.89rem 1.08rem
+}
+.game-rules-box .go {
+    background: url(../img/gamepage/go-d92e4377.png);
+    background-size: 3.89rem 1.08rem;
+    display: none
+}
+.resultpage .desc2 {
+    font-size: .3rem;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    margin-top: .15rem;
+    font-family: guanghui
+}
+.game-rules-box .go-ani .slh {
+    position: absolute;
+    width: .15rem;
+    height: .15rem;
+    border-radius: .15rem;
+    background: #fff;
+    border: 2px solid #579603;
+    -webkit-animation-iteration-count: infinite
+}
+.game-rules-box .go-ani .slh1 {
+    left: 2.64rem;
+    -webkit-animation-name: slh1
+}
+.game-rules-box .go-ani .slh2 {
+    left: 2.86rem;
+    -webkit-animation-name: slh2
+}
+.game-rules-box .go-ani .slh3 {
+    left: 3.08rem;
+    -webkit-animation-name: slh3
+}
+.game-rules-box .bird, .game-rules-box .center-area {
+    background-size: 1.06rem 1.02rem;
+    width: 1.06rem;
+    height: 1.02rem;
+    position: absolute;
+    left: 0;
+    top: 0
+}
+.game-rules-box .bird {
+    z-index: 3;
+    -webkit-transform: translate(1.59rem, 3.98rem)
+}
+.game-rules-box.game1 .bird {
+    background-image: url(../img/game1/ren-447d3358.png);
+    -webkit-transform: translate(1.59rem, 4.13rem)
+}
+.game-rules-box.game2 .bird {
+    background-image: url(../img/game2/ren-daf39324.png)
+}
+.game-rules-box .center-area {
+    -webkit-transform: translate(2.65rem, 3.98rem)
+}
+.game-rules-box.game1 .center-area {
+    background-image: url(../img/game1/caopi-ad08ea68.png);
+    -webkit-transform: translate(2.65rem, 4.13rem)
+}
+.game-rules-box .bird-move1, .game-rules-box.game2 .center-area {
+    -webkit-transform: translate(2.65rem, 3.98rem)
+}
+.game-rules-box.game2 .center-area {
+    background-image: url(../img/game2/caopi-0d7bdcc2.png)
+}
+.game-rules-box.game1 .center-area.opened {
+    background-image: url(../img/game1/way-32442e9d.png)
+}
+.game-rules-box.game2 .center-area.opened {
+    background-image: url(../img/game2/way-6b687b3d.png)
+}
+.game-rules-box .bird-move2 {
+    -webkit-transform: translate(3.71rem, 3.98rem)
+}
+.game-rules-box.game1 .bird-move1 {
+    -webkit-transform: translate(2.65rem, 4.13rem)
+}
+.game-rules-box.game1 .bird-move2 {
+    -webkit-transform: translate(3.71rem, 4.13rem)
+}
+.game-rules-box .rule-cursor {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: .47rem;
+    height: .73rem;
+    background: url(../img/gamepage/rule-cursor-5a8902dc.png);
+    background-size: .47rem .73rem;
+    z-index: 9;
+    -webkit-transform: translate(10rem, 516rem)
+}
+.game-rules-box .rule-chest {
+    background: url(../img/gamepage/rule-chest-bb303835.png);
+    background-size: 1.1rem .89rem;
+    width: 1.1rem;
+    height: .89rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    z-index: 4;
+    -webkit-transform: translate(3.71rem, 3.98rem)
+}
+.game-rules-box .error-tip {
+    position: absolute;
+    opacity: 0;
+    left: 0;
+    top: 0;
+    width: 1.5rem;
+    -webkit-transform: translate(3.8rem, 5.16rem)
+}
+.game-rules-box .error-tip img {
+    display: block;
+    width: 100%
+}
+.game-rules-box .game-rule-jc, .game-rules-box .game-rule-yy {
+    width: .59rem;
+    height: .59rem;
+    position: absolute;
+    top: .12rem
+}
+.game-rules-box .game-rule-yy {
+    right: 1.04rem
+}
+.game-rules-box .game-rule-jc {
+    right: .37rem
+}
+.header {
+    background: url(../img/game/header-f5c6a2a1.png);
+    background-size: 6.4rem .9rem;
+    width: 6.4rem;
+    height: .9rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    -webkit-transform-origin: 0 0!important;
+    display: none;
+    -webkit-transform: translate3d(0, 0, 0)
+}
+.loadingdjs, .proess {
+    height: .33rem;
+    overflow: hidden
+}
+.header .js {
+    width: 4.35rem;
+    position: absolute;
+    left: .31rem;
+    top: .19rem
+}
+.djs {
+    float: left;
+    margin-top: .06rem;
+    font-family: haibao;
+    color: #fff;
+    font-size: .26rem;
+    text-shadow: 1px 0 1px #c75509
+}
+.loadingdjs {
+    background: url(../img/game/loading-40cb405f.png);
+    width: 3.6rem;
+    float: left;
+    margin-left: .1rem;
+    background-size: 3.6rem .33rem;
+    border: 2px solid #fff9b6;
+    border-radius: .18rem;
+    position: relative
+}
+.proess {
+    background: url(../img/game/proess-6e21c218.png);
+    border-radius: .12rem;
+    width: 3.58rem;
+    left: 1px;
+    top: 0;
+    position: absolute;
+    background-size: 3.58rem .33rem
+}
+.guang {
+    background: url(../img/game/guang-4ff2cb6e.png);
+    border-radius: .06rem;
+    width: .62rem;
+    height: .3rem;
+    right: .1rem;
+    top: 1px;
+    position: absolute;
+    background-size: .62rem .3rem
+}
+.jiaocheng, .yinyue {
+    position: absolute;
+    top: .09rem;
+    width: .6rem;
+    height: .59rem
+}
+.yinyue {
+    right: 1.01rem;
+    background: url(../img/game/yinyue-35035845.png);
+    background-size: .6rem .59rem
+}
+.yycontrolno {
+    background: url(../img/game/yinyueno-3ac6e3de.png);
+    background-size: .59rem .59rem
+}
+.jiaocheng {
+    right: .34rem;
+    background: url(../img/game/jiaocheng-bff5d5df.png);
+    background-size: .6rem .59rem
+}
+.loading-ani {
+    -webkit-animation-name: loading;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-duration: 15s
+}
+.game-rules-box .cursor-move1, .game-rules-box .cursor-move2, .game-rules-box .cursor-move3 {
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-delay: .5s;
+    -webkit-animation-duration: .5s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: 1
+}
+body.android {
+    overflow-y: auto
+}
+body.android .game-steg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%
+}
+body.ios {
+    overflow: hidden
+}
+.resultpagebox, body.ios .resultpagebox {
+    overflow-y: auto
+}
+.resultpagebox {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+    background: rgba(0, 0, 0, .8)
+}
+.resultpage {
+    width: 100%;
+    padding: .3rem 0 0;
+    min-height: 100%
+}
+.resultpage .chenghao {
+    font-size: .55rem;
+    color: #ffcf2d;
+    width: 6.2rem;
+    text-align: center;
+    line-height: .78rem;
+    margin: 0 auto
+}
+.resultpage .chenghao .ch1 {
+    font-size: .55rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+    text-align: center;
+    overflow: hidden
+}
+.resultpage .chenghao .ch2 {
+    font-size: .6rem;
+    width: 100%;
+    text-align: center
+}
+.resultpage .chenghao span {
+    font-family: guanghui;
+    color: #fff
+}
+.resultpage .chestlist1, .resultpagebox .rbtnlist, .resultpagebox .tip {
+    font-family: hei
+}
+.resultpage .golden {
+    color: #ffcf2d;
+    margin-bottom: 30px
+}
+.resultpage .chestlist1 {
+    margin: .3rem auto;
+    width: 5.88rem
+}
+.resultpage .chestlist1 div, .resultpage .chestlist1 i, .resultpage .chestlist1 li, .resultpage .chestlist1 span {
+    float: left
+}
+.resultpage .chestlist1 li {
+    width: 100%;
+    border-bottom: 1px solid #fff
+}
+.resultpage .chestlist1 i {
+    width: .74rem;
+    vertical-align: middle;
+    display: block
+}
+.resultpage .chestlist1 .chestitem {
+    width: 2.94rem;
+    float: left
+}
+.resultpage .chestlist1 span {
+    font-size: .34rem;
+    color: #fff;
+    height: 1.18rem;
+    width: 2rem;
+    background-repeat: no-repeat;
+    line-height: 1.18rem;
+    padding-left: .2rem;
+    overflow: hidden
+}
+.resultpage .chestlist1 .liucount {
+    height: .75rem;
+    background-image: url(../img/gamepage/r_iconl-eae519b5.png);
+    background-size: .74rem .75rem;
+    margin-top: .21rem;
+    background-repeat: no-repeat
+}
+.resultpage .chestlist1 .juancount {
+    background-image: url(../img/gamepage/r_iconj-f7b00fb6.png);
+    height: .68rem;
+    background-size: .74rem .68rem;
+    margin-top: .24rem;
+    background-repeat: no-repeat
+}
+.resultpage .chestlist1 .youcount {
+    background-image: url(../img/gamepage/r_iconyou-60e495ab.png);
+    height: .61rem;
+    background-size: .74rem .61rem;
+    margin-top: .28rem;
+    background-repeat: no-repeat
+}
+.resultpage .chestlist1 .checount {
+    background-image: url(../img/gamepage/r_icons-3c15c229.png);
+    height: .45rem;
+    background-size: .74rem .45rem;
+    margin-top: .37rem;
+    background-repeat: no-repeat
+}
+.resultpage .wabao-self, .resultpage .wabao-tip {
+    width: 5.63rem;
+    height: 1.3rem;
+    margin: 0 auto .25rem
+}
+.resultpage .wabao-self {
+    background: url(../img/gamepage/wabao_self-9a345895.png) no-repeat;
+    background-size: 5.63rem 1.3rem
+}
+.resultpage .wabao-tip {
+    background: url(../img/gamepage/wabao_tip-370e75cc.png) no-repeat;
+    background-size: 5.63rem 1.3rem
+}
+.resultpagebox .rbtn1 {
+    width: 5.88rem;
+    height: 1.08rem;
+    margin: 0 auto .2rem;
+    background-size: 5.88rem 1.08rem;
+    line-height: 1.09rem;
+    color: #fff;
+    font-size: .4rem;
+    text-align: center
+}
+.resultpagebox .rbtnlist .rbtn2, .resultpagebox .rbtnlist .rbtn3 {
+    text-align: left;
+    text-decoration: underline;
+    font-size: .32rem;
+    height: .4rem;
+    line-height: .4rem;
+    color: #fff
+}
+.resultpagebox .rbtnlist {
+    margin: 0 auto;
+    padding: 0 0 .6rem;
+    width: 5.9rem
+}
+.resultpagebox .rbtnlist .rbtn2 {
+    float: left;
+    margin-left: .6rem
+}
+.resultpagebox .rbtnlist .rbtn3 {
+    float: right;
+    margin-right: .6rem
+}
+.resultpagebox .rbtn4 {
+    width: 5.9rem;
+    height: 1.09rem;
+    line-height: .9rem;
+    text-align: center;
+    border-radius: 10px;
+    border: 5px solid #a1d525;
+    color: #fff;
+    font-size: .4rem;
+    margin: 0 auto .2rem
+}
+.resultpagebox .tip {
+    font-size: .28rem;
+    padding-bottom: .4rem;
+    text-align: center;
+    width: 100%;
+    color: #fff;
+    position: absolute;
+    bottom: .2rem
+}
+.resultpagebox .nochest {
+    width: 2.64rem;
+    height: 2.6rem;
+    background: url(../img/gamepage/nochest-1074930b.png);
+    margin: .7rem auto;
+    background-size: 2.64rem 2.6rem
+}
+.resultpagebox .sharetimeline {
+    background-image: url(../img/gamepage/resultbtn1-f68d6a8c.png)
+}
+.resultpagebox .bindMobile-mychest, .resultpagebox .result-mychest {
+    background-image: url(../img/gamepage/result_mychest-8182e524.png)
+}
+.resultpagebox .shareagain {
+    background-image: url(../img/gamepage/resultbtn2-c724c07c.png)
+}
+.resultpagebox .regame {
+    background-image: url(../img/gamepage/resultbtn3-bd23478e.png)
+}
+.resultpagebox .toselfgame {
+    background-image: url(../img/gamepage/resultbtn4-b68e0e1a.png)
+}
+.clearfix:after, .clearfix:before {
+    content: " ";
+    display: table
+}
+.clearfix:after {
+    clear: both
+}
+.block {
+    display: block
+}
+.none {
+    display: none
+}
+@-webkit-keyframes loading {
+    0% {
+        width: 3.58rem
+    }
+    100% {
+        width: 0
+    }
+}
+.game-rules-box .cursor-move1 {
+    -webkit-animation-name: cursor-move1
+}
+.game-rules-box .cursor-tap1 {
+    -webkit-transform: translate(3.08rem, 4.49rem);
+    -webkit-animation-name: cursor-tap1;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-duration: .5s;
+    -webkit-animation-delay: .5s
+}
+.game-rules-box .cursor-move2 {
+    -webkit-transform: translate(3.08rem, 5.51rem);
+    -webkit-animation-name: cursor-move2
+}
+.game-rules-box .cursor-tap2 {
+    -webkit-transform: translate(4.14rem, 4.49rem);
+    -webkit-animation-name: cursor-tap2;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-duration: .5s;
+    -webkit-animation-delay: .5s
+}
+.game-rules-box .cursor-move3 {
+    -webkit-transform: translate(3.08rem, 4.49rem);
+    -webkit-animation-name: cursor-move3
+}
+.game-rules-box .cursor-tap3 {
+    -webkit-transform: translate(3.08rem, 5.51rem);
+    -webkit-animation-name: cursor-tap3;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-duration: .5s;
+    -webkit-animation-delay: .5s
+}
+.rule-chest-ani {
+    -webkit-animation-name: rule-chest-ani;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-duration: .5s
+}
+.error-tip-ani {
+    -webkit-animation-name: error-tip-ani;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-duration: 1s
+}
+@media (max-height: 420px) {
+    .game-rules-box .startbtn {
+        bottom: .1rem
+    }
+}
+@media (max-height: 520px) {
+    .resultpage {
+        padding-top: .3rem
+    }
+}
+@media (min-height: 500px) {
+    .game-rules-box .startbtn {
+        bottom: -.6rem
+    }
+}
+@-webkit-keyframes error-tip-ani {
+    0% {
+        opacity: 0
+    }
+    100%, 50% {
+        opacity: 1
+    }
+}
+@-webkit-keyframes rule-chest-ani {
+    0% {
+        opacity: 1;
+        -webkit-transform: translate(3.7rem, 4.06rem)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translate(3.7rem, 3rem)
+    }
+}
+@-webkit-keyframes cursor-move1 {
+    0% {
+        -webkit-transform: translate(5rem, 6rem)
+    }
+    100% {
+        -webkit-transform: translate(3.08rem, 4.49rem)
+    }
+}
+@-webkit-keyframes cursor-tap1 {
+    0%, 100% {
+        -webkit-transform: translate(3.08rem, 4.49rem) scale(1, 1)
+    }
+    50% {
+        -webkit-transform: translate(3.08rem, 4.49rem) scale(2, 2)
+    }
+}
+@-webkit-keyframes cursor-move2 {
+    0% {
+        -webkit-transform: translate(3.08rem, 5.51rem)
+    }
+    100% {
+        -webkit-transform: translate(4.14rem, 4.49rem)
+    }
+}
+@-webkit-keyframes cursor-tap2 {
+    0%, 100% {
+        -webkit-transform: translate(4.14rem, 4.49rem) scale(1, 1)
+    }
+    50% {
+        -webkit-transform: translate(4.14rem, 4.49rem) scale(2, 2)
+    }
+}
+@-webkit-keyframes cursor-move3 {
+    0% {
+        -webkit-transform: translate(3.08rem, 4.49rem)
+    }
+    100% {
+        -webkit-transform: translate(3.08rem, 5.51rem)
+    }
+}
+@-webkit-keyframes cursor-tap3 {
+    0%, 100% {
+        -webkit-transform: translate(3.08rem, 5.51rem) scale(1, 1)
+    }
+    50% {
+        -webkit-transform: translate(3.08rem, 5.51rem) scale(2, 2)
+    }
+}
+@font-face {
+    font-family: haibao;
+    src: url(../font/haibao-5ac1c975.ttf)
+}
+@font-face {
+    font-family: guanghui;
+    src: url(../font/guanghui-ec11b232.ttf)
+}
+@font-face {
+    font-family: hei;
+    src: url(../font/hei-86c8dad2.ttf)
+}
+@-webkit-keyframes slh1 {
+    0% {
+        opacity: 0
+    }
+    100%, 25% {
+        opacity: 1
+    }
+}
+@-webkit-keyframes slh2 {
+    0%, 25% {
+        opacity: 0
+    }
+    100%, 50% {
+        opacity: 1
+    }
+}
+@-webkit-keyframes slh3 {
+    0%, 25%, 50% {
+        opacity: 0
+    }
+    100%, 75% {
+        opacity: 1
+    }
+}

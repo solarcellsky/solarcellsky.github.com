@@ -1,0 +1,52 @@
+{"frames": [
+
+{
+	"filename": "cs_bg.png",
+	"frame": {"x":2,"y":2,"w":420,"h":300},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":420,"h":300},
+	"sourceSize": {"w":420,"h":300}
+},
+{
+	"filename": "cs_button_no.png",
+	"frame": {"x":2,"y":304,"w":100,"h":100},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":100},
+	"sourceSize": {"w":100,"h":100}
+},
+{
+	"filename": "cs_button_no_press.png",
+	"frame": {"x":104,"y":304,"w":100,"h":100},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":100},
+	"sourceSize": {"w":100,"h":100}
+},
+{
+	"filename": "cs_button_yes.png",
+	"frame": {"x":206,"y":304,"w":100,"h":100},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":100},
+	"sourceSize": {"w":100,"h":100}
+},
+{
+	"filename": "cs_button_yes_press.png",
+	"frame": {"x":308,"y":304,"w":100,"h":100},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":100},
+	"sourceSize": {"w":100,"h":100}
+}],
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "UI_confirmation0.png",
+	"format": "RGBA8888",
+	"size": {"w":424,"h":406},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:127e1af592010e86b41172aa11787cd0:5dc8d8f9638252a045610f095de26ee6:4cdf9b0e430b38337ff36d7006fa55b0$"
+}
+}

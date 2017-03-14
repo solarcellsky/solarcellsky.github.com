@@ -1,0 +1,48 @@
+
+preloader.png
+size: 4096,2048
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+back
+  rotate: false
+  xy: 4, 102
+  size: 1500, 1913
+  orig: 1500, 1913
+  offset: 0, 0
+  index: -1
+click
+  rotate: false
+  xy: 4, 4
+  size: 753, 90
+  orig: 753, 90
+  offset: 0, 0
+  index: -1
+loading
+  rotate: false
+  xy: 1512, 1407
+  size: 502, 135
+  orig: 502, 135
+  offset: 0, 0
+  index: -1
+progress
+  rotate: false
+  xy: 1512, 1550
+  size: 1205, 193
+  orig: 1205, 193
+  offset: 0, 0
+  index: -1
+progress_bg
+  rotate: false
+  xy: 1512, 1751
+  size: 1273, 264
+  orig: 1273, 264
+  offset: 0, 0
+  index: -1
+tap
+  rotate: false
+  xy: 2793, 1925
+  size: 667, 90
+  orig: 667, 90
+  offset: 0, 0
+  index: -1

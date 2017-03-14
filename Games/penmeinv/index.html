@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta charset="utf-8">
+    <link href="css/gameStyle.css" rel="stylesheet">
+    <title>想要喷美女吗，1919不介意和你玩玩。</title>
+    <script>
+    var _csrf = 'OjqNa2Of-gnrCta5EDwYyWLobxxkV5KX6AAs';
+    var myID = '4syj';
+    var myName = "老任";
+    var otherID = '4nw6';
+    var otherName = "Kevin";
+    var friendFlag = true; //进入游戏身份识别
+    var myGameScore = 0;
+    var otherGameScore = parseInt(4) || 0;
+    var friendTimes = parseInt(1) || 0;
+    var myTimes = 3;
+    var _czc = _czc || [];
+    _czc.push(["_setAccount", "1256524733"]);
+    </script>
+</head>
+
+<body>
+    <!--<div style="z-index:99999;position:fixed;top:5%;left:0;color:#000;text-align:left;font-size: 1.1em;width:80%;font-weight:700;opacity:.8; background-color: #fff;" id="testid"></div>-->
+    <!-- 测试DIV  -->
+    <img style="display:none" src="res/pingzidonghua.png">
+    <img style="display:none" src="res/window_load.jpg">
+    <canvas id="gamecanvas"></canvas>
+    <div class="mainpage">
+        <div id="gamestart">
+            <img src="res/window_mypage.jpg">
+            <div class="gamestart-content btn-palygame scale">
+                <img src="res/btn_palygame.png">
+            </div>
+            <div class="gamerule-bottom-btn">
+                <a>活动规则</a>
+            </div>
+        </div>
+        <div id="gamemain" style="display: none; background-image: url(res/game_mainbackground.jpg);">
+            <img class="gamemain-img-first" src="res/window_wutai.png">
+            <div class="gamemain-player">
+                <span>老任</span>的小房间
+            </div>
+            <div class="gamemain-cards">
+                <div class="gamemain-cards-left">
+                    <img class="gamemain-cards-left-img" src="res/card_left1.png">
+                </div>
+                <div id="gotolottery_btn" class="gamemain-cards-mid rotate">
+                    <img class="gamemain-cards-mid-img" src="res/card_mid1.png">
+                </div>
+                <div class="gamemain-cards-right">
+                    <img class="gamemain-cards-right-img" src="res/card_right1.png">
+                </div>
+            </div>
+            <div class="gamemain-finger-btn scale">
+                <img src="res/btn_finger.png">
+            </div>
+            <div class="gamemain-finger-btn-tishi">
+                <img src="res/tishi_dianji.png">
+            </div>
+            <div class="gamemain-score"><span>0</span>/99</div>
+            <div class="gamemain-live">
+                <img src="res/sm_live3.png">
+                <span>x3</span>
+            </div>
+            <div class="gamemain-tishi">
+                <img src="res/font_laba.png">
+            </div>
+            <div class="gamemain-btns">
+                <div class="gamemain-btns-left">
+                    <img src="res/btn_viewgame.png">
+                </div>
+                <div class="gamemain-btns-right">
+                    <img src="res/btn_share.png">
+                </div>
+            </div>
+            <img class="gamelipao" src="res/view_lipao1.png">
+            <div class="gamemain-info">
+                <ul>
+                    <li>
+                        <div class="gamemain-info-list">
+                            <div class="gamemain-info-ico"><img src="http://wx.qlogo.cn/mmopen/ajNVdqHZLLCzFv6xnSDhbQl2E1ANhCI39TNgjok7NIBFNoSzQAflRHZXXd8ia6DgUe01lc3Lxodg0lvMaY3vR2g/0"></div>
+                            <div class="gamemain-info-content">你收藏了0张小卡片！</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="gamefriend" style="display: none; -webkit-transform-origin: 0px 0px; opacity: 1; -webkit-transform: scale(1, 1); background-image: url(http://m.muzhibuluo.com/biz/1919_s01e01/res/game_mainbackground.jpg);">
+            <img class="gamefriend-img-first" src="res/window_wutai.png">
+            <div class="gamefriend-player">
+                <span>Kevin</span>的小房间
+            </div>
+            <div class="gamefriend-cards">
+                <div class="gamefriend-cards-left">
+                    <img class="gamefriend-cards-left-img" src="res/card_left1.png">
+                </div>
+                <div class="gamefriend-cards-mid rotate">
+                    <img class="gamefriend-cards-mid-img" src="res/card_mid1.png">
+                </div>
+                <div class="gamefriend-cards-right">
+                    <img class="gamefriend-cards-right-img" src="res/card_right1.png">
+                </div>
+            </div>
+            <div class="gamefriend-finger-btn scale">
+                <img src="res/btn_finger.png">
+            </div>
+            <div class="gamefriend-finger-btn-tishi">
+                <img src="res/tishi_dianji.png">
+            </div>
+            <div class="gamefriend-score"><span>4</span>/99</div>
+            <div class="gamefriend-live">
+                <img src="res/sm_live1.png">
+                <span>x1</span>
+            </div>
+            <div class="gamefriend-tishi">
+                <img src="res/font_laba_friend.png">
+            </div>
+            <div class="gamefriend-btns">
+                <!--<div class="gamefriend-btns-left">
+                    <img src="res/btn_helpothers.png" />
+                </div>-->
+                <div class="gamefriend-btns-right">
+                    <img src="res/btn_Iwantplay.png">
+                </div>
+            </div>
+            <img class="gamelipao" src="res/view_lipao1.png">
+            <div class="gamefriend-info">
+                <ul>
+                    <li>
+                        <div class="gamefriend-info-list">
+                            <div class="gamefriend-info-ico"><img src="http://wx.qlogo.cn/mmopen/OTy1U7o7ojGNmZTYO9l7kw0r9jCD6MrzJ4r1cda1Y7xRQkicHXNvb1JsU4Lq1zzMI8fX2a3hXG03GQWgicdn28RvqlSzbq6TRN/0"></div>
+                            <div class="gamefriend-info-content">Kevin收藏了3张小卡片！</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="gamefriend-info-list">
+                            <div class="gamefriend-info-ico"><img src="http://wx.qlogo.cn/mmopen/OTy1U7o7ojGNmZTYO9l7kw0r9jCD6MrzJ4r1cda1Y7xRQkicHXNvb1JsU4Lq1zzMI8fX2a3hXG03GQWgicdn28RvqlSzbq6TRN/0"></div>
+                            <div class="gamefriend-info-content">Kevin收藏了1张小卡片！</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--<div id="gamemainfriend">
+
+            <img src="res/window_friendpage.jpg" />
+            <div class="gamemainfriend-btns">
+                <div class="gamemainfriend-btns-left">
+                    <img src="res/btn_helpothers.png" />
+                </div>
+                <div class="gamemainfriend-btns-right">
+                    <img src="res/btn_Iwantplay.png" />
+                </div>
+            </div>
+            <div class="gamerule-bottom-btn">
+                <a>活动规则</a>
+            </div>
+        </div>-->
+        <div class="gamemusic-paly music-animate">
+            <img value="0" src="res/music_play.png">
+        </div>
+    </div>
+    <div id="tipwindow">
+        <div class="tw-hint-1">
+            <div class="tw-hint-1-close tw-close">
+                <img src="res/btn_close.png">
+            </div>
+            <img src="res/window_sorryFriend.png">
+            <div class="tw-hint-1-btn tw-ok-btn-share">
+                <img src="res/btn_callfriend.png">
+            </div>
+        </div>
+        <div class="tw-gamerule">
+            <div class="tw-gamerule-img">
+                <img src="res/game_rule.png">
+            </div>
+            <div class="tw-gamerule-close tw-close1">
+                <img src="res/btn_close.png">
+            </div>
+            <div class="tw-gamerule-content">
+                <h3 class="tgc-rule">“狂欢摇香槟”活动细则</h3>
+                <p class="tgc-title">一、活动时间</p>
+                <p class="tgc-desc">2015年10月15日12:00-2015年10月23日23:59</p>
+                <p class="tgc-title">二、活动区域</p>
+                <p class="tgc-desc">中华人民共和国境内（港澳台地区除外）</p>
+                <p class="tgc-title">三、活动内容</p>
+                <p class="tgc-title-1">（一）参与方式：</p>
+                <p class="tgc-desc">1、用户从&lt;1919酒类直供&gt;公众号、朋友圈链接进入“狂欢摇香槟”游戏界面，完成游戏。</p>
+                <p class="tgc-title-1">（二）活动奖品：</p>
+                <table class="tgc-table" rules="all">
+                    <thead>
+                        <tr>
+                            <td colspan="5">&lt;狂欢摇香槟&gt;奖品列表</td>
+                        </tr>
+                        <tr>
+                            <td>类别</td>
+                            <td>产品</td>
+                            <td>数量</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="3">数码</td>
+                            <td>iPhone 6S</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>iWatch Sport</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>iPad mini4</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">酒</td>
+                            <td>巴黎之夜</td>
+                            <td>25</td>
+                        </tr>
+                        <tr>
+                            <td>拉菲传奇</td>
+                            <td>66</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="4">话费</td>
+                            <td>30元话费</td>
+                            <td>400</td>
+                        </tr>
+                        <tr>
+                            <td>10元话费</td>
+                            <td>1500</td>
+                        </tr>
+                        <tr>
+                            <td>5元话费</td>
+                            <td>8000</td>
+                        </tr>
+                        <tr>
+                            <td>2元话费</td>
+                            <td>20000</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="tgc-title-1">（三）活动规则：</p>
+                <p class="tgc-desc">
+                    1、用户通过“1919酒类直供”公众号或微信分享链接，或二维码扫描并关注1919酒类直供微信公众号进入游戏。
+                    <br> 2、每位用户每天可以玩三次游戏，根据完成游戏的程度获得相应积分。
+                    <br> 3、抽奖页让摇奖机进行抽奖，获得3个相同的项则中奖，每10个积分可进行一次抽奖，每个玩家可以同时存储最多99个积分，抽奖次数越多，获得奖品的概率越高。
+                    <br> 4、用户可将游戏在朋友圈或微信中分享，每位好友每天可为好友助力玩1次游戏。
+                    <br> 5、抽奖前用户需输入自己的手机号码，以方便中奖后“1919酒类直供”的工作人员能顺利的把奖品派送到中奖者手上。
+                    <br> 6、话费奖品将在抽中后48小时内充值到中奖手机，实物奖品中奖后将有客服人员主动联络，并在活动结束后统一发放，请保持电话畅通。
+                </p>
+                <p class="tgc-title">四、免责声明及注意事项</p>
+                <p class="tgc-desc">
+                    1. 活动主办单位：四川壹玖壹玖酒类供应链管理股份有限公司。
+                    <br> 2. 凡自愿参与本活动的，即视为同意本活动规则所述的各项规定。
+                    <br> 3. 活动时间以主办方网络服务器时间为准。
+                    <br> 4.活动仅限中国大陆个人用户参与（微信公众号账号或港澳台地区的账号无法参与本活动）。
+                    <br> 5.如遇意外无法提供指定奖品的，主办方有权以价值相仿的奖品替代公布奖品，所有奖品不得兑换现金或作价销售。
+                    <br> 6. 本活动中的奖品所涉及的个人所得税由主办方承担；但消费者因参与活动或领奖过程中所发生的个人费用（包含但不限于上网费、手机流量费、短信费、咨询客服电话费）需自理，主办方不做任何形式的补偿。
+                    <br> 7. 奖品发放时间依据供应商实际情况决定。
+                    <br> 8.因用户原因造成账号、账号密码遗失，并导致用户无法提交个人信息，或因用户存在注册信息有误、联系方式有误、提供虚假凭证、逾期兑奖等行为的，不能兑换奖品，损失由用户自行承担，活动主办方不承担责任。
+                    <br> 9. 如发现有用户在活动中使用任何不正当的手段（包括但不限于软件作弊、恶意套现、通过系统漏洞、扰乱系统、利用黑客工具等）参加活动，活动主办方有权取消其参加活动的资格，并有权撤销获奖奖品，具体认定以主办方判定为准（如奖品已发放，主办方有权追回）。
+                    <br> 10.活动主办方不对因网络传输原因而导致用户提交的信息错误或延误承担任何责任。
+                    <br> 11. 活动过程中，主办方与游戏开发方承诺所有用户提供的个人信息和照片信息只用于游戏本身、抽奖和奖品派发，不作他用，并严格保密。
+                    <br> 12.对于中奖者在领取和使用各奖品过程中发生的任何伤害和损失，如该等伤害和损失非由主办方之过错导致，主办方不承担任何责任。
+                    <br> 13.活动过程中，如出现不可抗力或情势变更的情况（包括但不限于重大灾害事件、活动受政府机关指令需要停止举办或调整的、活动遭受严重网络攻击或因系统故障需要暂停举办，或活动中奖名单大批量出错，活动不能正常进行等），活动主办方可依相关法律法规的规定主张免责。
+                    <br> 14. 在法律规定范围内，活动主办方可以根据本活动的实际举办情况对活动规则进行变动或调整，相关变动或调整将公布在活动页面上，并于公布时即时生效。
+                    <br> 15. 如消费者对本促销活动规则有任何疑问，主办方将会在法律允许的范围内对本促销活动规则给予必要的说明和解释。
+                    <br> 16.最终解释权归1919酒类直供所有。
+                </p>
+            </div>
+        </div>
+        <div class="game-share">
+            <img src="res/window_share.png">
+        </div>
+        <div id="tw-gameend" class="tw-gameend">
+            <img src="res/window_gameover1.png">
+            <div class="tw-gameend-close">
+                <img src="res/btn_gameendclose.png">
+            </div>
+            <div class="tw-gameend-title">
+                你的努力得到了回报！
+                <br> 本次游戏收藏了
+                <span>5</span>张小卡片
+            </div>
+            <div class="tw-gameend-gobtn scale">
+                <img src="res/btn_gonow_t.png">
+            </div>
+            <div class="tw-gameend-view">
+                10张小卡片就有机会抽取iPhone6S等大奖<i>!</i>
+            </div>
+            <div class="tw-gameend-playagain">
+                <img src="res/btn_palyagain.png">
+            </div>
+            <div class="tw-gameend-bottom-img">
+                <img src="res/go_live3.png">
+            </div>
+        </div>
+        <div id="tw-gameendfriend" class="tw-gameendfriend">
+            <img src="res/window_gameover1.png">
+            <div class="tw-gameendfriend-close">
+                <img src="res/btn_gameendclose.png">
+            </div>
+            <div class="tw-gameendfriend-title">
+                你的努力得到了回报！
+                <br> 你小伙伴的小卡片增加了
+                <span></span>个
+            </div>
+            <div class="tw-gameendfriend-gobtn scale">
+                <img src="res/btn_gonow.png">
+            </div>
+        </div>
+    </div>
+    <div class="window-hide-page"></div>
+    <audio class="music1919" loop="" id="music1919" src="res/1919gequ.mp3">
+        <source src="res/1919gequ.mp3" type="audio/mp3">
+    </audio>
+    <!--站长统计-->
+    <div style="display:none">
+        <script type="text/javascript">
+        var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+        document.write(unescape("%3Cspan id='cnzz_stat_icon_1256524733'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1256524733' type='text/javascript'%3E%3C/script%3E"));
+        </script><span id="cnzz_stat_icon_1256524733"><a href="http://www.cnzz.com/stat/website.php?web_id=1256524733" target="_blank" title="站长统计">站长统计</a></span>
+        <script src=" http://s11.cnzz.com/z_stat.php?id=1256524733" type="text/javascript"></script>
+        <script src="http://c.cnzz.com/core.php?web_id=1256524733&amp;t=z" charset="utf-8" type="text/javascript"></script>
+    </div>
+    <!--javascript-->
+    <script src="js/config.js"></script>
+    <script src="libs/zepto.min.js"></script>
+    <script src="libs/easeljs-0.7.1.js"></script>
+    <script src="libs/preloadjs-0.4.1.min.js"></script>
+    <script src="libs/soundjs-0.5.2.min.js"></script>
+    <script src="libs/tweenjs-0.5.1.min.js"></script>
+    <!--weixin-->
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script type="text/javascript" charset="UTF-8">
+    wx.config({
+        debug: false,
+        appId: 'wxdeb3829cce7d6ac5',
+        timestamp: '1448591711',
+        nonceStr: 'anbx7m9ce5bchao',
+        signature: '8db5768f2ae1b47a6a9eeb0533446c1d84b9f846',
+        jsApiList: [
+            'onMenuShareTimeline',
+            'onMenuShareAppMessage',
+            'onMenuShareQQ',
+            'onMenuShareWeibo'
+        ]
+
+    });
+
+    var hostname = 'm.muzhibuluo.com';
+
+    var _1919title = "想要喷美女吗，1919不介意和你玩玩。";
+    var iconstr = 'http://' + 'm.muzhibuluo.com' + '/biz/1919_s01e01/res/logo2.jpg';
+    var _1919linkstr = 'm.muzhibuluo.com' + '/biz/1919_s01e01/startup?cc=&instance=' + myID;
+    var _1919decstr = '好朋友不解释，1919必有重谢。';
+    var _1919title_f = "想要喷美女吗，1919不介意和你玩玩。";
+    var _1919linkstr_f = 'm.muzhibuluo.com' + '/biz/1919_s01e01/startup?cc=&instance=' + otherID;
+    var _1919decstr_f = '好朋友不解释，1919必有重谢。';
+    $(updatewx());
+
+    function updatewx() {
+        /*朋友身份分享*/
+        if (friendFlag) {
+            wx.ready(function() {
+                wx.onMenuShareAppMessage({
+                    title: _1919title_f,
+                    desc: _1919decstr_f,
+                    link: _1919linkstr_f,
+                    imgUrl: iconstr,
+                    trigger: function(res) {},
+                    success: function(res) {
+                        _czc.push(["_trackEvent", "帮朋友分享", "share", "朋友", 1]);
+                    },
+                    cancel: function(res) {},
+                    fail: function(res) {}
+                });
+                wx.onMenuShareTimeline({
+                    title: _1919decstr_f,
+                    link: _1919linkstr_f,
+                    imgUrl: iconstr,
+                    trigger: function(res) {},
+                    success: function(res) {
+                        _czc.push(["_trackEvent", "帮朋友分享", "share", "朋友圈", 1]);
+                    },
+                    cancel: function(res) {},
+                    fail: function(res) {}
+                });
+            });
+            wx.error(function(res) {
+                console.log(res.errMsg);
+            });
+        } else {
+            /*个人身份分享*/
+            wx.ready(function() {
+                wx.onMenuShareAppMessage({
+                    title: _1919title,
+                    desc: _1919decstr,
+                    link: _1919linkstr,
+                    imgUrl: iconstr,
+                    trigger: function(res) {},
+                    success: function(res) {
+                        _czc.push(["_trackEvent", "自己分享", "share", "朋友", 1]);
+                    },
+                    cancel: function(res) {},
+                    fail: function(res) {}
+                });
+                wx.onMenuShareTimeline({
+                    title: _1919decstr,
+                    link: _1919linkstr,
+                    imgUrl: iconstr,
+                    trigger: function(res) {},
+                    success: function(res) {
+                        _czc.push(["_trackEvent", "自己分享", "share", "朋友圈", 1]);
+                    },
+                    cancel: function(res) {},
+                    fail: function(res) {}
+                });
+            });
+            wx.error(function(res) {
+                console.log(res.errMsg);
+            });
+        }
+
+    }
+    </script>
+    <!--own js-->
+    <script src="js/control.js?V2"></script>
+    <!--game js-->
+    <script src="js/tools.js"></script>
+    <script src="js/sprite.js"></script>
+    <script src="js/state.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+    $("#gamecanvas").show()
+    initGame(manifest); //begin canvas game
+    </script>
+</body>
+<iframe id="__WeixinJSBridgeIframe_SetResult" style="display: none;"></iframe>
+<iframe id="__WeixinJSBridgeIframe" style="display: none;"></iframe>
+
+</html>

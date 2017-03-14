@@ -1,0 +1,105 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=640, target-densitydpi=device-dpi,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<link rel="stylesheet" href="css/style.css">
+<title>深圳街头惊现史上最强一挑三，现场十分惨烈！</title>
+<style>
+	.music{
+		position: absolute;
+		display: none;
+	}
+</style>
+</head>
+<body>
+<div style="display: none;position: absolute">
+	<img src="images/share.gif" alt=""/>
+</div>
+<div class="music">
+	<audio id="aud1" src="sound/第一段音效.mp3"></audio>
+	<audio id="aud2" src="sound/第一段音乐（重复）.mp3" loop="loop"></audio>
+	<audio id="aud3" src="sound/第二段音效.mp3"></audio>
+	<audio id="aud4" src="sound/第二段音乐（重复）.mp3" loop="loop"></audio>
+	<audio id="aud5" src="sound/第三段音效.mp3"></audio>
+	<audio id="aud6" src="sound/第三段音乐（重复）.mp3" loop="loop" ></audio>
+	<audio id="aud7" src="sound/第四段音效1.mp3" ></audio>
+	<audio id="aud8" src="sound/第四段音乐（重复）.mp3" loop="loop" ></audio>
+	<audio id="aud9" src="sound/第五段音效.mp3"  ></audio>
+	<audio id="aud10" src="sound/第五段音乐（重复）.mp3" loop="loop" ></audio>
+	<audio id="aud11" src="sound/第六段音效.mp3" ></audio>
+	<audio id="aud12" src="sound/第六段音乐（重复）.mp3" loop="loop"></audio>
+	<audio id="aud13" src="sound/第七段音效1.mp3"  ></audio>
+	<audio id="aud14" src="sound/第七段音乐（重复）.mp3" loop="loop" ></audio>
+	<audio id="aud15" src="sound/第八段音效.mp3"  ></audio>
+	<audio id="aud16" src="sound/第八段音乐（重复）.mp3" loop="loop"></audio>
+	<audio id="aud17" src="sound/第九段音效.mp3"  ></audio>
+	<audio id="aud18" src="sound/第九段音乐（重复）.mp3" loop="loop" ></audio>
+	<audio id="aud19" src="sound/第十段音效1.mp3"  ></audio>
+	<audio id="aud20" src="sound/第十段音乐（重复）.mp3" loop="loop" ></audio>
+	<audio id="aud21" src="sound/碧.mp3"></audio>
+	<audio id="aud22" src="sound/波.mp3"></audio>
+	<audio id="aud23" src="sound/荡.mp3"></audio>
+	<audio id="aud24" src="sound/漾.mp3"></audio>
+	<audio id="aud25" src="sound/拳.mp3"></audio>
+	<audio id="aud26" src="sound/五.mp3"></audio>
+	<audio id="aud27" src="sound/横.mp3"></audio>
+	<audio id="aud28" src="sound/三.mp3"></audio>
+	<audio id="aud29" src="sound/纵.mp3"></audio>
+	<audio id="aud30" src="sound/掌.mp3"></audio>
+	<audio id="aud31" src="sound/霹.mp3"></audio>
+	<audio id="aud32" src="sound/雳.mp3"></audio>
+	<audio id="aud33" src="sound/连.mp3"></audio>
+	<audio id="aud34" src="sound/环.mp3"></audio>
+	<audio id="aud35" src="sound/腿.mp3"></audio>
+	<audio id="aud36" src="sound/cuwu.mp3"></audio>
+</div>
+<div id="loading">
+	<img src="images/lode.gif" alt=""/>
+</div>
+<script type="text/javascript">
+(function(scrLen){
+	var loads = 0, scrpit, _body = document.body;
+	(function loadScript(){
+		var scriptTag;
+		for(var i = 0; i < scrLen; i++){
+			scriptTag = document.createElement('script');
+			scriptTag.type = "text/javascript";
+			scriptTag.src = 'js/'+i+'.main.js';
+			_body.appendChild(scriptTag);
+			scriptTag.onload = scriptTag.onreadystatechange = function(){
+				if(  ! this.readyState || this.readyState=='loaded' || this.readyState=='complete'){
+					if(++loads == scrLen){
+						setTimeout(function(){
+							var scriptTag1 = document.createElement('script');
+							scriptTag1.type = "text/javascript";
+							scriptTag1.src = 'js/3.main.js';
+							_body.appendChild(scriptTag1);
+							scriptTag1.onload = scriptTag1.onreadystatechange = function(){
+								imgArr = imgArr.concat(imgArr1);
+								var scriptTag2 = document.createElement('script');
+								scriptTag2.type = "text/javascript";
+								scriptTag2.src = 'js/4.main.js';
+								_body.appendChild(scriptTag2);
+								scriptTag2.onload = scriptTag2.onreadystatechange = function(){
+									imgArr = imgArr.concat(imgArr2);
+								};
+							};
+							doAction();
+						},3000)
+					}
+				}
+				function doAction(){
+					var kkApp = new RayApp.SmartApp();
+					kkApp.setConfig(appConfig);
+					kkApp.start(0);
+				}
+			}
+		}
+	})();
+})(3);
+
+</script>
+</body>
+</html>

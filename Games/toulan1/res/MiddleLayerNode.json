@@ -1,0 +1,177 @@
+{
+  "ID": "3671ae6f-764d-4ec9-8abc-2ffa1bd2f832",
+  "Version": "2.3.1.1",
+  "Name": "MiddleLayerNode",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 23,
+        "Children": [
+          {
+            "BackColorAlpha": 102,
+            "ComboBoxIndex": 1,
+            "SingleColor": {
+              "R": 150,
+              "G": 200
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 247.8,
+              "Y": 318.6017
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": 7.8,
+            "RightMargin": -487.8,
+            "TopMargin": -632.6017,
+            "BottomMargin": 4.6017,
+            "Tag": 104,
+            "Children": [
+              {
+                "FileData": {
+                  "Type": "PlistSubImage",
+                  "Path": "basket_bg01.png",
+                  "Plist": "basket.plist"
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 239.8027,
+                  "Y": 68.1244
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.4996,
+                  "Y": 0.1085
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": -0.1973,
+                "RightMargin": 0.1973,
+                "TopMargin": 493.3756,
+                "BottomMargin": 1.6244,
+                "Tag": 24,
+                "ActionTag": 1461359400,
+                "Size": {
+                  "X": 480.0,
+                  "Y": 133.0
+                },
+                "Name": "basket_bal_bg01",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "middleLayer1.png",
+                  "Plist": ""
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 240.9376,
+                  "Y": 381.1232
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.502,
+                  "Y": 0.6069
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": 0.9376,
+                "RightMargin": -0.9376,
+                "TopMargin": -0.6232,
+                "BottomMargin": 133.6232,
+                "Tag": 25,
+                "ActionTag": -626669957,
+                "Size": {
+                  "X": 480.0,
+                  "Y": 495.0
+                },
+                "Name": "basket_bg02_4",
+                "ctype": "SpriteObjectData"
+              }
+            ],
+            "ActionTag": 433502652,
+            "Size": {
+              "X": 480.0,
+              "Y": 628.0
+            },
+            "Name": "middlePanel",
+            "ctype": "PanelObjectData"
+          }
+        ],
+        "Size": {
+          "X": 0.0,
+          "Y": 0.0
+        },
+        "Name": "Node",
+        "ctype": "SingleNodeObjectData"
+      },
+      "UsedResources": [
+        "basket.plist",
+        "basket.png",
+        "middleLayer1.png"
+      ],
+      "ctype": "GameProjectData"
+    }
+  },
+  "Type": "Node"
+}

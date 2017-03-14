@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="30" height="30" tilewidth="96" tileheight="96" nextobjectid="73">
+ <tileset firstgid="1" name="mygamebk" tilewidth="96" tileheight="96">
+  <image source="mygamebk.png" width="1344" height="96"/>
+ </tileset>
+ <layer name="road" width="30" height="30">
+  <data encoding="base64" compression="zlib">
+   eJztlQ0LhCAMhnf2YXUf///nXoIv7ZQ1s8YR+IKM1La5PSLR//RYh4ujj3aIdoy2M4j7LNjjDOJKPh0bo0FcyWdvEItr77xBb9oY8NHO9MtBjSRmBiUvqLYHyJnzzBmelf8tmENee/KVfl+U929i8TS/tefVuErX0YdQ/zNcTcI8zgluwXBtXVNJ99SKF80/8vnQ1v+FcvYD9559l0qqG+p/xNcVeyWuJB1lDG9dyhd8LIV+ztynjvI3yCVrIQ/P5nnfm5qamprurS8M3wHX
+  </data>
+ </layer>
+ <objectgroup name="obj">
+  <object id="3" name="startit_1" type="system" x="96" y="96" width="96" height="96"/>
+  <object id="4" name="endit_1" type="system" x="96" y="192" width="96" height="96"/>
+  <object id="9" type="pinpai" x="384" y="96" width="96" height="96"/>
+  <object id="13" type="pinpai" x="672" y="384" width="96" height="96"/>
+  <object id="14" type="pinpai" x="384" y="672" width="96" height="96"/>
+  <object id="15" type="qiuzhi" x="96" y="384" width="96" height="96"/>
+  <object id="16" type="qiuzhi" x="768" y="96" width="96" height="96"/>
+  <object id="17" type="qiuzhi" x="960" y="288" width="96" height="96"/>
+  <object id="18" type="xuexi" x="96" y="576" width="96" height="96"/>
+  <object id="19" type="xuexi" x="672" y="672" width="96" height="96"/>
+  <object id="20" type="xuexi" x="960" y="96" width="96" height="96"/>
+  <object id="21" type="shenghuo" x="576" y="96" width="96" height="96"/>
+  <object id="22" type="shenghuo" x="96" y="672" width="96" height="96"/>
+  <object id="23" type="shenghuo" x="672" y="576" width="96" height="96"/>
+  <object id="24" name="startit_2" type="system" x="192" y="864" width="96" height="96"/>
+  <object id="25" name="endit_2" type="system" x="96" y="864" width="96" height="96"/>
+  <object id="26" name="startit_3" type="system" x="960" y="480" width="96" height="96"/>
+  <object id="27" name="endit_3" type="system" x="864" y="480" width="96" height="96"/>
+  <object id="28" name="startit_4" type="system" x="960" y="1248" width="96" height="96"/>
+  <object id="29" name="endit_4" type="system" x="864" y="1248" width="96" height="96"/>
+  <object id="30" type="qiuzhi" x="96" y="1536" width="96" height="96"/>
+  <object id="31" type="qiuzhi" x="672" y="1632" width="96" height="96"/>
+  <object id="32" type="pinpai" x="672" y="1248" width="96" height="96"/>
+  <object id="33" type="pinpai" x="96" y="1152" width="96" height="96"/>
+  <object id="34" type="xinwen" x="672" y="1056" width="96" height="96"/>
+  <object id="35" type="xuexi" x="384" y="1632" width="96" height="96"/>
+  <object id="36" type="shenghuo" x="865" y="768" width="96" height="96"/>
+  <object id="37" type="xinwen" x="384" y="864" width="96" height="96"/>
+  <object id="38" type="xinwen" x="96" y="1344" width="96" height="96"/>
+  <object id="39" type="zhichang" x="576" y="864" width="96" height="96"/>
+  <object id="40" type="zhichang" x="96" y="1056" width="96" height="96"/>
+  <object id="41" type="zhichang" x="672" y="1344" width="96" height="96"/>
+  <object id="42" type="zhichang" x="288" y="1536" width="96" height="96"/>
+  <object id="43" type="shenghuo" x="672" y="864" width="96" height="96"/>
+  <object id="44" type="shenghuo" x="959" y="1056" width="96" height="96"/>
+  <object id="45" type="shenghuo" x="1536" y="960" width="96" height="96"/>
+  <object id="46" type="shenghuo" x="1536" y="480" width="96" height="96"/>
+  <object id="47" type="shenghuo" x="1824" y="1440" width="96" height="96"/>
+  <object id="48" type="xinwen" x="864" y="864" width="96" height="96"/>
+  <object id="49" type="xinwen" x="1152" y="480" width="96" height="96"/>
+  <object id="50" type="xinwen" x="1248" y="1056" width="96" height="96"/>
+  <object id="51" type="xinwen" x="1632" y="768" width="96" height="96"/>
+  <object id="52" type="xinwen" x="1728" y="1248" width="96" height="96"/>
+  <object id="53" type="xinwen" x="1344" y="1632" width="96" height="96"/>
+  <object id="54" type="xiangmu" x="1344" y="480" width="96" height="96"/>
+  <object id="55" type="xiangmu" x="1440" y="960" width="96" height="96"/>
+  <object id="56" type="xiangmu" x="1056" y="1056" width="96" height="96"/>
+  <object id="57" type="xiangmu" x="864" y="672" width="96" height="96"/>
+  <object id="63" type="pinpai" x="1440" y="1248" width="96" height="96"/>
+  <object id="64" type="pinpai" x="1824" y="1248" width="96" height="96"/>
+  <object id="65" type="gongsi" x="864" y="1536" width="96" height="96"/>
+  <object id="67" type="gongsi" x="1248" y="1632" width="96" height="96"/>
+  <object id="68" type="gongsi" x="1152" y="1248" width="96" height="96"/>
+  <object id="69" type="gongsi" x="1728" y="1632" width="96" height="96"/>
+  <object id="70" type="xuexi" x="1056" y="1632" width="96" height="96"/>
+  <object id="71" type="xuexi" x="1632" y="1248" width="96" height="96"/>
+  <object id="72" type="qiuzhi" x="1632" y="576" width="96" height="96"/>
+ </objectgroup>
+</map>

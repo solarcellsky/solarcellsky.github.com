@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data>
+	<settings>
+		<font name="structia-webfont" />
+		<asciiArt>
+   ___________  ___________________ _______________    ___  _____  _____  ___   __   __ 
+  / __/  _/ _ \/ __/ __/  _/ ___/ // /_  __/ __/ _ \  / _ \/  _/ |/ / _ )/ _ | / /  / / 
+ / _/_/ // , _/ _// _/_/ // (_ / _  / / / / _// , _/ / ___// //    / _  / __ |/ /__/ /__
+/_/ /___/_/|_/___/_/ /___/\___/_//_/ /_/ /___/_/|_| /_/  /___/_/|_/____/_/ |_/____/____/
+                                                                                        
+		</asciiArt>
+		<urls>
+			<website>playhtml.com</website>
+		</urls>
+		<googleAnalytics id="UA-22406337-14" enabled="false" />
+	</settings>
+	<gui>
+		<preloaderComplete>点击开始</preloaderComplete>
+		<buttons>
+			<testMode>
+				<skip>跳过</skip>
+			</testMode>
+		</buttons>
+		<scenes>
+			<game>
+				<achievements>
+					<mission1 title="Helicopter Medical" />
+					<mission2 title="Interior Attack" />
+					<mission3 title="Motor Vehicle Incident" />
+					<mission4 title="Equipment Check" />
+					<bonus title="Rescue The Kitten" />
+				</achievements>
+				<questions>
+					<title>True or False?</title>
+					<correct>Correct!</correct>
+					<incorrect>Life Lost!</incorrect>
+					<question1 answer="true">To report an emergency we should dial 9-1-1?</question1>
+					<fact1>Know your local emergency number. 9-1-1.  If there is a fire at your house, choose one family member to call the fire department from a neighbors phone.</fact1>
+					<question2 answer="true">It’s dangerous to play with matches or lighters, even for big kids?</question2>
+					<fact2>Don't play with matches and lighters. If you see matches or a lighter where you can reach them, don't touch them. Go tell a grown up right away.</fact2>
+					<question3 answer="false">If a pan on the stove catches fire, it’s best to carefully take it outside?</question3>
+					<fact3>Pan fires are very common, and are safely put out by quickly placing a lid over the pan. If there is no lid, use a wet towel and drape it over the pan.</fact3>
+					<question4 answer="false">Smoke alarms should only be in the kitchen?</question4>
+					<fact4>Smoke detectors save lives.  Ask your parents to install smoke detectors on every floor and, ideally, in the bedrooms. Ask your parents to show you where each one is located.</fact4>
+					<question5 answer="true">Smoke alarms should be tested monthly and batteries changed twice a year?</question5>
+					<fact5>Remind your parents to test your smoke detectors every month. Make sure everyone in your family is familiar with its piercing sound. Teach them that this sound means danger, and they must escape quickly.</fact5>
+					<question6 answer="false">A Fire Escape plan is only needed at school?</question6>
+					<fact6>Have an escape plan at home too - and practice it with your family. Find two ways out of every room in case one way is blocked by fire or smoke.</fact6>
+					<question7 answer="true">In the event of a fire you should get outside?</question7>
+					<fact7>In case of fire: DON'T HIDE, GO OUTSIDE! Fires are scary, but you should NEVER hide in closets or under beds when there is a fire.</fact7>
+					<question8 answer="true">You should crawl low under smoke when escaping a fire?</question8>
+					<fact8>To escape during a fire; Fall & Crawl. It is easier to breath in a fire if you stay low while getting out.  Use the back of your hand to test if a door is hot before you open it. If it is hot, try to use another way out.</fact8>
+					<question9 answer="false">If your clothes catch on fire, you should run for help?</question9>
+					<fact9>Running makes fire burn faster. If your clothes are on fire; STOP, DROP and ROLL until the fire is out. Shout for help, but don't run.</fact9>
+					<question10 answer="true">You should know your fire escape meeting place?</question10>
+					<fact10>Choose a meeting place outside, such as a big tree or the end of the driveway, so you will know that everyone has gotten out safely. NEVER go back into a burning building for any reason.</fact10>
+				</questions>
+			</game>
+			<instructions>
+				<title>怎么玩</title>
+				<page1><![CDATA[Tap down to shoot your ball. Tap left or right to use your flippers. Tap up to tilt the table.]]></page1>
+				<page2><![CDATA[Shoot the ball through the water spray to start your mission, then follow the lights.]]></page2>
+				<page3><![CDATA[Answer 911 to activate the ladder tunnel and unlock the secret jackpot bonus table!]]></page3>
+			</instructions>
+			<results>
+				<message>Well done&lt;br/&gt;you scored</message>
+				<win>New high score!</win>
+				<lose>High score&lt;br/&gt;__HIGH_SCORE__</lose>
+			</results>
+		</scenes>
+	</gui>
+</data>

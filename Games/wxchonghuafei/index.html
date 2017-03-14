@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans" style="font-size: 200px;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>充话费得奖</title>
+    <script src="http://jsqmt.qq.com/cdn_djl.js" type="text/javascript" async=""></script>
+    <script type="text/javascript">
+    window.pt = 'wx';
+
+    function $getCookie(name) {
+        //读取COOKIE
+        var reg = new RegExp("(^| )" + name + "(?:=([^;]*))?(;|$)"),
+            val = document.cookie.match(reg);
+        return val ? (val[2] ? unescape(val[2]) : "") : null;
+    }
+
+    function $getQuery(name, url) {
+        //参数：变量名，url为空则表从当前页面的url中取
+        var u = arguments[1] || window.location.search,
+            reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"),
+            r = u.substr(u.indexOf("\?") + 1).match(reg);
+        return r != null ? r[2] : "";
+    }
+
+    if (!$getQuery('code')) {
+        // var url = url || location.href.replace(/[?|&]code=[^&]*/g, '').replace(/[?|&]state=[^&]*/g, '').replace(/#.*/, '');
+        // location.href = './';
+    }
+    </script>
+    <script src="js/get_client_width.min.js"></script>
+    <link rel="stylesheet" href="css/page-index.css?t=12484">
+</head>
+
+<body class="page-index">
+    <i class="balloon balloon_anit"><!--漂在空中的热气球--></i>
+    <!-- <a href="javascript:void(0);" id="showRule" class="rule-btn">规则</a> -->
+    <div class="page-index_inner">
+        <a href="javascript:void(0);" class="act-btn act-btn-primary" id="goChong">立即充值</a>
+        <div class="runway">
+            <div class="runway-dice-anit">
+                <!--骰子动效-->
+            </div>
+            <div class="runway-dice runway-dice__3" id="fields">
+                <!--骰子定格图-->
+            </div>
+            <i class="i-arrow i-arrow-anit"><!--箭头--></i>
+            <i class="i-chong"><!--飞行小充--></i>
+            <ul class="checkout">
+                <li>
+                    <a href="award.html">查看我的奖品</a>
+                </li>
+                <li>
+                    <a href="rule.html">活动规则</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="page-index_bg"></div>
+    <div class="mod-act-mask" style="display:none" id="mask">
+        <!-- S 规则弹窗 -->
+        <div class="act-dialog hide" id="rule">
+            <div class="act-dialog_bd">
+                <div class="act-dialog_rules">
+                    <h2 class="act-dialog_rules__t">
+                            活动规则
+                        </h2>
+                    <ol class="act-dialog_rules__list">
+                        <li>
+                            1、活动时间：2015年10月30日-11月5日23:59:59
+                        </li>
+                        <li>
+                            2、参与方法：使用“微信话费充值券/充值卡””或在“微信钱包-手机充值”中成功充值话费，即可参与抽奖，仅限一次，100%有奖；
+                        </li>
+                        <li>
+                            3、活动奖品为：泰国清迈六日游3份；电影票5-30元购票抵扣礼包；理财通1.8-8.8元现金奖；1.88元话费券；同程网火车票抵用券和机票抵用券；滴滴打车组合礼包等。你可以通过奖品列表处的“查看我的奖品”查看奖品详情及使用方式。
+                        </li>
+                        <li>
+                            5、如有疑问，请<a href="http://kf.qq.com/touch/bill/150924sam4182b9e3dfd.html">点此反馈&gt;</a>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <a href="javascript:void(0);" class="act-dialog_closer closeDialog"></a>
+        </div>
+        <!-- E 规则弹窗 -->
+        <!-- S 抽奖浮层 -->
+        <div class="mod-act-floating hb-floating hide" id="shareDialog">
+            <div class="hb-floating_t"><span class="h-txt" id="shareAwardName"></span>
+            </div>
+            <div class="hb-floating_txt" id="shareAwardDesc"></div>
+            <div class="hb">
+                <div class="hb_img">
+                    <div class="hb_img_txt">4</div>
+                </div>
+                <div class="hb_t">再送你<span class="h-txt">4个</span>分享礼包！</div>
+                <div class="hb_txt">点击屏幕右上角，选择“发送给朋友”</div>
+                <div class="hb_txt">和好友分享礼包，拼手气赢大奖！</div>
+            </div>
+            <a href="javascript:void(0);" class="hb-floating_closer closeDialog"></a>
+        </div>
+        <!-- E 抽奖浮层 -->
+        <!-- S 抽奖出错浮层 -->
+        <div class="act-dialog_mod hide" id="dialog">
+            <div class="act-dialog">
+                <div class="act-dialog_bd">
+                    <!-- 弹窗的内容模块，每个模块请单独一个dom包含着 -->
+                    <div class="act-dialog_suc">
+                        <div class="act-dialog_suc__view">
+                            <img id="awardImg" class="act-dialog_suc__img">
+                        </div>
+                        <div class="act-dialog_suc__info">
+                            <h4 class="act-dialog_suc__t" id="awardTitle" style="text-align:center;"></h4>
+                            <p class="act-dialog_suc__d" id="awardName" style="text-align:center;"></p>
+                        </div>
+                        <p class="act-dialog_tips" id="awardDesc" style="text-align:center;"></p>
+                    </div>
+                </div>
+                <div class="act-dialog_ft">
+                    <button class="act-dialog_btn__single" id="awardConfirm">点击查看</button>
+                </div>
+                <a href="javascript:void(0);" class="act-dialog_closer closeDialog"></a>
+            </div>
+        </div>
+        <!-- E 抽奖出错浮层 -->
+    </div>
+    <!--S 分享引导-->
+    <div class="mod-act-mask hide">
+        <i class="wx-share-tips"><!--分享--></i>
+    </div>
+    <!--E 分享引导-->
+    <script src="js/zepto.min.js"></script>
+
+    <script type="text/javascript">
+    var kalends = {
+        data: {
+            code: $getQuery('code'),
+            packageId: ''
+        },
+
+        dom: {
+            goChong: $('#goChong'),
+            shareAwardName: $('#shareAwardName'),
+            shareAwardDesc: $('#shareAwardDesc'),
+            dialog: $('#dialog'),
+            dialog0: $('#dialog0'),
+            fields: $('#fields'),
+            goAwardList: $('#goAwardList'),
+            goShare: $('#goShare'),
+            awardTitle: $('#awardTitle'),
+            awardName: $('#awardName'),
+            awardImg: $('#awardImg'),
+            awardDesc: $('#awardDesc'),
+            awardCancel: $('#awardCancel'),
+            awardConfirm: $('#awardConfirm'),
+            mask: $('#mask'),
+            showRule: $('#showRule'),
+            rule: $('#rule'),
+            shareDialog: $('#shareDialog'),
+            shareTips: $('#shareTips')
+        },
+
+        wxAwardFunc: function(callback) {
+            var that = this;
+
+            if (clicked) {
+                return;
+            }
+            var clicked = true;
+
+            $.ajax({
+                url: 'http://chong.qq.com/php/index.php?d=active&c=activeV5&m=award_21287_base&dataType=json&virWx=1&lwxx=1&appId=wx47031447c8352579&code=' + that.data.code + '&level=' + $getQuery('level'),
+                type: 'GET',
+                dataType: 'json',
+                cache: false,
+                success: function(result) {
+                    clicked = false;
+
+                    if (result.errCode == 0) {
+                        var awardLevelShowArr = {
+                            0: 6,
+                            1: 4,
+                            2: 4,
+                            3: 1,
+                            4: 2,
+                            5: 5
+                        };
+                        callback(awardLevelShowArr[result.awardLevel], function() {
+                            kalends.dom.shareDialog.removeClass('hide');
+                            kalends.dom.mask.show();
+                        });
+
+                        var descs = [
+                            '在【微信钱包-滴滴打车】或【滴滴打车】客户端中使用。',
+                            '在【微信-我-钱包-火车票机票】中使用；有效期截止12月5日。',
+                            '在【微信-我-钱包-火车票机票】中使用；领取后7天有效。',
+                            '在【微信-我-钱包-电影票】中使用；有效期截止领取后21天',
+                            '在【微信-我-钱包-理财通】中购买＞100元货币基金，礼包立即到账。',
+                            '请在主页"查看我的奖品"列表中点击填写中奖人信息！'
+                        ];
+
+                        result.snsPackageIds.reverse().forEach(function(el) {
+                            if (el.length > 0 && that.data.packageId.length == 0) {
+                                that.data.packageId = el;
+                            }
+                        });
+
+                        window.hbShareConfig.link = 'http://chong.qq.com/promote/mobile/2015/kalends_10/wx_hb.shtml?pkg=' + that.data.packageId;
+                        window.hbShareConfig.titile = (result.nickName || '手机充值用户') + '分享了4个礼包，点击免费领取';
+                        configMessage(hbShareConfig.titile, hbShareConfig.message, hbShareConfig.img, hbShareConfig.link);
+                        configTimeline(hbShareConfig.titile, hbShareConfig.img, hbShareConfig.link);
+
+                        that.dom.shareAwardName.html('恭喜获得' + result.awardName);
+                        that.dom.shareAwardDesc.html(descs[result.awardLevel]);
+                    } else if (result.errCode == 21) {
+                        that.showDialog('还没有抽奖资格哦~', '充话费拼手气</br>好礼送不停，快去充值吧', '', '', '快去充话费吧', '取消', function() {
+                            that.goWxChong();
+                        });
+                    } else if (result.errCode == 4) {
+                        that.showDialog('活动已结束，下次再来吧', '', '', '', '确认', '取消', '');
+                    } else if (result.errCode == 9) {
+                        var nickName = result.nickName || '手机充值用户';
+
+                        commonSNSObj.getSharePackage('21287_base', function(result) {
+                            if (result.errCode == 0 && result.snsPackageIds.length > 0) {
+                                var packageId = '';
+                                result.snsPackageIds.reverse().forEach(function(el) {
+                                    if (el.length > 0 && that.data.packageId.length == 0) {
+                                        packageId = el;
+                                    }
+                                });
+                                window.hbShareConfig.link = 'http://chong.qq.com/promote/mobile/2015/kalends_10/wx_hb.shtml?pkg=' + packageId;
+                                window.hbShareConfig.titile = nickName + '分享了4个礼包，点击免费领取',
+
+                                    configMessage(hbShareConfig.titile, hbShareConfig.message, hbShareConfig.img, hbShareConfig.link);
+                                configTimeline(hbShareConfig.titile, hbShareConfig.img, hbShareConfig.link);
+
+                                that.dom.shareAwardName.html('每名用户只有一次抽奖机会哦');
+                                that.dom.shareAwardDesc.html('已获奖品在活动页面<a href="http://chong.qq.com/promote/mobile/2015/kalends_10/wx_award.shtml" style="color:#fff600;"><u>查看我的奖品</u></a>中查看');
+
+                                that.dom.shareDialog.removeClass('hide');
+                                that.dom.mask.show();
+                            } else {
+                                that.showDialog('每个用户只能抽奖一次哦~', '', '', '', '确定', '取消', '');
+                            }
+                        });
+                    } else {
+                        that.showDialog('活动太火爆，请稍后再来试试呗', '', '', '', '确认', '取消', '');
+                    }
+                }
+            });
+        },
+
+        sqWardFunc: function(callback) {
+            var that = this;
+
+            if (clicked) {
+                // return;
+            }
+            var clicked = true;
+
+            $.ajax({
+                url: 'http://chong.qq.com/php/index.php?d=active&c=activeV5&m=award_21288_base&dataType=json' + '&level=' + $getQuery('level'),
+                type: 'GET',
+                dataType: 'json',
+                cache: false,
+                success: function(result) {
+                    clicked = false;
+
+                    if (result.errCode == 0) {
+                        var awardLevelShowArr = {
+                            0: 4,
+                            1: 1,
+                            2: 2,
+                            3: 3,
+                            4: 4,
+                            5: 5,
+                            6: 6
+                        };
+                        callback(awardLevelShowArr[result.awardLevel], function() {
+                            kalends.dom.shareDialog.removeClass('hide');
+                            kalends.dom.mask.show();
+                            kalends.dom.shareTips.show();
+                        });
+
+                        var descs = [
+                            '在手机QQ-QQ钱包-交通出行-滴滴打车或滴滴打车客户端通用，领取后1周内有效',
+                            '在手机QQ-QQ钱包-Q币中使用',
+                            '在手机QQ-QQ钱包-电影票中使用',
+                            '在手机QQ-QQ钱包-理财通中使用，领取后1周内有效',
+                            '在手机QQ-QQ钱包-交通出行-滴滴打车或滴滴打车客户端通用，领取后1周内有效',
+                            '请到我的奖品页填写收奖地址',
+                            '请到我的奖品页填写收奖地址'
+                        ];
+
+                        result.snsPackageIds.reverse().forEach(function(el) {
+                            if (el.length > 0 && that.data.packageId.length == 0) {
+                                that.data.packageId = el;
+                            }
+                        });
+
+                        window.hbShareConfig.share_url = 'http://chong.qq.com/promote/mobile/2015/kalends_10/sq_hb.shtml?pkg=' + that.data.packageId;
+                        mqq.data.setShareInfo(hbShareConfig);
+
+                        that.dom.shareAwardName.html('恭喜获得' + result.awardName);
+                        that.dom.shareAwardDesc.html('在<a href="http://chong.qq.com/promote/mobile/2015/kalends_10/sq_award.shtml" style="color:#fff600;"><u>查看我的奖品</u></a>中领取哦~');
+                    } else if (result.errCode == 21) {
+                        that.showDialog('没有抽奖机会', '充话费即可抽奖，100%有奖，再送四份分享礼包！', '', '', '去充话费', '取消', function() {
+                            that.goSqChong();
+                        });
+                    } else if (result.errCode == 4) {
+                        that.showDialog('活动已结束，下次再来吧', '', '', '', '确认', '取消', '');
+                    } else if (result.errCode == 9) {
+                        var nickName = result.nickName;
+                        commonSNSObj.getSharePackage('21288_base', function(result) {
+                            if (result.errCode == 0 && result.snsPackageIds.length > 0) {
+                                var packageId = '';
+                                result.snsPackageIds.reverse().forEach(function(el) {
+                                    if (el.length > 0 && that.data.packageId.length == 0) {
+                                        packageId = el;
+                                    }
+                                });
+                                window.hbShareConfig.share_url = 'http://chong.qq.com/promote/mobile/2015/kalends_10/sq_hb.shtml?pkg=' + packageId;
+                                mqq.data.setShareInfo(hbShareConfig);
+
+                                that.dom.shareAwardName.html('你已经抽过奖了');
+                                that.dom.shareAwardDesc.html('每个用户只能抽奖一次哦，点击“查看我的奖品”查看');
+
+                                that.dom.shareDialog.removeClass('hide');
+                                that.dom.mask.show();
+                            } else {
+                                that.showDialog('每个用户只能抽奖一次哦~', '', '', '', '确定', '取消', '');
+                            }
+                        });
+                    } else if (result.errCode == 100001) {
+                        that.showDialog('你已经用其它QQ号挖过奖了~', '', '', '', '确认', '取消', '');
+                    } else {
+                        that.showDialog('活动太火爆，请稍后再试', '', '', '', '确认', '取消', '');
+                    }
+                }
+            });
+        },
+
+        showDialog: function(titile, name, img, desc, confirmWord, cancel, confirmAction) {
+            var that = this;
+
+            if (!img) {
+                this.dom.awardImg.parent().addClass('hide');
+            } else {
+                this.dom.awardImg.parent().removeClass('hide');
+            }
+
+            if (!cancel) {
+                this.dom.awardCancel.addClass('hide');
+            } else {
+                this.dom.awardCancel.removeClass('hide');
+            }
+
+            this.dom.awardTitle.html(titile);
+            this.dom.awardName.html(name);
+            this.dom.awardImg.attr('src', img);
+            this.dom.awardDesc.html(desc);
+            this.dom.awardConfirm.html(confirmWord);
+            this.dom.awardCancel.html(cancel);
+
+            this.dom.awardCancel.on('tap', function() {
+                that.hideDialog();
+            });
+
+            this.dom.awardConfirm.on('tap', function() {
+                if (confirmAction) {
+                    confirmAction();
+                } else {
+                    that.hideDialog();
+                }
+            });
+
+            this.dom.dialog.removeClass('hide');
+            this.dom.mask.show();
+        },
+
+        hideDialog: function() {
+            this.dom.dialog.addClass('hide');
+            this.dom.mask.hide();
+        },
+
+        goWxChong: function() {
+            WeixinJSBridge && WeixinJSBridge.invoke('jumpWCMall', {
+                "appId": "wx47031447c8352579",
+                "funcId": "502318"
+            }, function() {
+                location.reload();
+            });
+        },
+
+        goSqChong: function() {
+            location.href = 'http://chong.qq.com/mobile/mobile_v2.shtml?sq_type=B&noTab=1&tab=hf&_wv=1&source=' + $getQuery('source') + '&pay_succ_url=' + encodeURIComponent(location.href);
+        },
+
+        init: function() {
+            var that = this;
+
+            that.dom.goChong.on('touchend', function(e) {
+                e.preventDefault();
+
+                if (window.pt == 'wx') {
+                    that.goWxChong();
+                } else {
+                    that.goSqChong();
+                }
+            });
+
+            that.dom.showRule.on('tap', function() {
+                that.dom.rule.removeClass('hide');
+                that.dom.mask.show();
+                that.dom.shareTips.hide();
+            });
+
+            that.dom.fields.on('tap', function(e) {
+                var callback = function(num, dialogCallback) {
+                    $('html,body').scrollTop($('html')[0].scrollHeight);
+                    that.dom.fields.hide().removeClass(function() {
+                        return e.target.className.replace(/runway-dice/i, "").replace(/\s+/g, "");
+                    }).addClass("runway-dice__" + num);
+                    $(".runway-dice-anit").show();
+
+                    setTimeout(function() {
+                        $(".runway-dice-anit").hide();
+                        $('.runway-dice').show();
+                        /*飞行棋开始*/
+                        setTimeout(function() {
+                            var $chong = $('.i-chong');
+                            $chong[0].className = 'i-chong';
+                            $chong.addClass("i-chong__to" + num);
+
+                            $chong.on('webkitAnimationEnd', function() {
+                                setTimeout(function() {
+                                    dialogCallback();
+                                }, 500);
+                            });
+                        }, 300);
+
+                    }, 1000);
+                }
+
+                if (window.pt == 'wx') {
+                    that.wxAwardFunc(callback);
+                } else {
+                    that.sqWardFunc(callback);
+                }
+            });
+
+            that.dom.goShare.on('tap', function() {
+                that.dom.shareTips.removeClass('hide');
+            });
+        }
+    };
+
+    (function() {
+        kalends.init();
+    })();
+    /*  |xGv00|79352f7c1fe7d598611386aed93963f9 */
+    var commonSNSObj = function() {
+        var baseUrl = 'http://chong.qq.com/php/index.php?d=active&c=activeV5&dataType=json&t=' + (new Date()).valueOf();
+
+        var getQuery = function(name, url) {
+            var u = arguments[1] || window.location.search,
+                reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"),
+                r = u.substr(u.indexOf("\?") + 1).match(reg);
+            return r != null ? r[2] : "";
+        };
+
+        var packageId = getQuery('pkg') || '',
+            code = getQuery('code') || '';
+
+        if (window.pt == 'wx') {
+            baseUrl += '&virWx=1&lwxx=1&appId=wx47031447c8352579&code=' + code;
+        }
+
+        return {
+            getSharePackage: function(activityId, callback) {
+                $.ajax({
+                    url: baseUrl + '&m=getSharePackage_' + activityId,
+                    dataType: 'json',
+                    success: function(result) {
+                        callback && callback(result);
+                    }
+                });
+            },
+
+            drawGift: function(activityId, callback) {
+                $.ajax({
+                    url: baseUrl + '&m=drawGift_' + activityId,
+                    dataType: 'json',
+                    data: {
+                        pkg: packageId
+                    },
+                    success: function(result) {
+                        callback && callback(result);
+                    }
+                });
+            },
+
+            getPackageDrawList: function(activityId, packageId, callback) {
+                $.ajax({
+                    url: baseUrl + '&m=getSnsPackageDrawList_' + activityId + '&pkg=' + (packageId ? packageId : ''),
+                    dataType: 'json',
+                    success: function(result) {
+                        callback && callback(result);
+                    }
+                });
+            }
+        }
+    }();
+
+    function showDialog(titile, name, img, desc, confirmWord, cancel, confirmAction) {
+            var that = this;
+
+            if (!img) {
+                $('#awardImg').parent().addClass('hide');
+            } else {
+                $('#awardImg').parent().removeClass('hide');
+            }
+
+            if (!cancel) {
+                $('#awardCancel').addClass('hide');
+            } else {
+                $('#awardCancel').removeClass('hide');
+            }
+
+            $('#awardTitle').html(titile);
+            $('#awardName').html(name);
+            $('#awardImg').attr('src', img);
+            $('#awardDesc').html(desc);
+            $('#awardConfirm').html(confirmWord);
+            $('#awardCancel').html(cancel);
+
+            $('#awardCancel').on('click', function() {
+                hideDialog();
+            });
+
+            $('#awardConfirm').on('click', function() {
+                if (confirmAction) {
+                    confirmAction();
+                } else {
+                    hideDialog();
+                }
+            });
+
+            $('#dialog').removeClass('hide');
+            $('#mask').show();
+
+            function hideDialog() {
+                $('#dialog').addClass('hide');
+                $('#mask').hide();
+            }
+        }
+        /*  |xGv00|365c158a94432219bf0acfe7f1f6d144 */
+    </script>
+    <script type="text/javascript">
+    function configTimeline(title, img, link, callback) {
+        onBridgeReady.push(function() {
+            WeixinJSBridge.on('menu:share:timeline', function() {
+                WeixinJSBridge.invoke('shareTimeline', {
+                    "appid": "",
+                    "img_url": img,
+                    "img_width": "108",
+                    "img_height": "108",
+                    "link": link,
+                    "desc": title,
+                    "title": title
+                }, function(res) {
+
+                });
+                return false;
+            });
+        });
+    }
+
+    function configMessage(title, message, img, link, callback) {
+        onBridgeReady.push(function() {
+            WeixinJSBridge.on('menu:share:appmessage', function() {
+                var ret = WeixinJSBridge.invoke('sendAppMessage', {
+                    "appid": "",
+                    "img_url": img,
+                    "img_width": "108",
+                    "img_height": "108",
+                    "link": link,
+                    "desc": message,
+                    "title": title
+                }, function(res) {
+
+                });
+                return false;
+            });
+        });
+    }
+
+    function onBridgeReady() {
+        onBridgeReady.callback = onBridgeReady.callback || [];
+        onBridgeReady.callback.forEach(function(func) {
+            func && func();
+        });
+    }
+    onBridgeReady.push = function(func) {
+        if (typeof func !== 'function') {
+            return;
+        }
+        if (typeof WeixinJSBridge !== "undefined") {
+            func();
+        }
+        onBridgeReady.callback = onBridgeReady.callback || [];
+        onBridgeReady.callback.push(func);
+    }
+    if (typeof WeixinJSBridge == "undefined") {
+        if (document.addEventListener) {
+            document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+        } else if (document.attachEvent) {
+            document.attachEvent('WeixinJSBridgeReady', onBridgeReady);
+            document.attachEvent('onWeixinJSBridgeReady', onBridgeReady);
+        }
+    } else {
+        onBridgeReady();
+    }
+
+    window.indexShareConfig = {
+        link: 'http://chong.qq.com/promote/mobile/2015/kalends_10/wx_index.shtml?source=' + $getQuery('source'),
+        img: 'http://static.gtimg.com/vd/act/ggimg/201510/580d3ef2142a0dbe2164e131bedfb09f.png',
+        titile: '充话费100%中大奖，一起嗨爆11月！',
+        message: '充话费扔骰子，海量大奖等你来拿哦~'
+    }
+    window.hbShareConfig = {
+        link: '',
+        img: 'http://static.gtimg.com/vd/act/ggimg/201509/89ac775e51f6b8a5ea2c35d54119781f.jpg',
+        titile: '我在微信充话费获得了4个超值礼包，大奖花落谁家？快快点击一试手气！',
+        message: '充话费扔骰子，海量大奖等你来拿哦~'
+    }
+
+    $('.closeDialog').on('tap', function() { //关闭分享提示浮层，分享活动主页
+        $('#mask').hide().children('div').forEach(function(el) {
+            $(el).addClass('hide');
+        });
+    });
+
+    configMessage(indexShareConfig.titile, indexShareConfig.message, indexShareConfig.img, indexShareConfig.link);
+    configTimeline(indexShareConfig.titile, indexShareConfig.img, indexShareConfig.link);
+    </script>
+    <script language="javascript" src="http://pingjs.qq.com/tcss.ping.js"></script>
+    <script language="javascript">
+    if (typeof(pgvMain) == 'function') {
+        pgvMain({
+            senseParam: "source"
+        });
+    }
+    </script>
+
+
+    <!--[if !IE]>|xGv00|393dfaaf6879bc631cf389c51a8ea596<![endif]-->
+</body>
+<iframe id="__WeixinJSBridgeIframe_SetResult" style="display: none;"></iframe>
+<iframe id="__WeixinJSBridgeIframe" style="display: none;"></iframe>
+
+</html>

@@ -1,0 +1,65 @@
+﻿[
+  {
+    "DefaultValue": "打地鼠",
+    "Key": "index-page-title",
+    "Source": "index-html",
+    "TempleteSettingType": 1,
+    "Title": "页面标题",
+    "MaxSize": 30
+  },
+  {
+    "DefaultValue": "../BaseData/Game/tiaoyue/resource/assets/gamerule.jpg?v=1",
+    "Key": "index-rule-img",
+    "Source": "index-html",
+    "TempleteSettingType": 2,
+    "Title": "游戏规则",
+    "Description": "请上传640*960图片",
+    "DisplayWidth": 96,
+    "DisplayHeight": 64,
+    "Width": 960,
+    "Height": 640
+  },
+  {
+    "DefaultValue": "http://www.pupuxing.com/ppxgame/assets/website/images/game-tmp/14710001033/icon.jpg",
+    "Key": "weixin-share-image",
+    "Source": "index-html",
+    "TempleteSettingType": 2,
+    "Title": "微信分享图标",
+    "Description": "请上传200*200图标",
+    "Width": 200,
+    "Height": 200
+  },
+  {
+    "DefaultValue": "打地鼠",
+    "Key": "weixin-share-friend-title",
+    "Source": "index-html",
+    "TempleteSettingType": 1,
+    "Title": "微信分享好友标题",
+    "MaxSize": 15
+  },
+  {
+    "DefaultValue": "打地鼠",
+    "Key": "weixin-share-friend-desc",
+    "Source": "index-html",
+    "TempleteSettingType": 1,
+    "Title": "微信分享好友描述",
+    "MaxSize": 30
+  },
+  {
+    "DefaultValue": "打地鼠",
+    "Key": "weixin-share-timeline-title",
+    "Source": "index-html",
+    "TempleteSettingType": 1,
+    "Title": "微信分享朋友圈标题",
+    "MaxSize": 30
+  },
+  {
+    "DefaultValue": "30",
+    "Key": "index-game-timer",
+    "Source": "index-html",
+    "TempleteSettingType": 1,
+    "Title": "游戏时间",
+    "Description": "请设置游戏时间，单位秒",
+    "GroupName": "游戏配置"
+  }
+]

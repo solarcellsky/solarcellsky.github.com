@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=640,user-scalable=no,target-densitydpi=device-dpi">
+    <title>成都大悦城奇思妙想权益有奖征集活动</title>
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <script type="text/javascript" src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script type="text/javascript">
+    function loadEnd() {
+        $("#loading").hide();
+        $("#b-body").show();
+    }
+    </script>
+    <script type="text/javascript" src="js/loading.js"></script>
+</head>
+
+<body>
+    <div id="loading">
+        <div class="text-center">
+            <img src="images/loading.png" style="width: 70px;margin-bottom: 10px;margin-top: 40%;">
+        </div>
+        <div id="loading-html"></div>
+    </div>
+    <div id="b-body" style="display: none;">
+        <div class="logo">
+            <img src="images/logo.png">
+        </div>
+        <div id="game">
+            <div id="tong">
+                <img src="images/tongs_open.png">
+            </div>
+            <div id="fpanel">
+            </div>
+            <img src="images/sheep_star.png" class="sheep" data-index="6">
+            <img src="images/sheep_sale.png" class="sheep" data-index="2">
+            <img src="images/sheep_limite.png" class="sheep" data-index="3">
+            <img src="images/sheep_free_parking.png" class="sheep" data-index="4">
+            <img src="images/sheep_birthday.png" class="sheep" data-index="5">
+            <img src="images/sheep_book.png" class="sheep" data-index="7">
+            <img src="images/sheep_gold.png" class="sheep" data-index="8">
+        </div>
+        <img src="images/control_game.png" id="control" class="animated">
+        <span style="font-size: 26px;color: #fff;position: absolute;left: 165px;bottom: 60px;display: none;" id="s-ms" class="fadeInRight animated">&lt;&lt;&lt;点击摇杆开始抓羊</span>
+        <div class="p1 gpanel" style="display: block;">
+            <div class="zoomIn in animated">
+                <div class="text-center  ">
+                    <img src="images/title.png">
+                </div>
+                <div class="pop-up ">
+                    <div class="pop-up-title">活 动 须 知</div>
+                    <div class="pop-desc">
+                        参与成都大悦城奇思妙想会员抓娃娃活动，操作手柄抓取3个娃娃,选取你想要的会员权益,留下更多期望特权,即有机会获得ipadmini,韦德伍斯健身卡等好礼。
+                    </div>
+                    <div class="s-btn s-btn-start">
+                        <img src="images/button_start_game.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="p2 gpanel">
+            <div class="text-center">
+                <img src="images/title.png">
+            </div>
+            <div class="pop-up">
+                <div class="pop-up-title">购 物 折 上 折</div>
+                <div class="pop-desc">
+                    想要的品牌不打折？打折之后还是囊中羞涩？出示大悦城会员卡即可享受大悦城特约店铺优惠及折扣活动，还有会员专属折扣日以及特惠专场。
+                </div>
+                <div class="s-btn">
+                    <img src="images/button_okay.png" class="s-btn-qr">
+                </div>
+            </div>
+        </div>
+        <div class="p3 gpanel">
+            <div class="text-center">
+                <img src="images/title.png">
+            </div>
+            <div class="pop-up">
+                <div class="pop-up-title">限 量 优 先 兑</div>
+                <div class="pop-desc">
+                    限量礼品抢不到？出示会员卡参与年度大型换礼活动，获得丰厚限量礼品，且会员积分可于全国大悦城体系进行通兑。
+                </div>
+                <div class="s-btn">
+                    <img src="images/button_okay.png" class="s-btn-qr">
+                </div>
+            </div>
+        </div>
+        <div class="p4 gpanel">
+            <div class="text-center">
+                <img src="images/title.png">
+            </div>
+            <div class="pop-up">
+                <div class="pop-up-title">停 车 免 费 权</div>
+                <div class="pop-desc">
+                    停车太贵不划算？出示会员卡即可享受优惠停、免费停等特权。
+                </div>
+                <div class="s-btn">
+                    <img src="images/button_okay.png" class="s-btn-qr">
+                </div>
+            </div>
+        </div>
+        <div class="p5 gpanel">
+            <div class="text-center">
+                <img src="images/title.png">
+            </div>
+            <div class="pop-up">
+                <div class="pop-up-title">生 日 贴 心 礼</div>
+                <div class="pop-desc">
+                    一年一度生日又被忙碌的生活忘记？只要是大悦城的会员就会收到来自小悦儿的贴心问候及生日双倍积分、生日礼、新片邀请、ktv欢唱、美食聚餐等暖心活动。
+                </div>
+                <div class="s-btn">
+                    <img src="images/button_okay.png" class="s-btn-qr">
+                </div>
+            </div>
+        </div>
+        <div class="p6 gpanel">
+            <div class="text-center">
+                <img src="images/title.png">
+            </div>
+            <div class="pop-up">
+                <div class="pop-up-title">明 星 面 对 面</div>
+                <div class="pop-desc">
+                    男神女神见不到？成为大悦城的会员，即可优先获得各类主题活动入场券，与男神女神面对面！
+                </div>
+                <div class="s-btn">
+                    <img src="images/button_okay.png" class="s-btn-qr">
+                </div>
+            </div>
+        </div>
+        <div class="p7 gpanel">
+            <div class="text-center">
+                <img src="images/title.png">
+            </div>
+            <div class="pop-up">
+                <div class="pop-up-title">在 线 订 好 位</div>
+                <div class="pop-desc">
+                    吃饭等位、看电影排队、浪费时间怎么办？大悦城会员通过微信会员卡在线预订、在线选座、在线排号，享受绿色通道及尊贵接待。
+                </div>
+                <div class="s-btn">
+                    <img src="images/button_okay.png" class="s-btn-qr">
+                </div>
+            </div>
+        </div>
+        <div class="p8 gpanel">
+            <div class="text-center">
+                <img src="images/title.png">
+            </div>
+            <div class="pop-up">
+                <div class="pop-up-title">积 分 换 好 礼</div>
+                <div class="pop-desc">
+                    吃饭购物积攒的大量积分怎么花？会员进入积分商城即可兑换各种萌物好礼。
+                </div>
+                <div class="s-btn">
+                    <img src="images/button_okay.png" class="s-btn-qr">
+                </div>
+            </div>
+        </div>
+        <div class="p9 gpanel">
+            <div class="text-center">
+                <img src="images/title.png">
+            </div>
+            <div class="pop-up">
+                <div class="pop-up-title">更 多 建 议</div>
+                <div class="pop-desc" style="margin-bottom: 20px;">
+                    留下你期望的更多特权，加入大悦城会员，抱走ipadmini，韦德伍斯健身卡。
+                </div>
+                <div style="width: 400px;margin: 0 auto;">
+                    <textarea id="advise" class="form-control" style="font-size: 24px;background-color: #E5E6BA;border-radius:15px;height: 150px;color: #636821;"></textarea>
+                </div>
+                <div class="s-btn s-jy-btn">
+                    <img src="images/s-btn.png">
+                </div>
+            </div>
+        </div>
+        <div class="gpanel p10">
+            <div class="text-center">
+                <img src="images/title.png">
+            </div>
+            <div class="pop-up" style="border-color: #8D2828;background-image: url('images/03_16_pop-window_bg.png');background-size:cover; ">
+                <div class="pop-up-title" style="background-color: #D94242;">意 外 惊 喜</div>
+                <div class="pop-desc" style="margin-bottom: 20px;">
+                    注册成都大悦城微信会员卡，进入成都大悦城微信公共账号，进入“大悦班”点击“抢票活动”，即可参与3月26日-3月30日上午10点整开始的抢票活动，
+                    <!--  每日限量240张，先到先得！-->抢票成功的会员通过下载注册格瓦拉@电影APP ，即可在线订票选座，免费看电影！
+                </div>
+                <div class="s-btn s-jy-btn">
+                    <img src="images/s-fx.png" class="s-fx">
+                    <!--  
+			<a href="http://test.lapp.mallcoo.cn/MallCard/MyMallCard?_mid=111" style="border: 0px;text-decoration: none;">
+			<img src="images/s-zc.png">
+			</a>
+			-->
+                </div>
+            </div>
+        </div>
+        <div class="gpanel fx">
+            <div class="text-center" style="margin-top: 50px;">
+                <p style="font-size: 24px;color: #fff;">点击右上角，分享到朋友圈</p>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        var cIndex = 0;
+        $(".gpanel,#loading").width(640).height($(window).height());
+        var SheepGame = {
+            sheepArray: $(".sheep"),
+            sheepIsStop: false,
+            sheepNowIndex: 0,
+            isGameStop: false,
+            sheepStopTime: 900,
+            sheepFactory: function(index) {
+                var self = this;
+                //游戏是开始
+                if (this.isGameStop)
+                    return;
+                this.sheepNowIndex = index;
+                var sheep = $(this.sheepArray[index]);
+                sheep.show();
+                sheep.animate({
+                    left: "140px",
+                    opacity: 1
+                }, 600, function() {
+                    self.sheepIsStop = true;
+                    if (self.isGameStop)
+                        return;
+                    setTimeout(function() {
+                        if (self.isGameStop)
+                            return;
+                        self.sheepIsStop = false;
+                        sheep.animate({
+                            left: "-385px",
+                            opacity: 0
+                        }, 800, function() {
+                            sheep.hide();
+                            sheep.css("left", "500px");
+                            if (index == self.sheepArray.length - 1) {
+                                self.sheepFactory(0);
+                            } else {
+                                index++;
+                                self.sheepFactory(index);
+                            }
+                        });
+                    }, self.sheepStopTime);
+                });
+            },
+            start: function() {
+                this.sheepArray.css("bottom", "20px").css("left", "500px").hide();
+                $("#tong").find("img").attr("src", "images/tongs_open.png");
+                this.sheepIsStop = false;
+                this.isGameStop = false;
+                //this.sheepFactory(this.sheepNowIndex);
+                //this.control();
+            },
+            control: function() {
+                var isDisabled = false;
+                var self = this;
+                $("#control").click(function() {
+                    $("#s-ms").hide();
+                    if (self.isGameStop)
+                        return;
+                    if (!isDisabled) {
+                        isDisabled = true;
+                        //$("#control").attr("src","images/control.png");
+                        $(this).addClass("disabled");
+                        $(this).removeClass("ba");
+                        setTimeout(function() {
+                            $("#control").addClass("ba");
+                        }, 1)
+                        $("#tong").animate({
+                            top: "0px"
+                        }, 500, function() {
+                            $(this).find("img").attr("src", "images/tongs_frame.png");
+                            $(this).animate({
+                                top: "-200px"
+                            }, 600, function() {
+                                if (!self.isGameStop) {
+                                    $(this).find("img").attr("src", "images/tongs_open.png");
+                                } else {
+                                    //var di = $(self.sheepArray[self.sheepNowIndex]).attr("data-index");
+                                    //console.log("di "+di);
+                                    //$(".p"+di).show();
+                                }
+                                $("#control").removeClass("disabled");
+                                //$("#tong").removeClass("swing animated");
+                                isDisabled = false;
+                            });
+                            if (self.sheepIsStop) {
+                                console.log("抓到了");
+                                self.isGameStop = true;
+                                var sp = $(self.sheepArray[self.sheepNowIndex]);
+                                sp.removeClass("shake animated");
+                                setTimeout(function() {
+                                    sp.addClass("shake animated");
+                                }, 1);
+                                sp.animate({
+                                    bottom: "250px"
+                                }, 600, function() {
+                                    sp.remove();
+                                    var di = $(self.sheepArray[self.sheepNowIndex]).attr("data-index");
+                                    $(".p" + di).show();
+                                    console.log(":::di::" + di);
+                                    SheepGame.sheepArray = $(".sheep");
+                                    if (cIndex >= 3) {
+
+                                    }
+                                });
+                                cIndex++;
+                            } else {
+                                console.log("没有抓到");
+                            }
+                        });
+                    }
+                });
+            }
+        };
+
+        $(".s-btn-start").click(function() {
+            $(".gpanel").hide();
+            SheepGame.start();
+            SheepGame.sheepFactory(0);
+            SheepGame.control();
+            $("#s-ms").show();
+        });
+
+        $(".s-btn-qr").click(function() {
+            $(this).addClass("disabled");
+            var self = $(this);
+            $(".gpanel").hide();
+            //alert(cIndex);
+            if (cIndex >= 3) {
+                $(".p9").show();
+                self.removeClass("disabled");
+                return;
+            }
+            SheepGame.start();
+            SheepGame.sheepArray = $(".sheep");
+            var index = SheepGame.sheepNowIndex;
+            console.log("index is  " + index);
+            //alert("index is "+index);
+            if (index >= SheepGame.sheepArray.length - 1) {
+                index == 0;
+            } else {
+                index++;
+            }
+            SheepGame.sheepFactory(0);
+            self.removeClass("disabled");
+        });
+        $(".p9").click(function() {
+            //$(this).hide();
+            //$(".p10").show();
+        });
+        $(".s-jy-btn").click(function() {
+            $(this).addClass("disabled");
+            $.ajax({
+                url: "api.jsp?action=doSubmit",
+                data: {
+                    advise: $("#advise").val()
+                },
+                success: function(r) {
+                    $(".s-jy-btn").removeClass("disabled");
+                }
+            });
+            $(".p9").hide();
+            $(".p10").show();
+        });
+        $(".s-fx").click(function() {
+            $(".fx").show();
+        });
+        $(".fx").click(function() {
+            $(this).hide();
+        });
+        //SheepGame.start();
+        /*
+        var sheepArray = $(".sheep");
+        var sheepIsStop = false;
+        var sheepNowIndex = 0;
+        var isGameStop = false;
+        var sheepFactory = function(index){
+        	if(isGameStop){
+        		return;
+        	}
+        	sheepNowIndex = index;
+        	 var sheep = $(sheepArray[index]);
+        	 sheep.show();
+        	 sheep.animate({left:"140px",opacity:1},450,function(){
+        		 sheepIsStop = true;
+        		 if(isGameStop){
+        			 return;
+        		 }
+        		 setTimeout(function(){
+        			 if(isGameStop){
+        				 return;
+        			 }
+        			 sheepIsStop = false;
+        			 sheep.animate({left:"-385px",opacity:0},800,function(){
+        				 sheep.hide();
+        				 sheep.css("left","500px");
+        				 if(index == sheepArray.length -1){
+        					 sheepFactory(0);
+        				 }else{
+        					 index++;
+        					 sheepFactory(index);
+        				 }
+        			 });
+        		 }, 900);
+        	 });
+        };
+        sheepFactory(0);
+        */
+    });
+    </script>
+</body>
+
+</html>
