@@ -125,7 +125,7 @@ ul.posts {
   width: 100%;
 }
 
-@media (max-width:760) {
+@media (max-width:760px) {
   #instafeed a {
     width: 20%;
   }
