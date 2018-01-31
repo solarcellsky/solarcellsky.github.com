@@ -101,6 +101,7 @@
     
     <div class="container">
       {{ content }}
+      <div id="instafeed"></div>
       <hr>
       <footer>
         <p>
@@ -116,8 +117,17 @@
 
     <script src="{{ ASSET_PATH }}/resources/jquery/jquery.min.js"></script>
     <script src="{{ ASSET_PATH }}/resources/bootstrap/js/bootstrap.min.js"></script>
+    <script src="{{ ASSET_PATH }}/resources/instafeed.js"></script>
     <script src="{{ ASSET_PATH }}/resources/particles/particles.min.js"></script>
     <script src="{{ ASSET_PATH }}/resources/particles/app.js"></script>
+    <script>
+    var userFeed = new Instafeed({
+      get: 'user',
+      userId: 'c6a8a1f1effe46af97ec674437f4ee9c',
+      accessToken: '4234145.c6a8a1f.842ee1602f26490e9e617797b1394c43'
+    });
+    userFeed.run();
+    </script>
     {% include JB/analytics %}
 
   </body>
