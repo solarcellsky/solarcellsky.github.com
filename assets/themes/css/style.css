@@ -117,3 +117,9 @@ h1, h2, h3, h4 {
 #instafeed a img {
   width: 100%;
 }
+
+@(max-width:760) {
+  #instafeed a {
+    width: 20%;
+  }
+}
