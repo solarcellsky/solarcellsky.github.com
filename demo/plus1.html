@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>+1s</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <style>
+	* {
+		pading: 0;
+		margin: 0;
+	}
+	html,body {
+		width: 100%;
+		height:100%;
+	}
+    </style>
+</head>
+
+<body>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+    var a_idx = 0;
+    jQuery(document).ready(function($) {
+        $("body").click(function(e) {
+            var a = new Array("+1s", "+1s", "+1s", "+1s", "+1s", "+1s", "+1s", "+1s", "+1s", "+1s", "+1s", "+1s");
+            var $i = $("<span/>").text(a[a_idx]);
+            a_idx = (a_idx + 1) % a.length;
+            var x = e.pageX,
+                y = e.pageY;
+            $i.css({
+                "z-index": 999999999999999999999999999999999999999999999999999999999999999999999,
+                "top": y - 20,
+                "left": x,
+                "position": "absolute",
+                "font-weight": "bold",
+                "font-family": "Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Noto Sans CJK SC,WenQuanYi Micro Hei,Arial,sans-serif",
+                "color": "#ff6651"
+            });
+            $("body").append($i);
+            $i.animate({
+                    "top": y - 180,
+                    "opacity": 0,
+                    "font-size": "36px"
+                },
+                1500,
+                function() {
+                    $i.remove();
+                });
+        });
+    });
+    </script>
+</body>
+
+</html>
