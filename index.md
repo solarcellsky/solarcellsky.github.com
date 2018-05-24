@@ -6,7 +6,7 @@ tagline:
 {% include JB/setup %}
 <div markdown="1" class="row">
 <div markdown="1" class="col-lg-6">
-Hi there!I'm Solar.I'm a web front-end developer from Xi'an ,China.I love css,html & javascript.You can find me @<a href="https://twitter.com/solarcellsky">solarcellsky</a> & <a href="http://www.facebook.com/solarcellsky">Facebook</a>.email: sola<a href="http://www.google.com/recaptcha/mailhide/d?k=01dMB7YR-HLtqKltXRX8fA5A==&amp;c=urfzZrF2qCGFj75NTyesmTdBYJ-xNCwEPTh_R4DYh_Y=" onclick="window.open('http://www.google.com/recaptcha/mailhide/d?k\07501dMB7YR-HLtqKltXRX8fA5A\75\75\46c\75urfzZrF2qCGFj75NTyesmTdBYJ-xNCwEPTh_R4DYh_Y\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Reveal this e-mail address">...</a>@gmail.com
+Hi there!I'm Solar.I'm a web front-end developer from Xi'an ,China.I love css,html & javascript.You can find me @<a href="https://twitter.com/solarcellsky">solarcellsky</a> & <a href="//www.facebook.com/solarcellsky">Facebook</a>.email: sola<a href="//www.google.com/recaptcha/mailhide/d?k=01dMB7YR-HLtqKltXRX8fA5A==&amp;c=urfzZrF2qCGFj75NTyesmTdBYJ-xNCwEPTh_R4DYh_Y=" onclick="window.open('//www.google.com/recaptcha/mailhide/d?k\07501dMB7YR-HLtqKltXRX8fA5A\75\75\46c\75urfzZrF2qCGFj75NTyesmTdBYJ-xNCwEPTh_R4DYh_Y\075', '', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=500,height=300'); return false;" title="Reveal this e-mail address">...</a>@gmail.com
 <h3>Recent Posts</h3>
 <ul markdown="1" class="posts">
 {% for post in site.posts %}
@@ -29,8 +29,8 @@ Hi there!I'm Solar.I'm a web front-end developer from Xi'an ,China.I love css,ht
 <ul markdown="1" class="tag_box inline">
 <li><a href="tools/">Tools</a></li>
 <li><a href="ua.html">UA</a></li>
-<li><a href="http://browserbench.org/">Browser Benchmark</a></li>
-<li><a href="http://mahua.jser.me/">Markdown Editor</a></li>
+<li><a href="//browserbench.org/">Browser Benchmark</a></li>
+<li><a href="//mahua.jser.me/">Markdown Editor</a></li>
 </ul>
 </div>
 </div>
