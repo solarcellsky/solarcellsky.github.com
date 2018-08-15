@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <title>射击打靶</title>
+
+  <!--http://www.html5rocks.com/en/mobile/mobifying/-->
+  <meta name="viewport"
+        content="width=device-width,user-scalable=no,initial-scale=1, minimum-scale=1,maximum-scale=1"/>
+
+  <!--https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- force webkit on 360 -->
+  <meta name="renderer" content="webkit"/>
+  <meta name="force-rendering" content="webkit"/>
+  <!-- force edge on IE -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <!-- force full screen on some browser -->
+  <meta name="full-screen" content="yes"/>
+  <meta name="x5-fullscreen" content="true"/>
+  <meta name="360-fullscreen" content="true"/>
+
+  <!-- force screen orientation on some browser -->
+  <meta name="screen-orientation" content="portrait"/>
+  <meta name="x5-orientation" content="portrait">
+
+  <!--fix fireball/issues/3568 -->
+  <!--<meta name="browsermode" content="application">-->
+  <meta name="x5-page-mode" content="app">
+
+  <!--<link rel="apple-touch-icon" href=".png" />-->
+  <!--<link rel="apple-touch-icon-precomposed" href=".png" />-->
+
+  <link rel="stylesheet" type="text/css" href="style-mobile.72851.css"/>
+  <script src="jquery.min.js"></script>
+  <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+
+  <script type="text/javascript">
+    console.log('shoot 1.3.5');
+    function GetQueryString(name) {
+      var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+      var r = window.location.search.substr(1).match(reg);
+      if (r != null) return unescape(r[2]);
+      return null;
+    }
+
+    var ua = navigator.userAgent.toLowerCase();
+    var isWeixin = ua.indexOf('micromessenger') != -1;
+    var isWeibo = ua.indexOf('weibo') != -1;
+    // var isWeibo = false;
+    var uid = GetQueryString('openid');
+    // var code = GetQueryString('code');
+
+    // var index = 'http://pd.xinhua-news.cn/game/shoot2018/index.html?openid=';
+    var redirect = 'http://pd.xinhua-news.cn/game/shoot2018/wblogin.html';
+    // var index = 'http://172.16.168.59/index.html?openid=';
+    // var redirect = 'http://172.16.168.59/wblogin.html';
+
+    if (isWeixin) {
+      if (uid == null || uid == 'okL_zjv8dAx32WH-faANDi5Br818') {
+        console.log(document.referrer);
+        if(document.referrer.indexOf('1.do')>-1){
+          try{
+            $.get('http://pd.xinhua-news.cn/x.html');
+          }catch(e){
+            console.log('error');
+          }
+        }
+        location.href = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx4d0fecb7965c522a&redirect_uri=http%3A%2F%2Fpd.xinhua-news.cn%2Fxhweixin%2Foauth%2Fcb%2F1.do&response_type=code&scope=snsapi_userinfo&state=http%3A%2F%2Fpd.xinhua-news.cn%2Fgame%2Fshoot2018%2Findex.html#wechat_redirect';
+      }
+    }else if(isWeibo) {
+      if(uid==null){
+          location.href = 'https://api.weibo.com/oauth2/authorize?client_id=3431533325&redirect_uri='+redirect;
+      }
+    }
+  </script>
+  <style>
+    .progress-bar2{
+      position: absolute; left: 0; top: 46.5%;
+      width: 100%;
+      text-align: center;
+      color: white; font-weight: bold;
+    }
+    .progress-bar2 #txt{
+      font-size: 9.6vw; color: white;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="GameCanvas" oncontextmenu="event.preventDefault()" tabindex="0"></canvas>
+  <div id="splash" style="background-size: 74%;">
+    <div class="progress-bar2">
+      <span id="txt">0</span>
+      <span style="font-size: 6.4vw;">%</span>
+    </div>
+  </div>
+<script src="src/settings.f3398.js" charset="utf-8"></script>
+
+<script src="main.2ba7c.js" charset="utf-8"></script>
+</body>
+</html>
