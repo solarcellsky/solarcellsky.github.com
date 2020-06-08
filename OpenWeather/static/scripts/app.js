@@ -5,7 +5,7 @@ define(function(require) {
     require('highcharts');
     require('highchartsmore');
 
-    var static_url = 'http://openweather.u.qiniudn.com/';
+    var static_url = './';
 
     var time_zone = 1000 * (new Date().getTimezoneOffset())*(-60);
 
