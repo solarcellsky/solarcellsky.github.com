@@ -286,10 +286,10 @@ define(function(require) {
 
         var _APPID = '607cd461b96f865d29044d4deb1bddf4';
 
-        var data_current = 'http://api.openweathermap.org/data/2.5/weather?lat=' + latitude + '&lon=' + longitude + '&units=metric&lang=zh_cn&appid=' + _APPID + '&callback=?';
-        var data_hourly = 'http://api.openweathermap.org/data/2.5/forecast/hourly?lat=' + latitude + '&lon=' + longitude + '&cnt=11&units=metric&lang=zh_cn&appid=' + _APPID + '&callback=?';
-        var data_forecast = 'http://api.openweathermap.org/data/2.5/forecast/daily?lat=' + latitude + '&lon=' + longitude + '&cnt=6&units=metric&lang=zh_cn&appid=' + _APPID + '&callback=?';
-        var data_temperature = 'http://api.openweathermap.org/data/2.5/forecast/daily?lat=' + latitude + '&lon=' + longitude + '&cnt=15&units=metric&lang=zh_cn&appid=' + _APPID + '&callback=?';
+        var data_current = '//api.openweathermap.org/data/2.5/weather?lat=' + latitude + '&lon=' + longitude + '&units=metric&lang=zh_cn&appid=' + _APPID + '&callback=?';
+        var data_hourly = '//api.openweathermap.org/data/2.5/forecast/hourly?lat=' + latitude + '&lon=' + longitude + '&cnt=11&units=metric&lang=zh_cn&appid=' + _APPID + '&callback=?';
+        var data_forecast = '//api.openweathermap.org/data/2.5/forecast/daily?lat=' + latitude + '&lon=' + longitude + '&cnt=6&units=metric&lang=zh_cn&appid=' + _APPID + '&callback=?';
+        var data_temperature = '//api.openweathermap.org/data/2.5/forecast/daily?lat=' + latitude + '&lon=' + longitude + '&cnt=15&units=metric&lang=zh_cn&appid=' + _APPID + '&callback=?';
 
         juicer.register('getDates', getDates);
         juicer.register('getTimes', getTimes);
