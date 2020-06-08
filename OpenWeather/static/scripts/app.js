@@ -5,7 +5,7 @@ define(function(require) {
     require('highcharts');
     require('highchartsmore');
 
-    var static_url = '../../static/';
+    var static_url = '../';
 
     var time_zone = 1000 * (new Date().getTimezoneOffset())*(-60);
 
