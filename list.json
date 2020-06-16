@@ -5,13 +5,13 @@
       "id": 1,
       "video": "https://vjs.zencdn.net/v/oceans.mp4",
       "poster": "https://img3.doubanio.com/view/photo/l/public/p2603432632.webp",
-      "sub": "http://www.local.solar/zimu.txt"
+      "sub": "https://raw.githubusercontent.com/solarcellsky/solarcellsky.github.com/master/zimu.txt"
     },
     {
       "id": 2,
       "video": "https://vjs.zencdn.net/v/oceans.mp4",
       "poster": "https://img3.doubanio.com/view/photo/l/public/p2603432632.webp",
-      "sub": "http://www.local.solar/zimu.txt"
+      "sub": "https://raw.githubusercontent.com/solarcellsky/solarcellsky.github.com/master/zimu.txt"
     }
   ]
 }
