@@ -3,17 +3,17 @@
   "data": [
     {
       "id": 1,
-      "title": "Game of Thrones",
-      "uri": "https://vjs.zencdn.net/v/oceans.mp4",
+      "title": "The Broken Hearts Gallery",
+      "uri": "https://movietrailers.apple.com/movies/sony_pictures/the-broken-hearts-gallery/the-broken-hearts-gallery-trailer-1_i320.m4v",
       "poster": "/static/ui/poster.jpg",
-      "caption": "小程序从阿里云中取资源播放，并实现自身逻辑。在各个小程序平台运行时，网络相关的 API 在使用前需要配置域名白名单。"
+      "caption": "Using interviews and rare archival footage, JOHN LEWIS: GOOD TROUBLE chronicles Lewis' 60-plus years of social activism and legislative action on civil rights, voting rights, gun control, health-care reform and immigration."
     },
     {
       "id": 2,
-      "title": "Friends",
-      "uri": "https://vjs.zencdn.net/v/oceans.mp4",
+      "title": "Ghosts Of War",
+      "uri": "https://movietrailers.apple.com/movies/independent/ghosts-of-war/ghosts-of-war-trailer-1_i320.m4v",
       "poster": "/static/ui/poster.jpg",
-      "caption": "小程序从阿里云中取资源播放，并实现自身逻辑。在各个小程序平台运行时，网络相关的 API 在使用前需要配置域名白名单。"
+      "caption": "Five battle-hardened American soldiers are assigned to hold a French Chateau near the end of World War II."
     }
   ]
 }
