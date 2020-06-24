@@ -3,14 +3,14 @@
   "data": [
     {
       "id": 1,
-      "title: "Game of Thrones",
+      "title": "Game of Thrones",
       "uri": "https://vjs.zencdn.net/v/oceans.mp4",
       "poster": "/static/ui/poster.jpg",
       "caption": "小程序从阿里云中取资源播放，并实现自身逻辑。在各个小程序平台运行时，网络相关的 API 在使用前需要配置域名白名单。"
     },
     {
       "id": 2,
-      "title: "Friends",
+      "title": "Friends",
       "uri": "https://vjs.zencdn.net/v/oceans.mp4",
       "poster": "/static/ui/poster.jpg",
       "caption": "小程序从阿里云中取资源播放，并实现自身逻辑。在各个小程序平台运行时，网络相关的 API 在使用前需要配置域名白名单。"
